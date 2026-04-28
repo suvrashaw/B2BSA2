@@ -21,7 +21,7 @@ export const GlobalPresence = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
   const [globeReady, setGlobeReady] = useState(false);
-  const globeRef = useRef<any>();
+  const globeRef = useRef<any>(null);
 
   useEffect(() => {
     if (globeRef.current) {
