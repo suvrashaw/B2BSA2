@@ -17,17 +17,20 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-brand-gray dark:bg-[#1a1c1e]">
       <Header />
-      <Hero />
-      <CinematicSequence />
+      <Hero 
+        title="Global B2B Event, Booth & Lead Generation Experts" 
+        subtitle="End-to-End Solutions That Drive Pipeline and Revenue"
+      />
       <ClientLogos />
-      <WhoWeAre />
-      <OurServices />
+      {/* Stats Counter - Placeholder */}
+      <WhoWeAre /> {/* Problem Statement */}
+      <OurServices /> {/* Services Overview Grid */}
+      <UpcomingEvents /> {/* Industries Served */}
+      <CinematicSequence /> {/* Process Overview / Innovation */}
       <CaseStudies />
-      <UpcomingEvents />
-      <WhyChooseUs />
       <Testimonials />
-      <Blogs />
       <FAQ />
+      <Blogs />
       <ContactUs />
       <Footer />
     </main>

@@ -8,13 +8,13 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
-  { name: "Home", href: "#" },
-  { name: "About", href: "#about" },
-  { name: "Services", href: "#services", hasDropdown: true },
-  { name: "Case Studies", href: "#work" },
-  { name: "Events", href: "#events" },
-  { name: "Blogs", href: "#blogs" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about-us" },
+  { name: "Services", href: "/services/global-event-solutions", hasDropdown: true },
+  { name: "Case Studies", href: "/case-studies" },
+  { name: "Events", href: "/events" },
+  { name: "Blogs", href: "/blog" },
+  { name: "Contact", href: "/contact-us" },
 ];
 
 import { ThemeToggle } from "./ThemeToggle";

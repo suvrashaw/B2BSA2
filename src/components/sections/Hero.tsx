@@ -5,7 +5,17 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import Image from "next/image";
 import { ArrowRight, Globe } from "lucide-react";
 
-export function Hero() {
+interface HeroProps {
+  title?: string | React.ReactNode;
+  subtitle?: string;
+  badge?: string;
+}
+
+export function Hero({ 
+  title = <>Accelerating <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-cyan">Enterprise Growth</span></>,
+  subtitle = "We partner with ambitious modern businesses to deliver premium event solutions, digital transformation, and strategic market expansion.",
+  badge = "GLOBAL CAPABILITY. STRATEGIC GROWTH."
+}: HeroProps) {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 200]);
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
@@ -75,18 +85,15 @@ export function Hero() {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="inline-block mb-6 px-4 py-1.5 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue dark:text-brand-cyan text-sm font-semibold tracking-wide"
             >
-              GLOBAL CAPABILITY. STRATEGIC GROWTH.
+              {badge}
             </motion.div>
             
             <h1 className="font-heading text-5xl lg:text-7xl font-bold leading-[1.1] text-brand-charcoal dark:text-white mb-6">
-              Accelerating <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-cyan">
-                Enterprise Growth
-              </span>
+              {title}
             </h1>
             
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-lg leading-relaxed">
-              We partner with ambitious modern businesses to deliver premium event solutions, digital transformation, and strategic market expansion.
+              {subtitle}
             </p>
 
             <div className="flex flex-wrap items-center gap-4">

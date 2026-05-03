@@ -48,39 +48,34 @@ function OpenAILogo() {
 
 export function ClientsMarquee() {
   const logosToRender = [
-    { icon: <NvidiaLogo />, alt: "Nvidia" },
-    { icon: <InfosysLogo />, alt: "Infosys" },
-    { icon: <BoschLogo />, alt: "Bosch" },
-    { icon: <AirtelLogo />, alt: "Airtel" },
-    { icon: <OpenAILogo />, alt: "OpenAI" }
+    { name: "Infosys", alt: "Infosys" },
+    { name: "Airtel", alt: "Airtel" },
+    { name: "SingleStore", alt: "SingleStore" },
+    { name: "Temenos", alt: "Temenos" },
+    { name: "Worldpay", alt: "Worldpay" },
+    { name: "Syngene", alt: "Syngene" }
   ];
 
   return (
-    <section className="py-12 bg-brand-white relative w-full overflow-hidden transition-colors duration-500">
-      <div
-        aria-hidden="true"
-        className={cn(
-          "-z-10 -top-1/2 -translate-x-1/2 pointer-events-none absolute left-1/2 h-[120vmin] w-[120vmin] rounded-b-full",
-          "bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.03),transparent_50%)]",
-          "blur-[30px]"
-        )}
-      />
-
-      <div className="relative mx-auto max-w-5xl px-8">
-        <div className="flex flex-col items-center mb-10">
-          <WhisperText 
-            text="Trusted by experts. \n Used by the Leaders."
-            highlights={["Leaders"]}
-            highlightColor="blue"
-            className="text-center justify-center font-bold text-brand-charcoal text-4xl md:text-5xl lg:text-6xl tracking-tight font-heading transition-colors duration-500"
-          />
+    <section className="py-24 bg-brand-white relative w-full overflow-hidden transition-colors duration-500 border-t border-brand-charcoal/5">
+      <div className="relative mx-auto max-w-7xl px-8">
+        <div className="flex flex-col items-center mb-16">
+          <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-sm font-semibold tracking-wide uppercase">
+            Trusted By
+          </div>
+          <h2 className="text-center font-bold text-brand-charcoal text-3xl md:text-5xl tracking-tight font-heading">
+            Enterprise Leaders Across 40+ Markets
+          </h2>
         </div>
         
-        <div className="mx-auto my-8 h-px max-w-md bg-brand-charcoal/10 [mask-image:linear-gradient(to_right,transparent,black,transparent)]" />
-
-        <LogoCloud logos={logosToRender} />
-
-        <div className="mt-8 h-px bg-brand-charcoal/10 [mask-image:linear-gradient(to_right,transparent,black,transparent)]" />
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 items-center opacity-60 hover:opacity-100 transition-opacity duration-500 grayscale">
+          {logosToRender.map((logo) => (
+            <div key={logo.name} className="flex items-center justify-center h-12 px-4">
+               {/* Using text-based logos for precision as per high-end B2B standards */}
+               <span className="font-heading font-black text-2xl tracking-tighter text-brand-charcoal/80 uppercase">{logo.name}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

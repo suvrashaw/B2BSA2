@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "figma": {
+      "command": "/Users/suvra/Documents/B2BSA2/scripts/mcp-figma.sh",
+      "args": []
+    },
+    "figma-console": {
+      "command": "/Users/suvra/Documents/B2BSA2/scripts/mcp-figma-console.sh",
+      "args": []
+    },
+    "framelink": {
+      "command": "/Users/suvra/Documents/B2BSA2/scripts/mcp-framelink.sh",
+      "args": []
+    }
+  }
+}

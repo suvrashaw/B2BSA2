@@ -15,6 +15,8 @@ const LOCATIONS = [
   { lat: 51.5074, lng: -0.1278, name: "London", size: 0.05, color: "#B23A48" },
   { lat: 1.3521, lng: 103.8198, name: "Singapore", size: 0.05, color: "#1E6091" },
   { lat: 25.2048, lng: 55.2708, name: "Dubai", size: 0.05, color: "#4BC0D9" },
+  { lat: -33.8688, lng: 151.2093, name: "Sydney", size: 0.05, color: "#B23A48" },
+  { lat: 43.6532, lng: -79.3832, name: "Toronto", size: 0.05, color: "#1E6091" },
 ];
 
 export const GlobalPresence = () => {

@@ -90,10 +90,16 @@ export function Footer() {
               <div className="lg:col-span-2">
                 <h4 className="font-heading font-bold text-lg text-white mb-6">Navigation</h4>
                 <ul className="space-y-4">
-                  {["About Us", "Our Services", "Case Studies", "Upcoming Events", "Insight Blogs"].map((item) => (
-                    <li key={item}>
-                      <Link href="#" className="text-gray-400 hover:text-brand-cyan transition-colors text-sm font-medium">
-                        {item}
+                  {[
+                    { name: "About Us", href: "/about-us" },
+                    { name: "Our Services", href: "/services/global-event-solutions" },
+                    { name: "Case Studies", href: "/case-studies" },
+                    { name: "Upcoming Events", href: "/events" },
+                    { name: "Insight Blogs", href: "/blog" }
+                  ].map((item) => (
+                    <li key={item.name}>
+                      <Link href={item.href} className="text-gray-400 hover:text-brand-cyan transition-colors text-sm font-medium">
+                        {item.name}
                       </Link>
                     </li>
                   ))}
@@ -103,10 +109,16 @@ export function Footer() {
               <div className="lg:col-span-2">
                 <h4 className="font-heading font-bold text-lg text-white mb-6">Services</h4>
                 <ul className="space-y-4">
-                  {["Booth Design", "Media Production", "Digital Marketing", "Lead Generation", "Brand Strategy"].map((item) => (
-                    <li key={item}>
-                      <Link href="#" className="text-gray-400 hover:text-brand-cyan transition-colors text-sm font-medium">
-                        {item}
+                  {[
+                    { name: "Booth Design", href: "/services/global-event-solutions/trade-show-booth-design" },
+                    { name: "Media Production", href: "/services/media-production" },
+                    { name: "Digital Marketing", href: "/services/performance-marketing" },
+                    { name: "Lead Generation", href: "/services/sales-qualified-lead-generation" },
+                    { name: "Market Research", href: "/services/market-research" }
+                  ].map((item) => (
+                    <li key={item.name}>
+                      <Link href={item.href} className="text-gray-400 hover:text-brand-cyan transition-colors text-sm font-medium">
+                        {item.name}
                       </Link>
                     </li>
                   ))}

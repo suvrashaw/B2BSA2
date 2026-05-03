@@ -38,14 +38,11 @@ export const EditorialHero = () => {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
           className="overflow-hidden mb-6 flex flex-col items-start gap-4"
         >
-          <div className="text-[10vw] md:text-[6vw] lg:text-[7vw] font-heading font-light leading-[1.1] tracking-tight text-foreground m-0 transition-colors duration-500">
-            <LayoutTextFlip
-              text="A Decade of"
-              words={["Excellence.", "Innovation.", "Partnerships.", "Growth."]}
-            />
-          </div>
-          <p className="text-foreground/50 max-w-sm text-sm leading-relaxed ml-2 md:ml-[0.5em] transition-colors duration-500">
-            With 10+ years of industry-rich experience, a legacy of excellence, and a proven track record.
+          <h1 className="text-[8vw] md:text-[5vw] lg:text-[5.5vw] font-heading font-bold leading-[1.1] tracking-tight text-foreground m-0 transition-colors duration-500 max-w-5xl">
+            We Are the <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-cyan text-balance">Growth Partner</span> Your Enterprise Deserves
+          </h1>
+          <p className="text-foreground/70 max-w-2xl text-lg md:text-xl leading-relaxed mt-6 font-medium transition-colors duration-500">
+            B2B Sales Arrow is built for enterprise teams that need more than a vendor. We bring event strategy, video production, and market research together with accountability to results.
           </p>
         </motion.div>
         
