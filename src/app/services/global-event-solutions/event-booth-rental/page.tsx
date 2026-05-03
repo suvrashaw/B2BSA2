@@ -1,25 +1,11 @@
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { Hero } from "@/components/sections/Hero";
+import { Metadata } from "next";
+import { EventBoothRentalContent } from "@/components/services/EventBoothRentalContent";
+
+export const metadata: Metadata = {
+  title: "Trade Show Booth Rental & Display Rental | B2B Sales Arrow",
+  description: "Trade show booth rental and trade show display booth rental options - brand-configurable, globally deployable, and fast to market.",
+};
 
 export default function Page() {
-  return (
-    <main className="min-h-screen bg-brand-white dark:bg-[#1a1c1e]">
-      <Header />
-      
-      <Hero 
-        title="Event Booth Rental Services for Global Exhibitions"
-        subtitle="We deliver excellence through strategy, design, and technology."
-      />
-
-      <section className="py-24 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Content coming soon for Event Booth Rental Services for Global Exhibitions</h2>
-          <p className="text-gray-500">We are currently building this section to match our high standards.</p>
-        </div>
-      </section>
-
-      <Footer />
-    </main>
-  );
+  return <EventBoothRentalContent />;
 }

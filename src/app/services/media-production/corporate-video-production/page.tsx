@@ -1,25 +1,11 @@
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { Hero } from "@/components/sections/Hero";
+import { Metadata } from "next";
+import { CorporateVideoProductionContent } from "@/components/services/CorporateVideoProductionContent";
+
+export const metadata: Metadata = {
+  title: "Corporate Video Production for Enterprise Brands | B2B Sales Arrow",
+  description: "Corporate video production solutions for enterprise brands - brand films, product videos, executive interviews, investor content, and B2B sales assets.",
+};
 
 export default function Page() {
-  return (
-    <main className="min-h-screen bg-brand-white dark:bg-[#1a1c1e]">
-      <Header />
-      
-      <Hero 
-        title="Corporate Video Production for B2B Brands"
-        subtitle="We deliver excellence through strategy, design, and technology."
-      />
-
-      <section className="py-24 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Content coming soon for Corporate Video Production for B2B Brands</h2>
-          <p className="text-gray-500">We are currently building this section to match our high standards.</p>
-        </div>
-      </section>
-
-      <Footer />
-    </main>
-  );
+  return <CorporateVideoProductionContent />;
 }

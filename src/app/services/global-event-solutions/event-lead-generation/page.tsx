@@ -1,25 +1,11 @@
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { Hero } from "@/components/sections/Hero";
+import { Metadata } from "next";
+import { EventLeadGenerationContent } from "@/components/services/EventLeadGenerationContent";
+
+export const metadata: Metadata = {
+  title: "Trade Show Lead Generation & Event Lead Capture | B2B Sales Arrow",
+  description: "Trade show lead generation, exhibitor lead capture, and post-event lead conversion services - qualified pipeline from show floor to CRM.",
+};
 
 export default function Page() {
-  return (
-    <main className="min-h-screen bg-brand-white dark:bg-[#1a1c1e]">
-      <Header />
-      
-      <Hero 
-        title="Event Lead Generation That Drives Sales Meetings"
-        subtitle="We deliver excellence through strategy, design, and technology."
-      />
-
-      <section className="py-24 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Content coming soon for Event Lead Generation That Drives Sales Meetings</h2>
-          <p className="text-gray-500">We are currently building this section to match our high standards.</p>
-        </div>
-      </section>
-
-      <Footer />
-    </main>
-  );
+  return <EventLeadGenerationContent />;
 }

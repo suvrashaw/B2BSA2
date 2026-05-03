@@ -1,25 +1,11 @@
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { Hero } from "@/components/sections/Hero";
+import { Metadata } from "next";
+import { IndustryEventsContent } from "@/components/services/IndustryEventsContent";
+
+export const metadata: Metadata = {
+  title: "Industry Events Strategy & Execution | B2B Sales Arrow",
+  description: "Plan, design, and execute high-ROI participation at B2B industry events - from corporate event management to on-ground execution across global markets.",
+};
 
 export default function Page() {
-  return (
-    <main className="min-h-screen bg-brand-white dark:bg-[#1a1c1e]">
-      <Header />
-      
-      <Hero 
-        title="Industry Event Soultion for B2B Brands"
-        subtitle="We deliver excellence through strategy, design, and technology."
-      />
-
-      <section className="py-24 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Content coming soon for Industry Event Soultion for B2B Brands</h2>
-          <p className="text-gray-500">We are currently building this section to match our high standards.</p>
-        </div>
-      </section>
-
-      <Footer />
-    </main>
-  );
+  return <IndustryEventsContent />;
 }

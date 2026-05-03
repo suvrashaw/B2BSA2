@@ -1,25 +1,11 @@
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { Hero } from "@/components/sections/Hero";
+import { Metadata } from "next";
+import { GlobalEventSolutionsContent } from "@/components/services/GlobalEventSolutionsContent";
+
+export const metadata: Metadata = {
+  title: "Global Event Solutions for Enterprise Brands | B2B Sales Arrow",
+  description: "End-to-end global event solutions and B2B event solutions for enterprise brands - booth design, lead capture, and on-ground execution across 40+ countries.",
+};
 
 export default function Page() {
-  return (
-    <main className="min-h-screen bg-brand-white dark:bg-[#1a1c1e]">
-      <Header />
-      
-      <Hero 
-        title="End-to-End B2B Event Solutions That Drive Pipeline"
-        subtitle="We deliver excellence through strategy, design, and technology."
-      />
-
-      <section className="py-24 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Content coming soon for End-to-End B2B Event Solutions That Drive Pipeline</h2>
-          <p className="text-gray-500">We are currently building this section to match our high standards.</p>
-        </div>
-      </section>
-
-      <Footer />
-    </main>
-  );
+  return <GlobalEventSolutionsContent />;
 }
