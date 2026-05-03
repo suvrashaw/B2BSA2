@@ -37,6 +37,8 @@ const MARKERS = [
   { lat: 51.5074, lng: -0.1278, name: "London" },
   { lat: 25.2048, lng: 55.2708, name: "Dubai" },
   { lat: 1.3521, lng: 103.8198, name: "Singapore" },
+  { lat: -33.8688, lng: 151.2093, name: "Sydney" },
+  { lat: 43.6532, lng: -79.3832, name: "Toronto" },
 ];
 
 export function Globe() {

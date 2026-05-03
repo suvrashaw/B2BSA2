@@ -85,6 +85,24 @@ export function MarketingResearchContent() {
               icon: "globe"
             },
             { 
+              title: "Data Augmentation", 
+              description: "Transform incomplete CRM records into rich sales intelligence with human-verified data.",
+              href: "/services/marketing-and-market-research/data-augmentation",
+              icon: "zap"
+            },
+            { 
+              title: "Data Validation", 
+              description: "Clean and verify your database to ensure 100% deliverability and outreach precision.",
+              href: "/services/marketing-and-market-research/data-validation",
+              icon: "layout"
+            },
+            { 
+              title: "Market Intelligence", 
+              description: "Human-powered insights that reveal what automated tools miss in the enterprise landscape.",
+              href: "/services/marketing-and-market-research/human-powered-market-intelligence",
+              icon: "users"
+            },
+            { 
               title: "B2B Lead Generation", 
               description: "Multi-channel lead discovery and qualification for enterprise sales teams.",
               href: "/services/marketing-and-market-research/b2b-lead-generation",

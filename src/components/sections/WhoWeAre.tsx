@@ -1,6 +1,7 @@
 "use client";
 
 import { Target, TrendingUp, Users, Globe2 } from "lucide-react";
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
 
 const STATS = [

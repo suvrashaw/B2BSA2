@@ -1,5 +1,7 @@
 "use client";
 
+import { motion, AnimatePresence } from "framer-motion";
+
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 

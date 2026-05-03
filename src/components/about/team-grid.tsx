@@ -2,35 +2,36 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { WhisperText } from "@/components/about/whisper-text";
 
 const TEAM_MEMBERS = [
   {
-    name: "Founder Name",
+    name: "Suvra Shaw",
     role: "Founder & CEO",
-    bio: "Visionary leader with 15+ years in B2B growth strategy. Architect of the unified service model.",
+    bio: "The architect of B2B Sales Arrow's unified growth model, focusing on aligning event strategy with measurable sales outcomes.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop",
     linkedin: "#"
   },
   {
-    name: "Sarah Jenkins",
-    role: "Head of Global Events",
-    bio: "Event strategy expert specialized in high-conversion environments for Fortune 500 tech brands.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop",
-    linkedin: "#"
-  },
-  {
-    name: "David Chen",
-    role: "Director of Market Intelligence",
-    bio: "Pioneer in human-powered research methodologies and high-precision contact discovery.",
+    name: "Sumant Shaw",
+    role: "Co-Founder & COO",
+    bio: "Global operations lead ensuring seamless execution of high-fidelity media production and complex international exhibition builds.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop",
     linkedin: "#"
   },
   {
     name: "Elena Rodriguez",
     role: "VP of Digital Marketing",
-    bio: "Performance marketing strategist focusing on MQL to SQL conversion and pipeline attribution.",
+    bio: "Performance marketing strategist focusing on MQL to SQL conversion and pipeline attribution for enterprise brands.",
     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop",
+    linkedin: "#"
+  },
+  {
+    name: "David Chen",
+    role: "Director of Market Intelligence",
+    bio: "Pioneer in human-powered research methodologies and high-precision contact discovery across 40+ countries.",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop",
     linkedin: "#"
   }
 ];

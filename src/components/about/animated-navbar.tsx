@@ -1,8 +1,8 @@
 "use client";
 
+import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import Link from 'next/link';
 import { useState } from 'react';
-import { motion, MotionConfig } from 'framer-motion';
 import * as React from 'react';
 
 export type IMenu = {

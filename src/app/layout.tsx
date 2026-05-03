@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: "Global capability. Strategic growth. Enterprise event and digital solutions for modern businesses.",
 };
 
-import { ThemeProvider } from "next-themes";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
 export default function RootLayout({
   children,
