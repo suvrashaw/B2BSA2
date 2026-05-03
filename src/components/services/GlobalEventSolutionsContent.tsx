@@ -82,6 +82,12 @@ export function GlobalEventSolutionsContent() {
               description: "Full fabrication and production services for high-pressure, custom exhibition structures.",
               href: "/services/global-event-solutions/trade-show-booth-builder",
               icon: "wrench"
+            },
+            { 
+              title: "Modular Booth Systems", 
+              description: "High-end, reconfigurable, and tool-free booth systems for multi-city event tours.",
+              href: "/services/global-event-solutions/modular-portable-booths",
+              icon: "box"
             }
           ]}
         />

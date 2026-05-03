@@ -92,10 +92,10 @@ export function Footer() {
                 <ul className="space-y-4">
                   {[
                     { name: "About Us", href: "/about-us" },
-                    { name: "Our Services", href: "/services/global-event-solutions" },
-                    { name: "Case Studies", href: "/case-studies" },
-                    { name: "Upcoming Events", href: "/events" },
-                    { name: "Insight Blogs", href: "/blog" }
+                    { name: "Why Choose Us", href: "/why-choose-us" },
+                    { name: "Success Stories", href: "/case-studies" },
+                    { name: "Growth Insights", href: "/blog" },
+                    { name: "Contact Us", href: "/contact-us" }
                   ].map((item) => (
                     <li key={item.name}>
                       <Link href={item.href} className="text-gray-400 hover:text-brand-cyan transition-colors text-sm font-medium">
@@ -110,11 +110,11 @@ export function Footer() {
                 <h4 className="font-heading font-bold text-lg text-white mb-6">Services</h4>
                 <ul className="space-y-4">
                   {[
-                    { name: "Booth Design", href: "/services/global-event-solutions/trade-show-booth-design" },
+                    { name: "Event Solutions", href: "/services/global-event-solutions" },
                     { name: "Media Production", href: "/services/media-production" },
-                    { name: "Digital Marketing", href: "/services/performance-marketing" },
-                    { name: "Lead Generation", href: "/services/sales-qualified-lead-generation" },
-                    { name: "Market Research", href: "/services/market-research" }
+                    { name: "Performance Marketing", href: "/services/marketing-and-market-research/performance-marketing" },
+                    { name: "Lead Generation", href: "/services/marketing-and-market-research/b2b-lead-generation" },
+                    { name: "Market Research", href: "/services/marketing-and-market-research" }
                   ].map((item) => (
                     <li key={item.name}>
                       <Link href={item.href} className="text-gray-400 hover:text-brand-cyan transition-colors text-sm font-medium">
@@ -147,8 +147,8 @@ export function Footer() {
                 © {new Date().getFullYear()} B2B Sales Arrow. All rights reserved.
               </p>
               <div className="flex gap-6 text-xs text-gray-500">
-                <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-                <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
+                <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                <Link href="/terms-and-conditions" className="hover:text-white transition-colors">Terms & Conditions</Link>
                 <Link href="#" className="hover:text-white transition-colors">Cookie Settings</Link>
               </div>
             </div>

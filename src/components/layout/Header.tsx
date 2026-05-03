@@ -10,10 +10,9 @@ import { cn } from "@/lib/utils";
 const NAV_LINKS = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about-us" },
-  { name: "Services", href: "/services/global-event-solutions", hasDropdown: true },
+  { name: "Global Event Solutions", href: "/services/global-event-solutions" },
   { name: "Case Studies", href: "/case-studies" },
-  { name: "Events", href: "/events" },
-  { name: "Blogs", href: "/blog" },
+  { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact-us" },
 ];
 
