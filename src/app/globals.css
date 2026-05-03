@@ -8,13 +8,7 @@
   --brand-charcoal: #212529;
 }
 
-.dark {
-  --background: #000000;
-  --foreground: #F8F9FA;
-  --brand-gray: #000000;
-  --brand-white: #000000;
-  --brand-charcoal: #F8F9FA;
-}
+
 
 @theme inline {
   --color-brand-blue: #1E6091;
@@ -49,10 +43,7 @@
   }
 }
 
-.dark {
-  --background: #1a1c1e;
-  --foreground: #F8F9FA;
-}
+
 
 body {
   background: var(--background);

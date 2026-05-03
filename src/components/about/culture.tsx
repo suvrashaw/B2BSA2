@@ -45,7 +45,6 @@ export const Culture = () => {
           className={cn(
             "pointer-events-none absolute -top-1/2 left-1/2 h-[120vmin] w-[120vmin] -translate-x-1/2 rounded-full",
             "bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.05),transparent_50%)]",
-            "dark:bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05),transparent_50%)]",
             "blur-[30px]"
           )}
         />

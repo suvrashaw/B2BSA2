@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Lenis from "@studio-freight/lenis";
 import { motion, AnimatePresence } from "framer-motion";
-import { motion, AnimatePresence } from "framer-motion";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Search, ArrowRight } from "lucide-react";

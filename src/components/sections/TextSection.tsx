@@ -12,11 +12,10 @@ interface TextSectionProps {
   dark?: boolean;
 }
 
-export function TextSection({ title, subtitle, content, columns = 1, className, dark = false }: TextSectionProps) {
+export function TextSection({ title, subtitle, content, columns = 1, className }: TextSectionProps) {
   return (
     <section className={cn(
-      "py-24",
-      dark ? "bg-brand-charcoal text-white" : "bg-brand-white text-brand-charcoal",
+      "py-24 bg-brand-white text-brand-charcoal",
       className
     )}>
       <div className="container mx-auto px-8">
@@ -26,7 +25,7 @@ export function TextSection({ title, subtitle, content, columns = 1, className, 
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-brand-blue dark:text-brand-cyan text-sm font-bold tracking-widest uppercase mb-4"
+              className="text-brand-blue text-sm font-bold tracking-widest uppercase mb-4"
             >
               {subtitle}
             </motion.div>
@@ -46,12 +45,12 @@ export function TextSection({ title, subtitle, content, columns = 1, className, 
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
             className={cn(
-              "prose prose-lg dark:prose-invert max-w-none",
+              "prose prose-lg max-w-none",
               columns === 2 ? "md:columns-2 md:gap-12" : ""
             )}
           >
             {typeof content === 'string' ? (
-              <div className="text-gray-600 dark:text-gray-300 leading-relaxed space-y-6">
+              <div className="text-gray-600 leading-relaxed space-y-6">
                 {content.split('\n\n').map((para, i) => (
                   <p key={i}>{para}</p>
                 ))}

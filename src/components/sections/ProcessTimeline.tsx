@@ -17,17 +17,17 @@ interface ProcessTimelineProps {
 
 export function ProcessTimeline({ steps, title, subtitle, className }: ProcessTimelineProps) {
   return (
-    <section className={cn("py-24 bg-brand-gray/10 dark:bg-white/5", className)}>
+    <section className={cn("py-24 bg-brand-gray/10 ", className)}>
       <div className="container mx-auto px-8">
         {(title || subtitle) && (
           <div className="text-center max-w-3xl mx-auto mb-20">
             {subtitle && (
-              <div className="text-brand-blue dark:text-brand-cyan text-sm font-bold tracking-widest uppercase mb-4">
+              <div className="text-brand-blue  text-sm font-bold tracking-widest uppercase mb-4">
                 {subtitle}
               </div>
             )}
             {title && (
-              <h2 className="text-3xl md:text-5xl font-bold text-brand-charcoal dark:text-white font-heading leading-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-brand-charcoal  font-heading leading-tight">
                 {title}
               </h2>
             )}
@@ -57,16 +57,16 @@ export function ProcessTimeline({ steps, title, subtitle, className }: ProcessTi
                 {/* Content */}
                 <div className="w-full md:w-1/2 pl-8 md:px-12">
                   <div className={cn(
-                    "p-8 rounded-2xl bg-white dark:bg-[#212529] shadow-xl border border-gray-100 dark:border-gray-800 hover:border-brand-blue/30 transition-all duration-300",
+                    "p-8 rounded-2xl bg-white [#212529] shadow-xl border border-gray-100  hover:border-brand-blue/30 transition-all duration-300",
                     index % 2 === 0 ? "text-left md:text-right" : "text-left"
                   )}>
-                    <div className="text-brand-blue dark:text-brand-cyan font-bold text-lg mb-2">
+                    <div className="text-brand-blue  font-bold text-lg mb-2">
                       Phase 0{index + 1}
                     </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-brand-charcoal dark:text-white mb-4">
+                    <h3 className="text-xl md:text-2xl font-bold text-brand-charcoal  mb-4">
                       {step.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm md:text-base">
+                    <p className="text-gray-600  leading-relaxed text-sm md:text-base">
                       {step.description}
                     </p>
                   </div>

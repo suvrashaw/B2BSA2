@@ -24,12 +24,12 @@ export const BackgroundRippleEffect = ({
       {rows.map((_, i) => (
         <motion.div
           key={`row` + i}
-          className="relative h-full w-20 sm:w-32 flex-shrink-0 border-l border-black/[0.04] dark:border-white/[0.04]"
+          className="relative h-full w-20 sm:w-32 flex-shrink-0 border-l border-black/[0.04]"
         >
           {cols.map((_, j) => (
             <motion.div
               key={`col` + j}
-              className="relative h-12 sm:h-20 w-full flex-shrink-0 border-t border-black/[0.04] dark:border-white/[0.04] hover:bg-black/10 dark:hover:bg-white/10 transition-colors duration-200"
+              className="relative h-12 sm:h-20 w-full flex-shrink-0 border-t border-black/[0.04] hover:bg-black/10 transition-colors duration-200"
             >
               {j % 4 === 0 && i % 4 === 0 ? (
                 <svg
@@ -39,7 +39,7 @@ export const BackgroundRippleEffect = ({
                   strokeWidth="1.5"
                   stroke="currentColor"
                   suppressHydrationWarning
-                  className="absolute -left-[14px] -top-[14px] h-7 w-7 text-black/20 dark:text-white/20 pointer-events-none"
+                  className="absolute -left-[14px] -top-[14px] h-7 w-7 text-black/20 pointer-events-none"
                 >
                   <path
                     strokeLinecap="round"

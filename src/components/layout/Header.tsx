@@ -10,14 +10,24 @@ import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about-us" },
-  { name: "Global Event Solutions", href: "/services/global-event-solutions" },
+  { 
+    name: "About", 
+    href: "/about-us",
+    subLinks: [
+      { name: "Our Story", href: "/about-us" },
+      { name: "Vision & Mission", href: "/vision-mission" },
+      { name: "Why Choose Us", href: "/why-choose-us" },
+    ]
+  },
+  { name: "Services", href: "/services" },
   { name: "Case Studies", href: "/case-studies" },
+  { name: "Events", href: "/events" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact-us" },
 ];
 
-import { ThemeToggle } from "./ThemeToggle";
+// Remove ThemeToggle import
+
 
 export function Header({ forceLightMode = false }: { forceLightMode?: boolean } = {}) {
   const [scrolled, setScrolled] = useState(false);
@@ -42,51 +52,63 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-4 transition-all duration-300",
         scrolled
-          ? "bg-brand-white/95 backdrop-blur-md shadow-md border-b border-brand-charcoal/10"
+          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
           : "bg-transparent"
       )}
     >
       <div className="flex items-center gap-2">
-        <Link href="/" className="relative h-12 w-48 block transition-all duration-300 hover:opacity-80">
+        <Link href="/" className="relative h-10 w-40 block transition-all duration-300 hover:opacity-80">
           <Image
             src="/logo.png"
             alt="B2B Sales Arrow"
             fill
-            sizes="192px"
+            sizes="160px"
             priority
-            suppressHydrationWarning
-            className={cn(
-              "object-contain transition-all duration-500",
-              "dark:invert dark:brightness-200"
-            )}
+            className="object-contain"
           />
         </Link>
       </div>
 
-      <nav className="hidden lg:flex items-center gap-8">
+      <nav className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
         {NAV_LINKS.map((link) => (
-          <Link
-            key={link.name}
-            href={link.href}
-            className={cn(
-              "group relative text-sm font-medium transition-colors flex items-center gap-1",
-              "text-brand-charcoal hover:text-brand-blue"
+          <div key={link.name} className="relative group/nav-item py-4">
+            <Link
+              href={link.href}
+              className={cn(
+                "group relative text-sm font-medium transition-colors flex items-center gap-1.5 py-4",
+                "text-brand-charcoal hover:text-brand-blue"
+              )}
+            >
+              {link.name}
+              {link.subLinks && (
+                <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover/nav-item:rotate-180 opacity-70" />
+              )}
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-brand-blue transition-all duration-300 group-hover/nav-item:w-full" />
+            </Link>
+
+            {link.subLinks && (
+              <div className="absolute top-[80%] left-0 pt-4 opacity-0 translate-y-2 pointer-events-none group-hover/nav-item:opacity-100 group-hover/nav-item:translate-y-0 group-hover/nav-item:pointer-events-auto transition-all duration-300 z-[100]">
+                <div className="bg-white/95 backdrop-blur-md border border-gray-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)] rounded-xl p-2 min-w-[220px]">
+                  {link.subLinks.map((sub) => (
+                    <Link
+                      key={sub.name}
+                      href={sub.href}
+                      className="flex items-center justify-between px-4 py-3 text-sm font-medium text-brand-charcoal hover:bg-brand-blue/5 hover:text-brand-blue rounded-lg transition-all duration-200 group/sub"
+                    >
+                      {sub.name}
+                      <span className="opacity-0 -translate-x-2 group-hover/sub:opacity-100 group-hover/sub:translate-x-0 transition-all duration-200 text-brand-blue">
+                        →
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
             )}
-          >
-            {link.name}
-            {link.hasDropdown && (
-              <span suppressHydrationWarning className="flex items-center">
-                <ChevronDown className="w-4 h-4 opacity-70" />
-              </span>
-            )}
-            <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-brand-cyan transition-all duration-300 group-hover:w-full" />
-          </Link>
+          </div>
         ))}
       </nav>
 
       <div className="flex items-center gap-6">
-        <ThemeToggle />
-
         <button className={cn(
           "flex items-center gap-2 text-sm font-medium transition-colors",
           "text-brand-charcoal/70 hover:text-brand-blue"
@@ -125,14 +147,29 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
             className="absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-2xl p-8 lg:hidden flex flex-col gap-6"
           >
             {NAV_LINKS.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-2xl font-bold font-heading text-brand-charcoal hover:text-brand-blue transition-colors"
-              >
-                {link.name}
-              </Link>
+              <div key={link.name} className="space-y-4">
+                <Link
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-2xl font-bold font-heading text-brand-charcoal hover:text-brand-blue transition-colors block"
+                >
+                  {link.name}
+                </Link>
+                {link.subLinks && (
+                  <div className="pl-4 space-y-4 border-l-2 border-brand-blue/10">
+                    {link.subLinks.map((sub) => (
+                      <Link
+                        key={sub.name}
+                        href={sub.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="text-lg font-medium text-gray-500 hover:text-brand-blue transition-colors block"
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
             <Link href="/contact-us" onClick={() => setIsMobileMenuOpen(false)}>
               <button className="w-full py-4 bg-brand-blue text-white font-bold rounded-xl mt-4">

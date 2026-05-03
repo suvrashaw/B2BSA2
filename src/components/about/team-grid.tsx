@@ -59,7 +59,7 @@ export const TeamGrid = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group"
             >
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl mb-6 bg-gray-100 dark:bg-gray-800">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl mb-6 bg-gray-100">
                 <Image 
                   src={member.image} 
                   alt={member.name} 
@@ -72,7 +72,7 @@ export const TeamGrid = () => {
                 </div>
               </div>
               <h3 className="text-xl font-bold text-brand-charcoal font-heading">{member.name}</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1 uppercase tracking-wider font-semibold">{member.role}</p>
+              <p className="text-sm text-gray-500 mt-1 uppercase tracking-wider font-semibold">{member.role}</p>
             </motion.div>
           ))}
         </div>

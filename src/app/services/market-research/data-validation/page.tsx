@@ -4,7 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-brand-white dark:bg-[#1a1c1e]">
+    <main className="min-h-screen bg-brand-white ">
       <Header />
       
       <Hero 

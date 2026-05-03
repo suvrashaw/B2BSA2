@@ -20,7 +20,7 @@ export function ButtonColorful({
         return (
             <Button
                 className={cn(
-                    "relative h-14 px-8 overflow-hidden rounded-full font-bold tracking-tight text-base bg-transparent border-2 border-brand-blue/20 text-brand-charcoal dark:text-white hover:border-brand-blue transition-all duration-500 group",
+                    "relative h-14 px-8 overflow-hidden rounded-full font-bold tracking-tight text-base bg-transparent border-2 border-brand-blue/20 text-brand-charcoal hover:border-brand-blue transition-all duration-500 group",
                     className
                 )}
                 {...props}
@@ -39,7 +39,7 @@ export function ButtonColorful({
         <Button
             className={cn(
                 "relative h-14 px-8 overflow-hidden rounded-full font-bold tracking-tight text-base shadow-xl",
-                "bg-zinc-900 dark:bg-zinc-100",
+                "bg-zinc-900",
                 "transition-all duration-500",
                 "group border-none",
                 className
@@ -50,17 +50,17 @@ export function ButtonColorful({
             <div
                 className={cn(
                     "absolute inset-0",
-                    "bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-red",
+                    "bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-blue",
                     "opacity-50 group-hover:opacity-100",
                     "blur-xl transition-opacity duration-500"
                 )}
             />
 
             {/* Content */}
-            <div className="relative flex items-center justify-center gap-3 z-10 text-white dark:text-zinc-900">
+            <div className="relative flex items-center justify-center gap-3 z-10 text-white">
                 {icon}
                 <span>{children || label}</span>
-                {!icon && !children && <ArrowUpRight className="w-4 h-4 text-white/90 dark:text-zinc-900/90 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />}
+                {!icon && !children && <ArrowUpRight className="w-4 h-4 text-white/90 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />}
             </div>
         </Button>
     );
