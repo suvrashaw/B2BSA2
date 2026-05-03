@@ -26,6 +26,12 @@ const arcsData = [...Array(N).keys()].map(() => ({
   ],
 }));
 
+interface GlobeMarker {
+  lat: number;
+  lng: number;
+  name: string;
+}
+
 const MARKERS = [
   { lat: 40.7128, lng: -74.006, name: "New York" },
   { lat: 51.5074, lng: -0.1278, name: "London" },
@@ -34,13 +40,13 @@ const MARKERS = [
 ];
 
 export function Globe() {
-  const globeRef = useRef<any>(null);
+  const globeRef = useRef<Record<string, any> | null>(null);
   const [dimensions, setDimensions] = useState({ width: 800, height: 800 });
 
   useEffect(() => {
     // Configure auto-rotation and initial position
     if (globeRef.current) {
-      const controls = globeRef.current.controls();
+      const controls = globeRef.current.controls() as Record<string, any>;
       controls.autoRotate = true;
       controls.autoRotateSpeed = 0.5; // Slow, premium rotation
       controls.enableZoom = false; // Disable zoom to keep it looking like a UI element
@@ -94,9 +100,9 @@ export function Globe() {
         
         // Labels for points
         labelsData={MARKERS}
-        labelLat={(d: any) => d.lat}
-        labelLng={(d: any) => d.lng}
-        labelText={(d: any) => d.name}
+        labelLat={(d: unknown) => (d as GlobeMarker).lat}
+        labelLng={(d: unknown) => (d as GlobeMarker).lng}
+        labelText={(d: unknown) => (d as GlobeMarker).name}
         labelSize={1.5}
         labelDotRadius={0.3}
         labelColor={() => "rgba(255, 255, 255, 0.9)"}

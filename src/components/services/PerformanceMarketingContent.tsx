@@ -2,13 +2,14 @@
 
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
-import { motion } from "framer-motion";
+
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Footer } from "@/components/layout/Footer";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { TextSection } from "@/components/sections/TextSection";
 import { USPSection } from "@/components/sections/USPSection";
+import { ServicesGrid } from "@/components/sections/ServicesGrid";
 
 export function PerformanceMarketingContent() {
   useEffect(() => {
@@ -31,28 +32,30 @@ export function PerformanceMarketingContent() {
           badge="ROI-Focused"
         />
 
-        <section className="py-24 bg-brand-white">
-          <div className="container mx-auto px-8">
-            <h2 className="text-3xl md:text-5xl font-bold font-heading mb-16 text-center">Our B2B Performance Marketing Services</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                "Paid Search (PPC) Management",
-                "LinkedIn ABM Ads",
-                "Meta/X B2B Targeting",
-                "Display & Programmatic",
-                "Landing Page Optimization",
-                "Conversion Rate Optimization",
-                "Analytics & Attribution Setup",
-                "Multi-Channel Retargeting"
-              ].map((item, i) => (
-                <div key={i} className="p-6 rounded-2xl bg-brand-gray/5 border border-brand-charcoal/5 flex items-center gap-3">
-                   <div className="w-1.5 h-1.5 rounded-full bg-brand-blue" />
-                   <span className="font-bold text-sm">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <ServicesGrid 
+          title="Our Performance Marketing Services"
+          subtitle="Expertise"
+          services={[
+            { 
+              title: "SEO Services", 
+              description: "Organic visibility engineered for high-intent B2B search behaviors.",
+              href: "/services/marketing-and-market-research/search-engine-optimization",
+              icon: "layout"
+            },
+            { 
+              title: "Paid Advertising", 
+              description: "Full-funnel PPC and programmatic campaigns optimized for enterprise pipeline.",
+              href: "/services/marketing-and-market-research/paid-advertising",
+              icon: "zap"
+            },
+            { 
+              title: "LinkedIn Ads for B2B", 
+              description: "Hyper-targeted LinkedIn campaigns reaching the world's top decision-makers.",
+              href: "/services/marketing-and-market-research/linkedin-ads-b2b",
+              icon: "users"
+            }
+          ]}
+        />
 
         <TextSection 
           title="Why B2B Performance Marketing Is Different"

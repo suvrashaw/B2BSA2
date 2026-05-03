@@ -95,7 +95,7 @@ export function BlogIndexContent() {
                              {post.title}
                           </h3>
                        </div>
-                       <Link href={`/resources/blog/${post.id}`} className="flex items-center gap-2 text-brand-blue font-bold text-sm uppercase tracking-widest group-hover:gap-4 transition-all">
+                       <Link href={`/blog/${post.id}`} className="flex items-center gap-2 text-brand-blue font-bold text-sm uppercase tracking-widest group-hover:gap-4 transition-all">
                           Read Article <ArrowRight className="w-4 h-4" />
                        </Link>
                     </div>

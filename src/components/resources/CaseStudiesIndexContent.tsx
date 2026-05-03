@@ -94,7 +94,7 @@ export function CaseStudiesIndexContent() {
                              {c.title}
                           </h3>
                        </div>
-                       <Link href={`/resources/case-studies/${c.id}`} className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 hover:bg-white text-white hover:text-brand-charcoal font-bold rounded-full transition-all duration-300 w-fit">
+                       <Link href={`/case-studies/${c.id}`} className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 hover:bg-white text-white hover:text-brand-charcoal font-bold rounded-full transition-all duration-300 w-fit">
                           View Case Study <ArrowRight className="w-5 h-5" />
                        </Link>
                     </div>

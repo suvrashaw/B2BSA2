@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
-import { motion } from "framer-motion";
+
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Footer } from "@/components/layout/Footer";

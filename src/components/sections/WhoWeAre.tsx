@@ -1,7 +1,7 @@
 "use client";
 
 import { Target, TrendingUp, Users, Globe2 } from "lucide-react";
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+
 
 const STATS = [
   { value: "250+", label: "Global Events Executed", icon: Globe2, bg: "bg-gradient-to-br from-[#1E6091] to-[#184E77]" },
@@ -75,7 +75,7 @@ export function WhoWeAre() {
             <div className="p-8 lg:p-12 rounded-3xl bg-brand-gray/50 dark:bg-[#1a1c1e] hover:shadow-2xl transition-all duration-500 group border border-transparent hover:border-brand-blue/20 hover:bg-brand-blue/5 cursor-default">
               <div className="transform transition-transform duration-500 group-hover:-translate-y-2">
                 <p className="text-xl md:text-3xl font-serif italic text-black dark:text-white group-hover:text-brand-blue dark:group-hover:text-brand-cyan transition-colors duration-500 leading-relaxed">
-                  "Our mission is to transform how B2B brands connect with their audiences through innovative, immersive experiences that drive measurable business results."
+                  &quot;Our mission is to transform how B2B brands connect with their audiences through innovative, immersive experiences that drive measurable business results.&quot;
                 </p>
                 <div className="mt-8 text-sm font-bold text-gray-500 uppercase tracking-widest group-hover:text-brand-blue/70 transition-colors">
                   — Leadership Team, B2B Sales Arrow

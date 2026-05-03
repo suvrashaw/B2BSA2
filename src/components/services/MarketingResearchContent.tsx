@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
-import { motion } from "framer-motion";
+
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Footer } from "@/components/layout/Footer";
@@ -53,6 +53,30 @@ export function MarketingResearchContent() {
               description: "Organic growth systems built around high-intent B2B search behaviors.",
               href: "/services/marketing-and-market-research/search-engine-optimization",
               icon: "layout"
+            },
+            { 
+              title: "Paid Advertising", 
+              description: "Full-funnel PPC and programmatic campaigns optimized for enterprise pipeline.",
+              href: "/services/marketing-and-market-research/paid-advertising",
+              icon: "zap"
+            },
+            { 
+              title: "LinkedIn Ads for B2B", 
+              description: "Hyper-targeted LinkedIn campaigns reaching the world's top decision-makers.",
+              href: "/services/marketing-and-market-research/linkedin-ads-b2b",
+              icon: "users"
+            },
+            { 
+              title: "Meta Ads for B2B", 
+              description: "Omnichannel retargeting on Facebook and Instagram to surround your top accounts.",
+              href: "/services/marketing-and-market-research/meta-ads-b2b",
+              icon: "zap"
+            },
+            { 
+              title: "SQL Lead Generation", 
+              description: "Verified, sales-ready prospects aligned to your strict ICP and BANT criteria.",
+              href: "/services/marketing-and-market-research/sales-qualified-lead-generation",
+              icon: "target"
             },
             { 
               title: "B2B Market Research", 

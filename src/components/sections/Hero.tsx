@@ -9,12 +9,14 @@ interface HeroProps {
   title?: string | React.ReactNode;
   subtitle?: string;
   badge?: string;
+  image?: string;
 }
 
 export function Hero({ 
   title = <>Accelerating <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-cyan">Enterprise Growth</span></>,
   subtitle = "We partner with ambitious modern businesses to deliver premium event solutions, digital transformation, and strategic market expansion.",
-  badge = "GLOBAL CAPABILITY. STRATEGIC GROWTH."
+  badge = "GLOBAL CAPABILITY. STRATEGIC GROWTH.",
+  image = "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000"
 }: HeroProps) {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 200]);
@@ -55,7 +57,7 @@ export function Hero({
               className="w-48 h-48 rounded-full overflow-hidden shadow-[0_0_80px_rgba(30,96,145,0.8)] border-4 border-brand-charcoal"
             >
               <Image
-                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000"
+                src={image}
                 alt="Loader"
                 fill
                 className="object-cover scale-150"
@@ -116,7 +118,7 @@ export function Hero({
                 className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl"
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000"
+                  src={image}
                   alt="Corporate Event Strategy"
                   fill
                   className="object-cover"

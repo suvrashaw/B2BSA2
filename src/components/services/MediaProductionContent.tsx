@@ -58,6 +58,18 @@ export function MediaProductionContent() {
               description: "Broadcast-quality streaming for virtual and hybrid events with global reach.",
               href: "/services/media-production/live-streaming-services",
               icon: "zap"
+            },
+            { 
+              title: "YouTube for B2B", 
+              description: "Search-intent video advertising that converts executive research into sales leads.",
+              href: "/services/media-production/youtube-ads-b2b",
+              icon: "layout"
+            },
+            { 
+              title: "Video Testimonials", 
+              description: "Authentic cinematic social proof captured at your client locations worldwide.",
+              href: "/services/media-production/video-testimonials",
+              icon: "users"
             }
           ]}
         />

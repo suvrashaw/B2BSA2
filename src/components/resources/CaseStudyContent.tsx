@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
-import { motion } from "framer-motion";
+
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ArrowLeft, CheckCircle2, Trophy, Target, TrendingUp } from "lucide-react";

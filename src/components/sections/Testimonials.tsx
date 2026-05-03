@@ -169,7 +169,7 @@ export function Testimonials() {
                   </div>
 
                   <p className="text-gray-600 dark:text-gray-300 text-[15px] leading-relaxed relative z-10">
-                    "{testimonial.quote}"
+                    &quot;{testimonial.quote}&quot;
                   </p>
 
                   <div className="pt-5 border-t border-gray-100 dark:border-gray-800">

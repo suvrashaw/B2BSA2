@@ -2,11 +2,9 @@
 
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
-import { motion } from "framer-motion";
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Footer } from "@/components/layout/Footer";
-import { StatsBar } from "@/components/sections/StatsBar";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { TextSection } from "@/components/sections/TextSection";
@@ -55,7 +53,7 @@ export function IndustryEventsContent() {
                 </div>
               ))}
             </div>
-            <p className="mt-16 text-center text-gray-400 italic">"Don't see your event? We operate in 40+ countries — let's talk."</p>
+            <p className="mt-16 text-center text-gray-400 italic">&quot;Don&apos;t see your event? We operate in 40+ countries — let&apos;s talk.&quot;</p>
           </div>
         </section>
 

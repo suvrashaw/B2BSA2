@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { ChevronDown, Globe } from "lucide-react";
+
+import { ChevronDown, Globe, Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -20,6 +20,7 @@ import { ThemeToggle } from "./ThemeToggle";
 
 export function Header({ forceLightMode = false }: { forceLightMode?: boolean } = {}) {
   const [scrolled, setScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -98,11 +99,48 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
           </span>
         </button>
 
-        <button className="px-6 py-2.5 rounded text-sm font-medium bg-brand-blue text-white hover:bg-brand-blue/90 hover:shadow-[0_0_15px_rgba(75,192,217,0.4)] transition-all duration-300 relative overflow-hidden group">
-          <span className="relative z-10">Let's Talk</span>
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-blue to-brand-cyan opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        </button>
+        <Link href="/contact-us">
+          <button className="px-6 py-2.5 rounded text-sm font-medium bg-brand-blue text-white hover:bg-brand-blue/90 hover:shadow-[0_0_15px_rgba(75,192,217,0.4)] transition-all duration-300 relative overflow-hidden group">
+            <span className="relative z-10">Let's Talk</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-blue to-brand-cyan opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </button>
+        </Link>
+        <div className="lg:hidden">
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-2 text-brand-charcoal hover:bg-brand-gray/5 rounded-full transition-colors"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
+
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-2xl p-8 lg:hidden flex flex-col gap-6"
+          >
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-2xl font-bold font-heading text-brand-charcoal hover:text-brand-blue transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
+            <Link href="/contact-us" onClick={() => setIsMobileMenuOpen(false)}>
+              <button className="w-full py-4 bg-brand-blue text-white font-bold rounded-xl mt-4">
+                Let's Talk
+              </button>
+            </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }
