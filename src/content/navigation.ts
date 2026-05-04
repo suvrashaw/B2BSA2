@@ -11,11 +11,11 @@ export interface ServiceNavGroup {
 
 export const topNavigation: NavLink[] = [
   { name: "Home", href: "/" },
+  { name: "About", href: "/about-us" },
   { name: "Services", href: "/services/global-event-solutions" },
-  { name: "Blog", href: "/blog" },
   { name: "Case Studies", href: "/case-studies" },
-  { name: "About Us", href: "/about-us" },
-  { name: "Contact Us", href: "/contact-us" },
+  { name: "Blogs", href: "/blog" },
+  { name: "Contact", href: "/contact-us" },
 ];
 
 export const serviceNavigationGroups: ServiceNavGroup[] = [

@@ -328,8 +328,8 @@ function PageHero({ page }: { page: PageContent }) {
   return (
     <section className="relative isolate min-h-[82vh] overflow-hidden bg-brand-charcoal pt-28 text-white">
       <div className="absolute inset-0 -z-10 bg-cover bg-center opacity-30" style={{ backgroundImage: `url(${image})` }} />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-brand-charcoal via-brand-charcoal/90 to-brand-blue/80" />
-      <div className="container mx-auto grid min-h-[72vh] items-center gap-12 px-8 py-20 lg:grid-cols-[1.1fr_0.9fr]">
+      <div className="absolute inset-0 -z-10 bg-linear-to-br from-brand-charcoal via-brand-charcoal/90 to-brand-blue/80" />
+      <div className="container mx-auto flex min-h-[72vh] items-center px-8 py-20">
         <div className="max-w-4xl">
           <div className="mb-6 inline-flex rounded border border-white/20 bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-widest text-brand-cyan backdrop-blur">
             {page.navigationGroup}
@@ -337,15 +337,6 @@ function PageHero({ page }: { page: PageContent }) {
           <h1 className="font-heading text-4xl font-bold leading-tight md:text-6xl lg:text-7xl">{page.hero.title}</h1>
           <div className="mt-8 max-w-3xl space-y-6 text-lg leading-8 text-white/80">
             {renderBlocks(page.hero.blocks, false, "dark")}
-          </div>
-        </div>
-        <div className="hidden rounded-lg border border-white/10 bg-white/10 p-8 shadow-2xl backdrop-blur lg:block">
-          <p className="mb-4 text-xs font-black uppercase tracking-widest text-brand-cyan">Final URL</p>
-          <p className="break-words text-2xl font-bold">{page.url}</p>
-          <div className="mt-8 grid gap-3 text-sm text-white/75">
-            <p>Page {page.pageNumber} of 26</p>
-            <p>{page.requiredSections.length} required sections mapped from docs</p>
-            <p>SEO guidance stored internally</p>
           </div>
         </div>
       </div>
