@@ -9,17 +9,7 @@ import { MapPin } from "lucide-react";
 // Dynamically import Globe to avoid SSR issues
 const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
 
-const LOCATIONS = [
-  { lat: 40.7128, lng: -74.006, name: "New York", size: 0.1, color: "#1E6091" },
-  { lat: 12.9716, lng: 77.5946, name: "Bangalore", size: 0.1, color: "#4BC0D9" },
-  { lat: 51.5074, lng: -0.1278, name: "London", size: 0.05, color: "#B23A48" },
-  { lat: 1.3521, lng: 103.8198, name: "Singapore", size: 0.05, color: "#1E6091" },
-  { lat: 25.2048, lng: 55.2708, name: "Dubai", size: 0.05, color: "#4BC0D9" },
-  { lat: -33.8688, lng: 151.2093, name: "Sydney", size: 0.05, color: "#B23A48" },
-  { lat: 43.6532, lng: -79.3832, name: "Toronto", size: 0.05, color: "#1E6091" },
-];
-
-type LocationItem = {
+export type LocationItem = {
   lat: number;
   lng: number;
   name: string;
@@ -27,7 +17,13 @@ type LocationItem = {
   color: string;
 };
 
-export const GlobalPresence = () => {
+export interface GlobalPresenceData {
+  title: string;
+  description: string;
+  cities: LocationItem[];
+}
+
+export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
   const [globeReady, setGlobeReady] = useState(false);
@@ -61,37 +57,15 @@ export const GlobalPresence = () => {
           </div>
           
           <WhisperText 
-            text="Global Capability. \n Local Expertise."
-            highlights={["Expertise"]}
+            text={data.title}
+            highlights={[data.title.split(" ")[0] || ""]}
             highlightColor="blue"
             className="font-heading text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-8 text-brand-charcoal transition-colors duration-500"
           />
           
-          <p className="text-lg md:text-xl text-brand-charcoal/70 leading-relaxed mb-10 transition-colors duration-500">
-            Based in New York and Bangalore, we are a globally trusted Marketing Technology company serving top-tier enterprises across 40+ countries. Our footprint allows us to deliver human-powered market intelligence worldwide.
+          <p className="text-lg md:text-xl text-brand-charcoal/70 leading-relaxed mb-10 transition-colors duration-500 font-bold uppercase tracking-widest">
+            {data.description}
           </p>
-
-          <div className="space-y-6">
-            <div className="flex items-center gap-4 group">
-              <div className="w-12 h-12 rounded-full bg-brand-blue/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <MapPin className="w-5 h-5 text-brand-cyan" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold font-heading text-brand-charcoal transition-colors duration-500">New York, USA</h3>
-                <p className="text-sm text-brand-charcoal/70 transition-colors duration-500">Global Headquarters</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center gap-4 group">
-              <div className="w-12 h-12 rounded-full bg-brand-blue/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <MapPin className="w-5 h-5 text-brand-cyan" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold font-heading text-brand-charcoal transition-colors duration-500">Bangalore, IND</h3>
-                <p className="text-sm text-brand-charcoal/70 transition-colors duration-500">Asia Pacific Hub & Delivery Center</p>
-              </div>
-            </div>
-          </div>
         </motion.div>
 
         <motion.div 
@@ -106,14 +80,14 @@ export const GlobalPresence = () => {
               onGlobeReady={() => setGlobeReady(true)}
               globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
               backgroundColor="rgba(0,0,0,0)"
-              pointsData={LOCATIONS}
+              pointsData={data.cities}
               pointLat="lat"
               pointLng="lng"
               pointColor="color"
               pointAltitude="size"
               pointRadius={0.5}
               pointsMerge={true}
-              htmlElementsData={LOCATIONS}
+              htmlElementsData={data.cities}
               htmlElement={(d: object) => {
                 const item = d as LocationItem;
                 const el = document.createElement('div');

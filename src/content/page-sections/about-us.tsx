@@ -26,85 +26,87 @@ export const ABOUT_HERO = {
   },
 };
 
-// CinematicSequence — company journey story
-// Suggested secondary use. Stock image frames as placeholders.
-export const ABOUT_CINEMATIC = {
-  frameCount: 4,
-  frameUrls: [
-    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1920",
-    "https://images.unsplash.com/photo-1497366754035-f200586c4bd9?auto=format&fit=crop&q=80&w=1920",
-    "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1920",
-    "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1920",
+export const ABOUT_ORIGIN_TIMELINE = {
+  heading: "How B2B Sales Arrow Was Built",
+  description: "From a single booth to a global enterprise partner.",
+  items: [
+    {
+      title: "Spotting the Gap",
+      content: (
+        <div className="prose prose-sm md:prose-base text-brand-charcoal/80 max-w-none">
+          <p>
+            Enterprise brands were investing heavily in events and campaigns, but the work was fragmented, hard to measure, and disconnected from sales outcomes.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Building the Model",
+      content: (
+        <div className="prose prose-sm md:prose-base text-brand-charcoal/80 max-w-none">
+          <p>
+            We built a model where event solutions, corporate video production, performance marketing, and B2B market research capabilities work together seamlessly.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Scaling Globally",
+      content: (
+        <div className="prose prose-sm md:prose-base text-brand-charcoal/80 max-w-none">
+          <p>
+            Today, we are a global enterprise growth agency delivering these solutions across 40+ countries with accountability to results.
+          </p>
+        </div>
+      ),
+    },
   ],
-  loadingText: "Our Story...",
-  beats: [
+};
+
+export const ABOUT_TEAM = {
+  heading: "The Leadership Behind the Results",
+  members: [
     {
-      id: "founding",
-      className:
-        "absolute left-0 text-left max-w-lg pl-8 md:pl-16 pr-8 py-10 bg-black/40 backdrop-blur-md rounded-r-3xl border-y border-r border-white/10 shadow-2xl",
-      opacityInput: [0, 0.1, 0.22, 0.25],
-      opacityOutput: [0, 1, 1, 0],
-      yInput: [0, 0.1],
-      yOutput: [30, 0],
-      title: "We Started With a Problem.",
-      titleClassName:
-        "font-heading text-4xl md:text-6xl font-bold text-white leading-tight drop-shadow-lg",
+      name: "Suvra Shaw",
+      role: "Founder & CEO",
+      bio: "The architect of B2B Sales Arrow's unified growth model, focusing on aligning event strategy with measurable sales outcomes.",
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop",
+      linkedin: "#",
     },
     {
-      id: "growth",
-      className:
-        "absolute right-8 lg:right-24 text-right max-w-xl px-8 py-10 bg-black/40 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl flex flex-col items-end",
-      opacityInput: [0.25, 0.35, 0.48, 0.5],
-      opacityOutput: [0, 1, 1, 0],
-      yInput: [0.25, 0.35],
-      yOutput: [30, 0],
-      eyebrow: {
-        text: "First Client",
-        className:
-          "text-brand-cyan uppercase tracking-[0.3em] text-sm font-bold block mb-4 drop-shadow-md",
-      },
-      title: "Then We Solved It.",
-      titleClassName:
-        "font-heading text-4xl md:text-6xl font-bold text-white leading-tight drop-shadow-lg",
-      description: {
-        text: "Our first engagement was a single trade show booth. That client went from invisible to market leader on the floor.",
-        className: "text-gray-200 mt-6 text-lg md:text-xl max-w-lg drop-shadow-md",
-      },
+      name: "Sumant Shaw",
+      role: "Co-Founder & COO",
+      bio: "Global operations lead ensuring seamless execution of high-fidelity media production and complex international exhibition builds.",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop",
+      linkedin: "#",
     },
     {
-      id: "scale",
-      className:
-        "absolute right-8 lg:right-24 text-right max-w-lg px-8 py-10 bg-black/40 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl flex flex-col items-end",
-      opacityInput: [0.5, 0.6, 0.73, 0.75],
-      opacityOutput: [0, 1, 1, 0],
-      yInput: [0.5, 0.6],
-      yOutput: [30, 0],
-      eyebrow: {
-        text: "40+ Countries",
-        className:
-          "text-brand-blue uppercase tracking-[0.3em] text-sm font-bold block mb-4 drop-shadow-md",
-      },
-      title: "Then We Scaled It.",
-      titleClassName:
-        "font-heading text-4xl md:text-6xl font-bold text-white leading-tight drop-shadow-lg",
+      name: "Elena Rodriguez",
+      role: "VP of Digital Marketing",
+      bio: "Performance marketing strategist focusing on MQL to SQL conversion and pipeline attribution for enterprise brands.",
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop",
+      linkedin: "#",
     },
     {
-      id: "today",
-      className:
-        "absolute right-8 lg:right-24 text-right max-w-lg px-8 py-10 bg-black/40 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl flex flex-col items-end",
-      opacityInput: [0.75, 0.85, 1],
-      opacityOutput: [0, 1, 1],
-      yInput: [0.75, 0.85],
-      yOutput: [30, 0],
-      title: "Today, We Build Empires.",
-      titleClassName:
-        "font-heading text-4xl md:text-7xl font-bold text-white leading-tight mb-8 drop-shadow-lg",
-      cta: {
-        label: "See Our Work",
-        className:
-          "bg-brand-red hover:bg-brand-maroon text-white px-10 py-4 rounded-full font-bold text-lg tracking-wide transition-colors shadow-xl",
-      },
+      name: "David Chen",
+      role: "Director of Market Intelligence",
+      bio: "Pioneer in human-powered research methodologies and high-precision contact discovery across 40+ countries.",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop",
+      linkedin: "#",
     },
+  ],
+};
+
+export const ABOUT_PRESENCE = {
+  title: "Where We Operate",
+  description: "New York | London | Dubai | Singapore | Sydney | Toronto",
+  cities: [
+    { name: "New York", lat: 40.7128, lng: -74.006, size: 0.1, color: "cyan" },
+    { name: "London", lat: 51.5074, lng: -0.1278, size: 0.1, color: "cyan" },
+    { name: "Dubai", lat: 25.2048, lng: 55.2708, size: 0.1, color: "cyan" },
+    { name: "Singapore", lat: 1.3521, lng: 103.8198, size: 0.1, color: "cyan" },
+    { name: "Sydney", lat: -33.8688, lng: 151.2093, size: 0.1, color: "cyan" },
+    { name: "Toronto", lat: 43.65107, lng: -79.347015, size: 0.1, color: "cyan" },
   ],
 };
 
