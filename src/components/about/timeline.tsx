@@ -63,7 +63,11 @@ const TIMELINE_DATA = [
 export const Timeline = () => {
   return (
     <div className="bg-brand-gray transition-colors duration-500">
-      <TimelineUI data={TIMELINE_DATA} />
+      <TimelineUI 
+        data={TIMELINE_DATA} 
+        heading="Changelog from our journey" 
+        description="I've been working on B2B Sales Arrow for the past 10+ years." 
+      />
     </div>
   );
 };
