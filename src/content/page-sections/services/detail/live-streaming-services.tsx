@@ -1,4 +1,3 @@
-import { BarChart3, Globe2, Radio, Target, TrendingUp, Users, Video, Wifi, Zap } from "lucide-react";
 
 export const LSS_HERO = {
   showPreloader: false,
@@ -20,7 +19,7 @@ export const LSS_HERO = {
   },
   primaryCtaLabel: "Get a Quote",
   secondaryCtaLabel: "See Past Streams",
-  stat: { value: "120+", label: "Live Events Broadcast", icon: Radio },
+  stat: { value: "120+", label: "Live Events Broadcast", icon: "Radio" },
 };
 
 export const LSS_WHY = {
@@ -40,10 +39,10 @@ export const LSS_DELIVERABLES = {
   serviceLabel: "Deliverable",
   ctaLabel: "Learn More",
   services: [
-    { id: "multiplatform", title: "Multi-Platform Broadcast", description: "Simultaneous streaming to LinkedIn Live, YouTube, and your branded landing page.", icon: Radio, image: "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
-    { id: "production", title: "Live Production Switching", description: "Multi-camera live switching with branded overlays, lower thirds, and transitions.", icon: Video, image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
-    { id: "interactive", title: "Interactive Q&A & Polling", description: "Live audience engagement tools including Q&A moderation, live polls, and CTA overlays.", icon: Wifi, image: "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
-    { id: "replay", title: "4K Replay Delivery", description: "Full 4K recording of the stream delivered within 24 hours as a gated on-demand asset.", icon: Zap, image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "multiplatform", title: "Multi-Platform Broadcast", description: "Simultaneous streaming to LinkedIn Live, YouTube, and your branded landing page.", icon: "Radio", image: "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "production", title: "Live Production Switching", description: "Multi-camera live switching with branded overlays, lower thirds, and transitions.", icon: "Video", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
+    { id: "interactive", title: "Interactive Q&A & Polling", description: "Live audience engagement tools including Q&A moderation, live polls, and CTA overlays.", icon: "Wifi", image: "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
+    { id: "replay", title: "4K Replay Delivery", description: "Full 4K recording of the stream delivered within 24 hours as a gated on-demand asset.", icon: "Zap", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
   ],
 };
 
@@ -52,10 +51,10 @@ export const LSS_STATS = {
   quote: '"A professionally produced live stream is one of the most cost-effective ways to generate qualified pipeline at scale. One event. Global reach. Instant credibility."',
   attribution: "— Broadcast Production Team, B2B Sales Arrow",
   stats: [
-    { value: "120+", label: "Live Events Broadcast", icon: Radio, bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
-    { value: "10×", label: "Avg Audience Multiplier", icon: TrendingUp, bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
-    { value: "40+", label: "Countries Reached Live", icon: Globe2, bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
-    { value: "99.9%", label: "Stream Uptime Rate", icon: Target, bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
+    { value: "120+", label: "Live Events Broadcast", icon: "Radio", bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
+    { value: "10×", label: "Avg Audience Multiplier", icon: "TrendingUp", bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
+    { value: "40+", label: "Countries Reached Live", icon: "Globe2", bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
+    { value: "99.9%", label: "Stream Uptime Rate", icon: "Target", bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
   ],
 };
 
@@ -65,8 +64,8 @@ export const LSS_CASE_STUDIES = {
   ctaLabel: "Full Study",
   viewAllLabel: "View All Work",
   caseStudies: [
-    { id: "finserve-live", client: "FinServe SaaS", title: "Product Launch Stream Reaches 12,000 Viewers", challenge: "Physical venue capped at 200 people — global audience locked out.", solution: "Broadcast-grade LinkedIn Live stream with interactive Q&A and gated replay.", metric: "12,000", metricLabel: "Live Viewers", icon: BarChart3, image: "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=1200" },
-    { id: "gitex-live", client: "Tech Summit Partners", title: "Conference Live Stream Generates 800 Registrations", challenge: "International prospects couldn't travel to the event.", solution: "Gated stream registration page deployed 3 weeks ahead of the event.", metric: "800+", metricLabel: "Registrations Pre-Event", icon: Users, image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200" },
+    { id: "finserve-live", client: "FinServe SaaS", title: "Product Launch Stream Reaches 12,000 Viewers", challenge: "Physical venue capped at 200 people — global audience locked out.", solution: "Broadcast-grade LinkedIn Live stream with interactive Q&A and gated replay.", metric: "12,000", metricLabel: "Live Viewers", icon: "BarChart3", image: "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=1200" },
+    { id: "gitex-live", client: "Tech Summit Partners", title: "Conference Live Stream Generates 800 Registrations", challenge: "International prospects couldn't travel to the event.", solution: "Gated stream registration page deployed 3 weeks ahead of the event.", metric: "800+", metricLabel: "Registrations Pre-Event", icon: "Users", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200" },
   ],
 };
 

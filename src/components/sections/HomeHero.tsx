@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import Icon from "@/components/ui/Icon";
 import {
   HOME_HERO_CONTENT,
   type HomeHeroContent,
@@ -17,7 +18,11 @@ export interface HeroProps {
   image?: HomeHeroContent["image"];
   primaryCtaLabel?: HomeHeroContent["primaryCtaLabel"] | null;
   secondaryCtaLabel?: HomeHeroContent["secondaryCtaLabel"] | null;
-  stat?: HomeHeroContent["stat"] | null;
+  stat?: {
+    value: string;
+    label: string;
+    icon: string;
+  } | null;
   timing?: HomeHeroContent["timing"];
   showPreloader?: boolean;
 }
@@ -37,7 +42,7 @@ export function Hero({
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 200]);
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
-  const StatIcon = stat?.icon;
+  const statIconName = stat?.icon;
 
   // Animation Phases: "dropping" (bouncing ball) -> "expanding" (morph to image) -> "done" (text reveals)
   const [phase, setPhase] = useState<"dropping" | "expanding" | "done">(
@@ -89,7 +94,7 @@ export function Hero({
       </AnimatePresence>
 
       {/* HERO SECTION */}
-      <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-brand-gray dark:bg-[#1a1c1e]">
+      <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-brand-gray">
         {/* Background Gradients */}
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brand-blue/10 to-transparent pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-tr from-brand-cyan/10 to-transparent pointer-events-none" />
@@ -105,16 +110,16 @@ export function Hero({
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: phase === "done" ? 1 : 0, scale: phase === "done" ? 1 : 0.9 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="inline-block mb-6 px-4 py-1.5 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue dark:text-brand-cyan text-sm font-semibold tracking-wide"
+              className="inline-block mb-6 px-4 py-1.5 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-sm font-semibold tracking-wide"
             >
               {eyebrow}
             </motion.div>
             
-            <h1 className="font-heading text-5xl lg:text-7xl font-bold leading-[1.1] text-brand-charcoal dark:text-white mb-6">
+            <h1 className="font-heading text-5xl lg:text-7xl font-bold leading-[1.1] text-brand-charcoal mb-6">
               {title}
             </h1>
             
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-lg leading-relaxed">
+            <p className="text-lg text-gray-600 mb-8 max-w-lg leading-relaxed">
               {description}
             </p>
 
@@ -127,7 +132,7 @@ export function Hero({
                   </button>
                 )}
                 {secondaryCtaLabel && (
-                  <button className="px-8 py-4 rounded border border-gray-300 dark:border-gray-700 text-brand-charcoal dark:text-white font-medium hover:border-brand-blue hover:text-brand-blue dark:hover:text-brand-cyan transition-colors duration-300">
+                  <button className="px-8 py-4 rounded border border-gray-300 text-brand-charcoal font-medium hover:border-brand-blue hover:text-brand-blue:text-brand-cyan transition-colors duration-300">
                     {secondaryCtaLabel}
                   </button>
                 )}
@@ -153,20 +158,20 @@ export function Hero({
                 <div className="absolute inset-0 bg-brand-blue/10 mix-blend-overlay" />
                 
                 {/* Floating stat card - Reveals after morph */}
-                {stat && StatIcon && (
+                {stat && statIconName && (
                   <motion.div
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: phase === "done" ? 1 : 0, x: phase === "done" ? 0 : 20 }}
                     transition={{ delay: 0.4, duration: 0.6 }}
-                    className="absolute bottom-8 left-[-40px] bg-white dark:bg-[#212529] p-6 rounded-xl shadow-xl border border-gray-100 dark:border-gray-800 backdrop-blur-md"
+                    className="absolute bottom-8 left-[-40px] bg-white p-6 rounded-xl shadow-xl border border-gray-100 backdrop-blur-md"
                   >
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-full bg-brand-cyan/20 flex items-center justify-center">
-                        <StatIcon className="w-6 h-6 text-brand-blue dark:text-brand-cyan" />
+                        <Icon name={statIconName} className="w-6 h-6 text-brand-blue" />
                       </div>
                       <div>
-                        <div className="text-2xl font-bold font-heading text-brand-charcoal dark:text-white">{stat.value}</div>
-                        <div className="text-sm text-gray-500 dark:text-gray-400">{stat.label}</div>
+                        <div className="text-2xl font-bold font-heading text-brand-charcoal">{stat.value}</div>
+                        <div className="text-sm text-gray-500">{stat.label}</div>
                       </div>
                     </div>
                   </motion.div>

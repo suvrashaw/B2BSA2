@@ -1,4 +1,3 @@
-import { BarChart3, Globe2, Layers, Palette, Presentation, Ruler, Target, TrendingUp, Users, Zap } from "lucide-react";
 
 export const TSBD_HERO = {
   showPreloader: false,
@@ -20,7 +19,7 @@ export const TSBD_HERO = {
   },
   primaryCtaLabel: "Get a Quote",
   secondaryCtaLabel: "See Our Designs",
-  stat: { value: "500+", label: "Booth Designs Delivered", icon: Presentation },
+  stat: { value: "500+", label: "Booth Designs Delivered", icon: "Presentation" },
 };
 
 export const TSBD_WHY = {
@@ -40,10 +39,10 @@ export const TSBD_DELIVERABLES = {
   serviceLabel: "Deliverable",
   ctaLabel: "Learn More",
   services: [
-    { id: "concept", title: "Concept & 3D Visualisation", description: "Photorealistic 3D renders of your booth before a single piece is fabricated.", icon: Palette, image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
-    { id: "fabrication", title: "Custom Fabrication", description: "High-quality materials, precision CNC cutting, and expert finishing at our production facility.", icon: Layers, image: "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
-    { id: "graphics", title: "Graphics & Branding", description: "Large-format print, LED displays, and digital content production for every surface.", icon: Ruler, image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
-    { id: "install", title: "On-Site Installation", description: "Our crew installs, tests, and hands over your booth ready to exhibit — then dismantles and ships it back.", icon: Zap, image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "concept", title: "Concept & 3D Visualisation", description: "Photorealistic 3D renders of your booth before a single piece is fabricated.", icon: "Palette", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "fabrication", title: "Custom Fabrication", description: "High-quality materials, precision CNC cutting, and expert finishing at our production facility.", icon: "Layers", image: "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
+    { id: "graphics", title: "Graphics & Branding", description: "Large-format print, LED displays, and digital content production for every surface.", icon: "Ruler", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
+    { id: "install", title: "On-Site Installation", description: "Our crew installs, tests, and hands over your booth ready to exhibit — then dismantles and ships it back.", icon: "Zap", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
   ],
 };
 
@@ -52,10 +51,10 @@ export const TSBD_STATS = {
   quote: '"A great booth doesn\'t just look good. It\'s a conversion machine designed to move enterprise buyers from curious to committed."',
   attribution: "— Booth Design Team, B2B Sales Arrow",
   stats: [
-    { value: "500+", label: "Booth Designs Delivered", icon: Presentation, bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
-    { value: "+340%", label: "Avg Lead Capture Lift", icon: TrendingUp, bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
-    { value: "40+", label: "Countries Deployed", icon: Globe2, bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
-    { value: "98%", label: "On-Time Delivery", icon: Target, bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
+    { value: "500+", label: "Booth Designs Delivered", icon: "Presentation", bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
+    { value: "+340%", label: "Avg Lead Capture Lift", icon: "TrendingUp", bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
+    { value: "40+", label: "Countries Deployed", icon: "Globe2", bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
+    { value: "98%", label: "On-Time Delivery", icon: "Target", bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
   ],
 };
 
@@ -65,8 +64,8 @@ export const TSBD_CASE_STUDIES = {
   ctaLabel: "Full Study",
   viewAllLabel: "View All Booth Work",
   caseStudies: [
-    { id: "gitex", client: "Global Tech Summit", title: "340% Lead Surge at GITEX 2025", challenge: "Generic presence among 6,000 exhibitors.", solution: "2-storey immersive booth with AR product demos and NFC lead capture.", metric: "+340%", metricLabel: "Lead Capture Rate", icon: BarChart3, image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200" },
-    { id: "pharma", client: "PharmaConnect Expo", title: "Premium Booth Presence at CPhI Worldwide", challenge: "Brand lost among 2,500+ exhibitors.", solution: "360° immersive booth environment with live demo theatre.", metric: "220+", metricLabel: "Enterprise SQLs", icon: Users, image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" },
+    { id: "gitex", client: "Global Tech Summit", title: "340% Lead Surge at GITEX 2025", challenge: "Generic presence among 6,000 exhibitors.", solution: "2-storey immersive booth with AR product demos and NFC lead capture.", metric: "+340%", metricLabel: "Lead Capture Rate", icon: "BarChart3", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200" },
+    { id: "pharma", client: "PharmaConnect Expo", title: "Premium Booth Presence at CPhI Worldwide", challenge: "Brand lost among 2,500+ exhibitors.", solution: "360° immersive booth environment with live demo theatre.", metric: "220+", metricLabel: "Enterprise SQLs", icon: "Users", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" },
   ],
 };
 

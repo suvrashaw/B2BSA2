@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Icon from "@/components/ui/Icon";
 import {
   HOME_SERVICES_CONTENT,
   type HomeServicesContent,
+  type HomeServiceItem,
 } from "./home-section-content";
 
 export interface OurServicesProps {
@@ -14,7 +16,7 @@ export interface OurServicesProps {
   heading?: HomeServicesContent["heading"];
   serviceLabel?: HomeServicesContent["serviceLabel"];
   ctaLabel?: HomeServicesContent["ctaLabel"];
-  services?: HomeServicesContent["services"];
+  services?: HomeServiceItem[];
 }
 
 export function OurServices({
@@ -26,18 +28,18 @@ export function OurServices({
   services = content.services,
 }: OurServicesProps = {}) {
   return (
-    <section id="services" className="py-20 bg-white dark:bg-[#212529]">
+    <section id="services" className="py-20 bg-white">
       <div className="container mx-auto px-8">
         <div className="flex flex-col items-start text-left mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 text-brand-blue dark:text-brand-cyan text-sm font-semibold tracking-wide"
+            className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 text-brand-blue text-sm font-semibold tracking-wide"
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal dark:text-white leading-tight">
+          <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal leading-tight">
             {heading}
           </h2>
         </div>
@@ -52,7 +54,7 @@ export function OurServices({
                 zIndex: index,
               }}
             >
-              <div className="bg-brand-gray dark:bg-[#1a1c1e] border border-gray-200 dark:border-gray-800 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row h-auto md:h-[400px] relative group/card">
+              <div className="bg-brand-gray border border-gray-200 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row h-auto md:h-[400px] relative group/card">
                 
                 {/* Content Area */}
                 <div className="w-full md:w-2/5 p-8 lg:p-12 flex flex-col justify-between relative z-10 pointer-events-none transition-all duration-700">
@@ -60,16 +62,16 @@ export function OurServices({
                   
                   <div className="pointer-events-auto">
                     <div className="flex items-center gap-2 mb-6">
-                      <span className="px-3 py-1 bg-white dark:bg-[#212529] border border-gray-100 dark:border-gray-800 rounded-full text-xs font-bold text-gray-600 dark:text-gray-300 shadow-sm flex items-center gap-2 transition-colors duration-700 md:group-has-[.image-pane:hover]/card:bg-white/20 md:group-has-[.image-pane:hover]/card:text-white md:group-has-[.image-pane:hover]/card:border-transparent md:group-has-[.image-pane:hover]/card:backdrop-blur-md">
-                        <service.icon className="w-3 h-3 text-brand-blue md:group-has-[.image-pane:hover]/card:text-white transition-colors duration-700" />
+                      <span className="px-3 py-1 bg-white border border-gray-100 rounded-full text-xs font-bold text-gray-600 shadow-sm flex items-center gap-2 transition-colors duration-700 md:group-has-[.image-pane:hover]/card:bg-white/20 md:group-has-[.image-pane:hover]/card:text-white md:group-has-[.image-pane:hover]/card:border-transparent md:group-has-[.image-pane:hover]/card:backdrop-blur-md">
+                        <Icon name={service.icon} className="w-3 h-3 text-brand-blue md:group-has-[.image-pane:hover]/card:text-white transition-colors duration-700" />
                         {serviceLabel}
                       </span>
                     </div>
-                    <h3 className="font-heading text-3xl font-bold text-brand-charcoal dark:text-white mb-6 leading-tight transition-colors duration-700 md:group-has-[.image-pane:hover]/card:text-white drop-shadow-md">
+                    <h3 className="font-heading text-3xl font-bold text-brand-charcoal mb-6 leading-tight transition-colors duration-700 md:group-has-[.image-pane:hover]/card:text-white drop-shadow-md">
                       {service.title}
                     </h3>
                     
-                    <p className="text-gray-600 dark:text-gray-400 font-medium leading-relaxed transition-colors duration-700 md:group-has-[.image-pane:hover]/card:text-gray-200 drop-shadow-md">
+                    <p className="text-gray-600 font-medium leading-relaxed transition-colors duration-700 md:group-has-[.image-pane:hover]/card:text-gray-200 drop-shadow-md">
                       {service.description}
                     </p>
                   </div>
@@ -89,7 +91,7 @@ export function OurServices({
                     sizes="(max-width: 768px) 100vw, 60vw"
                     className="object-cover transition-transform duration-700 md:group-hover/image:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-transparent to-brand-gray/80 dark:to-[#1a1c1e]/80 md:group-hover/image:opacity-0 transition-opacity duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-transparent to-brand-gray/80 md:group-hover/image:opacity-0 transition-opacity duration-700" />
                   <div className="absolute inset-0 bg-black/60 opacity-0 md:group-hover/image:opacity-100 transition-opacity duration-700" />
                 </div>
               </div>

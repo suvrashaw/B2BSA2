@@ -12,7 +12,7 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-const MagneticButton = React.forwardRef<HTMLElement, any>(
+const MagneticButton = React.forwardRef<HTMLElement, React.HTMLAttributes<HTMLElement> & { as?: React.ElementType }>(
   ({ className, children, as: Component = "button", ...props }, forwardedRef) => {
     const localRef = useRef<HTMLElement>(null);
 
@@ -52,12 +52,12 @@ const MagneticButton = React.forwardRef<HTMLElement, any>(
           });
         };
 
-        element.addEventListener("mousemove", handleMouseMove as any);
-        element.addEventListener("mouseleave", handleMouseLeave);
+        element.addEventListener("mousemove", handleMouseMove as unknown as EventListener);
+        element.addEventListener("mouseleave", handleMouseLeave as unknown as EventListener);
 
         return () => {
-          element.removeEventListener("mousemove", handleMouseMove as any);
-          element.removeEventListener("mouseleave", handleMouseLeave);
+          element.removeEventListener("mousemove", handleMouseMove as unknown as EventListener);
+          element.removeEventListener("mouseleave", handleMouseLeave as unknown as EventListener);
         };
       }, element);
 
@@ -67,9 +67,9 @@ const MagneticButton = React.forwardRef<HTMLElement, any>(
     return (
       <Component
         ref={(node: HTMLElement) => {
-          (localRef as any).current = node;
+          (localRef as React.MutableRefObject<HTMLElement | null>).current = node;
           if (typeof forwardedRef === "function") forwardedRef(node);
-          else if (forwardedRef) (forwardedRef as any).current = node;
+          else if (forwardedRef) (forwardedRef as React.MutableRefObject<HTMLElement | null>).current = node;
         }}
         className={cn("cursor-pointer", className)}
         {...props}

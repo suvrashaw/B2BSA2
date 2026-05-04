@@ -1,5 +1,3 @@
-import { BarChart3, Globe2, Scissors, Target, TrendingUp, Users, Video, Wand2, Zap } from "lucide-react";
-
 export const VES_HERO = {
   showPreloader: false,
   eyebrow: "VIDEO EDITING SERVICES",
@@ -20,7 +18,7 @@ export const VES_HERO = {
   },
   primaryCtaLabel: "Get a Quote",
   secondaryCtaLabel: "See Sample Edits",
-  stat: { value: "1,200+", label: "Videos Edited & Delivered", icon: Scissors },
+  stat: { value: "1,200+", label: "Videos Edited & Delivered", icon: "Scissors" },
 };
 
 export const VES_WHY = {
@@ -40,10 +38,10 @@ export const VES_DELIVERABLES = {
   serviceLabel: "Deliverable",
   ctaLabel: "Learn More",
   services: [
-    { id: "edit", title: "Multi-Platform Edit", description: "Your footage edited into 16:9, 1:1, and 9:16 formats — optimised for every major B2B distribution channel.", icon: Scissors, image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
-    { id: "colour", title: "Colour Grading", description: "Cinema-quality colour correction and grading to ensure consistent look and feel across your entire video library.", icon: Wand2, image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
-    { id: "motion", title: "Motion Graphics & Titles", description: "Branded lower thirds, animated titles, logo reveals, and call-to-action overlays.", icon: Video, image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
-    { id: "captions", title: "Captions & Subtitles", description: "Accurate closed captions and burned-in subtitles for silent-play environments (LinkedIn auto-play).", icon: Zap, image: "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "edit", title: "Multi-Platform Edit", description: "Your footage edited into 16:9, 1:1, and 9:16 formats — optimised for every major B2B distribution channel.", icon: "Scissors", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "colour", title: "Colour Grading", description: "Cinema-quality colour correction and grading to ensure consistent look and feel across your entire video library.", icon: "Wand2", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
+    { id: "motion", title: "Motion Graphics & Titles", description: "Branded lower thirds, animated titles, logo reveals, and call-to-action overlays.", icon: "Video", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
+    { id: "captions", title: "Captions & Subtitles", description: "Accurate closed captions and burned-in subtitles for silent-play environments (LinkedIn auto-play).", icon: "Zap", image: "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
   ],
 };
 
@@ -52,21 +50,21 @@ export const VES_STATS = {
   quote: '"Raw footage is just data. Professional editing turns it into a brand asset that builds trust, communicates value, and converts enterprise buyers."',
   attribution: "— Post-Production Lead, B2B Sales Arrow",
   stats: [
-    { value: "1,200+", label: "Videos Edited & Delivered", icon: Video, bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
-    { value: "48hr", label: "Standard Turnaround", icon: TrendingUp, bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
-    { value: "40+", label: "Countries, Clients Served", icon: Globe2, bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
-    { value: "99%", label: "First-Pass Approval Rate", icon: Target, bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
+    { value: "1,200+", label: "Videos Edited & Delivered", icon: "Video", bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
+    { value: "48hr", label: "Standard Turnaround", icon: "TrendingUp", bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
+    { value: "40+", label: "Countries, Clients Served", icon: "Globe2", bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
+    { value: "99%", label: "First-Pass Approval Rate", icon: "Target", bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
   ],
 };
 
 export const VES_CASE_STUDIES = {
   eyebrow: "EDITING RESULTS",
-  heading: (<>Content We've Made <br /><span className="text-brand-blue">Performance-Ready</span></>),
+  heading: (<>Content We&apos;ve Made <br /><span className="text-brand-blue">Performance-Ready</span></>),
   ctaLabel: "Full Study",
   viewAllLabel: "View All Work",
   caseStudies: [
-    { id: "vortex", client: "Vortex Labs", title: "Monthly Video Programme Grows LinkedIn 400%", challenge: "Raw executive interview footage sitting unused for months.", solution: "Monthly editing retainer — 12 videos per month across LinkedIn and YouTube.", metric: "+400%", metricLabel: "LinkedIn Follower Growth", icon: BarChart3, image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200" },
-    { id: "synapse", client: "Synapse Networks", title: "Sales Video Cuts Reduce Sales Cycle by 30%", challenge: "Long sales cycle due to complex product education needs.", solution: "Series of 90-second product explainer videos embedded in sales email sequences.", metric: "−30%", metricLabel: "Sales Cycle Length", icon: Users, image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" },
+    { id: "vortex", client: "Vortex Labs", title: "Monthly Video Programme Grows LinkedIn 400%", challenge: "Raw executive interview footage sitting unused for months.", solution: "Monthly editing retainer — 12 videos per month across LinkedIn and YouTube.", metric: "+400%", metricLabel: "LinkedIn Follower Growth", icon: "BarChart3", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200" },
+    { id: "synapse", client: "Synapse Networks", title: "Sales Video Cuts Reduce Sales Cycle by 30%", challenge: "Long sales cycle due to complex product education needs.", solution: "Series of 90-second product explainer videos embedded in sales email sequences.", metric: "−30%", metricLabel: "Sales Cycle Length", icon: "Users", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" },
   ],
 };
 

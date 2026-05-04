@@ -1,4 +1,3 @@
-import { BarChart3, Globe2, MousePointerClick, Target, TrendingUp, Users, Zap } from "lucide-react";
 
 export const PAID_HERO = {
   showPreloader: false,
@@ -20,7 +19,7 @@ export const PAID_HERO = {
   },
   primaryCtaLabel: "Get a Free Audit",
   secondaryCtaLabel: "View Paid Ad Results",
-  stat: { value: "4.2×", label: "Avg ROAS Achieved", icon: TrendingUp },
+  stat: { value: "4.2×", label: "Avg ROAS Achieved", icon: "TrendingUp" },
 };
 
 export const PAID_WHY = {
@@ -40,10 +39,10 @@ export const PAID_DELIVERABLES = {
   serviceLabel: "Deliverable",
   ctaLabel: "Learn More",
   services: [
-    { id: "google", title: "Google Ads Management", description: "Search, Display, and YouTube campaigns targeting high-intent B2B keywords and in-market audiences.", icon: MousePointerClick, image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
-    { id: "linkedin", title: "LinkedIn Paid Campaigns", description: "Sponsored content, InMail, and dynamic ads targeted by job title, company, and industry.", icon: Users, image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
-    { id: "retargeting", title: "Retargeting Campaigns", description: "Pixel-based retargeting to re-engage website visitors, content downloaders, and video viewers.", icon: Target, image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
-    { id: "reporting", title: "Weekly Performance Reporting", description: "Full transparency on spend, impressions, clicks, leads, and pipeline generated from every campaign.", icon: BarChart3, image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "google", title: "Google Ads Management", description: "Search, Display, and YouTube campaigns targeting high-intent B2B keywords and in-market audiences.", icon: "MousePointerClick", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "linkedin", title: "LinkedIn Paid Campaigns", description: "Sponsored content, InMail, and dynamic ads targeted by job title, company, and industry.", icon: "Users", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
+    { id: "retargeting", title: "Retargeting Campaigns", description: "Pixel-based retargeting to re-engage website visitors, content downloaders, and video viewers.", icon: "Target", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
+    { id: "reporting", title: "Weekly Performance Reporting", description: "Full transparency on spend, impressions, clicks, leads, and pipeline generated from every campaign.", icon: "BarChart3", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
   ],
 };
 
@@ -52,10 +51,10 @@ export const PAID_STATS = {
   quote: '"B2B paid media done right doesn\'t burn budget — it multiplies it. Our campaigns are engineered to find the exact buyer at the exact moment they\'re ready to evaluate."',
   attribution: "— Paid Media Team, B2B Sales Arrow",
   stats: [
-    { value: "4.2×", label: "Avg ROAS Achieved", icon: TrendingUp, bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
-    { value: "−42%", label: "Avg CPL Reduction vs Baseline", icon: Zap, bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
-    { value: "40+", label: "Countries, Ad Markets Run", icon: Globe2, bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
-    { value: "98%", label: "Client Retention on Retainer", icon: Target, bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
+    { value: "4.2×", label: "Avg ROAS Achieved", icon: "TrendingUp", bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
+    { value: "−42%", label: "Avg CPL Reduction vs Baseline", icon: "Zap", bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
+    { value: "40+", label: "Countries, Ad Markets Run", icon: "Globe2", bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
+    { value: "98%", label: "Client Retention on Retainer", icon: "Target", bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
   ],
 };
 
@@ -65,8 +64,8 @@ export const PAID_CASE_STUDIES = {
   ctaLabel: "Full Study",
   viewAllLabel: "View All Work",
   caseStudies: [
-    { id: "finserve-paid", client: "FinServe SaaS", title: "Google Ads Campaign Generates 4.2× ROAS", challenge: "High CPL from generic broad-match keyword strategy.", solution: "Restructured account with intent-based keywords and decision-maker retargeting.", metric: "4.2×", metricLabel: "Return on Ad Spend", icon: BarChart3, image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200" },
-    { id: "nexus-paid", client: "Nexus Technologies", title: "LinkedIn Ads Cut CPL by 42% in 60 Days", challenge: "LinkedIn CPL was 3× the target — campaigns not profitable.", solution: "Audience restructure, creative refresh, and bid strategy overhaul.", metric: "−42%", metricLabel: "Cost Per Lead Reduction", icon: Users, image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" },
+    { id: "finserve-paid", client: "FinServe SaaS", title: "Google Ads Campaign Generates 4.2× ROAS", challenge: "High CPL from generic broad-match keyword strategy.", solution: "Restructured account with intent-based keywords and decision-maker retargeting.", metric: "4.2×", metricLabel: "Return on Ad Spend", icon: "BarChart3", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200" },
+    { id: "nexus-paid", client: "Nexus Technologies", title: "LinkedIn Ads Cut CPL by 42% in 60 Days", challenge: "LinkedIn CPL was 3× the target — campaigns not profitable.", solution: "Audience restructure, creative refresh, and bid strategy overhaul.", metric: "−42%", metricLabel: "Cost Per Lead Reduction", icon: "Users", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" },
   ],
 };
 

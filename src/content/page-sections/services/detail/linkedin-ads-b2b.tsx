@@ -1,4 +1,3 @@
-import { BarChart3, Globe2, ExternalLink, Target, TrendingUp, Users, Zap } from "lucide-react";
 
 export const LIADS_HERO = {
   showPreloader: false,
@@ -20,7 +19,7 @@ export const LIADS_HERO = {
   },
   primaryCtaLabel: "Get a Free LinkedIn Audit",
   secondaryCtaLabel: "View LinkedIn Results",
-  stat: { value: "5×", label: "Avg LinkedIn Lead Quality vs Other Channels", icon: ExternalLink },
+  stat: { value: "5×", label: "Avg LinkedIn Lead Quality vs Other Channels", icon: "ExternalLink" },
 };
 
 export const LIADS_WHY = {
@@ -40,10 +39,10 @@ export const LIADS_DELIVERABLES = {
   serviceLabel: "Deliverable",
   ctaLabel: "Learn More",
   services: [
-    { id: "strategy", title: "LinkedIn Ad Strategy", description: "Audience architecture, funnel mapping, format selection, and budget allocation across campaign objectives.", icon: Target, image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
-    { id: "creative", title: "B2B Ad Creative Production", description: "Sponsored content copy, static graphics, video ads, and message ad copy — all tested systematically.", icon: ExternalLink, image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
-    { id: "lead-gen", title: "Lead Gen Form Campaigns", description: "Native LinkedIn Lead Gen Forms with CRM integration to capture decision-maker contact details without friction.", icon: Users, image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
-    { id: "reporting", title: "Weekly Campaign Reporting", description: "CPL, ROAS, engagement rates, and pipeline attribution — full visibility on every penny of LinkedIn spend.", icon: BarChart3, image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "strategy", title: "LinkedIn Ad Strategy", description: "Audience architecture, funnel mapping, format selection, and budget allocation across campaign objectives.", icon: "Target", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "creative", title: "B2B Ad Creative Production", description: "Sponsored content copy, static graphics, video ads, and message ad copy — all tested systematically.", icon: "ExternalLink", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
+    { id: "lead-gen", title: "Lead Gen Form Campaigns", description: "Native LinkedIn Lead Gen Forms with CRM integration to capture decision-maker contact details without friction.", icon: "Users", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
+    { id: "reporting", title: "Weekly Campaign Reporting", description: "CPL, ROAS, engagement rates, and pipeline attribution — full visibility on every penny of LinkedIn spend.", icon: "BarChart3", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
   ],
 };
 
@@ -52,10 +51,10 @@ export const LIADS_STATS = {
   quote: '"LinkedIn is the only platform where you can serve an ad directly to the CFO of a Fortune 500 company. When the creative and targeting are right, the results are transformative."',
   attribution: "— LinkedIn Ads Team, B2B Sales Arrow",
   stats: [
-    { value: "5×", label: "Lead Quality vs Other Channels", icon: TrendingUp, bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
-    { value: "−38%", label: "Avg CPL Achieved vs Benchmark", icon: Zap, bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
-    { value: "40+", label: "Industries Run LinkedIn Campaigns", icon: Globe2, bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
-    { value: "98%", label: "Client Retention on Retainer", icon: Target, bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
+    { value: "5×", label: "Lead Quality vs Other Channels", icon: "TrendingUp", bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
+    { value: "−38%", label: "Avg CPL Achieved vs Benchmark", icon: "Zap", bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
+    { value: "40+", label: "Industries Run LinkedIn Campaigns", icon: "Globe2", bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
+    { value: "98%", label: "Client Retention on Retainer", icon: "Target", bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
   ],
 };
 
@@ -65,8 +64,8 @@ export const LIADS_CASE_STUDIES = {
   ctaLabel: "Full Study",
   viewAllLabel: "View All Work",
   caseStudies: [
-    { id: "aura-linkedin", client: "Aura Systems", title: "LinkedIn ABM Drives 6 Months Ahead of Schedule", challenge: "New European market entry — no brand recognition among target accounts.", solution: "Named account targeting across 200 enterprise accounts with executive-level messaging.", metric: "6mo", metricLabel: "Ahead of Market Entry Target", icon: BarChart3, image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" },
-    { id: "nexus-linkedin", client: "Nexus Technologies", title: "Lead Gen Form Campaign at £28 CPL", challenge: "Previous agency achieving £95 CPL on LinkedIn.", solution: "Audience rebuild, creative refresh, and Lead Gen Form optimisation.", metric: "£28", metricLabel: "Cost Per Lead (from £95)", icon: Users, image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" },
+    { id: "aura-linkedin", client: "Aura Systems", title: "LinkedIn ABM Drives 6 Months Ahead of Schedule", challenge: "New European market entry — no brand recognition among target accounts.", solution: "Named account targeting across 200 enterprise accounts with executive-level messaging.", metric: "6mo", metricLabel: "Ahead of Market Entry Target", icon: "BarChart3", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" },
+    { id: "nexus-linkedin", client: "Nexus Technologies", title: "Lead Gen Form Campaign at £28 CPL", challenge: "Previous agency achieving £95 CPL on LinkedIn.", solution: "Audience rebuild, creative refresh, and Lead Gen Form optimisation.", metric: "£28", metricLabel: "Cost Per Lead (from £95)", icon: "Users", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" },
   ],
 };
 

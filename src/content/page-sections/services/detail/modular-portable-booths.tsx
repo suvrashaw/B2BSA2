@@ -1,4 +1,3 @@
-import { BarChart3, Box, Globe2, Package, RefreshCw, Target, TrendingUp, Truck, Zap } from "lucide-react";
 
 export const MPB_HERO = {
   showPreloader: false,
@@ -20,7 +19,7 @@ export const MPB_HERO = {
   },
   primaryCtaLabel: "Get a Quote",
   secondaryCtaLabel: "See the Systems",
-  stat: { value: "400+", label: "Modular Systems Deployed", icon: Box },
+  stat: { value: "400+", label: "Modular Systems Deployed", icon: "Box" },
 };
 
 export const MPB_WHY = {
@@ -40,10 +39,10 @@ export const MPB_DELIVERABLES = {
   serviceLabel: "Deliverable",
   ctaLabel: "Learn More",
   services: [
-    { id: "frames", title: "Modular Frame System", description: "Precision-engineered aluminium extrusion frames with click-lock connectors — assembly in minutes.", icon: Box, image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
-    { id: "graphics", title: "Branded Fabric Graphics", description: "Dye-sublimation printed stretch fabric with vibrant full-colour brand application — machine washable.", icon: RefreshCw, image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
-    { id: "accessories", title: "Counters & Accessories", description: "Folding counters, literature holders, iPad stands, lighting kits — complete trade show essentials.", icon: Package, image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
-    { id: "cases", title: "Transport Cases & Guide", description: "Custom-fit transit cases with wheels + full assembly guide and video tutorial included.", icon: Truck, image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "frames", title: "Modular Frame System", description: "Precision-engineered aluminium extrusion frames with click-lock connectors — assembly in minutes.", icon: "Box", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "graphics", title: "Branded Fabric Graphics", description: "Dye-sublimation printed stretch fabric with vibrant full-colour brand application — machine washable.", icon: "RefreshCw", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
+    { id: "accessories", title: "Counters & Accessories", description: "Folding counters, literature holders, iPad stands, lighting kits — complete trade show essentials.", icon: "Package", image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
+    { id: "cases", title: "Transport Cases & Guide", description: "Custom-fit transit cases with wheels + full assembly guide and video tutorial included.", icon: "Truck", image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
   ],
 };
 
@@ -52,10 +51,10 @@ export const MPB_STATS = {
   quote: '"The best booth for your company isn\'t always the biggest one. It\'s the one that\'s ready when you need it, looks sharp every time, and works at every venue."',
   attribution: "— Modular Solutions Team, B2B Sales Arrow",
   stats: [
-    { value: "400+", label: "Modular Systems Deployed", icon: Box, bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
-    { value: "50+", label: "Countries Shipped To", icon: Globe2, bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
-    { value: "2 hrs", label: "Avg Assembly Time", icon: Zap, bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
-    { value: "100%", label: "Venue Compliance Rate", icon: Target, bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
+    { value: "400+", label: "Modular Systems Deployed", icon: "Box", bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
+    { value: "50+", label: "Countries Shipped To", icon: "Globe2", bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
+    { value: "2 hrs", label: "Avg Assembly Time", icon: "Zap", bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
+    { value: "100%", label: "Venue Compliance Rate", icon: "Target", bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
   ],
 };
 
@@ -65,8 +64,8 @@ export const MPB_CASE_STUDIES = {
   ctaLabel: "Full Study",
   viewAllLabel: "View Full Portfolio",
   caseStudies: [
-    { id: "startup", client: "B2B SaaS Startup", title: "10 Events in 12 Months with 1 System", challenge: "Needed to attend 10 international events on a startup budget.", solution: "One modular system shipped to all 10 events — 3 different floor plan configurations used.", metric: "10 events", metricLabel: "1 System, 12 Months", icon: TrendingUp, image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200" },
-    { id: "team", client: "Consulting Firm", title: "Self-Assembled by 2-Person Team at 6 Events", challenge: "No budget for installation crews — team needed to self-setup.", solution: "Portable 18 sqm system with tool-free assembly guide and practice run.", metric: "2 hrs", metricLabel: "Setup by 2 People", icon: BarChart3, image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1200" },
+    { id: "startup", client: "B2B SaaS Startup", title: "10 Events in 12 Months with 1 System", challenge: "Needed to attend 10 international events on a startup budget.", solution: "One modular system shipped to all 10 events — 3 different floor plan configurations used.", metric: "10 events", metricLabel: "1 System, 12 Months", icon: "TrendingUp", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200" },
+    { id: "team", client: "Consulting Firm", title: "Self-Assembled by 2-Person Team at 6 Events", challenge: "No budget for installation crews — team needed to self-setup.", solution: "Portable 18 sqm system with tool-free assembly guide and practice run.", metric: "2 hrs", metricLabel: "Setup by 2 People", icon: "BarChart3", image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1200" },
   ],
 };
 

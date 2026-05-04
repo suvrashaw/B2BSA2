@@ -1,4 +1,3 @@
-import { BarChart3, Globe2, Target, TrendingUp, Users } from "lucide-react";
 
 export const ABOUT_HERO = {
   showPreloader: false,
@@ -23,7 +22,7 @@ export const ABOUT_HERO = {
   stat: {
     value: "40+",
     label: "Countries Served",
-    icon: Globe2,
+    icon: "Globe2",
   },
 };
 
@@ -31,15 +30,12 @@ export const ABOUT_HERO = {
 // Suggested secondary use. Stock image frames as placeholders.
 export const ABOUT_CINEMATIC = {
   frameCount: 4,
-  getFrameSrc: (index: number) => {
-    const frames = [
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1920",
-      "https://images.unsplash.com/photo-1497366754035-f200586c4bd9?auto=format&fit=crop&q=80&w=1920",
-      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1920",
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1920",
-    ];
-    return frames[Math.min(index - 1, frames.length - 1)];
-  },
+  frameUrls: [
+    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1920",
+    "https://images.unsplash.com/photo-1497366754035-f200586c4bd9?auto=format&fit=crop&q=80&w=1920",
+    "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1920",
+    "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1920",
+  ],
   loadingText: "Our Story...",
   beats: [
     {
@@ -126,37 +122,37 @@ export const ABOUT_STATS = {
     {
       value: "8+",
       label: "Years in Operation",
-      icon: TrendingUp,
+      icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
       value: "240+",
       label: "Brands Served",
-      icon: Users,
+      icon: "Users",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "$1.2B",
       label: "Pipeline Generated",
-      icon: BarChart3,
+      icon: "BarChart3",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
       value: "40+",
       label: "Countries Covered",
-      icon: Globe2,
+      icon: "Globe2",
       bg: "bg-linear-to-br from-[#1b5e82] to-[#164e6b]",
     },
     {
       value: "98%",
       label: "Client Retention",
-      icon: Target,
+      icon: "Target",
       bg: "bg-linear-to-br from-[#306f75] to-[#255c61]",
     },
     {
       value: "500+",
       label: "Projects Delivered",
-      icon: Globe2,
+      icon: "Globe2",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
   ],
@@ -233,7 +229,7 @@ export const ABOUT_CASE_STUDIES = {
       solution: "Interactive structural design with live AR product demos.",
       metric: "+340%",
       metricLabel: "Lead Capture Rate",
-      icon: BarChart3,
+      icon: "BarChart3",
       image:
         "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1200",
     },
@@ -245,7 +241,7 @@ export const ABOUT_CASE_STUDIES = {
       solution: "Targeted video thought-leadership campaign.",
       metric: "4.2x",
       metricLabel: "ROI in 6 Months",
-      icon: Target,
+      icon: "Target",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
     },

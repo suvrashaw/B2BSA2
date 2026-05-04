@@ -1,4 +1,3 @@
-import { BarChart3, Globe2, HardHat, Layers, Settings, Target, TrendingUp, Users, Wrench } from "lucide-react";
 
 export const TSBB_HERO = {
   showPreloader: false,
@@ -20,7 +19,7 @@ export const TSBB_HERO = {
   },
   primaryCtaLabel: "Get a Quote",
   secondaryCtaLabel: "View Our Portfolio",
-  stat: { value: "500+", label: "Booths Built & Installed", icon: HardHat },
+  stat: { value: "500+", label: "Booths Built & Installed", icon: "HardHat" },
 };
 
 export const TSBB_WHY = {
@@ -40,10 +39,10 @@ export const TSBB_DELIVERABLES = {
   serviceLabel: "Deliverable",
   ctaLabel: "Learn More",
   services: [
-    { id: "design", title: "Structural Design & Engineering", description: "Full structural engineering drawings, load calculations, and venue compliance documentation.", icon: Layers, image: "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
-    { id: "fabrication", title: "Custom Fabrication", description: "In-house CNC machining, joinery, powder coating, and final assembly at our production facility.", icon: Settings, image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
-    { id: "install", title: "Global Installation & Breakdown", description: "Certified crews install and dismantle at any venue worldwide — guaranteed to spec every time.", icon: Wrench, image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
-    { id: "storage", title: "Storage & Maintenance", description: "Climate-controlled storage between events with pre-show inspection and maintenance included.", icon: HardHat, image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "design", title: "Structural Design & Engineering", description: "Full structural engineering drawings, load calculations, and venue compliance documentation.", icon: "Layers", image: "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "fabrication", title: "Custom Fabrication", description: "In-house CNC machining, joinery, powder coating, and final assembly at our production facility.", icon: "Settings", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
+    { id: "install", title: "Global Installation & Breakdown", description: "Certified crews install and dismantle at any venue worldwide — guaranteed to spec every time.", icon: "Wrench", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
+    { id: "storage", title: "Storage & Maintenance", description: "Climate-controlled storage between events with pre-show inspection and maintenance included.", icon: "HardHat", image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
   ],
 };
 
@@ -52,10 +51,10 @@ export const TSBB_STATS = {
   quote: '"A booth built right the first time pays for itself over 5+ events. We design for longevity, not just the next show date."',
   attribution: "— Fabrication Team, B2B Sales Arrow",
   stats: [
-    { value: "500+", label: "Booths Built & Installed", icon: HardHat, bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
-    { value: "40+", label: "Countries Installed In", icon: Globe2, bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
-    { value: "99%", label: "Structural Defect-Free Rate", icon: Target, bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
-    { value: "6 yrs", label: "Avg Booth Lifespan", icon: TrendingUp, bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
+    { value: "500+", label: "Booths Built & Installed", icon: "HardHat", bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
+    { value: "40+", label: "Countries Installed In", icon: "Globe2", bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
+    { value: "99%", label: "Structural Defect-Free Rate", icon: "Target", bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
+    { value: "6 yrs", label: "Avg Booth Lifespan", icon: "TrendingUp", bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
   ],
 };
 
@@ -65,8 +64,8 @@ export const TSBB_CASE_STUDIES = {
   ctaLabel: "Full Study",
   viewAllLabel: "View Full Portfolio",
   caseStudies: [
-    { id: "automotive", client: "Automotive OEM", title: "900 sqm Double-Deck at IAA Mobility", challenge: "Largest exhibition footprint in company history — on a tight timeline.", solution: "Full structural engineering, in-house fabrication, 12-person installation crew.", metric: "900 sqm", metricLabel: "Installed in 4 Days", icon: HardHat, image: "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1200" },
-    { id: "pharma", client: "Global Pharma Brand", title: "Reconfigurable Booth Used at 14 Shows", challenge: "Needed a single build to work across 14 global events over 2 years.", solution: "Modular reconfigurable system designed for 5 different floor plan configurations.", metric: "14 shows", metricLabel: "From 1 Build", icon: BarChart3, image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" },
+    { id: "automotive", client: "Automotive OEM", title: "900 sqm Double-Deck at IAA Mobility", challenge: "Largest exhibition footprint in company history — on a tight timeline.", solution: "Full structural engineering, in-house fabrication, 12-person installation crew.", metric: "900 sqm", metricLabel: "Installed in 4 Days", icon: "HardHat", image: "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1200" },
+    { id: "pharma", client: "Global Pharma Brand", title: "Reconfigurable Booth Used at 14 Shows", challenge: "Needed a single build to work across 14 global events over 2 years.", solution: "Modular reconfigurable system designed for 5 different floor plan configurations.", metric: "14 shows", metricLabel: "From 1 Build", icon: "BarChart3", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" },
   ],
 };
 

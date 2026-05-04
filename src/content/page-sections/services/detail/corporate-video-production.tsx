@@ -1,4 +1,3 @@
-import { BarChart3, Building, Film, Globe2, Presentation, Target, TrendingUp, Users, Video, Zap } from "lucide-react";
 
 export const CVP_HERO = {
   showPreloader: false,
@@ -20,7 +19,7 @@ export const CVP_HERO = {
   },
   primaryCtaLabel: "Get a Quote",
   secondaryCtaLabel: "View Showreel",
-  stat: { value: "180+", label: "Corporate Films Produced", icon: Film },
+  stat: { value: "180+", label: "Corporate Films Produced", icon: "Film" },
 };
 
 export const CVP_WHY = {
@@ -40,10 +39,10 @@ export const CVP_DELIVERABLES = {
   serviceLabel: "Deliverable",
   ctaLabel: "Learn More",
   services: [
-    { id: "brand-film", title: "Brand Film", description: "A 2–5 minute cinematic company story film for homepage, sales decks, and investor meetings.", icon: Film, image: "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
-    { id: "exec-interviews", title: "Executive Interview Series", description: "Professional sit-down interviews with C-suite and subject matter experts, filmed in a branded studio environment.", icon: Video, image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
-    { id: "product-demo", title: "Product Demo Video", description: "Slick product walkthroughs combining screen recording, live footage, and motion graphics.", icon: Presentation, image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
-    { id: "social-cuts", title: "Social & Campaign Cuts", description: "Platform-optimised video cuts for LinkedIn, YouTube, and paid media campaigns.", icon: Zap, image: "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "brand-film", title: "Brand Film", description: "A 2–5 minute cinematic company story film for homepage, sales decks, and investor meetings.", icon: "Film", image: "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "exec-interviews", title: "Executive Interview Series", description: "Professional sit-down interviews with C-suite and subject matter experts, filmed in a branded studio environment.", icon: "Video", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
+    { id: "product-demo", title: "Product Demo Video", description: "Slick product walkthroughs combining screen recording, live footage, and motion graphics.", icon: "Presentation", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
+    { id: "social-cuts", title: "Social & Campaign Cuts", description: "Platform-optimised video cuts for LinkedIn, YouTube, and paid media campaigns.", icon: "Zap", image: "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
   ],
 };
 
@@ -52,21 +51,21 @@ export const CVP_STATS = {
   quote: '"A brand film is the highest-leverage sales asset a B2B company can own. It does the explaining, the trust-building, and the emotional persuasion — at scale."',
   attribution: "— Production Director, B2B Sales Arrow",
   stats: [
-    { value: "180+", label: "Corporate Films Produced", icon: Film, bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
-    { value: "3×", label: "Avg Conversion vs Brochure", icon: TrendingUp, bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
-    { value: "40+", label: "Countries Filmed In", icon: Globe2, bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
-    { value: "98%", label: "Client Satisfaction Rate", icon: Target, bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
+    { value: "180+", label: "Corporate Films Produced", icon: "Film", bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
+    { value: "3×", label: "Avg Conversion vs Brochure", icon: "TrendingUp", bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
+    { value: "40+", label: "Countries Filmed In", icon: "Globe2", bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
+    { value: "98%", label: "Client Satisfaction Rate", icon: "Target", bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
   ],
 };
 
 export const CVP_CASE_STUDIES = {
   eyebrow: "CORPORATE VIDEO RESULTS",
-  heading: (<>Brands We've Made <br /><span className="text-brand-blue">Look World-Class</span></>),
+  heading: (<>Brands We&apos;ve Made <br /><span className="text-brand-blue">Look World-Class</span></>),
   ctaLabel: "Full Study",
   viewAllLabel: "View All Work",
   caseStudies: [
-    { id: "finserve", client: "FinServe SaaS", title: "Brand Film Drives 4.2× Pipeline Growth", challenge: "Complex SaaS product lost in a crowded market.", solution: "Cinematic 3-minute brand story film deployed across sales and paid channels.", metric: "4.2×", metricLabel: "Pipeline ROI", icon: BarChart3, image: "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=1200" },
-    { id: "aura", client: "Aura Systems", title: "Executive Series Generates 180 Qualified Meetings", challenge: "New market entry — no brand recognition in Europe.", solution: "8-part LinkedIn thought leadership video series featuring the CEO.", metric: "180", metricLabel: "Qualified Sales Meetings", icon: Users, image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" },
+    { id: "finserve", client: "FinServe SaaS", title: "Brand Film Drives 4.2× Pipeline Growth", challenge: "Complex SaaS product lost in a crowded market.", solution: "Cinematic 3-minute brand story film deployed across sales and paid channels.", metric: "4.2×", metricLabel: "Pipeline ROI", icon: "BarChart3", image: "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=1200" },
+    { id: "aura", client: "Aura Systems", title: "Executive Series Generates 180 Qualified Meetings", challenge: "New market entry — no brand recognition in Europe.", solution: "8-part LinkedIn thought leadership video series featuring the CEO.", metric: "180", metricLabel: "Qualified Sales Meetings", icon: "Users", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" },
   ],
 };
 

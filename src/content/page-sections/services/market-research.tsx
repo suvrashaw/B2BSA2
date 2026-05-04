@@ -1,4 +1,3 @@
-import { BarChart3, Brain, CheckCircle, Database, Globe2, Search, Target, TrendingUp, Users } from "lucide-react";
 
 export const MR_HERO = {
   showPreloader: false,
@@ -23,7 +22,7 @@ export const MR_HERO = {
   stat: {
     value: "98%",
     label: "Data Accuracy Rate",
-    icon: CheckCircle,
+    icon: "CheckCircle",
   },
 };
 
@@ -44,7 +43,7 @@ export const MR_SERVICES = {
       id: "data-augmentation",
       title: "Data Augmentation",
       description: "Enrich your existing prospect and customer data with firmographic, technographic, and intent signals from 350M+ verified contacts.",
-      icon: Database,
+      icon: "Database",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-blue",
     },
@@ -52,7 +51,7 @@ export const MR_SERVICES = {
       id: "data-validation",
       title: "Data Validation",
       description: "Multi-layer verification of email addresses, phone numbers, and firmographic data to eliminate bounces and wasted outreach.",
-      icon: CheckCircle,
+      icon: "CheckCircle",
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-cyan",
     },
@@ -60,7 +59,7 @@ export const MR_SERVICES = {
       id: "market-intelligence",
       title: "Human-Powered Market Intelligence",
       description: "Primary research, competitor analysis, and market sizing conducted by our expert analyst team — not automated scrapers.",
-      icon: Brain,
+      icon: "Brain",
       image: "https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-red",
     },
@@ -81,25 +80,25 @@ export const MR_STATS = {
     {
       value: "98%",
       label: "Data Accuracy Rate",
-      icon: CheckCircle,
+      icon: "CheckCircle",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
       value: "350M+",
       label: "B2B Contacts in Database",
-      icon: Database,
+      icon: "Database",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "40+",
       label: "Markets Covered",
-      icon: Globe2,
+      icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
       value: "72h",
       label: "Avg Research Turnaround",
-      icon: TrendingUp,
+      icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
   ],
@@ -160,7 +159,7 @@ export const MR_CASE_STUDIES = {
       solution: "Full market intelligence reports + validated prospect database for all 3 markets.",
       metric: "3",
       metricLabel: "New Markets Entered",
-      icon: Globe2,
+      icon: "Globe2",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
     },
     {
@@ -171,7 +170,7 @@ export const MR_CASE_STUDIES = {
       solution: "Full CRM data audit + augmentation + triple-verified email and phone validation.",
       metric: "84%",
       metricLabel: "Reduction in Bounce Rate",
-      icon: BarChart3,
+      icon: "BarChart3",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     },
   ],

@@ -49,7 +49,7 @@ export function Globe() {
   useEffect(() => {
     // Configure auto-rotation and initial position
     if (globeRef.current) {
-      const controls = globeRef.current.controls() as Record<string, any>;
+      const controls = globeRef.current.controls() as Record<string, unknown>;
       controls.autoRotate = true;
       controls.autoRotateSpeed = 0.5; // Slow, premium rotation
       controls.enableZoom = false; // Disable zoom to keep it looking like a UI element

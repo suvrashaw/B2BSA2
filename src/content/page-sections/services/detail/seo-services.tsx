@@ -1,4 +1,3 @@
-import { BarChart3, Globe2, Search, Target, TrendingUp, Users, Zap } from "lucide-react";
 
 export const SEO_HERO = {
   showPreloader: false,
@@ -20,7 +19,7 @@ export const SEO_HERO = {
   },
   primaryCtaLabel: "Get a Free SEO Audit",
   secondaryCtaLabel: "View SEO Case Studies",
-  stat: { value: "3.2×", label: "Avg Organic Traffic Growth", icon: TrendingUp },
+  stat: { value: "3.2×", label: "Avg Organic Traffic Growth", icon: "TrendingUp" },
 };
 
 export const SEO_WHY = {
@@ -40,10 +39,10 @@ export const SEO_DELIVERABLES = {
   serviceLabel: "Deliverable",
   ctaLabel: "Learn More",
   services: [
-    { id: "audit", title: "Technical SEO Audit", description: "Full crawl of your site identifying every technical issue suppressing your rankings.", icon: Search, image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
-    { id: "strategy", title: "Keyword & Content Strategy", description: "Comprehensive keyword map tied to buyer personas and funnel stages — with monthly content production.", icon: BarChart3, image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
-    { id: "links", title: "Authority Link Building", description: "High-DA B2B publication placements and digital PR to build domain authority systematically.", icon: Globe2, image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
-    { id: "reporting", title: "Monthly Ranking Reports", description: "Full transparency on ranking movements, organic traffic, and pipeline attribution from organic search.", icon: TrendingUp, image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "audit", title: "Technical SEO Audit", description: "Full crawl of your site identifying every technical issue suppressing your rankings.", icon: "Search", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "strategy", title: "Keyword & Content Strategy", description: "Comprehensive keyword map tied to buyer personas and funnel stages — with monthly content production.", icon: "BarChart3", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
+    { id: "links", title: "Authority Link Building", description: "High-DA B2B publication placements and digital PR to build domain authority systematically.", icon: "Globe2", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
+    { id: "reporting", title: "Monthly Ranking Reports", description: "Full transparency on ranking movements, organic traffic, and pipeline attribution from organic search.", icon: "TrendingUp", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
   ],
 };
 
@@ -52,21 +51,21 @@ export const SEO_STATS = {
   quote: '"B2B SEO done right is not a cost centre — it\'s a compounding asset. Every piece of content we create continues to attract decision-makers years from now."',
   attribution: "— SEO Strategy Team, B2B Sales Arrow",
   stats: [
-    { value: "3.2×", label: "Avg Organic Traffic Growth", icon: TrendingUp, bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
-    { value: "#1", label: "Rankings for Client Terms", icon: Search, bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
-    { value: "40+", label: "Industries Served", icon: Globe2, bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
-    { value: "6mo", label: "Avg Time to Page 1", icon: Zap, bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
+    { value: "3.2×", label: "Avg Organic Traffic Growth", icon: "TrendingUp", bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
+    { value: "#1", label: "Rankings for Client Terms", icon: "Search", bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
+    { value: "40+", label: "Industries Served", icon: "Globe2", bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
+    { value: "6mo", label: "Avg Time to Page 1", icon: "Zap", bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
   ],
 };
 
 export const SEO_CASE_STUDIES = {
   eyebrow: "SEO RESULTS",
-  heading: (<>Brands We've Taken <br /><span className="text-brand-blue">to Page One</span></>),
+  heading: (<>Brands We&apos;ve Taken <br /><span className="text-brand-blue">to Page One</span></>),
   ctaLabel: "Full Study",
   viewAllLabel: "View All Work",
   caseStudies: [
-    { id: "finserve-seo", client: "FinServe SaaS", title: "320% Organic Traffic Growth in 8 Months", challenge: "Zero first-page rankings for any buyer-intent keywords.", solution: "Technical SEO overhaul + monthly content programme targeting 40 priority terms.", metric: "+320%", metricLabel: "Organic Traffic Growth", icon: BarChart3, image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" },
-    { id: "synapse-seo", client: "Synapse Networks", title: "#1 Rankings for 12 High-Intent B2B Keywords", challenge: "Competitor dominated search results for all core service terms.", solution: "Authority link building + semantic content clusters over 9 months.", metric: "12", metricLabel: "Page 1 Rankings Achieved", icon: Users, image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200" },
+    { id: "finserve-seo", client: "FinServe SaaS", title: "320% Organic Traffic Growth in 8 Months", challenge: "Zero first-page rankings for any buyer-intent keywords.", solution: "Technical SEO overhaul + monthly content programme targeting 40 priority terms.", metric: "+320%", metricLabel: "Organic Traffic Growth", icon: "BarChart3", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" },
+    { id: "synapse-seo", client: "Synapse Networks", title: "#1 Rankings for 12 High-Intent B2B Keywords", challenge: "Competitor dominated search results for all core service terms.", solution: "Authority link building + semantic content clusters over 9 months.", metric: "12", metricLabel: "Page 1 Rankings Achieved", icon: "Users", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200" },
   ],
 };
 

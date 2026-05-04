@@ -1,4 +1,3 @@
-import { BarChart3, Globe2, Target, TrendingUp, Users } from "lucide-react";
 
 export const EVENTS_HERO = {
   showPreloader: false,
@@ -23,7 +22,7 @@ export const EVENTS_HERO = {
   stat: {
     value: "250+",
     label: "Events Managed",
-    icon: Globe2,
+    icon: "Globe2",
   },
 };
 
@@ -88,25 +87,25 @@ export const EVENTS_STATS = {
     {
       value: "250+",
       label: "Events Managed",
-      icon: Globe2,
+      icon: "Globe2",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
       value: "40+",
       label: "Countries Represented",
-      icon: Target,
+      icon: "Target",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "280+",
       label: "Avg Leads per Event",
-      icon: Users,
+      icon: "Users",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
       value: "500+",
       label: "Exhibitors Supported",
-      icon: TrendingUp,
+      icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
   ],
@@ -131,7 +130,7 @@ export const EVENTS_CASE_STUDIES = {
       solution: "Immersive 2-storey booth with live AR demos and NFC lead capture.",
       metric: "+340%",
       metricLabel: "Lead Capture Rate",
-      icon: BarChart3,
+      icon: "BarChart3",
       image:
         "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
     },
@@ -143,7 +142,7 @@ export const EVENTS_CASE_STUDIES = {
       solution: "Premium modular booth, influencer-led product launch, social media activation.",
       metric: "220",
       metricLabel: "Enterprise SQLs",
-      icon: Target,
+      icon: "Target",
       image:
         "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=1200",
     },
@@ -155,7 +154,7 @@ export const EVENTS_CASE_STUDIES = {
       solution: "Technical demo environment, pre-scheduled meeting programme, CRM integration.",
       metric: "$4M",
       metricLabel: "Pipeline in 4 Days",
-      icon: TrendingUp,
+      icon: "TrendingUp",
       image:
         "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
     },

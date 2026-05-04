@@ -1,4 +1,3 @@
-import { BarChart3, Globe2, ExternalLink, Rocket, Search, Target, TrendingUp, Users, Zap } from "lucide-react";
 
 export const PERF_HERO = {
   showPreloader: false,
@@ -23,7 +22,7 @@ export const PERF_HERO = {
   stat: {
     value: "3.8x",
     label: "Average ROAS",
-    icon: TrendingUp,
+    icon: "TrendingUp",
   },
 };
 
@@ -44,7 +43,7 @@ export const PERF_SERVICES = {
       id: "seo",
       title: "SEO Services",
       description: "Technical SEO, content strategy, and link building to rank for the enterprise keywords your buyers search.",
-      icon: Search,
+      icon: "Search",
       image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-blue",
     },
@@ -52,7 +51,7 @@ export const PERF_SERVICES = {
       id: "paid-ads",
       title: "Paid Advertising",
       description: "Google Ads, programmatic display, and retargeting campaigns with enterprise-grade conversion tracking.",
-      icon: Zap,
+      icon: "Zap",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-cyan",
     },
@@ -60,7 +59,7 @@ export const PERF_SERVICES = {
       id: "linkedin",
       title: "LinkedIn Ads for B2B",
       description: "Sponsored content, InMail, and Lead Gen Forms targeting C-suite and VP-level decision makers.",
-      icon: ExternalLink,
+      icon: "ExternalLink",
       image: "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-red",
     },
@@ -81,25 +80,25 @@ export const PERF_STATS = {
     {
       value: "3.8x",
       label: "Average ROAS",
-      icon: TrendingUp,
+      icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
       value: "+280%",
       label: "Avg Organic Traffic",
-      icon: Globe2,
+      icon: "Globe2",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "62%",
       label: "Lower Cost-per-Lead",
-      icon: Target,
+      icon: "Target",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
       value: "120+",
       label: "Campaigns Managed",
-      icon: BarChart3,
+      icon: "BarChart3",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
   ],
@@ -160,7 +159,7 @@ export const PERF_CASE_STUDIES = {
       solution: "LinkedIn ABM targeting + SEO content cluster + retargeting sequence.",
       metric: "4.2x",
       metricLabel: "ROI in 6 Months",
-      icon: Target,
+      icon: "Target",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
     },
     {
@@ -171,7 +170,7 @@ export const PERF_CASE_STUDIES = {
       solution: "ICP-targeted Sponsored Content + InMail sequence + Lead Gen Forms.",
       metric: "180",
       metricLabel: "Enterprise Demos",
-      icon: ExternalLink,
+      icon: "ExternalLink",
       image: "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1200",
     },
   ],

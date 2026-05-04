@@ -1,4 +1,3 @@
-import { BookOpen, Clock, Globe2, Users } from "lucide-react";
 
 export const BLOG_HERO = {
   showPreloader: false,
@@ -23,7 +22,7 @@ export const BLOG_HERO = {
   stat: {
     value: "120+",
     label: "Articles Published",
-    icon: BookOpen,
+    icon: "BookOpen",
   },
 };
 
@@ -41,87 +40,38 @@ export const BLOG_WHO_WE_ARE = {
     {
       value: "120+",
       label: "Articles Published",
-      icon: BookOpen,
+      icon: "BookOpen",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
       value: "18k+",
       label: "Monthly Readers",
-      icon: Users,
+      icon: "Users",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "12",
       label: "Topics Covered",
-      icon: Globe2,
+      icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
       value: "6 min",
       label: "Avg Read Time",
-      icon: Clock,
+      icon: "Clock",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
   ],
 };
 
 export const BLOG_LOGOS = [
-  {
-    id: "strategy",
-    render: () => (
-      <span className="font-sans font-bold text-[18px] tracking-wide text-[#1E6091] dark:text-[#4BC0D9] uppercase transition-all duration-300 hover:scale-125 cursor-pointer">
-        Strategy
-      </span>
-    ),
-  },
-  {
-    id: "events",
-    render: () => (
-      <span className="font-sans font-bold text-[18px] tracking-wide text-[#2A9D8F] uppercase transition-all duration-300 hover:scale-125 cursor-pointer">
-        Events
-      </span>
-    ),
-  },
-  {
-    id: "media",
-    render: () => (
-      <span className="font-sans font-bold text-[18px] tracking-wide text-[#E63946] uppercase transition-all duration-300 hover:scale-125 cursor-pointer">
-        Media
-      </span>
-    ),
-  },
-  {
-    id: "lead-gen",
-    render: () => (
-      <span className="font-sans font-bold text-[18px] tracking-wide text-[#023E8A] uppercase transition-all duration-300 hover:scale-125 cursor-pointer">
-        Lead Generation
-      </span>
-    ),
-  },
-  {
-    id: "seo",
-    render: () => (
-      <span className="font-sans font-bold text-[18px] tracking-wide text-[#0077B6] uppercase transition-all duration-300 hover:scale-125 cursor-pointer">
-        SEO
-      </span>
-    ),
-  },
-  {
-    id: "research",
-    render: () => (
-      <span className="font-sans font-bold text-[18px] tracking-wide text-[#457B9D] uppercase transition-all duration-300 hover:scale-125 cursor-pointer">
-        Research
-      </span>
-    ),
-  },
-  {
-    id: "data",
-    render: () => (
-      <span className="font-sans font-bold text-[18px] tracking-wide text-[#2A9D8F] uppercase transition-all duration-300 hover:scale-125 cursor-pointer">
-        Data
-      </span>
-    ),
-  },
+  { id: "strategy" },
+  { id: "events" },
+  { id: "media" },
+  { id: "lead-gen" },
+  { id: "seo" },
+  { id: "research" },
+  { id: "data" },
 ];
 
 export const BLOG_POSTS = {

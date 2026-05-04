@@ -36,7 +36,7 @@ export const WhisperText: React.FC<WhisperTextProps> = ({
   const containerRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
       const targets = gsap.utils.toArray<HTMLElement>("[data-word]");
 
       gsap.set(targets, { opacity: 0, y: y, rotateX: -45, transformOrigin: "0% 50% -50" });

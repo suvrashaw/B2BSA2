@@ -1,4 +1,3 @@
-import { BarChart3, Brain, Globe2, Search, Target, TrendingUp, Users, Zap } from "lucide-react";
 
 export const HPMI_HERO = {
   showPreloader: false,
@@ -7,7 +6,7 @@ export const HPMI_HERO = {
     <>
       Deep Market Insight <br />
       <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        That Algorithms Can't Deliver
+        That Algorithms Can&apos;t Deliver
       </span>
     </>
   ),
@@ -20,7 +19,7 @@ export const HPMI_HERO = {
   },
   primaryCtaLabel: "Commission Research",
   secondaryCtaLabel: "See Sample Reports",
-  stat: { value: "150+", label: "Custom Intelligence Reports Delivered", icon: Brain },
+  stat: { value: "150+", label: "Custom Intelligence Reports Delivered", icon: "Brain" },
 };
 
 export const HPMI_WHY = {
@@ -40,10 +39,10 @@ export const HPMI_DELIVERABLES = {
   serviceLabel: "Deliverable",
   ctaLabel: "Learn More",
   services: [
-    { id: "competitive", title: "Competitive Intelligence", description: "Deep analysis of your top 3–5 competitors — positioning, pricing, product gaps, and strategic vulnerabilities.", icon: Search, image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
-    { id: "buyer-research", title: "Buyer Research & ICP Study", description: "Primary research with 20–50 buyers in your target segment — understanding jobs-to-be-done, buying triggers, and decision criteria.", icon: Users, image: "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
-    { id: "market-sizing", title: "Market Sizing & Opportunity Mapping", description: "TAM, SAM, and SOM analysis for new market entry or product launch decisions — built on primary research, not syndicated estimates.", icon: Globe2, image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
-    { id: "reports", title: "Executive Intelligence Reports", description: "Board-ready market intelligence reports with key findings, strategic recommendations, and supporting evidence.", icon: Brain, image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "competitive", title: "Competitive Intelligence", description: "Deep analysis of your top 3–5 competitors — positioning, pricing, product gaps, and strategic vulnerabilities.", icon: "Search", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "buyer-research", title: "Buyer Research & ICP Study", description: "Primary research with 20–50 buyers in your target segment — understanding jobs-to-be-done, buying triggers, and decision criteria.", icon: "Users", image: "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
+    { id: "market-sizing", title: "Market Sizing & Opportunity Mapping", description: "TAM, SAM, and SOM analysis for new market entry or product launch decisions — built on primary research, not syndicated estimates.", icon: "Globe2", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
+    { id: "reports", title: "Executive Intelligence Reports", description: "Board-ready market intelligence reports with key findings, strategic recommendations, and supporting evidence.", icon: "Brain", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
   ],
 };
 
@@ -52,21 +51,21 @@ export const HPMI_STATS = {
   quote: '"The best strategic decisions are made with intelligence that your competitors don\'t have. We give our clients an asymmetric information advantage in every market they enter."',
   attribution: "— Intelligence Research Lead, B2B Sales Arrow",
   stats: [
-    { value: "150+", label: "Custom Intelligence Reports Delivered", icon: Brain, bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
-    { value: "40+", label: "Markets & Industries Covered", icon: Globe2, bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
-    { value: "2wk", label: "Avg Report Turnaround", icon: Zap, bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
-    { value: "98%", label: "Executive Satisfaction Rate", icon: Target, bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
+    { value: "150+", label: "Custom Intelligence Reports Delivered", icon: "Brain", bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
+    { value: "40+", label: "Markets & Industries Covered", icon: "Globe2", bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
+    { value: "2wk", label: "Avg Report Turnaround", icon: "Zap", bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
+    { value: "98%", label: "Executive Satisfaction Rate", icon: "Target", bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
   ],
 };
 
 export const HPMI_CASE_STUDIES = {
   eyebrow: "INTELLIGENCE RESULTS",
-  heading: (<>Markets We've Helped <br /><span className="text-brand-blue">Our Clients Enter</span></>),
+  heading: (<>Markets We&apos;ve Helped <br /><span className="text-brand-blue">Our Clients Enter</span></>),
   ctaLabel: "Full Study",
   viewAllLabel: "View All Work",
   caseStudies: [
-    { id: "aura-research", client: "Aura Systems", title: "Competitive Intelligence Reveals $12M Opportunity Gap", challenge: "Leadership team had no visibility into why they were losing deals to competitors.", solution: "Win/loss primary research with 30 past prospects and 3 deep competitor profiles.", metric: "$12M", metricLabel: "Identified Revenue Opportunity", icon: BarChart3, image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" },
-    { id: "nexus-research", client: "Nexus Technologies", title: "Market Entry Research Shapes APAC Expansion Strategy", challenge: "Board needed data-backed market entry recommendation for Southeast Asia.", solution: "12-week primary research programme: 40 buyer interviews and competitive landscape mapping.", metric: "3", metricLabel: "Priority Markets Identified for Entry", icon: Users, image: "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1200" },
+    { id: "aura-research", client: "Aura Systems", title: "Competitive Intelligence Reveals $12M Opportunity Gap", challenge: "Leadership team had no visibility into why they were losing deals to competitors.", solution: "Win/loss primary research with 30 past prospects and 3 deep competitor profiles.", metric: "$12M", metricLabel: "Identified Revenue Opportunity", icon: "BarChart3", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" },
+    { id: "nexus-research", client: "Nexus Technologies", title: "Market Entry Research Shapes APAC Expansion Strategy", challenge: "Board needed data-backed market entry recommendation for Southeast Asia.", solution: "12-week primary research programme: 40 buyer interviews and competitive landscape mapping.", metric: "3", metricLabel: "Priority Markets Identified for Entry", icon: "Users", image: "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1200" },
   ],
 };
 

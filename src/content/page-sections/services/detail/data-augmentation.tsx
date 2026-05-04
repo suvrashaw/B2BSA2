@@ -1,4 +1,3 @@
-import { BarChart3, Database, Globe2, Target, TrendingUp, Users, Zap } from "lucide-react";
 
 export const DA_HERO = {
   showPreloader: false,
@@ -20,7 +19,7 @@ export const DA_HERO = {
   },
   primaryCtaLabel: "Get a Free Data Audit",
   secondaryCtaLabel: "See Data Results",
-  stat: { value: "94%", label: "Avg Data Accuracy Rate", icon: Database },
+  stat: { value: "94%", label: "Avg Data Accuracy Rate", icon: "Database" },
 };
 
 export const DA_WHY = {
@@ -40,10 +39,10 @@ export const DA_DELIVERABLES = {
   serviceLabel: "Deliverable",
   ctaLabel: "Learn More",
   services: [
-    { id: "firmographic", title: "Firmographic Enrichment", description: "Company name, size, revenue, industry, HQ location, and subsidiary mapping for every account.", icon: Database, image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
-    { id: "contact", title: "Contact Intelligence", description: "Verified direct dial, professional email, LinkedIn profile, and job title for every decision-maker record.", icon: Users, image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
-    { id: "technographic", title: "Technographic Data", description: "Identify the exact technology stack your prospects use — enabling product-fit targeting and competitive displacement messaging.", icon: BarChart3, image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
-    { id: "intent", title: "Buyer Intent Signals", description: "Layer intent data on top of your records to identify which accounts are actively researching solutions like yours right now.", icon: TrendingUp, image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "firmographic", title: "Firmographic Enrichment", description: "Company name, size, revenue, industry, HQ location, and subsidiary mapping for every account.", icon: "Database", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "contact", title: "Contact Intelligence", description: "Verified direct dial, professional email, LinkedIn profile, and job title for every decision-maker record.", icon: "Users", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
+    { id: "technographic", title: "Technographic Data", description: "Identify the exact technology stack your prospects use — enabling product-fit targeting and competitive displacement messaging.", icon: "BarChart3", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
+    { id: "intent", title: "Buyer Intent Signals", description: "Layer intent data on top of your records to identify which accounts are actively researching solutions like yours right now.", icon: "TrendingUp", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
   ],
 };
 
@@ -52,21 +51,21 @@ export const DA_STATS = {
   quote: '"Your GTM strategy is only as good as the data beneath it. We turn incomplete, stale CRM records into the precision intelligence your sales team needs to win enterprise deals."',
   attribution: "— Data Intelligence Team, B2B Sales Arrow",
   stats: [
-    { value: "94%", label: "Avg Data Accuracy Rate", icon: Database, bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
-    { value: "72hr", label: "Avg Turnaround Per 10k Records", icon: Zap, bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
-    { value: "40+", label: "Data Sources & Providers Used", icon: Globe2, bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
-    { value: "3×", label: "Avg Reply Rate Lift Post-Enrichment", icon: Target, bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
+    { value: "94%", label: "Avg Data Accuracy Rate", icon: "Database", bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
+    { value: "72hr", label: "Avg Turnaround Per 10k Records", icon: "Zap", bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
+    { value: "40+", label: "Data Sources & Providers Used", icon: "Globe2", bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
+    { value: "3×", label: "Avg Reply Rate Lift Post-Enrichment", icon: "Target", bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
   ],
 };
 
 export const DA_CASE_STUDIES = {
   eyebrow: "DATA ENRICHMENT RESULTS",
-  heading: (<>Datasets We've Made <br /><span className="text-brand-blue">Revenue-Ready</span></>),
+  heading: (<>Datasets We&apos;ve Made <br /><span className="text-brand-blue">Revenue-Ready</span></>),
   ctaLabel: "Full Study",
   viewAllLabel: "View All Work",
   caseStudies: [
-    { id: "synapse-data", client: "Synapse Networks", title: "CRM Enrichment Triples Outbound Reply Rate", challenge: "CRM had 18,000 records with 42% missing contact data.", solution: "Full firmographic and contact enrichment on entire CRM database.", metric: "3×", metricLabel: "Outbound Reply Rate", icon: BarChart3, image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200" },
-    { id: "elevate-data", client: "Elevate Logistics", title: "Technographic Data Enables Product-Fit Targeting", challenge: "Sales team had no visibility into prospect tech stacks.", solution: "Technographic enrichment of 5,000 target accounts with competitive displacement sequencing.", metric: "+67%", metricLabel: "Meeting Conversion Rate", icon: Users, image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" },
+    { id: "synapse-data", client: "Synapse Networks", title: "CRM Enrichment Triples Outbound Reply Rate", challenge: "CRM had 18,000 records with 42% missing contact data.", solution: "Full firmographic and contact enrichment on entire CRM database.", metric: "3×", metricLabel: "Outbound Reply Rate", icon: "BarChart3", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200" },
+    { id: "elevate-data", client: "Elevate Logistics", title: "Technographic Data Enables Product-Fit Targeting", challenge: "Sales team had no visibility into prospect tech stacks.", solution: "Technographic enrichment of 5,000 target accounts with competitive displacement sequencing.", metric: "+67%", metricLabel: "Meeting Conversion Rate", icon: "Users", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" },
   ],
 };
 

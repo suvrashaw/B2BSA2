@@ -1,4 +1,3 @@
-import { Clock, Globe2, Star, Users } from "lucide-react";
 
 export const CONTACT_HERO = {
   showPreloader: false,
@@ -23,7 +22,7 @@ export const CONTACT_HERO = {
   stat: {
     value: "98%",
     label: "Client Satisfaction",
-    icon: Star,
+    icon: "Star",
   },
 };
 
@@ -41,25 +40,25 @@ export const CONTACT_WHO_WE_ARE = {
     {
       value: "< 24h",
       label: "Average Response Time",
-      icon: Clock,
+      icon: "Clock",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
       value: "98%",
       label: "Client Satisfaction Rate",
-      icon: Star,
+      icon: "Star",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "240+",
       label: "Brands Served",
-      icon: Users,
+      icon: "Users",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
       value: "40+",
       label: "Countries Covered",
-      icon: Globe2,
+      icon: "Globe2",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
   ],

@@ -1,4 +1,3 @@
-import { Scale } from "lucide-react";
 
 export const TERMS_HERO = {
   showPreloader: false,

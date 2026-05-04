@@ -37,7 +37,7 @@ export function ContactUsContent() {
                    Ready to Build Your Growth Engine?
                  </h1>
                  <p className="text-lg text-gray-600 mb-12 leading-relaxed">
-                   Whether you're planning a global trade show, need high-fidelity video content, or want to build a precision lead generation system — our team is ready to architect your next success.
+                   Whether you&apos;re planning a global trade show, need high-fidelity video content, or want to build a precision lead generation system — our team is ready to architect your next success.
                  </p>
                </motion.div>
 

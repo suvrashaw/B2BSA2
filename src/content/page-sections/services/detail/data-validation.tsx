@@ -1,4 +1,3 @@
-import { BarChart3, CheckCircle2, Database, Globe2, Shield, Target, TrendingUp, Users, Zap } from "lucide-react";
 
 export const DV_HERO = {
   showPreloader: false,
@@ -20,7 +19,7 @@ export const DV_HERO = {
   },
   primaryCtaLabel: "Get a Free Data Health Check",
   secondaryCtaLabel: "See Validation Results",
-  stat: { value: "98%", label: "Post-Validation Deliverability Rate", icon: CheckCircle2 },
+  stat: { value: "98%", label: "Post-Validation Deliverability Rate", icon: "CheckCircle2" },
 };
 
 export const DV_WHY = {
@@ -40,10 +39,10 @@ export const DV_DELIVERABLES = {
   serviceLabel: "Deliverable",
   ctaLabel: "Learn More",
   services: [
-    { id: "email-validation", title: "Email Address Validation", description: "Real-time verification of every email address — syntax, domain, and mailbox-level checks to eliminate bounces.", icon: CheckCircle2, image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
-    { id: "phone-validation", title: "Phone Number Verification", description: "Carrier-level validation of direct dials and mobile numbers — flagging disconnected, invalid, and reassigned numbers.", icon: Shield, image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
-    { id: "dedup", title: "Deduplication & Merging", description: "Identify and resolve duplicate records across your database — preserving the richest version of each contact.", icon: Database, image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
-    { id: "health-report", title: "Data Health Report", description: "Full audit report detailing validation results, error categories, and data quality score — before and after.", icon: BarChart3, image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "email-validation", title: "Email Address Validation", description: "Real-time verification of every email address — syntax, domain, and mailbox-level checks to eliminate bounces.", icon: "CheckCircle2", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "phone-validation", title: "Phone Number Verification", description: "Carrier-level validation of direct dials and mobile numbers — flagging disconnected, invalid, and reassigned numbers.", icon: "Shield", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
+    { id: "dedup", title: "Deduplication & Merging", description: "Identify and resolve duplicate records across your database — preserving the richest version of each contact.", icon: "Database", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
+    { id: "health-report", title: "Data Health Report", description: "Full audit report detailing validation results, error categories, and data quality score — before and after.", icon: "BarChart3", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
   ],
 };
 
@@ -52,21 +51,21 @@ export const DV_STATS = {
   quote: '"A database isn\'t an asset if you can\'t trust it. Data validation is the foundation of every successful outbound campaign, ABM programme, and CRM-driven workflow."',
   attribution: "— Data Quality Team, B2B Sales Arrow",
   stats: [
-    { value: "98%", label: "Post-Validation Deliverability Rate", icon: CheckCircle2, bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
-    { value: "5×", label: "Lower Bounce Rate vs Unvalidated", icon: TrendingUp, bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
-    { value: "48hr", label: "Avg Turnaround Per 10k Records", icon: Zap, bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
-    { value: "40+", label: "Countries, Data Sources Covered", icon: Globe2, bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
+    { value: "98%", label: "Post-Validation Deliverability Rate", icon: "CheckCircle2", bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
+    { value: "5×", label: "Lower Bounce Rate vs Unvalidated", icon: "TrendingUp", bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
+    { value: "48hr", label: "Avg Turnaround Per 10k Records", icon: "Zap", bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
+    { value: "40+", label: "Countries, Data Sources Covered", icon: "Globe2", bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
   ],
 };
 
 export const DV_CASE_STUDIES = {
   eyebrow: "DATA VALIDATION RESULTS",
-  heading: (<>Databases We've Made <br /><span className="text-brand-blue">Campaign-Ready</span></>),
+  heading: (<>Databases We&apos;ve Made <br /><span className="text-brand-blue">Campaign-Ready</span></>),
   ctaLabel: "Full Study",
   viewAllLabel: "View All Work",
   caseStudies: [
-    { id: "elevate-dv", client: "Elevate Logistics", title: "Email Validation Restores Domain Health in 30 Days", challenge: "Email sender score dropping due to 28% bounce rate on outbound campaigns.", solution: "Full database validation removing 6,200 invalid emails before campaign relaunch.", metric: "98%", metricLabel: "Email Deliverability Rate", icon: BarChart3, image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200" },
-    { id: "aura-dv", client: "Aura Systems", title: "Deduplication Uncovers 3,400 Hidden Duplicates", challenge: "CRM had grown to 45,000 records with no deduplication process — significant data waste.", solution: "Full deduplication and merge audit across entire Salesforce instance.", metric: "3,400", metricLabel: "Duplicate Records Resolved", icon: Users, image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200" },
+    { id: "elevate-dv", client: "Elevate Logistics", title: "Email Validation Restores Domain Health in 30 Days", challenge: "Email sender score dropping due to 28% bounce rate on outbound campaigns.", solution: "Full database validation removing 6,200 invalid emails before campaign relaunch.", metric: "98%", metricLabel: "Email Deliverability Rate", icon: "BarChart3", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200" },
+    { id: "aura-dv", client: "Aura Systems", title: "Deduplication Uncovers 3,400 Hidden Duplicates", challenge: "CRM had grown to 45,000 records with no deduplication process — significant data waste.", solution: "Full deduplication and merge audit across entire Salesforce instance.", metric: "3,400", metricLabel: "Duplicate Records Resolved", icon: "Users", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200" },
   ],
 };
 

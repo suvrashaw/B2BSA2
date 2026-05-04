@@ -1,4 +1,3 @@
-import { BarChart3, Building2, Globe2, MapPin, Star, Target, TrendingUp, Users, Zap } from "lucide-react";
 
 export const IE_HERO = {
   showPreloader: false,
@@ -20,7 +19,7 @@ export const IE_HERO = {
   },
   primaryCtaLabel: "Get a Quote",
   secondaryCtaLabel: "See Case Studies",
-  stat: { value: "200+", label: "Industry Events Covered", icon: Globe2 },
+  stat: { value: "200+", label: "Industry Events Covered", icon: "Globe2" },
 };
 
 export const IE_WHY = {
@@ -40,10 +39,10 @@ export const IE_DELIVERABLES = {
   serviceLabel: "Deliverable",
   ctaLabel: "Learn More",
   services: [
-    { id: "selection", title: "Event Selection & Strategy", description: "We map and rank events by ICP density, competitor activity, and pipeline potential.", icon: Star, image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
-    { id: "logistics", title: "End-to-End Logistics", description: "Registration, travel, booth booking, freight, and on-site coordination all managed for you.", icon: MapPin, image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
-    { id: "speaking", title: "Speaking & Sponsorship Placement", description: "We secure panel slots, keynote opportunities, and brand sponsorships at your target events.", icon: Building2, image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
-    { id: "capture", title: "Lead Capture & Follow-Up", description: "On-site lead qualification, CRM sync, and automated post-event follow-up sequences.", icon: Target, image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "selection", title: "Event Selection & Strategy", description: "We map and rank events by ICP density, competitor activity, and pipeline potential.", icon: "Star", image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "logistics", title: "End-to-End Logistics", description: "Registration, travel, booth booking, freight, and on-site coordination all managed for you.", icon: "MapPin", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
+    { id: "speaking", title: "Speaking & Sponsorship Placement", description: "We secure panel slots, keynote opportunities, and brand sponsorships at your target events.", icon: "Building2", image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
+    { id: "capture", title: "Lead Capture & Follow-Up", description: "On-site lead qualification, CRM sync, and automated post-event follow-up sequences.", icon: "Target", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
   ],
 };
 
@@ -52,10 +51,10 @@ export const IE_STATS = {
   quote: '"The best B2B sales conversations don\'t start on LinkedIn. They start at an industry event, over a coffee, in a 10-minute hallway conversation."',
   attribution: "— Events Strategy Team, B2B Sales Arrow",
   stats: [
-    { value: "200+", label: "Events Covered Globally", icon: Globe2, bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
-    { value: "45+", label: "Countries Represented", icon: MapPin, bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
-    { value: "3.8x", label: "Avg Pipeline Multiplier", icon: TrendingUp, bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
-    { value: "85%", label: "Client Event Attendance Rate", icon: Users, bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
+    { value: "200+", label: "Events Covered Globally", icon: "Globe2", bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
+    { value: "45+", label: "Countries Represented", icon: "MapPin", bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
+    { value: "3.8x", label: "Avg Pipeline Multiplier", icon: "TrendingUp", bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
+    { value: "85%", label: "Client Event Attendance Rate", icon: "Users", bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
   ],
 };
 
@@ -65,8 +64,8 @@ export const IE_CASE_STUDIES = {
   ctaLabel: "Full Study",
   viewAllLabel: "View All Event Work",
   caseStudies: [
-    { id: "web3", client: "Blockchain Platform", title: "200+ Enterprise Meetings at Token2049", challenge: "Unknown brand in crowded Web3 enterprise space.", solution: "Speaking slot + island booth + pre-booked meeting program.", metric: "200+", metricLabel: "Enterprise Meetings", icon: Users, image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200" },
-    { id: "hr", client: "HR Tech Scale-Up", title: "$4.2M Pipeline from HR Tech Conference", challenge: "First-time exhibitor, no event strategy.", solution: "Full-service event management + targeted pre-show outreach.", metric: "$4.2M", metricLabel: "Pipeline Generated", icon: BarChart3, image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1200" },
+    { id: "web3", client: "Blockchain Platform", title: "200+ Enterprise Meetings at Token2049", challenge: "Unknown brand in crowded Web3 enterprise space.", solution: "Speaking slot + island booth + pre-booked meeting program.", metric: "200+", metricLabel: "Enterprise Meetings", icon: "Users", image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200" },
+    { id: "hr", client: "HR Tech Scale-Up", title: "$4.2M Pipeline from HR Tech Conference", challenge: "First-time exhibitor, no event strategy.", solution: "Full-service event management + targeted pre-show outreach.", metric: "$4.2M", metricLabel: "Pipeline Generated", icon: "BarChart3", image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1200" },
   ],
 };
 

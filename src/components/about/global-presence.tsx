@@ -23,12 +23,15 @@ export const GlobalPresence = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
   const [globeReady, setGlobeReady] = useState(false);
-  const globeRef = useRef<any>(null);
+  const globeRef = useRef<unknown>(null);
 
   useEffect(() => {
     if (globeRef.current) {
+      // @ts-expect-error - globeRef.current is unknown
       globeRef.current.controls().autoRotate = true;
+      // @ts-expect-error - globeRef.current is unknown
       globeRef.current.controls().autoRotateSpeed = 1.5;
+      // @ts-expect-error - globeRef.current is unknown
       globeRef.current.controls().enableZoom = false;
     }
   }, [globeReady]);
@@ -105,12 +108,13 @@ export const GlobalPresence = () => {
               pointRadius={0.5}
               pointsMerge={true}
               htmlElementsData={LOCATIONS}
-              htmlElement={(d: any) => {
+              htmlElement={(d: object) => {
+                const item = d as LocationItem;
                 const el = document.createElement('div');
                 el.innerHTML = `
                   <div class="flex items-center gap-2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                    <div class="w-2 h-2 rounded-full bg-[${d.color}] shadow-[0_0_10px_${d.color}] animate-pulse"></div>
-                    <span class="text-xs font-bold text-white whitespace-nowrap bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm">${d.name}</span>
+                    <div class="w-2 h-2 rounded-full bg-[${item.color}] shadow-[0_0_10px_${item.color}] animate-pulse"></div>
+                    <span class="text-xs font-bold text-white whitespace-nowrap bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm">${item.name}</span>
                   </div>
                 `;
                 return el;

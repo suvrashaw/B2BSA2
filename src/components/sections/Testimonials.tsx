@@ -85,7 +85,7 @@ export function Testimonials({
   } = useCoverflowCarousel(testimonials.length, initialIndex, autoplayInterval);
 
   return (
-    <section className="py-20 bg-[#F8F9FA] dark:bg-[#1a1c1e] relative overflow-hidden">
+    <section className="py-20 bg-[#F8F9FA] relative overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#1E6091]/5 rounded-full blur-[100px] pointer-events-none" />
       
@@ -95,11 +95,11 @@ export function Testimonials({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-1.5 mb-6 rounded-full bg-[#1E6091]/10 border border-[#1E6091]/20 text-[#1E6091] dark:text-[#4BC0D9] text-sm font-semibold tracking-wide"
+            className="inline-block px-4 py-1.5 mb-6 rounded-full bg-[#1E6091]/10 border border-[#1E6091]/20 text-[#1E6091] text-sm font-semibold tracking-wide"
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="font-heading text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             {heading}
           </h2>
         </div>
@@ -146,13 +146,13 @@ export function Testimonials({
                   transformStyle: "preserve-3d",
                   transformOrigin: "center",
                 }}
-                className={`absolute w-full max-w-[320px] sm:max-w-[400px] bg-white dark:bg-[#212529] rounded-[20px] shadow-[0_12px_40px_rgba(0,0,0,0.08)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.4)] border border-gray-100 dark:border-gray-800 p-8 sm:p-10 cursor-pointer will-change-transform ${
+                className={`absolute w-full max-w-[320px] sm:max-w-[400px] bg-white rounded-[20px] shadow-[0_12px_40px_rgba(0,0,0,0.08)](0,0,0,0.4)] border border-gray-100 p-8 sm:p-10 cursor-pointer will-change-transform ${
                   !isVisible ? "pointer-events-none" : ""
                 }`}
               >
                 <div className="flex flex-col h-full justify-between gap-6 relative">
                   <div className="flex items-center gap-4">
-                    <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-[#1E6091] dark:border-[#4BC0D9]">
+                    <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-[#1E6091]">
                       <Image
                         src={testimonial.image}
                         alt={testimonial.name}
@@ -162,29 +162,29 @@ export function Testimonials({
                       />
                     </div>
                     <div>
-                      <h4 className="font-heading font-bold text-lg text-gray-900 dark:text-white leading-tight">
+                      <h4 className="font-heading font-bold text-lg text-gray-900 leading-tight">
                         {testimonial.name}
                       </h4>
                       <div className="flex gap-1 mt-1">
                         {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="w-3.5 h-3.5 fill-[#1E6091] dark:fill-[#4BC0D9] text-[#1E6091] dark:text-[#4BC0D9]" />
+                          <Star key={i} className="w-3.5 h-3.5 fill-[#1E6091] text-[#1E6091]" />
                         ))}
                       </div>
                     </div>
                   </div>
 
-                  <p className="text-gray-600 dark:text-gray-300 text-[15px] leading-relaxed relative z-10">
+                  <p className="text-gray-600 text-[15px] leading-relaxed relative z-10">
                     &quot;{testimonial.quote}&quot;
                   </p>
 
-                  <div className="pt-5 border-t border-gray-100 dark:border-gray-800">
-                    <p className="text-sm font-semibold text-[#1E6091] dark:text-[#4BC0D9]">{testimonial.designation}</p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">{testimonial.company}</p>
+                  <div className="pt-5 border-t border-gray-100">
+                    <p className="text-sm font-semibold text-[#1E6091]">{testimonial.designation}</p>
+                    <p className="text-xs text-gray-500 font-medium">{testimonial.company}</p>
                   </div>
                   
                   {/* Subtle interaction overlay for side cards */}
                   {!isCenter && (
-                    <div className="absolute inset-0 rounded-[20px] bg-white/5 dark:bg-black/5 hover:bg-transparent transition-colors duration-300" />
+                    <div className="absolute inset-0 rounded-[20px] bg-white/5 hover:bg-transparent transition-colors duration-300" />
                   )}
                 </div>
               </motion.div>
@@ -196,7 +196,7 @@ export function Testimonials({
         <div className="flex justify-center items-center gap-6 mt-16 relative z-50">
           <button 
             onClick={handlePrev}
-            className="w-12 h-12 rounded-full border border-gray-200 dark:border-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-[#1E6091] hover:text-white hover:border-[#1E6091] dark:hover:bg-[#4BC0D9] dark:hover:text-[#1a1c1e] transition-all duration-300 shadow-sm"
+            className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-[#1E6091] hover:text-white hover:border-[#1E6091]:bg-[#4BC0D9]:text-[#1a1c1e] transition-all duration-300 shadow-sm"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-5 h-5" />
@@ -209,8 +209,8 @@ export function Testimonials({
                 onClick={() => setActiveIndex(idx)}
                 className={`h-2 rounded-full transition-all duration-500 ease-out ${
                   activeIndex === idx 
-                    ? "w-8 bg-[#1E6091] dark:bg-[#4BC0D9]" 
-                    : "w-2 bg-gray-300 dark:bg-gray-700"
+                    ? "w-8 bg-[#1E6091]" 
+                    : "w-2 bg-gray-300"
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
@@ -219,7 +219,7 @@ export function Testimonials({
 
           <button 
             onClick={handleNext}
-            className="w-12 h-12 rounded-full border border-gray-200 dark:border-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-[#1E6091] hover:text-white hover:border-[#1E6091] dark:hover:bg-[#4BC0D9] dark:hover:text-[#1a1c1e] transition-all duration-300 shadow-sm"
+            className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-[#1E6091] hover:text-white hover:border-[#1E6091]:bg-[#4BC0D9]:text-[#1a1c1e] transition-all duration-300 shadow-sm"
             aria-label="Next testimonial"
           >
             <ChevronRight className="w-5 h-5" />

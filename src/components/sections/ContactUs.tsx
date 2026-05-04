@@ -25,7 +25,7 @@ export function ContactUs({
   form = content.form,
 }: ContactUsProps = {}) {
   return (
-    <section id="contact" className="relative bg-white dark:bg-[#1a1c1e] py-24 overflow-hidden">
+    <section id="contact" className="relative bg-white py-24 overflow-hidden">
       {/* Decorative background flare */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-cyan/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-brand-blue/5 rounded-full blur-[120px] pointer-events-none" />
@@ -39,16 +39,16 @@ export function ContactUs({
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue dark:text-brand-cyan text-sm font-semibold tracking-wide"
+              className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-sm font-semibold tracking-wide"
             >
               {eyebrow}
             </motion.div>
             <div className="w-full text-left">
-              <h2 className="font-heading text-4xl lg:text-6xl font-bold text-brand-charcoal dark:text-white leading-tight mb-8">
+              <h2 className="font-heading text-4xl lg:text-6xl font-bold text-brand-charcoal leading-tight mb-8">
                 {heading}
               </h2>
             </div>
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-md text-left">
+            <p className="text-lg text-gray-600 mb-12 max-w-md text-left">
               {description}
             </p>
 
@@ -68,27 +68,27 @@ export function ContactUs({
           </div>
 
           {/* Right Side: Contact Form */}
-          <div className="bg-brand-gray/50 dark:bg-[#212529]/50 backdrop-blur-xl border border-gray-200 dark:border-gray-700/50 p-8 lg:p-12 rounded-[2.5rem] shadow-2xl relative z-10">
+          <div className="bg-brand-gray/50 backdrop-blur-xl border border-gray-200 p-8 lg:p-12 rounded-[2.5rem] shadow-2xl relative z-10">
             <form className="space-y-6">
               <div className="grid grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-gray-600 dark:text-gray-300">{form.firstNameLabel}</label>
-                  <input type="text" className="w-full bg-white dark:bg-[#1a1c1e] border border-gray-200 dark:border-gray-800 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors" placeholder={form.firstNamePlaceholder} />
+                  <label className="text-sm font-bold text-gray-600">{form.firstNameLabel}</label>
+                  <input type="text" className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors" placeholder={form.firstNamePlaceholder} />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-gray-600 dark:text-gray-300">{form.lastNameLabel}</label>
-                  <input type="text" className="w-full bg-white dark:bg-[#1a1c1e] border border-gray-200 dark:border-gray-800 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors" placeholder={form.lastNamePlaceholder} />
+                  <label className="text-sm font-bold text-gray-600">{form.lastNameLabel}</label>
+                  <input type="text" className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors" placeholder={form.lastNamePlaceholder} />
                 </div>
               </div>
               
               <div className="space-y-2">
-                <label className="text-sm font-bold text-gray-600 dark:text-gray-300">{form.emailLabel}</label>
-                <input type="email" className="w-full bg-white dark:bg-[#1a1c1e] border border-gray-200 dark:border-gray-800 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors" placeholder={form.emailPlaceholder} />
+                <label className="text-sm font-bold text-gray-600">{form.emailLabel}</label>
+                <input type="email" className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors" placeholder={form.emailPlaceholder} />
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-bold text-gray-600 dark:text-gray-300">{form.serviceLabel}</label>
-                <select className="w-full bg-white dark:bg-[#1a1c1e] border border-gray-200 dark:border-gray-800 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors appearance-none text-gray-600 dark:text-gray-300">
+                <label className="text-sm font-bold text-gray-600">{form.serviceLabel}</label>
+                <select className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors appearance-none text-gray-600">
                   <option value="">{form.servicePlaceholder}</option>
                   {form.serviceOptions.map((option) => (
                     <option key={option.value} value={option.value}>{option.label}</option>
@@ -97,8 +97,8 @@ export function ContactUs({
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-bold text-gray-600 dark:text-gray-300">{form.messageLabel}</label>
-                <textarea rows={4} className="w-full bg-white dark:bg-[#1a1c1e] border border-gray-200 dark:border-gray-800 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors resize-none" placeholder={form.messagePlaceholder}></textarea>
+                <label className="text-sm font-bold text-gray-600">{form.messageLabel}</label>
+                <textarea rows={4} className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors resize-none" placeholder={form.messagePlaceholder}></textarea>
               </div>
 
               <button type="button" className="w-full py-4 rounded-xl bg-brand-blue text-white font-bold text-lg hover:bg-brand-blue/90 hover:shadow-[0_0_20px_rgba(30,96,145,0.4)] transition-all duration-300 flex items-center justify-center gap-2 group">

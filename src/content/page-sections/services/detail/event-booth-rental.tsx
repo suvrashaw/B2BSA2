@@ -1,4 +1,3 @@
-import { BarChart3, Globe2, Package, RefreshCw, Target, TrendingUp, Truck, Users, Zap } from "lucide-react";
 
 export const EBR_HERO = {
   showPreloader: false,
@@ -20,7 +19,7 @@ export const EBR_HERO = {
   },
   primaryCtaLabel: "Get a Quote",
   secondaryCtaLabel: "See Our Inventory",
-  stat: { value: "300+", label: "Booth Rentals Delivered", icon: Package },
+  stat: { value: "300+", label: "Booth Rentals Delivered", icon: "Package" },
 };
 
 export const EBR_WHY = {
@@ -40,10 +39,10 @@ export const EBR_DELIVERABLES = {
   serviceLabel: "Deliverable",
   ctaLabel: "Learn More",
   services: [
-    { id: "structure", title: "Modular Booth Structure", description: "Premium aluminium extrusion system with fabric or rigid infill panels in any configuration.", icon: Package, image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
-    { id: "graphics", title: "Custom Branded Graphics", description: "Full-colour large-format graphics printed to your brand specifications and applied to the structure.", icon: RefreshCw, image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
-    { id: "logistics", title: "Freight & Logistics", description: "Booth shipped to any venue globally — we handle customs, freight forwarding, and venue delivery.", icon: Truck, image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
-    { id: "install", title: "On-Site Installation Crew", description: "Certified installation team builds and dismantles your booth — guaranteed on-time and to spec.", icon: Zap, image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "structure", title: "Modular Booth Structure", description: "Premium aluminium extrusion system with fabric or rigid infill panels in any configuration.", icon: "Package", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "graphics", title: "Custom Branded Graphics", description: "Full-colour large-format graphics printed to your brand specifications and applied to the structure.", icon: "RefreshCw", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
+    { id: "logistics", title: "Freight & Logistics", description: "Booth shipped to any venue globally — we handle customs, freight forwarding, and venue delivery.", icon: "Truck", image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
+    { id: "install", title: "On-Site Installation Crew", description: "Certified installation team builds and dismantles your booth — guaranteed on-time and to spec.", icon: "Zap", image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
   ],
 };
 
@@ -52,10 +51,10 @@ export const EBR_STATS = {
   quote: '"The smartest exhibitors don\'t ask whether to rent or buy. They ask whether their event frequency justifies the capital. For most, it doesn\'t — and rental is the right answer."',
   attribution: "— Booth Solutions Team, B2B Sales Arrow",
   stats: [
-    { value: "300+", label: "Booth Rentals Delivered", icon: Package, bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
-    { value: "40+", label: "Countries Served", icon: Globe2, bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
-    { value: "98%", label: "On-Time Installation Rate", icon: Target, bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
-    { value: "4 days", label: "Avg Turnaround from Order", icon: Zap, bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
+    { value: "300+", label: "Booth Rentals Delivered", icon: "Package", bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
+    { value: "40+", label: "Countries Served", icon: "Globe2", bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
+    { value: "98%", label: "On-Time Installation Rate", icon: "Target", bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
+    { value: "4 days", label: "Avg Turnaround from Order", icon: "Zap", bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
   ],
 };
 
@@ -65,8 +64,8 @@ export const EBR_CASE_STUDIES = {
   ctaLabel: "Full Study",
   viewAllLabel: "View All Booth Work",
   caseStudies: [
-    { id: "startup", client: "Series B SaaS Startup", title: "First Exhibition — Zero Build Budget", challenge: "First-time exhibitor with no booth assets or event experience.", solution: "48 sqm modular island rental, fully branded, with lead capture setup.", metric: "190+", metricLabel: "Leads in 2 Days", icon: TrendingUp, image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200" },
-    { id: "global", client: "Manufacturing Co.", title: "Global Expansion: 8 Shows, 1 Year", challenge: "Needed presence at 8 different shows across 5 countries.", solution: "Modular rental system shipped and reinstalled at each venue globally.", metric: "8", metricLabel: "Countries in 12 Months", icon: Globe2, image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" },
+    { id: "startup", client: "Series B SaaS Startup", title: "First Exhibition — Zero Build Budget", challenge: "First-time exhibitor with no booth assets or event experience.", solution: "48 sqm modular island rental, fully branded, with lead capture setup.", metric: "190+", metricLabel: "Leads in 2 Days", icon: "TrendingUp", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200" },
+    { id: "global", client: "Manufacturing Co.", title: "Global Expansion: 8 Shows, 1 Year", challenge: "Needed presence at 8 different shows across 5 countries.", solution: "Modular rental system shipped and reinstalled at each venue globally.", metric: "8", metricLabel: "Countries in 12 Months", icon: "Globe2", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" },
   ],
 };
 

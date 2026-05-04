@@ -37,7 +37,7 @@ export function FAQ({
   };
 
   return (
-    <section id="faq" className="py-24 bg-brand-gray dark:bg-[#1a1c1e] relative overflow-hidden">
+    <section id="faq" className="py-24 bg-brand-gray relative overflow-hidden">
       {/* Decorative Gradients */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-brand-blue/5 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-brand-cyan/5 rounded-full blur-[100px] pointer-events-none" />
@@ -49,14 +49,14 @@ export function FAQ({
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-charcoal/5 dark:bg-white/5 border border-brand-charcoal/10 dark:border-white/10 text-brand-charcoal dark:text-gray-300 text-sm font-semibold tracking-wide"
+              className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-charcoal/5 border border-brand-charcoal/10 text-brand-charcoal text-sm font-semibold tracking-wide"
             >
               {eyebrow}
             </motion.div>
-            <h2 className="font-heading text-3xl lg:text-5xl font-bold text-brand-charcoal dark:text-white mb-4">
+            <h2 className="font-heading text-3xl lg:text-5xl font-bold text-brand-charcoal mb-4">
               {heading}
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-xl text-lg">
+            <p className="text-gray-600 max-w-xl text-lg">
               {description}
             </p>
           </div>
@@ -83,21 +83,21 @@ export function FAQ({
                 >
                   
                   {/* Front Side: Question */}
-                  <div className="absolute inset-0 w-full h-full bg-[#F8F9FA] dark:bg-[#1a1c1e] rounded-2xl border border-gray-100 dark:border-gray-800 p-6 flex flex-col justify-center items-center text-center [backface-visibility:hidden]">
+                  <div className="absolute inset-0 w-full h-full bg-[#F8F9FA] rounded-2xl border border-gray-100 p-6 flex flex-col justify-center items-center text-center [backface-visibility:hidden]">
                     <div className="w-12 h-12 rounded-full bg-[#1E6091]/10 flex items-center justify-center mb-4 transition-transform group-hover:scale-110">
-                      <HelpCircle className="w-6 h-6 text-[#1E6091] dark:text-[#4BC0D9]" />
+                      <HelpCircle className="w-6 h-6 text-[#1E6091]" />
                     </div>
-                    <h3 className="font-heading text-lg font-bold text-[#212529] dark:text-white leading-tight">
+                    <h3 className="font-heading text-lg font-bold text-[#212529] leading-tight">
                       {faq.question}
                     </h3>
                   </div>
 
                   {/* Back Side: Answer */}
-                  <div className="absolute inset-0 w-full h-full bg-white dark:bg-[#212529] rounded-2xl border border-brand-cyan/20 p-6 flex flex-col justify-center text-center [transform:rotateY(180deg)] [backface-visibility:hidden] shadow-inner">
+                  <div className="absolute inset-0 w-full h-full bg-white rounded-2xl border border-brand-cyan/20 p-6 flex flex-col justify-center text-center [transform:rotateY(180deg)] [backface-visibility:hidden] shadow-inner">
                     <div className="w-8 h-8 rounded-full bg-[#4BC0D9]/10 mx-auto flex items-center justify-center mb-4">
                       <div className="w-1.5 h-1.5 rounded-full bg-[#4BC0D9]" />
                     </div>
-                    <p className="text-[#212529] dark:text-gray-300 leading-relaxed text-sm">
+                    <p className="text-[#212529] leading-relaxed text-sm">
                       {faq.answer}
                     </p>
                   </div>
@@ -112,13 +112,13 @@ export function FAQ({
         <div className="flex items-center justify-center gap-4 mt-8">
           <button 
             onClick={() => scroll("left")}
-            className="w-12 h-12 rounded-full border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#212529] text-brand-charcoal dark:text-white hover:bg-brand-blue hover:text-white dark:hover:bg-brand-cyan hover:border-transparent transition-colors flex items-center justify-center shadow-sm"
+            className="w-12 h-12 rounded-full border border-gray-200 bg-white text-brand-charcoal hover:bg-brand-blue hover:text-white:bg-brand-cyan hover:border-transparent transition-colors flex items-center justify-center shadow-sm"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button 
             onClick={() => scroll("right")}
-            className="w-12 h-12 rounded-full border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#212529] text-brand-charcoal dark:text-white hover:bg-brand-blue hover:text-white dark:hover:bg-brand-cyan hover:border-transparent transition-colors flex items-center justify-center shadow-sm"
+            className="w-12 h-12 rounded-full border border-gray-200 bg-white text-brand-charcoal hover:bg-brand-blue hover:text-white:bg-brand-cyan hover:border-transparent transition-colors flex items-center justify-center shadow-sm"
           >
             <ChevronRight className="w-6 h-6" />
           </button>

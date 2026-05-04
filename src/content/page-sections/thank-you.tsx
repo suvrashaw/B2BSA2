@@ -1,4 +1,3 @@
-import { CheckCircle, Globe, Lightbulb, MonitorPlay, Rocket, Users } from "lucide-react";
 
 export const THANK_YOU_HERO = {
   showPreloader: false,
@@ -23,7 +22,7 @@ export const THANK_YOU_HERO = {
   stat: {
     value: "< 24h",
     label: "Response Time",
-    icon: CheckCircle,
+    icon: "CheckCircle",
   },
 } as const;
 
@@ -45,7 +44,7 @@ export const THANK_YOU_SERVICES = {
       title: "Global Event Solutions",
       description:
         "End-to-end exhibition management across 40+ countries — from booth design to on-floor lead capture.",
-      icon: Globe,
+      icon: "Globe",
       image:
         "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-blue",
@@ -55,7 +54,7 @@ export const THANK_YOU_SERVICES = {
       title: "Media Production",
       description:
         "Cinematic brand storytelling and high-fidelity corporate content that builds authority.",
-      icon: MonitorPlay,
+      icon: "MonitorPlay",
       image:
         "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-cyan",
@@ -65,7 +64,7 @@ export const THANK_YOU_SERVICES = {
       title: "Performance Marketing",
       description:
         "Data-driven SEO, paid advertising, and LinkedIn campaigns engineered to scale enterprise pipeline.",
-      icon: Rocket,
+      icon: "Rocket",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-red",
@@ -75,7 +74,7 @@ export const THANK_YOU_SERVICES = {
       title: "Sales Qualified Lead Generation",
       description:
         "Precision-targeted acquisition strategies for high-value B2B accounts ready to buy.",
-      icon: Users,
+      icon: "Users",
       image:
         "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-blue",
@@ -85,7 +84,7 @@ export const THANK_YOU_SERVICES = {
       title: "Market Research",
       description:
         "Human-powered intelligence, data augmentation, and validation to fuel confident decisions.",
-      icon: Lightbulb,
+      icon: "Lightbulb",
       image:
         "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-cyan",

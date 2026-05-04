@@ -1,4 +1,3 @@
-import { BarChart3, Cpu, Globe2, QrCode, ScanLine, Target, TrendingUp, Users, Zap } from "lucide-react";
 
 export const ELG_HERO = {
   showPreloader: false,
@@ -20,7 +19,7 @@ export const ELG_HERO = {
   },
   primaryCtaLabel: "Get a Quote",
   secondaryCtaLabel: "See Case Studies",
-  stat: { value: "280%", label: "Avg Lead Volume Increase", icon: TrendingUp },
+  stat: { value: "280%", label: "Avg Lead Volume Increase", icon: "TrendingUp" },
 };
 
 export const ELG_WHY = {
@@ -40,10 +39,10 @@ export const ELG_DELIVERABLES = {
   serviceLabel: "Deliverable",
   ctaLabel: "Learn More",
   services: [
-    { id: "badge", title: "Badge & NFC Lead Scanning", description: "Universal badge scanner compatible with all major event systems — no manual data entry.", icon: ScanLine, image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
-    { id: "qual", title: "On-Site Lead Qualification", description: "Custom qualification scripts and scoring criteria built before the event.", icon: Target, image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
-    { id: "appt", title: "Appointment Booking System", description: "Pre-show and on-floor appointment scheduling with automated reminders.", icon: Cpu, image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
-    { id: "report", title: "Post-Event Lead Report", description: "Full breakdown of leads by tier, source, and conversion potential delivered within 48 hours.", icon: BarChart3, image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "badge", title: "Badge & NFC Lead Scanning", description: "Universal badge scanner compatible with all major event systems — no manual data entry.", icon: "ScanLine", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "qual", title: "On-Site Lead Qualification", description: "Custom qualification scripts and scoring criteria built before the event.", icon: "Target", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
+    { id: "appt", title: "Appointment Booking System", description: "Pre-show and on-floor appointment scheduling with automated reminders.", icon: "Cpu", image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
+    { id: "report", title: "Post-Event Lead Report", description: "Full breakdown of leads by tier, source, and conversion potential delivered within 48 hours.", icon: "BarChart3", image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
   ],
 };
 
@@ -52,10 +51,10 @@ export const ELG_STATS = {
   quote: '"The difference between a great event and a mediocre one isn\'t the booth size — it\'s how many leads you leave with and how fast you follow up."',
   attribution: "— Event Strategy Team, B2B Sales Arrow",
   stats: [
-    { value: "280%", label: "Avg Lead Volume Increase", icon: TrendingUp, bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
-    { value: "4 hrs", label: "Avg Time to CRM Entry", icon: Zap, bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
-    { value: "40+", label: "Events Covered Annually", icon: Globe2, bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
-    { value: "68%", label: "Avg Lead-to-Meeting Rate", icon: Users, bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
+    { value: "280%", label: "Avg Lead Volume Increase", icon: "TrendingUp", bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
+    { value: "4 hrs", label: "Avg Time to CRM Entry", icon: "Zap", bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
+    { value: "40+", label: "Events Covered Annually", icon: "Globe2", bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
+    { value: "68%", label: "Avg Lead-to-Meeting Rate", icon: "Users", bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
   ],
 };
 
@@ -65,8 +64,8 @@ export const ELG_CASE_STUDIES = {
   ctaLabel: "Full Study",
   viewAllLabel: "View All Event Work",
   caseStudies: [
-    { id: "saas", client: "SaaS Platform", title: "480 SQLs Captured at SaaStr Annual", challenge: "Previous year: 90 leads, 5% conversion rate.", solution: "NFC capture + real-time scoring + 24h automated follow-up sequence.", metric: "480", metricLabel: "SQLs in 3 Days", icon: BarChart3, image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200" },
-    { id: "fintech", client: "Fintech Leader", title: "3.2x Pipeline from Sibos 2024", challenge: "High foot traffic but poor post-show conversion.", solution: "Appointment-first lead system with tiered follow-up by ICP score.", metric: "3.2x", metricLabel: "Pipeline vs Prior Year", icon: TrendingUp, image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200" },
+    { id: "saas", client: "SaaS Platform", title: "480 SQLs Captured at SaaStr Annual", challenge: "Previous year: 90 leads, 5% conversion rate.", solution: "NFC capture + real-time scoring + 24h automated follow-up sequence.", metric: "480", metricLabel: "SQLs in 3 Days", icon: "BarChart3", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200" },
+    { id: "fintech", client: "Fintech Leader", title: "3.2x Pipeline from Sibos 2024", challenge: "High foot traffic but poor post-show conversion.", solution: "Appointment-first lead system with tiered follow-up by ICP score.", metric: "3.2x", metricLabel: "Pipeline vs Prior Year", icon: "TrendingUp", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200" },
   ],
 };
 

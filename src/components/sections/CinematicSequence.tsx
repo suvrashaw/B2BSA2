@@ -17,27 +17,40 @@ import {
 export interface CinematicSequenceProps {
   content?: CinematicSequenceContent;
   frameCount?: CinematicSequenceContent["frameCount"];
-  getFrameSrc?: CinematicSequenceContent["getFrameSrc"];
+  frameUrlTemplate?: CinematicSequenceContent["frameUrlTemplate"];
+  frameUrls?: CinematicSequenceContent["frameUrls"];
   loadingText?: CinematicSequenceContent["loadingText"];
   beats?: CinematicSequenceContent["beats"];
 }
 
 function useCinematicFrameImages(
   frameCount: number,
-  getFrameSrc: CinematicSequenceContent["getFrameSrc"]
+  frameUrlTemplate?: string,
+  frameUrls?: string[]
 ) {
   const imagesRef = useRef<HTMLImageElement[]>([]);
-  const loadSignature = `${frameCount}:${getFrameSrc(1)}:${getFrameSrc(frameCount)}`;
+  const loadSignature = `${frameCount}:${frameUrlTemplate || ""}:${(frameUrls || []).join(",")}`;
   const [loadedSignature, setLoadedSignature] = useState<string | null>(null);
 
   useEffect(() => {
+    const getFrameUrl = (index: number) => {
+      if (frameUrls && frameUrls.length >= index) {
+        return frameUrls[index - 1];
+      }
+      if (frameUrlTemplate) {
+        // Handle %d with padding
+        return frameUrlTemplate.replace("%d", index.toString().padStart(3, "0"));
+      }
+      return "";
+    };
+
     const loadedImages: HTMLImageElement[] = [];
     let loadedCount = 0;
     let cancelled = false;
 
     for (let i = 1; i <= frameCount; i++) {
       const img = new window.Image();
-      img.src = getFrameSrc(i);
+      img.src = getFrameUrl(i);
       img.onload = () => {
         if (cancelled) return;
 
@@ -55,7 +68,7 @@ function useCinematicFrameImages(
     return () => {
       cancelled = true;
     };
-  }, [frameCount, getFrameSrc, loadSignature]);
+  }, [frameCount, frameUrlTemplate, frameUrls, loadSignature]);
 
   return { imagesRef, imagesLoaded: loadedSignature === loadSignature };
 }
@@ -93,13 +106,14 @@ function CinematicBeatOverlay({
 export function CinematicSequence({
   content = HOME_CINEMATIC_SEQUENCE_CONTENT,
   frameCount = content.frameCount,
-  getFrameSrc = content.getFrameSrc,
+  frameUrlTemplate = content.frameUrlTemplate,
+  frameUrls = content.frameUrls,
   loadingText = content.loadingText,
   beats = content.beats,
 }: CinematicSequenceProps = {}) {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const { imagesRef, imagesLoaded } = useCinematicFrameImages(frameCount, getFrameSrc);
+  const { imagesRef, imagesLoaded } = useCinematicFrameImages(frameCount, frameUrlTemplate, frameUrls);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,

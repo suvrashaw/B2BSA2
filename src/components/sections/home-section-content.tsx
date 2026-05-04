@@ -27,7 +27,7 @@ export interface HomeHeroContent {
   stat: {
     value: string;
     label: string;
-    icon: LucideIcon;
+    icon: string;
   };
   timing: {
     expandDelay: number;
@@ -60,20 +60,21 @@ export interface CinematicStoryBeat {
 
 export interface CinematicSequenceContent {
   frameCount: number;
-  getFrameSrc: (index: number) => string;
+  frameUrlTemplate?: string;
+  frameUrls?: string[];
   loadingText: string;
   beats: CinematicStoryBeat[];
 }
 
 export interface ClientLogoItem {
   id: string;
-  render: () => ReactNode;
+  logoName?: string;
 }
 
 export interface WhoWeAreStat {
   value: string;
   label: string;
-  icon: LucideIcon;
+  icon: string;
   bg: string;
 }
 
@@ -88,7 +89,7 @@ export interface HomeServiceItem {
   id: string;
   title: string;
   description: string;
-  icon: LucideIcon;
+  icon: string;
   image: string;
   color: string;
 }
@@ -109,7 +110,7 @@ export interface CaseStudyItem {
   solution: string;
   metric: string;
   metricLabel: string;
-  icon: LucideIcon;
+  icon: string;
   image: string;
 }
 
@@ -249,7 +250,7 @@ export const HOME_HERO_CONTENT: HomeHeroContent = {
   stat: {
     value: "40+",
     label: "Countries Served",
-    icon: Globe,
+    icon: "Globe",
   },
   timing: {
     expandDelay: 2000,
@@ -257,12 +258,9 @@ export const HOME_HERO_CONTENT: HomeHeroContent = {
   },
 };
 
-const getHomeCinematicFrame = (index: number) =>
-  `/Frames/ezgif-frame-${index.toString().padStart(3, "0")}.jpg`;
-
 export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = {
   frameCount: 60,
-  getFrameSrc: getHomeCinematicFrame,
+  frameUrlTemplate: "/Frames/ezgif-frame-%d.jpg",
   loadingText: "Loading Cinematic Experience...",
   beats: [
     {
@@ -352,62 +350,13 @@ export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = {
   ],
 };
 
-const SingleStoreLogo = () => (
-  <div className="flex items-center gap-1.5 transition-all duration-300 hover:scale-125 cursor-pointer">
-    <div className="w-4 h-4 bg-[#8C1AF6] rounded-full flex items-center justify-center">
-      <div className="w-1.5 h-1.5 bg-white rounded-full" />
-    </div>
-    <span className="text-[#1A1A1A] dark:text-white font-sans text-xl tracking-tight">
-      Single<span className="font-bold">Store</span>
-    </span>
-  </div>
-);
-
-const TemenosLogo = () => (
-  <span className="font-sans font-extrabold text-[22px] tracking-tighter text-[#004b87] dark:text-[#3399ff] lowercase transition-all duration-300 hover:scale-125 cursor-pointer">
-    temenos
-  </span>
-);
-
-const WorldpayLogo = () => (
-  <span className="font-sans font-bold text-[22px] tracking-tight text-[#E31837] lowercase transition-all duration-300 hover:scale-125 cursor-pointer">
-    worldpay
-  </span>
-);
-
-const SyngeneLogo = () => (
-  <span className="font-serif font-bold italic text-[22px] tracking-tight text-[#008272] dark:text-[#00b59f] transition-all duration-300 hover:scale-125 cursor-pointer">
-    Syngene
-  </span>
-);
-
-const AirtelLogo = () => (
-  <div className="flex items-center gap-1.5 transition-all duration-300 hover:scale-125 cursor-pointer">
-    <svg viewBox="0 0 24 24" className="w-7 h-7 fill-[#ff0000]">
-      <path
-        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
-        opacity="0.8"
-      />
-    </svg>
-    <span className="font-sans font-bold text-[24px] tracking-tighter text-[#ff0000] lowercase">
-      airtel
-    </span>
-  </div>
-);
-
-const InfosysLogo = () => (
-  <span className="font-sans font-light text-[22px] tracking-widest text-[#007CC3] dark:text-[#33aaff] transition-all duration-300 hover:scale-125 cursor-pointer">
-    Infosys
-  </span>
-);
-
 export const HOME_CLIENT_LOGOS: ClientLogoItem[] = [
-  { id: "singlestore", render: () => <SingleStoreLogo /> },
-  { id: "temenos", render: () => <TemenosLogo /> },
-  { id: "worldpay", render: () => <WorldpayLogo /> },
-  { id: "syngene", render: () => <SyngeneLogo /> },
-  { id: "airtel", render: () => <AirtelLogo /> },
-  { id: "infosys", render: () => <InfosysLogo /> },
+  { id: "singlestore" },
+  { id: "temenos" },
+  { id: "worldpay" },
+  { id: "syngene" },
+  { id: "airtel" },
+  { id: "infosys" },
 ];
 
 export const HOME_WHO_WE_ARE_CONTENT: WhoWeAreContent = {
@@ -426,37 +375,37 @@ export const HOME_WHO_WE_ARE_CONTENT: WhoWeAreContent = {
     {
       value: "250+",
       label: "Global Events Executed",
-      icon: Globe2,
+      icon: "Globe2",
       bg: "bg-gradient-to-br from-[#1E6091] to-[#184E77]",
     },
     {
       value: "$1.2B",
       label: "Pipeline Generated",
-      icon: TrendingUp,
+      icon: "TrendingUp",
       bg: "bg-gradient-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "40+",
       label: "Countries Served",
-      icon: Target,
+      icon: "Target",
       bg: "bg-gradient-to-br from-[#023E8A] to-[#03045E]",
     },
     {
       value: "15k+",
       label: "Enterprise Leads",
-      icon: Users,
+      icon: "Users",
       bg: "bg-gradient-to-br from-[#1b5e82] to-[#164e6b]",
     },
     {
       value: "98%",
       label: "Client Retention",
-      icon: Target,
+      icon: "Target",
       bg: "bg-gradient-to-br from-[#306f75] to-[#255c61]",
     },
     {
       value: "500+",
       label: "Booth Designs",
-      icon: Globe2,
+      icon: "Globe2",
       bg: "bg-gradient-to-br from-[#0077B6] to-[#0096C7]",
     },
   ],
@@ -480,7 +429,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
       title: "Event Booth Design",
       description:
         "Architectural, immersive exhibition spaces engineered to dominate trade show floors.",
-      icon: Presentation,
+      icon: "Presentation",
       image:
         "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-blue",
@@ -490,7 +439,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
       title: "Media Production",
       description:
         "Cinematic brand storytelling and high-fidelity corporate content that builds authority.",
-      icon: MonitorPlay,
+      icon: "MonitorPlay",
       image:
         "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-cyan",
@@ -500,7 +449,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
       title: "Digital Marketing",
       description:
         "Data-driven growth architectures designed to scale enterprise pipeline.",
-      icon: Rocket,
+      icon: "Rocket",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-red",
@@ -510,7 +459,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
       title: "Lead Generation",
       description:
         "Precision-targeted acquisition strategies for high-value B2B accounts.",
-      icon: Users,
+      icon: "Users",
       image:
         "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-blue",
@@ -520,7 +469,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
       title: "Brand Activation",
       description:
         "Strategic positioning and identity frameworks that outmaneuver competitors.",
-      icon: Lightbulb,
+      icon: "Lightbulb",
       image:
         "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-cyan",
@@ -549,7 +498,7 @@ export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
       solution: "Interactive structural design with live AR product demos.",
       metric: "+340%",
       metricLabel: "Lead Capture Rate",
-      icon: BarChart3,
+      icon: "BarChart3",
       image:
         "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1200",
     },
@@ -561,7 +510,7 @@ export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
       solution: "Targeted video thought-leadership campaign.",
       metric: "4.2x",
       metricLabel: "ROI in 6 Months",
-      icon: Target,
+      icon: "Target",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
     },

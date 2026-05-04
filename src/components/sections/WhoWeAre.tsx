@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import Icon from "@/components/ui/Icon";
 import {
   HOME_WHO_WE_ARE_CONTENT,
   type WhoWeAreContent,
@@ -20,7 +21,7 @@ function HoverCard({ stat }: { stat: WhoWeAreStat }) {
   return (
     <div
       onMouseMove={handleMouseMove}
-      className={`relative p-8 rounded-[4px] shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden group/card ${stat.bg} text-white hover:bg-white hover:bg-none dark:hover:bg-[#1a1c1e] border border-transparent hover:border-red-500`}
+      className={`relative p-8 rounded-[4px] shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden group/card ${stat.bg} text-white hover:bg-white border border-transparent hover:border-red-500`}
     >
       {/* Dynamic Red Radial Gradient */}
       <motion.div
@@ -41,7 +42,7 @@ function HoverCard({ stat }: { stat: WhoWeAreStat }) {
         <div className="text-sm font-bold opacity-90 mb-4 group-hover/card:text-red-600 transition-colors">{stat.label}</div>
         <div className="flex items-center justify-between">
           <div className="text-4xl font-heading font-bold group-hover/card:text-red-600 transition-colors">{stat.value}</div>
-          <stat.icon className="w-6 h-6 opacity-50 group-hover/card:opacity-100 group-hover/card:text-red-600 transition-colors" />
+          <Icon name={stat.icon} className="w-6 h-6 opacity-50 group-hover/card:opacity-100 group-hover/card:text-red-600 transition-colors" />
         </div>
       </div>
     </div>
@@ -53,7 +54,7 @@ export interface WhoWeAreProps {
   heading?: WhoWeAreContent["heading"];
   quote?: WhoWeAreContent["quote"];
   attribution?: WhoWeAreContent["attribution"];
-  stats?: WhoWeAreContent["stats"];
+  stats?: WhoWeAreStat[];
 }
 
 export function WhoWeAre({
@@ -68,21 +69,21 @@ export function WhoWeAre({
   const col2Stats = [...offsetStats, ...offsetStats];
 
   return (
-    <section id="about" className="py-20 bg-white dark:bg-[#212529] overflow-hidden">
+    <section id="about" className="py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-8 grid lg:grid-cols-2 gap-16 items-center">
         
         {/* Left Side: Content */}
         <div className="space-y-12 flex flex-col items-start text-left">
           <div className="w-full text-left">
-            <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal dark:text-white mb-6">
+            <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal mb-6">
               {heading}
             </h2>
           </div>
 
           <div className="w-full">
-            <div className="p-8 lg:p-12 rounded-3xl bg-brand-gray/50 dark:bg-[#1a1c1e] hover:shadow-2xl transition-all duration-500 group border border-transparent hover:border-brand-blue/20 hover:bg-brand-blue/5 cursor-default">
+            <div className="p-8 lg:p-12 rounded-3xl bg-brand-gray/50 hover:shadow-2xl transition-all duration-500 group border border-transparent hover:border-brand-blue/20 hover:bg-brand-blue/5 cursor-default">
               <div className="transform transition-transform duration-500 group-hover:-translate-y-2">
-                <p className="text-xl md:text-3xl font-serif italic text-black dark:text-white group-hover:text-brand-blue dark:group-hover:text-brand-cyan transition-colors duration-500 leading-relaxed">
+                <p className="text-xl md:text-3xl font-serif italic text-black group-hover:text-brand-blue:text-brand-cyan transition-colors duration-500 leading-relaxed">
                   {quote}
                 </p>
                 <div className="mt-8 text-sm font-bold text-gray-500 uppercase tracking-widest group-hover:text-brand-blue/70 transition-colors">
@@ -96,8 +97,8 @@ export function WhoWeAre({
         {/* Right Side: Scrolling Insights */}
         <div className="relative h-[600px] overflow-hidden p-4 group/scroller">
           {/* Top/Bottom Fade Masks */}
-          <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white dark:from-[#212529] to-transparent z-10 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white dark:from-[#212529] to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none" />
 
           <div className="grid grid-cols-2 gap-6 h-full relative">
             {/* Column 1 - Scroll Up */}

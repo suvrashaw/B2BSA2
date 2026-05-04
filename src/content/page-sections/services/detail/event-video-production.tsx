@@ -1,4 +1,3 @@
-import { BarChart3, Camera, Film, Globe2, Presentation, Target, TrendingUp, Users, Video, Zap } from "lucide-react";
 
 export const EVP_HERO = {
   showPreloader: false,
@@ -20,7 +19,7 @@ export const EVP_HERO = {
   },
   primaryCtaLabel: "Get a Quote",
   secondaryCtaLabel: "View Showreel",
-  stat: { value: "250+", label: "Events Filmed Globally", icon: Camera },
+  stat: { value: "250+", label: "Events Filmed Globally", icon: "Camera" },
 };
 
 export const EVP_WHY = {
@@ -40,10 +39,10 @@ export const EVP_DELIVERABLES = {
   serviceLabel: "Deliverable",
   ctaLabel: "Learn More",
   services: [
-    { id: "highlight", title: "Event Highlight Reel", description: "A cinematic 60–90 second summary of your event for social and sales use.", icon: Film, image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
-    { id: "keynote", title: "Keynote & Session Recording", description: "Multi-camera capture of all speaking sessions with synced audio and lower thirds.", icon: Video, image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
-    { id: "interviews", title: "On-Site Interviews", description: "Candid and structured interviews with exhibitors, speakers, and attendees captured on a branded interview set.", icon: Camera, image: "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
-    { id: "social", title: "Social Media Cuts", description: "Vertical and square cuts optimised for LinkedIn, Instagram Reels, and YouTube Shorts.", icon: Zap, image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "highlight", title: "Event Highlight Reel", description: "A cinematic 60–90 second summary of your event for social and sales use.", icon: "Film", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "keynote", title: "Keynote & Session Recording", description: "Multi-camera capture of all speaking sessions with synced audio and lower thirds.", icon: "Video", image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
+    { id: "interviews", title: "On-Site Interviews", description: "Candid and structured interviews with exhibitors, speakers, and attendees captured on a branded interview set.", icon: "Camera", image: "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
+    { id: "social", title: "Social Media Cuts", description: "Vertical and square cuts optimised for LinkedIn, Instagram Reels, and YouTube Shorts.", icon: "Zap", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
   ],
 };
 
@@ -52,10 +51,10 @@ export const EVP_STATS = {
   quote: '"Event video is the most trusted B2B content format. A professionally produced highlight reel keeps your brand alive in prospects\' minds for months after the show."',
   attribution: "— Video Production Team, B2B Sales Arrow",
   stats: [
-    { value: "250+", label: "Events Filmed Globally", icon: Presentation, bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
-    { value: "8×", label: "Avg Content Lifespan vs Live", icon: TrendingUp, bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
-    { value: "40+", label: "Countries Covered", icon: Globe2, bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
-    { value: "98%", label: "Same-Day Delivery Rate", icon: Target, bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
+    { value: "250+", label: "Events Filmed Globally", icon: "Presentation", bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
+    { value: "8×", label: "Avg Content Lifespan vs Live", icon: "TrendingUp", bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
+    { value: "40+", label: "Countries Covered", icon: "Globe2", bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
+    { value: "98%", label: "Same-Day Delivery Rate", icon: "Target", bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
   ],
 };
 
@@ -65,8 +64,8 @@ export const EVP_CASE_STUDIES = {
   ctaLabel: "Full Study",
   viewAllLabel: "View All Work",
   caseStudies: [
-    { id: "gitex-video", client: "Global Tech Summit", title: "GITEX 2025 Highlight Reel Drives 2.4M Views", challenge: "Event ended — content ROI window closing fast.", solution: "Same-day highlight reel posted on LinkedIn before doors closed.", metric: "2.4M", metricLabel: "LinkedIn Video Views", icon: BarChart3, image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200" },
-    { id: "finserve-video", client: "FinServe SaaS", title: "Keynote Series Generates 400 Inbound Leads", challenge: "Conference keynotes seen by 500 live — needed global reach.", solution: "Full session recording distributed across LinkedIn and YouTube.", metric: "400+", metricLabel: "Inbound Leads from Video", icon: Users, image: "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1200" },
+    { id: "gitex-video", client: "Global Tech Summit", title: "GITEX 2025 Highlight Reel Drives 2.4M Views", challenge: "Event ended — content ROI window closing fast.", solution: "Same-day highlight reel posted on LinkedIn before doors closed.", metric: "2.4M", metricLabel: "LinkedIn Video Views", icon: "BarChart3", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200" },
+    { id: "finserve-video", client: "FinServe SaaS", title: "Keynote Series Generates 400 Inbound Leads", challenge: "Conference keynotes seen by 500 live — needed global reach.", solution: "Full session recording distributed across LinkedIn and YouTube.", metric: "400+", metricLabel: "Inbound Leads from Video", icon: "Users", image: "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1200" },
   ],
 };
 

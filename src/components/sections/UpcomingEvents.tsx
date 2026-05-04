@@ -28,18 +28,18 @@ export function UpcomingEvents({
   events = content.events,
 }: UpcomingEventsProps = {}) {
   return (
-    <section id="events" className="py-20 bg-brand-gray dark:bg-[#1a1c1e] relative">
+    <section id="events" className="py-20 bg-brand-gray relative">
       <div className="container mx-auto px-8">
         <div className="flex flex-col items-start text-left mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 text-brand-blue dark:text-brand-cyan text-sm font-semibold tracking-wide"
+            className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 text-brand-blue text-sm font-semibold tracking-wide"
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal dark:text-white leading-tight">
+          <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal leading-tight">
             {heading}
           </h2>
         </div>
@@ -52,7 +52,7 @@ export function UpcomingEvents({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.6 }}
-              className="group relative bg-white dark:bg-[#212529] rounded-3xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-2xl transition-shadow duration-500 flex flex-col"
+              className="group relative bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl transition-shadow duration-500 flex flex-col"
             >
               <div className="relative h-[250px] md:h-[300px] w-full overflow-hidden">
                 <Image
@@ -84,21 +84,21 @@ export function UpcomingEvents({
               <div className="p-8 relative flex-1 flex flex-col justify-center">
                 <div className="grid grid-cols-2 gap-4 relative z-10">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-brand-gray dark:bg-[#1a1c1e] flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-brand-gray flex items-center justify-center shrink-0">
                       <Calendar className="w-4 h-4 text-brand-blue" />
                     </div>
                     <div>
                       <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Date</h4>
-                      <p className="text-brand-charcoal dark:text-white text-sm font-semibold">{event.date}</p>
+                      <p className="text-brand-charcoal text-sm font-semibold">{event.date}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-brand-gray dark:bg-[#1a1c1e] flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-brand-gray flex items-center justify-center shrink-0">
                       <MapPin className="w-4 h-4 text-brand-cyan" />
                     </div>
                     <div>
                       <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Location</h4>
-                      <p className="text-brand-charcoal dark:text-white text-sm font-semibold line-clamp-2">{event.location}</p>
+                      <p className="text-brand-charcoal text-sm font-semibold line-clamp-2">{event.location}</p>
                     </div>
                   </div>
                 </div>
@@ -108,7 +108,7 @@ export function UpcomingEvents({
         </div>
 
         <div className="mt-12 text-center">
-          <button className="hidden md:inline-flex items-center gap-2 text-brand-blue dark:text-brand-cyan font-semibold hover:gap-4 transition-all duration-300">
+          <button className="hidden md:inline-flex items-center gap-2 text-brand-blue font-semibold hover:gap-4 transition-all duration-300">
             {viewAllLabel} <ArrowUpRight className="w-5 h-5" />
           </button>
         </div>

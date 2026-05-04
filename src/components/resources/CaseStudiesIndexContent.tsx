@@ -45,7 +45,7 @@ export function CaseStudiesIndexContent() {
              <div className="text-brand-blue text-sm font-bold tracking-widest uppercase mb-6">Success Stories</div>
              <h1 className="text-4xl md:text-6xl font-bold font-heading mb-8">Proven Results for Global Enterprise Brands</h1>
              <p className="text-xl text-gray-500 leading-relaxed">
-               Explore how our unified growth architecture helps the world's most innovative companies scale their event, media, and marketing impact.
+               Explore how our unified growth architecture helps the world&apos;s most innovative companies scale their event, media, and marketing impact.
              </p>
           </div>
 

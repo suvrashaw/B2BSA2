@@ -1,4 +1,3 @@
-import { BarChart3, Target, TrendingUp, Users } from "lucide-react";
 
 export const CASE_STUDIES_HERO = {
   showPreloader: false,
@@ -23,7 +22,7 @@ export const CASE_STUDIES_HERO = {
   stat: {
     value: "4.2x",
     label: "Average Client ROI",
-    icon: TrendingUp,
+    icon: "TrendingUp",
   },
 };
 
@@ -41,25 +40,25 @@ export const CASE_STUDIES_STATS = {
     {
       value: "4.2x",
       label: "Average Client ROI",
-      icon: TrendingUp,
+      icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
       value: "240+",
       label: "Brands Helped",
-      icon: Users,
+      icon: "Users",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "$1.2B",
       label: "Pipeline Generated",
-      icon: BarChart3,
+      icon: "BarChart3",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
       value: "+280%",
       label: "Avg Lead Increase",
-      icon: Target,
+      icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
   ],
@@ -84,7 +83,7 @@ export const CASE_STUDIES_LIST = {
       solution: "Interactive structural design with live AR product demos.",
       metric: "+340%",
       metricLabel: "Lead Capture Rate",
-      icon: BarChart3,
+      icon: "BarChart3",
       image:
         "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1200",
     },
@@ -96,7 +95,7 @@ export const CASE_STUDIES_LIST = {
       solution: "Targeted video thought-leadership campaign.",
       metric: "4.2x",
       metricLabel: "ROI in 6 Months",
-      icon: Target,
+      icon: "Target",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
     },
@@ -108,7 +107,7 @@ export const CASE_STUDIES_LIST = {
       solution: "360° immersive booth environment with live demo theatre.",
       metric: "220+",
       metricLabel: "SQLs Captured",
-      icon: Users,
+      icon: "Users",
       image:
         "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1200",
     },

@@ -14,6 +14,7 @@ export interface WhyChooseUsProps {
   eyebrow?: WhyChooseUsContent["eyebrow"];
   heading?: WhyChooseUsContent["heading"];
   reasons?: WhyChooseUsContent["reasons"];
+  showImagePanel?: boolean;
 }
 
 export function WhyChooseUs({
@@ -21,6 +22,7 @@ export function WhyChooseUs({
   eyebrow = content.eyebrow,
   heading = content.heading,
   reasons = content.reasons,
+  showImagePanel = true,
 }: WhyChooseUsProps = {}) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -54,10 +56,10 @@ export function WhyChooseUs({
          <div className="sticky top-0 w-full h-screen bg-brand-gray z-0" />
       </div>
 
-      <div className="container mx-auto px-8 flex flex-col md:flex-row relative z-10">
+      <div className={`container mx-auto px-8 flex flex-col ${showImagePanel ? "md:flex-row" : "items-center"} relative z-10`}>
         
         {/* Left Side: Sticky Content */}
-        <div className="w-full md:w-1/2 md:sticky md:top-0 h-auto md:h-screen flex flex-col justify-center items-start text-left py-20 md:py-0 md:pr-20">
+        <div className={`w-full ${showImagePanel ? "md:w-1/2 md:pr-20" : "md:w-3/4 max-w-4xl text-center items-center"} md:sticky md:top-0 h-auto md:h-screen flex flex-col justify-center items-start py-20 md:py-0`}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -66,7 +68,7 @@ export function WhyChooseUs({
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal mb-8 leading-tight w-full text-left">
+          <h2 className={`font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal mb-8 leading-tight w-full ${showImagePanel ? "text-left" : "text-center"}`}>
             {heading}
           </h2>
           
@@ -95,32 +97,33 @@ export function WhyChooseUs({
         </div>
 
         {/* Right Side: Scrolling Images */}
-        <div className="w-full md:w-1/2 flex flex-col pb-[20vh]">
-          {reasons.map((reason) => (
-            <div
-              key={reason.id}
-              className="h-[80vh] md:h-screen w-full flex items-center justify-center p-8"
-            >
-              <div className="relative w-full aspect-[4/5] md:aspect-square rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
-                <Image
-                  src={reason.image}
-                  alt={reason.title}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-brand-blue/20 mix-blend-overlay" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                
-                {/* Mobile text fallback since sticky scroll might be weird on mobile */}
-                <div className="absolute bottom-8 left-8 right-8 md:hidden">
-                   <h3 className="font-heading text-2xl font-bold text-white mb-2">{reason.title}</h3>
-                   <p className="text-sm text-gray-200">{reason.description}</p>
+        {showImagePanel && (
+          <div className="w-full md:w-1/2 flex flex-col pb-[20vh]">
+            {reasons.map((reason) => (
+              <div
+                key={reason.id}
+                className="h-[80vh] md:h-screen w-full flex items-center justify-center p-8"
+              >
+                <div className="relative w-full aspect-[4/5] md:aspect-square rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
+                  <Image
+                    src={reason.image}
+                    alt={reason.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-brand-blue/20 mix-blend-overlay" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  
+                  {/* Mobile text fallback since sticky scroll might be weird on mobile */}
+                  <div className="absolute bottom-8 left-8 right-8 md:hidden">
+                     <h3 className="font-heading text-2xl font-bold text-white mb-2">{reason.title}</h3>
+                     <p className="text-sm text-gray-200">{reason.description}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

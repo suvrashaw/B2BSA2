@@ -38,7 +38,7 @@ export function Blogs({
   const spread = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <section ref={containerRef} id="blogs" className="relative py-20 bg-white dark:bg-[#212529] overflow-hidden">
+    <section ref={containerRef} id="blogs" className="relative py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-8">
         <div className="flex flex-col items-start text-left mb-4 lg:mb-8">
           <motion.div
@@ -49,10 +49,10 @@ export function Blogs({
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal dark:text-white leading-tight">
+          <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal leading-tight">
             {heading}
           </h2>
-          <button className="mt-8 flex items-center gap-2 text-brand-charcoal dark:text-white font-semibold hover:text-brand-red dark:hover:text-brand-red transition-all duration-300 group">
+          <button className="mt-8 flex items-center gap-2 text-brand-charcoal font-semibold hover:text-brand-red:text-brand-red transition-all duration-300 group">
             {ctaLabel} <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </button>
         </div>
@@ -127,7 +127,7 @@ function BlogCard({
         scale: isHovered ? 0.9 : 1, // Shrink slightly on hover to fit perfectly
       }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      className="absolute w-full max-w-md bg-white dark:bg-[#1a1c1e] rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-800 overflow-hidden transform-gpu"
+      className="absolute w-full max-w-md bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden transform-gpu"
     >
       <div className="relative h-56 w-full">
         <Image
@@ -138,17 +138,17 @@ function BlogCard({
           className="object-cover"
         />
         <div className="absolute top-4 left-4">
-          <span className="px-3 py-1 bg-white/90 dark:bg-[#212529]/90 backdrop-blur-md rounded-full text-xs font-bold uppercase tracking-wider text-brand-charcoal dark:text-white shadow-sm">
+          <span className="px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold uppercase tracking-wider text-brand-charcoal shadow-sm">
             {blog.category}
           </span>
         </div>
       </div>
       <div className="p-8">
         <span className="text-sm text-gray-500 font-medium mb-3 block">{blog.date}</span>
-        <h3 className="font-heading text-2xl font-bold text-brand-charcoal dark:text-white mb-6 leading-tight">
+        <h3 className="font-heading text-2xl font-bold text-brand-charcoal mb-6 leading-tight">
           {blog.title}
         </h3>
-        <div className="flex items-center text-brand-blue dark:text-brand-cyan font-semibold text-sm uppercase tracking-widest gap-2">
+        <div className="flex items-center text-brand-blue font-semibold text-sm uppercase tracking-widest gap-2">
           Read Article <ArrowUpRight className="w-4 h-4" />
         </div>
       </div>

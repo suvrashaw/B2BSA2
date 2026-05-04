@@ -2,10 +2,11 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Globe, Layout, Users, Zap, Calendar, Wrench, Target, Shield, BarChart, Search, Box } from "lucide-react";
+import { LucideProps } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-const ICONS: Record<string, any> = {
+const ICONS: Record<string, React.ElementType<LucideProps>> = {
   globe: Globe,
   layout: Layout,
   users: Users,

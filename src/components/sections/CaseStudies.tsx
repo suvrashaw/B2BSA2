@@ -4,9 +4,11 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import Icon from "@/components/ui/Icon";
 import {
   HOME_CASE_STUDIES_CONTENT,
   type CaseStudiesContent,
+  type CaseStudyItem,
 } from "./home-section-content";
 
 export interface CaseStudiesProps {
@@ -15,7 +17,7 @@ export interface CaseStudiesProps {
   heading?: CaseStudiesContent["heading"];
   ctaLabel?: CaseStudiesContent["ctaLabel"];
   viewAllLabel?: CaseStudiesContent["viewAllLabel"];
-  caseStudies?: CaseStudiesContent["items"];
+  caseStudies?: CaseStudyItem[];
 }
 
 export function CaseStudies({
@@ -32,18 +34,18 @@ export function CaseStudies({
     : caseStudies[0]?.id ?? "";
 
   return (
-    <section id="work" className="py-20 bg-brand-gray dark:bg-[#1a1c1e] relative">
+    <section id="work" className="py-20 bg-brand-gray relative">
       <div className="container mx-auto px-8">
         <div className="flex flex-col items-start text-left mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue dark:text-brand-cyan text-sm font-semibold tracking-wide"
+            className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-sm font-semibold tracking-wide"
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal dark:text-white leading-tight">
+          <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal leading-tight">
             {heading}
           </h2>
         </div>
@@ -91,7 +93,7 @@ export function CaseStudies({
                     <div className={`w-12 h-12 rounded-full flex items-center justify-center shrink-0 backdrop-blur-md transition-colors duration-300 ${
                       isActive ? "bg-brand-blue/90" : "bg-white/10 group-hover:bg-brand-cyan/80"
                     }`}>
-                      <study.icon className={`w-5 h-5 ${isActive ? "text-white" : "text-white"}`} />
+                      <Icon name={study.icon} className={`w-5 h-5 ${isActive ? "text-white" : "text-white"}`} />
                     </div>
                     
                     <AnimatePresence mode="popLayout">
@@ -163,9 +165,9 @@ export function CaseStudies({
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.8 }}
                         transition={{ delay: 0.3, duration: 0.4 }}
-                        className="absolute top-8 right-8 bg-white/90 dark:bg-[#212529]/90 backdrop-blur-md px-4 py-3 rounded-2xl shadow-lg border border-white/20 flex flex-col items-center"
+                        className="absolute top-8 right-8 bg-white/90 backdrop-blur-md px-4 py-3 rounded-2xl shadow-lg border border-white/20 flex flex-col items-center"
                       >
-                        <span className="font-heading font-bold text-2xl text-brand-blue dark:text-brand-cyan">{study.metric}</span>
+                        <span className="font-heading font-bold text-2xl text-brand-blue">{study.metric}</span>
                         <span className="text-[10px] uppercase font-bold text-gray-500 tracking-wider">{study.metricLabel}</span>
                       </motion.div>
                     )}
@@ -178,7 +180,7 @@ export function CaseStudies({
         </div>
 
         <div className="mt-12 text-center">
-          <button className="hidden md:inline-flex items-center gap-2 text-brand-blue dark:text-brand-cyan font-semibold hover:gap-4 transition-all duration-300">
+          <button className="hidden md:inline-flex items-center gap-2 text-brand-blue font-semibold hover:gap-4 transition-all duration-300">
             {viewAllLabel} <ArrowUpRight className="w-5 h-5" />
           </button>
         </div>

@@ -1,4 +1,3 @@
-import { BarChart3, Calendar, Globe2, Layers, Mic2, Target, TrendingUp, Users, Zap } from "lucide-react";
 
 export const CE_HERO = {
   showPreloader: false,
@@ -20,7 +19,7 @@ export const CE_HERO = {
   },
   primaryCtaLabel: "Get a Quote",
   secondaryCtaLabel: "See Case Studies",
-  stat: { value: "120+", label: "Custom Events Delivered", icon: Calendar },
+  stat: { value: "120+", label: "Custom Events Delivered", icon: "Calendar" },
 };
 
 export const CE_WHY = {
@@ -40,10 +39,10 @@ export const CE_DELIVERABLES = {
   serviceLabel: "Deliverable",
   ctaLabel: "Learn More",
   services: [
-    { id: "concept", title: "Concept & Programme Design", description: "Full event concept, agenda architecture, speaker curation, and format design.", icon: Layers, image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
-    { id: "venue", title: "Venue & Logistics Management", description: "Venue sourcing, AV setup, catering, transport, and on-site coordination.", icon: Globe2, image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
-    { id: "speakers", title: "Speaker & Moderator Sourcing", description: "Access to our network of 500+ industry speakers and moderators globally.", icon: Mic2, image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
-    { id: "lead", title: "Attendee Acquisition & Lead Capture", description: "Targeted outreach to your ICP, registration management, and post-event follow-up.", icon: Target, image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "concept", title: "Concept & Programme Design", description: "Full event concept, agenda architecture, speaker curation, and format design.", icon: "Layers", image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
+    { id: "venue", title: "Venue & Logistics Management", description: "Venue sourcing, AV setup, catering, transport, and on-site coordination.", icon: "Globe2", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-cyan" },
+    { id: "speakers", title: "Speaker & Moderator Sourcing", description: "Access to our network of 500+ industry speakers and moderators globally.", icon: "Mic2", image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-red" },
+    { id: "lead", title: "Attendee Acquisition & Lead Capture", description: "Targeted outreach to your ICP, registration management, and post-event follow-up.", icon: "Target", image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1600", color: "bg-brand-blue" },
   ],
 };
 
@@ -52,10 +51,10 @@ export const CE_STATS = {
   quote: '"The most powerful brand building tool available to a B2B company is an event with your name on it and your competitors not invited."',
   attribution: "— Custom Events Team, B2B Sales Arrow",
   stats: [
-    { value: "120+", label: "Custom Events Delivered", icon: Calendar, bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
-    { value: "94%", label: "Attendee Satisfaction Rate", icon: Users, bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
-    { value: "2.9x", label: "Avg Pipeline from Hosted Events", icon: TrendingUp, bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
-    { value: "48 hrs", label: "Avg Lead Follow-Up Time", icon: Zap, bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
+    { value: "120+", label: "Custom Events Delivered", icon: "Calendar", bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]" },
+    { value: "94%", label: "Attendee Satisfaction Rate", icon: "Users", bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]" },
+    { value: "2.9x", label: "Avg Pipeline from Hosted Events", icon: "TrendingUp", bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]" },
+    { value: "48 hrs", label: "Avg Lead Follow-Up Time", icon: "Zap", bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]" },
   ],
 };
 
@@ -65,8 +64,8 @@ export const CE_CASE_STUDIES = {
   ctaLabel: "Full Study",
   viewAllLabel: "View All Event Work",
   caseStudies: [
-    { id: "summit", client: "Enterprise Cloud Platform", title: "400-Person CXO Summit, Dubai 2024", challenge: "Needed to establish enterprise credibility in MENA market.", solution: "Full-service CXO summit with 3 keynotes, 8 panels, and 1:1 meeting program.", metric: "$8.4M", metricLabel: "Pipeline Attributed", icon: BarChart3, image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200" },
-    { id: "roundtable", client: "B2B Payments Company", title: "12-City CFO Roundtable Series", challenge: "Unable to reach finance decision-makers through digital channels.", solution: "Intimate 20-person CFO roundtables in 12 cities — fully managed logistics and content.", metric: "144", metricLabel: "CFOs Engaged", icon: Users, image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1200" },
+    { id: "summit", client: "Enterprise Cloud Platform", title: "400-Person CXO Summit, Dubai 2024", challenge: "Needed to establish enterprise credibility in MENA market.", solution: "Full-service CXO summit with 3 keynotes, 8 panels, and 1:1 meeting program.", metric: "$8.4M", metricLabel: "Pipeline Attributed", icon: "BarChart3", image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200" },
+    { id: "roundtable", client: "B2B Payments Company", title: "12-City CFO Roundtable Series", challenge: "Unable to reach finance decision-makers through digital channels.", solution: "Intimate 20-person CFO roundtables in 12 cities — fully managed logistics and content.", metric: "144", metricLabel: "CFOs Engaged", icon: "Users", image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1200" },
   ],
 };
 
