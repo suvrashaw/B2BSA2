@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { TradeShowBoothBuilderContent } from "@/components/services/TradeShowBoothBuilderContent";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Trade Show Booth Builder & Custom Fabrication | B2B Sales Arrow",
-  description: "Trade show booth builder, exhibition stand builder, and custom exhibit booth fabrication for enterprise brands - concept to installation globally.",
-};
+import { DocsPage } from "@/components/content/DocsPage";
+import { getPageByUrl, getPageMetadata } from "@/content/pages";
+
+const page = getPageByUrl("/services/global-event-solutions/trade-show-booth-builder");
+
+export const metadata: Metadata = getPageMetadata("/services/global-event-solutions/trade-show-booth-builder");
 
 export default function Page() {
-  return <TradeShowBoothBuilderContent />;
+  return <DocsPage page={page} />;
 }

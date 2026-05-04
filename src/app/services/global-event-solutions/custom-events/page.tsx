@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { CustomEventsContent } from "@/components/services/CustomEventsContent";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Custom B2B Event Production & Strategy | B2B Sales Arrow",
-  description: "Custom event solutions for B2B brands - executive roundtables, hosted buyer programs, client summits, product launches, and proprietary event production.",
-};
+import { DocsPage } from "@/components/content/DocsPage";
+import { getPageByUrl, getPageMetadata } from "@/content/pages";
+
+const page = getPageByUrl("/services/global-event-solutions/custom-events");
+
+export const metadata: Metadata = getPageMetadata("/services/global-event-solutions/custom-events");
 
 export default function Page() {
-  return <CustomEventsContent />;
+  return <DocsPage page={page} />;
 }

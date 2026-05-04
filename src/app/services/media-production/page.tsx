@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { MediaProductionContent } from "@/components/services/MediaProductionContent";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "B2B Media Production & Video Production Company | B2B Sales Arrow",
-  description: "B2B video production company offering corporate video production, event video, video editing services, live streaming, and brand content for enterprise teams.",
-};
+import { DocsPage } from "@/components/content/DocsPage";
+import { getPageByUrl, getPageMetadata } from "@/content/pages";
+
+const page = getPageByUrl("/services/media-production");
+
+export const metadata: Metadata = getPageMetadata("/services/media-production");
 
 export default function Page() {
-  return <MediaProductionContent />;
+  return <DocsPage page={page} />;
 }

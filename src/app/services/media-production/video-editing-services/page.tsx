@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { VideoEditingServicesContent } from "@/components/services/VideoEditingServicesContent";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Professional Video Editing Services for B2B | B2B Sales Arrow",
-  description: "B2B video editing services, corporate video post-production, and social media video editing for enterprise marketing and event teams.",
-};
+import { DocsPage } from "@/components/content/DocsPage";
+import { getPageByUrl, getPageMetadata } from "@/content/pages";
+
+const page = getPageByUrl("/services/media-production/video-editing-services");
+
+export const metadata: Metadata = getPageMetadata("/services/media-production/video-editing-services");
 
 export default function Page() {
-  return <VideoEditingServicesContent />;
+  return <DocsPage page={page} />;
 }

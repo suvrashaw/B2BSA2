@@ -46,12 +46,12 @@ export function WhyChooseUs({
   });
 
   return (
-    <section ref={containerRef} className="relative bg-brand-charcoal text-white">
+    <section ref={containerRef} className="relative bg-brand-gray">
       {/* 
         The container needs to be tall enough to allow scrolling.
       */}
       <div className="absolute inset-0 pointer-events-none">
-         <div className="sticky top-0 w-full h-screen bg-brand-charcoal z-0" />
+         <div className="sticky top-0 w-full h-screen bg-brand-gray z-0" />
       </div>
 
       <div className="container mx-auto px-8 flex flex-col md:flex-row relative z-10">
@@ -62,11 +62,11 @@ export function WhyChooseUs({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-1.5 mb-6 rounded-full bg-white/10 border border-white/20 text-brand-cyan text-sm font-semibold tracking-wide"
+            className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-charcoal/5 border border-brand-charcoal/10 text-brand-charcoal text-sm font-semibold tracking-wide"
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight w-full text-left">
+          <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal mb-8 leading-tight w-full text-left">
             {heading}
           </h2>
           
@@ -82,10 +82,10 @@ export function WhyChooseUs({
                   className="absolute inset-0 flex flex-col items-center justify-center text-center"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <CheckCircle2 className="w-6 h-6 text-brand-cyan" />
-                    <h3 className="font-heading text-3xl font-bold text-white">{activeReason.title}</h3>
+                    <CheckCircle2 className="w-6 h-6 text-brand-blue" />
+                    <h3 className="font-heading text-3xl font-bold text-brand-charcoal">{activeReason.title}</h3>
                   </div>
-                  <p className="text-xl text-gray-400 leading-relaxed max-w-md">
+                  <p className="text-xl text-gray-600 leading-relaxed max-w-md">
                     {activeReason.description}
                   </p>
                 </motion.div>
@@ -101,7 +101,7 @@ export function WhyChooseUs({
               key={reason.id}
               className="h-[80vh] md:h-screen w-full flex items-center justify-center p-8"
             >
-              <div className="relative w-full aspect-[4/5] md:aspect-square rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+              <div className="relative w-full aspect-[4/5] md:aspect-square rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
                 <Image
                   src={reason.image}
                   alt={reason.title}
@@ -114,7 +114,7 @@ export function WhyChooseUs({
                 {/* Mobile text fallback since sticky scroll might be weird on mobile */}
                 <div className="absolute bottom-8 left-8 right-8 md:hidden">
                    <h3 className="font-heading text-2xl font-bold text-white mb-2">{reason.title}</h3>
-                   <p className="text-sm text-gray-300">{reason.description}</p>
+                   <p className="text-sm text-gray-200">{reason.description}</p>
                 </div>
               </div>
             </div>

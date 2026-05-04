@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { EventBoothRentalContent } from "@/components/services/EventBoothRentalContent";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Trade Show Booth Rental & Display Rental | B2B Sales Arrow",
-  description: "Trade show booth rental and trade show display booth rental options - brand-configurable, globally deployable, and fast to market.",
-};
+import { DocsPage } from "@/components/content/DocsPage";
+import { getPageByUrl, getPageMetadata } from "@/content/pages";
+
+const page = getPageByUrl("/services/global-event-solutions/event-booth-rental");
+
+export const metadata: Metadata = getPageMetadata("/services/global-event-solutions/event-booth-rental");
 
 export default function Page() {
-  return <EventBoothRentalContent />;
+  return <DocsPage page={page} />;
 }

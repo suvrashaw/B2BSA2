@@ -1,11 +1,25 @@
 @import "tailwindcss";
 
+/* Force class-based dark mode in Tailwind v4 — dark: utilities only activate via .dark class */
+@variant dark (&:is(.dark *));
+
 :root {
   --background: #FFFFFF;
   --foreground: #212529;
   --brand-gray: #F8F9FA;
   --brand-white: #FFFFFF;
   --brand-charcoal: #212529;
+}
+
+/* Lock light mode — neutralize OS dark preference so CSS vars never flip */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #FFFFFF;
+    --foreground: #212529;
+    --brand-gray: #F8F9FA;
+    --brand-white: #FFFFFF;
+    --brand-charcoal: #212529;
+  }
 }
 
 

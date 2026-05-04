@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { SearchEngineOptimizationContent } from "@/components/services/SearchEngineOptimizationContent";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "B2B SEO & Content Strategy Services | B2B Sales Arrow",
-  description: "B2B SEO services and B2B content strategy for enterprise brands - high-intent keyword research, technical SEO, and authority link building.",
-};
+import { DocsPage } from "@/components/content/DocsPage";
+import { getPageByUrl, getPageMetadata } from "@/content/pages";
+
+const page = getPageByUrl("/services/performance-marketing/seo-services");
+
+export const metadata: Metadata = getPageMetadata("/services/performance-marketing/seo-services");
 
 export default function Page() {
-  return <SearchEngineOptimizationContent />;
+  return <DocsPage page={page} />;
 }

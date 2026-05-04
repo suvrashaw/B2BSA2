@@ -7,25 +7,7 @@ import { ChevronDown, Globe, Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-
-const NAV_LINKS = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about-us" },
-  { 
-    name: "Services", 
-    href: "/services/global-event-solutions",
-    subLinks: [
-      { name: "Global Event Solutions", href: "/services/global-event-solutions" },
-      { name: "Media Production", href: "/services/media-production" },
-      { name: "Performance Marketing", href: "/services/performance-marketing" },
-      { name: "Sales Qualified Lead Generation", href: "/services/sales-qualified-lead-generation" },
-      { name: "Market Research", href: "/services/market-research" },
-    ]
-  },
-  { name: "Case Studies", href: "/case-studies" },
-  { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "/contact-us" },
-];
+import { serviceNavigationGroups, topNavigation } from "@/content/navigation";
 
 // Remove ThemeToggle import
 
@@ -33,6 +15,7 @@ const NAV_LINKS = [
 export function Header({ forceLightMode = false }: { forceLightMode?: boolean } = {}) {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const solidHeader = forceLightMode || scrolled;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +35,7 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className={cn(
         "fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-4 transition-all duration-300",
-        scrolled
+        solidHeader
           ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
           : "bg-transparent"
       )}
@@ -71,7 +54,7 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
       </div>
 
       <nav className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-        {NAV_LINKS.map((link) => (
+        {topNavigation.map((link) => (
           <div key={link.name} className="relative group/nav-item py-4 flex items-center">
             <Link
               href={link.href}
@@ -81,27 +64,38 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
               )}
             >
               {link.name}
-              {link.subLinks && (
+              {link.name === "Services" && (
                 <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover/nav-item:rotate-180 opacity-70" />
               )}
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-brand-blue transition-all duration-300 group-hover/nav-item:w-full" />
             </Link>
 
-            {link.subLinks && (
-              <div className="absolute top-[80%] left-0 pt-4 opacity-0 translate-y-2 pointer-events-none group-hover/nav-item:opacity-100 group-hover/nav-item:translate-y-0 group-hover/nav-item:pointer-events-auto transition-all duration-300 z-[100]">
-                <div className="bg-white/95 backdrop-blur-md border border-gray-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)] rounded-xl p-2 min-w-[220px]">
-                  {link.subLinks.map((sub) => (
-                    <Link
-                      key={sub.name}
-                      href={sub.href}
-                      className="flex items-center justify-between px-4 py-3 text-sm font-medium text-brand-charcoal hover:bg-brand-blue/5 hover:text-brand-blue rounded-lg transition-all duration-200 group/sub"
-                    >
-                      {sub.name}
-                      <span className="opacity-0 -translate-x-2 group-hover/sub:opacity-100 group-hover/sub:translate-x-0 transition-all duration-200 text-brand-blue">
-                        →
-                      </span>
-                    </Link>
-                  ))}
+            {link.name === "Services" && (
+              <div className="absolute top-[80%] left-1/2 pt-4 opacity-0 translate-y-2 -translate-x-1/2 pointer-events-none group-hover/nav-item:opacity-100 group-hover/nav-item:translate-y-0 group-hover/nav-item:pointer-events-auto transition-all duration-300 z-[100]">
+                <div className="w-[880px] max-w-[calc(100vw-4rem)] bg-white/95 backdrop-blur-md border border-gray-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)] rounded-lg p-5">
+                  <div className="grid grid-cols-3 gap-4">
+                    {serviceNavigationGroups.map((group) => (
+                      <div key={group.name} className="rounded-lg border border-brand-charcoal/5 bg-brand-gray/5 p-4">
+                        <Link
+                          href={group.href}
+                          className="mb-3 block text-sm font-black text-brand-charcoal hover:text-brand-blue transition-colors"
+                        >
+                          {group.name}
+                        </Link>
+                        <div className="space-y-2">
+                          {group.links.map((sub) => (
+                            <Link
+                              key={sub.name}
+                              href={sub.href}
+                              className="block text-xs font-semibold leading-5 text-brand-charcoal/60 hover:text-brand-blue transition-colors"
+                            >
+                              {sub.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             )}
@@ -125,7 +119,7 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
 
         <Link href="/contact-us">
           <button className="px-6 py-2.5 rounded text-sm font-medium bg-brand-blue text-white hover:bg-brand-blue/90 hover:shadow-[0_0_15px_rgba(75,192,217,0.4)] transition-all duration-300 relative overflow-hidden group">
-            <span className="relative z-10">Let's Talk</span>
+            <span className="relative z-10">Let&apos;s Talk</span>
             <div className="absolute inset-0 bg-gradient-to-r from-brand-blue to-brand-cyan opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </button>
         </Link>
@@ -147,7 +141,7 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
             exit={{ opacity: 0, y: -20 }}
             className="absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-2xl p-8 lg:hidden flex flex-col gap-6"
           >
-            {NAV_LINKS.map((link) => (
+            {topNavigation.map((link) => (
               <div key={link.name} className="space-y-4">
                 <Link
                   href={link.href}
@@ -156,17 +150,28 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
                 >
                   {link.name}
                 </Link>
-                {link.subLinks && (
+                {link.name === "Services" && (
                   <div className="pl-4 space-y-4 border-l-2 border-brand-blue/10">
-                    {link.subLinks.map((sub) => (
-                      <Link
-                        key={sub.name}
-                        href={sub.href}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className="text-lg font-medium text-gray-500 hover:text-brand-blue transition-colors block"
-                      >
-                        {sub.name}
-                      </Link>
+                    {serviceNavigationGroups.map((group) => (
+                      <div key={group.name} className="space-y-2">
+                        <Link
+                          href={group.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-lg font-bold text-brand-charcoal hover:text-brand-blue transition-colors block"
+                        >
+                          {group.name}
+                        </Link>
+                        {group.links.map((sub) => (
+                          <Link
+                            key={sub.name}
+                            href={sub.href}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="text-base font-medium text-gray-500 hover:text-brand-blue transition-colors block pl-4"
+                          >
+                            {sub.name}
+                          </Link>
+                        ))}
+                      </div>
                     ))}
                   </div>
                 )}
@@ -174,7 +179,7 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
             ))}
             <Link href="/contact-us" onClick={() => setIsMobileMenuOpen(false)}>
               <button className="w-full py-4 bg-brand-blue text-white font-bold rounded-xl mt-4">
-                Let's Talk
+                Let&apos;s Talk
               </button>
             </Link>
           </motion.div>

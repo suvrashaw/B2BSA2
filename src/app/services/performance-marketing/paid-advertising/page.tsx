@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { PaidAdvertisingContent } from "@/components/services/PaidAdvertisingContent";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "B2B Paid Advertising & PPC Management | B2B Sales Arrow",
-  description: "Expert B2B paid advertising management — Google Ads, programmatic, display, and retargeting for enterprise pipeline generation.",
-};
+import { DocsPage } from "@/components/content/DocsPage";
+import { getPageByUrl, getPageMetadata } from "@/content/pages";
+
+const page = getPageByUrl("/services/performance-marketing/paid-advertising");
+
+export const metadata: Metadata = getPageMetadata("/services/performance-marketing/paid-advertising");
 
 export default function Page() {
-  return <PaidAdvertisingContent />;
+  return <DocsPage page={page} />;
 }

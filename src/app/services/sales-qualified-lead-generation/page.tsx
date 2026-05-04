@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { SalesQualifiedLeadGenerationContent } from "@/components/services/SalesQualifiedLeadGenerationContent";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Sales Qualified Lead Generation for Enterprise B2B | B2B Sales Arrow",
-  description: "We generate and deliver sales-qualified leads for enterprise B2B companies — not just names, but verified decision-makers ready to engage your sales team.",
-};
+import { DocsPage } from "@/components/content/DocsPage";
+import { getPageByUrl, getPageMetadata } from "@/content/pages";
+
+const page = getPageByUrl("/services/sales-qualified-lead-generation");
+
+export const metadata: Metadata = getPageMetadata("/services/sales-qualified-lead-generation");
 
 export default function Page() {
-  return <SalesQualifiedLeadGenerationContent />;
+  return <DocsPage page={page} />;
 }

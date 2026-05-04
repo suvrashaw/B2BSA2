@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { TradeShowBoothDesignContent } from "@/components/services/TradeShowBoothDesignContent";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Custom Trade Show Booth Design | B2B Sales Arrow",
-  description: "Trade show booth design, custom trade show booths, and exhibition booth design for enterprise brands that demand immersive spaces and qualified pipeline.",
-};
+import { DocsPage } from "@/components/content/DocsPage";
+import { getPageByUrl, getPageMetadata } from "@/content/pages";
+
+const page = getPageByUrl("/services/global-event-solutions/trade-show-booth-design");
+
+export const metadata: Metadata = getPageMetadata("/services/global-event-solutions/trade-show-booth-design");
 
 export default function Page() {
-  return <TradeShowBoothDesignContent />;
+  return <DocsPage page={page} />;
 }

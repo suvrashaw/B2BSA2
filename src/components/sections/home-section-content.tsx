@@ -414,7 +414,7 @@ export const HOME_WHO_WE_ARE_CONTENT: WhoWeAreContent = {
   heading: (
     <>
       Engineering Growth for <br />
-      <span className="text-brand-blue dark:text-brand-cyan">
+      <span className="text-brand-blue">
         Global Innovators
       </span>
     </>
@@ -533,7 +533,7 @@ export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
   heading: (
     <>
       Impact That Drives <br />
-      <span className="text-brand-blue dark:text-brand-cyan">
+      <span className="text-brand-blue">
         Market Valuation
       </span>
     </>
@@ -573,7 +573,7 @@ export const HOME_UPCOMING_EVENTS_CONTENT: UpcomingEventsContent = {
   heading: (
     <>
       Meet Us Where <br />
-      <span className="text-brand-blue dark:text-brand-cyan">
+      <span className="text-brand-blue">
         Innovation Happens
       </span>
     </>
@@ -658,7 +658,7 @@ export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
   heading: (
     <>
       Trusted by Industry <br />
-      <span className="text-[#1E6091] dark:text-[#4BC0D9]">Visionaries</span>
+      <span className="text-[#1E6091]">Visionaries</span>
     </>
   ),
   autoplayInterval: 3000,

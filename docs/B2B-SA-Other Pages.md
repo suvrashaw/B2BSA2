@@ -29,7 +29,7 @@ You should not need five vendors to make one event work. Our corporate event sol
 
 ## **Why It Matters**
 
-### **The $B Reason B2B Enterprises Prioritize Live Events**
+### **The Billion Dollar Reason B2B Enterprises Prioritize Live Events**
 
 Enterprise buyers do not make complex decisions from a single ad click. They need trust, context, proof, and conversation. Live events compress months of relationship-building into a few focused days, especially when your presence is designed as a conversion environment rather than a static display. Our B2B event solutions are built around one question from the beginning: what will this event return? We don’t just build booths; we build conversion environments engineered for ROI.
 
@@ -87,7 +87,7 @@ Your next event can be more than a presence. It can become a conversion environm
 
 # **Page 2: Trade Show Booth Design**
 
-| URL | /services/global-event-solutions/trade-show-boothdesign |
+| URL | /services/global-event-solutions/trade-show-booth-design |
 | :---- | :---- |
 | **Focus Keyphrase** | trade show booth design |
 | **Secondary Keywords** | custom trade show booth, exhibition booth design, trade show displays, 10x10 trade show booth, 20x20 trade show booth |
@@ -537,20 +537,6 @@ If you want senior buyers to give you their time, the experience must earn it. W
 
 **CTA:** Plan Your Custom Event | View Our Production Portfolio
 
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
 # **Page 6: Event Booth Rental**
 
 | URL | /services/global-event-solutions/event-booth-rental |
@@ -668,7 +654,7 @@ Event booths for major shows book early. If your team needs a fast but credible 
 
 # **Page 7: Trade Show Booth Builder**
 
-| URL | /services/global-event-solutions/trade-show-boothbuilder |
+| URL | /services/global-event-solutions/trade-show-booth-builder |
 | :---- | :---- |
 | **Focus Keyphrase** | trade show booth builder |
 | **Secondary Keywords** | exhibition stand builder, booth builders, custom exhibit booths, turnkey exhibition booth |
@@ -803,15 +789,9 @@ Your booth should be engineered, not improvised. Build with a partner that under
 
 **CTA:** Request a Build Quote
 
-# 
-
-# 
-
-# 
-
 # **Page 8: Modular & Portable Booths**
 
-| URL | /services/booth-design-production/modular-portablebooths |
+| URL | /services/booth-design-production/modular-portable-booths |
 | :---- | :---- |
 | **Focus Keyphrase** | modular booth |
 | **Secondary Keywords** | portable trade show booth displays, display booths for trade shows, trade show booths 10x10, ecofriendly booth |
@@ -907,10 +887,6 @@ Modular displays work well for employee events, leadership meetings, training pr
 A reusable modular booth gives your team speed without sacrificing credibility.
 
 **CTA:** Get a Modular Booth Quote | Request a Demo
-
-# 
-
-# 
 
 # **Page 9: Media Production**
 
@@ -1013,8 +989,6 @@ Content should not disappear after one campaign. We build assets your sales, mar
 
 **CTA:** Start Your Media Project
 
-# 
-
 # **Page 10: Event Video Production**
 
 | URL | /services/media-production/event-video-production |
@@ -1108,7 +1082,7 @@ Do not let the value of the event end when the lights go down. Capture it proper
 
 **Page 11: Corporate Video Production**
 
-| URL | /services/media-production/corporate-videoproduction |
+| URL | /services/media-production/corporate-video-production |
 | :---- | :---- |
 | **Focus Keyphrase** | corporate video production solutions |
 | **Secondary Keywords** | video production company, video production agency, commercial video production company, brand film |
@@ -1260,9 +1234,7 @@ You already captured the raw material. We shape it into content people will actu
 
 **CTA:** Upload Your Project Brief | See Editing Samples
 
-# 
-
-# **Page 13: Live Streaming Services**
+**Page 13: Live Streaming Services**
 
 | URL | /services/media-production/live-streaming-services |
 | :---- | :---- |
@@ -1353,8 +1325,6 @@ A live stream should feel smooth, clear, and professionally controlled. We manag
 
 **CTA:** Plan Your Live Stream
 
-# 
-
 # **Page 14: Performance Marketing**
 
 | URL | /services/performance-marketing/ |
@@ -1440,8 +1410,6 @@ The right performance marketing company should show where spend is working, wher
 If your campaigns are active but unclear, an audit reveals where spend is leaking, where messaging is weak, and where pipeline can improve.
 
 **CTA:** Request a Free Performance Marketing Audit
-
-# 
 
 # **Page 15: SEO Services**
 
@@ -1552,48 +1520,6 @@ Search visibility should support revenue, not just traffic charts.
 
 **CTA:** Get a Free SEO Audit | Download Our B2B SEO Playbook
 
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
 # **Page 16: Paid Advertising**
 
 | URL | /services/performance-marketing/paid-advertising |
@@ -1680,8 +1606,6 @@ CPL reduction, conversion rate improvement, pipeline generated, retargeting perf
 A paid media audit reveals wasted spend, low-intent keywords, poor conversion paths, weak creative, and attribution blind spots. Fixing those issues often creates faster gains than increasing the budget.
 
 **CTA:** Get a Paid Media Audit | Request a Campaign Proposal
-
-# 
 
 # **Page 17: LinkedIn Ads for B2B**
 
@@ -1989,8 +1913,6 @@ The companies that understand their market clearly move faster, spend smarter, a
 
 **CTA:** Start a Research Project | Download a Sample Report
 
-# 
-
 # **Page 20: Data Augmentation**
 
 | URL | /services/market-research/data-augmentation |
@@ -2067,8 +1989,6 @@ Automated tools miss context, recycle stale data, and misread job changes. Human
 ### **Your CRM Is Leaking Revenue. Let’s Fix That.**
 
 Better data improves segmentation, personalization, deliverability, lead scoring, and sales productivity. Start with a sample list and see the quality difference. **CTA:** Request a Data Audit | Upload a Sample List
-
-# 
 
 # **Page 21: Data Validation**
 
@@ -2157,11 +2077,9 @@ Before launching another campaign, make sure the list is worth using. Clean data
 
 **CTA:** Validate My List | Get a Free Data Quality Audit
 
-# 
-
 # **Page 22: Human-Powered Market Intelligence**
 
-| URL | /services/market-research/human-powered-marketintelligence |
+| URL | /services/market-research/human-powered-market-intelligence |
 | :---- | :---- |
 | **Focus Keyphrase** | human-powered market intelligence |
 | **Secondary Keywords** | B2B market intelligence services, competitive intelligence B2B, brand research, AI market research |
@@ -2250,8 +2168,6 @@ When leadership teams have sharper insight, decisions become faster and more gro
 
 **CTA:** Commission a Custom Research Report | Schedule an Intelligence Briefing
 
-# 
-
 # **Page 23: Blog**
 
 | URL | /blog/ |
@@ -2305,14 +2221,6 @@ Event Strategy | Trade Show Booth Design | Performance Marketing | Video Product
 Practical, executive-friendly insights on visibility, events, pipeline, and market intelligence, delivered when it matters. 
 
 **CTA:** Subscribe
-
-# 
-
-# 
-
-# 
-
-# 
 
 # **Page 24: Case Studies**
 
@@ -2435,12 +2343,6 @@ New York, London, Dubai, Singapore, Sydney, and Toronto, supported by a global d
 If you need event presence, content, pipeline, or market intelligence that connects to business outcomes, start with a strategy conversation. 
 
 **CTA:** Request a Strategy Consultation
-
-# 
-
-# 
-
-# 
 
 # **Page 26: Contact Us**
 

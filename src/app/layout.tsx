@@ -33,7 +33,7 @@ export default function RootLayout({
       className={`${playfair.variable} ${montserrat.variable} h-full antialiased`}
     >
       <body suppressHydrationWarning className="min-h-full flex flex-col">
-        <ThemeProvider>
+        <ThemeProvider attribute="class" forcedTheme="light">
           {children}
         </ThemeProvider>
       </body>

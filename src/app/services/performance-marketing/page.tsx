@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { PerformanceMarketingContent } from "@/components/services/PerformanceMarketingContent";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "B2B Performance Marketing & Paid Media | B2B Sales Arrow",
-  description: "Scale your B2B enterprise with data-driven performance marketing. We manage LinkedIn ads, Google Ads, and account-based marketing frameworks for high-ROI growth.",
-};
+import { DocsPage } from "@/components/content/DocsPage";
+import { getPageByUrl, getPageMetadata } from "@/content/pages";
+
+const page = getPageByUrl("/services/performance-marketing");
+
+export const metadata: Metadata = getPageMetadata("/services/performance-marketing");
 
 export default function Page() {
-  return <PerformanceMarketingContent />;
+  return <DocsPage page={page} />;
 }

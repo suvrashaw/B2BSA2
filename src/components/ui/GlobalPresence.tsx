@@ -24,9 +24,9 @@ export function GlobalPresence() {
   }, []);
 
   return (
-    <div className="w-full py-12 border-t border-white/5 relative z-10 overflow-hidden">
+    <div className="w-full py-12 border-t border-gray-200 relative z-10 overflow-hidden">
       <div className="container mx-auto px-8">
-        <h3 className="text-brand-cyan/60 uppercase tracking-[0.3em] text-xs font-bold mb-8 text-center">
+        <h3 className="text-brand-blue/60 uppercase tracking-[0.3em] text-xs font-bold mb-8 text-center">
           Global Enterprise Reach
         </h3>
         
@@ -48,14 +48,14 @@ export function GlobalPresence() {
                   ease: [0.16, 1, 0.3, 1], // premium smooth easing
                 }}
               >
-                <span className="font-heading text-2xl md:text-3xl text-white tracking-wide">
+                <span className="font-heading text-2xl md:text-3xl text-brand-charcoal tracking-wide">
                   {country}
                 </span>
                 
                 {isActive && (
                   <motion.div
                     layoutId="activeCountryGlow"
-                    className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1/2 h-[2px] bg-brand-cyan blur-[2px]"
+                    className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1/2 h-[2px] bg-brand-blue blur-[2px]"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 0.8 }}
                     exit={{ opacity: 0 }}

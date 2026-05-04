@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { MarketingResearchContent } from "@/components/services/MarketingResearchContent";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "B2B Marketing & High-Precision Market Research | B2B Sales Arrow",
-  description: "B2B marketing and B2B market research services for enterprise brands - performance marketing, ABM, SEO, and human-verified contact discovery.",
-};
+import { DocsPage } from "@/components/content/DocsPage";
+import { getPageByUrl, getPageMetadata } from "@/content/pages";
+
+const page = getPageByUrl("/services/market-research");
+
+export const metadata: Metadata = getPageMetadata("/services/market-research");
 
 export default function Page() {
-  return <MarketingResearchContent />;
+  return <DocsPage page={page} />;
 }

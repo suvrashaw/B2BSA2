@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { HumanPoweredIntelligenceContent } from "@/components/services/HumanPoweredIntelligenceContent";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Human-Powered B2B Market Intelligence | B2B Sales Arrow",
-  description: "Gain an unfair competitive advantage with human-verified market intelligence. We provide competitor analysis, TAM mapping, and buyer behavior insights.",
-};
+import { DocsPage } from "@/components/content/DocsPage";
+import { getPageByUrl, getPageMetadata } from "@/content/pages";
+
+const page = getPageByUrl("/services/market-research/human-powered-market-intelligence");
+
+export const metadata: Metadata = getPageMetadata("/services/market-research/human-powered-market-intelligence");
 
 export default function Page() {
-  return <HumanPoweredIntelligenceContent />;
+  return <DocsPage page={page} />;
 }

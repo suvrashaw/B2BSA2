@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { GlobalEventSolutionsContent } from "@/components/services/GlobalEventSolutionsContent";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Global Event Solutions for Enterprise Brands | B2B Sales Arrow",
-  description: "End-to-end global event solutions and B2B event solutions for enterprise brands - booth design, lead capture, and on-ground execution across 40+ countries.",
-};
+import { DocsPage } from "@/components/content/DocsPage";
+import { getPageByUrl, getPageMetadata } from "@/content/pages";
+
+const page = getPageByUrl("/services/global-event-solutions");
+
+export const metadata: Metadata = getPageMetadata("/services/global-event-solutions");
 
 export default function Page() {
-  return <GlobalEventSolutionsContent />;
+  return <DocsPage page={page} />;
 }

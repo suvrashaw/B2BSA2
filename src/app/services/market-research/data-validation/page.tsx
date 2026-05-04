@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { DataValidationContent } from "@/components/services/DataValidationContent";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "B2B Data Validation & Verification Services | B2B Sales Arrow",
-  description: "Clean your B2B database with professional validation services. We verify emails, phone numbers, and contact roles to ensure high deliverability.",
-};
+import { DocsPage } from "@/components/content/DocsPage";
+import { getPageByUrl, getPageMetadata } from "@/content/pages";
+
+const page = getPageByUrl("/services/market-research/data-validation");
+
+export const metadata: Metadata = getPageMetadata("/services/market-research/data-validation");
 
 export default function Page() {
-  return <DataValidationContent />;
+  return <DocsPage page={page} />;
 }

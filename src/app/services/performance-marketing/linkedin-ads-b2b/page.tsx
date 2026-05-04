@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { LinkedInAdsContent } from "@/components/services/LinkedInAdsContent";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "LinkedIn Ads for B2B Lead Generation | B2B Sales Arrow",
-  description: "Expert LinkedIn Ads management for enterprise B2B brands. Sponsored content, Lead Gen Forms, InMail, and ABM campaigns that generate qualified pipeline.",
-};
+import { DocsPage } from "@/components/content/DocsPage";
+import { getPageByUrl, getPageMetadata } from "@/content/pages";
+
+const page = getPageByUrl("/services/performance-marketing/linkedin-ads-b2b");
+
+export const metadata: Metadata = getPageMetadata("/services/performance-marketing/linkedin-ads-b2b");
 
 export default function Page() {
-  return <LinkedInAdsContent />;
+  return <DocsPage page={page} />;
 }

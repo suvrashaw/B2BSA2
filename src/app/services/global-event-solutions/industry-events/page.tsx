@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { IndustryEventsContent } from "@/components/services/IndustryEventsContent";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Industry Events Strategy & Execution | B2B Sales Arrow",
-  description: "Plan, design, and execute high-ROI participation at B2B industry events - from corporate event management to on-ground execution across global markets.",
-};
+import { DocsPage } from "@/components/content/DocsPage";
+import { getPageByUrl, getPageMetadata } from "@/content/pages";
+
+const page = getPageByUrl("/services/global-event-solutions/industry-events");
+
+export const metadata: Metadata = getPageMetadata("/services/global-event-solutions/industry-events");
 
 export default function Page() {
-  return <IndustryEventsContent />;
+  return <DocsPage page={page} />;
 }

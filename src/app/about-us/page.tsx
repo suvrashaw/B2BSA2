@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { AboutPageContent } from "@/components/about/AboutPageContent";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "About B2B Sales Arrow | Enterprise Growth Partners",
-  description: "B2B Sales Arrow is a global enterprise growth agency delivering event solutions, video production, digital marketing, and market research across 40+ countries.",
-};
+import { DocsPage } from "@/components/content/DocsPage";
+import { getPageByUrl, getPageMetadata } from "@/content/pages";
 
-export default function AboutPage() {
-  return <AboutPageContent />;
+const page = getPageByUrl("/about-us");
+
+export const metadata: Metadata = getPageMetadata("/about-us");
+
+export default function Page() {
+  return <DocsPage page={page} />;
 }

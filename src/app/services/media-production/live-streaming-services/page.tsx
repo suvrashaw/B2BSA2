@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { LiveStreamingServicesContent } from "@/components/services/LiveStreamingServicesContent";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "B2B Live Streaming Services for Events | B2B Sales Arrow",
-  description: "Live streaming services for B2B events, corporate broadcasts, and hybrid conferences. Reach a global audience with broadcast-grade stability.",
-};
+import { DocsPage } from "@/components/content/DocsPage";
+import { getPageByUrl, getPageMetadata } from "@/content/pages";
+
+const page = getPageByUrl("/services/media-production/live-streaming-services");
+
+export const metadata: Metadata = getPageMetadata("/services/media-production/live-streaming-services");
 
 export default function Page() {
-  return <LiveStreamingServicesContent />;
+  return <DocsPage page={page} />;
 }

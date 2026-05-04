@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { EventLeadGenerationContent } from "@/components/services/EventLeadGenerationContent";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Trade Show Lead Generation & Event Lead Capture | B2B Sales Arrow",
-  description: "Trade show lead generation, exhibitor lead capture, and post-event lead conversion services - qualified pipeline from show floor to CRM.",
-};
+import { DocsPage } from "@/components/content/DocsPage";
+import { getPageByUrl, getPageMetadata } from "@/content/pages";
+
+const page = getPageByUrl("/services/global-event-solutions/event-lead-generation");
+
+export const metadata: Metadata = getPageMetadata("/services/global-event-solutions/event-lead-generation");
 
 export default function Page() {
-  return <EventLeadGenerationContent />;
+  return <DocsPage page={page} />;
 }
