@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
+
 import { ServiceDetailPage } from "@/components/content/ServiceDetailPage";
+import { getPageMetadata } from "@/content/pages";
 import {
   MPB_HERO, MPB_WHY, MPB_DELIVERABLES, MPB_STATS,
   MPB_CASE_STUDIES, MPB_TESTIMONIALS, MPB_FAQ, MPB_CONTACT,
 } from "@/content/page-sections/services/detail/modular-portable-booths";
 
-export const metadata: Metadata = {
-  title: "Modular & Portable Booths | B2B Sales Arrow",
-  description: "Premium modular and portable trade show booths for enterprise brands. Lightweight, reconfigurable, and brand-consistent across every event.",
-};
+export const metadata: Metadata = getPageMetadata("/services/booth-design-production/modular-portable-booths");
 
 export default function Page() {
   return (

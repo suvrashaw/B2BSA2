@@ -19,19 +19,25 @@ const LOCATIONS = [
   { lat: 43.6532, lng: -79.3832, name: "Toronto", size: 0.05, color: "#1E6091" },
 ];
 
+type LocationItem = {
+  lat: number;
+  lng: number;
+  name: string;
+  size: number;
+  color: string;
+};
+
 export const GlobalPresence = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
   const [globeReady, setGlobeReady] = useState(false);
-  const globeRef = useRef<unknown>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const globeRef = useRef<any>(null);
 
   useEffect(() => {
     if (globeRef.current) {
-      // @ts-expect-error - globeRef.current is unknown
       globeRef.current.controls().autoRotate = true;
-      // @ts-expect-error - globeRef.current is unknown
       globeRef.current.controls().autoRotateSpeed = 1.5;
-      // @ts-expect-error - globeRef.current is unknown
       globeRef.current.controls().enableZoom = false;
     }
   }, [globeReady]);
