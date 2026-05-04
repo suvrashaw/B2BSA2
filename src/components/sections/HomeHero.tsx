@@ -15,10 +15,11 @@ export interface HeroProps {
   title?: HomeHeroContent["title"];
   description?: HomeHeroContent["description"];
   image?: HomeHeroContent["image"];
-  primaryCtaLabel?: HomeHeroContent["primaryCtaLabel"];
-  secondaryCtaLabel?: HomeHeroContent["secondaryCtaLabel"];
-  stat?: HomeHeroContent["stat"];
+  primaryCtaLabel?: HomeHeroContent["primaryCtaLabel"] | null;
+  secondaryCtaLabel?: HomeHeroContent["secondaryCtaLabel"] | null;
+  stat?: HomeHeroContent["stat"] | null;
   timing?: HomeHeroContent["timing"];
+  showPreloader?: boolean;
 }
 
 export function Hero({
@@ -31,26 +32,30 @@ export function Hero({
   secondaryCtaLabel = content.secondaryCtaLabel,
   stat = content.stat,
   timing = content.timing,
+  showPreloader = true,
 }: HeroProps = {}) {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 200]);
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
-  const StatIcon = stat.icon;
+  const StatIcon = stat?.icon;
 
   // Animation Phases: "dropping" (bouncing ball) -> "expanding" (morph to image) -> "done" (text reveals)
-  const [phase, setPhase] = useState<"dropping" | "expanding" | "done">("dropping");
+  const [phase, setPhase] = useState<"dropping" | "expanding" | "done">(
+    showPreloader ? "dropping" : "done"
+  );
 
   useEffect(() => {
+    if (!showPreloader) return;
     const timer1 = setTimeout(() => setPhase("expanding"), timing.expandDelay); // Wait for bounces
     const timer2 = setTimeout(() => setPhase("done"), timing.doneDelay); // Wait for morph
     return () => { clearTimeout(timer1); clearTimeout(timer2); };
-  }, [timing.doneDelay, timing.expandDelay]);
+  }, [showPreloader, timing.doneDelay, timing.expandDelay]);
 
   return (
     <>
       {/* GLOBAL PRELOADER OVERLAY */}
       <AnimatePresence>
-        {phase === "dropping" && (
+        {showPreloader && phase === "dropping" && (
           <motion.div
             className="fixed inset-0 z-[100] bg-brand-charcoal flex items-center justify-center pointer-events-none"
             exit={{ opacity: 0 }}
@@ -113,15 +118,21 @@ export function Hero({
               {description}
             </p>
 
-            <div className="flex flex-wrap items-center gap-4">
-              <button className="px-8 py-4 rounded bg-brand-blue text-white font-medium hover:bg-brand-blue/90 hover:shadow-[0_0_20px_rgba(30,96,145,0.4)] transition-all duration-300 flex items-center gap-2 group">
-                {primaryCtaLabel}
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="px-8 py-4 rounded border border-gray-300 dark:border-gray-700 text-brand-charcoal dark:text-white font-medium hover:border-brand-blue hover:text-brand-blue dark:hover:text-brand-cyan transition-colors duration-300">
-                {secondaryCtaLabel}
-              </button>
-            </div>
+            {(primaryCtaLabel || secondaryCtaLabel) && (
+              <div className="flex flex-wrap items-center gap-4">
+                {primaryCtaLabel && (
+                  <button className="px-8 py-4 rounded bg-brand-blue text-white font-medium hover:bg-brand-blue/90 hover:shadow-[0_0_20px_rgba(30,96,145,0.4)] transition-all duration-300 flex items-center gap-2 group">
+                    {primaryCtaLabel}
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                )}
+                {secondaryCtaLabel && (
+                  <button className="px-8 py-4 rounded border border-gray-300 dark:border-gray-700 text-brand-charcoal dark:text-white font-medium hover:border-brand-blue hover:text-brand-blue dark:hover:text-brand-cyan transition-colors duration-300">
+                    {secondaryCtaLabel}
+                  </button>
+                )}
+              </div>
+            )}
           </motion.div>
 
           <div className="relative h-[600px] w-full hidden lg:block">
@@ -142,22 +153,24 @@ export function Hero({
                 <div className="absolute inset-0 bg-brand-blue/10 mix-blend-overlay" />
                 
                 {/* Floating stat card - Reveals after morph */}
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: phase === "done" ? 1 : 0, x: phase === "done" ? 0 : 20 }}
-                  transition={{ delay: 0.4, duration: 0.6 }}
-                  className="absolute bottom-8 left-[-40px] bg-white dark:bg-[#212529] p-6 rounded-xl shadow-xl border border-gray-100 dark:border-gray-800 backdrop-blur-md"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-brand-cyan/20 flex items-center justify-center">
-                      <StatIcon className="w-6 h-6 text-brand-blue dark:text-brand-cyan" />
+                {stat && StatIcon && (
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: phase === "done" ? 1 : 0, x: phase === "done" ? 0 : 20 }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                    className="absolute bottom-8 left-[-40px] bg-white dark:bg-[#212529] p-6 rounded-xl shadow-xl border border-gray-100 dark:border-gray-800 backdrop-blur-md"
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-full bg-brand-cyan/20 flex items-center justify-center">
+                        <StatIcon className="w-6 h-6 text-brand-blue dark:text-brand-cyan" />
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold font-heading text-brand-charcoal dark:text-white">{stat.value}</div>
+                        <div className="text-sm text-gray-500 dark:text-gray-400">{stat.label}</div>
+                      </div>
                     </div>
-                    <div>
-                      <div className="text-2xl font-bold font-heading text-brand-charcoal dark:text-white">{stat.value}</div>
-                      <div className="text-sm text-gray-500 dark:text-gray-400">{stat.label}</div>
-                    </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                )}
               </motion.div>
             )}
           </div>

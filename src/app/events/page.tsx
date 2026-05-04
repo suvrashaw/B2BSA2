@@ -1,24 +1,39 @@
+import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
+import { Hero } from "@/components/sections/HomeHero";
+import { UpcomingEvents } from "@/components/sections/UpcomingEvents";
+import { WhoWeAre } from "@/components/sections/WhoWeAre";
+import { CaseStudies } from "@/components/sections/CaseStudies";
+import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { ContactUs } from "@/components/sections/ContactUs";
 import { Footer } from "@/components/layout/Footer";
-import { Hero } from "@/components/sections/Hero";
+import {
+  EVENTS_HERO,
+  EVENTS_UPCOMING,
+  EVENTS_STATS,
+  EVENTS_CASE_STUDIES,
+  EVENTS_WHY,
+  EVENTS_TESTIMONIALS,
+  EVENTS_CONTACT,
+} from "@/content/page-sections/events";
+
+export const metadata: Metadata = {
+  title: "B2B Industry Events | B2B Sales Arrow",
+  description: "Upcoming B2B trade shows and industry events. Let B2B Sales Arrow design your booth presence and maximise your pipeline at every event.",
+};
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-brand-white ">
+    <main className="min-h-screen bg-brand-gray">
       <Header />
-      
-      <Hero 
-        title="Upcoming B2B Events"
-        subtitle="We deliver excellence through strategy, design, and technology."
-      />
-
-      <section className="py-24 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Content coming soon for Upcoming B2B Events</h2>
-          <p className="text-gray-500">We are currently building this section to match our high standards.</p>
-        </div>
-      </section>
-
+      <Hero {...EVENTS_HERO} />
+      <UpcomingEvents {...EVENTS_UPCOMING} />
+      <WhoWeAre {...EVENTS_STATS} />
+      <CaseStudies {...EVENTS_CASE_STUDIES} />
+      <WhyChooseUs {...EVENTS_WHY} />
+      <Testimonials {...EVENTS_TESTIMONIALS} />
+      <ContactUs {...EVENTS_CONTACT} />
       <Footer />
     </main>
   );

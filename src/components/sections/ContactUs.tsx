@@ -12,7 +12,7 @@ export interface ContactUsProps {
   eyebrow?: ContactContent["eyebrow"];
   heading?: ContactContent["heading"];
   description?: ContactContent["description"];
-  illustration?: ContactContent["illustration"];
+  illustration?: ContactContent["illustration"] | null;
   form?: ContactContent["form"];
 }
 
@@ -52,18 +52,19 @@ export function ContactUs({
               {description}
             </p>
 
-            <motion.div
-              animate={{ y: [0, -15, 0] }}
-              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="w-full max-w-md mt-4"
-            >
-              {/* Assuming the user placed this file in the public folder */}
-              <img 
-                src={illustration.src}
-                alt={illustration.alt}
-                className="w-full h-auto drop-shadow-xl"
-              />
-            </motion.div>
+            {illustration && (
+              <motion.div
+                animate={{ y: [0, -15, 0] }}
+                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                className="w-full max-w-md mt-4"
+              >
+                <img
+                  src={illustration.src}
+                  alt={illustration.alt}
+                  className="w-full h-auto drop-shadow-xl"
+                />
+              </motion.div>
+            )}
           </div>
 
           {/* Right Side: Contact Form */}
