@@ -15,6 +15,7 @@ import { StatsBar } from "@/components/sections/StatsBar";
 import { TextSection } from "@/components/sections/TextSection";
 import { USPSection } from "@/components/sections/USPSection";
 import { CTABanner } from "@/components/sections/CTABanner";
+import { ABOUT_TEAM, ABOUT_PRESENCE } from "@/content/page-sections/about-us";
 
 export function AboutPageContent() {
   useEffect(() => {
@@ -214,10 +215,10 @@ export function AboutPageContent() {
         />
 
         {/* 5. LEADERSHIP TEAM */}
-        <TeamGrid />
+        <TeamGrid data={ABOUT_TEAM} />
 
         {/* 10. GLOBAL PRESENCE */}
-        <GlobalPresence />
+        <GlobalPresence data={ABOUT_PRESENCE} />
 
         {/* 11. CLIENTS & PARTNERS */}
         <ClientsMarquee />
