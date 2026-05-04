@@ -1,25 +1,11 @@
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { Hero } from "@/components/sections/Hero";
+import { Metadata } from "next";
+import { DataAugmentationContent } from "@/components/services/DataAugmentationContent";
+
+export const metadata: Metadata = {
+  title: "B2B Data Augmentation Services | B2B Sales Arrow",
+  description: "Transform incomplete CRM data into sales intelligence. We enrich contact and account records with human-verified data for better outreach.",
+};
 
 export default function Page() {
-  return (
-    <main className="min-h-screen bg-brand-white ">
-      <Header />
-      
-      <Hero 
-        title="Data Augmentation Services"
-        subtitle="We deliver excellence through strategy, design, and technology."
-      />
-
-      <section className="py-24 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Content coming soon for Data Augmentation Services</h2>
-          <p className="text-gray-500">We are currently building this section to match our high standards.</p>
-        </div>
-      </section>
-
-      <Footer />
-    </main>
-  );
+  return <DataAugmentationContent />;
 }

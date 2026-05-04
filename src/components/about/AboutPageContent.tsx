@@ -10,6 +10,7 @@ import { GlobalPresence } from "@/components/about/global-presence";
 import { TeamGrid } from "@/components/about/team-grid";
 import { ClientsMarquee } from "@/components/about/clients-marquee";
 import { CinematicFooter } from "@/components/layout/CinematicFooter";
+import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { StatsBar } from "@/components/sections/StatsBar";
 import { TextSection } from "@/components/sections/TextSection";
 import { USPSection } from "@/components/sections/USPSection";
@@ -83,6 +84,38 @@ export function AboutPageContent() {
           content="B2B Sales Arrow was created to solve a clear gap: enterprise brands were investing heavily in events and campaigns, but the work was fragmented, hard to measure, and disconnected from sales outcomes. We saw Fortune 500 companies struggling with generic booths that failed to capture leads and marketing programs that lacked accountability.\n\nWe built a model where event solutions, corporate video production, performance marketing, and B2B market research capabilities work together. By combining these four critical pillars under one roof, we eliminate the 'vendor fragmentation' that drains enterprise budgets. Today, we are recognized as a globally trusted Marketing Technology partner, dedicated to turning every brand interaction into a measurable revenue asset."
           className="bg-brand-gray/10"
         />
+
+        {/* 3.5 FOUNDER INSPIRATION */}
+        <section className="py-24 bg-brand-white relative">
+           <div className="container mx-auto px-8 max-w-5xl">
+              <div className="grid lg:grid-cols-2 gap-16 items-center">
+                 <motion.div 
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl"
+                  >
+                    <img 
+                      src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&auto=format&fit=crop" 
+                      alt="Philanthropy Inspiration" 
+                      className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                    />
+                 </motion.div>
+                 <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                 >
+                    <div className="text-brand-blue text-sm font-bold tracking-widest uppercase mb-6">Our Inspiration</div>
+                    <h3 className="text-2xl md:text-4xl font-bold font-heading mb-6 italic text-brand-charcoal">"Kindled by Compassion"</h3>
+                    <p className="text-gray-600 leading-relaxed text-lg mb-8">
+                       In 2004, inspired by philanthropic efforts in arid Rajasthan, our founder embarked on a journey rooted in the belief that business should be a force for positive change. Witnessing the impact of large-scale social contribution shaped our dedication to excellence and high-integrity partnerships.
+                    </p>
+                    <div className="h-px w-24 bg-brand-blue" />
+                 </motion.div>
+              </div>
+           </div>
+        </section>
 
         {/* 6. VALUES */}
         <section className="py-24 bg-brand-white relative transition-colors duration-500">
@@ -166,6 +199,19 @@ export function AboutPageContent() {
             </div>
           </div>
         </section>
+
+        {/* 9. COMPARISON SECTION */}
+        <ComparisonTable 
+          title="How B2B Sales Arrow Compares"
+          rows={[
+            { feature: "Service Model", standard: "Fragmented vendors", b2bsa: "Unified growth architecture" },
+            { feature: "Data Quality", standard: "Automated/Stale lists", b2bsa: "100% Human-verified intel" },
+            { feature: "Video Standards", standard: "Basic event coverage", b2bsa: "Cinematic enterprise-grade" },
+            { feature: "Lead Attribution", standard: "Vanity metrics (clicks)", b2bsa: "Pipeline influenced ($)" },
+            { feature: "Global Execution", standard: "Local/Limited reach", b2bsa: "Seamless across 40+ countries" }
+          ]}
+          className="bg-brand-gray/10"
+        />
 
         {/* 5. LEADERSHIP TEAM */}
         <TeamGrid />

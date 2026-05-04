@@ -39,19 +39,19 @@ export function PerformanceMarketingContent() {
             { 
               title: "SEO Services", 
               description: "Organic visibility engineered for high-intent B2B search behaviors.",
-              href: "/services/marketing-and-market-research/search-engine-optimization",
+              href: "/services/performance-marketing/seo-services",
               icon: "layout"
             },
             { 
               title: "Paid Advertising", 
               description: "Full-funnel PPC and programmatic campaigns optimized for enterprise pipeline.",
-              href: "/services/marketing-and-market-research/paid-advertising",
+              href: "/services/performance-marketing/paid-advertising",
               icon: "zap"
             },
             { 
               title: "LinkedIn Ads for B2B", 
               description: "Hyper-targeted LinkedIn campaigns reaching the world's top decision-makers.",
-              href: "/services/marketing-and-market-research/linkedin-ads-b2b",
+              href: "/services/performance-marketing/linkedin-ads-b2b",
               icon: "users"
             }
           ]}

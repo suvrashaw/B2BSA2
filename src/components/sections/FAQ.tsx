@@ -3,41 +3,32 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { HelpCircle, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  HOME_FAQ_CONTENT,
+  type FAQContent,
+} from "./home-section-content";
 
-const FAQS = [
-  {
-    id: 1,
-    question: "How does your strategic exhibition design differ from standard booth builders?",
-    answer: "We treat exhibition space as an experiential marketing funnel. While standard builders focus on walls and graphics, we architect environments that control traffic flow and create immersive storytelling.",
-  },
-  {
-    id: 2,
-    question: "What is your average timeline for an enterprise market activation?",
-    answer: "For comprehensive multi-channel activations involving physical presence and digital campaigns, our typical sprint is 12-16 weeks including strategic alignment and fabrication.",
-  },
-  {
-    id: 3,
-    question: "Do you offer global deployment capabilities?",
-    answer: "Yes. With a network spanning 40+ countries, we seamlessly execute complex, high-fidelity physical and digital campaigns across EMEA, APAC, and the Americas.",
-  },
-  {
-    id: 4,
-    question: "How do you measure the ROI of physical media events?",
-    answer: "We integrate custom digital touchpoints throughout our environments. By tracking engagements via NFC and CRM-synced apps, we provide a unified dashboard of ROI.",
-  },
-  {
-    id: 5,
-    question: "Can you integrate our existing digital assets into the booth?",
-    answer: "Absolutely. Our technology-led delivery ensures your current software, videos, and AR/VR assets are seamlessly embedded into the architecture of the space.",
-  }
-];
+export interface FAQProps {
+  content?: FAQContent;
+  eyebrow?: FAQContent["eyebrow"];
+  heading?: FAQContent["heading"];
+  description?: FAQContent["description"];
+  scrollAmount?: FAQContent["scrollAmount"];
+  faqs?: FAQContent["faqs"];
+}
 
-export function FAQ() {
+export function FAQ({
+  content = HOME_FAQ_CONTENT,
+  eyebrow = content.eyebrow,
+  heading = content.heading,
+  description = content.description,
+  scrollAmount = content.scrollAmount,
+  faqs = content.faqs,
+}: FAQProps = {}) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
-      const scrollAmount = 340; // Approx card width + gap
       scrollRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth"
@@ -60,13 +51,13 @@ export function FAQ() {
               viewport={{ once: true }}
               className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-charcoal/5 dark:bg-white/5 border border-brand-charcoal/10 dark:border-white/10 text-brand-charcoal dark:text-gray-300 text-sm font-semibold tracking-wide"
             >
-              INTELLIGENCE & CLARITY
+              {eyebrow}
             </motion.div>
             <h2 className="font-heading text-3xl lg:text-5xl font-bold text-brand-charcoal dark:text-white mb-4">
-              Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-cyan">Questions</span>
+              {heading}
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-xl text-lg">
-              Hover over any card to reveal how we operate at the highest levels of enterprise B2B.
+              {description}
             </p>
           </div>
         </div>
@@ -77,7 +68,7 @@ export function FAQ() {
           className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          {FAQS.map((faq, index) => {
+          {faqs.map((faq, index) => {
             return (
               <motion.div
                 key={faq.id}

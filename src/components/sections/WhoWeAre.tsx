@@ -1,18 +1,13 @@
 "use client";
 
-import { Target, TrendingUp, Users, Globe2 } from "lucide-react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import {
+  HOME_WHO_WE_ARE_CONTENT,
+  type WhoWeAreContent,
+  type WhoWeAreStat,
+} from "./home-section-content";
 
-const STATS = [
-  { value: "250+", label: "Global Events Executed", icon: Globe2, bg: "bg-gradient-to-br from-[#1E6091] to-[#184E77]" },
-  { value: "$1.2B", label: "Pipeline Generated", icon: TrendingUp, bg: "bg-gradient-to-br from-[#2A9D8F] to-[#21867A]" },
-  { value: "40+", label: "Countries Served", icon: Target, bg: "bg-gradient-to-br from-[#023E8A] to-[#03045E]" },
-  { value: "15k+", label: "Enterprise Leads", icon: Users, bg: "bg-gradient-to-br from-[#1b5e82] to-[#164e6b]" },
-  { value: "98%", label: "Client Retention", icon: Target, bg: "bg-gradient-to-br from-[#306f75] to-[#255c61]" },
-  { value: "500+", label: "Booth Designs", icon: Globe2, bg: "bg-gradient-to-br from-[#0077B6] to-[#0096C7]" },
-];
-
-function HoverCard({ stat }: { stat: typeof STATS[0] }) {
+function HoverCard({ stat }: { stat: WhoWeAreStat }) {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -53,9 +48,23 @@ function HoverCard({ stat }: { stat: typeof STATS[0] }) {
   );
 }
 
-export function WhoWeAre() {
-  const col1Stats = [...STATS, ...STATS];
-  const offsetStats = [...STATS.slice(3), ...STATS.slice(0, 3)];
+export interface WhoWeAreProps {
+  content?: WhoWeAreContent;
+  heading?: WhoWeAreContent["heading"];
+  quote?: WhoWeAreContent["quote"];
+  attribution?: WhoWeAreContent["attribution"];
+  stats?: WhoWeAreContent["stats"];
+}
+
+export function WhoWeAre({
+  content = HOME_WHO_WE_ARE_CONTENT,
+  heading = content.heading,
+  quote = content.quote,
+  attribution = content.attribution,
+  stats = content.stats,
+}: WhoWeAreProps = {}) {
+  const col1Stats = [...stats, ...stats];
+  const offsetStats = [...stats.slice(3), ...stats.slice(0, 3)];
   const col2Stats = [...offsetStats, ...offsetStats];
 
   return (
@@ -66,8 +75,7 @@ export function WhoWeAre() {
         <div className="space-y-12 flex flex-col items-start text-left">
           <div className="w-full text-left">
             <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal dark:text-white mb-6">
-              Engineering Growth for <br />
-              <span className="text-brand-blue dark:text-brand-cyan">Global Innovators</span>
+              {heading}
             </h2>
           </div>
 
@@ -75,10 +83,10 @@ export function WhoWeAre() {
             <div className="p-8 lg:p-12 rounded-3xl bg-brand-gray/50 dark:bg-[#1a1c1e] hover:shadow-2xl transition-all duration-500 group border border-transparent hover:border-brand-blue/20 hover:bg-brand-blue/5 cursor-default">
               <div className="transform transition-transform duration-500 group-hover:-translate-y-2">
                 <p className="text-xl md:text-3xl font-serif italic text-black dark:text-white group-hover:text-brand-blue dark:group-hover:text-brand-cyan transition-colors duration-500 leading-relaxed">
-                  "Our mission is to transform how B2B brands connect with their audiences through innovative, immersive experiences that drive measurable business results."
+                  {quote}
                 </p>
                 <div className="mt-8 text-sm font-bold text-gray-500 uppercase tracking-widest group-hover:text-brand-blue/70 transition-colors">
-                  — Leadership Team, B2B Sales Arrow
+                  {attribution}
                 </div>
               </div>
             </div>

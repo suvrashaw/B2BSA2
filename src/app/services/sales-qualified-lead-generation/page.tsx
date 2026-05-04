@@ -1,25 +1,11 @@
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { Hero } from "@/components/sections/Hero";
+import { Metadata } from "next";
+import { SalesQualifiedLeadGenerationContent } from "@/components/services/SalesQualifiedLeadGenerationContent";
+
+export const metadata: Metadata = {
+  title: "Sales Qualified Lead Generation for Enterprise B2B | B2B Sales Arrow",
+  description: "We generate and deliver sales-qualified leads for enterprise B2B companies — not just names, but verified decision-makers ready to engage your sales team.",
+};
 
 export default function Page() {
-  return (
-    <main className="min-h-screen bg-brand-white ">
-      <Header />
-      
-      <Hero 
-        title="Sales Qualified Leads That Convert Into Revenue"
-        subtitle="We deliver excellence through strategy, design, and technology."
-      />
-
-      <section className="py-24 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Content coming soon for Sales Qualified Leads That Convert Into Revenue</h2>
-          <p className="text-gray-500">We are currently building this section to match our high standards.</p>
-        </div>
-      </section>
-
-      <Footer />
-    </main>
-  );
+  return <SalesQualifiedLeadGenerationContent />;
 }

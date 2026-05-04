@@ -1,39 +1,105 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useMotionValueEvent,
+  type MotionValue,
+} from "framer-motion";
+import {
+  HOME_CINEMATIC_SEQUENCE_CONTENT,
+  type CinematicSequenceContent,
+  type CinematicStoryBeat,
+} from "./home-section-content";
 
-const FRAME_COUNT = 60;
+export interface CinematicSequenceProps {
+  content?: CinematicSequenceContent;
+  frameCount?: CinematicSequenceContent["frameCount"];
+  getFrameSrc?: CinematicSequenceContent["getFrameSrc"];
+  loadingText?: CinematicSequenceContent["loadingText"];
+  beats?: CinematicSequenceContent["beats"];
+}
 
-// Helper to pad number (e.g. 1 -> "001")
-const currentFrame = (index: number) => 
-  `/Frames/ezgif-frame-${index.toString().padStart(3, "0")}.jpg`;
+function useCinematicFrameImages(
+  frameCount: number,
+  getFrameSrc: CinematicSequenceContent["getFrameSrc"]
+) {
+  const imagesRef = useRef<HTMLImageElement[]>([]);
+  const loadSignature = `${frameCount}:${getFrameSrc(1)}:${getFrameSrc(frameCount)}`;
+  const [loadedSignature, setLoadedSignature] = useState<string | null>(null);
 
-export function CinematicSequence() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [images, setImages] = useState<HTMLImageElement[]>([]);
-  const [imagesLoaded, setImagesLoaded] = useState(false);
-
-  // We preload all images
   useEffect(() => {
     const loadedImages: HTMLImageElement[] = [];
     let loadedCount = 0;
+    let cancelled = false;
 
-    for (let i = 1; i <= FRAME_COUNT; i++) {
+    for (let i = 1; i <= frameCount; i++) {
       const img = new window.Image();
-      img.src = currentFrame(i);
+      img.src = getFrameSrc(i);
       img.onload = () => {
+        if (cancelled) return;
+
         loadedCount++;
-        if (loadedCount === FRAME_COUNT) {
-          setImagesLoaded(true);
+        if (loadedCount === frameCount) {
+          setLoadedSignature(loadSignature);
         }
       };
       // Important to push first to maintain exact order
       loadedImages.push(img);
     }
-    setImages(loadedImages);
-  }, []);
+
+    imagesRef.current = loadedImages;
+
+    return () => {
+      cancelled = true;
+    };
+  }, [frameCount, getFrameSrc, loadSignature]);
+
+  return { imagesRef, imagesLoaded: loadedSignature === loadSignature };
+}
+
+function CinematicBeatOverlay({
+  beat,
+  progress,
+}: {
+  beat: CinematicStoryBeat;
+  progress: MotionValue<number>;
+}) {
+  const opacity = useTransform(progress, beat.opacityInput, beat.opacityOutput);
+  const y = useTransform(progress, beat.yInput, beat.yOutput);
+  const pointerEvents = useTransform(opacity, (v) => (v > 0 ? "auto" : "none"));
+
+  return (
+    <motion.div
+      style={{ opacity, y, pointerEvents }}
+      className={beat.className}
+    >
+      {beat.eyebrow && (
+        <span className={beat.eyebrow.className}>{beat.eyebrow.text}</span>
+      )}
+      <h2 className={beat.titleClassName}>{beat.title}</h2>
+      {beat.description && (
+        <p className={beat.description.className}>{beat.description.text}</p>
+      )}
+      {beat.cta && (
+        <button className={beat.cta.className}>{beat.cta.label}</button>
+      )}
+    </motion.div>
+  );
+}
+
+export function CinematicSequence({
+  content = HOME_CINEMATIC_SEQUENCE_CONTENT,
+  frameCount = content.frameCount,
+  getFrameSrc = content.getFrameSrc,
+  loadingText = content.loadingText,
+  beats = content.beats,
+}: CinematicSequenceProps = {}) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const { imagesRef, imagesLoaded } = useCinematicFrameImages(frameCount, getFrameSrc);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -46,13 +112,13 @@ export function CinematicSequence() {
     
     // Map latest (0-1) to frame index (0-59)
     const frameIndex = Math.min(
-      FRAME_COUNT - 1,
-      Math.floor(latest * FRAME_COUNT)
+      frameCount - 1,
+      Math.floor(latest * frameCount)
     );
 
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    const img = images[frameIndex];
+    const img = imagesRef.current[frameIndex];
     
     if (ctx && img) {
       drawCover(ctx, img, canvas.width, canvas.height);
@@ -70,11 +136,11 @@ export function CinematicSequence() {
       canvas.height = window.innerHeight;
       // Re-draw current frame based on scroll on resize
       const frameIndex = Math.min(
-        FRAME_COUNT - 1,
-        Math.floor(scrollYProgress.get() * FRAME_COUNT)
+        frameCount - 1,
+        Math.floor(scrollYProgress.get() * frameCount)
       );
-      if (ctx && images[frameIndex]) {
-        drawCover(ctx, images[frameIndex], canvas.width, canvas.height);
+      if (ctx && imagesRef.current[frameIndex]) {
+        drawCover(ctx, imagesRef.current[frameIndex], canvas.width, canvas.height);
       }
     };
     
@@ -82,20 +148,7 @@ export function CinematicSequence() {
     handleResize(); // trigger once
     
     return () => window.removeEventListener("resize", handleResize);
-  }, [imagesLoaded, images, scrollYProgress]);
-
-  // Story beats fade mapping
-  const introOpacity = useTransform(scrollYProgress, [0, 0.05, 1], [0, 1, 1]);
-  const introY = useTransform(scrollYProgress, [0, 0.15], [30, 0]);
-
-  const approachOpacity = useTransform(scrollYProgress, [0.25, 0.35, 0.45, 0.5], [0, 1, 1, 0]);
-  const approachY = useTransform(scrollYProgress, [0.25, 0.35], [30, 0]);
-
-  const servicesOpacity = useTransform(scrollYProgress, [0.5, 0.6, 0.7, 0.75], [0, 1, 1, 0]);
-  const servicesY = useTransform(scrollYProgress, [0.5, 0.6], [30, 0]);
-
-  const ctaOpacity = useTransform(scrollYProgress, [0.75, 0.85, 1], [0, 1, 1]);
-  const ctaY = useTransform(scrollYProgress, [0.75, 0.85], [30, 0]);
+  }, [frameCount, imagesLoaded, imagesRef, scrollYProgress]);
 
   return (
     <section 
@@ -115,57 +168,17 @@ export function CinematicSequence() {
         {/* Loading Indicator (Optional but good UX) */}
         {!imagesLoaded && (
           <div className="absolute z-50 text-white/50 text-sm tracking-widest uppercase font-semibold">
-            Loading Cinematic Experience...
+            {loadingText}
           </div>
         )}
 
-        <motion.div 
-          style={{ opacity: introOpacity, y: introY, pointerEvents: useTransform(introOpacity, v => v > 0 ? "auto" : "none") }}
-          className="absolute left-0 text-left max-w-lg pl-8 md:pl-16 pr-8 py-10 bg-black/40 backdrop-blur-md rounded-r-3xl border-y border-r border-white/10 shadow-2xl"
-        >
-          <h2 className="font-heading text-5xl md:text-7xl font-bold text-white leading-tight drop-shadow-lg">
-            Immersive <br/> Experience.
-          </h2>
-        </motion.div>
-
-        <motion.div 
-          style={{ opacity: approachOpacity, y: approachY, pointerEvents: useTransform(approachOpacity, v => v > 0 ? "auto" : "none") }}
-          className="absolute right-8 lg:right-24 text-right max-w-xl px-8 py-10 bg-black/40 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl flex flex-col items-end"
-        >
-          <span className="text-brand-cyan uppercase tracking-[0.3em] text-sm font-bold block mb-4 drop-shadow-md">
-            Precision Engineered
-          </span>
-          <h2 className="font-heading text-4xl md:text-6xl font-bold text-white leading-tight drop-shadow-lg">
-            A strategic approach to <br/> spatial storytelling.
-          </h2>
-          <p className="text-gray-200 mt-6 text-lg md:text-xl max-w-lg drop-shadow-md">
-            We don't just build booths. We architect conversion environments designed to capture enterprise leads and communicate market dominance.
-          </p>
-        </motion.div>
-
-        <motion.div 
-          style={{ opacity: servicesOpacity, y: servicesY, pointerEvents: useTransform(servicesOpacity, v => v > 0 ? "auto" : "none") }}
-          className="absolute right-8 lg:right-24 text-right max-w-lg px-8 py-10 bg-black/40 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl flex flex-col items-end"
-        >
-          <span className="text-brand-blue uppercase tracking-[0.3em] text-sm font-bold block mb-4 drop-shadow-md">
-            End-to-End Execution
-          </span>
-          <h2 className="font-heading text-4xl md:text-6xl font-bold text-white leading-tight drop-shadow-lg">
-            From Blueprint <br/> to Reality.
-          </h2>
-        </motion.div>
-
-        <motion.div 
-          style={{ opacity: ctaOpacity, y: ctaY, pointerEvents: useTransform(ctaOpacity, v => v > 0 ? "auto" : "none") }}
-          className="absolute right-8 lg:right-24 text-right max-w-lg px-8 py-10 bg-black/40 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl flex flex-col items-end"
-        >
-          <h2 className="font-heading text-5xl md:text-7xl font-bold text-white leading-tight mb-8 drop-shadow-lg">
-            Command The <br/> Floor.
-          </h2>
-          <button className="bg-brand-red hover:bg-brand-maroon text-white px-10 py-4 rounded-full font-bold text-lg tracking-wide transition-colors shadow-xl">
-            Start Your Project
-          </button>
-        </motion.div>
+        {beats.map((beat) => (
+          <CinematicBeatOverlay
+            key={beat.id}
+            beat={beat}
+            progress={scrollYProgress}
+          />
+        ))}
 
       </div>
     </section>

@@ -5,32 +5,27 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import type { MotionValue } from "framer-motion";
+import {
+  HOME_BLOGS_CONTENT,
+  type BlogItem,
+  type BlogsContent,
+} from "./home-section-content";
 
-const BLOGS = [
-  {
-    id: 1,
-    title: "The Future of Experiential B2B Marketing",
-    category: "Strategy",
-    date: "Oct 12, 2025",
-    image: "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    id: 2,
-    title: "Why Standard Trade Show Booths Are Failing",
-    category: "Design",
-    date: "Sep 28, 2025",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    id: 3,
-    title: "Architecting a High-Converting Media Strategy",
-    category: "Media",
-    date: "Sep 15, 2025",
-    image: "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=800",
-  },
-];
+export interface BlogsProps {
+  content?: BlogsContent;
+  eyebrow?: BlogsContent["eyebrow"];
+  heading?: BlogsContent["heading"];
+  ctaLabel?: BlogsContent["ctaLabel"];
+  blogs?: BlogsContent["blogs"];
+}
 
-export function Blogs() {
+export function Blogs({
+  content = HOME_BLOGS_CONTENT,
+  eyebrow = content.eyebrow,
+  heading = content.heading,
+  ctaLabel = content.ctaLabel,
+  blogs = content.blogs,
+}: BlogsProps = {}) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -52,14 +47,13 @@ export function Blogs() {
             viewport={{ once: true }}
             className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-red/10 border border-brand-red/20 text-brand-red text-sm font-semibold tracking-wide"
           >
-            INSIGHTS & INTELLIGENCE
+            {eyebrow}
           </motion.div>
           <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal dark:text-white leading-tight">
-            Thought Leadership for <br />
-            <span className="text-brand-red">Modern Growth</span>
+            {heading}
           </h2>
           <button className="mt-8 flex items-center gap-2 text-brand-charcoal dark:text-white font-semibold hover:text-brand-red dark:hover:text-brand-red transition-all duration-300 group">
-            Explore Intelligence <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            {ctaLabel} <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </button>
         </div>
 
@@ -68,12 +62,12 @@ export function Blogs() {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          {BLOGS.map((blog, index) => (
+          {blogs.map((blog, index) => (
             <BlogCard
               key={blog.id}
               blog={blog}
               index={index}
-              total={BLOGS.length}
+              total={blogs.length}
               isHovered={isHovered}
               spread={spread}
             />
@@ -92,7 +86,7 @@ function BlogCard({
   isHovered,
   spread,
 }: {
-  blog: any;
+  blog: BlogItem;
   index: number;
   total: number;
   isHovered: boolean;
@@ -107,19 +101,19 @@ function BlogCard({
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  const isFront = index === total - 1;
-  const rotationOffset = (index - 1) * 8; // -8, 0, 8
-  const xOffset = (index - 1) * 40; // -40, 0, 40
-  const yOffset = (index - 1) * -20; // 20, 0, -20
+  const relativeIndex = index - (total - 1) / 2;
+  const rotationOffset = relativeIndex * 8; // -8, 0, 8
+  const xOffset = relativeIndex * 40; // -40, 0, 40
+  const yOffset = relativeIndex * -20; // 20, 0, -20
 
   const rotate = useTransform(spread, (s) => s * rotationOffset);
   const x = useTransform(spread, (s) => s * xOffset);
   const y = useTransform(spread, (s) => s * yOffset);
 
   // Side-by-side spread distance when hovered
-  const hoverX = (index - 1) * 410;
+  const hoverX = relativeIndex * 410;
   // Vertical spread distance for mobile
-  const hoverY = (index - 1) * 300;
+  const hoverY = relativeIndex * 300;
 
   return (
     <motion.div

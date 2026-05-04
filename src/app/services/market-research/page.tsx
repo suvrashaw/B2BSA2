@@ -1,25 +1,11 @@
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { Hero } from "@/components/sections/Hero";
+import { Metadata } from "next";
+import { MarketingResearchContent } from "@/components/services/MarketingResearchContent";
+
+export const metadata: Metadata = {
+  title: "B2B Marketing & High-Precision Market Research | B2B Sales Arrow",
+  description: "B2B marketing and B2B market research services for enterprise brands - performance marketing, ABM, SEO, and human-verified contact discovery.",
+};
 
 export default function Page() {
-  return (
-    <main className="min-h-screen bg-brand-white ">
-      <Header />
-      
-      <Hero 
-        title="Market Research & Data Solutions for B2B Growth"
-        subtitle="We deliver excellence through strategy, design, and technology."
-      />
-
-      <section className="py-24 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Content coming soon for Market Research & Data Solutions for B2B Growth</h2>
-          <p className="text-gray-500">We are currently building this section to match our high standards.</p>
-        </div>
-      </section>
-
-      <Footer />
-    </main>
-  );
+  return <MarketingResearchContent />;
 }

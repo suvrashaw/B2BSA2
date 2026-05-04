@@ -3,35 +3,33 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { ArrowUpRight, BarChart3, Target } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import {
+  HOME_CASE_STUDIES_CONTENT,
+  type CaseStudiesContent,
+} from "./home-section-content";
 
-const CASE_STUDIES = [
-  {
-    id: "tech-summit",
-    client: "Global Tech Summit",
-    title: "Redefining the Enterprise Exhibition Experience",
-    challenge: "Low attendee engagement in a 10,000 sq ft booth space.",
-    solution: "Interactive structural design with live AR product demos.",
-    metric: "+340%",
-    metricLabel: "Lead Capture Rate",
-    icon: BarChart3,
-    image: "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1200",
-  },
-  {
-    id: "finserve",
-    client: "FinServe SaaS",
-    title: "Scaling Pipeline Through Precision Media",
-    challenge: "High customer acquisition cost across generic channels.",
-    solution: "Targeted video thought-leadership campaign.",
-    metric: "4.2x",
-    metricLabel: "ROI in 6 Months",
-    icon: Target,
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-  },
-];
+export interface CaseStudiesProps {
+  content?: CaseStudiesContent;
+  eyebrow?: CaseStudiesContent["eyebrow"];
+  heading?: CaseStudiesContent["heading"];
+  ctaLabel?: CaseStudiesContent["ctaLabel"];
+  viewAllLabel?: CaseStudiesContent["viewAllLabel"];
+  caseStudies?: CaseStudiesContent["items"];
+}
 
-export function CaseStudies() {
-  const [activeId, setActiveId] = useState<string>(CASE_STUDIES[0].id);
+export function CaseStudies({
+  content = HOME_CASE_STUDIES_CONTENT,
+  eyebrow = content.eyebrow,
+  heading = content.heading,
+  ctaLabel = content.ctaLabel,
+  viewAllLabel = content.viewAllLabel,
+  caseStudies = content.items,
+}: CaseStudiesProps = {}) {
+  const [activeId, setActiveId] = useState<string>(caseStudies[0]?.id ?? "");
+  const activeCaseStudyId = caseStudies.some((study) => study.id === activeId)
+    ? activeId
+    : caseStudies[0]?.id ?? "";
 
   return (
     <section id="work" className="py-20 bg-brand-gray dark:bg-[#1a1c1e] relative">
@@ -43,17 +41,16 @@ export function CaseStudies() {
             viewport={{ once: true }}
             className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue dark:text-brand-cyan text-sm font-semibold tracking-wide"
           >
-            PROVEN EXECUTION
+            {eyebrow}
           </motion.div>
           <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal dark:text-white leading-tight">
-            Impact That Drives <br />
-            <span className="text-brand-blue dark:text-brand-cyan">Market Valuation</span>
+            {heading}
           </h2>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-4 h-[600px] w-full">
-          {CASE_STUDIES.map((study) => {
-            const isActive = activeId === study.id;
+          {caseStudies.map((study) => {
+            const isActive = activeCaseStudyId === study.id;
             
             return (
               <motion.div
@@ -153,7 +150,7 @@ export function CaseStudies() {
                         transition={{ delay: 0.2, duration: 0.3 }}
                         className="absolute bottom-8 right-8 px-6 py-3 rounded-full bg-brand-blue text-white font-medium shadow-lg hover:bg-brand-cyan hover:text-brand-charcoal transition-all duration-300 flex items-center gap-2"
                       >
-                        Full Study <ArrowUpRight className="w-4 h-4" />
+                        {ctaLabel} <ArrowUpRight className="w-4 h-4" />
                       </motion.button>
                     )}
                   </AnimatePresence>
@@ -182,7 +179,7 @@ export function CaseStudies() {
 
         <div className="mt-12 text-center">
           <button className="hidden md:inline-flex items-center gap-2 text-brand-blue dark:text-brand-cyan font-semibold hover:gap-4 transition-all duration-300">
-            View All Work <ArrowUpRight className="w-5 h-5" />
+            {viewAllLabel} <ArrowUpRight className="w-5 h-5" />
           </button>
         </div>
       </div>

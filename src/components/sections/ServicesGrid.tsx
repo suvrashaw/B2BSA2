@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Globe, Layout, Users, Zap, Calendar, Wrench, Target, Shield, BarChart, Search } from "lucide-react";
+import { ArrowRight, Globe, Layout, Users, Zap, Calendar, Wrench, Target, Shield, BarChart, Search, Box } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -15,7 +15,8 @@ const ICONS: Record<string, any> = {
   target: Target,
   shield: Shield,
   "bar-chart": BarChart,
-  search: Search
+  search: Search,
+  box: Box
 };
 
 interface ServiceItem {
@@ -53,7 +54,7 @@ export function ServicesGrid({ title, subtitle, services, className }: ServicesG
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
-            const Icon = service.icon ? ICONS[service.icon] : Zap;
+            const Icon = (service.icon && ICONS[service.icon]) ? ICONS[service.icon] : Zap;
             return (
               <motion.div
                 key={index}

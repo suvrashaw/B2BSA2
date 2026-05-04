@@ -1,25 +1,11 @@
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { Hero } from "@/components/sections/Hero";
+import { Metadata } from "next";
+import { PaidAdvertisingContent } from "@/components/services/PaidAdvertisingContent";
+
+export const metadata: Metadata = {
+  title: "B2B Paid Advertising & PPC Management | B2B Sales Arrow",
+  description: "Expert B2B paid advertising management — Google Ads, programmatic, display, and retargeting for enterprise pipeline generation.",
+};
 
 export default function Page() {
-  return (
-    <main className="min-h-screen bg-brand-white ">
-      <Header />
-      
-      <Hero 
-        title="Paid Advertising for B2B Lead Generation"
-        subtitle="We deliver excellence through strategy, design, and technology."
-      />
-
-      <section className="py-24 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Content coming soon for Paid Advertising for B2B Lead Generation</h2>
-          <p className="text-gray-500">We are currently building this section to match our high standards.</p>
-        </div>
-      </section>
-
-      <Footer />
-    </main>
-  );
+  return <PaidAdvertisingContent />;
 }

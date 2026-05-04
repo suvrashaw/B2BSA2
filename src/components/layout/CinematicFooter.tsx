@@ -177,18 +177,18 @@ export function CinematicFooter() {
           <div className="space-y-8">
             <h3 className="text-xs font-black uppercase tracking-[0.3em] text-brand-blue">Company</h3>
             <ul className="space-y-5 text-sm font-medium text-muted-foreground">
-              <li><Link href="/about" className="hover:text-foreground transition-all hover:pl-2">About Us</Link></li>
-              <li><Link href="/team" className="hover:text-foreground transition-all hover:pl-2">Our Team</Link></li>
-              <li><Link href="/careers" className="hover:text-foreground transition-all hover:pl-2">Careers</Link></li>
+              <li><Link href="/about-us" className="hover:text-foreground transition-all hover:pl-2">About Us</Link></li>
+              <li><Link href="/contact-us" className="hover:text-foreground transition-all hover:pl-2">Our Team</Link></li>
+              <li><Link href="/contact-us" className="hover:text-foreground transition-all hover:pl-2">Careers</Link></li>
             </ul>
           </div>
 
           <div className="space-y-8">
             <h3 className="text-xs font-black uppercase tracking-[0.3em] text-brand-cyan">Services</h3>
             <ul className="space-y-5 text-sm font-medium text-muted-foreground">
-              <li><Link href="/events" className="hover:text-foreground transition-all hover:pl-2">Global Events</Link></li>
-              <li><Link href="/intelligence" className="hover:text-foreground transition-all hover:pl-2">Market Intelligence</Link></li>
-              <li><Link href="/lead-gen" className="hover:text-foreground transition-all hover:pl-2">Lead Generation</Link></li>
+              <li><Link href="/services/global-event-solutions" className="hover:text-foreground transition-all hover:pl-2">Global Events</Link></li>
+              <li><Link href="/services/market-research" className="hover:text-foreground transition-all hover:pl-2">Market Intelligence</Link></li>
+              <li><Link href="/services/sales-qualified-lead-generation" className="hover:text-foreground transition-all hover:pl-2">Lead Generation</Link></li>
             </ul>
           </div>
 
@@ -197,7 +197,7 @@ export function CinematicFooter() {
             <ul className="space-y-5 text-sm font-medium text-muted-foreground">
               <li><Link href="/blog" className="hover:text-foreground transition-all hover:pl-2">Insights Blog</Link></li>
               <li><Link href="/case-studies" className="hover:text-foreground transition-all hover:pl-2">Case Studies</Link></li>
-              <li><Link href="/contact" className="hover:text-foreground transition-all hover:pl-2">Contact Us</Link></li>
+              <li><Link href="/contact-us" className="hover:text-foreground transition-all hover:pl-2">Contact Us</Link></li>
             </ul>
           </div>
 

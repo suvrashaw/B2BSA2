@@ -4,79 +4,85 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import Image from "next/image";
+import {
+  HOME_TESTIMONIALS_CONTENT,
+  type TestimonialsContent,
+} from "./home-section-content";
 
-const TESTIMONIALS = [
-  {
-    id: 1,
-    name: "Sarah Jenkins",
-    designation: "Chief Marketing Officer",
-    company: "Nexus Technologies",
-    rating: 5,
-    quote: "B2B Sales Arrow transformed our exhibition presence. Their architectural approach to booth design and lead capture systems increased our qualified pipeline by 340% at GITEX.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
-  },
-  {
-    id: 2,
-    name: "Michael Chen",
-    designation: "VP of Global Sales",
-    company: "Aura Systems",
-    rating: 5,
-    quote: "The strategic media production and targeted lead generation strategies deployed by the team were instrumental in helping us penetrate the European market 6 months ahead of schedule.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400",
-  },
-  {
-    id: 3,
-    name: "Elena Rodriguez",
-    designation: "Director of Brand Activation",
-    company: "Vortex Labs",
-    rating: 5,
-    quote: "Unlike typical agencies, they understand the deep nuances of enterprise B2B sales cycles. Every piece of collateral and physical asset they produced was highly conversion-focused.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400",
-  },
-  {
-    id: 4,
-    name: "David Alaba",
-    designation: "Head of Growth",
-    company: "Synapse Networks",
-    rating: 5,
-    quote: "Their data-driven insights and innovative web designs created an entirely new paradigm for how we engage our enterprise prospects. A flawless execution.",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400",
-  },
-  {
-    id: 5,
-    name: "Sophia Martinez",
-    designation: "VP Marketing",
-    company: "Elevate Logistics",
-    rating: 5,
-    quote: "A flawless execution from strategy to deployment. The ROI on the campaigns they structured for us broke all our previous quarter records.",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=400",
-  }
-];
+export interface TestimonialsProps {
+  content?: TestimonialsContent;
+  eyebrow?: TestimonialsContent["eyebrow"];
+  heading?: TestimonialsContent["heading"];
+  testimonials?: TestimonialsContent["testimonials"];
+  autoplayInterval?: TestimonialsContent["autoplayInterval"];
+  initialIndex?: TestimonialsContent["initialIndex"];
+}
 
-export function Testimonials() {
-  const [activeIndex, setActiveIndex] = useState(2); // Start centered
+function useCoverflowCarousel(
+  total: number,
+  initialIndex: number,
+  autoplayInterval: number
+) {
+  const [activeIndex, setActiveIndex] = useState(() =>
+    Math.min(initialIndex, Math.max(total - 1, 0))
+  );
 
   // Auto-scroll functionality
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % TESTIMONIALS.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
+    if (total <= 1 || autoplayInterval <= 0) return;
 
-  const handleNext = () => setActiveIndex((prev) => (prev + 1) % TESTIMONIALS.length);
-  const handlePrev = () => setActiveIndex((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % total);
+    }, autoplayInterval);
+    return () => clearInterval(interval);
+  }, [autoplayInterval, total]);
+
+  const handleNext = () => {
+    if (total === 0) return;
+    setActiveIndex((prev) => (prev + 1) % total);
+  };
+
+  const handlePrev = () => {
+    if (total === 0) return;
+    setActiveIndex((prev) => (prev - 1 + total) % total);
+  };
+
+  const resolvedActiveIndex = Math.min(activeIndex, Math.max(total - 1, 0));
 
   // Helper to determine position in a circular array
   const getRelativePosition = (index: number) => {
-    const diff = index - activeIndex;
-    const total = TESTIMONIALS.length;
+    const diff = index - resolvedActiveIndex;
     // Normalize difference to handle wrapping (-2, -1, 0, 1, 2)
     let normalizedDiff = diff % total;
     if (normalizedDiff > Math.floor(total / 2)) normalizedDiff -= total;
     if (normalizedDiff < -Math.floor(total / 2)) normalizedDiff += total;
     return normalizedDiff;
   };
+
+  return {
+    activeIndex: resolvedActiveIndex,
+    getRelativePosition,
+    handleNext,
+    handlePrev,
+    setActiveIndex,
+  };
+}
+
+export function Testimonials({
+  content = HOME_TESTIMONIALS_CONTENT,
+  eyebrow = content.eyebrow,
+  heading = content.heading,
+  testimonials = content.testimonials,
+  autoplayInterval = content.autoplayInterval,
+  initialIndex = content.initialIndex,
+}: TestimonialsProps = {}) {
+  const {
+    activeIndex,
+    getRelativePosition,
+    handleNext,
+    handlePrev,
+    setActiveIndex,
+  } = useCoverflowCarousel(testimonials.length, initialIndex, autoplayInterval);
 
   return (
     <section className="py-20 bg-[#F8F9FA] dark:bg-[#1a1c1e] relative overflow-hidden">
@@ -91,11 +97,10 @@ export function Testimonials() {
             viewport={{ once: true }}
             className="inline-block px-4 py-1.5 mb-6 rounded-full bg-[#1E6091]/10 border border-[#1E6091]/20 text-[#1E6091] dark:text-[#4BC0D9] text-sm font-semibold tracking-wide"
           >
-            CLIENT SUCCESS
+            {eyebrow}
           </motion.div>
           <h2 className="font-heading text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Trusted by Industry <br />
-            <span className="text-[#1E6091] dark:text-[#4BC0D9]">Visionaries</span>
+            {heading}
           </h2>
         </div>
 
@@ -104,7 +109,7 @@ export function Testimonials() {
           className="relative h-[450px] sm:h-[400px] flex justify-center items-center w-full"
           style={{ perspective: "1000px" }}
         >
-          {TESTIMONIALS.map((testimonial, index) => {
+          {testimonials.map((testimonial, index) => {
             const pos = getRelativePosition(index);
             const isCenter = pos === 0;
             const absPos = Math.abs(pos);
@@ -198,7 +203,7 @@ export function Testimonials() {
           </button>
           
           <div className="flex gap-2">
-            {TESTIMONIALS.map((_, idx) => (
+            {testimonials.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setActiveIndex(idx)}

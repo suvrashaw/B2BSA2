@@ -3,32 +3,30 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Calendar, MapPin } from "lucide-react";
 import Image from "next/image";
+import {
+  HOME_UPCOMING_EVENTS_CONTENT,
+  type UpcomingEventsContent,
+} from "./home-section-content";
 
-const EVENTS = [
-  {
-    id: "gitex-2026",
-    title: "GITEX Technology Week 2026",
-    date: "Oct 12 - 16, 2026",
-    location: "Dubai World Trade Centre",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
-  },
-  {
-    id: "mwc-2026",
-    title: "Mobile World Congress",
-    date: "Feb 23 - 26, 2026",
-    location: "Fira Gran Via, Barcelona",
-    image: "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=1200",
-  },
-  {
-    id: "aws-re-invent",
-    title: "AWS re:Invent 2026",
-    date: "Nov 30 - Dec 4, 2026",
-    location: "Las Vegas, Nevada",
-    image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
-  },
-];
+export interface UpcomingEventsProps {
+  content?: UpcomingEventsContent;
+  eyebrow?: UpcomingEventsContent["eyebrow"];
+  heading?: UpcomingEventsContent["heading"];
+  badgeLabel?: UpcomingEventsContent["badgeLabel"];
+  ctaLabel?: UpcomingEventsContent["ctaLabel"];
+  viewAllLabel?: UpcomingEventsContent["viewAllLabel"];
+  events?: UpcomingEventsContent["events"];
+}
 
-export function UpcomingEvents() {
+export function UpcomingEvents({
+  content = HOME_UPCOMING_EVENTS_CONTENT,
+  eyebrow = content.eyebrow,
+  heading = content.heading,
+  badgeLabel = content.badgeLabel,
+  ctaLabel = content.ctaLabel,
+  viewAllLabel = content.viewAllLabel,
+  events = content.events,
+}: UpcomingEventsProps = {}) {
   return (
     <section id="events" className="py-20 bg-brand-gray dark:bg-[#1a1c1e] relative">
       <div className="container mx-auto px-8">
@@ -39,16 +37,15 @@ export function UpcomingEvents() {
             viewport={{ once: true }}
             className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 text-brand-blue dark:text-brand-cyan text-sm font-semibold tracking-wide"
           >
-            GLOBAL PRESENCE
+            {eyebrow}
           </motion.div>
           <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal dark:text-white leading-tight">
-            Meet Us Where <br />
-            <span className="text-brand-blue dark:text-brand-cyan">Innovation Happens</span>
+            {heading}
           </h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
-          {EVENTS.map((event, index) => (
+          {events.map((event, index) => (
             <motion.div
               key={event.id}
               initial={{ opacity: 0, y: 30 }}
@@ -70,13 +67,13 @@ export function UpcomingEvents() {
                 {/* Hover Reveal CTA */}
                 <div className="absolute inset-0 bg-brand-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px] z-20">
                   <button className="bg-brand-blue text-white px-8 py-3 rounded-full font-medium shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 flex items-center gap-2">
-                    Register Interest <ArrowUpRight className="w-4 h-4" />
+                    {ctaLabel} <ArrowUpRight className="w-4 h-4" />
                   </button>
                 </div>
 
                 <div className="absolute bottom-6 left-6 right-6 z-10">
                   <span className="px-3 py-1 bg-brand-blue text-white text-xs font-bold uppercase tracking-wider rounded-full mb-3 inline-block">
-                    Upcoming
+                    {badgeLabel}
                   </span>
                   <h3 className="font-heading text-2xl md:text-3xl font-bold text-white leading-tight line-clamp-2">
                     {event.title}
@@ -112,7 +109,7 @@ export function UpcomingEvents() {
 
         <div className="mt-12 text-center">
           <button className="hidden md:inline-flex items-center gap-2 text-brand-blue dark:text-brand-cyan font-semibold hover:gap-4 transition-all duration-300">
-            View All Events <ArrowUpRight className="w-5 h-5" />
+            {viewAllLabel} <ArrowUpRight className="w-5 h-5" />
           </button>
         </div>
       </div>

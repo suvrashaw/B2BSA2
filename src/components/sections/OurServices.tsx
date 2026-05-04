@@ -1,53 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Presentation, MonitorPlay, Rocket, Users, Lightbulb } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import {
+  HOME_SERVICES_CONTENT,
+  type HomeServicesContent,
+} from "./home-section-content";
 
-const SERVICES = [
-  {
-    id: "booth-design",
-    title: "Event Booth Design",
-    description: "Architectural, immersive exhibition spaces engineered to dominate trade show floors.",
-    icon: Presentation,
-    image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1600",
-    color: "bg-brand-blue",
-  },
-  {
-    id: "media",
-    title: "Media Production",
-    description: "Cinematic brand storytelling and high-fidelity corporate content that builds authority.",
-    icon: MonitorPlay,
-    image: "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=1600",
-    color: "bg-brand-cyan",
-  },
-  {
-    id: "digital",
-    title: "Digital Marketing",
-    description: "Data-driven growth architectures designed to scale enterprise pipeline.",
-    icon: Rocket,
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
-    color: "bg-brand-red",
-  },
-  {
-    id: "lead-gen",
-    title: "Lead Generation",
-    description: "Precision-targeted acquisition strategies for high-value B2B accounts.",
-    icon: Users,
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600",
-    color: "bg-brand-blue",
-  },
-  {
-    id: "brand",
-    title: "Brand Activation",
-    description: "Strategic positioning and identity frameworks that outmaneuver competitors.",
-    icon: Lightbulb,
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600",
-    color: "bg-brand-cyan",
-  },
-];
+export interface OurServicesProps {
+  content?: HomeServicesContent;
+  eyebrow?: HomeServicesContent["eyebrow"];
+  heading?: HomeServicesContent["heading"];
+  serviceLabel?: HomeServicesContent["serviceLabel"];
+  ctaLabel?: HomeServicesContent["ctaLabel"];
+  services?: HomeServicesContent["services"];
+}
 
-export function OurServices() {
+export function OurServices({
+  content = HOME_SERVICES_CONTENT,
+  eyebrow = content.eyebrow,
+  heading = content.heading,
+  serviceLabel = content.serviceLabel,
+  ctaLabel = content.ctaLabel,
+  services = content.services,
+}: OurServicesProps = {}) {
   return (
     <section id="services" className="py-20 bg-white dark:bg-[#212529]">
       <div className="container mx-auto px-8">
@@ -58,18 +35,15 @@ export function OurServices() {
             viewport={{ once: true }}
             className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 text-brand-blue dark:text-brand-cyan text-sm font-semibold tracking-wide"
           >
-            OUR CAPABILITIES
+            {eyebrow}
           </motion.div>
           <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal dark:text-white leading-tight">
-            Strategic Disciplines for <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-cyan">
-              Enterprise Dominance
-            </span>
+            {heading}
           </h2>
         </div>
 
         <div className="flex flex-col gap-12 relative">
-          {SERVICES.map((service, index) => (
+          {services.map((service, index) => (
             <div
               key={service.id}
               className="sticky"
@@ -88,7 +62,7 @@ export function OurServices() {
                     <div className="flex items-center gap-2 mb-6">
                       <span className="px-3 py-1 bg-white dark:bg-[#212529] border border-gray-100 dark:border-gray-800 rounded-full text-xs font-bold text-gray-600 dark:text-gray-300 shadow-sm flex items-center gap-2 transition-colors duration-700 md:group-has-[.image-pane:hover]/card:bg-white/20 md:group-has-[.image-pane:hover]/card:text-white md:group-has-[.image-pane:hover]/card:border-transparent md:group-has-[.image-pane:hover]/card:backdrop-blur-md">
                         <service.icon className="w-3 h-3 text-brand-blue md:group-has-[.image-pane:hover]/card:text-white transition-colors duration-700" />
-                        Service
+                        {serviceLabel}
                       </span>
                     </div>
                     <h3 className="font-heading text-3xl font-bold text-brand-charcoal dark:text-white mb-6 leading-tight transition-colors duration-700 md:group-has-[.image-pane:hover]/card:text-white drop-shadow-md">
@@ -101,7 +75,7 @@ export function OurServices() {
                   </div>
 
                   <button className="mt-10 md:mt-0 px-6 py-3 rounded-lg bg-brand-charcoal text-white hover:bg-brand-blue transition-all duration-700 flex items-center justify-between group pointer-events-auto w-max md:group-has-[.image-pane:hover]/card:bg-brand-blue md:group-has-[.image-pane:hover]/card:shadow-xl shadow-md">
-                    <span className="mr-4">Learn More</span>
+                    <span className="mr-4">{ctaLabel}</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>

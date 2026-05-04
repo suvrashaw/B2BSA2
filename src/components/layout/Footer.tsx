@@ -92,7 +92,6 @@ export function Footer() {
                 <ul className="space-y-4">
                   {[
                     { name: "About Us", href: "/about-us" },
-                    { name: "Why Choose Us", href: "/why-choose-us" },
                     { name: "Success Stories", href: "/case-studies" },
                     { name: "Growth Insights", href: "/blog" },
                     { name: "Contact Us", href: "/contact-us" }
@@ -112,9 +111,9 @@ export function Footer() {
                   {[
                     { name: "Event Solutions", href: "/services/global-event-solutions" },
                     { name: "Media Production", href: "/services/media-production" },
-                    { name: "Performance Marketing", href: "/services/marketing-and-market-research/performance-marketing" },
-                    { name: "Lead Generation", href: "/services/marketing-and-market-research/b2b-lead-generation" },
-                    { name: "Market Research", href: "/services/marketing-and-market-research" }
+                    { name: "Performance Marketing", href: "/services/performance-marketing" },
+                    { name: "Lead Generation", href: "/services/sales-qualified-lead-generation" },
+                    { name: "Market Research", href: "/services/market-research" }
                   ].map((item) => (
                     <li key={item.name}>
                       <Link href={item.href} className="text-gray-400 hover:text-brand-cyan transition-colors text-sm font-medium">

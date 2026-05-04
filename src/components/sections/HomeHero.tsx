@@ -3,21 +3,48 @@
 import { useState, useEffect } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { ArrowRight, Globe } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import {
+  HOME_HERO_CONTENT,
+  type HomeHeroContent,
+} from "./home-section-content";
 
-export function Hero() {
+export interface HeroProps {
+  content?: HomeHeroContent;
+  eyebrow?: HomeHeroContent["eyebrow"];
+  title?: HomeHeroContent["title"];
+  description?: HomeHeroContent["description"];
+  image?: HomeHeroContent["image"];
+  primaryCtaLabel?: HomeHeroContent["primaryCtaLabel"];
+  secondaryCtaLabel?: HomeHeroContent["secondaryCtaLabel"];
+  stat?: HomeHeroContent["stat"];
+  timing?: HomeHeroContent["timing"];
+}
+
+export function Hero({
+  content = HOME_HERO_CONTENT,
+  eyebrow = content.eyebrow,
+  title = content.title,
+  description = content.description,
+  image = content.image,
+  primaryCtaLabel = content.primaryCtaLabel,
+  secondaryCtaLabel = content.secondaryCtaLabel,
+  stat = content.stat,
+  timing = content.timing,
+}: HeroProps = {}) {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 200]);
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
+  const StatIcon = stat.icon;
 
   // Animation Phases: "dropping" (bouncing ball) -> "expanding" (morph to image) -> "done" (text reveals)
   const [phase, setPhase] = useState<"dropping" | "expanding" | "done">("dropping");
 
   useEffect(() => {
-    const timer1 = setTimeout(() => setPhase("expanding"), 2000); // Wait for bounces
-    const timer2 = setTimeout(() => setPhase("done"), 2800); // Wait for morph
+    const timer1 = setTimeout(() => setPhase("expanding"), timing.expandDelay); // Wait for bounces
+    const timer2 = setTimeout(() => setPhase("done"), timing.doneDelay); // Wait for morph
     return () => { clearTimeout(timer1); clearTimeout(timer2); };
-  }, []);
+  }, [timing.doneDelay, timing.expandDelay]);
 
   return (
     <>
@@ -45,8 +72,8 @@ export function Hero() {
               className="w-48 h-48 rounded-full overflow-hidden shadow-[0_0_80px_rgba(30,96,145,0.8)] border-4 border-brand-charcoal"
             >
               <Image
-                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000"
-                alt="Loader"
+                src={image.src}
+                alt={image.loaderAlt}
                 fill
                 className="object-cover scale-150"
                 priority
@@ -75,27 +102,24 @@ export function Hero() {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="inline-block mb-6 px-4 py-1.5 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue dark:text-brand-cyan text-sm font-semibold tracking-wide"
             >
-              GLOBAL CAPABILITY. STRATEGIC GROWTH.
+              {eyebrow}
             </motion.div>
             
             <h1 className="font-heading text-5xl lg:text-7xl font-bold leading-[1.1] text-brand-charcoal dark:text-white mb-6">
-              Accelerating <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-cyan">
-                Enterprise Growth
-              </span>
+              {title}
             </h1>
             
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-lg leading-relaxed">
-              We partner with ambitious modern businesses to deliver premium event solutions, digital transformation, and strategic market expansion.
+              {description}
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
               <button className="px-8 py-4 rounded bg-brand-blue text-white font-medium hover:bg-brand-blue/90 hover:shadow-[0_0_20px_rgba(30,96,145,0.4)] transition-all duration-300 flex items-center gap-2 group">
-                Explore Our Work
+                {primaryCtaLabel}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
               <button className="px-8 py-4 rounded border border-gray-300 dark:border-gray-700 text-brand-charcoal dark:text-white font-medium hover:border-brand-blue hover:text-brand-blue dark:hover:text-brand-cyan transition-colors duration-300">
-                Our Services
+                {secondaryCtaLabel}
               </button>
             </div>
           </motion.div>
@@ -109,8 +133,8 @@ export function Hero() {
                 className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl"
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000"
-                  alt="Corporate Event Strategy"
+                  src={image.src}
+                  alt={image.alt}
                   fill
                   className="object-cover"
                   priority
@@ -126,11 +150,11 @@ export function Hero() {
                 >
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-brand-cyan/20 flex items-center justify-center">
-                      <Globe className="w-6 h-6 text-brand-blue dark:text-brand-cyan" />
+                      <StatIcon className="w-6 h-6 text-brand-blue dark:text-brand-cyan" />
                     </div>
                     <div>
-                      <div className="text-2xl font-bold font-heading text-brand-charcoal dark:text-white">40+</div>
-                      <div className="text-sm text-gray-500 dark:text-gray-400">Countries Served</div>
+                      <div className="text-2xl font-bold font-heading text-brand-charcoal dark:text-white">{stat.value}</div>
+                      <div className="text-sm text-gray-500 dark:text-gray-400">{stat.label}</div>
                     </div>
                   </div>
                 </motion.div>

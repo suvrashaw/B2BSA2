@@ -39,79 +39,79 @@ export function MarketingResearchContent() {
             { 
               title: "Performance Marketing", 
               description: "Data-led multi-channel campaigns engineered for MQL to SQL conversion.",
-              href: "/services/marketing-and-market-research/performance-marketing",
+              href: "/services/performance-marketing",
               icon: "zap"
             },
             { 
               title: "ABM Frameworks", 
               description: "Strategic Account-Based Marketing systems that target your top-tier executive accounts.",
-              href: "/services/marketing-and-market-research/abm-frameworks",
+              href: "/services/performance-marketing/abm-frameworks",
               icon: "users"
             },
             { 
               title: "SEO & Content", 
               description: "Organic growth systems built around high-intent B2B search behaviors.",
-              href: "/services/marketing-and-market-research/search-engine-optimization",
+              href: "/services/performance-marketing/seo-services",
               icon: "layout"
             },
             { 
               title: "Paid Advertising", 
               description: "Full-funnel PPC and programmatic campaigns optimized for enterprise pipeline.",
-              href: "/services/marketing-and-market-research/paid-advertising",
+              href: "/services/performance-marketing/paid-advertising",
               icon: "zap"
             },
             { 
               title: "LinkedIn Ads for B2B", 
               description: "Hyper-targeted LinkedIn campaigns reaching the world's top decision-makers.",
-              href: "/services/marketing-and-market-research/linkedin-ads-b2b",
+              href: "/services/performance-marketing/linkedin-ads-b2b",
               icon: "users"
             },
             { 
               title: "Meta Ads for B2B", 
               description: "Omnichannel retargeting on Facebook and Instagram to surround your top accounts.",
-              href: "/services/marketing-and-market-research/meta-ads-b2b",
+              href: "/services/performance-marketing/meta-ads-b2b",
               icon: "zap"
             },
             { 
               title: "SQL Lead Generation", 
               description: "Verified, sales-ready prospects aligned to your strict ICP and BANT criteria.",
-              href: "/services/marketing-and-market-research/sales-qualified-lead-generation",
+              href: "/services/sales-qualified-lead-generation",
               icon: "target"
             },
             { 
               title: "B2B Market Research", 
               description: "Deep-dive competitive intelligence and market mapping to find your next growth opportunity.",
-              href: "/services/marketing-and-market-research/b2b-market-research",
+              href: "/services/market-research/b2b-market-research",
               icon: "globe"
             },
             { 
               title: "Data Augmentation", 
               description: "Transform incomplete CRM records into rich sales intelligence with human-verified data.",
-              href: "/services/marketing-and-market-research/data-augmentation",
+              href: "/services/market-research/data-augmentation",
               icon: "zap"
             },
             { 
               title: "Data Validation", 
               description: "Clean and verify your database to ensure 100% deliverability and outreach precision.",
-              href: "/services/marketing-and-market-research/data-validation",
+              href: "/services/market-research/data-validation",
               icon: "layout"
             },
             { 
               title: "Market Intelligence", 
               description: "Human-powered insights that reveal what automated tools miss in the enterprise landscape.",
-              href: "/services/marketing-and-market-research/human-powered-market-intelligence",
+              href: "/services/market-research/human-powered-market-intelligence",
               icon: "users"
             },
             { 
               title: "B2B Lead Generation", 
               description: "Multi-channel lead discovery and qualification for enterprise sales teams.",
-              href: "/services/marketing-and-market-research/b2b-lead-generation",
+              href: "/services/sales-qualified-lead-generation",
               icon: "zap"
             },
             { 
               title: "Contact Discovery", 
               description: "Human-verified contact data for 100% accuracy in your outreach programs.",
-              href: "/services/marketing-and-market-research/b2b-contact-discovery",
+              href: "/services/market-research/b2b-contact-discovery",
               icon: "users"
             }
           ]}

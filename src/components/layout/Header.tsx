@@ -10,18 +10,19 @@ import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
   { name: "Home", href: "/" },
+  { name: "About", href: "/about-us" },
   { 
-    name: "About", 
-    href: "/about-us",
+    name: "Services", 
+    href: "/services/global-event-solutions",
     subLinks: [
-      { name: "Our Story", href: "/about-us" },
-      { name: "Vision & Mission", href: "/vision-mission" },
-      { name: "Why Choose Us", href: "/why-choose-us" },
+      { name: "Global Event Solutions", href: "/services/global-event-solutions" },
+      { name: "Media Production", href: "/services/media-production" },
+      { name: "Performance Marketing", href: "/services/performance-marketing" },
+      { name: "Sales Qualified Lead Generation", href: "/services/sales-qualified-lead-generation" },
+      { name: "Market Research", href: "/services/market-research" },
     ]
   },
-  { name: "Services", href: "/services" },
   { name: "Case Studies", href: "/case-studies" },
-  { name: "Events", href: "/events" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact-us" },
 ];
@@ -71,11 +72,11 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
 
       <nav className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
         {NAV_LINKS.map((link) => (
-          <div key={link.name} className="relative group/nav-item py-4">
+          <div key={link.name} className="relative group/nav-item py-4 flex items-center">
             <Link
               href={link.href}
               className={cn(
-                "group relative text-sm font-medium transition-colors flex items-center gap-1.5 py-4",
+                "group relative text-sm font-medium transition-colors flex items-center gap-1.5",
                 "text-brand-charcoal hover:text-brand-blue"
               )}
             >

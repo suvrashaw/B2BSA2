@@ -4,37 +4,28 @@ import { useRef, useState } from "react";
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
+import {
+  HOME_WHY_CHOOSE_US_CONTENT,
+  type WhyChooseUsContent,
+} from "./home-section-content";
 
-const REASONS = [
-  {
-    id: "proven",
-    title: "Proven Execution",
-    description: "Decades of combined experience delivering high-stakes enterprise projects without fail.",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
-  },
-  {
-    id: "global",
-    title: "Global Reach",
-    description: "Established networks and infrastructure across 40+ countries to scale your operations instantly.",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
-  },
-  {
-    id: "strategic",
-    title: "Strategic Creativity",
-    description: "We don't just make it look good. We engineer design systems that drive measurable conversion.",
-    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200",
-  },
-  {
-    id: "tech",
-    title: "Technology-Led Delivery",
-    description: "Leveraging cutting-edge tools and data architectures to ensure precision and performance.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-  },
-];
+export interface WhyChooseUsProps {
+  content?: WhyChooseUsContent;
+  eyebrow?: WhyChooseUsContent["eyebrow"];
+  heading?: WhyChooseUsContent["heading"];
+  reasons?: WhyChooseUsContent["reasons"];
+}
 
-export function WhyChooseUs() {
+export function WhyChooseUs({
+  content = HOME_WHY_CHOOSE_US_CONTENT,
+  eyebrow = content.eyebrow,
+  heading = content.heading,
+  reasons = content.reasons,
+}: WhyChooseUsProps = {}) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const resolvedActiveIndex = Math.min(activeIndex, Math.max(reasons.length - 1, 0));
+  const activeReason = reasons[resolvedActiveIndex];
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -42,10 +33,12 @@ export function WhyChooseUs() {
   });
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    if (reasons.length === 0) return;
+
     // Determine which item is active based on scroll progress
     const index = Math.min(
-      REASONS.length - 1,
-      Math.max(0, Math.floor(latest * REASONS.length))
+      reasons.length - 1,
+      Math.max(0, Math.floor(latest * reasons.length))
     );
     if (index !== activeIndex) {
       setActiveIndex(index);
@@ -71,38 +64,39 @@ export function WhyChooseUs() {
             viewport={{ once: true }}
             className="inline-block px-4 py-1.5 mb-6 rounded-full bg-white/10 border border-white/20 text-brand-cyan text-sm font-semibold tracking-wide"
           >
-            THE B2B DIFFERENCE
+            {eyebrow}
           </motion.div>
           <h2 className="font-heading text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight w-full text-left">
-            Why Enterprise Leaders <br />
-            <span className="text-brand-cyan">Choose Us</span>
+            {heading}
           </h2>
           
           <div className="relative h-[150px] w-full flex justify-center">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeIndex}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className="absolute inset-0 flex flex-col items-center justify-center text-center"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <CheckCircle2 className="w-6 h-6 text-brand-cyan" />
-                  <h3 className="font-heading text-3xl font-bold text-white">{REASONS[activeIndex].title}</h3>
-                </div>
-                <p className="text-xl text-gray-400 leading-relaxed max-w-md">
-                  {REASONS[activeIndex].description}
-                </p>
-              </motion.div>
-            </AnimatePresence>
+            {activeReason && (
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={resolvedActiveIndex}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  className="absolute inset-0 flex flex-col items-center justify-center text-center"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <CheckCircle2 className="w-6 h-6 text-brand-cyan" />
+                    <h3 className="font-heading text-3xl font-bold text-white">{activeReason.title}</h3>
+                  </div>
+                  <p className="text-xl text-gray-400 leading-relaxed max-w-md">
+                    {activeReason.description}
+                  </p>
+                </motion.div>
+              </AnimatePresence>
+            )}
           </div>
         </div>
 
         {/* Right Side: Scrolling Images */}
         <div className="w-full md:w-1/2 flex flex-col pb-[20vh]">
-          {REASONS.map((reason, index) => (
+          {reasons.map((reason) => (
             <div
               key={reason.id}
               className="h-[80vh] md:h-screen w-full flex items-center justify-center p-8"
