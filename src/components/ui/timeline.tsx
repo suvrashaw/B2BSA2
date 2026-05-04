@@ -13,7 +13,15 @@ interface TimelineEntry {
   content: React.ReactNode;
 }
 
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+export const Timeline = ({
+  data,
+  heading,
+  description,
+}: {
+  data: TimelineEntry[];
+  heading: string;
+  description: string;
+}) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -40,14 +48,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     >
       <div className="max-w-7xl mx-auto py-10 px-4 md:px-8 lg:px-10">
         <WhisperText 
-          text="Changelog from our journey"
-          highlights={["journey"]}
+          text={heading}
+          highlights={[heading.split(" ").pop() || ""]}
           highlightColor="blue"
           className="text-4xl md:text-5xl lg:text-6xl mb-4 text-brand-charcoal max-w-4xl font-heading font-bold transition-colors duration-500"
         />
         <p className="text-brand-charcoal/70 text-sm md:text-base max-w-sm transition-colors duration-500">
-          I&apos;ve been working on B2B Sales Arrow for the past 10+ years. Here&apos;s
-          a timeline of our journey.
+          {description}
         </p>
       </div>
 
