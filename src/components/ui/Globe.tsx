@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
+import type { GlobeMethods } from "react-globe.gl";
 
 // Dynamically import react-globe.gl to prevent SSR issues with WebGL/Canvas
 const GlobeGL = dynamic(() => import("react-globe.gl"), {
@@ -42,7 +43,7 @@ const MARKERS = [
 ];
 
 export function Globe() {
-  const globeRef = useRef<Record<string, any> | null>(null);
+  const globeRef = useRef<GlobeMethods | undefined>(undefined);
   const [dimensions, setDimensions] = useState({ width: 800, height: 800 });
 
   useEffect(() => {
