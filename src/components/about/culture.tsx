@@ -35,7 +35,19 @@ const PARALLAX_IMAGES = [
   },
 ];
 
-export const Culture = () => {
+export interface CultureData {
+  eyebrow: string;
+  heading: string | React.ReactNode;
+  description: string;
+  reasons: { id: string; title: string; description: string; image: string }[];
+}
+
+export const Culture = ({ data }: { data: CultureData }) => {
+  const parallaxImages = [
+    ...data.reasons.map(r => ({ src: r.image, alt: r.title })),
+    ...PARALLAX_IMAGES.slice(data.reasons.length)
+  ].slice(0, 7);
+
   return (
     <section className="bg-brand-gray relative w-full py-12 transition-colors duration-500">
       <div className="relative flex flex-col min-h-[50vh] items-center justify-center text-center px-8 mb-12">
@@ -49,20 +61,20 @@ export const Culture = () => {
           )}
         />
         <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-charcoal/5 border border-brand-charcoal/10 text-brand-charcoal text-sm font-semibold tracking-wide uppercase transition-colors duration-500">
-          Culture
+          {data.eyebrow}
         </div>
         <WhisperText 
-          text="Driven by Values"
-          highlights={["Values"]}
+          text={typeof data.heading === 'string' ? data.heading : "What We Believe In"}
+          highlights={["Believe"]}
           highlightColor="red"
           className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-charcoal mb-6 transition-colors duration-500"
         />
-        <p className="text-lg text-brand-charcoal/70 max-w-2xl leading-relaxed transition-colors duration-500">
-          We believe that like a Chinese bamboo tree, business requires patient nurturing for exponential growth. We sow seeds of compassion, nurture them with perseverance, and cultivate a legacy of positive change.
+        <p className="text-lg text-brand-charcoal/70 max-w-2xl leading-relaxed transition-colors duration-500 font-bold uppercase tracking-widest">
+          {data.description}
         </p>
       </div>
       
-      <ZoomParallax images={PARALLAX_IMAGES} />
+      <ZoomParallax images={parallaxImages} />
       
       <div className="h-[20vh]"/>
     </section>

@@ -162,52 +162,32 @@ export const ABOUT_STATS = {
 
 export const ABOUT_VALUES = {
   eyebrow: "OUR PRINCIPLES",
-  heading: (
-    <>
-      The Values That Drive <br />
-      <span className="text-brand-cyan">Everything We Do</span>
-    </>
-  ),
+  heading: "What We Believe In",
+  description: "Accountability Over Activity | Precision Over Volume | Partnership Over Vendor Relationships | Global Thinking, Local Execution",
   reasons: [
     {
-      id: "integrity",
-      title: "Integrity First",
-      description:
-        "We tell clients what they need to hear, not what they want to hear. Honest strategy over comfortable agreements.",
-      image:
-        "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1200",
+      id: "accountability",
+      title: "Accountability Over Activity",
+      description: "We measure success by pipeline impact, not just activity metrics.",
+      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1200",
     },
     {
-      id: "innovation",
-      title: "Innovation Always",
-      description:
-        "We never repeat the same solution twice. Every brief demands fresh thinking grounded in proven methodology.",
-      image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      id: "results",
-      title: "Results-First Thinking",
-      description:
-        "Every decision we make is filtered through one question: does this move our client's pipeline forward?",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      id: "global",
-      title: "Global Perspective",
-      description:
-        "With operations across 40+ countries, we bring a genuinely international lens to every local challenge.",
-      image:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
+      id: "precision",
+      title: "Precision Over Volume",
+      description: "Targeted strategies focused on the accounts that matter most to your enterprise.",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
     },
     {
       id: "partnership",
-      title: "Long-Term Partnership",
-      description:
-        "We build relationships, not transactions. Our 98% client retention rate is the proof.",
-      image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
+      title: "Partnership Over Vendor Relationships",
+      description: "We operate as an extension of your team, aligned with your core business objectives.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+    },
+    {
+      id: "global",
+      title: "Global Thinking, Local Execution",
+      description: "With operations across 40+ countries, we bring a genuinely international lens to every local challenge.",
+      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };

@@ -1,23 +1,25 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/HomeHero";
-import { CinematicSequence } from "@/components/sections/CinematicSequence";
-import { WhoWeAre } from "@/components/sections/WhoWeAre";
-import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
-import { CaseStudies } from "@/components/sections/CaseStudies";
+import { Timeline } from "@/components/ui/timeline";
+import { TeamGrid } from "@/components/about/team-grid";
+import { Culture } from "@/components/about/culture";
+import { GlobalPresence } from "@/components/about/global-presence";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { Footer } from "@/components/layout/Footer";
 import {
   ABOUT_HERO,
-  ABOUT_CINEMATIC,
+  ABOUT_ORIGIN_TIMELINE,
   ABOUT_STATS,
+  ABOUT_TEAM,
   ABOUT_VALUES,
-  ABOUT_CASE_STUDIES,
+  ABOUT_PRESENCE,
   ABOUT_TESTIMONIALS,
   ABOUT_CONTACT,
 } from "@/content/page-sections/about-us";
+import { WhoWeAre } from "@/components/sections/WhoWeAre";
 
 export const metadata: Metadata = {
   title: "About Us | B2B Sales Arrow",
@@ -29,10 +31,11 @@ export default function Page() {
     <main className="min-h-screen bg-brand-gray">
       <Header />
       <Hero {...ABOUT_HERO} />
-      <CinematicSequence {...ABOUT_CINEMATIC} />
+      <Timeline data={ABOUT_ORIGIN_TIMELINE.items} heading={ABOUT_ORIGIN_TIMELINE.heading} description={ABOUT_ORIGIN_TIMELINE.description} />
       <WhoWeAre {...ABOUT_STATS} />
-      <WhyChooseUs {...ABOUT_VALUES} />
-      <CaseStudies {...ABOUT_CASE_STUDIES} />
+      <TeamGrid data={ABOUT_TEAM} />
+      <Culture data={ABOUT_VALUES} />
+      <GlobalPresence data={ABOUT_PRESENCE} />
       <ClientLogos />
       <Testimonials {...ABOUT_TESTIMONIALS} />
       <ContactUs {...ABOUT_CONTACT} />
