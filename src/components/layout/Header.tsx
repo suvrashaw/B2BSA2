@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Globe, Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib";
 import { serviceNavigationGroups, topNavigation } from "@/content/navigation";
 
 // Remove ThemeToggle import

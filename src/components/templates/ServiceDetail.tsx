@@ -25,7 +25,7 @@ import { getPageByUrl } from "@/content/pages";
 import {
   buildBreadcrumbJsonLd,
   buildFaqJsonLd,
-} from "@/lib/structured-data";
+} from "@/lib";
 import type { HeroProps } from "@/components/sections/Hero";
 import type { WhyChooseUsProps } from "@/components/sections/WhyChooseUs";
 import type { OurServicesProps } from "@/components/sections/OurServices";

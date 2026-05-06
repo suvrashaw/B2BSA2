@@ -1,7 +1,7 @@
 "use client";
 
 import { ZoomParallax } from "@/components/ui/ZoomParallax";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib";
 import { WhisperText } from "./WhisperText";
 
 const PARALLAX_IMAGES = [

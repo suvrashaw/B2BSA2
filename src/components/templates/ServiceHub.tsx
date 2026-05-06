@@ -12,7 +12,7 @@ import { FAQ } from "@/components/sections/FAQ";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/templates/ServiceDetail";
-import { buildFaqJsonLd } from "@/lib/structured-data";
+import { buildFaqJsonLd } from "@/lib";
 import type { HeroProps } from "@/components/sections/Hero";
 import type { OurServicesProps } from "@/components/sections/OurServices";
 import type { WhoWeAreProps } from "@/components/sections/WhoWeAre";

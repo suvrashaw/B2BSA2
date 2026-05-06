@@ -15,7 +15,7 @@ import { ContactUs } from "@/components/sections/ContactUs";
 import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/templates/ServiceDetail";
 import { HOME_FAQ_CONTENT } from "@/content/home";
-import { buildFaqJsonLd } from "@/lib/structured-data";
+import { buildFaqJsonLd } from "@/lib";
 
 export const metadata: Metadata = {
   title: {
