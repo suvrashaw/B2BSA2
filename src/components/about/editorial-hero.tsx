@@ -2,7 +2,6 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { LayoutTextFlip } from "@/components/about/layout-text-flip";
 import { BackgroundRippleEffect } from "@/components/about/background-ripple-effect";
 
 export const EditorialHero = () => {

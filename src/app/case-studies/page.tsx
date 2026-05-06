@@ -14,11 +14,9 @@ import {
   CASE_STUDIES_TESTIMONIALS,
   CASE_STUDIES_CONTACT,
 } from "@/content/page-sections/case-studies";
+import { getPageMetadata } from "@/content/pages";
 
-export const metadata: Metadata = {
-  title: "Case Studies | B2B Sales Arrow",
-  description: "Real client results. Real pipeline. Explore how B2B Sales Arrow has driven measurable enterprise growth across events, media, and marketing.",
-};
+export const metadata: Metadata = getPageMetadata("/case-studies");
 
 export default function Page() {
   return (

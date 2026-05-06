@@ -14,18 +14,27 @@ const GlobeGL = dynamic(() => import("react-globe.gl"), {
   ),
 });
 
-// Data for Arcs and Markers
-const N = 10;
-const arcsData = [...Array(N).keys()].map(() => ({
-  startLat: (Math.random() - 0.5) * 180,
-  startLng: (Math.random() - 0.5) * 360,
-  endLat: (Math.random() - 0.5) * 180,
-  endLng: (Math.random() - 0.5) * 360,
-  color: [
-    Math.random() > 0.5 ? "#4BC0D9" : "#ffffff", // Cyan or White
-    Math.random() > 0.5 ? "#B23A48" : "#ffffff", // Red or White
-  ],
-}));
+interface ArcData {
+  startLat: number;
+  startLng: number;
+  endLat: number;
+  endLng: number;
+  color: [string, string];
+  dashInitialGap: number;
+}
+
+const arcsData: ArcData[] = [
+  { startLat: 40.7128, startLng: -74.006, endLat: 25.2048, endLng: 55.2708, color: ["#4BC0D9", "#ffffff"], dashInitialGap: 0.4 },
+  { startLat: 51.5074, startLng: -0.1278, endLat: 1.3521, endLng: 103.8198, color: ["#ffffff", "#B23A48"], dashInitialGap: 1.1 },
+  { startLat: 43.6532, startLng: -79.3832, endLat: -33.8688, endLng: 151.2093, color: ["#4BC0D9", "#B23A48"], dashInitialGap: 1.8 },
+  { startLat: 25.2048, startLng: 55.2708, endLat: 51.5074, endLng: -0.1278, color: ["#ffffff", "#ffffff"], dashInitialGap: 2.2 },
+  { startLat: 1.3521, startLng: 103.8198, endLat: 40.7128, endLng: -74.006, color: ["#B23A48", "#ffffff"], dashInitialGap: 2.9 },
+  { startLat: -33.8688, startLng: 151.2093, endLat: 25.2048, endLng: 55.2708, color: ["#4BC0D9", "#ffffff"], dashInitialGap: 3.5 },
+  { startLat: 51.5074, startLng: -0.1278, endLat: 43.6532, endLng: -79.3832, color: ["#ffffff", "#4BC0D9"], dashInitialGap: 4.1 },
+  { startLat: 40.7128, startLng: -74.006, endLat: 1.3521, endLng: 103.8198, color: ["#B23A48", "#4BC0D9"], dashInitialGap: 4.6 },
+  { startLat: 43.6532, startLng: -79.3832, endLat: 25.2048, endLng: 55.2708, color: ["#ffffff", "#B23A48"], dashInitialGap: 0.9 },
+  { startLat: -33.8688, startLng: 151.2093, endLat: 51.5074, endLng: -0.1278, color: ["#4BC0D9", "#ffffff"], dashInitialGap: 3.0 },
+];
 
 interface GlobeMarker {
   lat: number;
@@ -90,7 +99,7 @@ export function Globe() {
         arcColor="color"
         arcDashLength={0.4}
         arcDashGap={4}
-        arcDashInitialGap={() => Math.random() * 5}
+        arcDashInitialGap={(arc: object) => (arc as ArcData).dashInitialGap}
         arcDashAnimateTime={4000}
         arcStroke={0.5} // Thin, luxurious lines
         

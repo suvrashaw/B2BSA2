@@ -11,8 +11,12 @@ import {
 } from "@/content/page-sections/thank-you";
 
 export const metadata: Metadata = {
-  title: "Thank You | B2B Sales Arrow",
+  title: "Thank You",
   description: "Thank you for contacting B2B Sales Arrow. Our team will review your message and get back to you shortly.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function Page() {

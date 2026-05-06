@@ -15,11 +15,9 @@ import {
   BLOG_FAQ,
   BLOG_CONTACT,
 } from "@/content/page-sections/blog";
+import { getPageMetadata } from "@/content/pages";
 
-export const metadata: Metadata = {
-  title: "Blog & Insights | B2B Sales Arrow",
-  description: "B2B marketing intelligence, event strategy, and enterprise growth insights from the B2B Sales Arrow team.",
-};
+export const metadata: Metadata = getPageMetadata("/blog");
 
 export default function Page() {
   return (

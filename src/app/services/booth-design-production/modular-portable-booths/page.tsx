@@ -12,6 +12,7 @@ export const metadata: Metadata = getPageMetadata("/services/booth-design-produc
 export default function Page() {
   return (
     <ServiceDetailPage
+      canonicalPath="/services/booth-design-production/modular-portable-booths"
       hero={MPB_HERO}
       why={MPB_WHY}
       deliverables={MPB_DELIVERABLES}

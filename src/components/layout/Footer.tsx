@@ -104,9 +104,9 @@ export function Footer() {
               </div>
 
               <div className="lg:col-span-2">
-                <h4 className="font-heading font-bold text-lg text-brand-charcoal mb-6">
+                <span className="block font-heading font-bold text-lg text-brand-charcoal mb-6">
                   Navigation
-                </h4>
+                </span>
                 <ul className="space-y-4">
                   {footerNavigation.map((item) => (
                     <li key={item.name}>
@@ -122,9 +122,9 @@ export function Footer() {
               </div>
 
               <div className="lg:col-span-3">
-                <h4 className="font-heading font-bold text-lg text-brand-charcoal mb-6">
+                <span className="block font-heading font-bold text-lg text-brand-charcoal mb-6">
                   Services
-                </h4>
+                </span>
                 <div className="grid gap-4">
                   {serviceNavigationGroups.map((group) => (
                     <div key={group.name}>
@@ -154,9 +154,9 @@ export function Footer() {
               </div>
 
               <div className="lg:col-span-2">
-                <h4 className="font-heading font-bold text-lg text-brand-charcoal mb-6">
+                <span className="block font-heading font-bold text-lg text-brand-charcoal mb-6">
                   Stay Ahead
-                </h4>
+                </span>
                 <p className="text-sm text-gray-500 mb-4">
                   Subscribe to our enterprise growth newsletter.
                 </p>

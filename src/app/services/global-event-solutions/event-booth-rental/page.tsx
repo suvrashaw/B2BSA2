@@ -12,6 +12,7 @@ export const metadata: Metadata = getPageMetadata("/services/global-event-soluti
 export default function Page() {
   return (
     <ServiceDetailPage
+      canonicalPath="/services/global-event-solutions/event-booth-rental"
       hero={EBR_HERO}
       why={EBR_WHY}
       deliverables={EBR_DELIVERABLES}

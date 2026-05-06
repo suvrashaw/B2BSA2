@@ -11,6 +11,8 @@ import { UpcomingEvents } from "@/components/sections/UpcomingEvents";
 import { FAQ } from "@/components/sections/FAQ";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { Footer } from "@/components/layout/Footer";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { buildFaqJsonLd } from "@/lib/structured-data";
 import type { HeroProps } from "@/components/sections/HomeHero";
 import type { OurServicesProps } from "@/components/sections/OurServices";
 import type { WhoWeAreProps } from "@/components/sections/WhoWeAre";
@@ -48,8 +50,11 @@ export function ServiceHubPage({
   faq,
   contact,
 }: ServiceHubPageProps) {
+  const faqJsonLd = faq.faqs?.length ? buildFaqJsonLd(faq.faqs) : null;
+
   return (
     <main className="min-h-screen bg-brand-gray">
+      {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <Header />
       <Hero {...hero} />
       <OurServices {...services} />

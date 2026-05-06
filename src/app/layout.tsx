@@ -15,7 +15,11 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "B2B Sales Arrow | Premium Growth Partner",
+  metadataBase: new URL("https://b2bsalesarrow.com"),
+  title: {
+    default: "B2B Sales Arrow | Premium Growth Partner",
+    template: "%s | B2B Sales Arrow",
+  },
   description: "Global capability. Strategic growth. Enterprise event and digital solutions for modern businesses.",
 };
 

@@ -1,25 +1,54 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import type { ReactNode } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, Globe } from "lucide-react";
 
-interface HeroProps {
-  title?: string | React.ReactNode;
+export interface HeroProps {
+  showPreloader?: boolean;
+  title?: string | ReactNode;
   subtitle?: string;
+  description?: string;
   badge?: string;
-  image?: string;
+  eyebrow?: string;
+  image?:
+    | string
+    | {
+        src: string;
+        alt?: string;
+        loaderAlt?: string;
+      };
+  primaryCtaLabel?: string | null;
+  secondaryCtaLabel?: string | null;
+  stat?: {
+    value: string;
+    label: string;
+    icon?: string;
+  } | null;
 }
 
 export function Hero({ 
   title = "Global B2B Event, Booth & Lead Generation Experts",
   subtitle = "End-to-End Solutions That Drive Pipeline and Revenue",
+  description,
   badge = "GLOBAL CAPABILITY. STRATEGIC GROWTH.",
-  image = "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000"
+  eyebrow,
+  image = "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000",
+  primaryCtaLabel = "Explore Our Work",
+  secondaryCtaLabel = "Our Services",
+  stat = {
+    value: "40+",
+    label: "Countries Served",
+    icon: "Globe",
+  },
 }: HeroProps) {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 150]);
+  const imageSrc = typeof image === "string" ? image : image.src;
+  const imageAlt = typeof image === "string" ? "Corporate Event Strategy" : image.alt ?? "Corporate Event Strategy";
+  const resolvedSubtitle = description ?? subtitle;
+  const resolvedBadge = eyebrow ?? badge;
 
   return (
     <section className="relative min-h-[90vh] flex items-center pt-24 overflow-hidden bg-white">
@@ -34,7 +63,7 @@ export function Hero({
           className="max-w-2xl"
         >
           <div className="inline-block mb-6 px-4 py-1.5 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-sm font-semibold tracking-wide uppercase">
-            {badge}
+            {resolvedBadge}
           </div>
           
           <h1 className="font-heading text-5xl lg:text-7xl font-bold leading-[1.1] text-brand-charcoal mb-6">
@@ -42,17 +71,21 @@ export function Hero({
           </h1>
           
           <p className="text-xl text-brand-charcoal/70 mb-10 max-w-lg leading-relaxed">
-            {subtitle}
+            {resolvedSubtitle}
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
-            <button className="px-8 py-4 rounded bg-brand-blue text-white font-medium hover:bg-brand-blue/90 hover:shadow-[0_0_20px_rgba(30,96,145,0.4)] transition-all duration-300 flex items-center gap-2 group">
-              Explore Our Work
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="px-8 py-4 rounded border border-gray-200 text-brand-charcoal font-medium hover:border-brand-blue hover:text-brand-blue transition-colors duration-300">
-              Our Services
-            </button>
+            {primaryCtaLabel ? (
+              <button className="px-8 py-4 rounded bg-brand-blue text-white font-medium hover:bg-brand-blue/90 hover:shadow-[0_0_20px_rgba(30,96,145,0.4)] transition-all duration-300 flex items-center gap-2 group">
+                {primaryCtaLabel}
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
+            ) : null}
+            {secondaryCtaLabel ? (
+              <button className="px-8 py-4 rounded border border-gray-200 text-brand-charcoal font-medium hover:border-brand-blue hover:text-brand-blue transition-colors duration-300">
+                {secondaryCtaLabel}
+              </button>
+            ) : null}
           </div>
         </motion.div>
 
@@ -65,8 +98,8 @@ export function Hero({
             className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl border-8 border-white"
           >
             <Image
-              src={image}
-              alt="Corporate Event Strategy"
+              src={imageSrc}
+              alt={imageAlt}
               fill
               className="object-cover"
               priority
@@ -74,22 +107,24 @@ export function Hero({
             <div className="absolute inset-0 bg-brand-blue/5" />
             
             {/* Floating stat card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="absolute bottom-12 left-[-40px] bg-white p-8 rounded-xl shadow-2xl border border-gray-100 backdrop-blur-md"
-            >
-              <div className="flex items-center gap-6">
-                <div className="w-14 h-14 rounded-full bg-brand-blue/10 flex items-center justify-center">
-                  <Globe className="w-8 h-8 text-brand-blue" />
+            {stat ? (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.6 }}
+                className="absolute bottom-12 left-[-40px] bg-white p-8 rounded-xl shadow-2xl border border-gray-100 backdrop-blur-md"
+              >
+                <div className="flex items-center gap-6">
+                  <div className="w-14 h-14 rounded-full bg-brand-blue/10 flex items-center justify-center">
+                    <Globe className="w-8 h-8 text-brand-blue" />
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold font-heading text-brand-charcoal">{stat.value}</div>
+                    <div className="text-sm font-bold text-gray-400 uppercase tracking-widest">{stat.label}</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold font-heading text-brand-charcoal">40+</div>
-                  <div className="text-sm font-bold text-gray-400 uppercase tracking-widest">Countries Served</div>
-                </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            ) : null}
           </motion.div>
         </div>
       </div>

@@ -175,7 +175,7 @@ export function CinematicFooter() {
 
         <div ref={contentRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 w-full text-left">
           <div className="space-y-8">
-            <h3 className="text-xs font-black uppercase tracking-[0.3em] text-brand-blue">Company</h3>
+            <span className="text-xs font-black uppercase tracking-[0.3em] text-brand-blue">Company</span>
             <ul className="space-y-5 text-sm font-medium text-muted-foreground">
               <li><Link href="/about-us" className="hover:text-foreground transition-all hover:pl-2">About Us</Link></li>
               <li><Link href="/contact-us" className="hover:text-foreground transition-all hover:pl-2">Our Team</Link></li>
@@ -184,7 +184,7 @@ export function CinematicFooter() {
           </div>
 
           <div className="space-y-8">
-            <h3 className="text-xs font-black uppercase tracking-[0.3em] text-brand-cyan">Services</h3>
+            <span className="text-xs font-black uppercase tracking-[0.3em] text-brand-cyan">Services</span>
             <ul className="space-y-5 text-sm font-medium text-muted-foreground">
               <li><Link href="/services/global-event-solutions" className="hover:text-foreground transition-all hover:pl-2">Global Events</Link></li>
               <li><Link href="/services/market-research" className="hover:text-foreground transition-all hover:pl-2">Market Intelligence</Link></li>
@@ -193,7 +193,7 @@ export function CinematicFooter() {
           </div>
 
           <div className="space-y-8">
-            <h3 className="text-xs font-black uppercase tracking-[0.3em] text-brand-blue">Resources</h3>
+            <span className="text-xs font-black uppercase tracking-[0.3em] text-brand-blue">Resources</span>
             <ul className="space-y-5 text-sm font-medium text-muted-foreground">
               <li><Link href="/blog" className="hover:text-foreground transition-all hover:pl-2">Insights Blog</Link></li>
               <li><Link href="/case-studies" className="hover:text-foreground transition-all hover:pl-2">Case Studies</Link></li>
@@ -202,7 +202,7 @@ export function CinematicFooter() {
           </div>
 
           <div className="space-y-8">
-            <h3 className="text-xs font-black uppercase tracking-[0.3em] text-brand-cyan">Contact</h3>
+            <span className="text-xs font-black uppercase tracking-[0.3em] text-brand-cyan">Contact</span>
             <div className="space-y-5 text-sm font-medium text-muted-foreground leading-relaxed">
               <p className="flex flex-col">
                 <span className="text-foreground font-bold mb-1">New York</span>

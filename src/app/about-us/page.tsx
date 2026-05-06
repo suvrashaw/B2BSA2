@@ -20,11 +20,9 @@ import {
   ABOUT_CONTACT,
 } from "@/content/page-sections/about-us";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
+import { getPageMetadata } from "@/content/pages";
 
-export const metadata: Metadata = {
-  title: "About Us | B2B Sales Arrow",
-  description: "Learn about B2B Sales Arrow — our story, values, and the team behind $1.2B in client pipeline across 40+ countries.",
-};
+export const metadata: Metadata = getPageMetadata("/about-us");
 
 export default function Page() {
   return (

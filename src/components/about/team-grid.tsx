@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { WhisperText } from "@/components/about/whisper-text";
 
 export interface TeamMember {
   name: string;

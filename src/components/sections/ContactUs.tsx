@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import {
   HOME_CONTACT_CONTENT,
   type ContactContent,
@@ -58,9 +59,11 @@ export function ContactUs({
                 transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
                 className="w-full max-w-md mt-4"
               >
-                <img
+                <Image
                   src={illustration.src}
                   alt={illustration.alt}
+                  width={480}
+                  height={360}
                   className="w-full h-auto drop-shadow-xl"
                 />
               </motion.div>

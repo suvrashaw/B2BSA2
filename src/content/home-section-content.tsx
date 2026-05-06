@@ -1,17 +1,4 @@
 import type { ReactNode } from "react";
-import type { LucideIcon } from "lucide-react";
-import {
-  BarChart3,
-  Globe,
-  Globe2,
-  Lightbulb,
-  MonitorPlay,
-  Presentation,
-  Rocket,
-  Target,
-  TrendingUp,
-  Users,
-} from "lucide-react";
 
 export interface HomeHeroContent {
   eyebrow: string;

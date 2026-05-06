@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import { ServiceDetailPage } from "@/components/content/ServiceDetailPage";
+import { getPageMetadata } from "@/content/pages";
 import {
   TSBD_HERO, TSBD_WHY, TSBD_DELIVERABLES, TSBD_STATS,
   TSBD_CASE_STUDIES, TSBD_TESTIMONIALS, TSBD_FAQ, TSBD_CONTACT,
 } from "@/content/page-sections/services/detail/trade-show-booth-design";
 
-export const metadata: Metadata = {
-  title: "Trade Show Booth Design | B2B Sales Arrow",
-  description: "Award-winning trade show booth design that dominates exhibition floors and converts footfall into qualified pipeline. 500+ booths delivered across 40+ countries.",
-};
+export const metadata: Metadata = getPageMetadata("/services/global-event-solutions/trade-show-booth-design");
 
 export default function Page() {
   return (
     <ServiceDetailPage
+      canonicalPath="/services/global-event-solutions/trade-show-booth-design"
       hero={TSBD_HERO}
       why={TSBD_WHY}
       deliverables={TSBD_DELIVERABLES}

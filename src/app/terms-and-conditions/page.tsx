@@ -7,8 +7,17 @@ import { Footer } from "@/components/layout/Footer";
 import { TERMS_HERO, TERMS_FAQ, TERMS_CONTACT } from "@/content/page-sections/terms";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | B2B Sales Arrow",
+  title: "Terms & Conditions",
   description: "Read the terms and conditions governing the use of the B2B Sales Arrow website and services.",
+  alternates: {
+    canonical: "https://b2bsalesarrow.com/terms-and-conditions",
+  },
+  openGraph: {
+    title: "Terms & Conditions",
+    description: "Read the terms and conditions governing the use of the B2B Sales Arrow website and services.",
+    url: "https://b2bsalesarrow.com/terms-and-conditions",
+    type: "website",
+  },
 };
 
 export default function Page() {

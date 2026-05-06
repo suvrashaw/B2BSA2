@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
 import { ServiceHubPage } from "@/components/content/ServiceHubPage";
+import { getPageMetadata } from "@/content/pages";
 import {
   GES_HERO, GES_SERVICES, GES_STATS, GES_WHY, GES_CASE_STUDIES,
   GES_TESTIMONIALS, GES_EVENTS, GES_FAQ, GES_CONTACT,
 } from "@/content/page-sections/services/global-event-solutions";
 
-export const metadata: Metadata = {
-  title: "Global Event Solutions | B2B Sales Arrow",
-  description: "End-to-end trade show and exhibition solutions across 40+ countries. Booth design, lead capture, event management and more.",
-};
+export const metadata: Metadata = getPageMetadata("/services/global-event-solutions");
 
 export default function Page() {
   return (

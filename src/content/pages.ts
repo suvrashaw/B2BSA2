@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 export type NavigationGroup =
   | "Global Event Solutions"
   | "Booth Design & Production"
@@ -8728,12 +8730,25 @@ export function getPageByUrl(url: string): PageContent {
   return page;
 }
 
-export function getPageMetadata(url: string) {
+const siteUrl = "https://b2bsalesarrow.com";
+
+export function getPageMetadata(url: string): Metadata {
   const page = getPageByUrl(url);
+  const canonicalPath = normalizeLookupUrl(page.url);
+  const canonicalUrl = `${siteUrl}${canonicalPath}`;
 
   return {
     title: page.metaTitle,
     description: page.metaDescription,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: page.metaTitle,
+      description: page.metaDescription,
+      url: canonicalUrl,
+      type: "website",
+    },
   };
 }
 

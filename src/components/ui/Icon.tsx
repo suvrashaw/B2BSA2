@@ -1,6 +1,5 @@
 "use client";
 
-/* eslint-disable react-hooks/static-components */
 /* eslint-disable react-hooks/immutability */
 
 import dynamic from 'next/dynamic';

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/HomeHero";
 import { CinematicSequence } from "@/components/sections/CinematicSequence";
@@ -12,10 +13,32 @@ import { Blogs } from "@/components/sections/Blogs";
 import { FAQ } from "@/components/sections/FAQ";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { Footer } from "@/components/layout/Footer";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { HOME_FAQ_CONTENT } from "@/content/home-section-content";
+import { buildFaqJsonLd } from "@/lib/structured-data";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "B2B Sales Arrow | Premium Growth Partner",
+  },
+  description:
+    "Global capability. Strategic growth. Enterprise event and digital solutions for modern businesses.",
+  alternates: {
+    canonical: "https://b2bsalesarrow.com/",
+  },
+  openGraph: {
+    title: "B2B Sales Arrow | Premium Growth Partner",
+    description:
+      "Global capability. Strategic growth. Enterprise event and digital solutions for modern businesses.",
+    url: "https://b2bsalesarrow.com/",
+    type: "website",
+  },
+};
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-brand-gray">
+      <JsonLd data={buildFaqJsonLd(HOME_FAQ_CONTENT.faqs)} />
       <Header />
       <div id="home">
         <Hero />

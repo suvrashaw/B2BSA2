@@ -12,11 +12,9 @@ import {
   CONTACT_FAQ,
   CONTACT_FORM,
 } from "@/content/page-sections/contact";
+import { getPageMetadata } from "@/content/pages";
 
-export const metadata: Metadata = {
-  title: "Contact Us | B2B Sales Arrow",
-  description: "Get in touch with B2B Sales Arrow. Our growth architects respond within 24 hours.",
-};
+export const metadata: Metadata = getPageMetadata("/contact-us");
 
 export default function Page() {
   return (

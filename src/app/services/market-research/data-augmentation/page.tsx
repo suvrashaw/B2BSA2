@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import { ServiceDetailPage } from "@/components/content/ServiceDetailPage";
+import { getPageMetadata } from "@/content/pages";
 import {
   DA_HERO, DA_WHY, DA_DELIVERABLES, DA_STATS,
   DA_CASE_STUDIES, DA_TESTIMONIALS, DA_FAQ, DA_CONTACT,
 } from "@/content/page-sections/services/detail/data-augmentation";
 
-export const metadata: Metadata = {
-  title: "Data Augmentation | B2B Sales Arrow",
-  description: "Enrich your B2B data with verified firmographic, technographic, and contact intelligence. 94% accuracy rate. Turn incomplete CRM records into revenue-ready datasets.",
-};
+export const metadata: Metadata = getPageMetadata("/services/market-research/data-augmentation");
 
 export default function Page() {
   return (
     <ServiceDetailPage
+      canonicalPath="/services/market-research/data-augmentation"
       hero={DA_HERO}
       why={DA_WHY}
       deliverables={DA_DELIVERABLES}

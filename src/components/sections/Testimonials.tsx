@@ -162,9 +162,9 @@ export function Testimonials({
                       />
                     </div>
                     <div>
-                      <h4 className="font-heading font-bold text-lg text-gray-900 leading-tight">
+                      <p className="font-heading font-bold text-lg text-gray-900 leading-tight">
                         {testimonial.name}
-                      </h4>
+                      </p>
                       <div className="flex gap-1 mt-1">
                         {[...Array(testimonial.rating)].map((_, i) => (
                           <Star key={i} className="w-3.5 h-3.5 fill-[#1E6091] text-[#1E6091]" />
