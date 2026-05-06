@@ -7,7 +7,7 @@ import Image from "next/image";
 import {
   HOME_TESTIMONIALS_CONTENT,
   type TestimonialsContent,
-} from "@/content/home-section-content";
+} from "@/content/home";
 
 export interface TestimonialsProps {
   content?: TestimonialsContent;

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/HomeHero";
-import { Timeline } from "@/components/ui/timeline";
-import { TeamGrid } from "@/components/about/team-grid";
-import { Culture } from "@/components/about/culture";
-import { GlobalPresence } from "@/components/about/global-presence";
+import { Timeline } from "@/components/ui/Timeline";
+import { TeamGrid } from "@/components/sections/TeamGrid";
+import { Culture } from "@/components/sections/Culture";
+import { GlobalPresence } from "@/components/sections/GlobalPresence";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { ContactUs } from "@/components/sections/ContactUs";
@@ -18,7 +18,7 @@ import {
   ABOUT_PRESENCE,
   ABOUT_TESTIMONIALS,
   ABOUT_CONTACT,
-} from "@/content/page-sections/about-us";
+} from "@/content/about";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { getPageMetadata } from "@/content/pages";
 

@@ -5,7 +5,7 @@ import {
   motion,
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import { WhisperText } from "@/components/about/whisper-text";
+import { WhisperText } from "@/components/sections/WhisperText";
 
 interface TimelineEntry {
   title: string;

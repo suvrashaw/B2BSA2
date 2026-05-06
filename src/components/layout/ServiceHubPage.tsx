@@ -11,7 +11,7 @@ import { UpcomingEvents } from "@/components/sections/UpcomingEvents";
 import { FAQ } from "@/components/sections/FAQ";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { Footer } from "@/components/layout/Footer";
-import { JsonLd } from "@/components/seo/JsonLd";
+import { JsonLd } from "@/components/layout/JsonLd";
 import { buildFaqJsonLd } from "@/lib/structured-data";
 import type { HeroProps } from "@/components/sections/HomeHero";
 import type { OurServicesProps } from "@/components/sections/OurServices";

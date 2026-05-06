@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { ServiceDetailPage } from "@/components/content/ServiceDetailPage";
+import { ServiceDetailPage } from "@/components/layout/ServiceDetailPage";
 import { getPageMetadata } from "@/content/pages";
 import {
   SEO_HERO, SEO_WHY, SEO_DELIVERABLES, SEO_STATS,
   SEO_CASE_STUDIES, SEO_TESTIMONIALS, SEO_FAQ, SEO_CONTACT,
-} from "@/content/page-sections/services/detail/seo-services";
+} from "@/content/services/detail/seo-services";
 
 export const metadata: Metadata = getPageMetadata("/services/performance-marketing/seo-services");
 

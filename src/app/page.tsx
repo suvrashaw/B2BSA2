@@ -13,8 +13,8 @@ import { Blogs } from "@/components/sections/Blogs";
 import { FAQ } from "@/components/sections/FAQ";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { Footer } from "@/components/layout/Footer";
-import { JsonLd } from "@/components/seo/JsonLd";
-import { HOME_FAQ_CONTENT } from "@/content/home-section-content";
+import { JsonLd } from "@/components/layout/JsonLd";
+import { HOME_FAQ_CONTENT } from "@/content/home";
 import { buildFaqJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {

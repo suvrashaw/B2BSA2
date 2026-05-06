@@ -6,7 +6,7 @@ import Image from "next/image";
 import {
   HOME_CONTACT_CONTENT,
   type ContactContent,
-} from "@/content/home-section-content";
+} from "@/content/home";
 
 export interface ContactUsProps {
   content?: ContactContent;

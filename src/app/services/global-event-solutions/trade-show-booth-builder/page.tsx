@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
-import { ServiceDetailPage } from "@/components/content/ServiceDetailPage";
+import { ServiceDetailPage } from "@/components/layout/ServiceDetailPage";
 import { getPageMetadata } from "@/content/pages";
 import {
   TSBB_HERO, TSBB_WHY, TSBB_DELIVERABLES, TSBB_STATS,
   TSBB_CASE_STUDIES, TSBB_TESTIMONIALS, TSBB_FAQ, TSBB_CONTACT,
-} from "@/content/page-sections/services/detail/trade-show-booth-builder";
+} from "@/content/services/detail/trade-show-booth-builder";
 
 export const metadata: Metadata = getPageMetadata("/services/global-event-solutions/trade-show-booth-builder");
 

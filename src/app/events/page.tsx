@@ -16,7 +16,7 @@ import {
   EVENTS_WHY,
   EVENTS_TESTIMONIALS,
   EVENTS_CONTACT,
-} from "@/content/page-sections/events";
+} from "@/content/events";
 
 export const metadata: Metadata = {
   title: "B2B Industry Events | B2B Sales Arrow",

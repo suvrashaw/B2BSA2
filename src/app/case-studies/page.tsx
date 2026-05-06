@@ -13,7 +13,7 @@ import {
   CASE_STUDIES_LIST,
   CASE_STUDIES_TESTIMONIALS,
   CASE_STUDIES_CONTACT,
-} from "@/content/page-sections/case-studies";
+} from "@/content/case-studies";
 import { getPageMetadata } from "@/content/pages";
 
 export const metadata: Metadata = getPageMetadata("/case-studies");

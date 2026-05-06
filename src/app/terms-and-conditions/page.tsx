@@ -4,7 +4,7 @@ import { Hero } from "@/components/sections/HomeHero";
 import { FAQ } from "@/components/sections/FAQ";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { Footer } from "@/components/layout/Footer";
-import { TERMS_HERO, TERMS_FAQ, TERMS_CONTACT } from "@/content/page-sections/terms";
+import { TERMS_HERO, TERMS_FAQ, TERMS_CONTACT } from "@/content/terms";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { ServiceDetailPage } from "@/components/content/ServiceDetailPage";
+import { ServiceDetailPage } from "@/components/layout/ServiceDetailPage";
 import { getPageMetadata } from "@/content/pages";
 import {
   HPMI_HERO, HPMI_WHY, HPMI_DELIVERABLES, HPMI_STATS,
   HPMI_CASE_STUDIES, HPMI_TESTIMONIALS, HPMI_FAQ, HPMI_CONTACT,
-} from "@/content/page-sections/services/detail/human-powered-market-intelligence";
+} from "@/content/services/detail/human-powered-market-intelligence";
 
 export const metadata: Metadata = getPageMetadata("/services/market-research/human-powered-market-intelligence");
 

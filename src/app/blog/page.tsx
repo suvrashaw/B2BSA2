@@ -14,7 +14,7 @@ import {
   BLOG_POSTS,
   BLOG_FAQ,
   BLOG_CONTACT,
-} from "@/content/page-sections/blog";
+} from "@/content/blog";
 import { getPageMetadata } from "@/content/pages";
 
 export const metadata: Metadata = getPageMetadata("/blog");

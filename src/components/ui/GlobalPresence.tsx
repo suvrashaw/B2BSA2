@@ -1,1 +1,0 @@
-export { GlobalPresence } from "./GlobeVisualization";

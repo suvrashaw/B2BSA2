@@ -6,7 +6,7 @@ import Image from "next/image";
 import {
   HOME_UPCOMING_EVENTS_CONTENT,
   type UpcomingEventsContent,
-} from "@/content/home-section-content";
+} from "@/content/home";
 
 export interface UpcomingEventsProps {
   content?: UpcomingEventsContent;

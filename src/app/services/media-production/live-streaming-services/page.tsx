@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { ServiceDetailPage } from "@/components/content/ServiceDetailPage";
+import { ServiceDetailPage } from "@/components/layout/ServiceDetailPage";
 import { getPageMetadata } from "@/content/pages";
 import {
   LSS_HERO, LSS_WHY, LSS_DELIVERABLES, LSS_STATS,
   LSS_CASE_STUDIES, LSS_TESTIMONIALS, LSS_FAQ, LSS_CONTACT,
-} from "@/content/page-sections/services/detail/live-streaming-services";
+} from "@/content/services/detail/live-streaming-services";
 
 export const metadata: Metadata = getPageMetadata("/services/media-production/live-streaming-services");
 

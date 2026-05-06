@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 import { FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
-import { GlobalPresence } from "@/components/ui/GlobalPresence";
+import { GlobalPresence } from "@/components/ui/GlobeVisualization";
 import { Globe } from "@/components/ui/Globe";
 import {
   footerNavigation,

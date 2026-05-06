@@ -3,7 +3,7 @@
 import React, { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { PointerHighlight } from "./pointer-highlight";
+import { PointerHighlight } from "./PointerHighlight";
 
 // Make sure to register plugin client-side only
 if (typeof window !== "undefined") {

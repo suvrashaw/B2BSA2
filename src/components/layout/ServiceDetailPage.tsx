@@ -9,7 +9,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { Footer } from "@/components/layout/Footer";
-import { JsonLd } from "@/components/seo/JsonLd";
+import { JsonLd } from "@/components/layout/JsonLd";
 import { getPageByUrl } from "@/content/pages";
 import {
   buildBreadcrumbJsonLd,

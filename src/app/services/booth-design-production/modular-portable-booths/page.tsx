@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
-import { ServiceDetailPage } from "@/components/content/ServiceDetailPage";
+import { ServiceDetailPage } from "@/components/layout/ServiceDetailPage";
 import { getPageMetadata } from "@/content/pages";
 import {
   MPB_HERO, MPB_WHY, MPB_DELIVERABLES, MPB_STATS,
   MPB_CASE_STUDIES, MPB_TESTIMONIALS, MPB_FAQ, MPB_CONTACT,
-} from "@/content/page-sections/services/detail/modular-portable-booths";
+} from "@/content/services/detail/modular-portable-booths";
 
 export const metadata: Metadata = getPageMetadata("/services/booth-design-production/modular-portable-booths");
 

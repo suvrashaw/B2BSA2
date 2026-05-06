@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { ServiceDetailPage } from "@/components/content/ServiceDetailPage";
+import { ServiceDetailPage } from "@/components/layout/ServiceDetailPage";
 import { getPageMetadata } from "@/content/pages";
 import {
   VES_HERO, VES_WHY, VES_DELIVERABLES, VES_STATS,
   VES_CASE_STUDIES, VES_TESTIMONIALS, VES_FAQ, VES_CONTACT,
-} from "@/content/page-sections/services/detail/video-editing-services";
+} from "@/content/services/detail/video-editing-services";
 
 export const metadata: Metadata = getPageMetadata("/services/media-production/video-editing-services");
 

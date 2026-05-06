@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { ServiceDetailPage } from "@/components/content/ServiceDetailPage";
+import { ServiceDetailPage } from "@/components/layout/ServiceDetailPage";
 import { getPageMetadata } from "@/content/pages";
 import {
   CVP_HERO, CVP_WHY, CVP_DELIVERABLES, CVP_STATS,
   CVP_CASE_STUDIES, CVP_TESTIMONIALS, CVP_FAQ, CVP_CONTACT,
-} from "@/content/page-sections/services/detail/corporate-video-production";
+} from "@/content/services/detail/corporate-video-production";
 
 export const metadata: Metadata = getPageMetadata("/services/media-production/corporate-video-production");
 

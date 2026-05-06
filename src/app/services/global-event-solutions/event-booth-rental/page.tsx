@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
-import { ServiceDetailPage } from "@/components/content/ServiceDetailPage";
+import { ServiceDetailPage } from "@/components/layout/ServiceDetailPage";
 import { getPageMetadata } from "@/content/pages";
 import {
   EBR_HERO, EBR_WHY, EBR_DELIVERABLES, EBR_STATS,
   EBR_CASE_STUDIES, EBR_TESTIMONIALS, EBR_FAQ, EBR_CONTACT,
-} from "@/content/page-sections/services/detail/event-booth-rental";
+} from "@/content/services/detail/event-booth-rental";
 
 export const metadata: Metadata = getPageMetadata("/services/global-event-solutions/event-booth-rental");
 

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { ServiceHubPage } from "@/components/content/ServiceHubPage";
+import { ServiceHubPage } from "@/components/layout/ServiceHubPage";
 import { getPageMetadata } from "@/content/pages";
 import {
   SQL_HERO, SQL_SERVICES, SQL_STATS, SQL_WHY, SQL_CASE_STUDIES,
   SQL_TESTIMONIALS, SQL_BLOGS, SQL_FAQ, SQL_CONTACT,
-} from "@/content/page-sections/services/sales-qualified-lead-generation";
+} from "@/content/services/sales-qualified-lead-generation";
 
 export const metadata: Metadata = getPageMetadata("/services/sales-qualified-lead-generation");
 

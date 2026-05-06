@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { ServiceDetailPage } from "@/components/content/ServiceDetailPage";
+import { ServiceDetailPage } from "@/components/layout/ServiceDetailPage";
 import { getPageMetadata } from "@/content/pages";
 import {
   PAID_HERO, PAID_WHY, PAID_DELIVERABLES, PAID_STATS,
   PAID_CASE_STUDIES, PAID_TESTIMONIALS, PAID_FAQ, PAID_CONTACT,
-} from "@/content/page-sections/services/detail/paid-advertising";
+} from "@/content/services/detail/paid-advertising";
 
 export const metadata: Metadata = getPageMetadata("/services/performance-marketing/paid-advertising");
 

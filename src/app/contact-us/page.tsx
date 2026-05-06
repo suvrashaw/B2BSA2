@@ -11,7 +11,7 @@ import {
   CONTACT_WHO_WE_ARE,
   CONTACT_FAQ,
   CONTACT_FORM,
-} from "@/content/page-sections/contact";
+} from "@/content/contact";
 import { getPageMetadata } from "@/content/pages";
 
 export const metadata: Metadata = getPageMetadata("/contact-us");

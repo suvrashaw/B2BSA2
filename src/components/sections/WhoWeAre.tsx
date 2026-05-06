@@ -6,7 +6,7 @@ import {
   HOME_WHO_WE_ARE_CONTENT,
   type WhoWeAreContent,
   type WhoWeAreStat,
-} from "@/content/home-section-content";
+} from "@/content/home";
 
 function HoverCard({ stat }: { stat: WhoWeAreStat }) {
   const mouseX = useMotionValue(0);

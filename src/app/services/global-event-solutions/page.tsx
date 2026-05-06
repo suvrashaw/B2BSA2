@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { ServiceHubPage } from "@/components/content/ServiceHubPage";
+import { ServiceHubPage } from "@/components/layout/ServiceHubPage";
 import { getPageMetadata } from "@/content/pages";
 import {
   GES_HERO, GES_SERVICES, GES_STATS, GES_WHY, GES_CASE_STUDIES,
   GES_TESTIMONIALS, GES_EVENTS, GES_FAQ, GES_CONTACT,
-} from "@/content/page-sections/services/global-event-solutions";
+} from "@/content/services/global-event-solutions";
 
 export const metadata: Metadata = getPageMetadata("/services/global-event-solutions");
 

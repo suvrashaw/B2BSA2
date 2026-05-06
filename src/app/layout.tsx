@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   description: "Global capability. Strategic growth. Enterprise event and digital solutions for modern businesses.",
 };
 
-import { ThemeProvider } from "@/components/providers/ThemeProvider";
-import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
+import { ThemeProvider } from "@/app/providers/ThemeProvider";
+import { SmoothScrollProvider } from "@/app/providers/SmoothScrollProvider";
 
 export default function RootLayout({
   children,

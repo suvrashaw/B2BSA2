@@ -8,7 +8,7 @@ import {
   THANK_YOU_HERO,
   THANK_YOU_SERVICES,
   THANK_YOU_BLOGS,
-} from "@/content/page-sections/thank-you";
+} from "@/content/thank-you";
 
 export const metadata: Metadata = {
   title: "Thank You",

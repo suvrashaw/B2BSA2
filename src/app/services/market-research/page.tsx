@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { ServiceHubPage } from "@/components/content/ServiceHubPage";
+import { ServiceHubPage } from "@/components/layout/ServiceHubPage";
 import { getPageMetadata } from "@/content/pages";
 import {
   MR_HERO, MR_SERVICES, MR_STATS, MR_WHY, MR_CASE_STUDIES,
   MR_TESTIMONIALS, MR_BLOGS, MR_FAQ, MR_CONTACT,
-} from "@/content/page-sections/services/market-research";
+} from "@/content/services/market-research";
 
 export const metadata: Metadata = getPageMetadata("/services/market-research");
 

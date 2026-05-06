@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { ServiceDetailPage } from "@/components/content/ServiceDetailPage";
+import { ServiceDetailPage } from "@/components/layout/ServiceDetailPage";
 import { getPageMetadata } from "@/content/pages";
 import {
   DV_HERO, DV_WHY, DV_DELIVERABLES, DV_STATS,
   DV_CASE_STUDIES, DV_TESTIMONIALS, DV_FAQ, DV_CONTACT,
-} from "@/content/page-sections/services/detail/data-validation";
+} from "@/content/services/detail/data-validation";
 
 export const metadata: Metadata = getPageMetadata("/services/market-research/data-validation");
 
