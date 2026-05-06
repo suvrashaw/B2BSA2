@@ -9,7 +9,7 @@ import {
   HOME_BLOGS_CONTENT,
   type BlogItem,
   type BlogsContent,
-} from "./home-section-content";
+} from "@/content/home-section-content";
 
 export interface BlogsProps {
   content?: BlogsContent;

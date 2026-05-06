@@ -12,7 +12,7 @@ import {
   HOME_CINEMATIC_SEQUENCE_CONTENT,
   type CinematicSequenceContent,
   type CinematicStoryBeat,
-} from "./home-section-content";
+} from "@/content/home-section-content";
 
 export interface CinematicSequenceProps {
   content?: CinematicSequenceContent;

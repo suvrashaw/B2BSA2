@@ -9,7 +9,7 @@ const COUNTRIES = [
   "Dubai",
   "Singapore",
   "Sydney",
-  "Toronto"
+  "Toronto",
 ];
 
 export function GlobalPresence() {
@@ -29,11 +29,11 @@ export function GlobalPresence() {
         <h3 className="text-brand-blue/60 uppercase tracking-[0.3em] text-xs font-bold mb-8 text-center">
           Global Enterprise Reach
         </h3>
-        
+
         <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
           {COUNTRIES.map((country, index) => {
             const isActive = index === activeIndex;
-            
+
             return (
               <motion.div
                 key={country}
@@ -51,7 +51,7 @@ export function GlobalPresence() {
                 <span className="font-heading text-2xl md:text-3xl text-brand-charcoal tracking-wide">
                   {country}
                 </span>
-                
+
                 {isActive && (
                   <motion.div
                     layoutId="activeCountryGlow"

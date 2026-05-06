@@ -7,7 +7,7 @@ import { CheckCircle2 } from "lucide-react";
 import {
   HOME_WHY_CHOOSE_US_CONTENT,
   type WhyChooseUsContent,
-} from "./home-section-content";
+} from "@/content/home-section-content";
 
 export interface WhyChooseUsProps {
   content?: WhyChooseUsContent;

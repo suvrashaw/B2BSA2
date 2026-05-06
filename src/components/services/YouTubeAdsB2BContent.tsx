@@ -1,7 +1,3 @@
-"use client";
-
-import { useEffect } from "react";
-import Lenis from "@studio-freight/lenis";
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Footer } from "@/components/layout/Footer";
@@ -10,16 +6,6 @@ import { TextSection } from "@/components/sections/TextSection";
 import { USPSection } from "@/components/sections/USPSection";
 
 export function YouTubeAdsB2BContent() {
-  useEffect(() => {
-    const lenis = new Lenis();
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-    return () => lenis.destroy();
-  }, []);
-
   return (
     <div className="bg-brand-white text-brand-charcoal min-h-screen transition-colors duration-500">
       <Header />

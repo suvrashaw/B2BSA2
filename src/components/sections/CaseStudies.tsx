@@ -9,7 +9,7 @@ import {
   HOME_CASE_STUDIES_CONTENT,
   type CaseStudiesContent,
   type CaseStudyItem,
-} from "./home-section-content";
+} from "@/content/home-section-content";
 
 export interface CaseStudiesProps {
   content?: CaseStudiesContent;

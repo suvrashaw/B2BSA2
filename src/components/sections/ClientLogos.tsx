@@ -5,7 +5,7 @@ import { motion, useAnimationFrame, useMotionValue, useTransform, wrap } from "f
 import {
   HOME_CLIENT_LOGOS,
   type ClientLogoItem,
-} from "./home-section-content";
+} from "@/content/home-section-content";
 
 export interface ClientLogosProps {
   logos?: ClientLogoItem[];

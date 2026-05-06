@@ -8,7 +8,7 @@ import {
   HOME_SERVICES_CONTENT,
   type HomeServicesContent,
   type HomeServiceItem,
-} from "./home-section-content";
+} from "@/content/home-section-content";
 
 export interface OurServicesProps {
   content?: HomeServicesContent;

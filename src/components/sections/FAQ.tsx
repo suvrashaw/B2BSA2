@@ -6,7 +6,7 @@ import { HelpCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import {
   HOME_FAQ_CONTENT,
   type FAQContent,
-} from "./home-section-content";
+} from "@/content/home-section-content";
 
 export interface FAQProps {
   content?: FAQContent;

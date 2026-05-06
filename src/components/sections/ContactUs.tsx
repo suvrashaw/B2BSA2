@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import {
   HOME_CONTACT_CONTENT,
   type ContactContent,
-} from "./home-section-content";
+} from "@/content/home-section-content";
 
 export interface ContactUsProps {
   content?: ContactContent;
