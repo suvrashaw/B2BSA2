@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { ServiceDetailPage } from "@/components/layout/ServiceDetailPage";
+import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
   ELG_HERO, ELG_WHY, ELG_DELIVERABLES, ELG_STATS,
@@ -11,7 +11,7 @@ export const metadata: Metadata = getPageMetadata("/services/global-event-soluti
 
 export default function Page() {
   return (
-    <ServiceDetailPage
+    <ServiceDetail
       canonicalPath="/services/global-event-solutions/event-lead-generation"
       hero={ELG_HERO}
       why={ELG_WHY}

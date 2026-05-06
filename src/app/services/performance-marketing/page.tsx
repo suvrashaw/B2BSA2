@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ServiceHubPage } from "@/components/layout/ServiceHubPage";
+import { ServiceHub } from "@/components/templates/ServiceHub";
 import { getPageMetadata } from "@/content/pages";
 import {
   PERF_HERO, PERF_SERVICES, PERF_STATS, PERF_WHY, PERF_CASE_STUDIES,
@@ -10,7 +10,7 @@ export const metadata: Metadata = getPageMetadata("/services/performance-marketi
 
 export default function Page() {
   return (
-    <ServiceHubPage
+    <ServiceHub
       hero={PERF_HERO}
       services={PERF_SERVICES}
       stats={PERF_STATS}

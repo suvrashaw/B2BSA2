@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ServiceDetailPage } from "@/components/layout/ServiceDetailPage";
+import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
   PAID_HERO, PAID_WHY, PAID_DELIVERABLES, PAID_STATS,
@@ -10,7 +10,7 @@ export const metadata: Metadata = getPageMetadata("/services/performance-marketi
 
 export default function Page() {
   return (
-    <ServiceDetailPage
+    <ServiceDetail
       canonicalPath="/services/performance-marketing/paid-advertising"
       hero={PAID_HERO}
       why={PAID_WHY}

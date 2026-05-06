@@ -1,5 +1,5 @@
 import { Header } from "@/components/layout/Header";
-import { Hero } from "@/components/sections/HomeHero";
+import { Hero } from "@/components/sections/Hero";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { OurServices } from "@/components/sections/OurServices";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
@@ -9,13 +9,24 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { Footer } from "@/components/layout/Footer";
-import { JsonLd } from "@/components/layout/JsonLd";
+// SEO Utility Component
+export function JsonLd({ data }: { data: object }) {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(data).replace(/</g, "\\u003c"),
+      }}
+    />
+  );
+}
+
 import { getPageByUrl } from "@/content/pages";
 import {
   buildBreadcrumbJsonLd,
   buildFaqJsonLd,
 } from "@/lib/structured-data";
-import type { HeroProps } from "@/components/sections/HomeHero";
+import type { HeroProps } from "@/components/sections/Hero";
 import type { WhyChooseUsProps } from "@/components/sections/WhyChooseUs";
 import type { OurServicesProps } from "@/components/sections/OurServices";
 import type { WhoWeAreProps } from "@/components/sections/WhoWeAre";
@@ -24,7 +35,7 @@ import type { TestimonialsProps } from "@/components/sections/Testimonials";
 import type { FAQProps } from "@/components/sections/FAQ";
 import type { ContactUsProps } from "@/components/sections/ContactUs";
 
-export interface ServiceDetailPageProps {
+export interface ServiceDetailProps {
   canonicalPath?: string;
   hero: HeroProps;
   why: WhyChooseUsProps;
@@ -71,7 +82,7 @@ function getBreadcrumbs(canonicalPath: string) {
   return crumbs;
 }
 
-export function ServiceDetailPage({
+export function ServiceDetail({
   canonicalPath,
   hero,
   why,
@@ -81,7 +92,7 @@ export function ServiceDetailPage({
   testimonials,
   faq,
   contact,
-}: ServiceDetailPageProps) {
+}: ServiceDetailProps) {
   const faqJsonLd = faq.faqs?.length ? buildFaqJsonLd(faq.faqs) : null;
   const breadcrumbJsonLd = canonicalPath
     ? buildBreadcrumbJsonLd(getBreadcrumbs(canonicalPath))

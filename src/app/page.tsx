@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
-import { Hero } from "@/components/sections/HomeHero";
+import { Hero } from "@/components/sections/Hero";
 import { CinematicSequence } from "@/components/sections/CinematicSequence";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
@@ -13,7 +13,7 @@ import { Blogs } from "@/components/sections/Blogs";
 import { FAQ } from "@/components/sections/FAQ";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { Footer } from "@/components/layout/Footer";
-import { JsonLd } from "@/components/layout/JsonLd";
+import { JsonLd } from "@/components/templates/ServiceDetail";
 import { HOME_FAQ_CONTENT } from "@/content/home";
 import { buildFaqJsonLd } from "@/lib/structured-data";
 

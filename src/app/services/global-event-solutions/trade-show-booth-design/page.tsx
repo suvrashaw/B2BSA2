@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ServiceDetailPage } from "@/components/layout/ServiceDetailPage";
+import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
   TSBD_HERO, TSBD_WHY, TSBD_DELIVERABLES, TSBD_STATS,
@@ -10,7 +10,7 @@ export const metadata: Metadata = getPageMetadata("/services/global-event-soluti
 
 export default function Page() {
   return (
-    <ServiceDetailPage
+    <ServiceDetail
       canonicalPath="/services/global-event-solutions/trade-show-booth-design"
       hero={TSBD_HERO}
       why={TSBD_WHY}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ServiceDetailPage } from "@/components/layout/ServiceDetailPage";
+import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
   SEO_HERO, SEO_WHY, SEO_DELIVERABLES, SEO_STATS,
@@ -10,7 +10,7 @@ export const metadata: Metadata = getPageMetadata("/services/performance-marketi
 
 export default function Page() {
   return (
-    <ServiceDetailPage
+    <ServiceDetail
       canonicalPath="/services/performance-marketing/seo-services"
       hero={SEO_HERO}
       why={SEO_WHY}

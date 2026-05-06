@@ -1,5 +1,5 @@
 import { Header } from "@/components/layout/Header";
-import { Hero } from "@/components/sections/HomeHero";
+import { Hero } from "@/components/sections/Hero";
 import { OurServices } from "@/components/sections/OurServices";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
@@ -11,9 +11,9 @@ import { UpcomingEvents } from "@/components/sections/UpcomingEvents";
 import { FAQ } from "@/components/sections/FAQ";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { Footer } from "@/components/layout/Footer";
-import { JsonLd } from "@/components/layout/JsonLd";
+import { JsonLd } from "@/components/templates/ServiceDetail";
 import { buildFaqJsonLd } from "@/lib/structured-data";
-import type { HeroProps } from "@/components/sections/HomeHero";
+import type { HeroProps } from "@/components/sections/Hero";
 import type { OurServicesProps } from "@/components/sections/OurServices";
 import type { WhoWeAreProps } from "@/components/sections/WhoWeAre";
 import type { WhyChooseUsProps } from "@/components/sections/WhyChooseUs";
@@ -24,7 +24,7 @@ import type { UpcomingEventsProps } from "@/components/sections/UpcomingEvents";
 import type { FAQProps } from "@/components/sections/FAQ";
 import type { ContactUsProps } from "@/components/sections/ContactUs";
 
-export interface ServiceHubPageProps {
+export interface ServiceHubProps {
   hero: HeroProps;
   services: OurServicesProps;
   stats: WhoWeAreProps;
@@ -38,7 +38,7 @@ export interface ServiceHubPageProps {
   contact: ContactUsProps;
 }
 
-export function ServiceHubPage({
+export function ServiceHub({
   hero,
   services,
   stats,
@@ -49,7 +49,7 @@ export function ServiceHubPage({
   events,
   faq,
   contact,
-}: ServiceHubPageProps) {
+}: ServiceHubProps) {
   const faqJsonLd = faq.faqs?.length ? buildFaqJsonLd(faq.faqs) : null;
 
   return (

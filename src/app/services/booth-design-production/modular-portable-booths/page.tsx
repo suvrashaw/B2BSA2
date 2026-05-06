@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { ServiceDetailPage } from "@/components/layout/ServiceDetailPage";
+import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
   MPB_HERO, MPB_WHY, MPB_DELIVERABLES, MPB_STATS,
@@ -11,7 +11,7 @@ export const metadata: Metadata = getPageMetadata("/services/booth-design-produc
 
 export default function Page() {
   return (
-    <ServiceDetailPage
+    <ServiceDetail
       canonicalPath="/services/booth-design-production/modular-portable-booths"
       hero={MPB_HERO}
       why={MPB_WHY}

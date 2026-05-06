@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ServiceDetailPage } from "@/components/layout/ServiceDetailPage";
+import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
   HPMI_HERO, HPMI_WHY, HPMI_DELIVERABLES, HPMI_STATS,
@@ -10,7 +10,7 @@ export const metadata: Metadata = getPageMetadata("/services/market-research/hum
 
 export default function Page() {
   return (
-    <ServiceDetailPage
+    <ServiceDetail
       canonicalPath="/services/market-research/human-powered-market-intelligence"
       hero={HPMI_HERO}
       why={HPMI_WHY}

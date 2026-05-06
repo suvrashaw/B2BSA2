@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ServiceDetailPage } from "@/components/layout/ServiceDetailPage";
+import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
   DA_HERO, DA_WHY, DA_DELIVERABLES, DA_STATS,
@@ -10,7 +10,7 @@ export const metadata: Metadata = getPageMetadata("/services/market-research/dat
 
 export default function Page() {
   return (
-    <ServiceDetailPage
+    <ServiceDetail
       canonicalPath="/services/market-research/data-augmentation"
       hero={DA_HERO}
       why={DA_WHY}

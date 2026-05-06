@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ServiceHubPage } from "@/components/layout/ServiceHubPage";
+import { ServiceHub } from "@/components/templates/ServiceHub";
 import { getPageMetadata } from "@/content/pages";
 import {
   SQL_HERO, SQL_SERVICES, SQL_STATS, SQL_WHY, SQL_CASE_STUDIES,
@@ -10,7 +10,7 @@ export const metadata: Metadata = getPageMetadata("/services/sales-qualified-lea
 
 export default function Page() {
   return (
-    <ServiceHubPage
+    <ServiceHub
       hero={SQL_HERO}
       services={SQL_SERVICES}
       stats={SQL_STATS}

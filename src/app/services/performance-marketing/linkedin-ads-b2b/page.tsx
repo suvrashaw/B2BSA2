@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ServiceDetailPage } from "@/components/layout/ServiceDetailPage";
+import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
   LIADS_HERO, LIADS_WHY, LIADS_DELIVERABLES, LIADS_STATS,
@@ -10,7 +10,7 @@ export const metadata: Metadata = getPageMetadata("/services/performance-marketi
 
 export default function Page() {
   return (
-    <ServiceDetailPage
+    <ServiceDetail
       canonicalPath="/services/performance-marketing/linkedin-ads-b2b"
       hero={LIADS_HERO}
       why={LIADS_WHY}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ServiceHubPage } from "@/components/layout/ServiceHubPage";
+import { ServiceHub } from "@/components/templates/ServiceHub";
 import { getPageMetadata } from "@/content/pages";
 import {
   MEDIA_HERO, MEDIA_SERVICES, MEDIA_STATS, MEDIA_WHY, MEDIA_CASE_STUDIES,
@@ -10,7 +10,7 @@ export const metadata: Metadata = getPageMetadata("/services/media-production");
 
 export default function Page() {
   return (
-    <ServiceHubPage
+    <ServiceHub
       hero={MEDIA_HERO}
       services={MEDIA_SERVICES}
       stats={MEDIA_STATS}

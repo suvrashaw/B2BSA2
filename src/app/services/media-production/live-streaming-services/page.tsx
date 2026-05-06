@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ServiceDetailPage } from "@/components/layout/ServiceDetailPage";
+import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
   LSS_HERO, LSS_WHY, LSS_DELIVERABLES, LSS_STATS,
@@ -10,7 +10,7 @@ export const metadata: Metadata = getPageMetadata("/services/media-production/li
 
 export default function Page() {
   return (
-    <ServiceDetailPage
+    <ServiceDetail
       canonicalPath="/services/media-production/live-streaming-services"
       hero={LSS_HERO}
       why={LSS_WHY}

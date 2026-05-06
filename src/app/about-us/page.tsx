@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
-import { Hero } from "@/components/sections/HomeHero";
+import { Hero } from "@/components/sections/Hero";
 import { Timeline } from "@/components/ui/Timeline";
 import { TeamGrid } from "@/components/sections/TeamGrid";
 import { Culture } from "@/components/sections/Culture";

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ServiceHubPage } from "@/components/layout/ServiceHubPage";
+import { ServiceHub } from "@/components/templates/ServiceHub";
 import { getPageMetadata } from "@/content/pages";
 import {
   GES_HERO, GES_SERVICES, GES_STATS, GES_WHY, GES_CASE_STUDIES,
@@ -10,7 +10,7 @@ export const metadata: Metadata = getPageMetadata("/services/global-event-soluti
 
 export default function Page() {
   return (
-    <ServiceHubPage
+    <ServiceHub
       hero={GES_HERO}
       services={GES_SERVICES}
       stats={GES_STATS}
