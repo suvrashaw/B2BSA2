@@ -24,16 +24,86 @@ interface ArcData {
 }
 
 const arcsData: ArcData[] = [
-  { startLat: 40.7128, startLng: -74.006, endLat: 25.2048, endLng: 55.2708, color: ["#4BC0D9", "#ffffff"], dashInitialGap: 0.4 },
-  { startLat: 51.5074, startLng: -0.1278, endLat: 1.3521, endLng: 103.8198, color: ["#ffffff", "#B23A48"], dashInitialGap: 1.1 },
-  { startLat: 43.6532, startLng: -79.3832, endLat: -33.8688, endLng: 151.2093, color: ["#4BC0D9", "#B23A48"], dashInitialGap: 1.8 },
-  { startLat: 25.2048, startLng: 55.2708, endLat: 51.5074, endLng: -0.1278, color: ["#ffffff", "#ffffff"], dashInitialGap: 2.2 },
-  { startLat: 1.3521, startLng: 103.8198, endLat: 40.7128, endLng: -74.006, color: ["#B23A48", "#ffffff"], dashInitialGap: 2.9 },
-  { startLat: -33.8688, startLng: 151.2093, endLat: 25.2048, endLng: 55.2708, color: ["#4BC0D9", "#ffffff"], dashInitialGap: 3.5 },
-  { startLat: 51.5074, startLng: -0.1278, endLat: 43.6532, endLng: -79.3832, color: ["#ffffff", "#4BC0D9"], dashInitialGap: 4.1 },
-  { startLat: 40.7128, startLng: -74.006, endLat: 1.3521, endLng: 103.8198, color: ["#B23A48", "#4BC0D9"], dashInitialGap: 4.6 },
-  { startLat: 43.6532, startLng: -79.3832, endLat: 25.2048, endLng: 55.2708, color: ["#ffffff", "#B23A48"], dashInitialGap: 0.9 },
-  { startLat: -33.8688, startLng: 151.2093, endLat: 51.5074, endLng: -0.1278, color: ["#4BC0D9", "#ffffff"], dashInitialGap: 3.0 },
+  {
+    startLat: 40.7128,
+    startLng: -74.006,
+    endLat: 25.2048,
+    endLng: 55.2708,
+    color: ["#4BC0D9", "#ffffff"],
+    dashInitialGap: 0.4,
+  },
+  {
+    startLat: 51.5074,
+    startLng: -0.1278,
+    endLat: 1.3521,
+    endLng: 103.8198,
+    color: ["#ffffff", "#B23A48"],
+    dashInitialGap: 1.1,
+  },
+  {
+    startLat: 43.6532,
+    startLng: -79.3832,
+    endLat: -33.8688,
+    endLng: 151.2093,
+    color: ["#4BC0D9", "#B23A48"],
+    dashInitialGap: 1.8,
+  },
+  {
+    startLat: 25.2048,
+    startLng: 55.2708,
+    endLat: 51.5074,
+    endLng: -0.1278,
+    color: ["#ffffff", "#ffffff"],
+    dashInitialGap: 2.2,
+  },
+  {
+    startLat: 1.3521,
+    startLng: 103.8198,
+    endLat: 40.7128,
+    endLng: -74.006,
+    color: ["#B23A48", "#ffffff"],
+    dashInitialGap: 2.9,
+  },
+  {
+    startLat: -33.8688,
+    startLng: 151.2093,
+    endLat: 25.2048,
+    endLng: 55.2708,
+    color: ["#4BC0D9", "#ffffff"],
+    dashInitialGap: 3.5,
+  },
+  {
+    startLat: 51.5074,
+    startLng: -0.1278,
+    endLat: 43.6532,
+    endLng: -79.3832,
+    color: ["#ffffff", "#4BC0D9"],
+    dashInitialGap: 4.1,
+  },
+  {
+    startLat: 40.7128,
+    startLng: -74.006,
+    endLat: 1.3521,
+    endLng: 103.8198,
+    color: ["#B23A48", "#4BC0D9"],
+    dashInitialGap: 4.6,
+  },
+  {
+    startLat: 43.6532,
+    startLng: -79.3832,
+    endLat: 25.2048,
+    endLng: 55.2708,
+    color: ["#ffffff", "#B23A48"],
+    dashInitialGap: 0.9,
+  },
+  {
+    startLat: -33.8688,
+    startLng: 151.2093,
+    endLat: 51.5074,
+    endLng: -0.1278,
+    color: ["#4BC0D9", "#ffffff"],
+    dashInitialGap: 3.0,
+  },
 ];
 
 interface GlobeMarker {
@@ -62,7 +132,7 @@ export function Globe() {
       controls.autoRotate = true;
       controls.autoRotateSpeed = 0.5; // Slow, premium rotation
       controls.enableZoom = false; // Disable zoom to keep it looking like a UI element
-      
+
       // Point camera at a good starting angle
       globeRef.current.pointOfView({ lat: 20, lng: 0, altitude: 2.2 }, 1000);
     }
@@ -74,10 +144,10 @@ export function Globe() {
       const width = Math.min(window.innerWidth - 40, 800); // Max width 800
       setDimensions({ width, height: width });
     };
-    
-    window.addEventListener('resize', handleResize);
+
+    window.addEventListener("resize", handleResize);
     handleResize();
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -93,7 +163,6 @@ export function Globe() {
         showAtmosphere={true}
         atmosphereColor="#4BC0D9"
         atmosphereAltitude={0.15}
-        
         // Arcs
         arcsData={arcsData}
         arcColor="color"
@@ -102,14 +171,12 @@ export function Globe() {
         arcDashInitialGap={(arc: object) => (arc as ArcData).dashInitialGap}
         arcDashAnimateTime={4000}
         arcStroke={0.5} // Thin, luxurious lines
-        
         // Custom Points (Locations)
         pointsData={MARKERS}
         pointColor={() => "#ffffff"}
         pointAltitude={0.05}
         pointRadius={0.5}
         pointsMerge={true}
-        
         // Labels for points
         labelsData={MARKERS}
         labelLat={(d: unknown) => (d as GlobeMarker).lat}

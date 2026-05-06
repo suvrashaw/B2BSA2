@@ -5,11 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import type { MotionValue } from "framer-motion";
-import {
-  HOME_BLOGS_CONTENT,
-  type BlogItem,
-  type BlogsContent,
-} from "@/content/home";
+import { HOME_BLOGS_CONTENT, type BlogItem, type BlogsContent } from "@/content/home";
 
 export interface BlogsProps {
   content?: BlogsContent;
@@ -53,11 +49,12 @@ export function Blogs({
             {heading}
           </h2>
           <button className="mt-8 flex items-center gap-2 text-brand-charcoal font-semibold hover:text-brand-red:text-brand-red transition-all duration-300 group">
-            {ctaLabel} <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            {ctaLabel}{" "}
+            <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </button>
         </div>
 
-        <div 
+        <div
           className="relative h-[800px] lg:h-[450px] w-full max-w-3xl mx-auto flex items-center justify-center cursor-pointer perspective-1000"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
@@ -73,7 +70,6 @@ export function Blogs({
             />
           ))}
         </div>
-
       </div>
     </section>
   );
@@ -93,7 +89,7 @@ function BlogCard({
   spread: MotionValue<number>;
 }) {
   const [isMobile, setIsMobile] = useState(false);
-  
+
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 1024);
     checkMobile();

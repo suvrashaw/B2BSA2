@@ -1,4 +1,3 @@
-
 export const GES_HERO = {
   showPreloader: false,
   eyebrow: "GLOBAL EVENT SOLUTIONS",
@@ -42,49 +41,61 @@ export const GES_SERVICES = {
     {
       id: "booth-design",
       title: "Trade Show Booth Design",
-      description: "Architectural, immersive exhibition spaces engineered to stop traffic and capture enterprise leads.",
+      description:
+        "Architectural, immersive exhibition spaces engineered to stop traffic and capture enterprise leads.",
       icon: "Presentation",
-      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600",
+      image:
+        "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-blue",
     },
     {
       id: "event-lead-gen",
       title: "Event Lead Generation",
-      description: "NFC-powered, CRM-integrated lead capture systems that qualify prospects in real time.",
+      description:
+        "NFC-powered, CRM-integrated lead capture systems that qualify prospects in real time.",
       icon: "Target",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-cyan",
     },
     {
       id: "industry-events",
       title: "Industry Events Management",
-      description: "Full-service event logistics: venue selection, scheduling, vendor coordination, and on-site execution.",
+      description:
+        "Full-service event logistics: venue selection, scheduling, vendor coordination, and on-site execution.",
       icon: "MapPin",
-      image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1600",
+      image:
+        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-red",
     },
     {
       id: "custom-events",
       title: "Custom Events",
-      description: "Bespoke hosted events, product launches, and private executive gatherings designed around your audience.",
+      description:
+        "Bespoke hosted events, product launches, and private executive gatherings designed around your audience.",
       icon: "Zap",
-      image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1600",
+      image:
+        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-blue",
     },
     {
       id: "booth-rental",
       title: "Event Booth Rental",
-      description: "Premium modular booth systems available for short-term hire globally — fully branded and production-ready.",
+      description:
+        "Premium modular booth systems available for short-term hire globally — fully branded and production-ready.",
       icon: "Layers",
-      image: "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1600",
+      image:
+        "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-cyan",
     },
     {
       id: "booth-builder",
       title: "Trade Show Booth Builder",
-      description: "Custom-fabricated booth structures built from scratch to your specifications, delivered on time to any venue.",
+      description:
+        "Custom-fabricated booth structures built from scratch to your specifications, delivered on time to any venue.",
       icon: "Globe2",
-      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600",
+      image:
+        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-red",
     },
   ],
@@ -140,26 +151,34 @@ export const GES_WHY = {
     {
       id: "architecture",
       title: "Spatial Architecture That Converts",
-      description: "We treat exhibition space as a conversion funnel — designing traffic flow, dwell zones, and engagement sequences that maximise lead capture.",
-      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200",
+      description:
+        "We treat exhibition space as a conversion funnel — designing traffic flow, dwell zones, and engagement sequences that maximise lead capture.",
+      image:
+        "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200",
     },
     {
       id: "global",
       title: "True Global Execution",
-      description: "With established partnerships at every major venue across EMEA, APAC, and the Americas, we execute without compromise anywhere in the world.",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
+      description:
+        "With established partnerships at every major venue across EMEA, APAC, and the Americas, we execute without compromise anywhere in the world.",
+      image:
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
     },
     {
       id: "tech",
       title: "Technology-Led Lead Capture",
-      description: "NFC badges, CRM-synced apps, and real-time qualification scoring turn your booth into a data machine.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
+      description:
+        "NFC badges, CRM-synced apps, and real-time qualification scoring turn your booth into a data machine.",
+      image:
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
     },
     {
       id: "end-to-end",
       title: "End-to-End Accountability",
-      description: "One partner for strategy, design, fabrication, logistics, and on-floor management. No handoffs. No gaps.",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+      description:
+        "One partner for strategy, design, fabrication, logistics, and on-floor management. No handoffs. No gaps.",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };
@@ -184,7 +203,8 @@ export const GES_CASE_STUDIES = {
       metric: "+340%",
       metricLabel: "Lead Capture Rate",
       icon: "BarChart3",
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      image:
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
     },
     {
       id: "aws-2025",
@@ -195,7 +215,8 @@ export const GES_CASE_STUDIES = {
       metric: "$4M",
       metricLabel: "Pipeline in 4 Days",
       icon: "TrendingUp",
-      image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
+      image:
+        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };
@@ -219,7 +240,8 @@ export const GES_TESTIMONIALS = {
       rating: 5,
       quote:
         "B2B Sales Arrow transformed our exhibition presence. Their architectural approach to booth design and lead capture increased our qualified pipeline by 340% at GITEX.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
+      image:
+        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
     },
     {
       id: 2,
@@ -229,7 +251,8 @@ export const GES_TESTIMONIALS = {
       rating: 5,
       quote:
         "The pre-event strategy, on-floor activation, and post-show lead nurturing process they built for us was unlike anything we'd experienced with any event agency.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400",
+      image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400",
     },
     {
       id: 3,
@@ -239,7 +262,8 @@ export const GES_TESTIMONIALS = {
       rating: 5,
       quote:
         "We've exhibited at 20+ shows globally. B2BSA is the only partner that genuinely understands enterprise buyer psychology on the trade show floor.",
-      image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=400",
+      image:
+        "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=400",
     },
   ],
 };
@@ -261,21 +285,24 @@ export const GES_EVENTS = {
       title: "GITEX Technology Week 2026",
       date: "Oct 12 - 16, 2026",
       location: "Dubai World Trade Centre",
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      image:
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
     },
     {
       id: "mwc-2026",
       title: "Mobile World Congress 2026",
       date: "Feb 23 - 26, 2026",
       location: "Fira Gran Via, Barcelona",
-      image: "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=1200",
+      image:
+        "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=1200",
     },
     {
       id: "ces-2026",
       title: "CES 2026",
       date: "Jan 6 - 9, 2026",
       location: "Las Vegas Convention Center",
-      image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200",
+      image:
+        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };
@@ -296,27 +323,32 @@ export const GES_FAQ = {
     {
       id: "timeline",
       question: "How far in advance should I engage you for an event?",
-      answer: "For custom booth builds we recommend 12–16 weeks. Rental booths and smaller activations can be turned around in 4–6 weeks. Contact us as early as possible to secure your dates.",
+      answer:
+        "For custom booth builds we recommend 12–16 weeks. Rental booths and smaller activations can be turned around in 4–6 weeks. Contact us as early as possible to secure your dates.",
     },
     {
       id: "global",
       question: "Can you manage events outside of major markets?",
-      answer: "Yes. With partner networks across 40+ countries, we manage events in emerging markets including Southeast Asia, the Middle East, Africa, and Eastern Europe.",
+      answer:
+        "Yes. With partner networks across 40+ countries, we manage events in emerging markets including Southeast Asia, the Middle East, Africa, and Eastern Europe.",
     },
     {
       id: "lead-capture",
       question: "How does your lead capture technology work?",
-      answer: "We deploy NFC-based badge scanners and QR-code systems integrated directly to your CRM. Leads are qualified, scored, and segmented in real time during the event.",
+      answer:
+        "We deploy NFC-based badge scanners and QR-code systems integrated directly to your CRM. Leads are qualified, scored, and segmented in real time during the event.",
     },
     {
       id: "rental",
       question: "Do you offer booth rental for single events?",
-      answer: "Yes. Our premium modular rental systems are available globally, fully branded with your identity, and can be configured in sizes from 20 sqm to 500+ sqm.",
+      answer:
+        "Yes. Our premium modular rental systems are available globally, fully branded with your identity, and can be configured in sizes from 20 sqm to 500+ sqm.",
     },
     {
       id: "post-event",
       question: "What happens after the event?",
-      answer: "We deliver a full post-event analytics report including lead breakdown, engagement metrics, pipeline attribution, and recommended next steps within 5 business days.",
+      answer:
+        "We deliver a full post-event analytics report including lead breakdown, engagement metrics, pipeline attribution, and recommended next steps within 5 business days.",
     },
   ],
 };
@@ -331,7 +363,8 @@ export const GES_CONTACT = {
       </span>
     </>
   ),
-  description: "Tell us which events you're targeting and we'll design a presence strategy that outperforms your competitors.",
+  description:
+    "Tell us which events you're targeting and we'll design a presence strategy that outperforms your competitors.",
   illustration: {
     src: "/undraw_contact-us_s4jn.svg",
     alt: "Contact Us",

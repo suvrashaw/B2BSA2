@@ -3,10 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import {
-  HOME_CONTACT_CONTENT,
-  type ContactContent,
-} from "@/content/home";
+import { HOME_CONTACT_CONTENT, type ContactContent } from "@/content/home";
 
 export interface ContactUsProps {
   content?: ContactContent;
@@ -33,7 +30,6 @@ export function ContactUs({
 
       <div className="container mx-auto px-8 relative z-20">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          
           {/* Left Side: Contact Info & Image */}
           <div className="flex flex-col items-start text-left">
             <motion.div
@@ -49,9 +45,7 @@ export function ContactUs({
                 {heading}
               </h2>
             </div>
-            <p className="text-lg text-gray-600 mb-12 max-w-md text-left">
-              {description}
-            </p>
+            <p className="text-lg text-gray-600 mb-12 max-w-md text-left">{description}</p>
 
             {illustration && (
               <motion.div
@@ -76,17 +70,29 @@ export function ContactUs({
               <div className="grid grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-gray-600">{form.firstNameLabel}</label>
-                  <input type="text" className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors" placeholder={form.firstNamePlaceholder} />
+                  <input
+                    type="text"
+                    className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors"
+                    placeholder={form.firstNamePlaceholder}
+                  />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-gray-600">{form.lastNameLabel}</label>
-                  <input type="text" className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors" placeholder={form.lastNamePlaceholder} />
+                  <input
+                    type="text"
+                    className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors"
+                    placeholder={form.lastNamePlaceholder}
+                  />
                 </div>
               </div>
-              
+
               <div className="space-y-2">
                 <label className="text-sm font-bold text-gray-600">{form.emailLabel}</label>
-                <input type="email" className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors" placeholder={form.emailPlaceholder} />
+                <input
+                  type="email"
+                  className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors"
+                  placeholder={form.emailPlaceholder}
+                />
               </div>
 
               <div className="space-y-2">
@@ -94,23 +100,31 @@ export function ContactUs({
                 <select className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors appearance-none text-gray-600">
                   <option value="">{form.servicePlaceholder}</option>
                   {form.serviceOptions.map((option) => (
-                    <option key={option.value} value={option.value}>{option.label}</option>
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
                   ))}
                 </select>
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-bold text-gray-600">{form.messageLabel}</label>
-                <textarea rows={4} className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors resize-none" placeholder={form.messagePlaceholder}></textarea>
+                <textarea
+                  rows={4}
+                  className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors resize-none"
+                  placeholder={form.messagePlaceholder}
+                ></textarea>
               </div>
 
-              <button type="button" className="w-full py-4 rounded-xl bg-brand-blue text-white font-bold text-lg hover:bg-brand-blue/90 hover:shadow-[0_0_20px_rgba(30,96,145,0.4)] transition-all duration-300 flex items-center justify-center gap-2 group">
+              <button
+                type="button"
+                className="w-full py-4 rounded-xl bg-brand-blue text-white font-bold text-lg hover:bg-brand-blue/90 hover:shadow-[0_0_20px_rgba(30,96,145,0.4)] transition-all duration-300 flex items-center justify-center gap-2 group"
+              >
                 {form.ctaLabel}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </form>
           </div>
-
         </div>
       </div>
     </section>

@@ -6,12 +6,7 @@ import { ClientLogos } from "@/components/sections/ClientLogos";
 import { FAQ } from "@/components/sections/FAQ";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { Footer } from "@/components/layout/Footer";
-import {
-  CONTACT_HERO,
-  CONTACT_WHO_WE_ARE,
-  CONTACT_FAQ,
-  CONTACT_FORM,
-} from "@/content/contact";
+import { CONTACT_HERO, CONTACT_WHO_WE_ARE, CONTACT_FAQ, CONTACT_FORM } from "@/content/contact";
 import { getPageMetadata } from "@/content/pages";
 
 export const metadata: Metadata = getPageMetadata("/contact-us");

@@ -2,11 +2,19 @@ import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
-  TSBD_HERO, TSBD_WHY, TSBD_DELIVERABLES, TSBD_STATS,
-  TSBD_CASE_STUDIES, TSBD_TESTIMONIALS, TSBD_FAQ, TSBD_CONTACT,
+  TSBD_HERO,
+  TSBD_WHY,
+  TSBD_DELIVERABLES,
+  TSBD_STATS,
+  TSBD_CASE_STUDIES,
+  TSBD_TESTIMONIALS,
+  TSBD_FAQ,
+  TSBD_CONTACT,
 } from "@/content/services/detail/trade-show-booth-design";
 
-export const metadata: Metadata = getPageMetadata("/services/global-event-solutions/trade-show-booth-design");
+export const metadata: Metadata = getPageMetadata(
+  "/services/global-event-solutions/trade-show-booth-design"
+);
 
 export default function Page() {
   return (

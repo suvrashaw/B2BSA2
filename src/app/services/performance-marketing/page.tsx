@@ -2,8 +2,15 @@ import type { Metadata } from "next";
 import { ServiceHub } from "@/components/templates/ServiceHub";
 import { getPageMetadata } from "@/content/pages";
 import {
-  PERF_HERO, PERF_SERVICES, PERF_STATS, PERF_WHY, PERF_CASE_STUDIES,
-  PERF_TESTIMONIALS, PERF_BLOGS, PERF_FAQ, PERF_CONTACT,
+  PERF_HERO,
+  PERF_SERVICES,
+  PERF_STATS,
+  PERF_WHY,
+  PERF_CASE_STUDIES,
+  PERF_TESTIMONIALS,
+  PERF_BLOGS,
+  PERF_FAQ,
+  PERF_CONTACT,
 } from "@/content/services/performance-marketing";
 
 export const metadata: Metadata = getPageMetadata("/services/performance-marketing");

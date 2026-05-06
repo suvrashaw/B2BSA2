@@ -34,11 +34,7 @@ export function SectionHeader({
         align === "center" ? "items-center text-center" : "items-start text-left"
       )}
     >
-      {eyebrow ? (
-        <Eyebrow className={eyebrowClassName}>
-          {eyebrow}
-        </Eyebrow>
-      ) : null}
+      {eyebrow ? <Eyebrow className={eyebrowClassName}>{eyebrow}</Eyebrow> : null}
       <div className="flex w-full flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div className={cn("max-w-3xl", align === "center" && "mx-auto")}>
           <Heading as={headingLevel} className={headingClassName}>

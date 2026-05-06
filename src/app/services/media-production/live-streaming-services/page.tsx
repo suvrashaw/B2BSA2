@@ -2,11 +2,19 @@ import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
-  LSS_HERO, LSS_WHY, LSS_DELIVERABLES, LSS_STATS,
-  LSS_CASE_STUDIES, LSS_TESTIMONIALS, LSS_FAQ, LSS_CONTACT,
+  LSS_HERO,
+  LSS_WHY,
+  LSS_DELIVERABLES,
+  LSS_STATS,
+  LSS_CASE_STUDIES,
+  LSS_TESTIMONIALS,
+  LSS_FAQ,
+  LSS_CONTACT,
 } from "@/content/services/detail/live-streaming-services";
 
-export const metadata: Metadata = getPageMetadata("/services/media-production/live-streaming-services");
+export const metadata: Metadata = getPageMetadata(
+  "/services/media-production/live-streaming-services"
+);
 
 export default function Page() {
   return (

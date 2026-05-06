@@ -2,10 +2,7 @@
 
 import { Fragment, useState } from "react";
 import { motion, useAnimationFrame, useMotionValue, useTransform, wrap } from "framer-motion";
-import {
-  HOME_CLIENT_LOGOS,
-  type ClientLogoItem,
-} from "@/content/home";
+import { HOME_CLIENT_LOGOS, type ClientLogoItem } from "@/content/home";
 
 export interface ClientLogosProps {
   logos?: ClientLogoItem[];
@@ -167,7 +164,7 @@ export function ClientLogos({
 
   return (
     <div className="relative z-30 -mt-16 mx-auto container max-w-6xl px-4 md:px-8 pointer-events-none">
-      <div 
+      <div
         className="bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)](0,0,0,0.5)] py-6 border border-gray-100 pointer-events-auto overflow-hidden relative"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}

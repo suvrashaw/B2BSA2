@@ -3,10 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Calendar, MapPin } from "lucide-react";
 import Image from "next/image";
-import {
-  HOME_UPCOMING_EVENTS_CONTENT,
-  type UpcomingEventsContent,
-} from "@/content/home";
+import { HOME_UPCOMING_EVENTS_CONTENT, type UpcomingEventsContent } from "@/content/home";
 
 export interface UpcomingEventsProps {
   content?: UpcomingEventsContent;
@@ -63,7 +60,7 @@ export function UpcomingEvents({
                   className="object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                
+
                 {/* Hover Reveal CTA */}
                 <div className="absolute inset-0 bg-brand-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px] z-20">
                   <button className="bg-brand-blue text-white px-8 py-3 rounded-full font-medium shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 flex items-center gap-2">
@@ -88,7 +85,9 @@ export function UpcomingEvents({
                       <Calendar className="w-4 h-4 text-brand-blue" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Date</h4>
+                      <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">
+                        Date
+                      </h4>
                       <p className="text-brand-charcoal text-sm font-semibold">{event.date}</p>
                     </div>
                   </div>
@@ -97,8 +96,12 @@ export function UpcomingEvents({
                       <MapPin className="w-4 h-4 text-brand-cyan" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Location</h4>
-                      <p className="text-brand-charcoal text-sm font-semibold line-clamp-2">{event.location}</p>
+                      <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">
+                        Location
+                      </h4>
+                      <p className="text-brand-charcoal text-sm font-semibold line-clamp-2">
+                        {event.location}
+                      </p>
                     </div>
                   </div>
                 </div>

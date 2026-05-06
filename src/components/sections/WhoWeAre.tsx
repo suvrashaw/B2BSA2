@@ -2,11 +2,7 @@
 
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import Icon from "@/components/ui/Icon";
-import {
-  HOME_WHO_WE_ARE_CONTENT,
-  type WhoWeAreContent,
-  type WhoWeAreStat,
-} from "@/content/home";
+import { HOME_WHO_WE_ARE_CONTENT, type WhoWeAreContent, type WhoWeAreStat } from "@/content/home";
 
 function HoverCard({ stat }: { stat: WhoWeAreStat }) {
   const mouseX = useMotionValue(0);
@@ -36,13 +32,20 @@ function HoverCard({ stat }: { stat: WhoWeAreStat }) {
           `,
         }}
       />
-      
+
       {/* Content */}
       <div className="relative z-10">
-        <div className="text-sm font-bold opacity-90 mb-4 group-hover/card:text-red-600 transition-colors">{stat.label}</div>
+        <div className="text-sm font-bold opacity-90 mb-4 group-hover/card:text-red-600 transition-colors">
+          {stat.label}
+        </div>
         <div className="flex items-center justify-between">
-          <div className="text-4xl font-heading font-bold group-hover/card:text-red-600 transition-colors">{stat.value}</div>
-          <Icon name={stat.icon} className="w-6 h-6 opacity-50 group-hover/card:opacity-100 group-hover/card:text-red-600 transition-colors" />
+          <div className="text-4xl font-heading font-bold group-hover/card:text-red-600 transition-colors">
+            {stat.value}
+          </div>
+          <Icon
+            name={stat.icon}
+            className="w-6 h-6 opacity-50 group-hover/card:opacity-100 group-hover/card:text-red-600 transition-colors"
+          />
         </div>
       </div>
     </div>
@@ -71,7 +74,6 @@ export function WhoWeAre({
   return (
     <section id="about" className="py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-8 grid lg:grid-cols-2 gap-16 items-center">
-        
         {/* Left Side: Content */}
         <div className="space-y-12 flex flex-col items-start text-left">
           <div className="w-full text-left">
@@ -116,7 +118,6 @@ export function WhoWeAre({
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );

@@ -20,7 +20,8 @@ import {
 
 export const metadata: Metadata = {
   title: "B2B Industry Events | B2B Sales Arrow",
-  description: "Upcoming B2B trade shows and industry events. Let B2B Sales Arrow design your booth presence and maximise your pipeline at every event.",
+  description:
+    "Upcoming B2B trade shows and industry events. Let B2B Sales Arrow design your booth presence and maximise your pipeline at every event.",
 };
 
 export default function Page() {

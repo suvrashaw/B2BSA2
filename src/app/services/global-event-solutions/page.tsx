@@ -2,8 +2,15 @@ import type { Metadata } from "next";
 import { ServiceHub } from "@/components/templates/ServiceHub";
 import { getPageMetadata } from "@/content/pages";
 import {
-  GES_HERO, GES_SERVICES, GES_STATS, GES_WHY, GES_CASE_STUDIES,
-  GES_TESTIMONIALS, GES_EVENTS, GES_FAQ, GES_CONTACT,
+  GES_HERO,
+  GES_SERVICES,
+  GES_STATS,
+  GES_WHY,
+  GES_CASE_STUDIES,
+  GES_TESTIMONIALS,
+  GES_EVENTS,
+  GES_FAQ,
+  GES_CONTACT,
 } from "@/content/services/global-event-solutions";
 
 export const metadata: Metadata = getPageMetadata("/services/global-event-solutions");

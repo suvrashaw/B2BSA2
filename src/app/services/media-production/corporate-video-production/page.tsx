@@ -2,11 +2,19 @@ import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
-  CVP_HERO, CVP_WHY, CVP_DELIVERABLES, CVP_STATS,
-  CVP_CASE_STUDIES, CVP_TESTIMONIALS, CVP_FAQ, CVP_CONTACT,
+  CVP_HERO,
+  CVP_WHY,
+  CVP_DELIVERABLES,
+  CVP_STATS,
+  CVP_CASE_STUDIES,
+  CVP_TESTIMONIALS,
+  CVP_FAQ,
+  CVP_CONTACT,
 } from "@/content/services/detail/corporate-video-production";
 
-export const metadata: Metadata = getPageMetadata("/services/media-production/corporate-video-production");
+export const metadata: Metadata = getPageMetadata(
+  "/services/media-production/corporate-video-production"
+);
 
 export default function Page() {
   return (

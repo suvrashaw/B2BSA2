@@ -1,4 +1,3 @@
-
 export const BLOG_HERO = {
   showPreloader: false,
   eyebrow: "RESOURCES & INSIGHTS",

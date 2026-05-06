@@ -1,4 +1,3 @@
-
 export const ABOUT_HERO = {
   showPreloader: false,
   eyebrow: "WHO WE ARE",
@@ -35,7 +34,8 @@ export const ABOUT_ORIGIN_TIMELINE = {
       content: (
         <div className="prose prose-sm md:prose-base text-brand-charcoal/80 max-w-none">
           <p>
-            Enterprise brands were investing heavily in events and campaigns, but the work was fragmented, hard to measure, and disconnected from sales outcomes.
+            Enterprise brands were investing heavily in events and campaigns, but the work was
+            fragmented, hard to measure, and disconnected from sales outcomes.
           </p>
         </div>
       ),
@@ -45,7 +45,8 @@ export const ABOUT_ORIGIN_TIMELINE = {
       content: (
         <div className="prose prose-sm md:prose-base text-brand-charcoal/80 max-w-none">
           <p>
-            We built a model where event solutions, corporate video production, performance marketing, and B2B market research capabilities work together seamlessly.
+            We built a model where event solutions, corporate video production, performance
+            marketing, and B2B market research capabilities work together seamlessly.
           </p>
         </div>
       ),
@@ -55,7 +56,8 @@ export const ABOUT_ORIGIN_TIMELINE = {
       content: (
         <div className="prose prose-sm md:prose-base text-brand-charcoal/80 max-w-none">
           <p>
-            Today, we are a global enterprise growth agency delivering these solutions across 40+ countries with accountability to results.
+            Today, we are a global enterprise growth agency delivering these solutions across 40+
+            countries with accountability to results.
           </p>
         </div>
       ),
@@ -70,28 +72,32 @@ export const ABOUT_TEAM = {
       name: "Suvra Shaw",
       role: "Founder & CEO",
       bio: "The architect of B2B Sales Arrow's unified growth model, focusing on aligning event strategy with measurable sales outcomes.",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop",
       linkedin: "#",
     },
     {
       name: "Sumant Shaw",
       role: "Co-Founder & COO",
       bio: "Global operations lead ensuring seamless execution of high-fidelity media production and complex international exhibition builds.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop",
       linkedin: "#",
     },
     {
       name: "Elena Rodriguez",
       role: "VP of Digital Marketing",
       bio: "Performance marketing strategist focusing on MQL to SQL conversion and pipeline attribution for enterprise brands.",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop",
       linkedin: "#",
     },
     {
       name: "David Chen",
       role: "Director of Market Intelligence",
       bio: "Pioneer in human-powered research methodologies and high-precision contact discovery across 40+ countries.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop",
       linkedin: "#",
     },
   ],
@@ -163,31 +169,39 @@ export const ABOUT_STATS = {
 export const ABOUT_VALUES = {
   eyebrow: "OUR PRINCIPLES",
   heading: "What We Believe In",
-  description: "Accountability Over Activity | Precision Over Volume | Partnership Over Vendor Relationships | Global Thinking, Local Execution",
+  description:
+    "Accountability Over Activity | Precision Over Volume | Partnership Over Vendor Relationships | Global Thinking, Local Execution",
   reasons: [
     {
       id: "accountability",
       title: "Accountability Over Activity",
       description: "We measure success by pipeline impact, not just activity metrics.",
-      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1200",
+      image:
+        "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1200",
     },
     {
       id: "precision",
       title: "Precision Over Volume",
-      description: "Targeted strategies focused on the accounts that matter most to your enterprise.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
+      description:
+        "Targeted strategies focused on the accounts that matter most to your enterprise.",
+      image:
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
     },
     {
       id: "partnership",
       title: "Partnership Over Vendor Relationships",
-      description: "We operate as an extension of your team, aligned with your core business objectives.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      description:
+        "We operate as an extension of your team, aligned with your core business objectives.",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
     },
     {
       id: "global",
       title: "Global Thinking, Local Execution",
-      description: "With operations across 40+ countries, we bring a genuinely international lens to every local challenge.",
-      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
+      description:
+        "With operations across 40+ countries, we bring a genuinely international lens to every local challenge.",
+      image:
+        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };

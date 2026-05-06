@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import { motion, useInView } from "framer-motion";
-import { WhisperText } from "./WhisperText";
+import { WhisperText } from "@/components/ui/WhisperText";
 
 // Dynamically import Globe to avoid SSR issues
 const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
@@ -38,7 +38,7 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
   }, [globeReady]);
 
   return (
-    <section 
+    <section
       ref={containerRef}
       className="py-12 bg-brand-white text-brand-charcoal relative overflow-hidden transition-colors duration-500"
     >
@@ -54,20 +54,20 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
           <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 text-brand-cyan text-sm font-semibold tracking-wide uppercase">
             Global Presence
           </div>
-          
-          <WhisperText 
+
+          <WhisperText
             text={data.title}
             highlights={[data.title.split(" ")[0] || ""]}
             highlightColor="blue"
             className="font-heading text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-8 text-brand-charcoal transition-colors duration-500"
           />
-          
+
           <p className="text-lg md:text-xl text-brand-charcoal/70 leading-relaxed mb-10 transition-colors duration-500 font-bold uppercase tracking-widest">
             {data.description}
           </p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1, delay: 0.2 }}
@@ -89,7 +89,7 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
               htmlElementsData={data.cities}
               htmlElement={(d: object) => {
                 const item = d as LocationItem;
-                const el = document.createElement('div');
+                const el = document.createElement("div");
                 el.innerHTML = `
                   <div class="flex items-center gap-2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
                     <div class="w-2 h-2 rounded-full bg-[${item.color}] shadow-[0_0_10px_${item.color}] animate-pulse"></div>

@@ -2,8 +2,15 @@ import type { Metadata } from "next";
 import { ServiceHub } from "@/components/templates/ServiceHub";
 import { getPageMetadata } from "@/content/pages";
 import {
-  SQL_HERO, SQL_SERVICES, SQL_STATS, SQL_WHY, SQL_CASE_STUDIES,
-  SQL_TESTIMONIALS, SQL_BLOGS, SQL_FAQ, SQL_CONTACT,
+  SQL_HERO,
+  SQL_SERVICES,
+  SQL_STATS,
+  SQL_WHY,
+  SQL_CASE_STUDIES,
+  SQL_TESTIMONIALS,
+  SQL_BLOGS,
+  SQL_FAQ,
+  SQL_CONTACT,
 } from "@/content/services/sales-qualified-lead-generation";
 
 export const metadata: Metadata = getPageMetadata("/services/sales-qualified-lead-generation");

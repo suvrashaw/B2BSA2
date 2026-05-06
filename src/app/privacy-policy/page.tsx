@@ -4,13 +4,15 @@ import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Learn about how B2B Sales Arrow collects, uses, and protects your data in accordance with global privacy standards.",
+  description:
+    "Learn about how B2B Sales Arrow collects, uses, and protects your data in accordance with global privacy standards.",
   alternates: {
     canonical: "https://b2bsalesarrow.com/privacy-policy",
   },
   openGraph: {
     title: "Privacy Policy",
-    description: "Learn about how B2B Sales Arrow collects, uses, and protects your data in accordance with global privacy standards.",
+    description:
+      "Learn about how B2B Sales Arrow collects, uses, and protects your data in accordance with global privacy standards.",
     url: "https://b2bsalesarrow.com/privacy-policy",
     type: "website",
   },
@@ -27,23 +29,42 @@ export default function Page() {
             <p className="text-xl text-gray-500 mb-12">Last Updated: May 2024</p>
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6">1. Information We Collect</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">We collect information that you provide directly to us when you fill out a form, request a consultation, or contact us via email. This may include your name, email address, company name, and phone number.</p>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                We collect information that you provide directly to us when you fill out a form,
+                request a consultation, or contact us via email. This may include your name, email
+                address, company name, and phone number.
+              </p>
             </section>
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6">2. How We Use Your Information</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">We use the information we collect to provide, maintain, and improve our services, to communicate with you about your projects, and to send you insights and updates that may be relevant to your business.</p>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                We use the information we collect to provide, maintain, and improve our services, to
+                communicate with you about your projects, and to send you insights and updates that
+                may be relevant to your business.
+              </p>
             </section>
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6">3. Data Security</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">We take reasonable measures to protect your personal information from loss, theft, misuse, and unauthorized access. However, no internet transmission is ever completely secure or error-free.</p>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                We take reasonable measures to protect your personal information from loss, theft,
+                misuse, and unauthorized access. However, no internet transmission is ever
+                completely secure or error-free.
+              </p>
             </section>
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6">4. Cookies</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">Our website uses cookies to enhance your experience. You can choose to disable cookies in your browser settings, although this may affect the functionality of some parts of the site.</p>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Our website uses cookies to enhance your experience. You can choose to disable
+                cookies in your browser settings, although this may affect the functionality of some
+                parts of the site.
+              </p>
             </section>
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6">5. Contact Us</h2>
-              <p className="text-gray-600 leading-relaxed">If you have any questions about this Privacy Policy, please contact us at info@b2bsalesarrow.com.</p>
+              <p className="text-gray-600 leading-relaxed">
+                If you have any questions about this Privacy Policy, please contact us at
+                info@b2bsalesarrow.com.
+              </p>
             </section>
           </div>
         </div>

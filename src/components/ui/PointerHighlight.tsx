@@ -23,7 +23,7 @@ export const PointerHighlight = ({
       bg: hovered ? "bg-brand-red/30" : "bg-brand-red/15",
       text: hovered ? "text-brand-maroon" : "text-brand-red",
       border: "border-brand-red/30",
-    }
+    },
   };
 
   const active = colors[color];

@@ -49,9 +49,7 @@ export const TeamGrid = ({ data }: { data: TeamGridData }) => {
                   className="object-cover transition-all duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
-                  <p className="text-white text-sm leading-relaxed mb-4">
-                    {member.bio}
-                  </p>
+                  <p className="text-white text-sm leading-relaxed mb-4">{member.bio}</p>
                   {member.linkedin && member.linkedin !== "" && (
                     <Link
                       href={member.linkedin}
@@ -62,9 +60,7 @@ export const TeamGrid = ({ data }: { data: TeamGridData }) => {
                   )}
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-brand-charcoal font-heading">
-                {member.name}
-              </h3>
+              <h3 className="text-xl font-bold text-brand-charcoal font-heading">{member.name}</h3>
               <p className="text-sm text-gray-500 mt-1 uppercase tracking-wider font-semibold">
                 {member.role}
               </p>

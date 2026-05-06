@@ -1,4 +1,3 @@
-
 export const PERF_HERO = {
   showPreloader: false,
   eyebrow: "PERFORMANCE MARKETING",
@@ -42,25 +41,31 @@ export const PERF_SERVICES = {
     {
       id: "seo",
       title: "SEO Services",
-      description: "Technical SEO, content strategy, and link building to rank for the enterprise keywords your buyers search.",
+      description:
+        "Technical SEO, content strategy, and link building to rank for the enterprise keywords your buyers search.",
       icon: "Search",
-      image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=1600",
+      image:
+        "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-blue",
     },
     {
       id: "paid-ads",
       title: "Paid Advertising",
-      description: "Google Ads, programmatic display, and retargeting campaigns with enterprise-grade conversion tracking.",
+      description:
+        "Google Ads, programmatic display, and retargeting campaigns with enterprise-grade conversion tracking.",
       icon: "Zap",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-cyan",
     },
     {
       id: "linkedin",
       title: "LinkedIn Ads for B2B",
-      description: "Sponsored content, InMail, and Lead Gen Forms targeting C-suite and VP-level decision makers.",
+      description:
+        "Sponsored content, InMail, and Lead Gen Forms targeting C-suite and VP-level decision makers.",
       icon: "ExternalLink",
-      image: "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1600",
+      image:
+        "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-red",
     },
   ],
@@ -116,26 +121,34 @@ export const PERF_WHY = {
     {
       id: "b2b-specific",
       title: "Built for B2B Sales Cycles",
-      description: "We understand 6–18 month deal cycles, multi-stakeholder buying committees, and the metrics that actually predict pipeline — not just traffic.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      description:
+        "We understand 6–18 month deal cycles, multi-stakeholder buying committees, and the metrics that actually predict pipeline — not just traffic.",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
     },
     {
       id: "data-driven",
       title: "Rigorously Data-Driven",
-      description: "Every campaign decision is driven by data. We track from first impression to closed deal and optimise the entire funnel, not just the top.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+      description:
+        "Every campaign decision is driven by data. We track from first impression to closed deal and optimise the entire funnel, not just the top.",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     },
     {
       id: "linkedin-mastery",
       title: "LinkedIn Mastery",
-      description: "LinkedIn is the most powerful channel for B2B enterprise pipeline. We are among the top 1% of LinkedIn Marketing Partners globally by spend managed.",
-      image: "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1200",
+      description:
+        "LinkedIn is the most powerful channel for B2B enterprise pipeline. We are among the top 1% of LinkedIn Marketing Partners globally by spend managed.",
+      image:
+        "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1200",
     },
     {
       id: "integration",
       title: "Fully Integrated Strategy",
-      description: "SEO, paid, and organic working together — not in silos. Our campaigns compound each other, driving down cost per acquisition over time.",
-      image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=1200",
+      description:
+        "SEO, paid, and organic working together — not in silos. Our campaigns compound each other, driving down cost per acquisition over time.",
+      image:
+        "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };
@@ -160,7 +173,8 @@ export const PERF_CASE_STUDIES = {
       metric: "4.2x",
       metricLabel: "ROI in 6 Months",
       icon: "Target",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
     },
     {
       id: "synapse",
@@ -171,7 +185,8 @@ export const PERF_CASE_STUDIES = {
       metric: "180",
       metricLabel: "Enterprise Demos",
       icon: "ExternalLink",
-      image: "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1200",
+      image:
+        "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };
@@ -195,7 +210,8 @@ export const PERF_TESTIMONIALS = {
       rating: 5,
       quote:
         "Their data-driven insights and innovative web designs created an entirely new paradigm for how we engage our enterprise prospects. A flawless execution.",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400",
+      image:
+        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400",
     },
     {
       id: 2,
@@ -205,7 +221,8 @@ export const PERF_TESTIMONIALS = {
       rating: 5,
       quote:
         "A flawless execution from strategy to deployment. The ROI on the campaigns they structured for us broke all our previous quarter records.",
-      image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=400",
+      image:
+        "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=400",
     },
     {
       id: 3,
@@ -215,7 +232,8 @@ export const PERF_TESTIMONIALS = {
       rating: 5,
       quote:
         "Their LinkedIn campaigns penetrated the European enterprise market in a way our internal team had been trying — and failing — to do for two years.",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400",
+      image:
+        "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400",
     },
   ],
 };
@@ -235,21 +253,24 @@ export const PERF_BLOGS = {
       title: "Why LinkedIn Is the Highest-ROI Channel for B2B Enterprise",
       category: "LinkedIn",
       date: "Oct 5, 2025",
-      image: "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=800",
+      image:
+        "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=800",
     },
     {
       id: 2,
       title: "The B2B SEO Strategy That Dominates 'Enterprise' Keywords",
       category: "SEO",
       date: "Sep 18, 2025",
-      image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=800",
+      image:
+        "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=800",
     },
     {
       id: 3,
       title: "How to Build a Full-Funnel B2B Paid Media Strategy",
       category: "Paid Ads",
       date: "Sep 2, 2025",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
     },
   ],
 };
@@ -270,27 +291,32 @@ export const PERF_FAQ = {
     {
       id: "budget",
       question: "What is the minimum ad spend you work with?",
-      answer: "We typically work with clients spending a minimum of $5,000/month on paid media. Below this threshold, our management fees don't represent good value. We recommend starting with LinkedIn at $3,000 minimum.",
+      answer:
+        "We typically work with clients spending a minimum of $5,000/month on paid media. Below this threshold, our management fees don't represent good value. We recommend starting with LinkedIn at $3,000 minimum.",
     },
     {
       id: "timeline",
       question: "How long before I see results?",
-      answer: "SEO: 3–6 months for significant organic growth. Paid: first results within 2–4 weeks, meaningful ROI by month 2–3. LinkedIn: qualified pipeline typically appears in weeks 4–8.",
+      answer:
+        "SEO: 3–6 months for significant organic growth. Paid: first results within 2–4 weeks, meaningful ROI by month 2–3. LinkedIn: qualified pipeline typically appears in weeks 4–8.",
     },
     {
       id: "reporting",
       question: "What reporting do you provide?",
-      answer: "Weekly performance snapshots and monthly strategic reviews. All campaigns include a live dashboard with real-time metrics including pipeline attribution from first click to closed deal.",
+      answer:
+        "Weekly performance snapshots and monthly strategic reviews. All campaigns include a live dashboard with real-time metrics including pipeline attribution from first click to closed deal.",
     },
     {
       id: "industries",
       question: "Which industries do you specialise in?",
-      answer: "We specialise in enterprise B2B across SaaS, FinTech, Healthcare IT, Logistics, Manufacturing, and Professional Services. We have specific playbooks for each vertical.",
+      answer:
+        "We specialise in enterprise B2B across SaaS, FinTech, Healthcare IT, Logistics, Manufacturing, and Professional Services. We have specific playbooks for each vertical.",
     },
     {
       id: "contract",
       question: "What are your contract terms?",
-      answer: "We work on 3-month minimum engagements for marketing retainers to allow proper optimisation cycles. After 3 months, contracts roll monthly with 30-day notice.",
+      answer:
+        "We work on 3-month minimum engagements for marketing retainers to allow proper optimisation cycles. After 3 months, contracts roll monthly with 30-day notice.",
     },
   ],
 };
@@ -305,7 +331,8 @@ export const PERF_CONTACT = {
       </span>
     </>
   ),
-  description: "Tell us your growth targets and we'll design a performance marketing strategy engineered to hit them.",
+  description:
+    "Tell us your growth targets and we'll design a performance marketing strategy engineered to hit them.",
   illustration: {
     src: "/undraw_contact-us_s4jn.svg",
     alt: "Contact Us",

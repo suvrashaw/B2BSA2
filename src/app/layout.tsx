@@ -20,7 +20,8 @@ export const metadata: Metadata = {
     default: "B2B Sales Arrow | Premium Growth Partner",
     template: "%s | B2B Sales Arrow",
   },
-  description: "Global capability. Strategic growth. Enterprise event and digital solutions for modern businesses.",
+  description:
+    "Global capability. Strategic growth. Enterprise event and digital solutions for modern businesses.",
 };
 
 import { ThemeProvider } from "@/app/providers/ThemeProvider";
@@ -39,9 +40,7 @@ export default function RootLayout({
     >
       <body suppressHydrationWarning className="min-h-full flex flex-col">
         <ThemeProvider attribute="class" forcedTheme="light">
-          <SmoothScrollProvider>
-            {children}
-          </SmoothScrollProvider>
+          <SmoothScrollProvider>{children}</SmoothScrollProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -3,11 +3,19 @@ import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
-  EBR_HERO, EBR_WHY, EBR_DELIVERABLES, EBR_STATS,
-  EBR_CASE_STUDIES, EBR_TESTIMONIALS, EBR_FAQ, EBR_CONTACT,
+  EBR_HERO,
+  EBR_WHY,
+  EBR_DELIVERABLES,
+  EBR_STATS,
+  EBR_CASE_STUDIES,
+  EBR_TESTIMONIALS,
+  EBR_FAQ,
+  EBR_CONTACT,
 } from "@/content/services/detail/event-booth-rental";
 
-export const metadata: Metadata = getPageMetadata("/services/global-event-solutions/event-booth-rental");
+export const metadata: Metadata = getPageMetadata(
+  "/services/global-event-solutions/event-booth-rental"
+);
 
 export default function Page() {
   return (

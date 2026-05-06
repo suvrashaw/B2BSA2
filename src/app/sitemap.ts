@@ -9,12 +9,7 @@ function normalizePath(path: string) {
 }
 
 const canonicalUrls = Array.from(
-  new Set([
-    "/",
-    ...finalPageUrls.map(normalizePath),
-    "/privacy-policy",
-    "/terms-and-conditions",
-  ])
+  new Set(["/", ...finalPageUrls.map(normalizePath), "/privacy-policy", "/terms-and-conditions"])
 );
 
 export default function sitemap(): MetadataRoute.Sitemap {

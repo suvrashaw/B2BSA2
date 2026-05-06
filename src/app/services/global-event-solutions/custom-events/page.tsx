@@ -3,8 +3,14 @@ import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
-  CE_HERO, CE_WHY, CE_DELIVERABLES, CE_STATS,
-  CE_CASE_STUDIES, CE_TESTIMONIALS, CE_FAQ, CE_CONTACT,
+  CE_HERO,
+  CE_WHY,
+  CE_DELIVERABLES,
+  CE_STATS,
+  CE_CASE_STUDIES,
+  CE_TESTIMONIALS,
+  CE_FAQ,
+  CE_CONTACT,
 } from "@/content/services/detail/custom-events";
 
 export const metadata: Metadata = getPageMetadata("/services/global-event-solutions/custom-events");

@@ -3,11 +3,19 @@ import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
-  ELG_HERO, ELG_WHY, ELG_DELIVERABLES, ELG_STATS,
-  ELG_CASE_STUDIES, ELG_TESTIMONIALS, ELG_FAQ, ELG_CONTACT,
+  ELG_HERO,
+  ELG_WHY,
+  ELG_DELIVERABLES,
+  ELG_STATS,
+  ELG_CASE_STUDIES,
+  ELG_TESTIMONIALS,
+  ELG_FAQ,
+  ELG_CONTACT,
 } from "@/content/services/detail/event-lead-generation";
 
-export const metadata: Metadata = getPageMetadata("/services/global-event-solutions/event-lead-generation");
+export const metadata: Metadata = getPageMetadata(
+  "/services/global-event-solutions/event-lead-generation"
+);
 
 export default function Page() {
   return (

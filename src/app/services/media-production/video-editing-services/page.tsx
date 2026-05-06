@@ -2,11 +2,19 @@ import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
-  VES_HERO, VES_WHY, VES_DELIVERABLES, VES_STATS,
-  VES_CASE_STUDIES, VES_TESTIMONIALS, VES_FAQ, VES_CONTACT,
+  VES_HERO,
+  VES_WHY,
+  VES_DELIVERABLES,
+  VES_STATS,
+  VES_CASE_STUDIES,
+  VES_TESTIMONIALS,
+  VES_FAQ,
+  VES_CONTACT,
 } from "@/content/services/detail/video-editing-services";
 
-export const metadata: Metadata = getPageMetadata("/services/media-production/video-editing-services");
+export const metadata: Metadata = getPageMetadata(
+  "/services/media-production/video-editing-services"
+);
 
 export default function Page() {
   return (

@@ -2,11 +2,19 @@ import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
-  HPMI_HERO, HPMI_WHY, HPMI_DELIVERABLES, HPMI_STATS,
-  HPMI_CASE_STUDIES, HPMI_TESTIMONIALS, HPMI_FAQ, HPMI_CONTACT,
+  HPMI_HERO,
+  HPMI_WHY,
+  HPMI_DELIVERABLES,
+  HPMI_STATS,
+  HPMI_CASE_STUDIES,
+  HPMI_TESTIMONIALS,
+  HPMI_FAQ,
+  HPMI_CONTACT,
 } from "@/content/services/detail/human-powered-market-intelligence";
 
-export const metadata: Metadata = getPageMetadata("/services/market-research/human-powered-market-intelligence");
+export const metadata: Metadata = getPageMetadata(
+  "/services/market-research/human-powered-market-intelligence"
+);
 
 export default function Page() {
   return (

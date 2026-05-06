@@ -1,4 +1,3 @@
-
 export const TERMS_HERO = {
   showPreloader: false,
   eyebrow: "LEGAL",
@@ -32,8 +31,7 @@ export const TERMS_FAQ = {
       </span>
     </>
   ),
-  description:
-    "Hover any card to read the full detail. Questions? Contact us below.",
+  description: "Hover any card to read the full detail. Questions? Contact us below.",
   scrollAmount: 340,
   faqs: [
     {

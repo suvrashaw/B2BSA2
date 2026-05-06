@@ -4,10 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import Image from "next/image";
-import {
-  HOME_TESTIMONIALS_CONTENT,
-  type TestimonialsContent,
-} from "@/content/home";
+import { HOME_TESTIMONIALS_CONTENT, type TestimonialsContent } from "@/content/home";
 
 export interface TestimonialsProps {
   content?: TestimonialsContent;
@@ -18,11 +15,7 @@ export interface TestimonialsProps {
   initialIndex?: TestimonialsContent["initialIndex"];
 }
 
-function useCoverflowCarousel(
-  total: number,
-  initialIndex: number,
-  autoplayInterval: number
-) {
+function useCoverflowCarousel(total: number, initialIndex: number, autoplayInterval: number) {
   const [activeIndex, setActiveIndex] = useState(() =>
     Math.min(initialIndex, Math.max(total - 1, 0))
   );
@@ -76,19 +69,14 @@ export function Testimonials({
   autoplayInterval = content.autoplayInterval,
   initialIndex = content.initialIndex,
 }: TestimonialsProps = {}) {
-  const {
-    activeIndex,
-    getRelativePosition,
-    handleNext,
-    handlePrev,
-    setActiveIndex,
-  } = useCoverflowCarousel(testimonials.length, initialIndex, autoplayInterval);
+  const { activeIndex, getRelativePosition, handleNext, handlePrev, setActiveIndex } =
+    useCoverflowCarousel(testimonials.length, initialIndex, autoplayInterval);
 
   return (
     <section className="py-20 bg-[#F8F9FA] relative overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#1E6091]/5 rounded-full blur-[100px] pointer-events-none" />
-      
+
       <div className="container mx-auto px-8 relative z-10">
         <div className="flex flex-col items-start text-left mb-24">
           <motion.div
@@ -105,7 +93,7 @@ export function Testimonials({
         </div>
 
         {/* 3D Coverflow Container */}
-        <div 
+        <div
           className="relative h-[450px] sm:h-[400px] flex justify-center items-center w-full"
           style={{ perspective: "1000px" }}
         >
@@ -118,7 +106,7 @@ export function Testimonials({
             // Apple Coverflow Animation Variables
             const rotateY = isCenter ? 0 : pos > 0 ? -25 : 25;
             const x = isCenter ? 0 : pos > 0 ? `${65 * absPos}%` : `-${65 * absPos}%`;
-            const z = isCenter ? 100 : (-100 * absPos);
+            const z = isCenter ? 100 : -100 * absPos;
             const scale = isCenter ? 1 : 1 - 0.1 * absPos;
             const opacity = isCenter ? 1 : Math.max(0, 0.5 - 0.3 * (absPos - 1));
             const blur = isCenter ? 0 : 3 * absPos;
@@ -178,10 +166,12 @@ export function Testimonials({
                   </p>
 
                   <div className="pt-5 border-t border-gray-100">
-                    <p className="text-sm font-semibold text-[#1E6091]">{testimonial.designation}</p>
+                    <p className="text-sm font-semibold text-[#1E6091]">
+                      {testimonial.designation}
+                    </p>
                     <p className="text-xs text-gray-500 font-medium">{testimonial.company}</p>
                   </div>
-                  
+
                   {/* Subtle interaction overlay for side cards */}
                   {!isCenter && (
                     <div className="absolute inset-0 rounded-[20px] bg-white/5 hover:bg-transparent transition-colors duration-300" />
@@ -194,30 +184,28 @@ export function Testimonials({
 
         {/* Custom Pagination & Navigation */}
         <div className="flex justify-center items-center gap-6 mt-16 relative z-50">
-          <button 
+          <button
             onClick={handlePrev}
             className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-[#1E6091] hover:text-white hover:border-[#1E6091]:bg-[#4BC0D9]:text-[#1a1c1e] transition-all duration-300 shadow-sm"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
-          
+
           <div className="flex gap-2">
             {testimonials.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setActiveIndex(idx)}
                 className={`h-2 rounded-full transition-all duration-500 ease-out ${
-                  activeIndex === idx 
-                    ? "w-8 bg-[#1E6091]" 
-                    : "w-2 bg-gray-300"
+                  activeIndex === idx ? "w-8 bg-[#1E6091]" : "w-2 bg-gray-300"
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
             ))}
           </div>
 
-          <button 
+          <button
             onClick={handleNext}
             className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-[#1E6091] hover:text-white hover:border-[#1E6091]:bg-[#4BC0D9]:text-[#1a1c1e] transition-all duration-300 shadow-sm"
             aria-label="Next testimonial"

@@ -2,7 +2,7 @@
 
 import { ZoomParallax } from "@/components/ui/ZoomParallax";
 import { cn } from "@/lib";
-import { WhisperText } from "./WhisperText";
+import { WhisperText } from "@/components/ui/WhisperText";
 
 const PARALLAX_IMAGES = [
   {
@@ -44,8 +44,8 @@ export interface CultureData {
 
 export const Culture = ({ data }: { data: CultureData }) => {
   const parallaxImages = [
-    ...data.reasons.map(r => ({ src: r.image, alt: r.title })),
-    ...PARALLAX_IMAGES.slice(data.reasons.length)
+    ...data.reasons.map((r) => ({ src: r.image, alt: r.title })),
+    ...PARALLAX_IMAGES.slice(data.reasons.length),
   ].slice(0, 7);
 
   return (
@@ -63,8 +63,8 @@ export const Culture = ({ data }: { data: CultureData }) => {
         <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-charcoal/5 border border-brand-charcoal/10 text-brand-charcoal text-sm font-semibold tracking-wide uppercase transition-colors duration-500">
           {data.eyebrow}
         </div>
-        <WhisperText 
-          text={typeof data.heading === 'string' ? data.heading : "What We Believe In"}
+        <WhisperText
+          text={typeof data.heading === "string" ? data.heading : "What We Believe In"}
           highlights={["Believe"]}
           highlightColor="red"
           className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-charcoal mb-6 transition-colors duration-500"
@@ -73,10 +73,10 @@ export const Culture = ({ data }: { data: CultureData }) => {
           {data.description}
         </p>
       </div>
-      
+
       <ZoomParallax images={parallaxImages} />
-      
-      <div className="h-[20vh]"/>
+
+      <div className="h-[20vh]" />
     </section>
   );
 };

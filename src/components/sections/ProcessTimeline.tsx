@@ -56,10 +56,12 @@ export function ProcessTimeline({ steps, title, subtitle, className }: ProcessTi
 
                 {/* Content */}
                 <div className="w-full md:w-1/2 pl-8 md:px-12">
-                  <div className={cn(
-                    "p-8 rounded-2xl bg-white [#212529] shadow-xl border border-gray-100  hover:border-brand-blue/30 transition-all duration-300",
-                    index % 2 === 0 ? "text-left md:text-right" : "text-left"
-                  )}>
+                  <div
+                    className={cn(
+                      "p-8 rounded-2xl bg-white [#212529] shadow-xl border border-gray-100  hover:border-brand-blue/30 transition-all duration-300",
+                      index % 2 === 0 ? "text-left md:text-right" : "text-left"
+                    )}
+                  >
                     <div className="text-brand-blue  font-bold text-lg mb-2">
                       Phase 0{index + 1}
                     </div>

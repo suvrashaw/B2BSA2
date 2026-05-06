@@ -3,11 +3,19 @@ import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
-  IE_HERO, IE_WHY, IE_DELIVERABLES, IE_STATS,
-  IE_CASE_STUDIES, IE_TESTIMONIALS, IE_FAQ, IE_CONTACT,
+  IE_HERO,
+  IE_WHY,
+  IE_DELIVERABLES,
+  IE_STATS,
+  IE_CASE_STUDIES,
+  IE_TESTIMONIALS,
+  IE_FAQ,
+  IE_CONTACT,
 } from "@/content/services/detail/industry-events";
 
-export const metadata: Metadata = getPageMetadata("/services/global-event-solutions/industry-events");
+export const metadata: Metadata = getPageMetadata(
+  "/services/global-event-solutions/industry-events"
+);
 
 export default function Page() {
   return (

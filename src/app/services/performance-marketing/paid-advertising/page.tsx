@@ -2,11 +2,19 @@ import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
-  PAID_HERO, PAID_WHY, PAID_DELIVERABLES, PAID_STATS,
-  PAID_CASE_STUDIES, PAID_TESTIMONIALS, PAID_FAQ, PAID_CONTACT,
+  PAID_HERO,
+  PAID_WHY,
+  PAID_DELIVERABLES,
+  PAID_STATS,
+  PAID_CASE_STUDIES,
+  PAID_TESTIMONIALS,
+  PAID_FAQ,
+  PAID_CONTACT,
 } from "@/content/services/detail/paid-advertising";
 
-export const metadata: Metadata = getPageMetadata("/services/performance-marketing/paid-advertising");
+export const metadata: Metadata = getPageMetadata(
+  "/services/performance-marketing/paid-advertising"
+);
 
 export default function Page() {
   return (

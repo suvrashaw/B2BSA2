@@ -7,8 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "lint:styles": "stylelint \"src/**/*.css\"",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css,json}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css,json}\"",
     "typecheck": "tsc --noEmit --incremental false",
-    "check": "npm run lint && npm run typecheck && npm run build"
+    "check": "npm run format:check && npm run lint && npm run lint:styles && npm run typecheck && npm run build"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
@@ -37,6 +40,10 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.3",
+    "stylelint": "^17.11.0",
+    "stylelint-config-standard": "^40.0.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

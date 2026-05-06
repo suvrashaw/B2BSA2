@@ -288,8 +288,7 @@ export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = {
         "font-heading text-4xl md:text-6xl font-bold text-white leading-tight drop-shadow-lg",
       description: {
         text: "We don't just build booths. We architect conversion environments designed to capture enterprise leads and communicate market dominance.",
-        className:
-          "text-gray-200 mt-6 text-lg md:text-xl max-w-lg drop-shadow-md",
+        className: "text-gray-200 mt-6 text-lg md:text-xl max-w-lg drop-shadow-md",
       },
     },
     {
@@ -350,9 +349,7 @@ export const HOME_WHO_WE_ARE_CONTENT: WhoWeAreContent = {
   heading: (
     <>
       Engineering Growth for <br />
-      <span className="text-brand-blue">
-        Global Innovators
-      </span>
+      <span className="text-brand-blue">Global Innovators</span>
     </>
   ),
   quote:
@@ -434,8 +431,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
     {
       id: "digital",
       title: "Digital Marketing",
-      description:
-        "Data-driven growth architectures designed to scale enterprise pipeline.",
+      description: "Data-driven growth architectures designed to scale enterprise pipeline.",
       icon: "Rocket",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
@@ -444,8 +440,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
     {
       id: "lead-gen",
       title: "Lead Generation",
-      description:
-        "Precision-targeted acquisition strategies for high-value B2B accounts.",
+      description: "Precision-targeted acquisition strategies for high-value B2B accounts.",
       icon: "Users",
       image:
         "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600",
@@ -454,8 +449,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
     {
       id: "brand",
       title: "Brand Activation",
-      description:
-        "Strategic positioning and identity frameworks that outmaneuver competitors.",
+      description: "Strategic positioning and identity frameworks that outmaneuver competitors.",
       icon: "Lightbulb",
       image:
         "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600",
@@ -469,9 +463,7 @@ export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
   heading: (
     <>
       Impact That Drives <br />
-      <span className="text-brand-blue">
-        Market Valuation
-      </span>
+      <span className="text-brand-blue">Market Valuation</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -509,9 +501,7 @@ export const HOME_UPCOMING_EVENTS_CONTENT: UpcomingEventsContent = {
   heading: (
     <>
       Meet Us Where <br />
-      <span className="text-brand-blue">
-        Innovation Happens
-      </span>
+      <span className="text-brand-blue">Innovation Happens</span>
     </>
   ),
   badgeLabel: "Upcoming",
@@ -711,8 +701,7 @@ export const HOME_FAQ_CONTENT: FAQContent = {
   faqs: [
     {
       id: 1,
-      question:
-        "How does your strategic exhibition design differ from standard booth builders?",
+      question: "How does your strategic exhibition design differ from standard booth builders?",
       answer:
         "We treat exhibition space as an experiential marketing funnel. While standard builders focus on walls and graphics, we architect environments that control traffic flow and create immersive storytelling.",
     },

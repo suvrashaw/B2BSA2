@@ -1,4 +1,3 @@
-
 export const CASE_STUDIES_HERO = {
   showPreloader: false,
   eyebrow: "PROVEN RESULTS",

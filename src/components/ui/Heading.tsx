@@ -20,13 +20,7 @@ interface HeadingProps extends VariantProps<typeof headingVariants> {
   preserveClassName?: boolean;
 }
 
-export function Heading({
-  as: Tag,
-  children,
-  className,
-  preserveClassName,
-  level,
-}: HeadingProps) {
+export function Heading({ as: Tag, children, className, preserveClassName, level }: HeadingProps) {
   const resolvedLevel = level ?? Tag;
   const classes = preserveClassName
     ? className

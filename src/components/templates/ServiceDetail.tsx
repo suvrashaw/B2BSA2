@@ -22,10 +22,7 @@ export function JsonLd({ data }: { data: object }) {
 }
 
 import { getPageByUrl } from "@/content/pages";
-import {
-  buildBreadcrumbJsonLd,
-  buildFaqJsonLd,
-} from "@/lib";
+import { buildBreadcrumbJsonLd, buildFaqJsonLd } from "@/lib";
 import type { HeroProps } from "@/components/sections/Hero";
 import type { WhyChooseUsProps } from "@/components/sections/WhyChooseUs";
 import type { OurServicesProps } from "@/components/sections/OurServices";
@@ -57,8 +54,7 @@ function normalizePath(path: string) {
 function getBreadcrumbs(canonicalPath: string) {
   const normalizedPath = normalizePath(canonicalPath);
   const pathSegments = normalizedPath.split("/").filter(Boolean);
-  const parentPath =
-    pathSegments.length > 2 ? `/${pathSegments.slice(0, -1).join("/")}` : null;
+  const parentPath = pathSegments.length > 2 ? `/${pathSegments.slice(0, -1).join("/")}` : null;
   const crumbs = [{ name: "Home", url: siteUrl }];
 
   if (parentPath) {

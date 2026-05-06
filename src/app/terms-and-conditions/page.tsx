@@ -8,13 +8,15 @@ import { TERMS_HERO, TERMS_FAQ, TERMS_CONTACT } from "@/content/terms";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",
-  description: "Read the terms and conditions governing the use of the B2B Sales Arrow website and services.",
+  description:
+    "Read the terms and conditions governing the use of the B2B Sales Arrow website and services.",
   alternates: {
     canonical: "https://b2bsalesarrow.com/terms-and-conditions",
   },
   openGraph: {
     title: "Terms & Conditions",
-    description: "Read the terms and conditions governing the use of the B2B Sales Arrow website and services.",
+    description:
+      "Read the terms and conditions governing the use of the B2B Sales Arrow website and services.",
     url: "https://b2bsalesarrow.com/terms-and-conditions",
     type: "website",
   },

@@ -8,10 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { GlobalPresence } from "@/components/ui/GlobeVisualization";
 import { Globe } from "@/components/ui/Globe";
-import {
-  footerNavigation,
-  serviceNavigationGroups,
-} from "@/content/navigation";
+import { footerNavigation, serviceNavigationGroups } from "@/content/navigation";
 
 export function Footer() {
   const containerRef = useRef<HTMLElement>(null);
@@ -76,9 +73,8 @@ export function Footer() {
                   />
                 </Link>
                 <p className="text-gray-600 leading-relaxed mb-8 max-w-sm">
-                  The premier growth partner for ambitious B2B enterprises. We
-                  design, execute, and scale high-conversion physical and
-                  digital experiences globally.
+                  The premier growth partner for ambitious B2B enterprises. We design, execute, and
+                  scale high-conversion physical and digital experiences globally.
                 </p>
 
                 <div className="flex items-center gap-4">
@@ -175,14 +171,10 @@ export function Footer() {
 
             <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-4 pointer-events-auto">
               <p className="text-xs text-gray-500">
-                © {new Date().getFullYear()} B2B Sales Arrow. All rights
-                reserved.
+                © {new Date().getFullYear()} B2B Sales Arrow. All rights reserved.
               </p>
               <div className="flex gap-6 text-xs text-gray-500">
-                <Link
-                  href="/privacy-policy"
-                  className="hover:text-brand-blue transition-colors"
-                >
+                <Link href="/privacy-policy" className="hover:text-brand-blue transition-colors">
                   Privacy Policy
                 </Link>
                 <Link
@@ -191,10 +183,7 @@ export function Footer() {
                 >
                   Terms &amp; Conditions
                 </Link>
-                <Link
-                  href="#"
-                  className="hover:text-brand-blue transition-colors"
-                >
+                <Link href="#" className="hover:text-brand-blue transition-colors">
                   Cookie Settings
                 </Link>
               </div>

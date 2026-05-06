@@ -1,4 +1,3 @@
-
 export const THANK_YOU_HERO = {
   showPreloader: false,
   eyebrow: "MESSAGE RECEIVED",

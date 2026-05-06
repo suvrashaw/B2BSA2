@@ -4,10 +4,7 @@ import { useRef, useState } from "react";
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
-import {
-  HOME_WHY_CHOOSE_US_CONTENT,
-  type WhyChooseUsContent,
-} from "@/content/home";
+import { HOME_WHY_CHOOSE_US_CONTENT, type WhyChooseUsContent } from "@/content/home";
 
 export interface WhyChooseUsProps {
   content?: WhyChooseUsContent;
@@ -38,10 +35,7 @@ export function WhyChooseUs({
     if (reasons.length === 0) return;
 
     // Determine which item is active based on scroll progress
-    const index = Math.min(
-      reasons.length - 1,
-      Math.max(0, Math.floor(latest * reasons.length))
-    );
+    const index = Math.min(reasons.length - 1, Math.max(0, Math.floor(latest * reasons.length)));
     if (index !== activeIndex) {
       setActiveIndex(index);
     }
@@ -53,13 +47,16 @@ export function WhyChooseUs({
         The container needs to be tall enough to allow scrolling.
       */}
       <div className="absolute inset-0 pointer-events-none">
-         <div className="sticky top-0 w-full h-screen bg-brand-gray z-0" />
+        <div className="sticky top-0 w-full h-screen bg-brand-gray z-0" />
       </div>
 
-      <div className={`container mx-auto px-8 flex flex-col ${showImagePanel ? "md:flex-row" : "items-center"} relative z-10`}>
-        
+      <div
+        className={`container mx-auto px-8 flex flex-col ${showImagePanel ? "md:flex-row" : "items-center"} relative z-10`}
+      >
         {/* Left Side: Sticky Content */}
-        <div className={`w-full ${showImagePanel ? "md:w-1/2 md:pr-20" : "md:w-3/4 max-w-4xl text-center items-center"} md:sticky md:top-0 h-auto md:h-screen flex flex-col justify-center items-start py-20 md:py-0`}>
+        <div
+          className={`w-full ${showImagePanel ? "md:w-1/2 md:pr-20" : "md:w-3/4 max-w-4xl text-center items-center"} md:sticky md:top-0 h-auto md:h-screen flex flex-col justify-center items-start py-20 md:py-0`}
+        >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -68,10 +65,12 @@ export function WhyChooseUs({
           >
             {eyebrow}
           </motion.div>
-          <h2 className={`font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal mb-8 leading-tight w-full ${showImagePanel ? "text-left" : "text-center"}`}>
+          <h2
+            className={`font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal mb-8 leading-tight w-full ${showImagePanel ? "text-left" : "text-center"}`}
+          >
             {heading}
           </h2>
-          
+
           <div className="relative h-[150px] w-full flex justify-center">
             {activeReason && (
               <AnimatePresence mode="wait">
@@ -85,7 +84,9 @@ export function WhyChooseUs({
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <CheckCircle2 className="w-6 h-6 text-brand-blue" />
-                    <h3 className="font-heading text-3xl font-bold text-brand-charcoal">{activeReason.title}</h3>
+                    <h3 className="font-heading text-3xl font-bold text-brand-charcoal">
+                      {activeReason.title}
+                    </h3>
                   </div>
                   <p className="text-xl text-gray-600 leading-relaxed max-w-md">
                     {activeReason.description}
@@ -105,19 +106,16 @@ export function WhyChooseUs({
                 className="h-[80vh] md:h-screen w-full flex items-center justify-center p-8"
               >
                 <div className="relative w-full aspect-[4/5] md:aspect-square rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
-                  <Image
-                    src={reason.image}
-                    alt={reason.title}
-                    fill
-                    className="object-cover"
-                  />
+                  <Image src={reason.image} alt={reason.title} fill className="object-cover" />
                   <div className="absolute inset-0 bg-brand-blue/20 mix-blend-overlay" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  
+
                   {/* Mobile text fallback since sticky scroll might be weird on mobile */}
                   <div className="absolute bottom-8 left-8 right-8 md:hidden">
-                     <h3 className="font-heading text-2xl font-bold text-white mb-2">{reason.title}</h3>
-                     <p className="text-sm text-gray-200">{reason.description}</p>
+                    <h3 className="font-heading text-2xl font-bold text-white mb-2">
+                      {reason.title}
+                    </h3>
+                    <p className="text-sm text-gray-200">{reason.description}</p>
                   </div>
                 </div>
               </div>

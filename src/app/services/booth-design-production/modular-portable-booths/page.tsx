@@ -3,11 +3,19 @@ import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
-  MPB_HERO, MPB_WHY, MPB_DELIVERABLES, MPB_STATS,
-  MPB_CASE_STUDIES, MPB_TESTIMONIALS, MPB_FAQ, MPB_CONTACT,
+  MPB_HERO,
+  MPB_WHY,
+  MPB_DELIVERABLES,
+  MPB_STATS,
+  MPB_CASE_STUDIES,
+  MPB_TESTIMONIALS,
+  MPB_FAQ,
+  MPB_CONTACT,
 } from "@/content/services/detail/modular-portable-booths";
 
-export const metadata: Metadata = getPageMetadata("/services/booth-design-production/modular-portable-booths");
+export const metadata: Metadata = getPageMetadata(
+  "/services/booth-design-production/modular-portable-booths"
+);
 
 export default function Page() {
   return (

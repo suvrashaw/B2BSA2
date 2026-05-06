@@ -31,7 +31,7 @@ export function CaseStudies({
   const [activeId, setActiveId] = useState<string>(caseStudies[0]?.id ?? "");
   const activeCaseStudyId = caseStudies.some((study) => study.id === activeId)
     ? activeId
-    : caseStudies[0]?.id ?? "";
+    : (caseStudies[0]?.id ?? "");
 
   return (
     <section id="work" className="py-20 bg-brand-gray relative">
@@ -53,7 +53,7 @@ export function CaseStudies({
         <div className="flex flex-col lg:flex-row gap-4 h-[600px] w-full">
           {caseStudies.map((study) => {
             const isActive = activeCaseStudyId === study.id;
-            
+
             return (
               <motion.div
                 key={study.id}
@@ -78,24 +78,29 @@ export function CaseStudies({
                       isActive ? "scale-105" : "scale-100 grayscale hover:grayscale-0"
                     }`}
                   />
-                  <div 
+                  <div
                     className={`absolute inset-0 transition-opacity duration-500 ${
-                      isActive 
-                        ? "bg-gradient-to-t from-brand-charcoal/90 via-brand-charcoal/40 to-transparent" 
+                      isActive
+                        ? "bg-gradient-to-t from-brand-charcoal/90 via-brand-charcoal/40 to-transparent"
                         : "bg-brand-charcoal/60 group-hover:bg-brand-charcoal/40"
-                    }`} 
+                    }`}
                   />
                 </div>
 
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-end p-8">
                   <div className="flex items-start gap-4">
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center shrink-0 backdrop-blur-md transition-colors duration-300 ${
-                      isActive ? "bg-brand-blue/90" : "bg-white/10 group-hover:bg-brand-cyan/80"
-                    }`}>
-                      <Icon name={study.icon} className={`w-5 h-5 ${isActive ? "text-white" : "text-white"}`} />
+                    <div
+                      className={`w-12 h-12 rounded-full flex items-center justify-center shrink-0 backdrop-blur-md transition-colors duration-300 ${
+                        isActive ? "bg-brand-blue/90" : "bg-white/10 group-hover:bg-brand-cyan/80"
+                      }`}
+                    >
+                      <Icon
+                        name={study.icon}
+                        className={`w-5 h-5 ${isActive ? "text-white" : "text-white"}`}
+                      />
                     </div>
-                    
+
                     <AnimatePresence mode="popLayout">
                       {isActive && (
                         <motion.div
@@ -113,11 +118,17 @@ export function CaseStudies({
                           </h3>
                           <div className="grid grid-cols-2 gap-4">
                             <div>
-                              <h4 className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Challenge</h4>
-                              <p className="text-gray-200 text-xs line-clamp-2">{study.challenge}</p>
+                              <h4 className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">
+                                Challenge
+                              </h4>
+                              <p className="text-gray-200 text-xs line-clamp-2">
+                                {study.challenge}
+                              </p>
                             </div>
                             <div>
-                              <h4 className="text-[10px] font-bold text-brand-cyan uppercase tracking-wider mb-1">Solution</h4>
+                              <h4 className="text-[10px] font-bold text-brand-cyan uppercase tracking-wider mb-1">
+                                Solution
+                              </h4>
                               <p className="text-gray-200 text-xs line-clamp-2">{study.solution}</p>
                             </div>
                           </div>
@@ -156,7 +167,7 @@ export function CaseStudies({
                       </motion.button>
                     )}
                   </AnimatePresence>
-                  
+
                   {/* Floating Metric for Active State */}
                   <AnimatePresence>
                     {isActive && (
@@ -167,12 +178,15 @@ export function CaseStudies({
                         transition={{ delay: 0.3, duration: 0.4 }}
                         className="absolute top-8 right-8 bg-white/90 backdrop-blur-md px-4 py-3 rounded-2xl shadow-lg border border-white/20 flex flex-col items-center"
                       >
-                        <span className="font-heading font-bold text-2xl text-brand-blue">{study.metric}</span>
-                        <span className="text-[10px] uppercase font-bold text-gray-500 tracking-wider">{study.metricLabel}</span>
+                        <span className="font-heading font-bold text-2xl text-brand-blue">
+                          {study.metric}
+                        </span>
+                        <span className="text-[10px] uppercase font-bold text-gray-500 tracking-wider">
+                          {study.metricLabel}
+                        </span>
                       </motion.div>
                     )}
                   </AnimatePresence>
-
                 </div>
               </motion.div>
             );

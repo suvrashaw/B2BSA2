@@ -4,15 +4,12 @@ import { Hero } from "@/components/sections/Hero";
 import { OurServices } from "@/components/sections/OurServices";
 import { Blogs } from "@/components/sections/Blogs";
 import { Footer } from "@/components/layout/Footer";
-import {
-  THANK_YOU_HERO,
-  THANK_YOU_SERVICES,
-  THANK_YOU_BLOGS,
-} from "@/content/thank-you";
+import { THANK_YOU_HERO, THANK_YOU_SERVICES, THANK_YOU_BLOGS } from "@/content/thank-you";
 
 export const metadata: Metadata = {
   title: "Thank You",
-  description: "Thank you for contacting B2B Sales Arrow. Our team will review your message and get back to you shortly.",
+  description:
+    "Thank you for contacting B2B Sales Arrow. Our team will review your message and get back to you shortly.",
   robots: {
     index: false,
     follow: false,

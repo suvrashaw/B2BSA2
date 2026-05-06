@@ -3,10 +3,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { HelpCircle, ChevronLeft, ChevronRight } from "lucide-react";
-import {
-  HOME_FAQ_CONTENT,
-  type FAQContent,
-} from "@/content/home";
+import { HOME_FAQ_CONTENT, type FAQContent } from "@/content/home";
 
 export interface FAQProps {
   content?: FAQContent;
@@ -31,7 +28,7 @@ export function FAQ({
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   };
@@ -56,14 +53,12 @@ export function FAQ({
             <h2 className="font-heading text-3xl lg:text-5xl font-bold text-brand-charcoal mb-4">
               {heading}
             </h2>
-            <p className="text-gray-600 max-w-xl text-lg">
-              {description}
-            </p>
+            <p className="text-gray-600 max-w-xl text-lg">{description}</p>
           </div>
         </div>
 
         {/* Carousel Container */}
-        <div 
+        <div
           ref={scrollRef}
           className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
@@ -78,10 +73,7 @@ export function FAQ({
                 transition={{ delay: index * 0.1 }}
                 className="flex-shrink-0 w-[300px] md:w-[320px] h-[280px] [perspective:1000px] snap-center cursor-pointer group"
               >
-                <div 
-                  className="relative w-full h-full shadow-md hover:shadow-xl rounded-2xl transition-transform duration-500 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
-                >
-                  
+                <div className="relative w-full h-full shadow-md hover:shadow-xl rounded-2xl transition-transform duration-500 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   {/* Front Side: Question */}
                   <div className="absolute inset-0 w-full h-full bg-[#F8F9FA] rounded-2xl border border-gray-100 p-6 flex flex-col justify-center items-center text-center [backface-visibility:hidden]">
                     <div className="w-12 h-12 rounded-full bg-[#1E6091]/10 flex items-center justify-center mb-4 transition-transform group-hover:scale-110">
@@ -97,11 +89,8 @@ export function FAQ({
                     <div className="w-8 h-8 rounded-full bg-[#4BC0D9]/10 mx-auto flex items-center justify-center mb-4">
                       <div className="w-1.5 h-1.5 rounded-full bg-[#4BC0D9]" />
                     </div>
-                    <p className="text-[#212529] leading-relaxed text-sm">
-                      {faq.answer}
-                    </p>
+                    <p className="text-[#212529] leading-relaxed text-sm">{faq.answer}</p>
                   </div>
-
                 </div>
               </motion.div>
             );
@@ -110,28 +99,31 @@ export function FAQ({
 
         {/* Navigation Arrows Below Carousel */}
         <div className="flex items-center justify-center gap-4 mt-8">
-          <button 
+          <button
             onClick={() => scroll("left")}
             className="w-12 h-12 rounded-full border border-gray-200 bg-white text-brand-charcoal hover:bg-brand-blue hover:text-white:bg-brand-cyan hover:border-transparent transition-colors flex items-center justify-center shadow-sm"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
-          <button 
+          <button
             onClick={() => scroll("right")}
             className="w-12 h-12 rounded-full border border-gray-200 bg-white text-brand-charcoal hover:bg-brand-blue hover:text-white:bg-brand-cyan hover:border-transparent transition-colors flex items-center justify-center shadow-sm"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>
-
       </div>
 
       {/* Global styles to hide scrollbar for webkit */}
-      <style dangerouslySetInnerHTML={{__html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
         .scrollbar-hide::-webkit-scrollbar {
             display: none;
         }
-      `}} />
+      `,
+        }}
+      />
     </section>
   );
 }

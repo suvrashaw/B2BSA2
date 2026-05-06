@@ -1,4 +1,3 @@
-
 export const EVENTS_HERO = {
   showPreloader: false,
   eyebrow: "INDUSTRY EVENTS",

@@ -11,7 +11,6 @@ import { serviceNavigationGroups, topNavigation } from "@/content/navigation";
 
 // Remove ThemeToggle import
 
-
 export function Header({ forceLightMode = false }: { forceLightMode?: boolean } = {}) {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -21,9 +20,9 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-    
+
     handleScroll();
-    
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -41,7 +40,10 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
       )}
     >
       <div className="flex items-center gap-2">
-        <Link href="/" className="relative h-10 w-40 block transition-all duration-300 hover:opacity-80">
+        <Link
+          href="/"
+          className="relative h-10 w-40 block transition-all duration-300 hover:opacity-80"
+        >
           <Image
             src="/logo.png"
             alt="B2B Sales Arrow"
@@ -75,7 +77,10 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
                 <div className="w-[880px] max-w-[calc(100vw-4rem)] bg-white/95 backdrop-blur-md border border-gray-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)] rounded-lg p-5">
                   <div className="grid grid-cols-3 gap-4">
                     {serviceNavigationGroups.map((group) => (
-                      <div key={group.name} className="rounded-lg border border-brand-charcoal/5 bg-brand-gray/5 p-4">
+                      <div
+                        key={group.name}
+                        className="rounded-lg border border-brand-charcoal/5 bg-brand-gray/5 p-4"
+                      >
                         <Link
                           href={group.href}
                           className="mb-3 block text-sm font-black text-brand-charcoal hover:text-brand-blue transition-colors"
@@ -104,10 +109,12 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
       </nav>
 
       <div className="flex items-center gap-6">
-        <button className={cn(
-          "flex items-center gap-2 text-sm font-medium transition-colors",
-          "text-brand-charcoal/70 hover:text-brand-blue"
-        )}>
+        <button
+          className={cn(
+            "flex items-center gap-2 text-sm font-medium transition-colors",
+            "text-brand-charcoal/70 hover:text-brand-blue"
+          )}
+        >
           <span suppressHydrationWarning className="flex items-center">
             <Globe className="w-4 h-4" />
           </span>
@@ -124,7 +131,7 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
           </button>
         </Link>
         <div className="lg:hidden">
-          <button 
+          <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="p-2 text-brand-charcoal hover:bg-brand-gray/5 rounded-full transition-colors"
           >

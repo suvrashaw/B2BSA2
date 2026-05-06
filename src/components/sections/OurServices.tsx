@@ -55,22 +55,24 @@ export function OurServices({
               }}
             >
               <div className="bg-brand-gray border border-gray-200 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row h-auto md:h-[400px] relative group/card">
-                
                 {/* Content Area */}
                 <div className="w-full md:w-2/5 p-8 lg:p-12 flex flex-col justify-between relative z-10 pointer-events-none transition-all duration-700">
                   <div className={`absolute left-0 top-0 bottom-0 w-2 ${service.color}`} />
-                  
+
                   <div className="pointer-events-auto">
                     <div className="flex items-center gap-2 mb-6">
                       <span className="px-3 py-1 bg-white border border-gray-100 rounded-full text-xs font-bold text-gray-600 shadow-sm flex items-center gap-2 transition-colors duration-700 md:group-has-[.image-pane:hover]/card:bg-white/20 md:group-has-[.image-pane:hover]/card:text-white md:group-has-[.image-pane:hover]/card:border-transparent md:group-has-[.image-pane:hover]/card:backdrop-blur-md">
-                        <Icon name={service.icon} className="w-3 h-3 text-brand-blue md:group-has-[.image-pane:hover]/card:text-white transition-colors duration-700" />
+                        <Icon
+                          name={service.icon}
+                          className="w-3 h-3 text-brand-blue md:group-has-[.image-pane:hover]/card:text-white transition-colors duration-700"
+                        />
                         {serviceLabel}
                       </span>
                     </div>
                     <h3 className="font-heading text-3xl font-bold text-brand-charcoal mb-6 leading-tight transition-colors duration-700 md:group-has-[.image-pane:hover]/card:text-white drop-shadow-md">
                       {service.title}
                     </h3>
-                    
+
                     <p className="text-gray-600 font-medium leading-relaxed transition-colors duration-700 md:group-has-[.image-pane:hover]/card:text-gray-200 drop-shadow-md">
                       {service.description}
                     </p>
@@ -81,7 +83,7 @@ export function OurServices({
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
-                
+
                 {/* Image Area */}
                 <div className="w-full h-64 md:absolute md:right-0 md:top-0 md:bottom-0 md:w-3/5 md:h-full overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] md:hover:w-full z-0 group/image cursor-pointer image-pane">
                   <Image

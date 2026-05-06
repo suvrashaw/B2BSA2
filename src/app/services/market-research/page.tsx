@@ -2,8 +2,15 @@ import type { Metadata } from "next";
 import { ServiceHub } from "@/components/templates/ServiceHub";
 import { getPageMetadata } from "@/content/pages";
 import {
-  MR_HERO, MR_SERVICES, MR_STATS, MR_WHY, MR_CASE_STUDIES,
-  MR_TESTIMONIALS, MR_BLOGS, MR_FAQ, MR_CONTACT,
+  MR_HERO,
+  MR_SERVICES,
+  MR_STATS,
+  MR_WHY,
+  MR_CASE_STUDIES,
+  MR_TESTIMONIALS,
+  MR_BLOGS,
+  MR_FAQ,
+  MR_CONTACT,
 } from "@/content/services/market-research";
 
 export const metadata: Metadata = getPageMetadata("/services/market-research");

@@ -29,7 +29,11 @@ export default function Page() {
     <main className="min-h-screen bg-brand-gray">
       <Header />
       <Hero {...ABOUT_HERO} />
-      <Timeline data={ABOUT_ORIGIN_TIMELINE.items} heading={ABOUT_ORIGIN_TIMELINE.heading} description={ABOUT_ORIGIN_TIMELINE.description} />
+      <Timeline
+        data={ABOUT_ORIGIN_TIMELINE.items}
+        heading={ABOUT_ORIGIN_TIMELINE.heading}
+        description={ABOUT_ORIGIN_TIMELINE.description}
+      />
       <WhoWeAre {...ABOUT_STATS} />
       <TeamGrid data={ABOUT_TEAM} />
       <Culture data={ABOUT_VALUES} />

@@ -43,43 +43,43 @@ export default function Home() {
       <div id="home">
         <Hero />
       </div>
-      
+
       <CinematicSequence />
-      
+
       <ClientLogos />
-      
+
       <div id="about">
         <WhoWeAre />
       </div>
-      
+
       <div id="services">
         <OurServices />
       </div>
-      
+
       <div id="work">
         <CaseStudies />
       </div>
-      
+
       <div id="events">
         <UpcomingEvents />
       </div>
-      
+
       <WhyChooseUs />
-      
+
       <Testimonials />
-      
+
       <div id="blogs">
         <Blogs />
       </div>
-      
+
       <div id="faq">
         <FAQ />
       </div>
-      
+
       <div id="contact">
         <ContactUs />
       </div>
-      
+
       <Footer />
     </main>
   );

@@ -2,9 +2,9 @@
 
 /* eslint-disable react-hooks/immutability */
 
-import dynamic from 'next/dynamic';
-import { LucideProps } from 'lucide-react';
-import dynamicIconImports from 'lucide-react/dynamicIconImports';
+import dynamic from "next/dynamic";
+import { LucideProps } from "lucide-react";
+import dynamicIconImports from "lucide-react/dynamicIconImports";
 
 interface IconProps extends LucideProps {
   name: string;
@@ -13,8 +13,10 @@ interface IconProps extends LucideProps {
 const iconCache: Record<string, React.ComponentType<LucideProps>> = {};
 
 const Icon = ({ name, ...props }: IconProps) => {
-  const iconName = (name in dynamicIconImports ? name : "HelpCircle") as keyof typeof dynamicIconImports;
-  
+  const iconName = (
+    name in dynamicIconImports ? name : "HelpCircle"
+  ) as keyof typeof dynamicIconImports;
+
   if (!iconCache[iconName]) {
     iconCache[iconName] = dynamic(dynamicIconImports[iconName]);
   }

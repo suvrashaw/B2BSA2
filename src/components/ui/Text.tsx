@@ -19,11 +19,6 @@ interface TextProps extends VariantProps<typeof textVariants> {
   className?: string;
 }
 
-export function Text({
-  as: Tag = "p",
-  children,
-  className,
-  variant = "section",
-}: TextProps) {
+export function Text({ as: Tag = "p", children, className, variant = "section" }: TextProps) {
   return <Tag className={cn(textVariants({ variant }), className)}>{children}</Tag>;
 }

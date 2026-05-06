@@ -13,10 +13,10 @@ if (typeof window !== "undefined") {
 interface WhisperTextProps {
   text: string;
   className?: string;
-  delay?: number; 
-  duration?: number; 
-  x?: number;   
-  y?: number;  
+  delay?: number;
+  duration?: number;
+  x?: number;
+  y?: number;
   triggerStart?: string;
   highlights?: string[];
   highlightColor?: "blue" | "red";
@@ -67,7 +67,7 @@ export const WhisperText: React.FC<WhisperTextProps> = ({
       }
       const cleanWord = word.replace(/[.,]/g, "");
       const isHighlighted = highlights?.includes(cleanWord);
-      
+
       const content = isHighlighted ? (
         <PointerHighlight color={highlightColor}>
           <span>{word}</span>

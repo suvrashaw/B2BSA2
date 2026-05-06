@@ -1,4 +1,3 @@
-
 export const CONTACT_HERO = {
   showPreloader: false,
   eyebrow: "LET'S CONNECT",
@@ -74,8 +73,7 @@ export const CONTACT_FAQ = {
       </span>
     </>
   ),
-  description:
-    "Answers to what most clients ask before starting their first engagement with us.",
+  description: "Answers to what most clients ask before starting their first engagement with us.",
   scrollAmount: 340,
   faqs: [
     {

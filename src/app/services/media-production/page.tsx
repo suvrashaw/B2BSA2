@@ -2,8 +2,15 @@ import type { Metadata } from "next";
 import { ServiceHub } from "@/components/templates/ServiceHub";
 import { getPageMetadata } from "@/content/pages";
 import {
-  MEDIA_HERO, MEDIA_SERVICES, MEDIA_STATS, MEDIA_WHY, MEDIA_CASE_STUDIES,
-  MEDIA_TESTIMONIALS, MEDIA_BLOGS, MEDIA_FAQ, MEDIA_CONTACT,
+  MEDIA_HERO,
+  MEDIA_SERVICES,
+  MEDIA_STATS,
+  MEDIA_WHY,
+  MEDIA_CASE_STUDIES,
+  MEDIA_TESTIMONIALS,
+  MEDIA_BLOGS,
+  MEDIA_FAQ,
+  MEDIA_CONTACT,
 } from "@/content/services/media-production";
 
 export const metadata: Metadata = getPageMetadata("/services/media-production");

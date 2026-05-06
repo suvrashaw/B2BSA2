@@ -9,8 +9,6 @@ interface EyebrowProps {
 
 export function Eyebrow({ as: Tag = "span", children, className }: EyebrowProps) {
   return (
-    <Tag className={cn("text-sm font-semibold tracking-wide uppercase", className)}>
-      {children}
-    </Tag>
+    <Tag className={cn("text-sm font-semibold tracking-wide uppercase", className)}>{children}</Tag>
   );
 }

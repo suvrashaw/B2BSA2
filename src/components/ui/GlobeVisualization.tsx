@@ -3,14 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const COUNTRIES = [
-  "New York",
-  "London",
-  "Dubai",
-  "Singapore",
-  "Sydney",
-  "Toronto",
-];
+const COUNTRIES = ["New York", "London", "Dubai", "Singapore", "Sydney", "Toronto"];
 
 export function GlobalPresence() {
   const [activeIndex, setActiveIndex] = useState(0);

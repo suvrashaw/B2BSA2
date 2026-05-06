@@ -14,11 +14,7 @@ interface CmsHeadingRendererProps {
   className?: string;
 }
 
-export function CmsHeadingRenderer({
-  data,
-  level,
-  className,
-}: CmsHeadingRendererProps) {
+export function CmsHeadingRenderer({ data, level, className }: CmsHeadingRendererProps) {
   const { text, highlight, highlightVariant = "blue" } = data;
 
   if (!highlight || !text.includes(highlight)) {

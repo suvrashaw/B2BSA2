@@ -85,20 +85,11 @@ function CinematicBeatOverlay({
   const pointerEvents = useTransform(opacity, (v) => (v > 0 ? "auto" : "none"));
 
   return (
-    <motion.div
-      style={{ opacity, y, pointerEvents }}
-      className={beat.className}
-    >
-      {beat.eyebrow && (
-        <span className={beat.eyebrow.className}>{beat.eyebrow.text}</span>
-      )}
+    <motion.div style={{ opacity, y, pointerEvents }} className={beat.className}>
+      {beat.eyebrow && <span className={beat.eyebrow.className}>{beat.eyebrow.text}</span>}
       <h2 className={beat.titleClassName}>{beat.title}</h2>
-      {beat.description && (
-        <p className={beat.description.className}>{beat.description.text}</p>
-      )}
-      {beat.cta && (
-        <button className={beat.cta.className}>{beat.cta.label}</button>
-      )}
+      {beat.description && <p className={beat.description.className}>{beat.description.text}</p>}
+      {beat.cta && <button className={beat.cta.className}>{beat.cta.label}</button>}
     </motion.div>
   );
 }
@@ -113,7 +104,11 @@ export function CinematicSequence({
 }: CinematicSequenceProps = {}) {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const { imagesRef, imagesLoaded } = useCinematicFrameImages(frameCount, frameUrlTemplate, frameUrls);
+  const { imagesRef, imagesLoaded } = useCinematicFrameImages(
+    frameCount,
+    frameUrlTemplate,
+    frameUrls
+  );
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -123,17 +118,14 @@ export function CinematicSequence({
   // Track progress and draw the corresponding frame
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     if (!imagesLoaded || !canvasRef.current) return;
-    
+
     // Map latest (0-1) to frame index (0-59)
-    const frameIndex = Math.min(
-      frameCount - 1,
-      Math.floor(latest * frameCount)
-    );
+    const frameIndex = Math.min(frameCount - 1, Math.floor(latest * frameCount));
 
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     const img = imagesRef.current[frameIndex];
-    
+
     if (ctx && img) {
       drawCover(ctx, img, canvas.width, canvas.height);
     }
@@ -144,38 +136,29 @@ export function CinematicSequence({
     if (!imagesLoaded || !canvasRef.current) return;
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    
+
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       // Re-draw current frame based on scroll on resize
-      const frameIndex = Math.min(
-        frameCount - 1,
-        Math.floor(scrollYProgress.get() * frameCount)
-      );
+      const frameIndex = Math.min(frameCount - 1, Math.floor(scrollYProgress.get() * frameCount));
       if (ctx && imagesRef.current[frameIndex]) {
         drawCover(ctx, imagesRef.current[frameIndex], canvas.width, canvas.height);
       }
     };
-    
+
     window.addEventListener("resize", handleResize);
     handleResize(); // trigger once
-    
+
     return () => window.removeEventListener("resize", handleResize);
   }, [frameCount, imagesLoaded, imagesRef, scrollYProgress]);
 
   return (
-    <section 
-      ref={containerRef} 
-      className="relative h-[400vh] bg-black"
-    >
+    <section ref={containerRef} className="relative h-[400vh] bg-black">
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center">
         {/* Frame canvas */}
-        <canvas 
-          ref={canvasRef} 
-          className="absolute inset-0"
-        />
-        
+        <canvas ref={canvasRef} className="absolute inset-0" />
+
         {/* Dark overlay for readability */}
         <div className="absolute inset-0 bg-black/40" />
 
@@ -187,13 +170,8 @@ export function CinematicSequence({
         )}
 
         {beats.map((beat) => (
-          <CinematicBeatOverlay
-            key={beat.id}
-            beat={beat}
-            progress={scrollYProgress}
-          />
+          <CinematicBeatOverlay key={beat.id} beat={beat} progress={scrollYProgress} />
         ))}
-
       </div>
     </section>
   );

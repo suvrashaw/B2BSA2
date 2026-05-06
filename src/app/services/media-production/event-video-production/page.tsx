@@ -2,11 +2,19 @@ import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
-  EVP_HERO, EVP_WHY, EVP_DELIVERABLES, EVP_STATS,
-  EVP_CASE_STUDIES, EVP_TESTIMONIALS, EVP_FAQ, EVP_CONTACT,
+  EVP_HERO,
+  EVP_WHY,
+  EVP_DELIVERABLES,
+  EVP_STATS,
+  EVP_CASE_STUDIES,
+  EVP_TESTIMONIALS,
+  EVP_FAQ,
+  EVP_CONTACT,
 } from "@/content/services/detail/event-video-production";
 
-export const metadata: Metadata = getPageMetadata("/services/media-production/event-video-production");
+export const metadata: Metadata = getPageMetadata(
+  "/services/media-production/event-video-production"
+);
 
 export default function Page() {
   return (
