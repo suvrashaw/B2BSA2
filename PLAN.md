@@ -1,1026 +1,871 @@
-# Authoritative Master Plan: B2B Sales Arrow (B2BSA2)
+# PLAN-2: Component System, Mock CMS, Folder Restructure
 
-This is the single canonical plan. It supersedes all previous PLAN N.md files. Every implementation decision below is grounded in the current file state as of 2026-05-07.
-
----
-
-## 1. Project Identity & Non-Negotiable Constraints
-
-**Stack:** Next.js 16.2.4, React 19, TypeScript (strict), Tailwind CSS v4 (CSS-variable config in `src/app/globals.css`), Framer Motion 12, GSAP 3 + ScrollTrigger, Three.js, react-globe.gl, Lenis smooth scroll, Swiper, CVA, clsx, tailwind-merge.
-
-**Design tokens (from `globals.css`):**
-- `--color-brand-blue: #1E6091`
-- `--color-brand-cyan: #4BC0D9`
-- `--color-brand-red: #B23A48`
-- `--color-brand-charcoal: (dark near-black)`
-- `--color-brand-gray: (light background)`
-- `--font-heading` → Playfair Display (loaded in `layout.tsx`)
-- `--font-sans` → Montserrat (loaded in `layout.tsx`)
-
-**Absolute constraints:**
-- Zero visual change to any page. Layout, spacing, type rhythm, colors, shadows, animations, and interactions must be pixel-identical before and after every phase.
-- Never change package versions.
-- Never commit secrets (`.env.mcp` is gitignored).
-- Never use Vue/Vuetify patterns.
-- Use existing components before creating new ones.
-- Keep animation code isolated; do not refactor `CinematicSequence.tsx`, `CinematicFooter.tsx` GSAP logic, or `Hero.tsx` scroll parallax.
-- `CinematicSequence.tsx` is an explicit heading exception — it uses animation-driven `titleClassName` from content data and must not be forced through the shared `Heading` component.
-
-**Implementation order discipline:** Complete each phase fully and verify before starting the next. Design preservation overrides component abstraction if the two conflict.
+Picks up after PLAN.md is fully verified. Confirmed prerequisite state as of 2026-05-07:
+- Build, lint, and typecheck all pass cleanly
+- `Heading`, `Text`, `Eyebrow`, `GradientText`, `Card`, `ImageFrame`, `CmsHeadingRenderer`, `SectionShell`, `SectionHeader` exist
+- `HomeHero`, `GlobalPresence`, `zoom-parallax`, `logo-cloud-3` stubs exist
+- All 3 non-canonical routes redirect
+- `sitemap.ts`, `robots.ts`, `metadataBase` in place
+- CinematicFooter nav labels are `span`, Testimonials reviewer name is `p`
 
 ---
 
-## 2. Current State Audit
+## Design Decisions
 
-### 2.1 Route Inventory (35 routes)
+**Heading variants:** One canonical class per level. No named sub-variants in `Heading.tsx`. Use `className` to override, use `preserveClassName` for animation exceptions (`CinematicSequence`, `CinematicFooter` display h2, About editorial h1). This keeps the API minimal and forces intentional overrides to be explicit.
 
-| Route | File | Notes |
-|---|---|---|
-| `/` | `src/app/page.tsx` | Build-broken: bad HomeHero import |
-| `/about-us` | `src/app/about-us/page.tsx` | Build-broken: bad HomeHero import |
-| `/blog` | `src/app/blog/page.tsx` | — |
-| `/case-studies` | `src/app/case-studies/page.tsx` | — |
-| `/contact-us` | `src/app/contact-us/page.tsx` | — |
-| `/events` | `src/app/events/page.tsx` | Not in canonical URL list |
-| `/privacy-policy` | `src/app/privacy-policy/page.tsx` | — |
-| `/terms-and-conditions` | `src/app/terms-and-conditions/page.tsx` | — |
-| `/thank-you` | `src/app/thank-you/page.tsx` | — |
-| `/services/global-event-solutions` | `…/page.tsx` | Canonical hub |
-| `/services/global-event-solutions/trade-show-booth-design` | — | Canonical detail |
-| `/services/global-event-solutions/event-lead-generation` | — | Canonical detail |
-| `/services/global-event-solutions/industry-events` | — | Canonical detail |
-| `/services/global-event-solutions/custom-events` | — | Canonical detail |
-| `/services/global-event-solutions/event-booth-rental` | — | Canonical detail |
-| `/services/global-event-solutions/trade-show-booth-builder` | — | Canonical detail |
-| `/services/global-event-solutions/modular-portable-booths` | — | **Non-canonical** → redirect |
-| `/services/booth-design-production/modular-portable-booths` | — | Canonical detail |
-| `/services/media-production` | — | Canonical hub |
-| `/services/media-production/event-video-production` | — | Canonical detail |
-| `/services/media-production/corporate-video-production` | — | Canonical detail |
-| `/services/media-production/video-editing-services` | — | Canonical detail |
-| `/services/media-production/live-streaming-services` | — | Canonical detail |
-| `/services/media-production/video-testimonials` | — | **Non-canonical** → redirect |
-| `/services/media-production/youtube-ads-b2b` | — | **Non-canonical** → redirect |
-| `/services/performance-marketing` | — | Canonical hub |
-| `/services/media-production/seo-services` | — | Canonical detail |
-| `/services/performance-marketing/paid-advertising` | — | Canonical detail |
-| `/services/performance-marketing/linkedin-ads-b2b` | — | Canonical detail |
-| `/services/market-research` | — | Canonical hub |
-| `/services/market-research/data-augmentation` | — | Canonical detail |
-| `/services/market-research/data-validation` | — | Canonical detail |
-| `/services/market-research/human-powered-market-intelligence` | — | Canonical detail |
-| `/services/sales-qualified-lead-generation` | — | Canonical detail |
+**CMS heading shape:** Leave existing `src/content/` files as plain strings. `CmsHeadingRenderer` accepts both `string` and `{ text, highlight, highlightVariant }`. Content files are only migrated to the structured shape when a real CMS is connected.
 
-### 2.2 Component Inventory
+**PageScaffold:** Not created. `Header` and `Footer` must always be declared explicitly in route files. A scaffold wrapping them would obscure page structure and conflict with per-route metadata patterns.
 
-**`src/components/sections/` (20 files):**
-`Blogs.tsx`, `CTABanner.tsx`, `CaseStudies.tsx`, `CinematicSequence.tsx`, `ClientLogos.tsx`, `ComparisonTable.tsx`, `ContactUs.tsx`, `FAQ.tsx`, `FAQAccordion.tsx`, `Hero.tsx`, `OurServices.tsx`, `ProcessTimeline.tsx`, `ServicesGrid.tsx`, `StatsBar.tsx`, `Testimonials.tsx`, `TextSection.tsx`, `USPSection.tsx`, `UpcomingEvents.tsx`, `WhoWeAre.tsx`, `WhyChooseUs.tsx`
-
-**`src/components/ui/` (7 files):**
-`Globe.tsx`, `GlobeVisualization.tsx`, `Icon.tsx`, `button.tsx`, `button-colorful.tsx`, `infinite-slider.tsx`, `timeline.tsx`
-
-**`src/components/layout/` (3 files):**
-`Header.tsx`, `Footer.tsx`, `CinematicFooter.tsx`
-
-**`src/components/about/` (13 files):**
-`AboutPageContent.tsx`, `animated-h3.tsx`, `background-ripple-effect.tsx`, `clients-marquee.tsx`, `cta-section.tsx`, `culture.tsx`, `editorial-hero.tsx`, `global-presence.tsx`, `layout-text-flip.tsx`, `pointer-highlight.tsx`, `team-grid.tsx`, `testimonials.tsx`, `timeline.tsx`, `whisper-text.tsx`
-
-**`src/components/content/` (2 files):**
-`ServiceDetailPage.tsx`, `ServiceHubPage.tsx`
-
-**`src/components/contact/` (2 files):**
-`ContactUsContent.tsx`, `ThankYouContent.tsx`
-
-**`src/components/resources/` (2 files):**
-`BlogIndexContent.tsx`, `CaseStudiesIndexContent.tsx`
-
-**`src/components/legal/` (2 files):**
-`PrivacyPolicyContent.tsx`, `TermsContent.tsx`
-
-**`src/components/services/` (2 files):**
-`VideoTestimonialsContent.tsx`, `YouTubeAdsB2BContent.tsx`
-
-**`src/components/providers/` (2 files):**
-`SmoothScrollProvider.tsx`, `ThemeProvider.tsx`
-
-### 2.3 Missing Files (confirmed absent)
-
-| Path | Status | Impact |
-|---|---|---|
-| `src/components/sections/HomeHero.tsx` | Missing | Build-breaks `/` and `/about-us` |
-| `src/components/ui/GlobalPresence.tsx` | Missing | May break other imports |
-| `src/components/ui/zoom-parallax.tsx` | Missing | May break other imports |
-| `src/components/ui/logo-cloud-3.tsx` | Missing | May break other imports |
-| `src/components/ui/Heading.tsx` | Missing | To be created in Phase 1 |
-| `src/components/ui/Text.tsx` | Missing | To be created in Phase 1 |
-| `src/components/ui/Eyebrow.tsx` | Missing | To be created in Phase 1 |
-| `src/components/ui/GradientText.tsx` | Missing | To be created in Phase 1 |
-
-### 2.4 Confirmed Heading Violations
-
-| File | Line | Tag | Current Use | Correct Fix |
-|---|---|---|---|---|
-| `src/components/layout/CinematicFooter.tsx` | 178 | `h3` | "Company" nav label | Change to `span` |
-| `src/components/layout/CinematicFooter.tsx` | 187 | `h3` | "Services" nav label | Change to `span` |
-| `src/components/layout/CinematicFooter.tsx` | 196 | `h3` | "Resources" nav label | Change to `span` |
-| `src/components/layout/CinematicFooter.tsx` | 205 | `h3` | "Contact" nav label | Change to `span` |
-| `src/components/sections/Testimonials.tsx` | 165 | `h4` | `testimonial.name` reviewer name | Change to `p` |
-
-### 2.5 Heading Class Inconsistencies (visual drift risk — screenshot first)
-
-| File | Current h2 classes | Canonical h2 classes | Risk |
-|---|---|---|---|
-| `ComparisonTable.tsx` | `text-3xl md:text-5xl font-bold font-heading` | `font-heading text-4xl lg:text-5xl font-bold leading-tight text-brand-charcoal` | Visual — skip unless screenshot confirms match |
-| `ServicesGrid.tsx` | `text-3xl md:text-5xl font-bold font-heading` | same as above | same |
-| `ProcessTimeline.tsx` | `text-3xl md:text-5xl font-bold font-heading` | same as above | same |
-| `USPSection.tsx` | `text-3xl md:text-5xl font-bold font-heading` | same as above | same |
-| `FAQAccordion.tsx` | `text-3xl md:text-5xl font-bold` | same as above | same |
-| `FAQ.tsx` | `font-heading text-3xl lg:text-5xl font-bold` | same as above | same |
-| `CTABanner.tsx` | `text-3xl md:text-6xl font-bold text-white font-heading` | intentionally different (CTA variant, white text) | Keep — design intent |
-| `ContactUs.tsx` | `font-heading text-4xl lg:text-6xl font-bold` | intentionally different (contact variant) | Keep — design intent |
-| `CinematicFooter.tsx` h2 | `text-5xl md:text-8xl font-black tracking-tighter` | intentionally different (display footer) | Keep — design intent |
-
-### 2.6 Non-Canonical Content Components
-
-Files in `src/components/services/` that map to non-canonical routes:
-- `VideoTestimonialsContent.tsx` → serves `/services/media-production/video-testimonials` (to redirect)
-- `YouTubeAdsB2BContent.tsx` → serves `/services/media-production/youtube-ads-b2b` (to redirect)
-
-These cannot be deleted until the redirect pages are converted to `redirect()` calls. Delete after Phase 4.
-
-### 2.7 Junk & Noise Files
-
-| File | Action |
-|---|---|
-| `scratch/cleanup.js` | Delete |
-| `lint_output.txt` | Delete |
-| 44 × `.DS_Store` across project | Delete via `find . -name ".DS_Store" -delete` |
-| `public/next.svg`, `public/vercel.svg`, `public/window.svg`, `public/file.svg` | Delete only after confirming no references (grep first) |
-| `public/globe.svg` | Grep before deleting — may be referenced |
-
-### 2.8 Missing npm Scripts
-
-Current `package.json` scripts: `dev`, `build`, `start`, `lint`.
-Missing: `typecheck`, `check`.
-
-### 2.9 Content Architecture
-
-Content lives in `src/content/`:
-- `home-section-content.tsx` — all home page section data (testimonials, services, case studies, FAQ, etc.)
-- `navigation.ts` — top nav, service nav groups, footer nav
-- `pages.ts` — page metadata
-- `page-sections/` — per-page content (about-us, blog, case-studies, contact, events, terms, thank-you)
-- `page-sections/services/detail/` — 17 service detail content files
-- `page-sections/services/` — 5 service hub content files
+**1 page = 1 h1.** No exceptions. Verified via DOM check after every phase.
 
 ---
 
-## 3. Phase 0: Build Stabilization
+## 1. Target Folder Structure
 
-**Goal:** Zero build errors. No visual changes. Complete before any other work.
+Move the current flat `src/components/` structure into feature-first folders. Content files stay in `src/content/` — they are not moving until a real CMS replaces them.
 
-### Step 0.1 — Fix HomeHero import
+```
+src/
+  app/                          ← Next.js routes, unchanged
 
-**Root cause:** Both `src/app/page.tsx:2` and `src/app/about-us/page.tsx:3` import from `@/components/sections/HomeHero` which does not exist. The actual file is `src/components/sections/Hero.tsx` and exports the same `Hero` function.
+  features/
+    home/
+      sections/                 ← Hero (HomeHero shim stays), CinematicSequence,
+                                   ClientLogos, WhoWeAre, OurServices, CaseStudies,
+                                   UpcomingEvents, WhyChooseUs, Testimonials,
+                                   Blogs, FAQ, ContactUs, CTABanner
+    about/
+      sections/                 ← all src/components/about/*
+    services/
+      ServiceHubPage.tsx        ← src/components/content/ServiceHubPage.tsx
+      ServiceDetailPage.tsx     ← src/components/content/ServiceDetailPage.tsx
+    resources/
+      BlogIndexContent.tsx      ← src/components/resources/
+      CaseStudiesIndexContent.tsx
+    contact/
+      ContactUsContent.tsx      ← src/components/contact/
+      ThankYouContent.tsx
+    legal/
+      PrivacyPolicyContent.tsx  ← src/components/legal/
+      TermsContent.tsx
 
-**Fix:** Create `src/components/sections/HomeHero.tsx` as a re-export shim so all existing imports continue to work without touching route files:
+  shared/
+    layout/
+      Header.tsx                ← src/components/layout/
+      Footer.tsx
+      CinematicFooter.tsx
+    providers/
+      ThemeProvider.tsx         ← src/components/providers/
+      SmoothScrollProvider.tsx
+    sections/
+      SectionShell.tsx          ← src/components/sections/
+      SectionHeader.tsx
+      ProcessTimeline.tsx       ← shared across multiple service pages
+      ServicesGrid.tsx
+    ui/
+      Heading.tsx               ← src/components/ui/
+      Text.tsx
+      Eyebrow.tsx
+      GradientText.tsx
+      Button.tsx                ← rename button.tsx
+      ButtonLink.tsx            ← new
+      Card.tsx
+      ImageFrame.tsx
+      Icon.tsx
+      Badge.tsx                 ← new
+      StatCard.tsx              ← new
+      Globe.tsx
+      GlobeVisualization.tsx
+      InfiniteSlider.tsx        ← rename infinite-slider.tsx
+      Timeline.tsx              ← rename timeline.tsx
+      CmsHeadingRenderer.tsx
+    forms/
+      TextInput.tsx             ← new
+      SelectInput.tsx           ← new
+      TextareaInput.tsx         ← new
+      ContactForm.tsx           ← new
+    cards/
+      ServiceCard.tsx           ← new
+      CaseStudyCard.tsx         ← new
+      BlogCard.tsx              ← new
+      EventCard.tsx             ← new
+      TestimonialCard.tsx       ← new
+      FAQCard.tsx               ← new
+
+  cms/
+    mock/
+      types.ts                  ← new
+      routes.ts                 ← new
+      resolve.ts                ← new
+      seo.ts                    ← new
+      navigation.ts             ← new (replaces src/content/navigation.ts)
+      registry.ts               ← new
+      componentMap.ts           ← new
+
+  lib/
+    utils.ts                    ← already exists
+    seo.ts                      ← new
+    structured-data.ts          ← already exists (PLAN.md)
+
+  content/                      ← unchanged, stays until real CMS
+```
+
+---
+
+## 2. Phase A: New Shared Components
+
+Create all new components before migrating existing sections into them. No existing component code changes in this phase — only new files.
+
+### A.1 `src/shared/ui/Badge.tsx`
+
+The small pill/tag used on service cards, event cards, and case study cards.
 
 ```tsx
-// src/components/sections/HomeHero.tsx
-export { Hero } from "./Hero";
+interface BadgeProps {
+  children: React.ReactNode;
+  variant?: "blue" | "cyan" | "white" | "dark";
+  className?: string;
+}
 ```
 
-This is a two-line file. It preserves the import path used in page.tsx and about-us/page.tsx and does not change any visual component.
+Variant classes:
+- `blue`: `bg-brand-blue text-white`
+- `cyan`: `bg-brand-cyan text-white`
+- `white`: `bg-white border border-gray-100 text-gray-600`
+- `dark`: `bg-brand-charcoal text-white`
 
-### Step 0.2 — Audit and stub remaining missing imports
+Default size: `px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full`.
 
-Grep for any import of `zoom-parallax`, `logo-cloud-3`, or `ui/GlobalPresence` across all `.tsx`/`.ts` files:
+### A.2 `src/shared/ui/StatCard.tsx`
 
-```bash
-grep -r "zoom-parallax\|logo-cloud-3\|ui/GlobalPresence" src/
-```
-
-For each found import:
-- If the file is a live page/section, create a minimal stub component that renders `null` so the build passes without visual regression.
-- If the file is already dead code (not imported by any live route), note it for deletion in Phase 5.
-
-### Step 0.3 — Verify build baseline
-
-```bash
-npm run lint
-./node_modules/.bin/tsc --noEmit --incremental false --pretty false
-npm run build
-```
-
-Record all lint errors and type errors to a mental list (not a file — we delete `lint_output.txt` in Phase 5). The build must pass cleanly before proceeding to Phase 1.
-
----
-
-## 4. Phase 1: Typography Primitives
-
-**Goal:** Create four shared components. Do not use them yet. Do not refactor any existing component in this phase.
-
-### 4.1 `src/components/ui/Heading.tsx`
-
-**Contract:**
-- Props: `as: "h1" | "h2" | "h3" | "h4"` (required), `children`, `className?`, `preserveClassName?: boolean`
-- `preserveClassName=true` skips merging default variant classes, passing `className` through untouched. Use this for animation-specific sections.
-- Uses `cva` for variant map.
-- Uses `cn` (clsx + tailwind-merge) to merge variant + `className`.
-
-**Canonical variant classes:**
-
-| Level | Classes |
-|---|---|
-| `h1` | `font-heading text-5xl lg:text-7xl font-bold leading-[1.1] text-brand-charcoal` |
-| `h2` | `font-heading text-4xl lg:text-5xl font-bold leading-tight text-brand-charcoal` |
-| `h3` | `font-heading text-2xl lg:text-3xl font-bold leading-tight text-brand-charcoal` |
-| `h4` | `text-xs font-bold uppercase tracking-wider` |
-
-**Implementation:**
+The metric display used in WhoWeAre and StatsBar.
 
 ```tsx
-// src/components/ui/Heading.tsx
-import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@/lib/utils";
+interface StatCardProps {
+  value: string;
+  label: string;
+  icon?: React.ReactNode;
+  className?: string;
+}
+```
 
-const headingVariants = cva("", {
-  variants: {
-    level: {
-      h1: "font-heading text-5xl lg:text-7xl font-bold leading-[1.1] text-brand-charcoal",
-      h2: "font-heading text-4xl lg:text-5xl font-bold leading-tight text-brand-charcoal",
-      h3: "font-heading text-2xl lg:text-3xl font-bold leading-tight text-brand-charcoal",
-      h4: "text-xs font-bold uppercase tracking-wider",
-    },
-  },
-});
+No default layout — this is a pure display component. The wrapping grid or flex layout stays in the section component. Use the exact classes currently in `WhoWeAre.tsx` for the value and label.
 
-interface HeadingProps extends VariantProps<typeof headingVariants> {
-  as: "h1" | "h2" | "h3" | "h4";
+### A.3 `src/shared/ui/ButtonLink.tsx`
+
+A typed link wrapper using `next/link`. Same visual output as the current inline `<button>` and `<a>` patterns.
+
+```tsx
+interface ButtonLinkProps {
+  href: string;
+  variant?: "primary" | "secondary" | "ghost" | "text";
+  size?: "sm" | "md" | "lg";
   children: React.ReactNode;
   className?: string;
-  preserveClassName?: boolean;
-}
-
-export function Heading({ as: Tag, children, className, preserveClassName, level }: HeadingProps) {
-  const resolvedLevel = level ?? (Tag as "h1" | "h2" | "h3" | "h4");
-  const classes = preserveClassName ? className : cn(headingVariants({ level: resolvedLevel }), className);
-  return <Tag className={classes}>{children}</Tag>;
+  external?: boolean;
 }
 ```
 
-### 4.2 `src/components/ui/Text.tsx`
+Variants and classes — copy directly from the most common button patterns in `OurServices.tsx`, `Hero.tsx`, and `CTABanner.tsx`. Do not invent new visual styles.
 
-**Contract:**
-- Props: `variant: "hero" | "section" | "card" | "muted"`, `as?: "p" | "span" | "div"` (default `"p"`), `children`, `className?`
+### A.4 Form field components
 
-**Canonical variant classes:**
-
-| Variant | Classes |
-|---|---|
-| `hero` | `text-xl leading-relaxed text-brand-charcoal/70` |
-| `section` | `text-lg leading-relaxed text-gray-600` |
-| `card` | `text-sm md:text-base leading-relaxed text-gray-600` |
-| `muted` | `text-sm text-gray-500 leading-relaxed` |
-
-### 4.3 `src/components/ui/Eyebrow.tsx`
-
-**Contract:**
-- Props: `as?: "span" | "p"` (default `"span"`), `children`, `className?`
-- Never renders a heading tag.
-- Default classes: `text-sm font-semibold tracking-wide uppercase`
-- `className` is additive (merged via `cn`) so existing color/background overrides (e.g. `bg-brand-blue/10 border border-brand-blue/20 text-brand-blue rounded-full px-4 py-1.5`) pass through.
-
-### 4.4 `src/components/ui/GradientText.tsx`
-
-**Contract:**
-- Props: `variant: "blue" | "red"`, `children`, `className?`
-- Renders a `span` wrapping children with the appropriate gradient text class.
-- `blue`: existing `bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent` (verify exact classes against current usage in `CinematicSequence.tsx` and `Hero.tsx`).
-- `red`: existing red highlight span class.
-- If the gradient classes used in components differ from this, copy them exactly rather than normalizing.
-
-### 4.5 Verification after Phase 1
-
-- Run `npm run lint` and `tsc --noEmit`. New files must have zero errors.
-- Do not run the dev server yet — these components are unused.
-
----
-
-## 5. Phase 2: Heading Semantic Corrections
-
-**Goal:** Fix the five confirmed heading violations. Zero visual change. One component at a time; verify build after each.
-
-### 5.1 `src/components/layout/CinematicFooter.tsx` — Nav labels
-
-**Change:** Lines 178, 187, 196, 205 — replace each `h3` with `span`. The classes stay identical; only the tag changes.
-
-Before (each of the four columns):
-```tsx
-<h3 className="text-xs font-black uppercase tracking-[0.3em] text-brand-blue">Company</h3>
-```
-
-After:
-```tsx
-<span className="text-xs font-black uppercase tracking-[0.3em] text-brand-blue">Company</span>
-```
-
-Apply the same change to "Services" (line 187), "Resources" (line 196), and "Contact" (line 205). The `space-y-8` wrapper `div` and the `ul` below each label remain completely untouched.
-
-### 5.2 `src/components/sections/Testimonials.tsx` — Reviewer name
-
-**Change:** Line 165 — replace `h4` with `p`. Class stays identical.
-
-Before:
-```tsx
-<h4 className="font-heading font-bold text-lg text-gray-900 leading-tight">
-  {testimonial.name}
-</h4>
-```
-
-After:
-```tsx
-<p className="font-heading font-bold text-lg text-gray-900 leading-tight">
-  {testimonial.name}
-</p>
-```
-
-### 5.3 Heading scale mismatches (deferred unless screenshot-confirmed safe)
-
-The following components use `text-3xl md:text-5xl` for `h2` rather than the canonical `text-4xl lg:text-5xl`. These are **intentionally deferred** — the visual difference (4xl vs 3xl at mobile) is real and must be screenshot-compared before touching:
-
-- `ComparisonTable.tsx`
-- `ServicesGrid.tsx`
-- `ProcessTimeline.tsx`
-- `USPSection.tsx`
-- `FAQAccordion.tsx`
-- `FAQ.tsx`
-
-**Action for each:** Take a before screenshot. Apply the canonical classes. Take an after screenshot. Compare. If there is any visual difference, revert and mark as "accepted variance" in this plan. If screenshots match, leave the fix in place.
-
-Intentional exceptions (never normalize):
-- `CTABanner.tsx` h2: `text-3xl md:text-6xl font-bold text-white font-heading` — CTA-specific design, intentionally large and white.
-- `ContactUs.tsx` h2: `font-heading text-4xl lg:text-6xl font-bold` — Contact-section emphasis, intentionally large.
-- `CinematicFooter.tsx` h2 "Ready to Accelerate?": `text-5xl md:text-8xl font-black tracking-tighter` — display footer, intentionally cinematic.
-- `CinematicSequence.tsx` overlays: animation-driven `titleClassName` from content. Keep exactly as-is.
-- `src/components/about/editorial-hero.tsx` h1: `font-heading text-[8vw] md:text-[5vw] lg:text-[5.5vw] font-bold leading-[1.1] tracking-tight` — About editorial variant, intentionally viewport-based.
-
-### 5.4 Multi-h2 violations audit
-
-Grep every page for multiple `h2` in the same section scope:
-
-```bash
-grep -n "<h2" src/components/sections/*.tsx src/components/about/*.tsx src/components/content/*.tsx
-```
-
-A section is allowed exactly one `h2`. If any section component contains two or more `h2` tags, demote the secondary ones to `h3` after screenshot comparison.
-
-### 5.5 h1 count audit per route
-
-After Phase 2, verify each page route has exactly one `h1`:
-
-| Route | Expected h1 source |
-|---|---|
-| `/` | `Hero.tsx` → `font-heading text-5xl lg:text-7xl` |
-| `/about-us` | `editorial-hero.tsx` → `font-heading text-[8vw]…` |
-| `/blog` | `BlogIndexContent.tsx` → `text-4xl md:text-6xl font-bold font-heading` |
-| `/case-studies` | `CaseStudiesIndexContent.tsx` → `text-4xl md:text-6xl font-bold font-heading` |
-| `/contact-us` | `ContactUsContent.tsx` → `text-4xl md:text-6xl font-bold font-heading` |
-| `/privacy-policy` | `PrivacyPolicyContent.tsx` |
-| `/terms-and-conditions` | `TermsContent.tsx` |
-| `/thank-you` | `ThankYouContent.tsx` |
-| service hubs | `ServiceHubPage.tsx` hero |
-| service details | `ServiceDetailPage.tsx` hero |
-
-For any page found to have zero `h1` or more than one `h1`, fix it: the main title of the page gets `h1`, everything else demotes.
-
-### 5.6 Card and subsection h3 audit
-
-All cards, subsections, FAQ items, timeline entries, and service items must use `h3`, not `h2`. Quick audit targets:
-- `CaseStudies.tsx` — case study titles: currently `h3` with `font heading font-bold text-2xl text-white` ✓
-- `OurServices.tsx` — service titles: currently `h3` with `font-heading text-3xl font-bold` ✓
-- `FAQ.tsx` — FAQ question text: currently `h3` with `font heading text-lg font-bold` ✓
-- `UpcomingEvents.tsx` — event titles: currently `h3` ✓
-- `src/components/ui/timeline.tsx` — timeline entries: currently `h3` ✓
-- `WhyChooseUs.tsx` — reason titles: check actual tag; if `h2`, demote to `h3`
-- `about/team-grid.tsx` — team member names: check actual tag; if heading, demote to `p`
-- `about/clients-marquee.tsx` — section title: check if `h2` or `h3`; section title → `h2`, but it must not duplicate an existing `h2` on the same page
-
-### 5.7 h4 audit
-
-`h4` is only valid for grouped metadata labels — Challenge, Solution, Date, Location. Verified valid uses:
-- `CaseStudies.tsx` — "text-[10px] font-bold" labels: ✓ (Challenge/Solution)
-- `UpcomingEvents.tsx` — "text-xs font-bold" labels: ✓ (Date/Location)
-
-Invalid (already fixed in 5.2):
-- `Testimonials.tsx` line 165 — reviewer name: demoted to `p`
-
-Check `Footer.tsx` for any `h4` on footer column labels; demote to `span` if present.
-
-### 5.8 Verification after Phase 2
-
-```bash
-npm run lint
-./node_modules/.bin/tsc --noEmit --incremental false --pretty false
-npm run build
-```
-
-Then start the dev server and visually confirm:
-- `/` — hero, services, testimonials, footer unchanged
-- `/about-us` — editorial hero, globe, testimonials unchanged
-- Footer — nav labels still visually styled correctly despite tag change
-
----
-
-## 6. Phase 3: Supporting Layout Components
-
-**Goal:** Create reusable layout/section primitives. Do not refactor existing components into them yet — create the new components and leave existing code untouched.
-
-### 6.1 `src/components/sections/SectionShell.tsx`
-
-Handles: `id`, semantic `<section>`, container width, spacing, background classes, custom `className`.
+#### `src/shared/forms/TextInput.tsx`
 
 ```tsx
-interface SectionShellProps {
-  id?: string;
-  className?: string;
-  containerClassName?: string;
-  children: React.ReactNode;
-}
-```
-
-Default container: `container mx-auto px-8`. Default spacing: `py-20`. Both overridable via `className`/`containerClassName`.
-
-### 6.2 `src/components/sections/SectionHeader.tsx`
-
-Handles: optional `eyebrow`, required `heading`, optional `description`, optional action slot, configurable heading level (defaults to `h2`).
-
-```tsx
-interface SectionHeaderProps {
-  eyebrow?: string;
-  eyebrowClassName?: string;
-  heading: React.ReactNode;
-  headingLevel?: "h1" | "h2" | "h3";
-  headingClassName?: string;
-  description?: string;
-  descriptionClassName?: string;
-  action?: React.ReactNode;
-  align?: "left" | "center";
-}
-```
-
-Uses `Heading` and `Eyebrow` from Phase 1 internally. `eyebrowClassName` allows passing the full pill style string (e.g. `rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue px-4 py-1.5 inline-block mb-6`) to match each section's existing eyebrow appearance.
-
-### 6.3 `src/components/ui/button.tsx` — Extensions
-
-The existing `src/components/ui/button.tsx` uses CVA. Review it for current variants. Add missing variants only if needed (e.g. `ghost`, `link`). Do not change existing variants.
-
-### 6.4 `src/components/ui/Card.tsx`
-
-A thin visual wrapper. Opt-in only. Preserves existing rounded/shadow/border classes rather than normalizing them.
-
-```tsx
-interface CardProps {
-  className?: string;
-  children: React.ReactNode;
-}
-```
-
-Default classes: `bg-white rounded-3xl border border-gray-100 shadow-sm`. All overridable via `className`.
-
-### 6.5 `src/components/ui/ImageFrame.tsx`
-
-Wraps `next/image` with exact existing radius, object-fit, and sizes behavior.
-
-```tsx
-interface ImageFrameProps {
-  src: string;
-  alt: string;
-  fill?: boolean;
-  width?: number;
-  height?: number;
-  sizes?: string;
-  priority?: boolean;
-  className?: string;
-  containerClassName?: string;
-  objectFit?: "cover" | "contain";
-}
-```
-
-Default: `fill`, `object-cover`, `rounded-3xl`. The outer container must have `relative` and appropriate sizing.
-
-### 6.6 `src/components/ui/CmsHeadingRenderer.tsx`
-
-A small local renderer for future-ready structured heading data. Currently used nowhere — exists for when content modules benefit from it.
-
-```tsx
-interface CmsHeadingData {
-  text: string;
-  highlight?: string;
-  highlightVariant?: "blue" | "red";
-}
-
-interface CmsHeadingRendererProps {
-  data: CmsHeadingData;
-  level: "h1" | "h2" | "h3" | "h4";
+interface TextInputProps {
+  id: string;
+  label: string;
+  placeholder?: string;
+  value: string;
+  onChange: (value: string) => void;
+  error?: string;
+  required?: boolean;
   className?: string;
 }
 ```
 
-Renders `Heading` with the text, splitting `highlight` segment into `GradientText` if present.
+Renders: label, `<input type="text">`, optional error message. Classes copied exactly from the current form in `ContactUsContent.tsx`.
 
-### 6.7 Verification after Phase 3
+#### `src/shared/forms/SelectInput.tsx`
 
-- New components must have zero lint errors.
-- No visual changes — these components are all created but not yet wired into existing pages.
-- Run `npm run build` to confirm no import issues.
+Same interface as `TextInput` but renders `<select>` with an `options: Array<{ value: string; label: string }>` prop.
 
----
+#### `src/shared/forms/TextareaInput.tsx`
 
-## 7. Phase 4: SEO & Metadata
+Same interface as `TextInput` but renders `<textarea>` with a `rows?: number` prop.
 
-**Goal:** Every canonical page has correct metadata, canonical URL, and structured data. Non-canonical routes redirect.
+#### `src/shared/forms/ContactForm.tsx`
 
-### 7.1 Add `metadataBase` to `src/app/layout.tsx`
+Assembles `TextInput`, `SelectInput`, `TextareaInput` into the full contact form currently in `ContactUsContent.tsx`. Exact same fields, layout, and visual output.
 
+State management:
 ```tsx
-export const metadata: Metadata = {
-  metadataBase: new URL("https://b2bsalesarrow.com"),
-  title: { default: "B2B Sales Arrow | Premium Growth Partner", template: "%s | B2B Sales Arrow" },
-  description: "...",
+const [fields, setFields] = useState({ name: "", email: "", company: "", service: "", message: "" });
+const [errors, setErrors] = useState<Record<string, string>>({});
+const [isLoading, setIsLoading] = useState(false);
+```
+
+Validation (on submit and on blur):
+- `name`: required
+- `email`: required, must match `/^[^\s@]+@[^\s@]+\.[^\s@]+$/`
+- `message`: required, minimum 20 characters
+
+Submit handler:
+```tsx
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  if (!validate()) return;
+  setIsLoading(true);
+  await new Promise((r) => setTimeout(r, 800));
+  router.push("/thank-you");
 };
 ```
 
-### 7.2 Add `typecheck` and `check` scripts to `package.json`
+Button state: disabled + spinner SVG while `isLoading` is true. Visual spinner must match the brand color (`text-brand-blue`).
+
+### A.5 Card components
+
+Create these only if the layouts genuinely differ. If two card types are visually identical, use a single generic `Card` with different props instead of two files.
+
+#### `src/shared/cards/ServiceCard.tsx`
+Used in `OurServices.tsx` sticky card layout. Props: `title`, `description`, `icon`, `ctaLabel`, `color` (accent bar color class), `image`. The current sticky scroll behavior stays inside `OurServices.tsx` — `ServiceCard` is just the visual shell.
+
+#### `src/shared/cards/CaseStudyCard.tsx`
+Used in `CaseStudies.tsx` accordion expand layout. Props: `title`, `image`, `tags`, `challenge`, `solution`, `result`. The expand interaction stays in `CaseStudies.tsx`.
+
+#### `src/shared/cards/BlogCard.tsx`
+Used in `Blogs.tsx`. Props: `title`, `excerpt`, `image`, `date`, `category`, `href`.
+
+#### `src/shared/cards/EventCard.tsx`
+Used in `UpcomingEvents.tsx`. Props: `title`, `image`, `date`, `location`, `badgeLabel`, `ctaLabel`.
+
+#### `src/shared/cards/TestimonialCard.tsx`
+Used in `Testimonials.tsx` coverflow carousel. Props: `name`, `role`, `company`, `image`, `quote`, `rating`. The 3D coverflow animation props (`rotateY`, `x`, `z`, `scale`, `opacity`) are passed from the parent carousel state — this card is purely the visual shell.
+
+#### `src/shared/cards/FAQCard.tsx`
+Used in `FAQ.tsx`. Props: `question`, `answer`. The flip or expand interaction logic stays in `FAQ.tsx`.
+
+### A.6 Verification after Phase A
+
+```bash
+npm run lint
+./node_modules/.bin/tsc --noEmit --incremental false --pretty false
+```
+
+All new files must have zero errors. Dev server must start. No existing pages change visually — new components are created but not yet used.
+
+---
+
+## 3. Phase B: Section Migration
+
+Wire the new shared components into existing section components. One section at a time. Screenshot before and after each. Build must pass after each migration.
+
+### B.1 Migration order (lowest to highest animation risk)
+
+1. **`FAQ.tsx`** — eyebrow → `Eyebrow`, h2 → `Heading as="h2"`, FAQ questions → `FAQCard`, body → `Text`
+2. **`Blogs.tsx`** — eyebrow → `Eyebrow`, h2 → `Heading as="h2"`, blog items → `BlogCard`
+3. **`WhoWeAre.tsx`** — eyebrow → `Eyebrow`, h2 → `Heading as="h2"`, stats → `StatCard`
+4. **`CaseStudies.tsx`** — eyebrow → `Eyebrow`, h2 → `Heading as="h2"`, cases → `CaseStudyCard`
+5. **`UpcomingEvents.tsx`** — eyebrow → `Eyebrow`, h2 → `Heading as="h2"`, events → `EventCard`
+6. **`WhyChooseUs.tsx`** — eyebrow → `Eyebrow`, h2 → `Heading as="h2"`, reason titles → `Heading as="h3"`
+7. **`OurServices.tsx`** — eyebrow → `Eyebrow`, h2 → `Heading as="h2"`, service cards → `ServiceCard`
+8. **`Testimonials.tsx`** — eyebrow → `Eyebrow`, h2 → `Heading as="h2"`, testimonial cards → `TestimonialCard`
+9. **`ContactUs.tsx`** — h2 with `preserveClassName` (intentional large variant), form → `ContactForm`
+10. **`CTABanner.tsx`** — h2 with `preserveClassName` (intentional white/large variant)
+11. **`ClientLogos.tsx`** — extract logo list into a reusable data structure
+12. **About sections** — `team-grid.tsx`, `clients-marquee.tsx`, `editorial-hero.tsx`
+13. **Content templates** — `ServiceHubPage.tsx`, `ServiceDetailPage.tsx`, `BlogIndexContent.tsx`, `CaseStudiesIndexContent.tsx`, `ContactUsContent.tsx`
+14. **Legal pages** — `PrivacyPolicyContent.tsx`, `TermsContent.tsx`
+
+### B.2 `SectionShell` rollout rule
+
+Every section that has the pattern:
+```tsx
+<section id="..." className="py-... bg-...">
+  <div className="container mx-auto px-8">
+```
+should become:
+```tsx
+<SectionShell id="..." className="py-... bg-...">
+```
+
+Pass extra container classes via `containerClassName`. Decorative absolute-positioned elements (gradients, blurs) live inside the section but outside the container — pass them as `children` before the container, or add a `decorations` slot if that pattern repeats across many sections.
+
+### B.3 `SectionHeader` rollout rule
+
+The motion-animated eyebrow + heading + optional description block that appears at the top of every section becomes `SectionHeader`. The `SectionHeader` component must bake in the standard Framer Motion entry animation (`initial={{ opacity: 0, y: 20 }}`, `whileInView={{ opacity: 1, y: 0 }}`, `viewport={{ once: true }}`) used by all sections. Pass the eyebrow pill class string via `eyebrowClassName` to match each section's color:
+
+| Section | eyebrowClassName |
+|---|---|
+| CaseStudies, Testimonials | `rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue px-4 py-1.5 inline-block mb-6` |
+| OurServices, UpcomingEvents | `rounded-full bg-brand-cyan/10 border border-brand-cyan/20 text-brand-blue px-4 py-1.5 inline-block mb-6` |
+| FAQ | `rounded-full bg-brand-charcoal/5 border border-brand-charcoal/10 text-brand-charcoal px-4 py-1.5 inline-block mb-6` |
+| WhoWeAre, WhyChooseUs, Blogs | match current inline class exactly |
+
+### B.4 Verification after Phase B
+
+```bash
+npm run check
+```
+
+DOM checks (browser DevTools on each page):
+- `/` — exactly one `<h1>`, every section has one `<h2>`, all `SectionHeader`-powered sections render correctly
+- `/about-us` — one `<h1>` (editorial hero)
+- All service pages — one `<h1>` per page
+
+Screenshot compare: `/`, `/about-us`, `/services/global-event-solutions`, `/blog`, `/case-studies`, `/contact-us` before and after.
+
+---
+
+## 4. Phase C: Mock CMS Registry
+
+**Goal:** Decouple routing, SEO, and navigation data from inline hard-coded values. Create `src/cms/mock/` as an isolated, deletable layer. When a real CMS is connected, this entire directory is replaced.
+
+### C.1 `src/cms/mock/types.ts`
+
+```ts
+export type PageId = string;
+
+export type PageType =
+  | "home"
+  | "serviceHub"
+  | "serviceDetail"
+  | "resourceIndex"
+  | "company"
+  | "contact"
+  | "legal"
+  | "system";
+
+export interface CmsSeo {
+  title: string;
+  description: string;
+  canonicalPath: string;
+  focusKeyphrase?: string;
+  secondaryKeywords?: string[];
+  noIndex?: boolean;
+}
+
+export interface CmsImage {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+  sizes?: string;
+}
+
+export interface CmsLink {
+  label: string;
+  pageId?: PageId;
+  href?: string;
+}
+
+export interface CmsCTA {
+  label: string;
+  pageId?: PageId;
+  href?: string;
+  variant?: "primary" | "secondary" | "ghost";
+}
+
+export interface CmsFAQ {
+  question: string;
+  answer: string;
+}
+
+export interface CmsPage {
+  id: PageId;
+  pageType: PageType;
+  seo: CmsSeo;
+  internalLinks?: CmsLink[];
+  faqs?: CmsFAQ[];
+  ctas?: CmsCTA[];
+}
+```
+
+### C.2 `src/cms/mock/routes.ts`
+
+All 26 canonical routes from `docs/url-structure.md` plus system pages. This is the single source of truth for every internal URL in the app:
+
+```ts
+import type { PageId } from "./types";
+
+export const pageRoutes: Record<PageId, string> = {
+  // Marketing pages
+  "home":                                        "/",
+  "about-us":                                    "/about-us",
+  "blog":                                        "/blog",
+  "case-studies":                                "/case-studies",
+  "contact-us":                                  "/contact-us",
+
+  // Global Event Solutions (hub + 6 details + 1 canonical from booth-design)
+  "service.global-event-solutions":              "/services/global-event-solutions",
+  "service.trade-show-booth-design":             "/services/global-event-solutions/trade-show-booth-design",
+  "service.event-lead-generation":               "/services/global-event-solutions/event-lead-generation",
+  "service.industry-events":                     "/services/global-event-solutions/industry-events",
+  "service.custom-events":                       "/services/global-event-solutions/custom-events",
+  "service.event-booth-rental":                  "/services/global-event-solutions/event-booth-rental",
+  "service.trade-show-booth-builder":            "/services/global-event-solutions/trade-show-booth-builder",
+  "service.modular-portable-booths":             "/services/booth-design-production/modular-portable-booths",
+
+  // Media Production (hub + 4 canonical details)
+  "service.media-production":                    "/services/media-production",
+  "service.event-video-production":              "/services/media-production/event-video-production",
+  "service.corporate-video-production":          "/services/media-production/corporate-video-production",
+  "service.video-editing-services":              "/services/media-production/video-editing-services",
+  "service.live-streaming-services":             "/services/media-production/live-streaming-services",
+
+  // Performance Marketing (hub + 3 details)
+  "service.performance-marketing":               "/services/performance-marketing",
+  "service.seo-services":                        "/services/performance-marketing/seo-services",
+  "service.paid-advertising":                    "/services/performance-marketing/paid-advertising",
+  "service.linkedin-ads-b2b":                    "/services/performance-marketing/linkedin-ads-b2b",
+
+  // Sales Qualified Lead Generation
+  "service.sales-qualified-lead-generation":     "/services/sales-qualified-lead-generation",
+
+  // Market Research (hub + 3 details)
+  "service.market-research":                     "/services/market-research",
+  "service.data-augmentation":                   "/services/market-research/data-augmentation",
+  "service.data-validation":                     "/services/market-research/data-validation",
+  "service.human-powered-market-intelligence":   "/services/market-research/human-powered-market-intelligence",
+
+  // System pages
+  "privacy-policy":                              "/privacy-policy",
+  "terms-and-conditions":                        "/terms-and-conditions",
+  "thank-you":                                   "/thank-you",
+};
+```
+
+### C.3 `src/cms/mock/resolve.ts`
+
+```ts
+import { pageRoutes } from "./routes";
+import type { CmsLink, PageId } from "./types";
+
+export function resolvePageHref(pageId: PageId): string {
+  const path = pageRoutes[pageId];
+  if (!path) throw new Error(`[cms] No route for pageId: "${pageId}"`);
+  return path;
+}
+
+export function resolveLink(link: CmsLink): string {
+  if (link.pageId) return resolvePageHref(link.pageId);
+  if (link.href) return link.href;
+  return "#";
+}
+```
+
+### C.4 `src/cms/mock/seo.ts`
+
+Full title and description for every page in `pageRoutes`. Copy SEO copy from `docs/B2B Sales Arrow — Master SEO Landing Page Structure.md`. Every page must have a unique title and description — no duplicates allowed.
+
+Structure:
+```ts
+import type { PageId, CmsSeo } from "./types";
+import { pageRoutes } from "./routes";
+
+export const pageSeo: Record<PageId, CmsSeo> = {
+  "home": {
+    title: "B2B Sales Arrow | Premium Global B2B Growth Partner",
+    description: "End-to-end B2B growth: global events, lead generation, media production, and market research. Trusted by Fortune 500s across 40+ countries.",
+    canonicalPath: pageRoutes["home"],
+    focusKeyphrase: "B2B growth partner",
+  },
+  "thank-you": {
+    title: "Thank You | B2B Sales Arrow",
+    description: "We received your message. Our team will be in touch shortly.",
+    canonicalPath: pageRoutes["thank-you"],
+    noIndex: true,
+  },
+  // ... all remaining pages from SEO doc
+};
+```
+
+### C.5 `src/cms/mock/navigation.ts`
+
+Replaces `src/content/navigation.ts`. All links use `pageId` — no raw `href` strings:
+
+```ts
+import type { PageId } from "./types";
+
+export interface NavItem { label: string; pageId: PageId; }
+export interface ServiceGroup { label: string; pageId: PageId; children: NavItem[]; }
+
+export const topNav: NavItem[] = [
+  { label: "Home",         pageId: "home" },
+  { label: "About",        pageId: "about-us" },
+  { label: "Services",     pageId: "service.global-event-solutions" },
+  { label: "Case Studies", pageId: "case-studies" },
+  { label: "Blog",         pageId: "blog" },
+  { label: "Contact",      pageId: "contact-us" },
+];
+
+export const serviceGroups: ServiceGroup[] = [
+  {
+    label: "Global Event Solutions",
+    pageId: "service.global-event-solutions",
+    children: [
+      { label: "Trade Show Booth Design",    pageId: "service.trade-show-booth-design" },
+      { label: "Event Lead Generation",      pageId: "service.event-lead-generation" },
+      { label: "Industry Events",            pageId: "service.industry-events" },
+      { label: "Custom Events",              pageId: "service.custom-events" },
+      { label: "Event Booth Rental",         pageId: "service.event-booth-rental" },
+      { label: "Trade Show Booth Builder",   pageId: "service.trade-show-booth-builder" },
+    ],
+  },
+  {
+    label: "Booth Design & Production",
+    pageId: "service.modular-portable-booths",
+    children: [
+      { label: "Modular & Portable Booths", pageId: "service.modular-portable-booths" },
+    ],
+  },
+  {
+    label: "Media Production",
+    pageId: "service.media-production",
+    children: [
+      { label: "Event Video Production",      pageId: "service.event-video-production" },
+      { label: "Corporate Video Production",  pageId: "service.corporate-video-production" },
+      { label: "Video Editing Services",      pageId: "service.video-editing-services" },
+      { label: "Live Streaming Services",     pageId: "service.live-streaming-services" },
+    ],
+  },
+  {
+    label: "Performance Marketing",
+    pageId: "service.performance-marketing",
+    children: [
+      { label: "SEO Services",        pageId: "service.seo-services" },
+      { label: "Paid Advertising",    pageId: "service.paid-advertising" },
+      { label: "LinkedIn Ads for B2B", pageId: "service.linkedin-ads-b2b" },
+    ],
+  },
+  {
+    label: "Sales Qualified Lead Generation",
+    pageId: "service.sales-qualified-lead-generation",
+    children: [],
+  },
+  {
+    label: "Market Research",
+    pageId: "service.market-research",
+    children: [
+      { label: "Data Augmentation",                    pageId: "service.data-augmentation" },
+      { label: "Data Validation",                      pageId: "service.data-validation" },
+      { label: "Human-Powered Market Intelligence",    pageId: "service.human-powered-market-intelligence" },
+    ],
+  },
+];
+
+export const footerNav: NavItem[] = [
+  { label: "Blog",         pageId: "blog" },
+  { label: "Case Studies", pageId: "case-studies" },
+  { label: "About Us",     pageId: "about-us" },
+  { label: "Contact Us",   pageId: "contact-us" },
+];
+
+export const socialLinks = {
+  linkedin:  "https://linkedin.com/company/b2bsalesarrow",
+  twitter:   "#",
+  instagram: "#",
+};
+```
+
+### C.6 `src/cms/mock/registry.ts`
+
+Master page registry. Every canonical page gets a `CmsPage` entry:
+
+```ts
+import type { CmsPage } from "./types";
+import { pageSeo } from "./seo";
+
+export const cmsPages: CmsPage[] = [
+  {
+    id: "home",
+    pageType: "home",
+    seo: pageSeo["home"],
+    ctas: [
+      { label: "Explore Our Work",  pageId: "case-studies",                     variant: "primary" },
+      { label: "Our Services",      pageId: "service.global-event-solutions",   variant: "secondary" },
+    ],
+  },
+  // ... all pages
+];
+
+export function getCmsPage(id: string): CmsPage | undefined {
+  return cmsPages.find((p) => p.id === id);
+}
+```
+
+### C.7 `src/cms/mock/componentMap.ts`
+
+Maps section IDs (as used in `docs/url-structure.md`) to component names. This table is the contract between content structure and UI:
+
+```ts
+export const sectionComponentMap: Record<string, string> = {
+  // Universal
+  "hero":             "features/*/sections/Hero",
+  "cta-banner":       "features/home/sections/CTABanner",
+  "faq":              "features/home/sections/FAQ",
+  "contact":          "features/home/sections/ContactUs",
+  "client-logos":     "features/home/sections/ClientLogos",
+  "testimonials":     "features/home/sections/Testimonials",
+
+  // Services
+  "services-grid":    "shared/sections/ServicesGrid",
+  "process-timeline": "shared/sections/ProcessTimeline",
+
+  // Home page
+  "case-studies":     "features/home/sections/CaseStudies",
+  "upcoming-events":  "features/home/sections/UpcomingEvents",
+  "why-choose-us":    "features/home/sections/WhyChooseUs",
+  "who-we-are":       "features/home/sections/WhoWeAre",
+  "our-services":     "features/home/sections/OurServices",
+  "blogs":            "features/home/sections/Blogs",
+};
+```
+
+### C.8 `src/lib/seo.ts`
+
+```ts
+import type { Metadata } from "next";
+import type { CmsSeo } from "@/cms/mock/types";
+
+const BASE = "https://b2bsalesarrow.com";
+
+export function buildPageMetadata(seo: CmsSeo): Metadata {
+  return {
+    title: seo.title,
+    description: seo.description,
+    alternates: { canonical: `${BASE}${seo.canonicalPath}` },
+    openGraph: {
+      title: seo.title,
+      description: seo.description,
+      url: `${BASE}${seo.canonicalPath}`,
+      type: "website",
+    },
+    ...(seo.noIndex && { robots: { index: false, follow: false } }),
+  };
+}
+```
+
+### C.9 Wire navigation into `Header.tsx` and `CinematicFooter.tsx`
+
+Replace imports of `src/content/navigation.ts` with `src/cms/mock/navigation.ts`. Replace all raw `href` strings with `resolvePageHref(item.pageId)`:
+
+```tsx
+// Before
+import { topNavigation } from "@/content/navigation";
+<Link href={item.href}>{item.name}</Link>
+
+// After
+import { topNav } from "@/cms/mock/navigation";
+import { resolvePageHref } from "@/cms/mock/resolve";
+<Link href={resolvePageHref(item.pageId)}>{item.label}</Link>
+```
+
+Apply to: `Header.tsx`, `Footer.tsx`, `CinematicFooter.tsx`.
+
+### C.10 Wire CMS metadata into route pages
+
+For each route page that has a hand-written `metadata` export, replace it with a CMS-driven one:
+
+```ts
+// src/app/about-us/page.tsx
+import { getCmsPage } from "@/cms/mock/registry";
+import { buildPageMetadata } from "@/lib/seo";
+
+const page = getCmsPage("about-us")!;
+export const metadata = buildPageMetadata(page.seo);
+```
+
+### C.11 Wire sitemap from CMS routes
+
+Update `src/app/sitemap.ts` to generate from `pageRoutes` rather than the hand-written array:
+
+```ts
+import { pageRoutes } from "@/cms/mock/routes";
+import { pageSeo } from "@/cms/mock/seo";
+
+export default function sitemap() {
+  return Object.entries(pageRoutes)
+    .filter(([id]) => !pageSeo[id]?.noIndex)
+    .map(([, path]) => ({
+      url: `https://b2bsalesarrow.com${path}`,
+      lastModified: new Date(),
+      changeFrequency: (path === "/" ? "weekly" : "monthly") as "weekly" | "monthly",
+      priority: path === "/" ? 1.0 : path.split("/").length <= 2 ? 0.8 : 0.6,
+    }));
+}
+```
+
+### C.12 Replace `href="#"` CTAs
+
+After wiring navigation, grep for remaining raw placeholder links:
+
+```bash
+grep -rn 'href="#"' src/ --include="*.tsx"
+```
+
+For each hit:
+- Known destination → `resolvePageHref(pageId)`
+- Anchor scroll (e.g. `#contact`) → leave as-is
+- Genuinely unknown → add `data-cms-placeholder="true"` so they are greppable later
+
+### C.13 Verification after Phase C
+
+```bash
+npm run check
+grep -rn 'href="/' src/components/ src/features/ src/shared/ 2>/dev/null | grep -v "external\|cms-placeholder"
+```
+
+Second command should return zero hits — no raw internal href strings outside of CMS resolution.
+
+---
+
+## 5. Phase D: Folder Restructure
+
+Move all files from `src/components/` into `src/features/` and `src/shared/` per the target structure in §1. Do not change any component logic during the move.
+
+### D.1 Rules for every move
+
+1. Create the target directory.
+2. Move the file.
+3. Add a one-line shim at the old path: `export { X } from "@/new/path/to/X"`.
+4. `npm run build` — must pass before continuing.
+5. Update all import sites to the new path.
+6. Delete the shim.
+7. `npm run build` — must pass before the next file.
+
+Never move a file and update import sites in the same step. Shims keep the build green throughout.
+
+### D.2 Migration sequence
+
+Move one directory at a time in this order:
+
+1. `src/components/providers/` → `src/shared/providers/`
+2. `src/components/layout/` → `src/shared/layout/`
+3. `src/components/ui/` → `src/shared/ui/`
+4. Shared sections (SectionShell, SectionHeader, ProcessTimeline, ServicesGrid) → `src/shared/sections/`
+5. Home sections (Hero/HomeHero, CinematicSequence, ClientLogos, WhoWeAre, OurServices, CaseStudies, UpcomingEvents, WhyChooseUs, Testimonials, Blogs, FAQ, ContactUs, CTABanner) → `src/features/home/sections/`
+6. `src/components/about/` → `src/features/about/sections/`
+7. `src/components/content/` → `src/features/services/`
+8. `src/components/resources/` → `src/features/resources/`
+9. `src/components/contact/` → `src/features/contact/`
+10. `src/components/legal/` → `src/features/legal/`
+
+After step 10, `src/components/` should be empty. Delete it.
+
+### D.3 Alias additions (optional)
+
+If import paths become verbose, add convenience aliases to `tsconfig.json`:
 
 ```json
 {
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint",
-    "typecheck": "tsc --noEmit --incremental false",
-    "check": "npm run lint && npm run typecheck && npm run build"
+  "compilerOptions": {
+    "paths": {
+      "@/*":          ["./src/*"],
+      "@shared/*":    ["./src/shared/*"],
+      "@features/*":  ["./src/features/*"],
+      "@cms/*":       ["./src/cms/*"]
+    }
   }
 }
 ```
 
-### 7.3 Canonical metadata per page
+Update `src/content/navigation.ts` import sites to import from `@/cms/mock/navigation` after Phase C is complete. After that, `src/content/navigation.ts` can be deleted (confirm with grep first).
 
-For each canonical route, update or create the `export const metadata: Metadata` with:
-- `title`: unique, from `docs/B2B Sales Arrow — Master SEO Landing Page Structure.md`
-- `description`: unique, from same doc
-- `openGraph`: `{ title, description, url: "https://b2bsalesarrow.com<canonical-path>", type: "website" }`
-- `alternates`: `{ canonical: "https://b2bsalesarrow.com<canonical-path>" }`
+### D.4 Verification after Phase D
 
-Source of truth for SEO copy: `docs/B2B Sales Arrow — Master SEO Landing Page Structure.md`.
-
-### 7.4 Redirects for non-canonical routes
-
-Convert each non-canonical route page to a redirect using Next.js `redirect()`:
-
-**`src/app/services/global-event-solutions/modular-portable-booths/page.tsx`:**
-```tsx
-import { redirect } from "next/navigation";
-export default function Page() {
-  redirect("/services/booth-design-production/modular-portable-booths");
-}
+```bash
+npm run check
+ls src/components/ 2>/dev/null && echo "FAIL: components/ still exists" || echo "OK: components/ removed"
 ```
 
-**`src/app/services/media-production/youtube-ads-b2b/page.tsx`:**
-```tsx
-import { redirect } from "next/navigation";
-export default function Page() {
-  redirect("/services/media-production");
-}
-```
+All imports must resolve. Visual spot-check on `/`, `/about-us`, one service page.
 
-**`src/app/services/media-production/video-testimonials/page.tsx`:**
-```tsx
-import { redirect } from "next/navigation";
-export default function Page() {
-  redirect("/services/media-production");
-}
-```
+---
 
-After converting these three pages to redirects, the `VideoTestimonialsContent.tsx` and `YouTubeAdsB2BContent.tsx` in `src/components/services/` become unreferenced and can be deleted in Phase 5.
+## 6. Phase E: `/events` Route
 
-### 7.5 `src/app/sitemap.ts`
+The `/events` route exists at `src/app/events/page.tsx` but is not in `docs/url-structure.md`.
 
-Generate sitemap from the canonical URL list. All 26 canonical marketing pages plus `/privacy-policy` and `/terms-and-conditions`. Do not include `/thank-you` (no-index), non-canonical routes, or `/events` if it has no published content.
+**Recommended action:** Keep the route but exclude from sitemap and navigation until content is ready. Add `noIndex: true` to its metadata now:
 
 ```ts
-import type { MetadataRoute } from "next";
-
-const canonicalUrls = [
-  "/",
-  "/about-us",
-  "/blog",
-  "/case-studies",
-  "/contact-us",
-  "/privacy-policy",
-  "/terms-and-conditions",
-  "/services/global-event-solutions",
-  "/services/global-event-solutions/trade-show-booth-design",
-  // ... all 26 canonical pages from docs/url-structure.md
-];
-
-export default function sitemap(): MetadataRoute.Sitemap {
-  return canonicalUrls.map((url) => ({
-    url: `https://b2bsalesarrow.com${url}`,
-    lastModified: new Date(),
-    changeFrequency: url === "/" ? "weekly" : "monthly",
-    priority: url === "/" ? 1.0 : url.split("/").length <= 2 ? 0.8 : 0.6,
-  }));
-}
-```
-
-### 7.6 `src/app/robots.ts`
-
-```ts
-import type { MetadataRoute } from "next";
-
-export default function robots(): MetadataRoute.Robots {
-  return {
-    rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://b2bsalesarrow.com/sitemap.xml",
-  };
-}
-```
-
-### 7.7 FAQ JSON-LD
-
-Pages with FAQ sections: `/` (FAQ section), all service hub and detail pages that have FAQ content in their content files.
-
-Create `src/lib/structured-data.ts`:
-
-```ts
-export function buildFaqJsonLd(faqs: Array<{ question: string; answer: string }>) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map(({ question, answer }) => ({
-      "@type": "Question",
-      name: question,
-      acceptedAnswer: { "@type": "Answer", text: answer },
-    })),
-  };
-}
-
-export function buildBreadcrumbJsonLd(crumbs: Array<{ name: string; url: string }>) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: crumbs.map(({ name, url }, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      name,
-      item: url,
-    })),
-  };
-}
-```
-
-Inject via `<script type="application/ld+json">` in relevant page metadata or a small server component. Apply FAQ JSON-LD to: `/` (uses `HOME_FAQ_CONTENT`), and each service page with FAQ data in its content file. Apply breadcrumb JSON-LD to all service detail pages.
-
-### 7.8 No-index for `/thank-you`
-
-```tsx
 export const metadata: Metadata = {
+  title: "Upcoming Events | B2B Sales Arrow",
   robots: { index: false, follow: false },
 };
 ```
 
-### 7.9 Verification after Phase 4
-
-```bash
-npm run build
-```
-
-Then in the built output:
-- Visit `/sitemap.xml` → all 26+ canonical pages listed.
-- Visit `/robots.txt` → sitemap URL present, no disallow of marketing pages.
-- Check page source of `/` → `<link rel="canonical" ...>` present with correct URL.
-- Check page source of `/services/global-event-solutions/modular-portable-booths` → redirects to correct URL (HTTP 307 in Next.js dev, but verify in production build).
-- Check page source of `/thank-you` → `noindex` in meta.
+When events content is production-ready:
+1. Add `"events"` to `pageRoutes` in `src/cms/mock/routes.ts`
+2. Add SEO entry to `pageSeo`
+3. Add nav entry if needed
+4. Remove `noIndex`
+5. Sitemap auto-generates the entry
 
 ---
 
-## 8. Phase 5: Dead Code Cleanup
-
-**Goal:** Remove files that are confirmed unreferenced. Grep before deleting anything.
-
-### 8.1 Junk/Output Files (delete immediately)
-
-```bash
-rm scratch/cleanup.js
-rm lint_output.txt
-find . -name ".DS_Store" -not -path "./.git/*" -delete
-```
-
-### 8.2 `public/` Default Assets
-
-Grep for references first:
-```bash
-grep -r "next\.svg\|vercel\.svg\|window\.svg\|file\.svg\|globe\.svg" src/ public/ --include="*.tsx" --include="*.ts" --include="*.css"
-```
-
-Delete only the ones with zero references in the source tree. Never delete `logo.png`, `Frames/`, or `undraw_contact-us_s4jn.svg` — these are confirmed used.
-
-### 8.3 `src/components/services/` Content Components
-
-After Phase 4 converts the non-canonical pages to `redirect()` calls, these files become dead:
-- `src/components/services/VideoTestimonialsContent.tsx`
-- `src/components/services/YouTubeAdsB2BContent.tsx`
-
-Confirm with grep: `grep -r "VideoTestimonialsContent\|YouTubeAdsB2BContent" src/` — should show zero hits after the redirect conversion. Then delete.
-
-### 8.4 Other Potentially Unused Components
-
-Run an import graph pass for these:
-- `src/components/sections/TextSection.tsx` — grep usage
-- `src/components/sections/FAQAccordion.tsx` — grep usage (separate from `FAQ.tsx`)
-- `src/components/sections/ComparisonTable.tsx` — grep usage
-- `src/components/sections/StatsBar.tsx` — grep usage
-- `src/components/sections/USPSection.tsx` — grep usage
-- `src/components/about/AboutPageContent.tsx` — grep usage
-- `src/components/about/whisper-text.tsx` — grep usage
-- `src/components/about/layout-text-flip.tsx` — grep usage
-- `src/components/about/pointer-highlight.tsx` — grep usage
-- `src/components/about/background-ripple-effect.tsx` — grep usage
-
-```bash
-# Example for one file:
-grep -rn "TextSection\|FAQAccordion\|ComparisonTable\|StatsBar\|USPSection" src/ --include="*.tsx" --include="*.ts"
-```
-
-Delete confirmed dead files. Keep anything with even one live import.
-
-### 8.5 Stub Files Created in Phase 0
-
-After Phase 5 grep pass confirms that `zoom-parallax.tsx`, `logo-cloud-3.tsx`, and `ui/GlobalPresence.tsx` are not referenced by any live page, delete the stubs. If they are still referenced, keep the stubs in place and document why.
-
-### 8.6 Verification after Phase 5
-
-```bash
-npm run build
-```
-
-No regressions. All live pages still render. Import graph is clean.
-
----
-
-## 9. Phase 6: Performance
-
-**Goal:** Reduce duplicate animation setup and improve image loading. Zero visual change.
-
-### 9.1 Lenis Sole Ownership
-
-`src/components/providers/SmoothScrollProvider.tsx` must be the only file that creates a Lenis instance or calls `new Lenis()`.
-
-Grep for other Lenis/RAF owners:
-```bash
-grep -rn "new Lenis\|lenis\|useRAF\|requestAnimationFrame" src/ --include="*.tsx" --include="*.ts" | grep -v SmoothScrollProvider
-```
-
-For each hit in a non-provider file: remove the duplicate Lenis instantiation. If the file has its own scroll listener, migrate it to use the shared Lenis context via the provider's exposed API or `window.__lenis` if that pattern exists.
-
-### 9.2 Cancel RAF on Unmount
-
-Any component with a `requestAnimationFrame` loop must call `cancelAnimationFrame` in the cleanup function returned by `useEffect`. Grep and verify:
-```bash
-grep -rn "requestAnimationFrame" src/ --include="*.tsx"
-```
-
-For each hit, confirm there is a matching `cancelAnimationFrame` in the effect cleanup.
-
-### 9.3 Deterministic Globe Data
-
-`src/components/ui/Globe.tsx` and `src/components/about/global-presence.tsx` likely generate arc/point data with `Math.random()`. This causes hydration mismatches and non-deterministic screenshots.
-
-Fix: replace `Math.random()` in static data arrays with deterministic seeded values. Use a simple deterministic sequence or hardcoded coordinates. This does not change the visual appearance of the globe at runtime.
-
-### 9.4 `next/image` for Non-Animated Images
-
-Grep for `<img` tags (not from `next/image`):
-```bash
-grep -rn "<img " src/ --include="*.tsx"
-```
-
-For each hit that is:
-- Not inside an SVG inline
-- Not serving an animation frame sequence
-- Not inside a component that explicitly needs raw `<img` for CSS animation reasons
-
-Replace with `<Image>` from `next/image`. Add accurate `sizes` prop. Use `priority` only for above-the-fold hero images.
-
-Do not replace `<img>` inside the Frames animation sequence or any GSAP canvas/WebGL context.
-
-### 9.5 Dynamic Imports
-
-Confirm these are already dynamically imported with `ssr: false`. If not, add:
-- `Globe.tsx` / `GlobeVisualization.tsx`
-- `CinematicSequence.tsx` (if it references browser APIs at module level)
-- Any Three.js component
-
-### 9.6 `"use client"` Audit
-
-Grep all `"use client"` directives:
-```bash
-grep -rn '"use client"' src/ --include="*.tsx"
-```
-
-For each file: confirm it actually uses a hook, event handler, or browser API. If a component is purely presentational with no interactivity, remove `"use client"` and make it a server component. This is especially valuable for page-level wrappers and static content.
-
-### 9.7 Verification after Phase 6
-
-```bash
-npm run build
-```
-
-The build output should show reduced client bundle size (check `next build` output for client chunk sizes). No visual regressions.
-
----
-
-## 10. Phase 7: Lint & Type Quality
-
-**Goal:** Zero lint errors, zero lint warnings, zero TypeScript errors.
-
-### 10.1 Fix All Lint Errors
-
-```bash
-npm run lint 2>&1 | head -100
-```
-
-Common categories to fix:
-- Unused imports: remove them
-- Stale `// eslint-disable` comments: remove if the error no longer exists
-- `any` types on globe refs: use `THREE.WebGLRenderer | null` or appropriate Three.js types
-- `<img>` warnings: already handled in Phase 6
-- Invalid Tailwind classes: fix typos (e.g. `hover:text-white:bg-brand-cyan` → `hover:text-white hover:bg-brand-cyan`)
-- `href="#"` placeholder links: replace with actual routes from `navigation.ts` or a `#` anchor if intentional
-
-Target: `npm run lint` produces zero output.
-
-### 10.2 Fix All TypeScript Errors
-
-```bash
-./node_modules/.bin/tsc --noEmit --incremental false --pretty false
-```
-
-Common categories:
-- Missing type imports
-- `any` in component props
-- Unsafe array indexing (`items[0]` without null check)
-- Framer Motion ref type mismatches
-
-Do not use `// @ts-ignore` or `// @ts-expect-error` unless the underlying library type is wrong and there is no better fix.
-
-### 10.3 Invalid Tailwind Class Audit
-
-Search for known broken class patterns:
-```bash
-grep -rn "hover:text-.*:bg-\|text-brand-.*/" src/ --include="*.tsx"
-```
-
-Fix each instance to valid Tailwind syntax. Where the intended class is ambiguous, keep the original and leave a comment.
-
-### 10.4 Verification after Phase 7
-
-```bash
-npm run check
-```
-
-All three commands (lint, typecheck, build) must pass cleanly with zero errors and zero warnings.
-
----
-
-## 11. Canonical Type Scale Reference (for ongoing development)
-
-Use these classes for every new heading going forward. Do not create new variants without updating this plan.
-
-| Tag | Use | Tailwind Classes |
-|---|---|---|
-| `h1` | Page title / hero title | `font-heading text-5xl lg:text-7xl font-bold leading-[1.1] text-brand-charcoal` |
-| `h2` | Section title (one per section) | `font-heading text-4xl lg:text-5xl font-bold leading-tight text-brand-charcoal` |
-| `h3` | Card / subsection / FAQ item / timeline entry | `font-heading text-2xl lg:text-3xl font-bold leading-tight text-brand-charcoal` |
-| `h4` | Grouped metadata labels only (Challenge, Solution, Date, Location) | `text-xs font-bold uppercase tracking-wider` |
-
-| Pattern | Tailwind Classes |
-|---|---|
-| Hero paragraph | `text-xl leading-relaxed text-brand-charcoal/70` |
-| Section paragraph | `text-lg leading-relaxed text-gray-600` |
-| Card paragraph | `text-sm md:text-base leading-relaxed text-gray-600` |
-| Eyebrow/pill | `text-sm font-semibold tracking-wide uppercase` |
-| Tiny badge | `text-[10px] font-black uppercase tracking-widest` |
-
-**Intentional exceptions (never normalize):**
-- About editorial hero h1: `font-heading text-[8vw] md:text-[5vw] lg:text-[5.5vw] font-bold leading-[1.1] tracking-tight`
-- CinematicFooter display h2: `text-5xl md:text-8xl font-black tracking-tighter`
-- CinematicSequence beats: animation-driven `titleClassName` from content data
-- CTABanner h2: `text-3xl md:text-6xl font-bold text-white font-heading` (white, large, CTA-specific)
-- ContactUs h2: `font-heading text-4xl lg:text-6xl font-bold` (contact emphasis)
-
----
-
-## 12. Heading Semantic Rules (for ongoing development)
-
-- Exactly one `h1` per page/route.
-- Each major section gets exactly one `h2`. Nothing else in that section uses `h2`.
-- Cards, subsections, FAQ questions, timeline entries, and feature items use `h3`.
-- `h4` only for genuine grouped metadata labels (Challenge/Solution/Date/Location on case study or event cards).
-- Eyebrows, badges, stat numbers, reviewer names, nav group labels, dates, and decorative display text are never headings.
-- When using `Heading` component with `preserveClassName`, you are opting out of canonical defaults — document why.
-
----
-
-## 13. Verification Checklist (run after all phases)
+## 7. Verification Checklist
 
 ### Commands
 
 ```bash
-npm run check
-# expands to:
-npm run lint         # zero errors, zero warnings
-npm run typecheck    # zero errors
-npm run build        # clean build, no warnings
+npm run check   # lint + typecheck + build, zero errors
 ```
 
-### DOM Checks (browser DevTools or automated)
+### Structural checks
 
-- [ ] Exactly one `<h1>` per route
-- [ ] Each major section has one `<h2>`, never two
-- [ ] Cards/subsections use `<h3>`
-- [ ] `<h4>` only for Challenge/Solution/Date/Location metadata
-- [ ] No `<h3>` or `<h4>` for nav labels, reviewer names, badge text, or decorative content
-- [ ] CinematicFooter nav labels render as `<span>` not `<h3>`
-- [ ] Testimonials reviewer name renders as `<p>` not `<h4>`
+- [ ] `src/components/` does not exist
+- [ ] All imports use `@/features/`, `@/shared/`, `@/cms/`, `@/content/`, or `@/lib/`
+- [ ] No raw internal `href="/..."` strings in layout or navigation components
+- [ ] All navigation links resolve through `resolvePageHref`
+- [ ] `socialLinks` defined in CMS — no inline `href="#"` for socials in component JSX
+- [ ] `sitemap.ts` generates from `pageRoutes`, not a hand-written array
+- [ ] Route metadata uses `buildPageMetadata(getCmsPage(id)!.seo)`
+- [ ] Contact form validates, shows loading state, pushes to `/thank-you`
 
-### Route Checks
+### DOM checks
 
-- [ ] `/sitemap.xml` — all 26 canonical pages present
-- [ ] `/robots.txt` — valid, includes sitemap URL
-- [ ] `/services/global-event-solutions/modular-portable-booths` → 307 redirect to `/services/booth-design-production/modular-portable-booths`
-- [ ] `/services/media-production/youtube-ads-b2b` → 307 redirect to `/services/media-production`
-- [ ] `/services/media-production/video-testimonials` → 307 redirect to `/services/media-production`
-- [ ] All 26 canonical pages render without error
-- [ ] `/thank-you` has `noindex` in head
+- [ ] Exactly one `<h1>` per route (all 26 canonical pages)
+- [ ] Every section has exactly one `<h2>`
+- [ ] All card titles use `<h3>`
+- [ ] No `<h3>` or `<h4>` for nav labels, names, badges, or decorative text
 
-### Visual Regression Pages (screenshot before/after each phase)
+### Visual regression pages
 
-- [ ] `/` — hero, cinematic sequence, services, case studies, testimonials, FAQ, footer globe
-- [ ] `/about-us` — editorial hero, timeline, globe, team, testimonials
-- [ ] `/services/global-event-solutions` — hub page hero and sections
-- [ ] `/services/global-event-solutions/trade-show-booth-design` — detail page
-- [ ] `/services/media-production` — hub page
-- [ ] `/services/performance-marketing/seo-services` — detail page
-- [ ] `/blog` — index page
-- [ ] `/case-studies` — index page
-- [ ] `/contact-us` — form and map
-- [ ] `/privacy-policy` — legal content
-- [ ] `/terms-and-conditions` — legal content
+- [ ] `/` — all sections unchanged
+- [ ] `/about-us` — editorial hero, globe, team unchanged
+- [ ] `/services/global-event-solutions`
+- [ ] `/services/global-event-solutions/trade-show-booth-design`
+- [ ] `/services/media-production`
+- [ ] `/services/performance-marketing/seo-services`
+- [ ] `/blog`
+- [ ] `/case-studies`
+- [ ] `/contact-us` — form validates and submits correctly
+- [ ] `/privacy-policy`
+- [ ] `/terms-and-conditions`
 
-### Interaction Checks
+### Interaction checks
 
-- [ ] Header desktop services dropdown — hover opens, links work
-- [ ] Mobile menu — opens, closes, all links work
-- [ ] Hero animation / preloader (if any)
-- [ ] Cinematic sequence — scroll-driven beats advance correctly
-- [ ] Sticky service cards — cards stack and unstick on scroll
-- [ ] FAQ cards — flip/scroll works
-- [ ] Testimonials carousel — autoplay, prev/next navigation, coverflow animation
-- [ ] About globe — renders, rotates, no hydration error
-- [ ] Footer globe — renders in CinematicFooter
-- [ ] Footer magnetic buttons — GSAP mouse tracking works
-- [ ] Footer marquee — animates continuously
-- [ ] Contact form — prevents default, mock submit navigates to `/thank-you`
-- [ ] Smooth scroll — Lenis active, no double-scroll behavior
+- [ ] Header dropdown — all service links resolve via CMS
+- [ ] Mobile menu — all links work
+- [ ] Footer links — resolve via CMS
+- [ ] CinematicFooter links — resolve via CMS
+- [ ] Contact form — field validation, loading state, redirect to `/thank-you`
+- [ ] All carousels, accordions, sticky cards, globe, cinematic sequence — unchanged
 
 ---
 
-## 14. File Deletion Summary (safe-to-delete after each phase)
+## 8. Out of Scope For This Plan
 
-| File | Delete After | Pre-Delete Grep Required |
-|---|---|---|
-| `scratch/cleanup.js` | Phase 5 | No |
-| `lint_output.txt` | Phase 5 | No |
-| All `.DS_Store` | Phase 5 | No |
-| `src/components/services/VideoTestimonialsContent.tsx` | Phase 5 (after Phase 4) | Yes — confirm zero imports |
-| `src/components/services/YouTubeAdsB2BContent.tsx` | Phase 5 (after Phase 4) | Yes — confirm zero imports |
-| `public/next.svg`, `public/vercel.svg`, `public/window.svg`, `public/file.svg` | Phase 5 | Yes — confirm zero references |
-| Any stub created for `zoom-parallax`, `logo-cloud-3`, `ui/GlobalPresence` | Phase 5 | Yes — confirm zero live imports |
-
----
-
-## 15. Out of Scope (do not include in this pass)
-
-The following are acknowledged but intentionally deferred to a future master cleanup phase:
-
-- **Mock CMS registry** (`src/cms/mock/`): Premature until the real CMS contract exists.
-- **Route restructuring** into `features/` and `shared/`: No functional value without CMS integration.
-- **Component extraction at scale**: `SectionShell`, `SectionHeader`, `Card`, `ImageFrame`, and `CmsHeadingRenderer` are created in Phase 3 but not back-ported into existing sections. Existing sections continue to inline their classes. Migration is opt-in as new features are built.
-- **Navigation link resolution by pageId**: The mock CMS routing pattern. Current `navigation.ts` hard-coded hrefs are fine.
-- **Social link placeholders**: Out of scope.
-- **Full SEO keyword copy audit**: Use docs as-is; deep copy rewriting is a content task, not an engineering task.
-- **`/events` route status**: Not in canonical URL list. Leave as-is until product decision.
+- Real CMS integration (Contentful, Sanity, Prismic, etc.) — `src/cms/mock/` is the placeholder
+- A/B testing, feature flags
+- Internationalisation
+- Auth or gated pages
+- Analytics beyond current setup
+- Any visual redesign
+- Blog or case study detail page routes (not in `docs/url-structure.md`)
