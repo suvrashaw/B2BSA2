@@ -41,14 +41,14 @@ export function Blogs({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-red/10 border border-brand-red/20 text-brand-red text-sm font-semibold tracking-wide"
+            className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-brand-primary text-sm font-semibold tracking-wide"
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal leading-tight">
+          <h2 className="font-heading text-4xl lg:text-5xl font-bold  leading-tight">
             {heading}
           </h2>
-          <button className="mt-8 flex items-center gap-2 text-brand-charcoal font-semibold hover:text-brand-red:text-brand-red transition-all duration-300 group">
+          <button className="mt-8 flex items-center gap-2  font-semibold hover:text-brand-primary:text-brand-primary transition-all duration-300 group">
             {ctaLabel}{" "}
             <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </button>
@@ -134,14 +134,14 @@ function BlogCard({
           className="object-cover"
         />
         <div className="absolute top-4 left-4">
-          <span className="px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold uppercase tracking-wider text-brand-charcoal shadow-sm">
+          <span className="px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold uppercase tracking-wider  shadow-sm">
             {blog.category}
           </span>
         </div>
       </div>
       <div className="p-8">
         <span className="text-sm text-gray-500 font-medium mb-3 block">{blog.date}</span>
-        <h3 className="font-heading text-2xl font-bold text-brand-charcoal mb-6 leading-tight">
+        <h3 className="font-heading text-2xl font-bold  mb-6 leading-tight">
           {blog.title}
         </h3>
         <div className="flex items-center text-brand-blue font-semibold text-sm uppercase tracking-widest gap-2">

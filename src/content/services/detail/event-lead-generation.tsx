@@ -104,7 +104,7 @@ export const ELG_DELIVERABLES = {
       icon: "Cpu",
       image:
         "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-red",
+      color: "bg-brand-primary",
     },
     {
       id: "report",

@@ -106,7 +106,7 @@ export const DA_DELIVERABLES = {
       icon: "BarChart3",
       image:
         "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-red",
+      color: "bg-brand-primary",
     },
     {
       id: "intent",

@@ -32,7 +32,7 @@ export const ABOUT_ORIGIN_TIMELINE = {
     {
       title: "Spotting the Gap",
       content: (
-        <div className="prose prose-sm md:prose-base text-brand-charcoal/80 max-w-none">
+        <div className="prose prose-sm md:prose-base /80 max-w-none">
           <p>
             Enterprise brands were investing heavily in events and campaigns, but the work was
             fragmented, hard to measure, and disconnected from sales outcomes.
@@ -43,7 +43,7 @@ export const ABOUT_ORIGIN_TIMELINE = {
     {
       title: "Building the Model",
       content: (
-        <div className="prose prose-sm md:prose-base text-brand-charcoal/80 max-w-none">
+        <div className="prose prose-sm md:prose-base /80 max-w-none">
           <p>
             We built a model where event solutions, corporate video production, performance
             marketing, and B2B market research capabilities work together seamlessly.
@@ -54,7 +54,7 @@ export const ABOUT_ORIGIN_TIMELINE = {
     {
       title: "Scaling Globally",
       content: (
-        <div className="prose prose-sm md:prose-base text-brand-charcoal/80 max-w-none">
+        <div className="prose prose-sm md:prose-base /80 max-w-none">
           <p>
             Today, we are a global enterprise growth agency delivering these solutions across 40+
             countries with accountability to results.

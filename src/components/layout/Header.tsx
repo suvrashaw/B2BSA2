@@ -62,7 +62,7 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
               href={link.href}
               className={cn(
                 "group relative text-sm font-medium transition-colors flex items-center gap-1.5",
-                "text-brand-charcoal hover:text-brand-blue"
+                " hover:text-brand-blue"
               )}
             >
               {link.name}
@@ -83,7 +83,7 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
                       >
                         <Link
                           href={group.href}
-                          className="mb-3 block text-sm font-black text-brand-charcoal hover:text-brand-blue transition-colors"
+                          className="mb-3 block text-sm font-black  hover:text-brand-blue transition-colors"
                         >
                           {group.name}
                         </Link>
@@ -92,7 +92,7 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
                             <Link
                               key={sub.name}
                               href={sub.href}
-                              className="block text-xs font-semibold leading-5 text-brand-charcoal/60 hover:text-brand-blue transition-colors"
+                              className="block text-xs font-semibold leading-5 /60 hover:text-brand-blue transition-colors"
                             >
                               {sub.name}
                             </Link>
@@ -112,7 +112,7 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
         <button
           className={cn(
             "flex items-center gap-2 text-sm font-medium transition-colors",
-            "text-brand-charcoal/70 hover:text-brand-blue"
+            "/70 hover:text-brand-blue"
           )}
         >
           <span suppressHydrationWarning className="flex items-center">
@@ -133,7 +133,7 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
         <div className="lg:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 text-brand-charcoal hover:bg-brand-gray/5 rounded-full transition-colors"
+            className="p-2  hover:bg-brand-gray/5 rounded-full transition-colors"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -153,7 +153,7 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
                 <Link
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-2xl font-bold font-heading text-brand-charcoal hover:text-brand-blue transition-colors block"
+                  className="text-2xl font-bold font-heading  hover:text-brand-blue transition-colors block"
                 >
                   {link.name}
                 </Link>
@@ -164,7 +164,7 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
                         <Link
                           href={group.href}
                           onClick={() => setIsMobileMenuOpen(false)}
-                          className="text-lg font-bold text-brand-charcoal hover:text-brand-blue transition-colors block"
+                          className="text-lg font-bold  hover:text-brand-blue transition-colors block"
                         >
                           {group.name}
                         </Link>

@@ -105,7 +105,7 @@ export const EVP_DELIVERABLES = {
       icon: "Camera",
       image:
         "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-red",
+      color: "bg-brand-primary",
     },
     {
       id: "social",

@@ -45,7 +45,7 @@ export function CaseStudies({
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal leading-tight">
+          <h2 className="font-heading text-4xl lg:text-5xl font-bold  leading-tight">
             {heading}
           </h2>
         </div>
@@ -161,7 +161,7 @@ export function CaseStudies({
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 20 }}
                         transition={{ delay: 0.2, duration: 0.3 }}
-                        className="absolute bottom-8 right-8 px-6 py-3 rounded-full bg-brand-blue text-white font-medium shadow-lg hover:bg-brand-cyan hover:text-brand-charcoal transition-all duration-300 flex items-center gap-2"
+                        className="absolute bottom-8 right-8 px-6 py-3 rounded-full bg-brand-blue text-white font-medium shadow-lg hover:bg-brand-cyan hover: transition-all duration-300 flex items-center gap-2"
                       >
                         {ctaLabel} <ArrowUpRight className="w-4 h-4" />
                       </motion.button>

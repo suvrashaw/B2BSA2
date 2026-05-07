@@ -5,7 +5,7 @@ import { cn } from "@/lib";
 const textVariants = cva("", {
   variants: {
     variant: {
-      hero: "text-xl leading-relaxed text-brand-charcoal/70",
+      hero: "text-xl leading-relaxed /70",
       section: "text-lg leading-relaxed text-gray-600",
       card: "text-sm md:text-base leading-relaxed text-gray-600",
       muted: "text-sm text-gray-500 leading-relaxed",

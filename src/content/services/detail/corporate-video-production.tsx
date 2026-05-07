@@ -106,7 +106,7 @@ export const CVP_DELIVERABLES = {
       icon: "Presentation",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-red",
+      color: "bg-brand-primary",
     },
     {
       id: "social-cuts",

@@ -61,12 +61,12 @@ export function WhyChooseUs({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-charcoal/5 border border-brand-charcoal/10 text-brand-charcoal text-sm font-semibold tracking-wide"
+            className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-charcoal/5 border border-brand-charcoal/10  text-sm font-semibold tracking-wide"
           >
             {eyebrow}
           </motion.div>
           <h2
-            className={`font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal mb-8 leading-tight w-full ${showImagePanel ? "text-left" : "text-center"}`}
+            className={`font-heading text-4xl lg:text-5xl font-bold  mb-8 leading-tight w-full ${showImagePanel ? "text-left" : "text-center"}`}
           >
             {heading}
           </h2>
@@ -84,7 +84,7 @@ export function WhyChooseUs({
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <CheckCircle2 className="w-6 h-6 text-brand-blue" />
-                    <h3 className="font-heading text-3xl font-bold text-brand-charcoal">
+                    <h3 className="font-heading text-3xl font-bold ">
                       {activeReason.title}
                     </h3>
                   </div>

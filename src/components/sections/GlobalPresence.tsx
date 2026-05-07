@@ -40,7 +40,7 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
   return (
     <section
       ref={containerRef}
-      className="py-12 bg-brand-white text-brand-charcoal relative overflow-hidden transition-colors duration-500"
+      className="py-12 bg-brand-white  relative overflow-hidden transition-colors duration-500"
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(75,192,217,0.1)_0%,transparent_70%)]" />
 
@@ -59,10 +59,10 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
             text={data.title}
             highlights={[data.title.split(" ")[0] || ""]}
             highlightColor="blue"
-            className="font-heading text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-8 text-brand-charcoal transition-colors duration-500"
+            className="font-heading text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-8  transition-colors duration-500"
           />
 
-          <p className="text-lg md:text-xl text-brand-charcoal/70 leading-relaxed mb-10 transition-colors duration-500 font-bold uppercase tracking-widest">
+          <p className="text-lg md:text-xl /70 leading-relaxed mb-10 transition-colors duration-500 font-bold uppercase tracking-widest">
             {data.description}
           </p>
         </motion.div>

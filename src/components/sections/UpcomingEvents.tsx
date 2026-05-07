@@ -36,7 +36,7 @@ export function UpcomingEvents({
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal leading-tight">
+          <h2 className="font-heading text-4xl lg:text-5xl font-bold  leading-tight">
             {heading}
           </h2>
         </div>
@@ -88,7 +88,7 @@ export function UpcomingEvents({
                       <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">
                         Date
                       </h4>
-                      <p className="text-brand-charcoal text-sm font-semibold">{event.date}</p>
+                      <p className=" text-sm font-semibold">{event.date}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -99,7 +99,7 @@ export function UpcomingEvents({
                       <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">
                         Location
                       </h4>
-                      <p className="text-brand-charcoal text-sm font-semibold line-clamp-2">
+                      <p className=" text-sm font-semibold line-clamp-2">
                         {event.location}
                       </p>
                     </div>

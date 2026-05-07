@@ -106,7 +106,7 @@ export const LSS_DELIVERABLES = {
       icon: "Wifi",
       image:
         "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-red",
+      color: "bg-brand-primary",
     },
     {
       id: "replay",

@@ -27,10 +27,10 @@ export function Footer() {
   const contentBgOpacity = useTransform(scrollYProgress, [0.5, 1], [0.8, 1]);
 
   return (
-    <footer ref={containerRef} className="bg-white h-[200vh] relative z-0">
+    <footer ref={containerRef} className="bg-brand-charcoal h-[200vh] relative z-0">
       <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-between">
         {/* 1. Global Presence Slider Section (Fixed at top) */}
-        <div className="absolute top-0 left-0 right-0 z-20 pt-12 pb-24 pointer-events-none bg-gradient-to-b from-white via-white/80 to-transparent">
+        <div className="absolute top-0 left-0 right-0 z-20 pt-12 pb-24 pointer-events-none bg-gradient-to-b from-brand-charcoal via-brand-charcoal/80 to-transparent">
           {/* We wrap it in a pointer-events-auto div to ensure it's still clickable/selectable if needed */}
           <div className="pointer-events-auto">
             <GlobalPresence />
@@ -55,7 +55,7 @@ export function Footer() {
         >
           <motion.div
             style={{ opacity: contentBgOpacity }}
-            className="absolute inset-0 bg-gradient-to-t from-white via-white/95 to-white/40 backdrop-blur-sm -z-10"
+            className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/95 to-brand-charcoal/40 backdrop-blur-sm -z-10"
           />
           <div className="container mx-auto px-8 pt-32 pb-8 relative">
             <div className="grid lg:grid-cols-12 gap-16 mb-16">
@@ -69,7 +69,7 @@ export function Footer() {
                     alt="B2B Sales Arrow"
                     fill
                     sizes="192px"
-                    className="object-contain bg-white/95 px-2 py-1 rounded-md"
+                    className="object-contain bg-transparent px-2 py-1 rounded-md brightness-0 invert"
                   />
                 </Link>
                 <p className="text-gray-600 leading-relaxed mb-8 max-w-sm">
@@ -100,7 +100,7 @@ export function Footer() {
               </div>
 
               <div className="lg:col-span-2">
-                <span className="block font-heading font-bold text-lg text-brand-charcoal mb-6">
+                <span className="block font-heading font-bold text-lg text-white mb-6">
                   Navigation
                 </span>
                 <ul className="space-y-4">
@@ -108,7 +108,7 @@ export function Footer() {
                     <li key={item.name}>
                       <Link
                         href={item.href}
-                        className="text-gray-500 hover:text-brand-blue transition-colors text-sm font-medium"
+                        className="text-gray-400 hover:text-brand-primary transition-colors text-sm font-medium"
                       >
                         {item.name}
                       </Link>
@@ -118,7 +118,7 @@ export function Footer() {
               </div>
 
               <div className="lg:col-span-3">
-                <span className="block font-heading font-bold text-lg text-brand-charcoal mb-6">
+                <span className="block font-heading font-bold text-lg text-white mb-6">
                   Services
                 </span>
                 <div className="grid gap-4">
@@ -126,7 +126,7 @@ export function Footer() {
                     <div key={group.name}>
                       <Link
                         href={group.href}
-                        className="text-sm font-bold text-gray-600 hover:text-brand-blue transition-colors"
+                        className="text-sm font-bold text-gray-300 hover:text-brand-primary transition-colors"
                       >
                         {group.name}
                       </Link>
@@ -136,7 +136,7 @@ export function Footer() {
                             <li key={item.name}>
                               <Link
                                 href={item.href}
-                                className="text-xs leading-5 text-gray-400 hover:text-brand-blue transition-colors"
+                                className="text-xs leading-5 text-gray-500 hover:text-brand-primary transition-colors"
                               >
                                 {item.name}
                               </Link>
@@ -150,7 +150,7 @@ export function Footer() {
               </div>
 
               <div className="lg:col-span-2">
-                <span className="block font-heading font-bold text-lg text-brand-charcoal mb-6">
+                <span className="block font-heading font-bold text-lg text-white mb-6">
                   Stay Ahead
                 </span>
                 <p className="text-sm text-gray-500 mb-4">
@@ -160,30 +160,30 @@ export function Footer() {
                   <input
                     type="email"
                     placeholder="Work Email"
-                    className="w-full bg-brand-gray border border-gray-200 rounded-lg px-4 py-3 text-brand-charcoal placeholder:text-gray-400 focus:outline-none focus:border-brand-blue transition-colors text-sm"
+                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-primary transition-colors text-sm"
                   />
-                  <button className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-md bg-brand-blue flex items-center justify-center hover:bg-brand-cyan transition-colors">
+                  <button className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-md bg-brand-primary flex items-center justify-center hover:bg-brand-cyan transition-colors">
                     <ArrowRight className="w-4 h-4 text-white" />
                   </button>
                 </div>
               </div>
             </div>
 
-            <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-4 pointer-events-auto">
+            <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 pointer-events-auto">
               <p className="text-xs text-gray-500">
                 © {new Date().getFullYear()} B2B Sales Arrow. All rights reserved.
               </p>
               <div className="flex gap-6 text-xs text-gray-500">
-                <Link href="/privacy-policy" className="hover:text-brand-blue transition-colors">
+                <Link href="/privacy-policy" className="hover:text-brand-primary transition-colors">
                   Privacy Policy
                 </Link>
                 <Link
                   href="/terms-and-conditions"
-                  className="hover:text-brand-blue transition-colors"
+                  className="hover:text-brand-primary transition-colors"
                 >
                   Terms &amp; Conditions
                 </Link>
-                <Link href="#" className="hover:text-brand-blue transition-colors">
+                <Link href="#" className="hover:text-brand-primary transition-colors">
                   Cookie Settings
                 </Link>
               </div>

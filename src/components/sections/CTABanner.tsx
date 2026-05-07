@@ -39,7 +39,7 @@ export function CTABanner({ title, subtitle, ctaText, ctaHref, className }: CTAB
             )}
             <Link
               href={ctaHref}
-              className="inline-flex items-center gap-3 px-12 py-5 bg-white text-brand-blue font-bold rounded-full hover:bg-brand-cyan hover:text-brand-charcoal transition-all duration-300 transform hover:scale-105 shadow-xl group"
+              className="inline-flex items-center gap-3 px-12 py-5 bg-white text-brand-blue font-bold rounded-full hover:bg-brand-cyan hover: transition-all duration-300 transform hover:scale-105 shadow-xl group"
             >
               {ctaText}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

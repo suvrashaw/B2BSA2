@@ -216,26 +216,26 @@ export interface ContactContent {
 }
 
 export const HOME_HERO_CONTENT: HomeHeroContent = {
-  eyebrow: "GLOBAL CAPABILITY. STRATEGIC GROWTH.",
+  eyebrow: "",
   title: (
     <>
-      Accelerating <br />
+      B2B Global Event Solutions & <br />
       <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-cyan">
-        Enterprise Growth
+        Trade Show Booth Design
       </span>
     </>
   ),
   description:
-    "We partner with ambitious modern businesses to deliver premium event solutions, digital transformation, and strategic market expansion.",
+    "Trusted across 30+ countries, we deliver custom trade show booth design, active on-ground prospecting, and end-to-end event execution that turns exhibitions into a qualified B2B sales pipeline.",
   image: {
     src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000",
     alt: "Corporate Event Strategy",
     loaderAlt: "Loader",
   },
-  primaryCtaLabel: "Explore Our Work",
-  secondaryCtaLabel: "Our Services",
+  primaryCtaLabel: "Get a Custom Proposal",
+  secondaryCtaLabel: "See Our Work",
   stat: {
-    value: "40+",
+    value: "30+",
     label: "Countries Served",
     icon: "Globe",
   },
@@ -330,7 +330,7 @@ export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = {
       cta: {
         label: "Start Your Project",
         className:
-          "bg-brand-red hover:bg-brand-maroon text-white px-10 py-4 rounded-full font-bold text-lg tracking-wide transition-colors shadow-xl",
+          "bg-brand-primary hover:bg-brand-primary-dark text-white px-10 py-4 rounded-full font-bold text-lg tracking-wide transition-colors shadow-xl",
       },
     },
   ],
@@ -348,49 +348,37 @@ export const HOME_CLIENT_LOGOS: ClientLogoItem[] = [
 export const HOME_WHO_WE_ARE_CONTENT: WhoWeAreContent = {
   heading: (
     <>
-      Engineering Growth for <br />
-      <span className="text-brand-blue">Global Innovators</span>
+      Your Trusted Global <br />
+      <span className="text-brand-blue">B2B Event Partner</span>
     </>
   ),
   quote:
-    '"Our mission is to transform how B2B brands connect with their audiences through innovative, immersive experiences that drive measurable business results."',
+    '"Our mission is to transform your global event presence into measurable, high-impact commercial outcomes."',
   attribution: "\u2014 Leadership Team, B2B Sales Arrow",
   stats: [
     {
-      value: "250+",
-      label: "Global Events Executed",
+      value: "30+",
+      label: "Countries Served",
       icon: "Globe2",
       bg: "bg-gradient-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "$1.2B",
-      label: "Pipeline Generated",
+      value: "300+",
+      label: "Global Events Handled",
       icon: "TrendingUp",
       bg: "bg-gradient-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
-      value: "40+",
-      label: "Countries Served",
+      value: "2,500+",
+      label: "SQLs Delivered",
       icon: "Target",
       bg: "bg-gradient-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "15k+",
-      label: "Enterprise Leads",
+      value: "10+",
+      label: "Years of Experience",
       icon: "Users",
       bg: "bg-gradient-to-br from-[#1b5e82] to-[#164e6b]",
-    },
-    {
-      value: "98%",
-      label: "Client Retention",
-      icon: "Target",
-      bg: "bg-gradient-to-br from-[#306f75] to-[#255c61]",
-    },
-    {
-      value: "500+",
-      label: "Booth Designs",
-      icon: "Globe2",
-      bg: "bg-gradient-to-br from-[#0077B6] to-[#0096C7]",
     },
   ],
 };
@@ -399,9 +387,9 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
   eyebrow: "OUR CAPABILITIES",
   heading: (
     <>
-      Strategic Disciplines for <br />
+      Our B2B Event Services & <br />
       <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-cyan">
-        Enterprise Dominance
+        Trade Show Solutions
       </span>
     </>
   ),
@@ -410,50 +398,93 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
   services: [
     {
       id: "booth-design",
-      title: "Event Booth Design",
+      title: "Booth Design & Production",
       description:
-        "Architectural, immersive exhibition spaces engineered to dominate trade show floors.",
+        "We design and build custom trade show booths that stop foot traffic, reflect your brand, and create the perfect environment for high-value sales conversations.",
       icon: "Presentation",
       image:
         "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-blue",
     },
     {
-      id: "media",
-      title: "Media Production",
+      id: "active-prospecting",
+      title: "Active Prospecting",
       description:
-        "Cinematic brand storytelling and high-fidelity corporate content that builds authority.",
-      icon: "MonitorPlay",
-      image:
-        "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-cyan",
-    },
-    {
-      id: "digital",
-      title: "Digital Marketing",
-      description: "Data-driven growth architectures designed to scale enterprise pipeline.",
-      icon: "Rocket",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-red",
-    },
-    {
-      id: "lead-gen",
-      title: "Lead Generation",
-      description: "Precision-targeted acquisition strategies for high-value B2B accounts.",
+        "We deploy trained multilingual sales specialists directly onto the event floor to engage senior decision-makers, qualify leads on the spot, and deliver verified SQLs to your team daily.",
       icon: "Users",
       image:
         "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600",
+      color: "bg-brand-cyan",
+    },
+    {
+      id: "media",
+      title: "Corporate Media Production",
+      description:
+        "We capture broadcast-quality video, interviews, and 3D animations at your event — turning a single day on the floor into 12 months of high-impact digital content.",
+      icon: "MonitorPlay",
+      image:
+        "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=1600",
+      color: "bg-brand-primary",
+    },
+    {
+      id: "giveaways",
+      title: "Giveaways",
+      description:
+        "We source and deliver premium branded giveaways that keep your company top-of-mind long after the event floor closes.",
+      icon: "Gift",
+      image:
+        "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-blue",
     },
     {
-      id: "brand",
-      title: "Brand Activation",
-      description: "Strategic positioning and identity frameworks that outmaneuver competitors.",
-      icon: "Lightbulb",
+      id: "networking",
+      title: "Networking",
+      description:
+        "We design and manage exclusive networking experiences — VIP dinners, roundtables, and hosted meetings — that connect your team directly with key enterprise decision-makers.",
+      icon: "Coffee",
+      image:
+        "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1600",
+      color: "bg-brand-cyan",
+    },
+    {
+      id: "branding",
+      title: "Branding",
+      description:
+        "We create cohesive event branding — from booth graphics and signage to digital displays — so your enterprise presence commands attention across the entire venue.",
+      icon: "Palette",
       image:
         "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600",
+      color: "bg-brand-primary",
+    },
+    {
+      id: "experience-creation",
+      title: "Experience Creation",
+      description:
+        "We design immersive booth experiences — interactive demos, live activations, and engagement zones — that turn passive visitors into active pipeline opportunities.",
+      icon: "Lightbulb",
+      image:
+        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1600",
+      color: "bg-brand-blue",
+    },
+    {
+      id: "market-research",
+      title: "Database & Market Research",
+      description:
+        "We build verified, account-level prospect databases and deploy our proprietary HPMI methodology to uncover deep target market intelligence before your event begins.",
+      icon: "Database",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-cyan",
+    },
+    {
+      id: "performance-marketing",
+      title: "Performance Marketing",
+      description:
+        "We run targeted pre-event marketing campaigns across email and social to drive qualified attendee traffic to your booth and fill your team's calendar with high-intent meetings before day one.",
+      icon: "Rocket",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
+      color: "bg-brand-primary",
     },
   ],
 };
@@ -653,7 +684,7 @@ export const HOME_BLOGS_CONTENT: BlogsContent = {
   heading: (
     <>
       Thought Leadership for <br />
-      <span className="text-brand-red">Modern Growth</span>
+      <span className="text-brand-primary">Modern Growth</span>
     </>
   ),
   ctaLabel: "Explore Intelligence",

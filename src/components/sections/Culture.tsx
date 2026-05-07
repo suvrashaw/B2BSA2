@@ -60,16 +60,16 @@ export const Culture = ({ data }: { data: CultureData }) => {
             "blur-[30px]"
           )}
         />
-        <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-charcoal/5 border border-brand-charcoal/10 text-brand-charcoal text-sm font-semibold tracking-wide uppercase transition-colors duration-500">
+        <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-charcoal/5 border border-brand-charcoal/10  text-sm font-semibold tracking-wide uppercase transition-colors duration-500">
           {data.eyebrow}
         </div>
         <WhisperText
           text={typeof data.heading === "string" ? data.heading : "What We Believe In"}
           highlights={["Believe"]}
           highlightColor="red"
-          className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-charcoal mb-6 transition-colors duration-500"
+          className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold  mb-6 transition-colors duration-500"
         />
-        <p className="text-lg text-brand-charcoal/70 max-w-2xl leading-relaxed transition-colors duration-500 font-bold uppercase tracking-widest">
+        <p className="text-lg /70 max-w-2xl leading-relaxed transition-colors duration-500 font-bold uppercase tracking-widest">
           {data.description}
         </p>
       </div>

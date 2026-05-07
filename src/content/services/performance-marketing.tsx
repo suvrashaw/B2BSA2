@@ -66,7 +66,7 @@ export const PERF_SERVICES = {
       icon: "ExternalLink",
       image:
         "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-red",
+      color: "bg-brand-primary",
     },
   ],
 };
@@ -243,7 +243,7 @@ export const PERF_BLOGS = {
   heading: (
     <>
       B2B Marketing <br />
-      <span className="text-brand-red">Insights</span>
+      <span className="text-brand-primary">Insights</span>
     </>
   ),
   ctaLabel: "View All Marketing Articles",

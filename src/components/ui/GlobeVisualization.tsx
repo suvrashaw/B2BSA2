@@ -41,7 +41,7 @@ export function GlobalPresence() {
                   ease: [0.16, 1, 0.3, 1], // premium smooth easing
                 }}
               >
-                <span className="font-heading text-2xl md:text-3xl text-brand-charcoal tracking-wide">
+                <span className="font-heading text-2xl md:text-3xl  tracking-wide">
                   {country}
                 </span>
 

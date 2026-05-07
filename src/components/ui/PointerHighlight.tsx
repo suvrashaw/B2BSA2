@@ -20,9 +20,9 @@ export const PointerHighlight = ({
       border: "border-brand-blue/30",
     },
     red: {
-      bg: hovered ? "bg-brand-red/30" : "bg-brand-red/15",
-      text: hovered ? "text-brand-maroon" : "text-brand-red",
-      border: "border-brand-red/30",
+      bg: hovered ? "bg-brand-primary/30" : "bg-brand-primary/15",
+      text: hovered ? "text-brand-primary-dark" : "text-brand-primary",
+      border: "border-brand-primary/30",
     },
   };
 

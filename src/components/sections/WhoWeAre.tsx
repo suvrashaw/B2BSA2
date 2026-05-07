@@ -77,7 +77,7 @@ export function WhoWeAre({
         {/* Left Side: Content */}
         <div className="space-y-12 flex flex-col items-start text-left">
           <div className="w-full text-left">
-            <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal mb-6">
+            <h2 className="font-heading text-4xl lg:text-5xl font-bold  mb-6">
               {heading}
             </h2>
           </div>

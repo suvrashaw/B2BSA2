@@ -66,7 +66,7 @@ export const MR_SERVICES = {
       icon: "Brain",
       image:
         "https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-red",
+      color: "bg-brand-primary",
     },
   ],
 };
@@ -244,7 +244,7 @@ export const MR_BLOGS = {
   heading: (
     <>
       Market Intelligence <br />
-      <span className="text-brand-red">Resources</span>
+      <span className="text-brand-primary">Resources</span>
     </>
   ),
   ctaLabel: "View All Research Articles",

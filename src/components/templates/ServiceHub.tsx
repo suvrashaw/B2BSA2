@@ -1,5 +1,5 @@
 import { Header } from "@/components/layout/Header";
-import { Hero } from "@/components/sections/Hero";
+import { ServiceHero } from "@/components/sections/ServiceHero";
 import { OurServices } from "@/components/sections/OurServices";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
@@ -56,7 +56,21 @@ export function ServiceHub({
     <main className="min-h-screen bg-brand-gray">
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <Header />
-      <Hero {...hero} />
+      <ServiceHero
+        title={hero.title || ""}
+        description={hero.description || ""}
+        badge={hero.badge || hero.eyebrow}
+        primaryCta={
+          hero.primaryCtaLabel
+            ? { label: hero.primaryCtaLabel, href: "/contact-us" }
+            : undefined
+        }
+        secondaryCta={
+          hero.secondaryCtaLabel
+            ? { label: hero.secondaryCtaLabel, href: "/services/global-event-solutions" }
+            : undefined
+        }
+      />
       <OurServices {...services} />
       <WhoWeAre {...stats} />
       <WhyChooseUs {...why} />

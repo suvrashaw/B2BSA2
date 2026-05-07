@@ -78,7 +78,7 @@ export const BLOG_POSTS = {
   heading: (
     <>
       Thought Leadership for <br />
-      <span className="text-brand-red">Modern Growth</span>
+      <span className="text-brand-primary">Modern Growth</span>
     </>
   ),
   ctaLabel: "Browse All Articles",

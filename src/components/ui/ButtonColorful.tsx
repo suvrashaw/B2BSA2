@@ -20,7 +20,7 @@ export function ButtonColorful({
     return (
       <Button
         className={cn(
-          "relative h-14 px-8 overflow-hidden rounded-full font-bold tracking-tight text-base bg-transparent border-2 border-brand-blue/20 text-brand-charcoal hover:border-brand-blue transition-all duration-500 group",
+          "relative h-14 px-8 overflow-hidden rounded-full font-bold tracking-tight text-base bg-transparent border-2 border-brand-blue/20  hover:border-brand-blue transition-all duration-500 group",
           className
         )}
         {...props}

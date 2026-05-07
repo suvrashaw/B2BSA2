@@ -106,7 +106,7 @@ export const TSBB_DELIVERABLES = {
       icon: "Wrench",
       image:
         "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-red",
+      color: "bg-brand-primary",
     },
     {
       id: "storage",

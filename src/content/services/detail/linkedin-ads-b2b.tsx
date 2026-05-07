@@ -106,7 +106,7 @@ export const LIADS_DELIVERABLES = {
       icon: "Users",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-red",
+      color: "bg-brand-primary",
     },
     {
       id: "reporting",

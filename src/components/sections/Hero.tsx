@@ -32,7 +32,7 @@ export function Hero({
   title = "Global B2B Event, Booth & Lead Generation Experts",
   subtitle = "End-to-End Solutions That Drive Pipeline and Revenue",
   description,
-  badge = "GLOBAL CAPABILITY. STRATEGIC GROWTH.",
+  badge,
   eyebrow,
   image = "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000",
   primaryCtaLabel = "Explore Our Work",
@@ -65,15 +65,17 @@ export function Hero({
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-2xl"
         >
-          <div className="inline-block mb-6 px-4 py-1.5 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-sm font-semibold tracking-wide uppercase">
-            {resolvedBadge}
-          </div>
+          {resolvedBadge && (
+            <div className="inline-block mb-6 px-4 py-1.5 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-sm font-semibold tracking-wide uppercase">
+              {resolvedBadge}
+            </div>
+          )}
 
-          <h1 className="font-heading text-5xl lg:text-7xl font-bold leading-[1.1] text-brand-charcoal mb-6">
+          <h1 className="font-heading text-5xl lg:text-7xl font-bold leading-[1.1]  mb-6">
             {title}
           </h1>
 
-          <p className="text-xl text-brand-charcoal/70 mb-10 max-w-lg leading-relaxed">
+          <p className="text-xl /70 mb-10 max-w-lg leading-relaxed">
             {resolvedSubtitle}
           </p>
 
@@ -85,7 +87,7 @@ export function Hero({
               </button>
             ) : null}
             {secondaryCtaLabel ? (
-              <button className="px-8 py-4 rounded border border-gray-200 text-brand-charcoal font-medium hover:border-brand-blue hover:text-brand-blue transition-colors duration-300">
+              <button className="px-8 py-4 rounded border border-gray-200  font-medium hover:border-brand-blue hover:text-brand-blue transition-colors duration-300">
                 {secondaryCtaLabel}
               </button>
             ) : null}
@@ -116,7 +118,7 @@ export function Hero({
                     <Globe className="w-8 h-8 text-brand-blue" />
                   </div>
                   <div>
-                    <div className="text-3xl font-bold font-heading text-brand-charcoal">
+                    <div className="text-3xl font-bold font-heading ">
                       {stat.value}
                     </div>
                     <div className="text-sm font-bold text-gray-400 uppercase tracking-widest">

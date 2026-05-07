@@ -25,7 +25,7 @@ export const TeamGrid = ({ data }: { data: TeamGridData }) => {
           <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-sm font-semibold tracking-wide uppercase">
             Leadership
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold font-heading text-brand-charcoal">
+          <h2 className="text-3xl md:text-5xl font-bold font-heading ">
             {data.heading}
           </h2>
         </div>
@@ -60,7 +60,7 @@ export const TeamGrid = ({ data }: { data: TeamGridData }) => {
                   )}
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-brand-charcoal font-heading">{member.name}</h3>
+              <h3 className="text-xl font-bold  font-heading">{member.name}</h3>
               <p className="text-sm text-gray-500 mt-1 uppercase tracking-wider font-semibold">
                 {member.role}
               </p>

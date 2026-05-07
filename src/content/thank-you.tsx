@@ -66,7 +66,7 @@ export const THANK_YOU_SERVICES = {
       icon: "Rocket",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-red",
+      color: "bg-brand-primary",
     },
     {
       id: "lead-gen",
@@ -96,7 +96,7 @@ export const THANK_YOU_BLOGS = {
   heading: (
     <>
       Intelligence to Read <br />
-      <span className="text-brand-red">While You Wait</span>
+      <span className="text-brand-primary">While You Wait</span>
     </>
   ),
   ctaLabel: "View All Articles",

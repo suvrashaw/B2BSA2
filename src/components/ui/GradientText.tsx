@@ -9,7 +9,7 @@ interface GradientTextProps {
 
 const gradientVariants = {
   blue: "bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent",
-  red: "bg-gradient-to-r from-brand-red to-brand-blue bg-clip-text text-transparent",
+  red: "bg-gradient-to-r from-brand-primary to-brand-blue bg-clip-text text-transparent",
 };
 
 export function GradientText({ variant, children, className }: GradientTextProps) {

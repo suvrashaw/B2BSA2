@@ -43,9 +43,9 @@ export const Timeline = ({
           text={heading}
           highlights={[heading.split(" ").pop() || ""]}
           highlightColor="blue"
-          className="text-4xl md:text-5xl lg:text-6xl mb-4 text-brand-charcoal max-w-4xl font-heading font-bold transition-colors duration-500"
+          className="text-4xl md:text-5xl lg:text-6xl mb-4  max-w-4xl font-heading font-bold transition-colors duration-500"
         />
-        <p className="text-brand-charcoal/70 text-sm md:text-base max-w-sm transition-colors duration-500">
+        <p className="/70 text-sm md:text-base max-w-sm transition-colors duration-500">
           {description}
         </p>
       </div>
@@ -57,13 +57,13 @@ export const Timeline = ({
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-brand-white flex items-center justify-center border border-brand-charcoal/10 shadow-sm transition-all duration-500">
                 <div className="h-4 w-4 rounded-full bg-brand-cyan shadow-[0_0_10px_rgba(34,211,238,0.5)] border border-white/20 transition-all duration-500" />
               </div>
-              <h3 className="hidden md:block text-2xl md:pl-20 md:text-3xl font-bold text-brand-charcoal transition-colors duration-500">
+              <h3 className="hidden md:block text-2xl md:pl-20 md:text-3xl font-bold  transition-colors duration-500">
                 {item.title}
               </h3>
             </div>
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-brand-charcoal transition-colors duration-500">
+              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold  transition-colors duration-500">
                 {item.title}
               </h3>
               {item.content}{" "}

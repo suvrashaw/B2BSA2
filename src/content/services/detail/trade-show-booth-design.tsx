@@ -105,7 +105,7 @@ export const TSBD_DELIVERABLES = {
       icon: "Ruler",
       image:
         "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-red",
+      color: "bg-brand-primary",
     },
     {
       id: "install",

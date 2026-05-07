@@ -46,11 +46,11 @@ export function FAQ({
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-charcoal/5 border border-brand-charcoal/10 text-brand-charcoal text-sm font-semibold tracking-wide"
+              className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-charcoal/5 border border-brand-charcoal/10  text-sm font-semibold tracking-wide"
             >
               {eyebrow}
             </motion.div>
-            <h2 className="font-heading text-3xl lg:text-5xl font-bold text-brand-charcoal mb-4">
+            <h2 className="font-heading text-3xl lg:text-5xl font-bold  mb-4">
               {heading}
             </h2>
             <p className="text-gray-600 max-w-xl text-lg">{description}</p>
@@ -101,13 +101,13 @@ export function FAQ({
         <div className="flex items-center justify-center gap-4 mt-8">
           <button
             onClick={() => scroll("left")}
-            className="w-12 h-12 rounded-full border border-gray-200 bg-white text-brand-charcoal hover:bg-brand-blue hover:text-white:bg-brand-cyan hover:border-transparent transition-colors flex items-center justify-center shadow-sm"
+            className="w-12 h-12 rounded-full border border-gray-200 bg-white  hover:bg-brand-blue hover:text-white:bg-brand-cyan hover:border-transparent transition-colors flex items-center justify-center shadow-sm"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={() => scroll("right")}
-            className="w-12 h-12 rounded-full border border-gray-200 bg-white text-brand-charcoal hover:bg-brand-blue hover:text-white:bg-brand-cyan hover:border-transparent transition-colors flex items-center justify-center shadow-sm"
+            className="w-12 h-12 rounded-full border border-gray-200 bg-white  hover:bg-brand-blue hover:text-white:bg-brand-cyan hover:border-transparent transition-colors flex items-center justify-center shadow-sm"
           >
             <ChevronRight className="w-6 h-6" />
           </button>

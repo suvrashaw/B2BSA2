@@ -66,7 +66,7 @@ export const SQL_SERVICES = {
       icon: "MessageSquare",
       image:
         "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-red",
+      color: "bg-brand-primary",
     },
     {
       id: "scoring",
@@ -96,7 +96,7 @@ export const SQL_SERVICES = {
       icon: "BarChart3",
       image:
         "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-red",
+      color: "bg-brand-primary",
     },
   ],
 };
@@ -275,7 +275,7 @@ export const SQL_BLOGS = {
   heading: (
     <>
       B2B Lead Generation <br />
-      <span className="text-brand-red">Intelligence</span>
+      <span className="text-brand-primary">Intelligence</span>
     </>
   ),
   ctaLabel: "View All Lead Gen Articles",

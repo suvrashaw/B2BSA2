@@ -41,7 +41,7 @@ export function ContactUs({
               {eyebrow}
             </motion.div>
             <div className="w-full text-left">
-              <h2 className="font-heading text-4xl lg:text-6xl font-bold text-brand-charcoal leading-tight mb-8">
+              <h2 className="font-heading text-4xl lg:text-6xl font-bold  leading-tight mb-8">
                 {heading}
               </h2>
             </div>

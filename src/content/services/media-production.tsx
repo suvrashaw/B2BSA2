@@ -66,7 +66,7 @@ export const MEDIA_SERVICES = {
       icon: "MonitorPlay",
       image:
         "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-red",
+      color: "bg-brand-primary",
     },
     {
       id: "live-streaming",
@@ -96,7 +96,7 @@ export const MEDIA_SERVICES = {
       icon: "Video",
       image:
         "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-red",
+      color: "bg-brand-primary",
     },
   ],
 };
@@ -274,7 +274,7 @@ export const MEDIA_BLOGS = {
   heading: (
     <>
       Video Strategy for <br />
-      <span className="text-brand-red">B2B Growth</span>
+      <span className="text-brand-primary">B2B Growth</span>
     </>
   ),
   ctaLabel: "View All Media Articles",

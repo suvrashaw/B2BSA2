@@ -27,7 +27,7 @@ export function ProcessTimeline({ steps, title, subtitle, className }: ProcessTi
               </div>
             )}
             {title && (
-              <h2 className="text-3xl md:text-5xl font-bold text-brand-charcoal  font-heading leading-tight">
+              <h2 className="text-3xl md:text-5xl font-bold   font-heading leading-tight">
                 {title}
               </h2>
             )}
@@ -65,7 +65,7 @@ export function ProcessTimeline({ steps, title, subtitle, className }: ProcessTi
                     <div className="text-brand-blue  font-bold text-lg mb-2">
                       Phase 0{index + 1}
                     </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-brand-charcoal  mb-4">
+                    <h3 className="text-xl md:text-2xl font-bold   mb-4">
                       {step.title}
                     </h3>
                     <p className="text-gray-600  leading-relaxed text-sm md:text-base">

@@ -39,7 +39,7 @@ export function OurServices({
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading text-4xl lg:text-5xl font-bold text-brand-charcoal leading-tight">
+          <h2 className="font-heading text-4xl lg:text-5xl font-bold  leading-tight">
             {heading}
           </h2>
         </div>
@@ -69,7 +69,7 @@ export function OurServices({
                         {serviceLabel}
                       </span>
                     </div>
-                    <h3 className="font-heading text-3xl font-bold text-brand-charcoal mb-6 leading-tight transition-colors duration-700 md:group-has-[.image-pane:hover]/card:text-white drop-shadow-md">
+                    <h3 className="font-heading text-3xl font-bold  mb-6 leading-tight transition-colors duration-700 md:group-has-[.image-pane:hover]/card:text-white drop-shadow-md">
                       {service.title}
                     </h3>
 

@@ -5,10 +5,10 @@ import { cn } from "@/lib";
 const headingVariants = cva("", {
   variants: {
     level: {
-      h1: "font-heading text-5xl lg:text-7xl font-bold leading-[1.1] text-brand-charcoal",
-      h2: "font-heading text-4xl lg:text-5xl font-bold leading-tight text-brand-charcoal",
-      h3: "font-heading text-2xl lg:text-3xl font-bold leading-tight text-brand-charcoal",
-      h4: "text-xs font-bold uppercase tracking-wider",
+      h1: "font-heading text-5xl lg:text-7xl font-bold leading-[1.1] text-[var(--heading-h1)]",
+      h2: "font-heading text-4xl lg:text-5xl font-bold leading-tight text-[var(--heading-h2)]",
+      h3: "font-heading text-2xl lg:text-3xl font-bold leading-tight text-[var(--heading-h3)]",
+      h4: "text-xs font-bold uppercase tracking-wider text-[var(--heading-h4)]",
     },
   },
 });

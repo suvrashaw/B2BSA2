@@ -106,7 +106,7 @@ export const PAID_DELIVERABLES = {
       icon: "Target",
       image:
         "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-red",
+      color: "bg-brand-primary",
     },
     {
       id: "reporting",

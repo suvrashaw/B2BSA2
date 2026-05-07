@@ -50,7 +50,7 @@ interface ServicesGridProps {
 
 export function ServicesGrid({ title, subtitle, services, className }: ServicesGridProps) {
   return (
-    <section className={cn("py-24 bg-brand-white text-brand-charcoal", className)}>
+    <section className={cn("py-24 bg-brand-white ", className)}>
       <div className="container mx-auto px-8">
         <div className="max-w-4xl mb-16">
           {subtitle && (
