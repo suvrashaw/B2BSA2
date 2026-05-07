@@ -3,30 +3,30 @@ export const MPB_HERO = {
   eyebrow: "MODULAR & PORTABLE BOOTHS",
   title: (
     <>
-      Exhibit Anywhere. <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Reconfigure Any Time.
+      Modular & Portable Booths — <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Engineered for Enterprise Efficiency
       </span>
     </>
   ),
   description:
-    "Our modular and portable booth systems combine professional exhibition aesthetics with complete flexibility — reconfigurable layouts, lightweight components, and fast setup that fits any show.",
+    "Premium modular and portable trade show booths for enterprise brands. Lightweight, reconfigurable, and brand-consistent across every event.",
   image: {
     src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000",
     alt: "Modular portable exhibition booth system",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Get a Quote",
-  secondaryCtaLabel: "See the Systems",
-  stat: { value: "400+", label: "Modular Systems Deployed", icon: "Box" },
+  primaryCtaLabel: "Request a Modular Booth Quote",
+  secondaryCtaLabel: "Request a Demo",
+  stat: { value: "300+", label: "Modular Systems Deployed", icon: "Box" },
 };
 
 export const MPB_WHY = {
-  eyebrow: "THE MODULAR ADVANTAGE",
+  eyebrow: "THE MODULAR SHIFT",
   heading: (
     <>
-      Built for <br />
-      <span className="text-brand-cyan">Maximum Flexibility</span>
+      Why Enterprise Brands Are Moving <br />
+      <span className="text-brand-cyan">to Modular Systems</span>
     </>
   ),
   reasons: [
@@ -66,11 +66,11 @@ export const MPB_WHY = {
 };
 
 export const MPB_DELIVERABLES = {
-  eyebrow: "WHAT'S INCLUDED",
+  eyebrow: "OUR SYSTEM",
   heading: (
     <>
       Your Complete <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Modular System
       </span>
     </>
@@ -124,35 +124,35 @@ export const MPB_DELIVERABLES = {
 export const MPB_STATS = {
   heading: (
     <>
-      Modular System Results <br />
-      <span className="text-brand-blue">by the Numbers</span>
+      Global Reach <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    "\"The best booth for your company isn't always the biggest one. It's the one that's ready when you need it, looks sharp every time, and works at every venue.\"",
+    '"We deliver premium modular and portable trade show booths for enterprise brands across major global markets, ensuring brand consistency and reconfigurability for every event on your calendar."',
   attribution: "— Modular Solutions Team, B2B Sales Arrow",
   stats: [
     {
-      value: "400+",
+      value: "500+",
       label: "Modular Systems Deployed",
       icon: "Box",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "50+",
-      label: "Countries Shipped To",
-      icon: "Globe2",
+      value: "10+",
+      label: "Years of Experience",
+      icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
-      value: "2 hrs",
-      label: "Avg Assembly Time",
-      icon: "Zap",
+      value: "40+",
+      label: "Countries Served",
+      icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
       value: "100%",
-      label: "Venue Compliance Rate",
+      label: "Brand Consistency",
       icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
@@ -250,7 +250,7 @@ export const MPB_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -296,7 +296,7 @@ export const MPB_CONTACT = {
   heading: (
     <>
       Configure Your <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Booth System
       </span>
     </>

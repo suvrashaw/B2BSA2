@@ -1,32 +1,32 @@
 export const HPMI_HERO = {
   showPreloader: false,
-  eyebrow: "HUMAN-POWERED MARKET INTELLIGENCE",
+  eyebrow: "B2B MARKET INTELLIGENCE",
   title: (
     <>
-      Deep Market Insight <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        That Algorithms Can&apos;t Deliver
+      Human-Powered Market Intelligence — The <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Insight Automated Tools Can&apos;t Deliver
       </span>
     </>
   ),
   description:
-    "Our analyst network conducts primary research — interviews, competitive deep-dives, and custom intelligence reports — giving your leadership team the insight needed to make confident strategic decisions.",
+    "AI scrapes. Humans understand. We combine proprietary research methods, expert interviews, and analyst-grade synthesis to deliver market intelligence that drives confident enterprise decisions.",
   image: {
     src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000",
     alt: "Market research analysts at work",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Commission Research",
-  secondaryCtaLabel: "See Sample Reports",
+  primaryCtaLabel: "Request an Intelligence Proposal",
+  secondaryCtaLabel: "Start Your Research Project",
   stat: { value: "150+", label: "Custom Intelligence Reports Delivered", icon: "Brain" },
 };
 
 export const HPMI_WHY = {
-  eyebrow: "THE INTELLIGENCE DIFFERENCE",
+  eyebrow: "STRATEGIC INSIGHT",
   heading: (
     <>
-      Why Human Research <br />
-      <span className="text-brand-cyan">Outperforms Automation</span>
+      Why Human Intelligence Delivers <br />
+      <span className="text-brand-cyan">What Automated Tools Cannot</span>
     </>
   ),
   reasons: [
@@ -66,11 +66,11 @@ export const HPMI_WHY = {
 };
 
 export const HPMI_DELIVERABLES = {
-  eyebrow: "WHAT'S INCLUDED",
+  eyebrow: "OUR RESEARCH SERVICES",
   heading: (
     <>
-      Market Intelligence <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      Our Market Intelligence <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Research Services
       </span>
     </>
@@ -124,12 +124,12 @@ export const HPMI_DELIVERABLES = {
 export const HPMI_STATS = {
   heading: (
     <>
-      Research Quality <br />
-      <span className="text-brand-blue">Impact Numbers</span>
+      Global Reach <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    '"The best strategic decisions are made with intelligence that your competitors don\'t have. We give our clients an asymmetric information advantage in every market they enter."',
+    '"We provide human-powered market intelligence, delivering nuanced competitor insights, buyer behavior, and market opportunity analysis across 40+ global markets."',
   attribution: "— Intelligence Research Lead, B2B Sales Arrow",
   stats: [
     {
@@ -139,20 +139,20 @@ export const HPMI_STATS = {
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "40+",
-      label: "Markets & Industries Covered",
-      icon: "Globe2",
+      value: "10+",
+      label: "Years of Experience",
+      icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
-      value: "2wk",
-      label: "Avg Report Turnaround",
-      icon: "Zap",
+      value: "40+",
+      label: "Countries Served",
+      icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "98%",
-      label: "Executive Satisfaction Rate",
+      value: "100%",
+      label: "Research Accuracy",
       icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
@@ -251,7 +251,7 @@ export const HPMI_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -297,7 +297,7 @@ export const HPMI_CONTACT = {
   heading: (
     <>
       Get the Intelligence <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         to Make Bold Moves
       </span>
     </>

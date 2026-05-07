@@ -1,23 +1,23 @@
 export const PERF_HERO = {
   showPreloader: false,
-  eyebrow: "PERFORMANCE MARKETING",
+  eyebrow: "B2B PERFORMANCE MARKETING",
   title: (
     <>
-      Data-Driven Growth <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        at Enterprise Scale
+      Performance Marketing Built to <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Fill Enterprise Pipeline
       </span>
     </>
   ),
   description:
-    "SEO, paid advertising, and LinkedIn campaigns engineered to generate qualified enterprise pipeline — not vanity metrics.",
+    "We don't run campaigns. We engineer revenue-generating marketing systems — every channel tracked, every dollar accountable, every lead qualified.",
   image: {
     src: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2000",
     alt: "Performance marketing and data analytics",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Get a Strategy",
-  secondaryCtaLabel: "See Results",
+  primaryCtaLabel: "Request a Marketing Strategy",
+  secondaryCtaLabel: "Start Your Campaign",
   stat: {
     value: "3.8x",
     label: "Average ROAS",
@@ -26,12 +26,12 @@ export const PERF_HERO = {
 };
 
 export const PERF_SERVICES = {
-  eyebrow: "MARKETING SERVICES",
+  eyebrow: "OUR MARKETING SERVICES",
   heading: (
     <>
-      Channels That Drive <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Enterprise Pipeline
+      Enterprise Performance <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Marketing Solutions
       </span>
     </>
   ),
@@ -74,12 +74,12 @@ export const PERF_SERVICES = {
 export const PERF_STATS = {
   heading: (
     <>
-      Marketing That <br />
-      <span className="text-brand-blue">Moves the Needle</span>
+      Global Reach <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    '"B2B marketing doesn\'t fail because of bad creative. It fails because of bad targeting. We fix the targeting first."',
+    '"We provide data-driven B2B performance marketing for enterprise brands, delivering SEO, paid advertising, and LinkedIn Ads optimized for pipeline across 40+ markets."',
   attribution: "— Performance Marketing Team, B2B Sales Arrow",
   stats: [
     {
@@ -89,32 +89,32 @@ export const PERF_STATS = {
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "+280%",
-      label: "Avg Organic Traffic",
-      icon: "Globe2",
+      value: "10+",
+      label: "Years of Experience",
+      icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
-      value: "62%",
-      label: "Lower Cost-per-Lead",
-      icon: "Target",
+      value: "40+",
+      label: "Countries Served",
+      icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "120+",
-      label: "Campaigns Managed",
-      icon: "BarChart3",
+      value: "100%",
+      label: "Campaign Accuracy",
+      icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
   ],
 };
 
 export const PERF_WHY = {
-  eyebrow: "THE PERFORMANCE DIFFERENCE",
+  eyebrow: "DATA-DRIVEN ROI",
   heading: (
     <>
-      Why Enterprise Brands <br />
-      <span className="text-brand-cyan">Choose Our Marketing Team</span>
+      Performance Marketing Means <br />
+      <span className="text-brand-cyan">Every Action Has a Number</span>
     </>
   ),
   reasons: [
@@ -280,7 +280,7 @@ export const PERF_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -326,7 +326,7 @@ export const PERF_CONTACT = {
   heading: (
     <>
       Let&apos;s Scale Your <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Marketing Pipeline
       </span>
     </>

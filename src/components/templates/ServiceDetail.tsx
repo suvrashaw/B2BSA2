@@ -1,36 +1,36 @@
+import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { CaseStudies } from "@/components/sections/CaseStudies";
+import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
+import { ClientLogos } from "@/components/sections/ClientLogos";
+import { ContactUs } from "@/components/sections/ContactUs";
+import type { ContactUsProps } from "@/components/sections/ContactUs";
+import { FAQ } from "@/components/sections/FAQ";
+import type { FAQProps } from "@/components/sections/FAQ";
 import { Hero } from "@/components/sections/Hero";
-import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { OurServices } from "@/components/sections/OurServices";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
-import { CaseStudies } from "@/components/sections/CaseStudies";
-import { ClientLogos } from "@/components/sections/ClientLogos";
+import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { FAQ } from "@/components/sections/FAQ";
-import { ContactUs } from "@/components/sections/ContactUs";
-import { Footer } from "@/components/layout/Footer";
 // SEO Utility Component
 export function JsonLd({ data }: { data: object }) {
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(data).replace(/</g, "\\u003c"),
+        __html: JSON.stringify(data).replaceAll('<', String.raw`\u003c`),
       }}
     />
   );
 }
 
+import type { WhyChooseUsProps } from "@/components/sections/WhyChooseUs";
 import { getPageByUrl } from "@/content/pages";
 import { buildBreadcrumbJsonLd, buildFaqJsonLd } from "@/lib";
 import type { HeroProps } from "@/components/sections/Hero";
-import type { WhyChooseUsProps } from "@/components/sections/WhyChooseUs";
 import type { OurServicesProps } from "@/components/sections/OurServices";
 import type { WhoWeAreProps } from "@/components/sections/WhoWeAre";
-import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
 import type { TestimonialsProps } from "@/components/sections/Testimonials";
-import type { FAQProps } from "@/components/sections/FAQ";
-import type { ContactUsProps } from "@/components/sections/ContactUs";
 
 export interface ServiceDetailProps {
   canonicalPath?: string;
@@ -95,7 +95,7 @@ export function ServiceDetail({
     : null;
 
   return (
-    <main className="min-h-screen bg-brand-gray">
+    <main className="bg-brand-gray min-h-screen">
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       {breadcrumbJsonLd ? <JsonLd data={breadcrumbJsonLd} /> : null}
       <Header />

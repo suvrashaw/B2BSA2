@@ -3,30 +3,30 @@ export const EBR_HERO = {
   eyebrow: "EVENT BOOTH RENTAL",
   title: (
     <>
-      Premium Booth Presence <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Without the Capital Cost
+      Premium Trade Show Booth Rental — <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Deploy Globally in Weeks
       </span>
     </>
   ),
   description:
-    "High-impact modular exhibition booths available for short-term rental — fully branded, delivered, installed, and removed. The strategic choice for infrequent exhibitors or first-time shows.",
+    "Skip the full fabrication timeline. Our rental inventory delivers professional, brand-configurable exhibition presence across 40+ markets — fast.",
   image: {
     src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000",
     alt: "Modular rental booth at trade show",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Get a Quote",
-  secondaryCtaLabel: "See Our Inventory",
+  primaryCtaLabel: "Check Rental Availability",
+  secondaryCtaLabel: "Request a Rental Quote",
   stat: { value: "300+", label: "Booth Rentals Delivered", icon: "Package" },
 };
 
 export const EBR_WHY = {
-  eyebrow: "THE RENTAL ADVANTAGE",
+  eyebrow: "RENTAL VS BUILD",
   heading: (
     <>
-      Smart Economics for <br />
-      <span className="text-brand-cyan">Smart Exhibitors</span>
+      When Booth Rental Makes More <br />
+      <span className="text-brand-cyan">Sense Than Custom Builds</span>
     </>
   ),
   reasons: [
@@ -66,12 +66,12 @@ export const EBR_WHY = {
 };
 
 export const EBR_DELIVERABLES = {
-  eyebrow: "WHAT'S INCLUDED",
+  eyebrow: "INCLUSIONS",
   heading: (
     <>
-      Everything in Your <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Rental Package
+      What Every Rental <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Package Includes
       </span>
     </>
   ),
@@ -124,36 +124,36 @@ export const EBR_DELIVERABLES = {
 export const EBR_STATS = {
   heading: (
     <>
-      Booth Rental Results <br />
-      <span className="text-brand-blue">by the Numbers</span>
+      Global Reach <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    "\"The smartest exhibitors don't ask whether to rent or buy. They ask whether their event frequency justifies the capital. For most, it doesn't — and rental is the right answer.\"",
+    '"We provide premium event and trade show booth rental for enterprise brands across 40+ global markets, offering modular, custom-branded, and turnkey rental packages that ensure brand consistency without the complexity of ownership."',
   attribution: "— Booth Solutions Team, B2B Sales Arrow",
   stats: [
     {
-      value: "300+",
-      label: "Booth Rentals Delivered",
+      value: "500+",
+      label: "Booth Designs Delivered",
       icon: "Package",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
+    },
+    {
+      value: "10+",
+      label: "Years of Experience",
+      icon: "TrendingUp",
+      bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "40+",
       label: "Countries Served",
       icon: "Globe2",
-      bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
-    },
-    {
-      value: "98%",
-      label: "On-Time Installation Rate",
-      icon: "Target",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "4 days",
-      label: "Avg Turnaround from Order",
-      icon: "Zap",
+      value: "100%",
+      label: "Inventory Availability",
+      icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
   ],
@@ -249,7 +249,7 @@ export const EBR_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -295,7 +295,7 @@ export const EBR_CONTACT = {
   heading: (
     <>
       Book Your Booth <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         For Your Next Event
       </span>
     </>

@@ -1,6 +1,7 @@
+import { ArrowUpRight } from "lucide-react";
+
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib";
-import { ArrowUpRight } from "lucide-react";
 
 interface ButtonColorfulProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label?: string;
@@ -25,12 +26,12 @@ export function ButtonColorful({
         )}
         {...props}
       >
-        <div className="absolute inset-0 bg-brand-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-        <div className="relative flex items-center justify-center gap-3 z-10">
+        <div className="bg-brand-blue/5 absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+        <div className="relative z-10 flex items-center justify-center gap-3">
           {icon}
           <span>{children || label}</span>
           {!icon && !children && (
-            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           )}
         </div>
       </Button>
@@ -59,11 +60,11 @@ export function ButtonColorful({
       />
 
       {/* Content */}
-      <div className="relative flex items-center justify-center gap-3 z-10 text-white">
+      <div className="relative z-10 flex items-center justify-center gap-3 text-white">
         {icon}
         <span>{children || label}</span>
         {!icon && !children && (
-          <ArrowUpRight className="w-4 h-4 text-white/90 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          <ArrowUpRight className="h-4 w-4 text-white/90 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         )}
       </div>
     </Button>

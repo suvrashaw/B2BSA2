@@ -1,13 +1,12 @@
-import type { Metadata } from "next";
+import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { CaseStudies } from "@/components/sections/CaseStudies";
+import { ContactUs } from "@/components/sections/ContactUs";
 import { Hero } from "@/components/sections/Hero";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { UpcomingEvents } from "@/components/sections/UpcomingEvents";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
-import { CaseStudies } from "@/components/sections/CaseStudies";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { ContactUs } from "@/components/sections/ContactUs";
-import { Footer } from "@/components/layout/Footer";
 import {
   EVENTS_HERO,
   EVENTS_UPCOMING,
@@ -18,6 +17,8 @@ import {
   EVENTS_CONTACT,
 } from "@/content/events";
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "B2B Industry Events | B2B Sales Arrow",
   description:
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-brand-gray">
+    <main className="bg-brand-gray min-h-screen">
       <Header />
       <Hero {...EVENTS_HERO} />
       <UpcomingEvents {...EVENTS_UPCOMING} />

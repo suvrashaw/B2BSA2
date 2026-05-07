@@ -1,37 +1,37 @@
 export const MEDIA_HERO = {
   showPreloader: false,
-  eyebrow: "MEDIA PRODUCTION",
+  eyebrow: "B2B MEDIA PRODUCTION",
   title: (
     <>
-      Cinematic Content for <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Enterprise Brands
+      B2B Media Production That <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Builds Enterprise Authority
       </span>
     </>
   ),
   description:
-    "High-fidelity video production, live streaming, and corporate content that builds authority, accelerates trust, and drives measurable B2B pipeline.",
+    "We produce cinematic content that makes your brand impossible to ignore — from live event coverage to corporate video series and everything in between.",
   image: {
     src: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=2000",
     alt: "Professional video production studio",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Get a Quote",
-  secondaryCtaLabel: "See Our Work",
+  primaryCtaLabel: "Request a Media Production Consultation",
+  secondaryCtaLabel: "Start Your Media Project",
   stat: {
-    value: "300+",
+    value: "500+",
     label: "Videos Produced",
     icon: "Video",
   },
 };
 
 export const MEDIA_SERVICES = {
-  eyebrow: "MEDIA SERVICES",
+  eyebrow: "OUR CAPABILITIES",
   heading: (
     <>
-      Content That Commands <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Attention
+      B2B Media Production <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Solutions
       </span>
     </>
   ),
@@ -104,47 +104,47 @@ export const MEDIA_SERVICES = {
 export const MEDIA_STATS = {
   heading: (
     <>
-      Content That Drives <br />
-      <span className="text-brand-blue">Measurable Results</span>
+      Cinematic Storytelling <br />
+      <span className="text-brand-blue">Engineered for B2B Conversion</span>
     </>
   ),
   quote:
-    '"We don\'t just produce videos. We produce pipeline. Every frame is engineered around the B2B buyer journey."',
+    '"We provide cinematic B2B media production for enterprise brands, delivering event video, corporate content, video editing, and live streaming that builds authority through high-fidelity execution across 40+ markets."',
   attribution: "— Media Production Team, B2B Sales Arrow",
   stats: [
     {
-      value: "300+",
+      value: "250+",
       label: "Videos Produced",
       icon: "Video",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "4.8x",
-      label: "Avg View-Through Rate",
+      value: "10+",
+      label: "Years of Experience",
       icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
-      value: "85%",
-      label: "Client Retention",
-      icon: "Users",
+      value: "40+",
+      label: "Countries Served",
+      icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "3.2x",
-      label: "Avg Conversion Lift",
-      icon: "BarChart3",
+      value: "100%",
+      label: "Production Accuracy",
+      icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
   ],
 };
 
 export const MEDIA_WHY = {
-  eyebrow: "THE MEDIA DIFFERENCE",
+  eyebrow: "THE POWER OF QUALITY",
   heading: (
     <>
-      Why B2B Brands Choose <br />
-      <span className="text-brand-cyan">Our Production Team</span>
+      Why Enterprise Brands Can&apos;t <br />
+      <span className="text-brand-cyan">Afford Low-Quality Content</span>
     </>
   ),
   reasons: [
@@ -311,7 +311,7 @@ export const MEDIA_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -357,7 +357,7 @@ export const MEDIA_CONTACT = {
   heading: (
     <>
       Let&apos;s Produce <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Something Exceptional
       </span>
     </>

@@ -1,23 +1,23 @@
 export const MR_HERO = {
   showPreloader: false,
-  eyebrow: "MARKET RESEARCH",
+  eyebrow: "B2B MARKET RESEARCH",
   title: (
     <>
-      Intelligence That Drives <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Confident Decisions
+      Market Research That Gives You an <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Unfair Competitive Advantage
       </span>
     </>
   ),
   description:
-    "Human-powered market intelligence, enterprise data augmentation, and rigorous validation to give your business the competitive edge it needs.",
+    "Data-driven growth starts with knowing your market better than anyone else. We deliver human-powered market intelligence, validated data, and strategic insights that accelerate enterprise decisions.",
   image: {
     src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2000",
     alt: "Market research and data analytics",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Get Research Proposal",
-  secondaryCtaLabel: "See Methodologies",
+  primaryCtaLabel: "Request a Research Proposal",
+  secondaryCtaLabel: "Start Your Research Project",
   stat: {
     value: "98%",
     label: "Data Accuracy Rate",
@@ -26,12 +26,12 @@ export const MR_HERO = {
 };
 
 export const MR_SERVICES = {
-  eyebrow: "RESEARCH SERVICES",
+  eyebrow: "OUR RESEARCH SERVICES",
   heading: (
     <>
-      Intelligence for <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Every Decision
+      Enterprise Market <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Research Solutions
       </span>
     </>
   ),
@@ -74,12 +74,12 @@ export const MR_SERVICES = {
 export const MR_STATS = {
   heading: (
     <>
-      Research That Fuels <br />
-      <span className="text-brand-blue">Better Outcomes</span>
+      Global Reach <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    '"Bad data is worse than no data. We built our entire practice around one commitment: every insight we deliver is verified, sourced, and actionable."',
+    '"We provide human-powered B2B market research, delivering data augmentation, validation, and market intelligence for enterprise growth decisions across 40+ global markets."',
   attribution: "— Market Research Team, B2B Sales Arrow",
   stats: [
     {
@@ -89,32 +89,32 @@ export const MR_STATS = {
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "350M+",
-      label: "B2B Contacts in Database",
-      icon: "Database",
+      value: "10+",
+      label: "Years of Experience",
+      icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "40+",
-      label: "Markets Covered",
+      label: "Countries Served",
       icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "72h",
-      label: "Avg Research Turnaround",
-      icon: "TrendingUp",
+      value: "100%",
+      label: "Research Compliance",
+      icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
   ],
 };
 
 export const MR_WHY = {
-  eyebrow: "THE RESEARCH DIFFERENCE",
+  eyebrow: "DATA QUALITY",
   heading: (
     <>
-      Why Enterprises Choose <br />
-      <span className="text-brand-cyan">Our Research Team</span>
+      Why Data Quality <br />
+      <span className="text-brand-cyan">Matters</span>
     </>
   ),
   reasons: [
@@ -281,7 +281,7 @@ export const MR_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -327,7 +327,7 @@ export const MR_CONTACT = {
   heading: (
     <>
       Let&apos;s Build Your <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Intelligence Edge
       </span>
     </>

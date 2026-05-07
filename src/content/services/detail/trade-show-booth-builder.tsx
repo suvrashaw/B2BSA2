@@ -3,30 +3,30 @@ export const TSBB_HERO = {
   eyebrow: "TRADE SHOW BOOTH BUILDER",
   title: (
     <>
-      Built to Win. <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Built to Last.
+      Trade Show Booth Builders Who <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Engineer for Conversion
       </span>
     </>
   ),
   description:
-    "We are a specialist trade show booth builder with in-house fabrication, a global installation network, and a track record of delivering exceptional exhibition structures for B2B brands at the world's most competitive shows.",
+    "We are a full-service exhibition booth builder — design, fabrication, logistics, and on-site installation — serving enterprise brands at the world's most competitive trade shows.",
   image: {
     src: "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=2000",
     alt: "Trade show booth construction in progress",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Get a Quote",
-  secondaryCtaLabel: "View Our Portfolio",
+  primaryCtaLabel: "Get a Build Quote",
+  secondaryCtaLabel: "Download Build Capabilities PDF",
   stat: { value: "500+", label: "Booths Built & Installed", icon: "HardHat" },
 };
 
 export const TSBB_WHY = {
-  eyebrow: "THE BUILD DIFFERENCE",
+  eyebrow: "BEYOND THE BUILD",
   heading: (
     <>
-      Why Our Builds <br />
-      <span className="text-brand-cyan">Outperform</span>
+      Not Just a Booth Builder — <br />
+      <span className="text-brand-cyan">An Enterprise Exhibition Partner</span>
     </>
   ),
   reasons: [
@@ -66,12 +66,12 @@ export const TSBB_WHY = {
 };
 
 export const TSBB_DELIVERABLES = {
-  eyebrow: "WHAT'S INCLUDED",
+  eyebrow: "OUR CAPABILITIES",
   heading: (
     <>
-      From Concept <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        to Completion
+      Our Booth Building <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Capabilities
       </span>
     </>
   ),
@@ -124,36 +124,36 @@ export const TSBB_DELIVERABLES = {
 export const TSBB_STATS = {
   heading: (
     <>
-      Build Quality Results <br />
-      <span className="text-brand-blue">by the Numbers</span>
+      Global Reach <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    '"A booth built right the first time pays for itself over 5+ events. We design for longevity, not just the next show date."',
+    '"We provide premier trade show booth builders for enterprise brands, offering custom fabrication, global deployment, and turnkey installation that has delivered 500+ booths across major global markets."',
   attribution: "— Fabrication Team, B2B Sales Arrow",
   stats: [
     {
       value: "500+",
-      label: "Booths Built & Installed",
+      label: "Booth Designs Delivered",
       icon: "HardHat",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "40+",
-      label: "Countries Installed In",
-      icon: "Globe2",
+      value: "10+",
+      label: "Years of Experience",
+      icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
-      value: "99%",
-      label: "Structural Defect-Free Rate",
-      icon: "Target",
+      value: "40+",
+      label: "Countries Served",
+      icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "6 yrs",
-      label: "Avg Booth Lifespan",
-      icon: "TrendingUp",
+      value: "100%",
+      label: "Engineering Compliance",
+      icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
   ],
@@ -249,7 +249,7 @@ export const TSBB_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -295,7 +295,7 @@ export const TSBB_CONTACT = {
   heading: (
     <>
       Build Your <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Exhibition Structure
       </span>
     </>

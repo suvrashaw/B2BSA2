@@ -3,21 +3,21 @@ export const SQL_HERO = {
   eyebrow: "SALES QUALIFIED LEAD GENERATION",
   title: (
     <>
-      Pipeline Filled With <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Qualified Buyers
+      Sales Qualified Lead Generation — We Fill <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Your Pipeline With Decision-Makers
       </span>
     </>
   ),
   description:
-    "We identify, target, and engage your ideal customers through precision outbound strategies — delivering sales-ready leads directly into your CRM.",
+    "Marketing Qualified Leads don't close deals. We deliver verified, sales-ready enterprise prospects — aligned to your ICP, scored, and routed directly to your sales team.",
   image: {
     src: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2000",
     alt: "Sales pipeline and lead generation",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Start Generating Leads",
-  secondaryCtaLabel: "See Case Studies",
+  primaryCtaLabel: "Request an SQL Proposal",
+  secondaryCtaLabel: "Start Your Lead Gen Project",
   stat: {
     value: "15k+",
     label: "Enterprise Leads Delivered",
@@ -26,12 +26,12 @@ export const SQL_HERO = {
 };
 
 export const SQL_SERVICES = {
-  eyebrow: "LEAD GENERATION COMPONENTS",
+  eyebrow: "OUR STRATEGY",
   heading: (
     <>
-      The Six Pillars of <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        SQL Generation
+      Our Multi-Channel <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        SQL Generation Approach
       </span>
     </>
   ),
@@ -104,47 +104,47 @@ export const SQL_SERVICES = {
 export const SQL_STATS = {
   heading: (
     <>
-      Lead Generation <br />
-      <span className="text-brand-blue">at Scale</span>
+      Global Reach <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    '"We don\'t deliver leads. We deliver sales-qualified pipeline. The distinction is everything in enterprise B2B."',
+    '"We generate and deliver sales-qualified leads for enterprise B2B companies, delivering verified decision-makers ready to engage your sales team across 40+ markets."',
   attribution: "— Lead Generation Team, B2B Sales Arrow",
   stats: [
     {
-      value: "15k+",
-      label: "Enterprise Leads Delivered",
+      value: "15,000+",
+      label: "Enterprise Leads Generated",
       icon: "Users",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "62%",
-      label: "Lower Cost-per-Lead",
+      value: "10+",
+      label: "Years of Experience",
       icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
-      value: "38%",
-      label: "Avg SQL-to-Close Rate",
-      icon: "Target",
+      value: "40+",
+      label: "Countries Served",
+      icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "48h",
-      label: "First SQLs Delivered",
-      icon: "Zap",
+      value: "98%",
+      label: "Client Retention",
+      icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
   ],
 };
 
 export const SQL_WHY = {
-  eyebrow: "WHY CHOOSE US",
+  eyebrow: "SALES ALIGNMENT",
   heading: (
     <>
-      The B2BSA Lead Gen <br />
-      <span className="text-brand-cyan">Advantage</span>
+      Why Most Lead Generation Programs <br />
+      <span className="text-brand-cyan">Fail Sales Teams</span>
     </>
   ),
   reasons: [
@@ -312,7 +312,7 @@ export const SQL_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -358,7 +358,7 @@ export const SQL_CONTACT = {
   heading: (
     <>
       Let&apos;s Fill Your <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Sales Pipeline
       </span>
     </>

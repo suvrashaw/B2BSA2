@@ -1,32 +1,32 @@
 export const DV_HERO = {
   showPreloader: false,
-  eyebrow: "DATA VALIDATION",
+  eyebrow: "B2B DATA VALIDATION",
   title: (
     <>
-      Verify, Clean, and Trust <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Every Record in Your Database
+      Data Validation — Clean Data That Your <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Sales Team Can Actually Trust
       </span>
     </>
   ),
   description:
-    "We systematically validate, clean, and verify your B2B data — eliminating bounced emails, disconnected numbers, and duplicate records that drain your team's time and damage your sender reputation.",
+    "Invalid emails, duplicate records, and stale contacts cost enterprise sales teams thousands of hours. We validate, clean, and certify your data so every outreach lands with precision.",
   image: {
     src: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=2000",
     alt: "Data validation and verification process",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Get a Free Data Health Check",
-  secondaryCtaLabel: "See Validation Results",
-  stat: { value: "98%", label: "Post-Validation Deliverability Rate", icon: "CheckCircle2" },
+  primaryCtaLabel: "Request a Data Health Check",
+  secondaryCtaLabel: "Start Your Validation Project",
+  stat: { value: "98%", label: "Data Accuracy Rate", icon: "CheckCircle2" },
 };
 
 export const DV_WHY = {
-  eyebrow: "THE VALIDATION DIFFERENCE",
+  eyebrow: "REVENUE PROTECTION",
   heading: (
     <>
-      Why Data Validation <br />
-      <span className="text-brand-cyan">Protects Pipeline</span>
+      The Hidden Cost of <br />
+      <span className="text-brand-cyan">Bad Data in B2B Sales</span>
     </>
   ),
   reasons: [
@@ -66,12 +66,12 @@ export const DV_WHY = {
 };
 
 export const DV_DELIVERABLES = {
-  eyebrow: "WHAT'S INCLUDED",
+  eyebrow: "OUR CAPABILITIES",
   heading: (
     <>
-      Full Data Validation <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Service Package
+      What Our Data <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Validation Covers
       </span>
     </>
   ),
@@ -124,36 +124,36 @@ export const DV_DELIVERABLES = {
 export const DV_STATS = {
   heading: (
     <>
-      Validation Quality <br />
-      <span className="text-brand-blue">Benchmark Numbers</span>
+      Global Reach <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    "\"A database isn't an asset if you can't trust it. Data validation is the foundation of every successful outbound campaign, ABM programme, and CRM-driven workflow.\"",
+    '"We provide clean, verified B2B contact and account data, delivering email validation, deduplication, and CRM hygiene that improves deliverability across 40+ markets."',
   attribution: "— Data Quality Team, B2B Sales Arrow",
   stats: [
     {
       value: "98%",
-      label: "Post-Validation Deliverability Rate",
+      label: "Data Accuracy Rate",
       icon: "CheckCircle2",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "5×",
-      label: "Lower Bounce Rate vs Unvalidated",
+      value: "10+",
+      label: "Years of Experience",
       icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
-      value: "48hr",
-      label: "Avg Turnaround Per 10k Records",
-      icon: "Zap",
+      value: "40+",
+      label: "Countries Served",
+      icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "40+",
-      label: "Countries, Data Sources Covered",
-      icon: "Globe2",
+      value: "100%",
+      label: "Validation Accuracy",
+      icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
   ],
@@ -250,7 +250,7 @@ export const DV_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -296,7 +296,7 @@ export const DV_CONTACT = {
   heading: (
     <>
       Clean Data is the <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Foundation of Revenue
       </span>
     </>

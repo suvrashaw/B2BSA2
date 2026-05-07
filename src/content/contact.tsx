@@ -1,16 +1,16 @@
 export const CONTACT_HERO = {
   showPreloader: false,
-  eyebrow: "LET'S CONNECT",
+  eyebrow: "CONTACT US",
   title: (
     <>
-      Start a <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Conversation
+      Let&apos;s Build Your Enterprise <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Growth Strategy
       </span>
     </>
   ),
   description:
-    "Our growth architects respond within 24 hours. Tell us about your goals and we'll map the path forward.",
+    "Whether you need a booth for next month or a full-year growth program — start with one conversation. Our growth architects are ready.",
   image: {
     src: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=2000",
     alt: "Team collaboration",
@@ -68,7 +68,7 @@ export const CONTACT_FAQ = {
   heading: (
     <>
       Common <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -110,17 +110,17 @@ export const CONTACT_FAQ = {
 };
 
 export const CONTACT_FORM = {
-  eyebrow: "START THE CONVERSATION",
+  eyebrow: "INQUIRY",
   heading: (
     <>
-      Ready to Scale Your <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Enterprise?
+      Start the <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Conversation
       </span>
     </>
   ),
   description:
-    "Book a strategic consultation with our growth architects to discuss your next exhibition or digital campaign.",
+    "Whether you need a booth for next month or a full-year growth program — start with one conversation. Our growth architects are ready.",
   illustration: {
     src: "/undraw_contact-us_s4jn.svg",
     alt: "Contact Us",

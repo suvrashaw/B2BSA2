@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
@@ -11,6 +10,8 @@ import {
   DA_FAQ,
   DA_CONTACT,
 } from "@/content/services/detail/data-augmentation";
+
+import type { Metadata } from "next";
 
 export const metadata: Metadata = getPageMetadata("/services/market-research/data-augmentation");
 

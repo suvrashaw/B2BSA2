@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+
 import Icon from "@/components/ui/Icon";
 import { HOME_WHO_WE_ARE_CONTENT, type WhoWeAreContent, type WhoWeAreStat } from "@/content/home";
 
@@ -17,11 +18,11 @@ function HoverCard({ stat }: { stat: WhoWeAreStat }) {
   return (
     <div
       onMouseMove={handleMouseMove}
-      className={`relative p-8 rounded-[4px] shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden group/card ${stat.bg} text-white hover:bg-white border border-transparent hover:border-red-500`}
+      className={`group/card relative cursor-pointer overflow-hidden rounded-[4px] p-8 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${stat.bg} border border-transparent text-white hover:border-red-500 hover:bg-white`}
     >
       {/* Dynamic Red Radial Gradient */}
       <motion.div
-        className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 group-hover/card:opacity-100 z-0"
+        className="pointer-events-none absolute -inset-px z-0 opacity-0 transition duration-300 group-hover/card:opacity-100"
         style={{
           background: useMotionTemplate`
             radial-gradient(
@@ -35,16 +36,16 @@ function HoverCard({ stat }: { stat: WhoWeAreStat }) {
 
       {/* Content */}
       <div className="relative z-10">
-        <div className="text-sm font-bold opacity-90 mb-4 group-hover/card:text-red-600 transition-colors">
+        <div className="mb-4 text-sm font-bold opacity-90 transition-colors group-hover/card:text-red-600">
           {stat.label}
         </div>
         <div className="flex items-center justify-between">
-          <div className="text-4xl font-heading font-bold group-hover/card:text-red-600 transition-colors">
+          <div className="font-heading text-4xl font-bold transition-colors group-hover/card:text-red-600">
             {stat.value}
           </div>
           <Icon
             name={stat.icon}
-            className="w-6 h-6 opacity-50 group-hover/card:opacity-100 group-hover/card:text-red-600 transition-colors"
+            className="h-6 w-6 opacity-50 transition-colors group-hover/card:text-red-600 group-hover/card:opacity-100"
           />
         </div>
       </div>
@@ -72,23 +73,23 @@ export function WhoWeAre({
   const col2Stats = [...offsetStats, ...offsetStats];
 
   return (
-    <section id="about" className="py-20 bg-white overflow-hidden">
-      <div className="container mx-auto px-8 grid lg:grid-cols-2 gap-16 items-center">
+    <section id="about" className="overflow-hidden bg-white py-20">
+      <div className="container mx-auto grid items-center gap-16 px-8 lg:grid-cols-2">
         {/* Left Side: Content */}
-        <div className="space-y-12 flex flex-col items-start text-left">
+        <div className="flex flex-col items-start space-y-12 text-left">
           <div className="w-full text-left">
-            <h2 className="font-heading text-4xl lg:text-5xl font-bold  mb-6">
+            <h2 className="font-heading mb-6 text-4xl font-bold  lg:text-5xl">
               {heading}
             </h2>
           </div>
 
           <div className="w-full">
-            <div className="p-8 lg:p-12 rounded-3xl bg-brand-gray/50 hover:shadow-2xl transition-all duration-500 group border border-transparent hover:border-brand-blue/20 hover:bg-brand-blue/5 cursor-default">
+            <div className="bg-brand-gray/50 group hover:border-brand-blue/20 hover:bg-brand-blue/5 cursor-default rounded-3xl border border-transparent p-8 transition-all duration-500 hover:shadow-2xl lg:p-12">
               <div className="transform transition-transform duration-500 group-hover:-translate-y-2">
-                <p className="text-xl md:text-3xl font-serif italic text-black group-hover:text-brand-blue:text-brand-cyan transition-colors duration-500 leading-relaxed">
+                <p className="group-hover:text-brand-blue:text-brand-cyan font-serif text-xl leading-relaxed text-black italic transition-colors duration-500 md:text-3xl">
                   {quote}
                 </p>
-                <div className="mt-8 text-sm font-bold text-gray-500 uppercase tracking-widest group-hover:text-brand-blue/70 transition-colors">
+                <div className="group-hover:text-brand-blue/70 mt-8 text-sm font-bold tracking-widest text-gray-500 uppercase transition-colors">
                   {attribution}
                 </div>
               </div>
@@ -97,21 +98,21 @@ export function WhoWeAre({
         </div>
 
         {/* Right Side: Scrolling Insights */}
-        <div className="relative h-[600px] overflow-hidden p-4 group/scroller">
+        <div className="group/scroller relative h-[600px] overflow-hidden p-4">
           {/* Top/Bottom Fade Masks */}
-          <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white to-transparent z-10 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none" />
+          <div className="pointer-events-none absolute top-0 right-0 left-0 z-10 h-16 bg-gradient-to-b from-white to-transparent" />
+          <div className="pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-16 bg-gradient-to-t from-white to-transparent" />
 
-          <div className="grid grid-cols-2 gap-6 h-full relative">
+          <div className="relative grid h-full grid-cols-2 gap-6">
             {/* Column 1 - Scroll Up */}
-            <div className="flex flex-col gap-6 pb-6 animate-scroll-up group-hover/scroller:[animation-play-state:paused]">
+            <div className="animate-scroll-up flex flex-col gap-6 pb-6 group-hover/scroller:[animation-play-state:paused]">
               {col1Stats.map((stat, i) => (
                 <HoverCard key={i} stat={stat} />
               ))}
             </div>
 
             {/* Column 2 - Scroll Down */}
-            <div className="flex flex-col gap-6 pb-6 animate-scroll-down group-hover/scroller:[animation-play-state:paused]">
+            <div className="animate-scroll-down flex flex-col gap-6 pb-6 group-hover/scroller:[animation-play-state:paused]">
               {col2Stats.map((stat, i) => (
                 <HoverCard key={i} stat={stat} />
               ))}

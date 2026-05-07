@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+
 import { cn } from "@/lib";
 
 interface Step {
@@ -20,23 +21,23 @@ export function ProcessTimeline({ steps, title, subtitle, className }: ProcessTi
     <section className={cn("py-24 bg-brand-gray/10 ", className)}>
       <div className="container mx-auto px-8">
         {(title || subtitle) && (
-          <div className="text-center max-w-3xl mx-auto mb-20">
+          <div className="mx-auto mb-20 max-w-3xl text-center">
             {subtitle && (
-              <div className="text-brand-blue  text-sm font-bold tracking-widest uppercase mb-4">
+              <div className="text-brand-blue  mb-4 text-sm font-bold tracking-widest uppercase">
                 {subtitle}
               </div>
             )}
             {title && (
-              <h2 className="text-3xl md:text-5xl font-bold   font-heading leading-tight">
+              <h2 className="font-heading text-3xl leading-tight   font-bold md:text-5xl">
                 {title}
               </h2>
             )}
           </div>
         )}
 
-        <div className="relative max-w-5xl mx-auto">
+        <div className="relative mx-auto max-w-5xl">
           {/* Vertical Line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-brand-blue/50 via-brand-cyan/50 to-transparent hidden md:block" />
+          <div className="from-brand-blue/50 via-brand-cyan/50 absolute top-0 bottom-0 left-0 hidden w-px bg-gradient-to-b to-transparent md:left-1/2 md:block" />
 
           <div className="space-y-16">
             {steps.map((step, index) => (
@@ -52,29 +53,29 @@ export function ProcessTimeline({ steps, title, subtitle, className }: ProcessTi
                 )}
               >
                 {/* Dot */}
-                <div className="absolute left-0 md:left-1/2 top-0 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 w-4 h-4 rounded-full bg-brand-cyan shadow-[0_0_15px_rgba(75,192,217,0.8)] z-10" />
+                <div className="bg-brand-cyan absolute top-0 left-0 z-10 h-4 w-4 -translate-x-1/2 rounded-full shadow-[0_0_15px_rgba(75,192,217,0.8)] md:top-1/2 md:left-1/2 md:-translate-y-1/2" />
 
                 {/* Content */}
-                <div className="w-full md:w-1/2 pl-8 md:px-12">
+                <div className="w-full pl-8 md:w-1/2 md:px-12">
                   <div
                     className={cn(
                       "p-8 rounded-2xl bg-white [#212529] shadow-xl border border-gray-100  hover:border-brand-blue/30 transition-all duration-300",
                       index % 2 === 0 ? "text-left md:text-right" : "text-left"
                     )}
                   >
-                    <div className="text-brand-blue  font-bold text-lg mb-2">
+                    <div className="text-brand-blue  mb-2 text-lg font-bold">
                       Phase 0{index + 1}
                     </div>
-                    <h3 className="text-xl md:text-2xl font-bold   mb-4">
+                    <h3 className="mb-4 text-xl font-bold   md:text-2xl">
                       {step.title}
                     </h3>
-                    <p className="text-gray-600  leading-relaxed text-sm md:text-base">
+                    <p className="text-sm  leading-relaxed text-gray-600 md:text-base">
                       {step.description}
                     </p>
                   </div>
                 </div>
 
-                <div className="w-full md:w-1/2 hidden md:block" />
+                <div className="hidden w-full md:block md:w-1/2" />
               </motion.div>
             ))}
           </div>

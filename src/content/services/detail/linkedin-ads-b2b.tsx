@@ -3,30 +3,30 @@ export const LIADS_HERO = {
   eyebrow: "LINKEDIN ADS FOR B2B",
   title: (
     <>
-      Reach 900M Professionals <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        With Precision B2B Targeting
+      LinkedIn Ads for B2B — The <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Highest-Intent Pipeline Channel
       </span>
     </>
   ),
   description:
-    "We design and manage LinkedIn ad campaigns that put your brand directly in front of C-suite executives, VPs, and senior decision-makers — the people who sign the contracts.",
+    "LinkedIn is where enterprise buyers make decisions. We engineer LinkedIn ad campaigns that target your exact ICP — by title, company, industry, and seniority — and convert them into qualified pipeline.",
   image: {
     src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000",
     alt: "LinkedIn B2B advertising strategy",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Get a Free LinkedIn Audit",
-  secondaryCtaLabel: "View LinkedIn Results",
-  stat: { value: "5×", label: "Avg LinkedIn Lead Quality vs Other Channels", icon: "ExternalLink" },
+  primaryCtaLabel: "Request a LinkedIn Audit",
+  secondaryCtaLabel: "Start Your LinkedIn Project",
+  stat: { value: "5×", label: "Avg Lead Quality vs Other Channels", icon: "ExternalLink" },
 };
 
 export const LIADS_WHY = {
-  eyebrow: "THE LINKEDIN ADVANTAGE",
+  eyebrow: "ENTERPRISE TARGETING",
   heading: (
     <>
-      Why LinkedIn Is the <br />
-      <span className="text-brand-cyan">B2B Ad Platform</span>
+      Why LinkedIn Is the #1 Paid <br />
+      <span className="text-brand-cyan">Channel for Enterprise B2B</span>
     </>
   ),
   reasons: [
@@ -66,12 +66,12 @@ export const LIADS_WHY = {
 };
 
 export const LIADS_DELIVERABLES = {
-  eyebrow: "WHAT'S INCLUDED",
+  eyebrow: "MANAGED FORMATS",
   heading: (
     <>
-      Full LinkedIn Ads <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Management Package
+      LinkedIn Ad Formats <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        We Specialize In
       </span>
     </>
   ),
@@ -124,12 +124,12 @@ export const LIADS_DELIVERABLES = {
 export const LIADS_STATS = {
   heading: (
     <>
-      LinkedIn Ads <br />
-      <span className="text-brand-blue">Performance Numbers</span>
+      Global Reach <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    '"LinkedIn is the only platform where you can serve an ad directly to the CFO of a Fortune 500 company. When the creative and targeting are right, the results are transformative."',
+    '"We provide expert LinkedIn Ads management for enterprise B2B brands, delivering sponsored content, Lead Gen Forms, and ABM campaigns that generate qualified pipeline across 40+ global markets."',
   attribution: "— LinkedIn Ads Team, B2B Sales Arrow",
   stats: [
     {
@@ -139,20 +139,20 @@ export const LIADS_STATS = {
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "−38%",
-      label: "Avg CPL Achieved vs Benchmark",
-      icon: "Zap",
+      value: "10+",
+      label: "Years of Experience",
+      icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "40+",
-      label: "Industries Run LinkedIn Campaigns",
+      label: "Countries Served",
       icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "98%",
-      label: "Client Retention on Retainer",
+      value: "100%",
+      label: "Production Accuracy",
       icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
@@ -250,7 +250,7 @@ export const LIADS_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -296,7 +296,7 @@ export const LIADS_CONTACT = {
   heading: (
     <>
       Put Your Brand in Front of <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Decision-Makers
       </span>
     </>

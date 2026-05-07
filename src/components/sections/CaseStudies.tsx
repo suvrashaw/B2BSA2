@@ -1,9 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+
 import Image from "next/image";
+
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+
 import Icon from "@/components/ui/Icon";
 import {
   HOME_CASE_STUDIES_CONTENT,
@@ -34,23 +37,23 @@ export function CaseStudies({
     : (caseStudies[0]?.id ?? "");
 
   return (
-    <section id="work" className="py-20 bg-brand-gray relative">
+    <section id="work" className="bg-brand-gray relative py-20">
       <div className="container mx-auto px-8">
-        <div className="flex flex-col items-start text-left mb-16">
+        <div className="mb-16 flex flex-col items-start text-left">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-sm font-semibold tracking-wide"
+            className="bg-brand-blue/10 border-brand-blue/20 text-brand-blue mb-6 inline-block rounded-full border px-4 py-1.5 text-sm font-semibold tracking-wide"
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading text-4xl lg:text-5xl font-bold  leading-tight">
+          <h2 className="font-heading text-4xl leading-tight font-bold  lg:text-5xl">
             {heading}
           </h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-4 h-[600px] w-full">
+        <div className="flex h-[600px] w-full flex-col gap-4 lg:flex-row">
           {caseStudies.map((study) => {
             const isActive = activeCaseStudyId === study.id;
 
@@ -60,8 +63,8 @@ export function CaseStudies({
                 layout
                 transition={{ layout: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }}
                 onHoverStart={() => setActiveId(study.id)}
-                className={`relative rounded-3xl overflow-hidden cursor-pointer group ${
-                  isActive ? "lg:flex-[3] lg:max-w-none" : "lg:flex-[1] lg:max-w-[120px]"
+                className={`group relative cursor-pointer overflow-hidden rounded-3xl ${
+                  isActive ? "lg:max-w-none lg:flex-[3]" : "lg:max-w-[120px] lg:flex-[1]"
                 }`}
                 style={{
                   height: isActive ? "100%" : "auto",
@@ -69,7 +72,7 @@ export function CaseStudies({
                 }}
               >
                 {/* Background Image */}
-                <div className="absolute inset-0 w-full h-full">
+                <div className="absolute inset-0 h-full w-full">
                   <Image
                     src={study.image}
                     alt={study.title}
@@ -81,7 +84,7 @@ export function CaseStudies({
                   <div
                     className={`absolute inset-0 transition-opacity duration-500 ${
                       isActive
-                        ? "bg-gradient-to-t from-brand-charcoal/90 via-brand-charcoal/40 to-transparent"
+                        ? "from-brand-charcoal/90 via-brand-charcoal/40 bg-gradient-to-t to-transparent"
                         : "bg-brand-charcoal/60 group-hover:bg-brand-charcoal/40"
                     }`}
                   />
@@ -91,13 +94,13 @@ export function CaseStudies({
                 <div className="absolute inset-0 flex flex-col justify-end p-8">
                   <div className="flex items-start gap-4">
                     <div
-                      className={`w-12 h-12 rounded-full flex items-center justify-center shrink-0 backdrop-blur-md transition-colors duration-300 ${
-                        isActive ? "bg-brand-blue/90" : "bg-white/10 group-hover:bg-brand-cyan/80"
+                      className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full backdrop-blur-md transition-colors duration-300 ${
+                        isActive ? "bg-brand-blue/90" : "group-hover:bg-brand-cyan/80 bg-white/10"
                       }`}
                     >
                       <Icon
                         name={study.icon}
-                        className={`w-5 h-5 ${isActive ? "text-white" : "text-white"}`}
+                        className={`h-5 w-5 ${isActive ? "text-white" : "text-white"}`}
                       />
                     </div>
 
@@ -110,26 +113,26 @@ export function CaseStudies({
                           transition={{ duration: 0.3 }}
                           className="flex flex-col"
                         >
-                          <span className="px-3 py-1 bg-brand-blue text-white text-xs font-bold uppercase tracking-wider rounded-full mb-3 w-max">
+                          <span className="bg-brand-blue mb-3 w-max rounded-full px-3 py-1 text-xs font-bold tracking-wider text-white uppercase">
                             {study.client}
                           </span>
-                          <h3 className="font-heading font-bold text-2xl text-white mb-4 line-clamp-2">
+                          <h3 className="font-heading mb-4 line-clamp-2 text-2xl font-bold text-white">
                             {study.title}
                           </h3>
                           <div className="grid grid-cols-2 gap-4">
                             <div>
-                              <h4 className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">
+                              <h4 className="mb-1 text-[10px] font-bold tracking-wider text-gray-400 uppercase">
                                 Challenge
                               </h4>
-                              <p className="text-gray-200 text-xs line-clamp-2">
+                              <p className="line-clamp-2 text-xs text-gray-200">
                                 {study.challenge}
                               </p>
                             </div>
                             <div>
-                              <h4 className="text-[10px] font-bold text-brand-cyan uppercase tracking-wider mb-1">
+                              <h4 className="text-brand-cyan mb-1 text-[10px] font-bold tracking-wider uppercase">
                                 Solution
                               </h4>
-                              <p className="text-gray-200 text-xs line-clamp-2">{study.solution}</p>
+                              <p className="line-clamp-2 text-xs text-gray-200">{study.solution}</p>
                             </div>
                           </div>
                         </motion.div>
@@ -144,9 +147,9 @@ export function CaseStudies({
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="absolute bottom-8 left-0 w-full flex justify-center lg:bottom-auto lg:top-1/2 lg:-translate-y-1/2 lg:-rotate-90 hidden lg:block"
+                        className="absolute bottom-8 left-0 flex hidden w-full justify-center lg:top-1/2 lg:bottom-auto lg:block lg:-translate-y-1/2 lg:-rotate-90"
                       >
-                        <span className="text-white font-heading font-semibold tracking-wider whitespace-nowrap">
+                        <span className="font-heading font-semibold tracking-wider whitespace-nowrap text-white">
                           {study.client}
                         </span>
                       </motion.div>
@@ -161,9 +164,9 @@ export function CaseStudies({
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 20 }}
                         transition={{ delay: 0.2, duration: 0.3 }}
-                        className="absolute bottom-8 right-8 px-6 py-3 rounded-full bg-brand-blue text-white font-medium shadow-lg hover:bg-brand-cyan hover: transition-all duration-300 flex items-center gap-2"
+                        className="bg-brand-blue hover:bg-brand-cyan hover: absolute right-8 bottom-8 flex items-center gap-2 rounded-full px-6 py-3 font-medium text-white shadow-lg transition-all duration-300"
                       >
-                        {ctaLabel} <ArrowUpRight className="w-4 h-4" />
+                        {ctaLabel} <ArrowUpRight className="h-4 w-4" />
                       </motion.button>
                     )}
                   </AnimatePresence>
@@ -176,12 +179,12 @@ export function CaseStudies({
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.8 }}
                         transition={{ delay: 0.3, duration: 0.4 }}
-                        className="absolute top-8 right-8 bg-white/90 backdrop-blur-md px-4 py-3 rounded-2xl shadow-lg border border-white/20 flex flex-col items-center"
+                        className="absolute top-8 right-8 flex flex-col items-center rounded-2xl border border-white/20 bg-white/90 px-4 py-3 shadow-lg backdrop-blur-md"
                       >
-                        <span className="font-heading font-bold text-2xl text-brand-blue">
+                        <span className="font-heading text-brand-blue text-2xl font-bold">
                           {study.metric}
                         </span>
-                        <span className="text-[10px] uppercase font-bold text-gray-500 tracking-wider">
+                        <span className="text-[10px] font-bold tracking-wider text-gray-500 uppercase">
                           {study.metricLabel}
                         </span>
                       </motion.div>
@@ -194,8 +197,8 @@ export function CaseStudies({
         </div>
 
         <div className="mt-12 text-center">
-          <button className="hidden md:inline-flex items-center gap-2 text-brand-blue font-semibold hover:gap-4 transition-all duration-300">
-            {viewAllLabel} <ArrowUpRight className="w-5 h-5" />
+          <button className="text-brand-blue hidden items-center gap-2 font-semibold transition-all duration-300 hover:gap-4 md:inline-flex">
+            {viewAllLabel} <ArrowUpRight className="h-5 w-5" />
           </button>
         </div>
       </div>

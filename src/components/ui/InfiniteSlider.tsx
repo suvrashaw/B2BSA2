@@ -1,8 +1,10 @@
 "use client";
-import { cn } from "@/lib";
-import { motion, useMotionValue, animate } from "framer-motion";
 import { useState, useEffect } from "react";
+
+import { motion, useMotionValue, animate } from "framer-motion";
 import useMeasure from "react-use-measure";
+
+import { cn } from "@/lib";
 
 type InfiniteSliderProps = {
   children: React.ReactNode;
@@ -30,23 +32,19 @@ export function InfiniteSlider({
   const [key, setKey] = useState(0);
 
   useEffect(() => {
-    let controls;
     const size = direction === "horizontal" ? width : height;
     const contentSize = size + gap;
     const from = reverse ? -contentSize / 2 : 0;
     const to = reverse ? 0 : -contentSize / 2;
 
-    if (isTransitioning) {
-      controls = animate(translation, [translation.get(), to], {
+    const controls = isTransitioning ? animate(translation, [translation.get(), to], {
         ease: "linear",
         duration: currentDuration * Math.abs((translation.get() - to) / contentSize),
         onComplete: () => {
           setIsTransitioning(false);
           setKey((prevKey) => prevKey + 1);
         },
-      });
-    } else {
-      controls = animate(translation, [from, to], {
+      }) : animate(translation, [from, to], {
         ease: "linear",
         duration: currentDuration,
         repeat: Infinity,
@@ -56,7 +54,6 @@ export function InfiniteSlider({
           translation.set(from);
         },
       });
-    }
 
     return controls?.stop;
   }, [key, translation, currentDuration, width, height, gap, isTransitioning, direction, reverse]);

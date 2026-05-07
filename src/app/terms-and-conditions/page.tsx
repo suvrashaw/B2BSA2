@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
-import { Header } from "@/components/layout/Header";
-import { Hero } from "@/components/sections/Hero";
-import { FAQ } from "@/components/sections/FAQ";
-import { ContactUs } from "@/components/sections/ContactUs";
 import { Footer } from "@/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
+import { ContactUs } from "@/components/sections/ContactUs";
+import { FAQ } from "@/components/sections/FAQ";
+import { Hero } from "@/components/sections/Hero";
 import { TERMS_HERO, TERMS_FAQ, TERMS_CONTACT } from "@/content/terms";
+
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-brand-gray">
+    <main className="bg-brand-gray min-h-screen">
       <Header />
       <Hero {...TERMS_HERO} />
       <FAQ {...TERMS_FAQ} />

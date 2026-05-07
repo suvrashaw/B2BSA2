@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+
 import { motion } from "framer-motion";
 
 const COUNTRIES = ["New York", "London", "Dubai", "Singapore", "Sydney", "Toronto"];
@@ -17,13 +18,13 @@ export function GlobalPresence() {
   }, []);
 
   return (
-    <div className="w-full py-12 border-t border-gray-200 relative z-10 overflow-hidden">
+    <div className="relative z-10 w-full overflow-hidden border-t border-gray-200 py-12">
       <div className="container mx-auto px-8">
-        <h3 className="text-brand-blue/60 uppercase tracking-[0.3em] text-xs font-bold mb-8 text-center">
+        <h3 className="text-brand-blue/60 mb-8 text-center text-xs font-bold tracking-[0.3em] uppercase">
           Global Enterprise Reach
         </h3>
 
-        <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
+        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
           {COUNTRIES.map((country, index) => {
             const isActive = index === activeIndex;
 
@@ -41,14 +42,14 @@ export function GlobalPresence() {
                   ease: [0.16, 1, 0.3, 1], // premium smooth easing
                 }}
               >
-                <span className="font-heading text-2xl md:text-3xl  tracking-wide">
+                <span className="font-heading text-2xl tracking-wide  md:text-3xl">
                   {country}
                 </span>
 
                 {isActive && (
                   <motion.div
                     layoutId="activeCountryGlow"
-                    className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1/2 h-[2px] bg-brand-blue blur-[2px]"
+                    className="bg-brand-blue absolute -bottom-2 left-1/2 h-[2px] w-1/2 -translate-x-1/2 blur-[2px]"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 0.8 }}
                     exit={{ opacity: 0 }}

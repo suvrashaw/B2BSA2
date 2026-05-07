@@ -1,32 +1,32 @@
 export const DA_HERO = {
   showPreloader: false,
-  eyebrow: "DATA AUGMENTATION",
+  eyebrow: "B2B DATA AUGMENTATION",
   title: (
     <>
-      Enrich Your Data for <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Precision B2B Targeting
+      Data Augmentation — Transform Incomplete <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Data Into Sales Intelligence
       </span>
     </>
   ),
   description:
-    "We enrich your existing CRM and prospect data with verified firmographic, technographic, and contact intelligence — turning incomplete records into actionable, revenue-ready datasets.",
+    "Your CRM is only as powerful as the data inside it. We enrich, append, and augment your contact and account records with verified firmographic, technographic, and intent data.",
   image: {
     src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2000",
     alt: "Data augmentation and enrichment",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Get a Free Data Audit",
-  secondaryCtaLabel: "See Data Results",
-  stat: { value: "94%", label: "Avg Data Accuracy Rate", icon: "Database" },
+  primaryCtaLabel: "Request a Data Audit",
+  secondaryCtaLabel: "Start Your Data Project",
+  stat: { value: "98%", label: "Data Accuracy Rate", icon: "Database" },
 };
 
 export const DA_WHY = {
-  eyebrow: "THE ENRICHMENT DIFFERENCE",
+  eyebrow: "VERIFIED INTELLIGENCE",
   heading: (
     <>
-      Why Clean, Enriched Data <br />
-      <span className="text-brand-cyan">Powers Pipeline</span>
+      Why Human Verification Outperforms <br />
+      <span className="text-brand-cyan">Automated Data Tools</span>
     </>
   ),
   reasons: [
@@ -66,12 +66,12 @@ export const DA_WHY = {
 };
 
 export const DA_DELIVERABLES = {
-  eyebrow: "WHAT'S INCLUDED",
+  eyebrow: "OUR CAPABILITIES",
   heading: (
     <>
-      Full Data Augmentation <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Service Package
+      Data Fields We <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Enrich & Augment
       </span>
     </>
   ),
@@ -124,35 +124,35 @@ export const DA_DELIVERABLES = {
 export const DA_STATS = {
   heading: (
     <>
-      Data Enrichment <br />
-      <span className="text-brand-blue">Quality Numbers</span>
+      Global Reach <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    '"Your GTM strategy is only as good as the data beneath it. We turn incomplete, stale CRM records into the precision intelligence your sales team needs to win enterprise deals."',
+    '"We provide expert B2B data augmentation, delivering human-verified firmographic, technographic, and intent data to transform incomplete records into sales-ready profiles across 40+ global markets."',
   attribution: "— Data Intelligence Team, B2B Sales Arrow",
   stats: [
     {
-      value: "94%",
-      label: "Avg Data Accuracy Rate",
+      value: "98%",
+      label: "Data Accuracy Rate",
       icon: "Database",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "72hr",
-      label: "Avg Turnaround Per 10k Records",
-      icon: "Zap",
+      value: "10+",
+      label: "Years of Experience",
+      icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "40+",
-      label: "Data Sources & Providers Used",
+      label: "Countries Served",
       icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "3×",
-      label: "Avg Reply Rate Lift Post-Enrichment",
+      value: "100%",
+      label: "Research Accuracy",
       icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
@@ -250,7 +250,7 @@ export const DA_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -296,7 +296,7 @@ export const DA_CONTACT = {
   heading: (
     <>
       Transform Your CRM into a <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Revenue Engine
       </span>
     </>

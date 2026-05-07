@@ -1,8 +1,9 @@
 import type { ReactNode } from "react";
-import { cn } from "@/lib";
+
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import { Text } from "@/components/ui/Text";
+import { cn } from "@/lib";
 
 interface SectionHeaderProps {
   eyebrow?: string;

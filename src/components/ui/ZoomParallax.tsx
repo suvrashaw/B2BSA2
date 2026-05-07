@@ -17,7 +17,7 @@ export function ZoomParallax({ images }: ZoomParallaxProps) {
       {images.map((image, index) => (
         <div
           key={`${image.src}-${index}`}
-          className="relative h-56 overflow-hidden rounded-3xl bg-brand-charcoal/5 md:h-72"
+          className="bg-brand-charcoal/5 relative h-56 overflow-hidden rounded-3xl md:h-72"
         >
           <Image
             src={image.src}

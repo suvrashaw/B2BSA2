@@ -1,28 +1,29 @@
-import { Header } from "@/components/layout/Header";
-import { ServiceHero } from "@/components/sections/ServiceHero";
-import { OurServices } from "@/components/sections/OurServices";
-import { WhoWeAre } from "@/components/sections/WhoWeAre";
-import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
-import { CaseStudies } from "@/components/sections/CaseStudies";
-import { ClientLogos } from "@/components/sections/ClientLogos";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { Blogs } from "@/components/sections/Blogs";
-import { UpcomingEvents } from "@/components/sections/UpcomingEvents";
-import { FAQ } from "@/components/sections/FAQ";
-import { ContactUs } from "@/components/sections/ContactUs";
 import { Footer } from "@/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
+import { Blogs } from "@/components/sections/Blogs";
+import type { BlogsProps } from "@/components/sections/Blogs";
+import { CaseStudies } from "@/components/sections/CaseStudies";
+import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
+import { ClientLogos } from "@/components/sections/ClientLogos";
+import { ContactUs } from "@/components/sections/ContactUs";
+import type { ContactUsProps } from "@/components/sections/ContactUs";
+import { FAQ } from "@/components/sections/FAQ";
+import type { FAQProps } from "@/components/sections/FAQ";
+import type { HeroProps } from "@/components/sections/Hero";
+import { MediaShowreel } from "@/components/sections/MediaShowreel";
+import { OurServices } from "@/components/sections/OurServices";
+import type { OurServicesProps } from "@/components/sections/OurServices";
+import { ServiceHero } from "@/components/sections/ServiceHero";
+import { Testimonials } from "@/components/sections/Testimonials";
+import type { TestimonialsProps } from "@/components/sections/Testimonials";
+import { UpcomingEvents } from "@/components/sections/UpcomingEvents";
+import type { UpcomingEventsProps } from "@/components/sections/UpcomingEvents";
+import { WhoWeAre } from "@/components/sections/WhoWeAre";
+import type { WhoWeAreProps } from "@/components/sections/WhoWeAre";
+import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
+import type { WhyChooseUsProps } from "@/components/sections/WhyChooseUs";
 import { JsonLd } from "@/components/templates/ServiceDetail";
 import { buildFaqJsonLd } from "@/lib";
-import type { HeroProps } from "@/components/sections/Hero";
-import type { OurServicesProps } from "@/components/sections/OurServices";
-import type { WhoWeAreProps } from "@/components/sections/WhoWeAre";
-import type { WhyChooseUsProps } from "@/components/sections/WhyChooseUs";
-import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
-import type { TestimonialsProps } from "@/components/sections/Testimonials";
-import type { BlogsProps } from "@/components/sections/Blogs";
-import type { UpcomingEventsProps } from "@/components/sections/UpcomingEvents";
-import type { FAQProps } from "@/components/sections/FAQ";
-import type { ContactUsProps } from "@/components/sections/ContactUs";
 
 export interface ServiceHubProps {
   hero: HeroProps;
@@ -34,6 +35,7 @@ export interface ServiceHubProps {
   /** Pass blogs OR events — not both. Events hubs use UpcomingEvents; others use Blogs. */
   blogs?: BlogsProps;
   events?: UpcomingEventsProps;
+  showMediaShowreel?: boolean;
   faq: FAQProps;
   contact: ContactUsProps;
 }
@@ -47,13 +49,21 @@ export function ServiceHub({
   testimonials,
   blogs,
   events,
+  showMediaShowreel = false,
   faq,
   contact,
 }: ServiceHubProps) {
   const faqJsonLd = faq.faqs?.length ? buildFaqJsonLd(faq.faqs) : null;
+  let feedSection = null;
+
+  if (events) {
+    feedSection = <UpcomingEvents {...events} />;
+  } else if (blogs) {
+    feedSection = <Blogs {...blogs} />;
+  }
 
   return (
-    <main className="min-h-screen bg-brand-gray">
+    <main className="bg-brand-gray min-h-screen">
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <Header />
       <ServiceHero
@@ -70,14 +80,16 @@ export function ServiceHub({
             ? { label: hero.secondaryCtaLabel, href: "/services/global-event-solutions" }
             : undefined
         }
+        motionPhrases={hero.motionPhrases}
       />
+      {showMediaShowreel ? <MediaShowreel /> : null}
       <OurServices {...services} />
       <WhoWeAre {...stats} />
       <WhyChooseUs {...why} />
       <CaseStudies {...caseStudies} />
       <ClientLogos />
       <Testimonials {...testimonials} />
-      {events ? <UpcomingEvents {...events} /> : blogs ? <Blogs {...blogs} /> : null}
+      {feedSection}
       <FAQ {...faq} />
       <ContactUs {...contact} />
       <Footer />

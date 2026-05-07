@@ -1,15 +1,17 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+
 import dynamic from "next/dynamic";
+
 import type { GlobeMethods } from "react-globe.gl";
 
 // Dynamically import react-globe.gl to prevent SSR issues with WebGL/Canvas
 const GlobeGL = dynamic(() => import("react-globe.gl"), {
   ssr: false,
   loading: () => (
-    <div className="w-[600px] h-[600px] rounded-full border border-white/5 bg-white/[0.02] animate-pulse flex items-center justify-center">
-      <span className="text-white/20 text-sm tracking-widest uppercase">Initializing Globe...</span>
+    <div className="flex h-[600px] w-[600px] animate-pulse items-center justify-center rounded-full border border-white/5 bg-white/[0.02]">
+      <span className="text-sm tracking-widest text-white/20 uppercase">Initializing Globe...</span>
     </div>
   ),
 });
@@ -102,7 +104,7 @@ const arcsData: ArcData[] = [
     endLat: 51.5074,
     endLng: -0.1278,
     color: ["#4BC0D9", "#ffffff"],
-    dashInitialGap: 3.0,
+    dashInitialGap: 3,
   },
 ];
 
@@ -151,7 +153,7 @@ export function Globe() {
   }, []);
 
   return (
-    <div className="relative flex items-center justify-center cursor-grab active:cursor-grabbing w-full">
+    <div className="relative flex w-full cursor-grab items-center justify-center active:cursor-grabbing">
       <GlobeGL
         ref={globeRef}
         width={dimensions.width}

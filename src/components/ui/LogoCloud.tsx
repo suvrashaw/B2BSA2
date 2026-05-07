@@ -12,7 +12,7 @@ export function LogoCloud({ logos = [] }: LogoCloudProps) {
     <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
       {logos.map((logo) => (
         <div key={logo.name} className="flex items-center justify-center">
-          <span className="font-heading text-xl font-bold uppercase tracking-tight /70">
+          <span className="font-heading text-brand-charcoal/70 text-xl font-bold tracking-tight uppercase">
             {logo.alt ?? logo.name}
           </span>
         </div>

@@ -1,21 +1,22 @@
-import type { Metadata } from "next";
+import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { Hero } from "@/components/sections/Hero";
+import { Blogs } from "@/components/sections/Blogs";
+import { CaseStudies } from "@/components/sections/CaseStudies";
 import { CinematicSequence } from "@/components/sections/CinematicSequence";
 import { ClientLogos } from "@/components/sections/ClientLogos";
-import { WhoWeAre } from "@/components/sections/WhoWeAre";
-import { OurServices } from "@/components/sections/OurServices";
-import { CaseStudies } from "@/components/sections/CaseStudies";
-import { UpcomingEvents } from "@/components/sections/UpcomingEvents";
-import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { Blogs } from "@/components/sections/Blogs";
-import { FAQ } from "@/components/sections/FAQ";
 import { ContactUs } from "@/components/sections/ContactUs";
-import { Footer } from "@/components/layout/Footer";
+import { FAQ } from "@/components/sections/FAQ";
+import { Hero } from "@/components/sections/Hero";
+import { OurServices } from "@/components/sections/OurServices";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { UpcomingEvents } from "@/components/sections/UpcomingEvents";
+import { WhoWeAre } from "@/components/sections/WhoWeAre";
+import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { JsonLd } from "@/components/templates/ServiceDetail";
 import { HOME_FAQ_CONTENT } from "@/content/home";
 import { buildFaqJsonLd } from "@/lib";
+
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-brand-gray">
+    <main className="bg-brand-gray min-h-screen">
       <JsonLd data={buildFaqJsonLd(HOME_FAQ_CONTENT.faqs)} />
       <Header />
       <div id="home">

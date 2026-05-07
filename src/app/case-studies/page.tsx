@@ -1,12 +1,11 @@
-import type { Metadata } from "next";
+import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { Hero } from "@/components/sections/Hero";
-import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { ClientLogos } from "@/components/sections/ClientLogos";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { ContactUs } from "@/components/sections/ContactUs";
-import { Footer } from "@/components/layout/Footer";
+import { Hero } from "@/components/sections/Hero";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import {
   CASE_STUDIES_HERO,
   CASE_STUDIES_STATS,
@@ -16,11 +15,13 @@ import {
 } from "@/content/case-studies";
 import { getPageMetadata } from "@/content/pages";
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = getPageMetadata("/case-studies");
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-brand-gray">
+    <main className="bg-brand-gray min-h-screen">
       <Header />
       <Hero {...CASE_STUDIES_HERO} />
       <WhoWeAre {...CASE_STUDIES_STATS} />

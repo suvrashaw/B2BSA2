@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
@@ -11,6 +10,8 @@ import {
   SEO_FAQ,
   SEO_CONTACT,
 } from "@/content/services/detail/seo-services";
+
+import type { Metadata } from "next";
 
 export const metadata: Metadata = getPageMetadata("/services/performance-marketing/seo-services");
 

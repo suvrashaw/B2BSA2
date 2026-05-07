@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
+
 import { motion } from "framer-motion";
 import { ArrowUpRight, Calendar, MapPin } from "lucide-react";
-import Image from "next/image";
+
 import { HOME_UPCOMING_EVENTS_CONTENT, type UpcomingEventsContent } from "@/content/home";
 
 export interface UpcomingEventsProps {
@@ -25,23 +27,23 @@ export function UpcomingEvents({
   events = content.events,
 }: UpcomingEventsProps = {}) {
   return (
-    <section id="events" className="py-20 bg-brand-gray relative">
+    <section id="events" className="bg-brand-gray relative py-20">
       <div className="container mx-auto px-8">
-        <div className="flex flex-col items-start text-left mb-16">
+        <div className="mb-16 flex flex-col items-start text-left">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 text-brand-blue text-sm font-semibold tracking-wide"
+            className="bg-brand-cyan/10 border-brand-cyan/20 text-brand-blue mb-6 inline-block rounded-full border px-4 py-1.5 text-sm font-semibold tracking-wide"
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading text-4xl lg:text-5xl font-bold  leading-tight">
+          <h2 className="font-heading text-4xl leading-tight font-bold  lg:text-5xl">
             {heading}
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid gap-8 lg:grid-cols-2">
           {events.map((event, index) => (
             <motion.div
               key={event.id}
@@ -49,57 +51,57 @@ export function UpcomingEvents({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.6 }}
-              className="group relative bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl transition-shadow duration-500 flex flex-col"
+              className="group relative flex flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-sm transition-shadow duration-500 hover:shadow-2xl"
             >
-              <div className="relative h-[250px] md:h-[300px] w-full overflow-hidden">
+              <div className="relative h-[250px] w-full overflow-hidden md:h-[300px]">
                 <Image
                   src={event.image}
                   alt={event.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  className="transform object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
                 {/* Hover Reveal CTA */}
-                <div className="absolute inset-0 bg-brand-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px] z-20">
-                  <button className="bg-brand-blue text-white px-8 py-3 rounded-full font-medium shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 flex items-center gap-2">
-                    {ctaLabel} <ArrowUpRight className="w-4 h-4" />
+                <div className="bg-brand-charcoal/20 absolute inset-0 z-20 flex items-center justify-center opacity-0 backdrop-blur-[2px] transition-opacity duration-500 group-hover:opacity-100">
+                  <button className="bg-brand-blue flex translate-y-4 transform items-center gap-2 rounded-full px-8 py-3 font-medium text-white shadow-lg transition-all duration-300 group-hover:translate-y-0">
+                    {ctaLabel} <ArrowUpRight className="h-4 w-4" />
                   </button>
                 </div>
 
-                <div className="absolute bottom-6 left-6 right-6 z-10">
-                  <span className="px-3 py-1 bg-brand-blue text-white text-xs font-bold uppercase tracking-wider rounded-full mb-3 inline-block">
+                <div className="absolute right-6 bottom-6 left-6 z-10">
+                  <span className="bg-brand-blue mb-3 inline-block rounded-full px-3 py-1 text-xs font-bold tracking-wider text-white uppercase">
                     {badgeLabel}
                   </span>
-                  <h3 className="font-heading text-2xl md:text-3xl font-bold text-white leading-tight line-clamp-2">
+                  <h3 className="font-heading line-clamp-2 text-2xl leading-tight font-bold text-white md:text-3xl">
                     {event.title}
                   </h3>
                 </div>
               </div>
 
-              <div className="p-8 relative flex-1 flex flex-col justify-center">
-                <div className="grid grid-cols-2 gap-4 relative z-10">
+              <div className="relative flex flex-1 flex-col justify-center p-8">
+                <div className="relative z-10 grid grid-cols-2 gap-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-brand-gray flex items-center justify-center shrink-0">
-                      <Calendar className="w-4 h-4 text-brand-blue" />
+                    <div className="bg-brand-gray flex h-10 w-10 shrink-0 items-center justify-center rounded-full">
+                      <Calendar className="text-brand-blue h-4 w-4" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">
+                      <h4 className="mb-1 text-xs font-bold tracking-wider text-gray-400 uppercase">
                         Date
                       </h4>
                       <p className=" text-sm font-semibold">{event.date}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-brand-gray flex items-center justify-center shrink-0">
-                      <MapPin className="w-4 h-4 text-brand-cyan" />
+                    <div className="bg-brand-gray flex h-10 w-10 shrink-0 items-center justify-center rounded-full">
+                      <MapPin className="text-brand-cyan h-4 w-4" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">
+                      <h4 className="mb-1 text-xs font-bold tracking-wider text-gray-400 uppercase">
                         Location
                       </h4>
-                      <p className=" text-sm font-semibold line-clamp-2">
+                      <p className=" line-clamp-2 text-sm font-semibold">
                         {event.location}
                       </p>
                     </div>
@@ -111,8 +113,8 @@ export function UpcomingEvents({
         </div>
 
         <div className="mt-12 text-center">
-          <button className="hidden md:inline-flex items-center gap-2 text-brand-blue font-semibold hover:gap-4 transition-all duration-300">
-            {viewAllLabel} <ArrowUpRight className="w-5 h-5" />
+          <button className="text-brand-blue hidden items-center gap-2 font-semibold transition-all duration-300 hover:gap-4 md:inline-flex">
+            {viewAllLabel} <ArrowUpRight className="h-5 w-5" />
           </button>
         </div>
       </div>

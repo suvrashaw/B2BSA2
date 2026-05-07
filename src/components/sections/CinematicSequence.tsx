@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+
 import {
   motion,
   useScroll,
@@ -8,6 +9,7 @@ import {
   useMotionValueEvent,
   type MotionValue,
 } from "framer-motion";
+
 import {
   HOME_CINEMATIC_SEQUENCE_CONTENT,
   type CinematicSequenceContent,
@@ -49,16 +51,16 @@ function useCinematicFrameImages(
     let cancelled = false;
 
     for (let i = 1; i <= frameCount; i++) {
-      const img = new window.Image();
+      const img = new globalThis.Image();
       img.src = getFrameUrl(i);
-      img.onload = () => {
+      img.addEventListener('load', () => {
         if (cancelled) return;
 
         loadedCount++;
         if (loadedCount === frameCount) {
           setLoadedSignature(loadSignature);
         }
-      };
+      });
       // Important to push first to maintain exact order
       loadedImages.push(img);
     }
@@ -155,7 +157,7 @@ export function CinematicSequence({
 
   return (
     <section ref={containerRef} className="relative h-[400vh] bg-black">
-      <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center">
+      <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden">
         {/* Frame canvas */}
         <canvas ref={canvasRef} className="absolute inset-0" />
 
@@ -164,7 +166,7 @@ export function CinematicSequence({
 
         {/* Loading Indicator (Optional but good UX) */}
         {!imagesLoaded && (
-          <div className="absolute z-50 text-white/50 text-sm tracking-widest uppercase font-semibold">
+          <div className="absolute z-50 text-sm font-semibold tracking-widest text-white/50 uppercase">
             {loadingText}
           </div>
         )}

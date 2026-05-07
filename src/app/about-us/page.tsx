@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
+import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { Hero } from "@/components/sections/Hero";
-import { Timeline } from "@/components/ui/Timeline";
-import { TeamGrid } from "@/components/sections/TeamGrid";
+import { ClientLogos } from "@/components/sections/ClientLogos";
+import { ContactUs } from "@/components/sections/ContactUs";
 import { Culture } from "@/components/sections/Culture";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
-import { ClientLogos } from "@/components/sections/ClientLogos";
+import { Hero } from "@/components/sections/Hero";
+import { TeamGrid } from "@/components/sections/TeamGrid";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { ContactUs } from "@/components/sections/ContactUs";
-import { Footer } from "@/components/layout/Footer";
+import { WhoWeAre } from "@/components/sections/WhoWeAre";
+import { Timeline } from "@/components/ui/Timeline";
 import {
   ABOUT_HERO,
   ABOUT_ORIGIN_TIMELINE,
@@ -19,14 +19,15 @@ import {
   ABOUT_TESTIMONIALS,
   ABOUT_CONTACT,
 } from "@/content/about";
-import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { getPageMetadata } from "@/content/pages";
+
+import type { Metadata } from "next";
 
 export const metadata: Metadata = getPageMetadata("/about-us");
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-brand-gray">
+    <main className="bg-brand-gray min-h-screen">
       <Header />
       <Hero {...ABOUT_HERO} />
       <Timeline

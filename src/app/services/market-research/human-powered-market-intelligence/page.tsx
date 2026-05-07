@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
@@ -11,6 +10,8 @@ import {
   HPMI_FAQ,
   HPMI_CONTACT,
 } from "@/content/services/detail/human-powered-market-intelligence";
+
+import type { Metadata } from "next";
 
 export const metadata: Metadata = getPageMetadata(
   "/services/market-research/human-powered-market-intelligence"

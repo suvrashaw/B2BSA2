@@ -3,30 +3,30 @@ export const ELG_HERO = {
   eyebrow: "EVENT LEAD GENERATION",
   title: (
     <>
-      Turn Exhibition Floor <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Traffic Into Pipeline
+      Event Lead Generation Systems That <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Fill Your Enterprise Pipeline
       </span>
     </>
   ),
   description:
-    "We deploy end-to-end lead capture systems at B2B events — badge scanning, appointment booking, real-time qualification, and CRM integration — so every conversation becomes a tracked opportunity.",
+    "Most companies attend events. We engineer them — with precision lead capture systems, real-time qualification, and CRM-ready handoffs that your sales team will love.",
   image: {
     src: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=2000",
     alt: "Event lead generation at trade show",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Get a Quote",
-  secondaryCtaLabel: "See Case Studies",
-  stat: { value: "280%", label: "Avg Lead Volume Increase", icon: "TrendingUp" },
+  primaryCtaLabel: "Book a Lead Generation Strategy Session",
+  secondaryCtaLabel: "See Our Prospecting Success Stories",
+  stat: { value: "2,500+", label: "Verified SQLs Delivered", icon: "Target" },
 };
 
 export const ELG_WHY = {
-  eyebrow: "THE LEAD CAPTURE DIFFERENCE",
+  eyebrow: "THE LEAD GEN CHALLENGE",
   heading: (
     <>
-      Why Events Are Your <br />
-      <span className="text-brand-cyan">Highest-ROI Channel</span>
+      The Problem With Most <br />
+      <span className="text-brand-cyan">Event Lead Strategies</span>
     </>
   ),
   reasons: [
@@ -66,12 +66,12 @@ export const ELG_WHY = {
 };
 
 export const ELG_DELIVERABLES = {
-  eyebrow: "WHAT'S INCLUDED",
+  eyebrow: "OUR SYSTEM",
   heading: (
     <>
-      Your Complete <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Lead Capture System
+      Our Event Lead <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Generation System
       </span>
     </>
   ),
@@ -122,35 +122,35 @@ export const ELG_DELIVERABLES = {
 export const ELG_STATS = {
   heading: (
     <>
-      Event Lead Results <br />
-      <span className="text-brand-blue">by the Numbers</span>
+      Global Reach <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    "\"The difference between a great event and a mediocre one isn't the booth size — it's how many leads you leave with and how fast you follow up.\"",
+    '"We provide precision event lead generation systems across major global markets, helping enterprise brands turn event foot traffic into a qualified pipeline through real-time capture and CRM integration."',
   attribution: "— Event Strategy Team, B2B Sales Arrow",
   stats: [
     {
-      value: "280%",
-      label: "Avg Lead Volume Increase",
-      icon: "TrendingUp",
+      value: "15,000+",
+      label: "Enterprise Leads Generated",
+      icon: "Target",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "4 hrs",
-      label: "Avg Time to CRM Entry",
-      icon: "Zap",
+      value: "10+",
+      label: "Years of Experience",
+      icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
-      value: "40+",
-      label: "Events Covered Annually",
+      value: "30+",
+      label: "Countries Served",
       icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "68%",
-      label: "Avg Lead-to-Meeting Rate",
+      value: "100%",
+      label: "System Compliance",
       icon: "Users",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
@@ -247,7 +247,7 @@ export const ELG_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -293,7 +293,7 @@ export const ELG_CONTACT = {
   heading: (
     <>
       Capture More Leads <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         At Your Next Event
       </span>
     </>

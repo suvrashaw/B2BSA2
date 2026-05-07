@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
+
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
+
 import { HOME_CONTACT_CONTENT, type ContactContent } from "@/content/home";
 
 export interface ContactUsProps {
@@ -23,56 +25,56 @@ export function ContactUs({
   form = content.form,
 }: ContactUsProps = {}) {
   return (
-    <section id="contact" className="relative bg-white py-24 overflow-hidden">
+    <section id="contact" className="relative overflow-hidden bg-white py-24">
       {/* Decorative background flare */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-cyan/5 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-brand-blue/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="bg-brand-cyan/5 pointer-events-none absolute top-0 right-0 h-[800px] w-[800px] rounded-full blur-[120px]" />
+      <div className="bg-brand-blue/5 pointer-events-none absolute bottom-0 left-0 h-[800px] w-[800px] rounded-full blur-[120px]" />
 
-      <div className="container mx-auto px-8 relative z-20">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <div className="relative z-20 container mx-auto px-8">
+        <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
           {/* Left Side: Contact Info & Image */}
           <div className="flex flex-col items-start text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-sm font-semibold tracking-wide"
+              className="bg-brand-blue/10 border-brand-blue/20 text-brand-blue mb-6 inline-block rounded-full border px-4 py-1.5 text-sm font-semibold tracking-wide"
             >
               {eyebrow}
             </motion.div>
             <div className="w-full text-left">
-              <h2 className="font-heading text-4xl lg:text-6xl font-bold  leading-tight mb-8">
+              <h2 className="font-heading mb-8 text-4xl leading-tight  font-bold lg:text-6xl">
                 {heading}
               </h2>
             </div>
-            <p className="text-lg text-gray-600 mb-12 max-w-md text-left">{description}</p>
+            <p className="mb-12 max-w-md text-left text-lg text-gray-600">{description}</p>
 
             {illustration && (
               <motion.div
                 animate={{ y: [0, -15, 0] }}
                 transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                className="w-full max-w-md mt-4"
+                className="mt-4 w-full max-w-md"
               >
                 <Image
                   src={illustration.src}
                   alt={illustration.alt}
                   width={480}
                   height={360}
-                  className="w-full h-auto drop-shadow-xl"
+                  className="h-auto w-full drop-shadow-xl"
                 />
               </motion.div>
             )}
           </div>
 
           {/* Right Side: Contact Form */}
-          <div className="bg-brand-gray/50 backdrop-blur-xl border border-gray-200 p-8 lg:p-12 rounded-[2.5rem] shadow-2xl relative z-10">
+          <div className="bg-brand-gray/50 relative z-10 rounded-[2.5rem] border border-gray-200 p-8 shadow-2xl backdrop-blur-xl lg:p-12">
             <form className="space-y-6">
               <div className="grid grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-gray-600">{form.firstNameLabel}</label>
                   <input
                     type="text"
-                    className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors"
+                    className="focus:border-brand-blue w-full rounded-xl border border-gray-200 bg-white px-4 py-3 transition-colors focus:outline-none"
                     placeholder={form.firstNamePlaceholder}
                   />
                 </div>
@@ -80,7 +82,7 @@ export function ContactUs({
                   <label className="text-sm font-bold text-gray-600">{form.lastNameLabel}</label>
                   <input
                     type="text"
-                    className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors"
+                    className="focus:border-brand-blue w-full rounded-xl border border-gray-200 bg-white px-4 py-3 transition-colors focus:outline-none"
                     placeholder={form.lastNamePlaceholder}
                   />
                 </div>
@@ -90,14 +92,14 @@ export function ContactUs({
                 <label className="text-sm font-bold text-gray-600">{form.emailLabel}</label>
                 <input
                   type="email"
-                  className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors"
+                  className="focus:border-brand-blue w-full rounded-xl border border-gray-200 bg-white px-4 py-3 transition-colors focus:outline-none"
                   placeholder={form.emailPlaceholder}
                 />
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-bold text-gray-600">{form.serviceLabel}</label>
-                <select className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors appearance-none text-gray-600">
+                <select className="focus:border-brand-blue w-full appearance-none rounded-xl border border-gray-200 bg-white px-4 py-3 text-gray-600 transition-colors focus:outline-none">
                   <option value="">{form.servicePlaceholder}</option>
                   {form.serviceOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -111,17 +113,17 @@ export function ContactUs({
                 <label className="text-sm font-bold text-gray-600">{form.messageLabel}</label>
                 <textarea
                   rows={4}
-                  className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-blue transition-colors resize-none"
+                  className="focus:border-brand-blue w-full resize-none rounded-xl border border-gray-200 bg-white px-4 py-3 transition-colors focus:outline-none"
                   placeholder={form.messagePlaceholder}
                 ></textarea>
               </div>
 
               <button
                 type="button"
-                className="w-full py-4 rounded-xl bg-brand-blue text-white font-bold text-lg hover:bg-brand-blue/90 hover:shadow-[0_0_20px_rgba(30,96,145,0.4)] transition-all duration-300 flex items-center justify-center gap-2 group"
+                className="bg-brand-blue hover:bg-brand-blue/90 group flex w-full items-center justify-center gap-2 rounded-xl py-4 text-lg font-bold text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(30,96,145,0.4)]"
               >
                 {form.ctaLabel}
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </button>
             </form>
           </div>

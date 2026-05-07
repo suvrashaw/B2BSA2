@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
@@ -11,6 +10,8 @@ import {
   TSBD_FAQ,
   TSBD_CONTACT,
 } from "@/content/services/detail/trade-show-booth-design";
+
+import type { Metadata } from "next";
 
 export const metadata: Metadata = getPageMetadata(
   "/services/global-event-solutions/trade-show-booth-design"

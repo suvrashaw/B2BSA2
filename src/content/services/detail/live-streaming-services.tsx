@@ -3,30 +3,30 @@ export const LSS_HERO = {
   eyebrow: "LIVE STREAMING SERVICES",
   title: (
     <>
-      Stream Your Events to a <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Global B2B Audience
+      Live Streaming Services That Extend <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Your Event Reach Globally
       </span>
     </>
   ),
   description:
-    "We produce and broadcast professional live streams of your corporate events, product launches, and conferences — reaching thousands of qualified prospects who couldn't attend in person.",
+    "Not everyone can be in the room. We bring your event to audiences worldwide with broadcast-quality live streaming — multi-camera, multi-platform, zero latency.",
   image: {
     src: "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=2000",
     alt: "Live streaming production setup",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Get a Quote",
-  secondaryCtaLabel: "See Past Streams",
-  stat: { value: "120+", label: "Live Events Broadcast", icon: "Radio" },
+  primaryCtaLabel: "Request a Streaming Consultation",
+  secondaryCtaLabel: "Start Your Streaming Project",
+  stat: { value: "300+", label: "Live Events Broadcast", icon: "Radio" },
 };
 
 export const LSS_WHY = {
-  eyebrow: "THE STREAMING DIFFERENCE",
+  eyebrow: "REVENUE GROWTH",
   heading: (
     <>
-      Why Live Streaming <br />
-      <span className="text-brand-cyan">Multiplies Reach</span>
+      Why B2B Live Streaming <br />
+      <span className="text-brand-cyan">Is a Revenue Driver</span>
     </>
   ),
   reasons: [
@@ -66,12 +66,12 @@ export const LSS_WHY = {
 };
 
 export const LSS_DELIVERABLES = {
-  eyebrow: "WHAT'S INCLUDED",
+  eyebrow: "OUR CAPABILITIES",
   heading: (
     <>
-      Full Live Streaming <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Production Package
+      Our Live Streaming <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Capabilities
       </span>
     </>
   ),
@@ -124,35 +124,35 @@ export const LSS_DELIVERABLES = {
 export const LSS_STATS = {
   heading: (
     <>
-      Live Streaming <br />
-      <span className="text-brand-blue">Reach Numbers</span>
+      Global Reach <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    '"A professionally produced live stream is one of the most cost-effective ways to generate qualified pipeline at scale. One event. Global reach. Instant credibility."',
+    '"We provide broadcast-quality live streaming for enterprise brands and events, delivering multi-platform, multi-camera streams that extend reach to audiences worldwide across 40+ markets."',
   attribution: "— Broadcast Production Team, B2B Sales Arrow",
   stats: [
     {
-      value: "120+",
+      value: "500+",
       label: "Live Events Broadcast",
       icon: "Radio",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "10×",
-      label: "Avg Audience Multiplier",
+      value: "10+",
+      label: "Years of Experience",
       icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "40+",
-      label: "Countries Reached Live",
+      label: "Countries Served",
       icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "99.9%",
-      label: "Stream Uptime Rate",
+      value: "100%",
+      label: "Stream Uptime",
       icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
@@ -249,7 +249,7 @@ export const LSS_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -295,7 +295,7 @@ export const LSS_CONTACT = {
   heading: (
     <>
       Take Your Event <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Global
       </span>
     </>

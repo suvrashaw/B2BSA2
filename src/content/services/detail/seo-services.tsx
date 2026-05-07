@@ -1,32 +1,32 @@
 export const SEO_HERO = {
   showPreloader: false,
-  eyebrow: "SEO SERVICES",
+  eyebrow: "B2B SEO SERVICES",
   title: (
     <>
-      Rank Where Your <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Enterprise Buyers Search
+      SEO Services That Build <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Organic Pipeline
       </span>
     </>
   ),
   description:
-    "We engineer data-driven B2B SEO strategies that build sustainable organic search authority, capture high-intent enterprise buyers, and drive compounding pipeline growth.",
+    "We engineer search visibility for complex B2B sales cycles — from technical foundation to content authority — so your ideal enterprise buyers find you before they find your competitors.",
   image: {
     src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2000",
     alt: "SEO analytics dashboard",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Get a Free SEO Audit",
-  secondaryCtaLabel: "View SEO Case Studies",
+  primaryCtaLabel: "Request an SEO Audit",
+  secondaryCtaLabel: "Start Your SEO Project",
   stat: { value: "3.2×", label: "Avg Organic Traffic Growth", icon: "TrendingUp" },
 };
 
 export const SEO_WHY = {
-  eyebrow: "THE SEO DIFFERENCE",
+  eyebrow: "STRATEGIC SEARCH",
   heading: (
     <>
-      Why B2B SEO <br />
-      <span className="text-brand-cyan">Compounds ROI</span>
+      B2B SEO Is Not <br />
+      <span className="text-brand-cyan">the Same as B2C SEO</span>
     </>
   ),
   reasons: [
@@ -66,12 +66,12 @@ export const SEO_WHY = {
 };
 
 export const SEO_DELIVERABLES = {
-  eyebrow: "WHAT'S INCLUDED",
+  eyebrow: "OUR SEO SERVICES",
   heading: (
     <>
-      Full B2B SEO <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Engagement Package
+      Enterprise B2B <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        SEO Solutions
       </span>
     </>
   ),
@@ -124,12 +124,12 @@ export const SEO_DELIVERABLES = {
 export const SEO_STATS = {
   heading: (
     <>
-      SEO Results <br />
-      <span className="text-brand-blue">by the Numbers</span>
+      Global Reach <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    '"B2B SEO done right is not a cost centre — it\'s a compounding asset. Every piece of content we create continues to attract decision-makers years from now."',
+    '"We provide enterprise B2B SEO services, delivering technical audits, keyword strategy, and authority link building optimized for pipeline across 40+ global markets."',
   attribution: "— SEO Strategy Team, B2B Sales Arrow",
   stats: [
     {
@@ -139,21 +139,21 @@ export const SEO_STATS = {
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "#1",
-      label: "Rankings for Client Terms",
-      icon: "Search",
+      value: "10+",
+      label: "Years of Experience",
+      icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "40+",
-      label: "Industries Served",
+      label: "Countries Served",
       icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "6mo",
-      label: "Avg Time to Page 1",
-      icon: "Zap",
+      value: "100%",
+      label: "Production Accuracy",
+      icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
   ],
@@ -249,7 +249,7 @@ export const SEO_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -295,7 +295,7 @@ export const SEO_CONTACT = {
   heading: (
     <>
       Start Ranking for <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         What Matters
       </span>
     </>

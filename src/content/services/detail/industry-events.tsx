@@ -3,30 +3,30 @@ export const IE_HERO = {
   eyebrow: "INDUSTRY EVENTS",
   title: (
     <>
-      Be Present Where <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Decisions Are Made
+      Dominate the Industry Events That <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Drive Your Market
       </span>
     </>
   ),
   description:
-    "We identify, plan, and manage your presence at the most valuable B2B industry events globally — so your brand is in the room when buyers are ready to commit.",
+    "From GITEX to Web Summit — we identify the right events for your brand, build your on-site presence, and ensure every interaction converts to pipeline.",
   image: {
     src: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=2000",
     alt: "Industry event conference floor",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Get a Quote",
-  secondaryCtaLabel: "See Case Studies",
-  stat: { value: "200+", label: "Industry Events Covered", icon: "Globe2" },
+  primaryCtaLabel: "Request an Event Strategy Consultation",
+  secondaryCtaLabel: "View Our Global Event Calendar",
+  stat: { value: "300+", label: "Industry Events Managed", icon: "Globe2" },
 };
 
 export const IE_WHY = {
-  eyebrow: "WHY INDUSTRY EVENTS WORK",
+  eyebrow: "WHY EVENTS WORK",
   heading: (
     <>
-      The Strategic Value <br />
-      <span className="text-brand-cyan">of Being in the Room</span>
+      Why the Right Industry Events Are <br />
+      <span className="text-brand-cyan">Your Best Sales Channel</span>
     </>
   ),
   reasons: [
@@ -66,11 +66,11 @@ export const IE_WHY = {
 };
 
 export const IE_DELIVERABLES = {
-  eyebrow: "WHAT'S INCLUDED",
+  eyebrow: "FULL-SERVICE MANAGEMENT",
   heading: (
     <>
-      Full-Service <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      Full-Service Industry <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Event Management
       </span>
     </>
@@ -124,36 +124,36 @@ export const IE_DELIVERABLES = {
 export const IE_STATS = {
   heading: (
     <>
-      Industry Event Results <br />
-      <span className="text-brand-blue">by the Numbers</span>
+      Global Reach <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    '"The best B2B sales conversations don\'t start on LinkedIn. They start at an industry event, over a coffee, in a 10-minute hallway conversation."',
+    '"We identify, plan, and manage your presence at the world\'s most valuable B2B conferences, ensuring your enterprise brand maximizes ROI through strategic placement and high-fidelity execution."',
   attribution: "— Events Strategy Team, B2B Sales Arrow",
   stats: [
     {
-      value: "200+",
-      label: "Events Covered Globally",
+      value: "300+",
+      label: "Industry Events Managed",
       icon: "Globe2",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "45+",
-      label: "Countries Represented",
-      icon: "MapPin",
+      value: "10+",
+      label: "Years of Experience",
+      icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
-      value: "3.8x",
-      label: "Avg Pipeline Multiplier",
-      icon: "TrendingUp",
+      value: "40+",
+      label: "Countries Served",
+      icon: "MapPin",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "85%",
-      label: "Client Event Attendance Rate",
-      icon: "Users",
+      value: "100%",
+      label: "Strategic Placement",
+      icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
   ],
@@ -249,7 +249,7 @@ export const IE_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -295,7 +295,7 @@ export const IE_CONTACT = {
   heading: (
     <>
       Build Your <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Event Calendar
       </span>
     </>

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { ServiceHub } from "@/components/templates/ServiceHub";
 import { getPageMetadata } from "@/content/pages";
 import {
@@ -12,6 +11,8 @@ import {
   MR_FAQ,
   MR_CONTACT,
 } from "@/content/services/market-research";
+
+import type { Metadata } from "next";
 
 export const metadata: Metadata = getPageMetadata("/services/market-research");
 

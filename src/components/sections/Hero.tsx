@@ -1,8 +1,10 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+
 import Image from "next/image";
+
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Globe } from "lucide-react";
 
 export interface HeroProps {
@@ -26,6 +28,7 @@ export interface HeroProps {
     label: string;
     icon?: string;
   } | null;
+  motionPhrases?: { id: string; text: string; color: string }[];
 }
 
 export function Hero({
@@ -54,11 +57,11 @@ export function Hero({
   const resolvedBadge = eyebrow ?? badge;
 
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-24 overflow-hidden bg-white">
+    <section className="relative flex min-h-[90vh] items-center overflow-hidden bg-white pt-24">
       {/* Background Gradients */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-gray/20 pointer-events-none" />
+      <div className="bg-brand-gray/20 pointer-events-none absolute top-0 right-0 h-full w-1/2" />
 
-      <div className="container mx-auto px-8 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="relative z-10 container mx-auto grid items-center gap-12 px-8 lg:grid-cols-2">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -66,44 +69,44 @@ export function Hero({
           className="max-w-2xl"
         >
           {resolvedBadge && (
-            <div className="inline-block mb-6 px-4 py-1.5 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-sm font-semibold tracking-wide uppercase">
+            <div className="bg-brand-blue/10 border-brand-blue/20 text-brand-blue mb-6 inline-block rounded-full border px-4 py-1.5 text-sm font-semibold tracking-wide uppercase">
               {resolvedBadge}
             </div>
           )}
 
-          <h1 className="font-heading text-5xl lg:text-7xl font-bold leading-[1.1]  mb-6">
+          <h1 className="font-heading mb-6 text-5xl leading-[1.1] font-bold  lg:text-7xl">
             {title}
           </h1>
 
-          <p className="text-xl /70 mb-10 max-w-lg leading-relaxed">
+          <p className="/70 mb-10 max-w-lg text-xl leading-relaxed">
             {resolvedSubtitle}
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
             {primaryCtaLabel ? (
-              <button className="px-8 py-4 rounded bg-brand-blue text-white font-medium hover:bg-brand-blue/90 hover:shadow-[0_0_20px_rgba(30,96,145,0.4)] transition-all duration-300 flex items-center gap-2 group">
+              <button className="bg-brand-blue hover:bg-brand-blue/90 group flex items-center gap-2 rounded px-8 py-4 font-medium text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(30,96,145,0.4)]">
                 {primaryCtaLabel}
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </button>
             ) : null}
             {secondaryCtaLabel ? (
-              <button className="px-8 py-4 rounded border border-gray-200  font-medium hover:border-brand-blue hover:text-brand-blue transition-colors duration-300">
+              <button className="hover:border-brand-blue hover:text-brand-blue rounded border border-gray-200  px-8 py-4 font-medium transition-colors duration-300">
                 {secondaryCtaLabel}
               </button>
             ) : null}
           </div>
         </motion.div>
 
-        <div className="relative h-[600px] w-full hidden lg:block">
+        <div className="relative hidden h-[600px] w-full lg:block">
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             style={{ y: y1 }}
-            className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl border-8 border-white"
+            className="absolute inset-0 overflow-hidden rounded-2xl border-8 border-white shadow-2xl"
           >
             <Image src={imageSrc} alt={imageAlt} fill className="object-cover" priority />
-            <div className="absolute inset-0 bg-brand-blue/5" />
+            <div className="bg-brand-blue/5 absolute inset-0" />
 
             {/* Floating stat card */}
             {stat ? (
@@ -111,17 +114,17 @@ export function Hero({
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
-                className="absolute bottom-12 left-[-40px] bg-white p-8 rounded-xl shadow-2xl border border-gray-100 backdrop-blur-md"
+                className="absolute bottom-12 left-[-40px] rounded-xl border border-gray-100 bg-white p-8 shadow-2xl backdrop-blur-md"
               >
                 <div className="flex items-center gap-6">
-                  <div className="w-14 h-14 rounded-full bg-brand-blue/10 flex items-center justify-center">
-                    <Globe className="w-8 h-8 text-brand-blue" />
+                  <div className="bg-brand-blue/10 flex h-14 w-14 items-center justify-center rounded-full">
+                    <Globe className="text-brand-blue h-8 w-8" />
                   </div>
                   <div>
-                    <div className="text-3xl font-bold font-heading ">
+                    <div className="font-heading text-3xl font-bold ">
                       {stat.value}
                     </div>
-                    <div className="text-sm font-bold text-gray-400 uppercase tracking-widest">
+                    <div className="text-sm font-bold tracking-widest text-gray-400 uppercase">
                       {stat.label}
                     </div>
                   </div>

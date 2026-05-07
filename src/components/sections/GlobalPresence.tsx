@@ -1,8 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+
 import dynamic from "next/dynamic";
+
 import { motion, useInView } from "framer-motion";
+
 import { WhisperText } from "@/components/ui/WhisperText";
 
 // Dynamically import Globe to avoid SSR issues
@@ -40,18 +43,18 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
   return (
     <section
       ref={containerRef}
-      className="py-12 bg-brand-white  relative overflow-hidden transition-colors duration-500"
+      className="bg-brand-white relative  overflow-hidden py-12 transition-colors duration-500"
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(75,192,217,0.1)_0%,transparent_70%)]" />
 
-      <div className="container mx-auto px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div className="relative z-10 container mx-auto grid grid-cols-1 gap-16 px-8 lg:grid-cols-2">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex flex-col items-start text-left max-w-2xl"
+          className="flex max-w-2xl flex-col items-start text-left"
         >
-          <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 text-brand-cyan text-sm font-semibold tracking-wide uppercase">
+          <div className="bg-brand-cyan/10 border-brand-cyan/20 text-brand-cyan mb-6 inline-block rounded-full border px-4 py-1.5 text-sm font-semibold tracking-wide uppercase">
             Global Presence
           </div>
 
@@ -59,10 +62,10 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
             text={data.title}
             highlights={[data.title.split(" ")[0] || ""]}
             highlightColor="blue"
-            className="font-heading text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-8  transition-colors duration-500"
+            className="font-heading mb-8 text-4xl leading-[1.1] font-bold transition-colors duration-500  md:text-5xl lg:text-7xl"
           />
 
-          <p className="text-lg md:text-xl /70 leading-relaxed mb-10 transition-colors duration-500 font-bold uppercase tracking-widest">
+          <p className="/70 mb-10 text-lg leading-relaxed font-bold tracking-widest uppercase transition-colors duration-500 md:text-xl">
             {data.description}
           </p>
         </motion.div>
@@ -71,9 +74,9 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1, delay: 0.2 }}
-          className="relative h-[500px] lg:h-[850px] w-full flex items-center justify-center cursor-move lg:-translate-x-12"
+          className="relative flex h-[500px] w-full cursor-move items-center justify-center lg:h-[850px] lg:-translate-x-12"
         >
-          <div className="absolute inset-0 w-full h-full">
+          <div className="absolute inset-0 h-full w-full">
             <Globe
               ref={globeRef}
               onGlobeReady={() => setGlobeReady(true)}

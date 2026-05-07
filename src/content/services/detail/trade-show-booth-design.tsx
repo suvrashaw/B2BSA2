@@ -3,21 +3,21 @@ export const TSBD_HERO = {
   eyebrow: "TRADE SHOW BOOTH DESIGN",
   title: (
     <>
-      Booths That Stop <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Traffic and Capture Leads
+      Trade Show Booth Design That <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Converts Traffic Into Pipeline
       </span>
     </>
   ),
   description:
-    "We design architectural, immersive exhibition environments that are engineered to dominate trade show floors and convert footfall into qualified pipeline.",
+    "We don't build booths. We architect immersive conversion environments — designed to stop attendees, start conversations, and capture qualified enterprise leads.",
   image: {
     src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000",
     alt: "Trade show booth design",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Get a Quote",
-  secondaryCtaLabel: "See Our Designs",
+  primaryCtaLabel: "Request a Custom Design Quote",
+  secondaryCtaLabel: "View Booth Portfolio",
   stat: { value: "500+", label: "Booth Designs Delivered", icon: "Presentation" },
 };
 
@@ -25,8 +25,8 @@ export const TSBD_WHY = {
   eyebrow: "THE DESIGN DIFFERENCE",
   heading: (
     <>
-      Why Our Booths <br />
-      <span className="text-brand-cyan">Outperform</span>
+      Why Standard Booth Builders Are <br />
+      <span className="text-brand-cyan">Costing You Leads</span>
     </>
   ),
   reasons: [
@@ -69,9 +69,9 @@ export const TSBD_DELIVERABLES = {
   eyebrow: "WHAT'S INCLUDED",
   heading: (
     <>
-      Everything in Your <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Booth Package
+      Our Trade Show Booth <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Design Services
       </span>
     </>
   ),
@@ -123,12 +123,12 @@ export const TSBD_DELIVERABLES = {
 export const TSBD_STATS = {
   heading: (
     <>
-      Design Results <br />
-      <span className="text-brand-blue">by the Numbers</span>
+      Global Presence <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    "\"A great booth doesn't just look good. It's a conversion machine designed to move enterprise buyers from curious to committed.\"",
+    '"We provide award-winning trade show booth design for enterprise brands across major global markets, creating immersive, conversion-engineered spaces that dominate any trade show floor."',
   attribution: "— Booth Design Team, B2B Sales Arrow",
   stats: [
     {
@@ -138,20 +138,20 @@ export const TSBD_STATS = {
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "+340%",
-      label: "Avg Lead Capture Lift",
+      value: "10+",
+      label: "Years of Experience",
       icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "40+",
-      label: "Countries Deployed",
+      label: "Countries Served",
       icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "98%",
-      label: "On-Time Delivery",
+      value: "100%",
+      label: "Design Compliance",
       icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
@@ -248,7 +248,7 @@ export const TSBD_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -294,7 +294,7 @@ export const TSBD_CONTACT = {
   heading: (
     <>
       Design Your <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Winning Booth
       </span>
     </>

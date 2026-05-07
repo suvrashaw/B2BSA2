@@ -3,35 +3,42 @@ export const GES_HERO = {
   eyebrow: "GLOBAL EVENT SOLUTIONS",
   title: (
     <>
-      Exhibition Strategy <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        at Global Scale
+      Global Event Solutions That <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Command Every Floor
       </span>
     </>
   ),
   description:
-    "From booth design and custom fabrication to on-floor lead capture — we architect the complete trade show presence that converts prospects into pipeline.",
+    "From GITEX Dubai to CES Las Vegas — we design, build, and execute immersive event experiences that generate enterprise pipeline across every major market.",
   image: {
     src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000",
     alt: "Global trade show and exhibition floor",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Get a Quote",
-  secondaryCtaLabel: "See Case Studies",
+  primaryCtaLabel: "Request a Strategy Session",
+  secondaryCtaLabel: "View Our Event Portfolio",
   stat: {
     value: "250+",
-    label: "Events Managed",
+    label: "Events Executed",
     icon: "Globe2",
   },
+  motionPhrases: [
+    { id: "presence", text: "Presence", color: "#f4fbff" },
+    { id: "impact", text: "Impact", color: "#a8e7f8" },
+    { id: "visibility", text: "Visibility", color: "#d2f5ff" },
+    { id: "authority", text: "Authority", color: "#7fd8f2" },
+    { id: "pipeline", text: "Pipeline", color: "#dff8ff" },
+  ],
 };
 
 export const GES_SERVICES = {
-  eyebrow: "OUR EVENT SERVICES",
+  eyebrow: "END-TO-END SOLUTIONS",
   heading: (
     <>
-      Everything You Need <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        to Dominate the Floor
+      Global Event Solutions <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Under One Roof
       </span>
     </>
   ),
@@ -104,47 +111,47 @@ export const GES_SERVICES = {
 export const GES_STATS = {
   heading: (
     <>
-      Event Excellence <br />
-      <span className="text-brand-blue">by the Numbers</span>
+      Global Reach <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    '"We have designed and delivered over 500 booth environments across 40+ countries. Every one was built around a single metric: qualified leads per square foot."',
+    '"We bring strategy, booth design, production, logistics, lead capture, and post-event reporting under one accountable team. Fewer gaps, tighter accountability."',
   attribution: "— Events Strategy Team, B2B Sales Arrow",
   stats: [
     {
       value: "250+",
-      label: "Events Managed",
+      label: "Events Executed",
       icon: "Globe2",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "500+",
-      label: "Booth Designs Delivered",
-      icon: "Presentation",
+      value: "$1.2B",
+      label: "Pipeline Influenced",
+      icon: "BarChart3",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
-    },
-    {
-      value: "280+",
-      label: "Avg Leads per Event",
-      icon: "Users",
-      bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
       value: "40+",
       label: "Countries Served",
       icon: "Target",
+      bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
+    },
+    {
+      value: "15,000+",
+      label: "Enterprise Leads",
+      icon: "Users",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
   ],
 };
 
 export const GES_WHY = {
-  eyebrow: "THE B2BSA DIFFERENCE",
+  eyebrow: "THE ROI OF LIVE EVENTS",
   heading: (
     <>
-      Why Enterprise Leaders <br />
-      <span className="text-brand-cyan">Choose Us for Events</span>
+      The $1.2B Reason B2B Enterprises <br />
+      <span className="text-brand-cyan">Prioritize Live Events</span>
     </>
   ),
   reasons: [
@@ -312,7 +319,7 @@ export const GES_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -358,7 +365,7 @@ export const GES_CONTACT = {
   heading: (
     <>
       Plan Your Next <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Event Presence
       </span>
     </>

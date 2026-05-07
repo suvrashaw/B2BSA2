@@ -3,30 +3,30 @@ export const VES_HERO = {
   eyebrow: "VIDEO EDITING SERVICES",
   title: (
     <>
-      Raw Footage Into <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        High-Converting Assets
+      Professional Video Editing That <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Elevate Your Brand Content
       </span>
     </>
   ),
   description:
-    "We transform your raw video footage into polished, brand-aligned content optimised for enterprise B2B distribution — from LinkedIn thought leadership cuts to sales enablement videos.",
+    "Raw footage has no ROI. Our post-production team transforms your event footage, interviews, and product demos into polished, conversion-ready video assets.",
   image: {
     src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2000",
     alt: "Professional video editing suite",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Get a Quote",
-  secondaryCtaLabel: "See Sample Edits",
+  primaryCtaLabel: "Request an Editing Consultation",
+  secondaryCtaLabel: "Start Your Editing Project",
   stat: { value: "1,200+", label: "Videos Edited & Delivered", icon: "Scissors" },
 };
 
 export const VES_WHY = {
-  eyebrow: "THE EDITING DIFFERENCE",
+  eyebrow: "SPEED & SCALE",
   heading: (
     <>
-      Why Professional Editing <br />
-      <span className="text-brand-cyan">Changes Everything</span>
+      Fast Turnaround. <br />
+      <span className="text-brand-cyan">Enterprise-Scale Volume.</span>
     </>
   ),
   reasons: [
@@ -66,12 +66,12 @@ export const VES_WHY = {
 };
 
 export const VES_DELIVERABLES = {
-  eyebrow: "WHAT'S INCLUDED",
+  eyebrow: "OUR SERVICES",
   heading: (
     <>
-      Full-Service Video <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Editing Package
+      Video Editing & <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Post-Production
       </span>
     </>
   ),
@@ -124,35 +124,35 @@ export const VES_DELIVERABLES = {
 export const VES_STATS = {
   heading: (
     <>
-      Editing Volume <br />
-      <span className="text-brand-blue">& Quality Numbers</span>
+      Global Reach <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    '"Raw footage is just data. Professional editing turns it into a brand asset that builds trust, communicates value, and converts enterprise buyers."',
+    '"We provide professional video editing and post-production for enterprise brands, delivering polished, conversion-ready video assets from raw event footage, interviews, and product demos across 40+ global markets."',
   attribution: "— Post-Production Lead, B2B Sales Arrow",
   stats: [
     {
-      value: "1,200+",
+      value: "1,500+",
       label: "Videos Edited & Delivered",
       icon: "Video",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "48hr",
-      label: "Standard Turnaround",
+      value: "10+",
+      label: "Years of Experience",
       icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "40+",
-      label: "Countries, Clients Served",
+      label: "Countries Served",
       icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "99%",
-      label: "First-Pass Approval Rate",
+      value: "100%",
+      label: "Production Accuracy",
       icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
@@ -249,7 +249,7 @@ export const VES_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -295,7 +295,7 @@ export const VES_CONTACT = {
   heading: (
     <>
       Transform Your <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Raw Footage
       </span>
     </>

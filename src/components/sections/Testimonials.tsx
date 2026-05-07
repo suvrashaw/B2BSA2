@@ -1,9 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
+
+import Image from "next/image";
+
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
-import Image from "next/image";
+
 import { HOME_TESTIMONIALS_CONTENT, type TestimonialsContent } from "@/content/home";
 
 export interface TestimonialsProps {
@@ -73,28 +76,28 @@ export function Testimonials({
     useCoverflowCarousel(testimonials.length, initialIndex, autoplayInterval);
 
   return (
-    <section className="py-20 bg-[#F8F9FA] relative overflow-hidden">
+    <section className="relative overflow-hidden bg-[#F8F9FA] py-20">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#1E6091]/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#1E6091]/5 blur-[100px]" />
 
-      <div className="container mx-auto px-8 relative z-10">
-        <div className="flex flex-col items-start text-left mb-24">
+      <div className="relative z-10 container mx-auto px-8">
+        <div className="mb-24 flex flex-col items-start text-left">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-1.5 mb-6 rounded-full bg-[#1E6091]/10 border border-[#1E6091]/20 text-[#1E6091] text-sm font-semibold tracking-wide"
+            className="mb-6 inline-block rounded-full border border-[#1E6091]/20 bg-[#1E6091]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#1E6091]"
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="font-heading mb-6 text-4xl font-bold text-gray-900 lg:text-5xl">
             {heading}
           </h2>
         </div>
 
         {/* 3D Coverflow Container */}
         <div
-          className="relative h-[450px] sm:h-[400px] flex justify-center items-center w-full"
+          className="relative flex h-[450px] w-full items-center justify-center sm:h-[400px]"
           style={{ perspective: "1000px" }}
         >
           {testimonials.map((testimonial, index) => {
@@ -104,8 +107,8 @@ export function Testimonials({
             const isVisible = absPos <= 2;
 
             // Apple Coverflow Animation Variables
-            const rotateY = isCenter ? 0 : pos > 0 ? -25 : 25;
-            const x = isCenter ? 0 : pos > 0 ? `${65 * absPos}%` : `-${65 * absPos}%`;
+            const rotateY = isCenter ? 0 : (pos > 0 ? -25 : 25);
+            const x = isCenter ? 0 : (pos > 0 ? `${65 * absPos}%` : `-${65 * absPos}%`);
             const z = isCenter ? 100 : -100 * absPos;
             const scale = isCenter ? 1 : 1 - 0.1 * absPos;
             const opacity = isCenter ? 1 : Math.max(0, 0.5 - 0.3 * (absPos - 1));
@@ -134,13 +137,13 @@ export function Testimonials({
                   transformStyle: "preserve-3d",
                   transformOrigin: "center",
                 }}
-                className={`absolute w-full max-w-[320px] sm:max-w-[400px] bg-white rounded-[20px] shadow-[0_12px_40px_rgba(0,0,0,0.08)](0,0,0,0.4)] border border-gray-100 p-8 sm:p-10 cursor-pointer will-change-transform ${
-                  !isVisible ? "pointer-events-none" : ""
+                className={`shadow-[0_12px_40px_rgba(0,0,0,0.08)](0,0,0,0.4)] absolute w-full max-w-[320px] cursor-pointer rounded-[20px] border border-gray-100 bg-white p-8 will-change-transform sm:max-w-[400px] sm:p-10 ${
+                  isVisible ? "" : "pointer-events-none"
                 }`}
               >
-                <div className="flex flex-col h-full justify-between gap-6 relative">
+                <div className="relative flex h-full flex-col justify-between gap-6">
                   <div className="flex items-center gap-4">
-                    <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-[#1E6091]">
+                    <div className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-[#1E6091]">
                       <Image
                         src={testimonial.image}
                         alt={testimonial.name}
@@ -150,31 +153,31 @@ export function Testimonials({
                       />
                     </div>
                     <div>
-                      <p className="font-heading font-bold text-lg text-gray-900 leading-tight">
+                      <p className="font-heading text-lg leading-tight font-bold text-gray-900">
                         {testimonial.name}
                       </p>
-                      <div className="flex gap-1 mt-1">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="w-3.5 h-3.5 fill-[#1E6091] text-[#1E6091]" />
+                      <div className="mt-1 flex gap-1">
+                        {[...new Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="h-3.5 w-3.5 fill-[#1E6091] text-[#1E6091]" />
                         ))}
                       </div>
                     </div>
                   </div>
 
-                  <p className="text-gray-600 text-[15px] leading-relaxed relative z-10">
+                  <p className="relative z-10 text-[15px] leading-relaxed text-gray-600">
                     &quot;{testimonial.quote}&quot;
                   </p>
 
-                  <div className="pt-5 border-t border-gray-100">
+                  <div className="border-t border-gray-100 pt-5">
                     <p className="text-sm font-semibold text-[#1E6091]">
                       {testimonial.designation}
                     </p>
-                    <p className="text-xs text-gray-500 font-medium">{testimonial.company}</p>
+                    <p className="text-xs font-medium text-gray-500">{testimonial.company}</p>
                   </div>
 
                   {/* Subtle interaction overlay for side cards */}
                   {!isCenter && (
-                    <div className="absolute inset-0 rounded-[20px] bg-white/5 hover:bg-transparent transition-colors duration-300" />
+                    <div className="absolute inset-0 rounded-[20px] bg-white/5 transition-colors duration-300 hover:bg-transparent" />
                   )}
                 </div>
               </motion.div>
@@ -183,13 +186,13 @@ export function Testimonials({
         </div>
 
         {/* Custom Pagination & Navigation */}
-        <div className="flex justify-center items-center gap-6 mt-16 relative z-50">
+        <div className="relative z-50 mt-16 flex items-center justify-center gap-6">
           <button
             onClick={handlePrev}
-            className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-[#1E6091] hover:text-white hover:border-[#1E6091]:bg-[#4BC0D9]:text-[#1a1c1e] transition-all duration-300 shadow-sm"
+            className="hover:border-[#1E6091]:bg-[#4BC0D9]:text-[#1a1c1e] flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 text-gray-600 shadow-sm transition-all duration-300 hover:bg-[#1E6091] hover:text-white"
             aria-label="Previous testimonial"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="h-5 w-5" />
           </button>
 
           <div className="flex gap-2">
@@ -207,10 +210,10 @@ export function Testimonials({
 
           <button
             onClick={handleNext}
-            className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-[#1E6091] hover:text-white hover:border-[#1E6091]:bg-[#4BC0D9]:text-[#1a1c1e] transition-all duration-300 shadow-sm"
+            className="hover:border-[#1E6091]:bg-[#4BC0D9]:text-[#1a1c1e] flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 text-gray-600 shadow-sm transition-all duration-300 hover:bg-[#1E6091] hover:text-white"
             aria-label="Next testimonial"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="h-5 w-5" />
           </button>
         </div>
       </div>

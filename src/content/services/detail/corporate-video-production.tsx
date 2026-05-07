@@ -3,30 +3,30 @@ export const CVP_HERO = {
   eyebrow: "CORPORATE VIDEO PRODUCTION",
   title: (
     <>
-      Brand Films That <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Command Enterprise Trust
+      Corporate Video Production That <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Commands Enterprise Attention
       </span>
     </>
   ),
   description:
-    "We produce cinematic corporate video content — from brand films and thought leadership series to product demos and investor presentations — that positions your brand as the market leader.",
+    "We produce brand films, product videos, and executive content that build authority, earn trust, and accelerate enterprise sales cycles.",
   image: {
     src: "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=2000",
     alt: "Corporate video production studio",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Get a Quote",
-  secondaryCtaLabel: "View Showreel",
-  stat: { value: "180+", label: "Corporate Films Produced", icon: "Film" },
+  primaryCtaLabel: "Request a Corporate Video Consultation",
+  secondaryCtaLabel: "Start Your Video Project",
+  stat: { value: "300+", label: "Corporate Films Produced", icon: "Film" },
 };
 
 export const CVP_WHY = {
-  eyebrow: "THE PRODUCTION DIFFERENCE",
+  eyebrow: "SALES ACCELERATION",
   heading: (
     <>
-      Why Corporate Video <br />
-      <span className="text-brand-cyan">Accelerates Pipeline</span>
+      How Corporate Video Accelerates <br />
+      <span className="text-brand-cyan">Your Sales Cycle</span>
     </>
   ),
   reasons: [
@@ -66,12 +66,12 @@ export const CVP_WHY = {
 };
 
 export const CVP_DELIVERABLES = {
-  eyebrow: "WHAT'S INCLUDED",
+  eyebrow: "WHAT WE PRODUCE",
   heading: (
     <>
-      Full Corporate Video <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Production Suite
+      Corporate Video Content <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        We Produce
       </span>
     </>
   ),
@@ -123,35 +123,35 @@ export const CVP_DELIVERABLES = {
 export const CVP_STATS = {
   heading: (
     <>
-      Corporate Video <br />
-      <span className="text-brand-blue">Impact Numbers</span>
+      Global Reach <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    '"A brand film is the highest-leverage sales asset a B2B company can own. It does the explaining, the trust-building, and the emotional persuasion — at scale."',
+    '"We provide cinematic corporate video production for enterprise brands, delivering brand films, product videos, and executive interviews that build authority through high-fidelity execution across 40+ markets."',
   attribution: "— Production Director, B2B Sales Arrow",
   stats: [
     {
-      value: "180+",
-      label: "Corporate Films Produced",
+      value: "500+",
+      label: "Videos Produced",
       icon: "Film",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "3×",
-      label: "Avg Conversion vs Brochure",
+      value: "10+",
+      label: "Years of Experience",
       icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "40+",
-      label: "Countries Filmed In",
+      label: "Countries Served",
       icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "98%",
-      label: "Client Satisfaction Rate",
+      value: "100%",
+      label: "Production Accuracy",
       icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
@@ -248,7 +248,7 @@ export const CVP_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -294,7 +294,7 @@ export const CVP_CONTACT = {
   heading: (
     <>
       Commission Your <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Brand Film
       </span>
     </>

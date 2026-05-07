@@ -216,24 +216,24 @@ export interface ContactContent {
 }
 
 export const HOME_HERO_CONTENT: HomeHeroContent = {
-  eyebrow: "",
+  eyebrow: "GLOBAL CAPABILITY. STRATEGIC GROWTH.",
   title: (
     <>
-      B2B Global Event Solutions & <br />
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-cyan">
-        Trade Show Booth Design
+      The Strategic Growth Partner for <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Global B2B Enterprises
       </span>
     </>
   ),
   description:
-    "Trusted across 30+ countries, we deliver custom trade show booth design, active on-ground prospecting, and end-to-end event execution that turns exhibitions into a qualified B2B sales pipeline.",
+    "We architect immersive event experiences, high-fidelity media production, and precision performance marketing that drives $1.2B+ in measurable pipeline for the world's leading tech brands.",
   image: {
     src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000",
-    alt: "Corporate Event Strategy",
+    alt: "Global B2B enterprise growth strategy",
     loaderAlt: "Loader",
   },
-  primaryCtaLabel: "Get a Custom Proposal",
-  secondaryCtaLabel: "See Our Work",
+  primaryCtaLabel: "Request a Consultation",
+  secondaryCtaLabel: "Explore Our Work",
   stat: {
     value: "30+",
     label: "Countries Served",
@@ -348,8 +348,8 @@ export const HOME_CLIENT_LOGOS: ClientLogoItem[] = [
 export const HOME_WHO_WE_ARE_CONTENT: WhoWeAreContent = {
   heading: (
     <>
-      Your Trusted Global <br />
-      <span className="text-brand-blue">B2B Event Partner</span>
+      Proven Results. <br />
+      <span className="text-brand-blue">Global Scale.</span>
     </>
   ),
   quote:
@@ -384,12 +384,12 @@ export const HOME_WHO_WE_ARE_CONTENT: WhoWeAreContent = {
 };
 
 export const HOME_SERVICES_CONTENT: HomeServicesContent = {
-  eyebrow: "OUR CAPABILITIES",
+  eyebrow: "OUR CORE PILLARS",
   heading: (
     <>
-      Our B2B Event Services & <br />
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-cyan">
-        Trade Show Solutions
+      Our Core Pillars of <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Enterprise Growth
       </span>
     </>
   ),
@@ -493,36 +493,51 @@ export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
   eyebrow: "PROVEN EXECUTION",
   heading: (
     <>
-      Impact That Drives <br />
-      <span className="text-brand-blue">Market Valuation</span>
+      Proven Global Event Solutions: <br />
+      <span className="text-brand-blue">Enterprise Success Stories</span>
     </>
   ),
   ctaLabel: "Full Study",
   viewAllLabel: "View All Work",
   items: [
     {
-      id: "tech-summit",
-      client: "Global Tech Summit",
-      title: "Redefining the Enterprise Exhibition Experience",
-      challenge: "Low attendee engagement in a 10,000 sq ft booth space.",
-      solution: "Interactive structural design with live AR product demos.",
-      metric: "+340%",
-      metricLabel: "Lead Capture Rate",
-      icon: "BarChart3",
+      id: "adobe-summit",
+      client: "Adobe Summit",
+      title: "Sustainable Design & Lead Generation",
+      challenge: "Sustainable booth design and high-volume lead capture.",
+      solution:
+        "We delivered a custom eco-friendly island booth and active on-site prospecting to secure 70+ SQLs and engage 60 unique billion-dollar enterprise accounts.",
+      metric: "70+",
+      metricLabel: "SQLs Secured",
+      icon: "Leaf",
       image:
         "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1200",
     },
     {
-      id: "finserve",
-      client: "FinServe SaaS",
-      title: "Scaling Pipeline Through Precision Media",
-      challenge: "High customer acquisition cost across generic channels.",
-      solution: "Targeted video thought-leadership campaign.",
-      metric: "4.2x",
-      metricLabel: "ROI in 6 Months",
-      icon: "Target",
+      id: "world-aviation",
+      client: "World Aviation Festival",
+      title: "Doubling Executive Pipeline",
+      challenge: "High-speed outreach for executive meetings.",
+      solution:
+        "Through rapid pre-event outreach and on-ground prospecting, we secured 60 executive meetings—doubling the initial target within a high-speed, 10-day campaign.",
+      metric: "2x",
+      metricLabel: "Pipeline Target",
+      icon: "Plane",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+    },
+    {
+      id: "sibos",
+      client: "SIBOS",
+      title: "High-Impact Outreach & Interactive Exhibits",
+      challenge: "Personalized global outreach and visitor engagement.",
+      solution:
+        "We created hyper-personalized global outreach and interactive booth design for two financial leaders, capturing 270+ leads and 64 strategic executive meetings.",
+      metric: "270+",
+      metricLabel: "Leads Captured",
+      icon: "BarChart3",
+      image:
+        "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };
@@ -531,81 +546,97 @@ export const HOME_UPCOMING_EVENTS_CONTENT: UpcomingEventsContent = {
   eyebrow: "GLOBAL PRESENCE",
   heading: (
     <>
-      Meet Us Where <br />
-      <span className="text-brand-blue">Innovation Happens</span>
+      Upcoming Trade Shows & <br />
+      <span className="text-brand-blue">Global Industry Events</span>
     </>
   ),
   badgeLabel: "Upcoming",
-  ctaLabel: "Register Interest",
+  ctaLabel: "Meet Us There!",
   viewAllLabel: "View All Events",
   events: [
     {
-      id: "gitex-2026",
-      title: "GITEX Technology Week 2026",
-      date: "Oct 12 - 16, 2026",
-      location: "Dubai World Trade Centre",
+      id: "adobe-summit",
+      title: "Adobe Summit",
+      date: "2026",
+      location: "Global",
       image:
         "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
     },
     {
-      id: "mwc-2026",
-      title: "Mobile World Congress",
-      date: "Feb 23 - 26, 2026",
-      location: "Fira Gran Via, Barcelona",
+      id: "nvidia-gtc",
+      title: "NVIDIA GTC 2026",
+      date: "2026",
+      location: "USA",
       image:
         "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=1200",
     },
     {
-      id: "aws-re-invent",
-      title: "AWS re:Invent 2026",
-      date: "Nov 30 - Dec 4, 2026",
-      location: "Las Vegas, Nevada",
+      id: "sap-sapphire",
+      title: "SAP Sapphire 2026",
+      date: "2026",
+      location: "Madrid & Orlando",
       image:
         "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
+    },
+    {
+      id: "hannover-messe",
+      title: "Hannover Messe",
+      date: "2026",
+      location: "Germany",
+      image:
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };
 
 export const HOME_WHY_CHOOSE_US_CONTENT: WhyChooseUsContent = {
-  eyebrow: "THE B2B DIFFERENCE",
+  eyebrow: "THE B2BSA ADVANTAGE",
   heading: (
     <>
-      Why Enterprise Leaders <br />
-      <span className="text-brand-cyan">Choose Us</span>
+      Why the World&apos;s Leading Brands <br />
+      <span className="text-brand-cyan">Choose B2B Sales Arrow</span>
     </>
   ),
   reasons: [
     {
-      id: "proven",
-      title: "Proven Execution",
+      id: "revenue-driven",
+      title: "Revenue-Driven Execution",
       description:
-        "Decades of combined experience delivering high-stakes enterprise projects without fail.",
+        "We deliberately engineer every event strategy directly from your commercial goals to drive measurable pipeline outcomes.",
       image:
         "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
     },
     {
-      id: "global",
-      title: "Global Reach",
+      id: "zero-coordination",
+      title: "Zero Coordination Tax",
       description:
-        "Established networks and infrastructure across 40+ countries to scale your operations instantly.",
+        "We consolidate booth design, media production, and marketing under one accountable roof to eliminate vendor gaps.",
       image:
         "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
     },
     {
-      id: "strategic",
-      title: "Strategic Creativity",
+      id: "seamless-delivery",
+      title: "Seamless Worldwide Delivery",
       description:
-        "We don't just make it look good. We engineer design systems that drive measurable conversion.",
+        "We leverage deep regional intelligence across three continents to ensure flawless corporate experiences around the globe.",
       image:
         "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200",
     },
     {
-      id: "tech",
-      title: "Technology-Led Delivery",
+      id: "active-prospecting",
+      title: "Proprietary Active Prospecting",
       description:
-        "Leveraging cutting-edge tools and data architectures to ensure precision and performance.",
+        "We deploy trained sales specialists directly onto the active event floor to hunt high-value enterprise decision-makers.",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+    },
+    {
+      id: "industry-expertise",
+      title: "Deep Industry Expertise",
+      description:
+        "We possess extensive domain expertise across major global sectors so we already understand your specific language.",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };
@@ -614,8 +645,8 @@ export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
   eyebrow: "CLIENT SUCCESS",
   heading: (
     <>
-      Trusted by Industry <br />
-      <span className="text-[#1E6091]">Visionaries</span>
+      What Our <br />
+      <span className="text-[#1E6091]">Clients Say?</span>
     </>
   ),
   autoplayInterval: 3000,
@@ -623,58 +654,36 @@ export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
   testimonials: [
     {
       id: 1,
-      name: "Sarah Jenkins",
-      designation: "Chief Marketing Officer",
-      company: "Nexus Technologies",
+      name: "[Client Name]",
+      designation: "[Job Title]",
+      company: "[Enterprise Brand]",
       rating: 5,
       quote:
-        "B2B Sales Arrow transformed our exhibition presence. Their architectural approach to booth design and lead capture systems increased our qualified pipeline by 340% at GITEX.",
+        '"Their team built an incredible sustainable booth that perfectly captured our global brand identity this year."',
       image:
         "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
     },
     {
       id: 2,
-      name: "Michael Chen",
-      designation: "VP of Global Sales",
-      company: "Aura Systems",
+      name: "[Client Name]",
+      designation: "[Job Title]",
+      company: "[Enterprise Brand]",
       rating: 5,
       quote:
-        "The strategic media production and targeted lead generation strategies deployed by the team were instrumental in helping us penetrate the European market 6 months ahead of schedule.",
+        '"Their active prospecting team navigated the event floor and delivered fifty highly qualified sales leads daily."',
       image:
         "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400",
     },
     {
       id: 3,
-      name: "Elena Rodriguez",
-      designation: "Director of Brand Activation",
-      company: "Vortex Labs",
+      name: "[Client Name]",
+      designation: "[Job Title]",
+      company: "[Enterprise Brand]",
       rating: 5,
       quote:
-        "Unlike typical agencies, they understand the deep nuances of enterprise B2B sales cycles. Every piece of collateral and physical asset they produced was highly conversion-focused.",
+        '"They curated an exclusive networking experiences and provided premium custom giveaways that kept our attendees fully engaged."',
       image:
         "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400",
-    },
-    {
-      id: 4,
-      name: "David Alaba",
-      designation: "Head of Growth",
-      company: "Synapse Networks",
-      rating: 5,
-      quote:
-        "Their data-driven insights and innovative web designs created an entirely new paradigm for how we engage our enterprise prospects. A flawless execution.",
-      image:
-        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400",
-    },
-    {
-      id: 5,
-      name: "Sophia Martinez",
-      designation: "VP Marketing",
-      company: "Elevate Logistics",
-      rating: 5,
-      quote:
-        "A flawless execution from strategy to deployment. The ROI on the campaigns they structured for us broke all our previous quarter records.",
-      image:
-        "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=400",
     },
   ],
 };
@@ -683,32 +692,32 @@ export const HOME_BLOGS_CONTENT: BlogsContent = {
   eyebrow: "INSIGHTS & INTELLIGENCE",
   heading: (
     <>
-      Thought Leadership for <br />
-      <span className="text-brand-primary">Modern Growth</span>
+      Expert Strategies to Maximize Your <br />
+      <span className="text-brand-primary">Global Event Solutions</span>
     </>
   ),
   ctaLabel: "Explore Intelligence",
   blogs: [
     {
       id: 1,
-      title: "The Future of Experiential B2B Marketing",
-      category: "Strategy",
+      title: "8 Must-Ask Questions Before Hiring a Trade Show Booth Design Company",
+      category: "Design",
       date: "Oct 12, 2025",
       image:
         "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=800",
     },
     {
       id: 2,
-      title: "Why Standard Trade Show Booths Are Failing",
-      category: "Design",
+      title: "5 Trade Show Booth Design Setup Trends Reshaping Exhibits in 2026",
+      category: "Trends",
       date: "Sep 28, 2025",
       image:
         "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
     },
     {
       id: 3,
-      title: "Architecting a High-Converting Media Strategy",
-      category: "Media",
+      title: "6 Must-Have Features for Effective B2B Booth Design",
+      category: "Features",
       date: "Sep 15, 2025",
       image:
         "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=800",
@@ -720,45 +729,63 @@ export const HOME_FAQ_CONTENT: FAQContent = {
   eyebrow: "INTELLIGENCE & CLARITY",
   heading: (
     <>
-      Frequently Asked{" "}
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-cyan">
+      Frequently Asked <br />
+      <span className="from-brand-blue to-brand-cyan bg-gradient-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
   ),
   description:
-    "Hover over any card to reveal how we operate at the highest levels of enterprise B2B.",
+    "Everything you need to know about our global event solutions and how we drive pipeline for enterprise brands.",
   scrollAmount: 340,
   faqs: [
     {
       id: 1,
-      question: "How does your strategic exhibition design differ from standard booth builders?",
+      question: "What services do you offer as an event partner?",
       answer:
-        "We treat exhibition space as an experiential marketing funnel. While standard builders focus on walls and graphics, we architect environments that control traffic flow and create immersive storytelling.",
+        "We provide end-to-end solutions, from custom booth design and floor prospecting to digital marketing and market research, all engineered to drive measurable pipeline growth.",
     },
     {
       id: 2,
-      question: "What is your average timeline for an enterprise market activation?",
+      question: "Do you manage exhibitions outside of the United States?",
       answer:
-        "For comprehensive multi-channel activations involving physical presence and digital campaigns, our typical sprint is 12-16 weeks including strategic alignment and fabrication.",
+        "Yes. We deliver global event solutions across 30+ countries, leveraging regional expertise to ensure a consistent, high-impact brand presence anywhere you exhibit.",
     },
     {
       id: 3,
-      question: "Do you offer global deployment capabilities?",
+      question: "Can you build custom exhibits for our specific industry?",
       answer:
-        "Yes. With a network spanning 40+ countries, we seamlessly execute complex, high-fidelity physical and digital campaigns across EMEA, APAC, and the Americas.",
+        "Our team crafts premium booth designs tailored to your industry, fusing architectural creativity with sales psychology to convert floor traffic into qualified enterprise leads.",
     },
     {
       id: 4,
-      question: "How do you measure the ROI of physical media events?",
+      question: "How do you guarantee high-quality leads from an exhibition?",
       answer:
-        "We integrate custom digital touchpoints throughout our environments. By tracking engagements via NFC and CRM-synced apps, we provide a unified dashboard of ROI.",
+        "We deploy trained sales specialists to the floor to engage senior delegates, qualify them via BANT criteria, and deliver verified SQLs directly to your team.",
     },
     {
       id: 5,
-      question: "Can you integrate our existing digital assets into the booth?",
+      question: "Do you help with attendee engagement and networking?",
       answer:
-        "Absolutely. Our technology-led delivery ensures your current software, videos, and AR/VR assets are seamlessly embedded into the architecture of the space.",
+        "We elevate your brand through curated experiences, including exclusive VIP dinners, premium corporate giveaways, and interactive booth activities designed for deep engagement.",
+    },
+    {
+      id: 6,
+      question: "Do you handle both strategic planning and physical build?",
+      answer:
+        "We offer turnkey solutions that integrate commercial strategy with structural design and media production, managing all logistics so your team can focus on closing deals.",
+    },
+    {
+      id: 7,
+      question: "How do you drive traffic to our booth before events?",
+      answer:
+        "We execute targeted pre-event marketing using personalized email sequences and social media to fill your calendar with high-intent meetings before the show begins.",
+    },
+    {
+      id: 8,
+      question: "Can you help us repurpose the event for digital marketing?",
+      answer:
+        "Our media team captures broadcast-grade video and 3D animations on-site, transforming your event into a year’s worth of digital content to fuel your ongoing sales pipeline.",
     },
   ],
 };
@@ -767,14 +794,14 @@ export const HOME_CONTACT_CONTENT: ContactContent = {
   eyebrow: "START THE CONVERSATION",
   heading: (
     <>
-      Ready to Scale Your <br />
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-cyan">
-        Enterprise?
+      Ready to Build Your <br />
+      <span className="from-brand-blue to-brand-cyan bg-gradient-to-r bg-clip-text text-transparent">
+        Global Event Strategy?
       </span>
     </>
   ),
   description:
-    "Book a strategic consultation with our growth architects to discuss your next exhibition or digital campaign.",
+    "Partner with B2B Sales Arrow to design high-impact trade show booths and execute data-driven event marketing strategies that generate qualified leads and pipeline.",
   illustration: {
     src: "/undraw_contact-us_s4jn.svg",
     alt: "Contact Us",

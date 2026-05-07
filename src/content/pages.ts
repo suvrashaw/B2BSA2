@@ -97,9 +97,9 @@ export const pages: PageContent[] = [
       "FAQ",
       "CTA Banner",
     ],
-    metaTitle: "Global Event Solutions for Enterprise Brands",
+    metaTitle: "Global Event Solutions for Enterprise Brands | B2B Sales Arrow",
     metaDescription:
-      "End-to-end global event solutions and B2B event solutions for enterprise brands - booth design, lead capture, and on-ground execution across 40+ countries.",
+      "B2B Sales Arrow delivers end-to-end global event solutions — from trade show booth design to enterprise lead generation — across 40+ countries. Request a consultation.",
     focusKeyphrase: "global event solutions",
     secondaryKeywords: [
       "B2B event solutions",
@@ -435,9 +435,9 @@ export const pages: PageContent[] = [
       "FAQ",
       "CTA",
     ],
-    metaTitle: "Custom Trade Show Booth Design",
+    metaTitle: "Custom Trade Show Booth Design | B2B Sales Arrow",
     metaDescription:
-      "Trade show booth design, custom trade show booths, and exhibition booth design for enterprise brands that demand immersive spaces and qualified pipeline.",
+      "Award-winning trade show booth design for enterprise brands. Immersive, conversion-engineered spaces that dominate any trade show floor. Get a free design consult.",
     focusKeyphrase: "trade show booth design",
     secondaryKeywords: [
       "custom trade show booth",
@@ -719,7 +719,7 @@ export const pages: PageContent[] = [
         heading: "Booth Designs That Dominated the Floor",
         rawMarkdown:
           "### **Booth Designs That Dominated the Floor**\n\n*\\[Which case studies to be used?\\]*",
-        editorialNotes: ["\\[Which case studies to be used?\\]"],
+        editorialNotes: [String.raw`\[Which case studies to be used?\]`],
         blocks: [
           {
             type: "heading",
@@ -779,7 +779,7 @@ export const pages: PageContent[] = [
         heading: "500+ Booth Designs Delivered Across 40 Countries",
         rawMarkdown:
           "### **500+ Booth Designs Delivered Across 40 Countries**\n\nHigh-traffic events do not reward average design. Our booth work is reviewed through practical outcomes: attendee dwell time, meeting quality, demo engagement, lead capture rate, and brand recall. Whether you need a single flagship booth or a reusable exhibition system, the design must support commercial momentum.\n\n*\\[Which testimonials to be used?\\]*",
-        editorialNotes: ["\\[Which testimonials to be used?\\]"],
+        editorialNotes: [String.raw`\[Which testimonials to be used?\]`],
         blocks: [
           {
             type: "heading",
@@ -889,8 +889,8 @@ export const pages: PageContent[] = [
     ],
     internalLinks: [],
     editorialNotes: [
-      "\\[Which case studies to be used?\\]",
-      "\\[Which testimonials to be used?\\]",
+      String.raw`\[Which case studies to be used?\]`,
+      String.raw`\[Which testimonials to be used?\]`,
     ],
   },
   {
@@ -907,9 +907,9 @@ export const pages: PageContent[] = [
       "FAQ",
       "CTA Banner",
     ],
-    metaTitle: "Trade Show Lead Generation & Event Lead Capture",
+    metaTitle: "B2B Event Lead Generation Services | B2B Sales Arrow",
     metaDescription:
-      "Trade show lead generation, exhibitor lead capture, and post-event lead conversion services - qualified pipeline from show floor to CRM.",
+      "Turn event foot traffic into a qualified pipeline. B2B Sales Arrow's precision lead generation systems capture, score, and route enterprise leads in real time. Talk to us.",
     focusKeyphrase: "trade show lead generation",
     secondaryKeywords: [
       "trade show lead capture",
@@ -1246,9 +1246,9 @@ export const pages: PageContent[] = [
       "Social Proof + Upcoming Events",
       "CTA Banner",
     ],
-    metaTitle: "Industry Events Strategy & Execution",
+    metaTitle: "Industry Events Strategy & Execution | B2B Sales Arrow",
     metaDescription:
-      "Plan, design, and execute high-ROI participation at B2B industry events - from corporate event management to on-ground execution across global markets.",
+      "Maximize ROI at the world's biggest B2B industry events. B2B Sales Arrow handles booth design, lead generation, and full on-site execution at 40+ global events.",
     focusKeyphrase: "corporate event management",
     secondaryKeywords: [
       "corporate event solutions",
@@ -1535,7 +1535,7 @@ export const pages: PageContent[] = [
         heading: "Events We're At — Join Us",
         rawMarkdown:
           "### **Events We're At — Join Us**\n\n*\\[Need input on upcoming events\\]*\n\n**CTA:** Register Interest",
-        editorialNotes: ["\\[Need input on upcoming events\\]"],
+        editorialNotes: [String.raw`\[Need input on upcoming events\]`],
         blocks: [
           {
             type: "heading",
@@ -1590,7 +1590,7 @@ export const pages: PageContent[] = [
       },
     ],
     internalLinks: [],
-    editorialNotes: ["\\[Need input on upcoming events\\]"],
+    editorialNotes: [String.raw`\[Need input on upcoming events\]`],
   },
   {
     pageNumber: 5,
@@ -1604,9 +1604,9 @@ export const pages: PageContent[] = [
       "Case Study",
       "CTA Banner",
     ],
-    metaTitle: "Custom B2B Event Production & Strategy",
+    metaTitle: "Custom B2B Event Experiences | B2B Sales Arrow",
     metaDescription:
-      "Custom event solutions for B2B brands - executive roundtables, hosted buyer programs, client summits, product launches, and proprietary event production.",
+      "Beyond the trade show floor. We architect proprietary custom events — from executive roundtables to flagship conferences — that position your brand as a market leader.",
     focusKeyphrase: "custom event solutions",
     secondaryKeywords: [
       "corporate event solutions company",
@@ -1877,7 +1877,7 @@ export const pages: PageContent[] = [
         heading: "Custom Events Built for Senior Audiences",
         rawMarkdown:
           "### **Custom Events Built for Senior Audiences**\n\nSenior buyers protect their time. That is why every invitation, agenda, room design, speaker moment, and follow-up asset must feel intentional. We create events that are worth attending and commercially useful after the room clears.\n\n*\\[Which case studies to be added?\\]*",
-        editorialNotes: ["\\[Which case studies to be added?\\]"],
+        editorialNotes: [String.raw`\[Which case studies to be added?\]`],
         blocks: [
           {
             type: "heading",
@@ -1938,7 +1938,7 @@ export const pages: PageContent[] = [
       },
     ],
     internalLinks: [],
-    editorialNotes: ["\\[Which case studies to be added?\\]"],
+    editorialNotes: [String.raw`\[Which case studies to be added?\]`],
   },
   {
     pageNumber: 6,
@@ -1946,9 +1946,9 @@ export const pages: PageContent[] = [
     url: "/services/global-event-solutions/event-booth-rental",
     navigationGroup: "Global Event Solutions",
     requiredSections: ["Hero", "Why Rent", "Rental Inventory", "What’s Included", "Process", "CTA"],
-    metaTitle: "Trade Show Booth Rental & Display Rental",
+    metaTitle: "Premium Trade Show Booth Rental | B2B Sales Arrow",
     metaDescription:
-      "Trade show booth rental and trade show display booth rental options - brand-configurable, globally deployable, and fast to market.",
+      "Deploy high-fidelity trade show presence without the long-term capital expense. Our premium booth rental inventory is available globally with full on-site support.",
     focusKeyphrase: "trade show booth rental",
     secondaryKeywords: [
       "trade show booth rentals",
@@ -2361,9 +2361,9 @@ export const pages: PageContent[] = [
       "FAQ",
       "CTA Banner",
     ],
-    metaTitle: "Trade Show Booth Builder & Custom Fabrication",
+    metaTitle: "Enterprise Trade Show Booth Builder | B2B Sales Arrow",
     metaDescription:
-      "Trade show booth builder, exhibition stand builder, and custom exhibit booth fabrication for enterprise brands - concept to installation globally.",
+      "Global fabrication and production for custom exhibition stands. We are the trade show booth builder trusted by enterprise teams for GITEX, CES, and major global shows.",
     focusKeyphrase: "trade show booth builder",
     secondaryKeywords: [
       "exhibition stand builder",
@@ -2678,7 +2678,7 @@ export const pages: PageContent[] = [
         title: "Portfolio",
         heading: "Booths We’ve Built",
         rawMarkdown: "### **Booths We’ve Built**\n\n*\\[Images\\]*",
-        editorialNotes: ["\\[Images\\]"],
+        editorialNotes: [String.raw`\[Images\]`],
         blocks: [
           {
             type: "heading",
@@ -2779,7 +2779,7 @@ export const pages: PageContent[] = [
       },
     ],
     internalLinks: [],
-    editorialNotes: ["\\[Images\\]"],
+    editorialNotes: [String.raw`\[Images\]`],
   },
   {
     pageNumber: 8,
@@ -2794,9 +2794,9 @@ export const pages: PageContent[] = [
       "Applications",
       "CTA Banner",
     ],
-    metaTitle: "Modular & Portable Trade Show Booth Displays",
+    metaTitle: "Modular & Portable Trade Show Booths | B2B Sales Arrow",
     metaDescription:
-      "Modular booth systems and portable trade show booth displays for enterprise teams - reusable, brandconsistent, and globally deployable.",
+      "Scalable, high-impact modular booths designed for easy global deployment. Premium aesthetics with the flexibility of a portable exhibition system. Request a quote.",
     focusKeyphrase: "modular booth",
     secondaryKeywords: [
       "portable trade show booth displays",
@@ -3142,9 +3142,9 @@ export const pages: PageContent[] = [
       "Tech & Production Specs",
       "CTA Banner",
     ],
-    metaTitle: "B2B Media Production & Video Production Company",
+    metaTitle: "B2B Media Production Services | B2B Sales Arrow",
     metaDescription:
-      "B2B video production company offering corporate video production, event video, video editing services, live streaming, and brand content for enterprise teams.",
+      "Cinematic B2B media production for enterprise brands — event video, corporate content, video editing, and live streaming. Build authority with high-fidelity content. Talk to us.",
     focusKeyphrase: "video production company",
     secondaryKeywords: [
       "video production services",
@@ -3380,7 +3380,7 @@ export const pages: PageContent[] = [
         title: "Portfolio Highlight",
         heading: "Recent Production Work",
         rawMarkdown: "### **Recent Production Work**\n\n*\\[Which ones to be added?\\]*",
-        editorialNotes: ["\\[Which ones to be added?\\]"],
+        editorialNotes: [String.raw`\[Which ones to be added?\]`],
         blocks: [
           {
             type: "heading",
@@ -3505,7 +3505,7 @@ export const pages: PageContent[] = [
         sourceSection: "Services Grid",
       },
     ],
-    editorialNotes: ["\\[Which ones to be added?\\]"],
+    editorialNotes: [String.raw`\[Which ones to be added?\]`],
   },
   {
     pageNumber: 10,
@@ -3513,9 +3513,9 @@ export const pages: PageContent[] = [
     url: "/services/media-production/event-video-production",
     navigationGroup: "Media Production",
     requiredSections: ["Hero", "What We Produce", "Why It Matters", "Process", "CTA Banner"],
-    metaTitle: "Event Video Production Company for Trade Shows",
+    metaTitle: "B2B Event Video Production Services | B2B Sales Arrow",
     metaDescription:
-      "Event video production company for trade shows, conferences, testimonials, speaker coverage, and post-event marketing assets.",
+      "Transform your live events into high-fidelity brand assets. We provide turnkey event video production, highlight reels, and executive interviews at 40+ global locations.",
     focusKeyphrase: "event video production company",
     secondaryKeywords: [
       "trade show video production",
@@ -3818,9 +3818,9 @@ export const pages: PageContent[] = [
     url: "/services/media-production/corporate-video-production",
     navigationGroup: "Media Production",
     requiredSections: ["Hero", "Video Types", "Production Quality", "ROI Section", "CTA Banner"],
-    metaTitle: "Corporate Video Production for Enterprise Brands",
+    metaTitle: "Cinematic Corporate Video Production | B2B Sales Arrow",
     metaDescription:
-      "Corporate video production solutions for enterprise brands - brand films, product videos, executive interviews, investor content, and B2B sales assets.",
+      "Enterprise-grade corporate video production that builds trust and drives conversion. From brand films to product explainers, we tell stories that command executive attention.",
     focusKeyphrase: "corporate video production solutions",
     secondaryKeywords: [
       "video production company",
@@ -4073,9 +4073,9 @@ export const pages: PageContent[] = [
     url: "/services/media-production/video-editing-services",
     navigationGroup: "Media Production",
     requiredSections: ["Hero", "Services", "Turnaround & Scale", "Use Cases", "CTA Banner"],
-    metaTitle: "Professional Video Editing Services for B2B",
+    metaTitle: "Premium B2B Video Editing Services | B2B Sales Arrow",
     metaDescription:
-      "Professional video editing services for B2B brands - color grading, motion graphics, captions, cut-downs, and enterprise post-production.",
+      "Turn raw footage into polished growth assets. Our premium video editing services include color grading, sound design, and multi-platform optimization for B2B enterprise brands.",
     focusKeyphrase: "video editing services",
     secondaryKeywords: [
       "professional video editing",
@@ -4377,9 +4377,9 @@ export const pages: PageContent[] = [
     url: "/services/media-production/live-streaming-services",
     navigationGroup: "Media Production",
     requiredSections: ["Hero", "Capabilities", "Use Cases", "Hybrid Events", "CTA Banner"],
-    metaTitle: "B2B Live Streaming & Hybrid Event Solutions",
+    metaTitle: "B2B Live Streaming Services for Events & Conferences | B2B Sales Arrow",
     metaDescription:
-      "Corporate live streaming and hybrid event solutions - multi-camera production, platform management, recording, and global support for B2B events.",
+      "Broadcast-quality live streaming for corporate events, trade shows, and hybrid conferences. Multi-platform, multi-camera, global. Enquire about your next event.",
     focusKeyphrase: "hybrid event solutions company",
     secondaryKeywords: [
       "virtual event solutions company",
@@ -4691,9 +4691,9 @@ export const pages: PageContent[] = [
       "Results",
       "CTA Banner",
     ],
-    metaTitle: "B2B Digital Marketing Agency & Performance Marketing",
+    metaTitle: "B2B Performance Marketing Services | B2B Sales Arrow",
     metaDescription:
-      "B2B digital marketing agency delivering performance marketing across SEO, paid advertising, LinkedIn Ads, and pipeline reporting for enterprise brands.",
+      "Scale your enterprise pipeline with high-fidelity B2B performance marketing. We combine search intent, paid media, and attribution to drive measurable growth.",
     focusKeyphrase: "B2B digital marketing agency",
     secondaryKeywords: [
       "digital marketing agency",
@@ -5030,9 +5030,9 @@ export const pages: PageContent[] = [
       "FAQ",
       "CTA Banner",
     ],
-    metaTitle: "B2B SEO Services & SEO Agency for Enterprise",
+    metaTitle: "Enterprise B2B SEO Services | B2B Sales Arrow",
     metaDescription:
-      "B2B SEO services, technical SEO audit services, keyword strategy, content architecture, and authority building for enterprise growth.",
+      "Command the search results that matter. Our B2B SEO services focus on high-intent enterprise keywords, technical excellence, and strategic authority building.",
     focusKeyphrase: "B2B SEO services",
     secondaryKeywords: [
       "SEO agency",
@@ -5285,7 +5285,7 @@ export const pages: PageContent[] = [
         heading: "SEO Results That Drive Revenue",
         rawMarkdown:
           "### **SEO Results That Drive Revenue**\n\n*\\[Which case studies to be added?\\]*",
-        editorialNotes: ["\\[Which case studies to be added?\\]"],
+        editorialNotes: [String.raw`\[Which case studies to be added?\]`],
         blocks: [
           {
             type: "heading",
@@ -5391,7 +5391,7 @@ export const pages: PageContent[] = [
       },
     ],
     internalLinks: [],
-    editorialNotes: ["\\[Which case studies to be added?\\]"],
+    editorialNotes: [String.raw`\[Which case studies to be added?\]`],
   },
   {
     pageNumber: 16,
@@ -5399,9 +5399,9 @@ export const pages: PageContent[] = [
     url: "/services/performance-marketing/paid-advertising",
     navigationGroup: "Performance Marketing",
     requiredSections: ["Hero", "Channels", "Our Approach", "Results", "CTA Banner"],
-    metaTitle: "B2B Paid Advertising & PPC Agency",
+    metaTitle: "B2B Google Ads Management | B2B Sales Arrow",
     metaDescription:
-      "B2B paid advertising and PPC agency management across search, display, programmatic, retargeting, and conversion-focused enterprise campaigns.",
+      "Precision-targeted Google Ads for enterprise B2B brands. We optimize for pipeline value, not just clicks, ensuring your budget reaches the right executive decision-makers.",
     focusKeyphrase: "B2B paid advertising",
     secondaryKeywords: ["PPC agency", "PPC", "paid search for B2B", "digital marketing agency"],
     seoInternal: {
@@ -5697,9 +5697,9 @@ export const pages: PageContent[] = [
       "Results",
       "CTA Banner",
     ],
-    metaTitle: "LinkedIn Ads for B2B Lead Generation",
+    metaTitle: "LinkedIn Ads for B2B Lead Generation | B2B Sales Arrow",
     metaDescription:
-      "LinkedIn Ads for B2B lead generation - Sponsored Content, Lead Gen Forms, ABM campaigns, and pipeline attribution for enterprise brands.",
+      "Expert LinkedIn Ads management for enterprise B2B brands. Sponsored content, Lead Gen Forms, InMail, and ABM campaigns that generate qualified pipeline. Get started today.",
     focusKeyphrase: "LinkedIn Ads for B2B",
     secondaryKeywords: [
       "B2B LinkedIn advertising",
@@ -5971,7 +5971,7 @@ export const pages: PageContent[] = [
         heading: "LinkedIn Ad Results We’ve Delivered",
         rawMarkdown:
           "### **LinkedIn Ad Results We’ve Delivered**\n\n*\\[Which case studies to be added?\\]*",
-        editorialNotes: ["\\[Which case studies to be added?\\]"],
+        editorialNotes: [String.raw`\[Which case studies to be added?\]`],
         blocks: [
           {
             type: "heading",
@@ -6028,7 +6028,7 @@ export const pages: PageContent[] = [
       },
     ],
     internalLinks: [],
-    editorialNotes: ["\\[Which case studies to be added?\\]"],
+    editorialNotes: [String.raw`\[Which case studies to be added?\]`],
   },
   {
     pageNumber: 18,
@@ -6044,9 +6044,9 @@ export const pages: PageContent[] = [
       "Results",
       "CTA Banner",
     ],
-    metaTitle: "Sales Qualified Lead Generation for Enterprise B2B",
+    metaTitle: "B2B Lead Generation & Sales Qualified Leads | B2B Sales Arrow",
     metaDescription:
-      "Sales qualified lead generation for enterprise B2B - verified decision-makers, intent signals, active prospecting, and CRM-ready prospects.",
+      "Scale your sales pipeline with high-fidelity B2B lead generation. We provide turnkey SQL programs, appointment setting, and account-based sales development.",
     focusKeyphrase: "sales qualified lead generation",
     secondaryKeywords: [
       "B2B SQL generation",
@@ -6318,7 +6318,7 @@ export const pages: PageContent[] = [
         heading: "SQL Programs We've Delivered",
         rawMarkdown:
           "### **SQL Programs We've Delivered**\n\n*\\[Which case studies to be added?\\]*",
-        editorialNotes: ["\\[Which case studies to be added?\\]"],
+        editorialNotes: [String.raw`\[Which case studies to be added?\]`],
         blocks: [
           {
             type: "heading",
@@ -6370,7 +6370,7 @@ export const pages: PageContent[] = [
       },
     ],
     internalLinks: [],
-    editorialNotes: ["\\[Which case studies to be added?\\]"],
+    editorialNotes: [String.raw`\[Which case studies to be added?\]`],
   },
   {
     pageNumber: 19,
@@ -6385,9 +6385,9 @@ export const pages: PageContent[] = [
       "Use Cases",
       "CTA Banner",
     ],
-    metaTitle: "B2B Market Research Agency & Intelligence Services",
+    metaTitle: "B2B Market Research & Intelligence | B2B Sales Arrow",
     metaDescription:
-      "B2B market research agency combining data validation, data augmentation, brand research, and human market intelligence for enterprise growth decisions.",
+      "Human-powered B2B market research — data augmentation, data validation, and market intelligence for enterprise growth decisions. Request a research consultation today.",
     focusKeyphrase: "B2B market research agency",
     secondaryKeywords: [
       "market research",
@@ -6767,9 +6767,9 @@ export const pages: PageContent[] = [
       "Why Human-Verified",
       "CTA Banner",
     ],
-    metaTitle: "B2B Data Augmentation Services & CRM Enrichment",
+    metaTitle: "B2B Data Augmentation Services | B2B Sales Arrow",
     metaDescription:
-      "Data augmentation services for B2B - verified firmographic, technographic, contact, and account enrichment to transform your CRM into a revenue asset.",
+      "Enrich your CRM with high-fidelity B2B data. We provide verified firmographic, technographic, and intent data to improve your sales targeting and personalization.",
     focusKeyphrase: "data augmentation services",
     secondaryKeywords: [
       "CRM data enrichment",
@@ -7036,9 +7036,9 @@ export const pages: PageContent[] = [
     url: "/services/market-research/data-validation",
     navigationGroup: "Market Research",
     requiredSections: ["Hero", "What We Validate", "Why It Matters", "Process", "CTA Banner"],
-    metaTitle: "B2B Data Validation & Verification Services",
+    metaTitle: "B2B Data Validation & Verification Services | B2B Sales Arrow",
     metaDescription:
-      "Data validation services for B2B - contact verification, email list validation, CRM data cleansing, and deduplication for enterprise sales teams.",
+      "Clean, verified B2B contact and account data — email validation, deduplication, and CRM hygiene that improves deliverability and sales efficiency.",
     focusKeyphrase: "data validation services",
     secondaryKeywords: [
       "contact data verification",
@@ -7347,9 +7347,9 @@ export const pages: PageContent[] = [
       "Deliverable Formats",
       "CTA Banner",
     ],
-    metaTitle: "Human-Powered B2B Market Intelligence",
+    metaTitle: "Human-Powered B2B Market Intelligence | B2B Sales Arrow",
     metaDescription:
-      "Human-powered market intelligence for B2B teams - competitor insights, brand research, TAM analysis, customer research, and strategic reports.",
+      "Go beyond data scraping. Our human-powered market intelligence delivers nuanced competitor insights, buyer behavior, and market opportunity analysis.",
     focusKeyphrase: "human-powered market intelligence",
     secondaryKeywords: [
       "B2B market intelligence services",
@@ -7670,9 +7670,9 @@ export const pages: PageContent[] = [
       "Article Grid",
       "Newsletter CTA",
     ],
-    metaTitle: "B2B Growth Insights & Strategy Blog",
+    metaTitle: "B2B Growth Insights & Strategy Blog | B2B Sales Arrow",
     metaDescription:
-      "B2B marketing blog covering trade show strategy, digital marketing, video production, market research, and enterprise pipeline growth.",
+      "Expert insights on B2B event marketing, performance marketing, media production, and enterprise growth strategy from the team at B2B Sales Arrow.",
     focusKeyphrase: "B2B marketing blog",
     secondaryKeywords: [
       "enterprise marketing insights",
@@ -7769,7 +7769,7 @@ export const pages: PageContent[] = [
         heading: "Recommended Blog Topics",
         rawMarkdown:
           "### **Recommended Blog Topics**\n\n*\\[Which ones to be featured?\\]*\n\n**CTA:** Read Article",
-        editorialNotes: ["\\[Which ones to be featured?\\]"],
+        editorialNotes: [String.raw`\[Which ones to be featured?\]`],
         blocks: [
           {
             type: "heading",
@@ -7859,7 +7859,7 @@ export const pages: PageContent[] = [
       },
     ],
     internalLinks: [],
-    editorialNotes: ["\\[Which ones to be featured?\\]"],
+    editorialNotes: [String.raw`\[Which ones to be featured?\]`],
   },
   {
     pageNumber: 24,
@@ -7867,9 +7867,9 @@ export const pages: PageContent[] = [
     url: "/case-studies",
     navigationGroup: "Resources",
     requiredSections: ["Hero", "Filter Section", "Case Study Grid", "CTA Section"],
-    metaTitle: "B2B Marketing Case Studies & Event Results",
+    metaTitle: "B2B Marketing Case Studies & Results | B2B Sales Arrow",
     metaDescription:
-      "Explore B2B marketing case studies across trade show booth design, lead generation, video production, performance marketing, and market research.",
+      "Real results from real enterprise clients — trade show ROI, lead generation metrics, media production impact, and performance marketing outcomes. See the evidence.",
     focusKeyphrase: "B2B marketing case studies",
     secondaryKeywords: [
       "event marketing results",
@@ -7972,7 +7972,7 @@ export const pages: PageContent[] = [
         title: "Case Study Grid",
         heading: "Recommended Case Study Angles",
         rawMarkdown: "### **Recommended Case Study Angles**\n\n*\\[Which ones to be added?\\]*",
-        editorialNotes: ["\\[Which ones to be added?\\]"],
+        editorialNotes: [String.raw`\[Which ones to be added?\]`],
         blocks: [
           {
             type: "heading",
@@ -8024,7 +8024,7 @@ export const pages: PageContent[] = [
       },
     ],
     internalLinks: [],
-    editorialNotes: ["\\[Which ones to be added?\\]"],
+    editorialNotes: [String.raw`\[Which ones to be added?\]`],
   },
   {
     pageNumber: 25,
@@ -8042,9 +8042,9 @@ export const pages: PageContent[] = [
       "Partners & Clients",
       "CTA Banner",
     ],
-    metaTitle: "About B2B Sales Arrow",
+    metaTitle: "About B2B Sales Arrow | Enterprise Growth Partners | B2B Sales Arrow",
     metaDescription:
-      "B2B Sales Arrow is a global enterprise growth agency delivering event solutions, video production, digital marketing, and market research across 40+ countries.",
+      "B2B Sales Arrow is a global enterprise growth partner — delivering event solutions, media production, performance marketing, and market research for ambitious B2B brands.",
     focusKeyphrase: "B2B growth agency",
     secondaryKeywords: [
       "enterprise marketing company",
@@ -8184,7 +8184,7 @@ export const pages: PageContent[] = [
         title: "Leadership Team",
         heading: "The Leadership Behind the Results",
         rawMarkdown: "### **The Leadership Behind the Results**\n\n*\\[Need inputs on teams\\]*",
-        editorialNotes: ["\\[Need inputs on teams\\]"],
+        editorialNotes: [String.raw`\[Need inputs on teams\]`],
         blocks: [
           {
             type: "heading",
@@ -8272,7 +8272,7 @@ export const pages: PageContent[] = [
         title: "Partners & Clients",
         heading: "Trusted by Industry Leaders",
         rawMarkdown: "### **Trusted by Industry Leaders**\n\n*\\[Logo wall\\]*",
-        editorialNotes: ["\\[Logo wall\\]"],
+        editorialNotes: [String.raw`\[Logo wall\]`],
         blocks: [
           {
             type: "heading",
@@ -8324,7 +8324,7 @@ export const pages: PageContent[] = [
       },
     ],
     internalLinks: [],
-    editorialNotes: ["\\[Need inputs on teams\\]", "\\[Logo wall\\]"],
+    editorialNotes: [String.raw`\[Need inputs on teams\]`, String.raw`\[Logo wall\]`],
   },
   {
     pageNumber: 26,
@@ -8338,9 +8338,9 @@ export const pages: PageContent[] = [
       "Global Offices",
       "Reassurance / Next Steps",
     ],
-    metaTitle: "Contact B2B Sales Arrow",
+    metaTitle: "Contact B2B Sales Arrow | Book a Strategy Consultation | B2B Sales Arrow",
     metaDescription:
-      "Contact B2B Sales Arrow to book a strategy consultation for event solutions, video production, digital marketing, or market research services.",
+      "Ready to scale your enterprise? Contact B2B Sales Arrow to book a strategy consultation. Event solutions, media production, performance marketing — we're ready to talk.",
     focusKeyphrase: "contact B2B Sales Arrow",
     secondaryKeywords: [
       "B2B growth agency consultation",
@@ -8454,7 +8454,7 @@ export const pages: PageContent[] = [
         heading: "Prefer a Direct Line?",
         rawMarkdown:
           "### **Prefer a Direct Line?**\n\n*Offer direct contact options for email, phone, and meeting booking so high-intent visitors can choose the fastest path to a conversation.* \n\n### **Email**\n\nhello@b2bsalesarrow.com \n\n### **Phone** \n\n\\[number\\] \n\n### **Book a Meeting** \n\nCalendly link or calendar embed",
-        editorialNotes: ["\\[number\\]"],
+        editorialNotes: [String.raw`\[number\]`],
         blocks: [
           {
             type: "heading",
@@ -8583,7 +8583,7 @@ export const pages: PageContent[] = [
       },
     ],
     internalLinks: [],
-    editorialNotes: ["\\[number\\]"],
+    editorialNotes: [String.raw`\[number\]`],
   },
 ];
 
@@ -8612,6 +8612,7 @@ export function getPageMetadata(url: string): Metadata {
   const page = getPageByUrl(url);
   const canonicalPath = normalizeLookupUrl(page.url);
   const canonicalUrl = `${siteUrl}${canonicalPath}`;
+  const ogImageUrl = `/og?path=${encodeURIComponent(canonicalPath)}`;
 
   return {
     title: page.metaTitle,
@@ -8624,6 +8625,20 @@ export function getPageMetadata(url: string): Metadata {
       description: page.metaDescription,
       url: canonicalUrl,
       type: "website",
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${page.pageName} | B2B Sales Arrow`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: page.metaTitle,
+      description: page.metaDescription,
+      images: [ogImageUrl],
     },
   };
 }

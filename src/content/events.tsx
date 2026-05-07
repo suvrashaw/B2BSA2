@@ -4,7 +4,7 @@ export const EVENTS_HERO = {
   title: (
     <>
       B2B Events That <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Build Pipeline
       </span>
     </>
@@ -256,7 +256,7 @@ export const EVENTS_CONTACT = {
   heading: (
     <>
       Let&apos;s Plan Your <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Event Presence
       </span>
     </>

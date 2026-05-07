@@ -1,13 +1,16 @@
 "use client";
 
 import { useRef } from "react";
+
+import Image from "next/image";
+import Link from "next/link";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
-import Link from "next/link";
-import Image from "next/image";
-import { GlobalPresence } from "@/components/ui/GlobeVisualization";
+
 import { Globe } from "@/components/ui/Globe";
+import { GlobalPresence } from "@/components/ui/GlobeVisualization";
 import { footerNavigation, serviceNavigationGroups } from "@/content/navigation";
 
 export function Footer() {
@@ -27,10 +30,10 @@ export function Footer() {
   const contentBgOpacity = useTransform(scrollYProgress, [0.5, 1], [0.8, 1]);
 
   return (
-    <footer ref={containerRef} className="bg-brand-charcoal h-[200vh] relative z-0">
-      <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-between">
+    <footer ref={containerRef} className="bg-brand-charcoal relative z-0 h-[200vh]">
+      <div className="sticky top-0 flex h-screen w-full flex-col justify-between overflow-hidden">
         {/* 1. Global Presence Slider Section (Fixed at top) */}
-        <div className="absolute top-0 left-0 right-0 z-20 pt-12 pb-24 pointer-events-none bg-gradient-to-b from-brand-charcoal via-brand-charcoal/80 to-transparent">
+        <div className="from-brand-charcoal via-brand-charcoal/80 pointer-events-none absolute top-0 right-0 left-0 z-20 bg-gradient-to-b to-transparent pt-12 pb-24">
           {/* We wrap it in a pointer-events-auto div to ensure it's still clickable/selectable if needed */}
           <div className="pointer-events-auto">
             <GlobalPresence />
@@ -40,10 +43,10 @@ export function Footer() {
         {/* 2. Interactive 3D Globe Centerpiece (Background layer) */}
         <motion.div
           style={{ scale: globeScale, y: globeY }}
-          className="absolute inset-0 z-0 flex items-center justify-center origin-center"
+          className="absolute inset-0 z-0 flex origin-center items-center justify-center"
         >
           {/* We ensure it's fully interactive when dragged */}
-          <div className="w-[800px] h-[800px] flex items-center justify-center">
+          <div className="flex h-[800px] w-[800px] items-center justify-center">
             <Globe />
           </div>
         </motion.div>
@@ -51,28 +54,28 @@ export function Footer() {
         {/* 3. Main Footer Links Area (Slides up from bottom) */}
         <motion.div
           style={{ y: contentY }}
-          className="absolute bottom-0 left-0 right-0 z-10 w-full"
+          className="absolute right-0 bottom-0 left-0 z-10 w-full"
         >
           <motion.div
             style={{ opacity: contentBgOpacity }}
-            className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/95 to-brand-charcoal/40 backdrop-blur-sm -z-10"
+            className="from-brand-charcoal via-brand-charcoal/95 to-brand-charcoal/40 absolute inset-0 -z-10 bg-gradient-to-t backdrop-blur-sm"
           />
-          <div className="container mx-auto px-8 pt-32 pb-8 relative">
-            <div className="grid lg:grid-cols-12 gap-16 mb-16">
+          <div className="relative container mx-auto px-8 pt-32 pb-8">
+            <div className="mb-16 grid gap-16 lg:grid-cols-12">
               <div className="lg:col-span-5">
                 <Link
                   href="/"
-                  className="relative h-12 w-48 block mb-8 transition-opacity hover:opacity-90"
+                  className="relative mb-8 block h-12 w-48 transition-opacity hover:opacity-90"
                 >
                   <Image
                     src="/logo.png"
                     alt="B2B Sales Arrow"
                     fill
                     sizes="192px"
-                    className="object-contain bg-transparent px-2 py-1 rounded-md brightness-0 invert"
+                    className="rounded-md bg-transparent object-contain px-2 py-1 brightness-0 invert"
                   />
                 </Link>
-                <p className="text-gray-600 leading-relaxed mb-8 max-w-sm">
+                <p className="mb-8 max-w-sm leading-relaxed text-gray-600">
                   The premier growth partner for ambitious B2B enterprises. We design, execute, and
                   scale high-conversion physical and digital experiences globally.
                 </p>
@@ -80,27 +83,27 @@ export function Footer() {
                 <div className="flex items-center gap-4">
                   <a
                     href="#"
-                    className="w-10 h-10 rounded-full bg-brand-gray border border-gray-200 flex items-center justify-center text-brand-blue hover:bg-brand-blue hover:text-white hover:border-brand-blue transition-all duration-300"
+                    className="bg-brand-gray text-brand-blue hover:bg-brand-blue hover:border-brand-blue flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 transition-all duration-300 hover:text-white"
                   >
-                    <FaLinkedinIn className="w-4 h-4" />
+                    <FaLinkedinIn className="h-4 w-4" />
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 rounded-full bg-brand-gray border border-gray-200 flex items-center justify-center text-brand-blue hover:bg-brand-blue hover:text-white hover:border-brand-blue transition-all duration-300"
+                    className="bg-brand-gray text-brand-blue hover:bg-brand-blue hover:border-brand-blue flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 transition-all duration-300 hover:text-white"
                   >
-                    <FaTwitter className="w-4 h-4" />
+                    <FaTwitter className="h-4 w-4" />
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 rounded-full bg-brand-gray border border-gray-200 flex items-center justify-center text-brand-blue hover:bg-brand-blue hover:text-white hover:border-brand-blue transition-all duration-300"
+                    className="bg-brand-gray text-brand-blue hover:bg-brand-blue hover:border-brand-blue flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 transition-all duration-300 hover:text-white"
                   >
-                    <FaInstagram className="w-4 h-4" />
+                    <FaInstagram className="h-4 w-4" />
                   </a>
                 </div>
               </div>
 
               <div className="lg:col-span-2">
-                <span className="block font-heading font-bold text-lg text-white mb-6">
+                <span className="font-heading mb-6 block text-lg font-bold text-white">
                   Navigation
                 </span>
                 <ul className="space-y-4">
@@ -108,7 +111,7 @@ export function Footer() {
                     <li key={item.name}>
                       <Link
                         href={item.href}
-                        className="text-gray-400 hover:text-brand-primary transition-colors text-sm font-medium"
+                        className="hover:text-brand-primary text-sm font-medium text-gray-400 transition-colors"
                       >
                         {item.name}
                       </Link>
@@ -118,7 +121,7 @@ export function Footer() {
               </div>
 
               <div className="lg:col-span-3">
-                <span className="block font-heading font-bold text-lg text-white mb-6">
+                <span className="font-heading mb-6 block text-lg font-bold text-white">
                   Services
                 </span>
                 <div className="grid gap-4">
@@ -126,17 +129,17 @@ export function Footer() {
                     <div key={group.name}>
                       <Link
                         href={group.href}
-                        className="text-sm font-bold text-gray-300 hover:text-brand-primary transition-colors"
+                        className="hover:text-brand-primary text-sm font-bold text-gray-300 transition-colors"
                       >
                         {group.name}
                       </Link>
                       {group.links.length > 0 && (
-                        <ul className="mt-2 space-y-2 pl-3 border-l border-gray-200">
+                        <ul className="mt-2 space-y-2 border-l border-gray-200 pl-3">
                           {group.links.map((item) => (
                             <li key={item.name}>
                               <Link
                                 href={item.href}
-                                className="text-xs leading-5 text-gray-500 hover:text-brand-primary transition-colors"
+                                className="hover:text-brand-primary text-xs leading-5 text-gray-500 transition-colors"
                               >
                                 {item.name}
                               </Link>
@@ -150,26 +153,26 @@ export function Footer() {
               </div>
 
               <div className="lg:col-span-2">
-                <span className="block font-heading font-bold text-lg text-white mb-6">
+                <span className="font-heading mb-6 block text-lg font-bold text-white">
                   Stay Ahead
                 </span>
-                <p className="text-sm text-gray-500 mb-4">
+                <p className="mb-4 text-sm text-gray-500">
                   Subscribe to our enterprise growth newsletter.
                 </p>
-                <div className="relative pointer-events-auto">
+                <div className="pointer-events-auto relative">
                   <input
                     type="email"
                     placeholder="Work Email"
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-primary transition-colors text-sm"
+                    className="focus:border-brand-primary w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white transition-colors placeholder:text-gray-500 focus:outline-none"
                   />
-                  <button className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-md bg-brand-primary flex items-center justify-center hover:bg-brand-cyan transition-colors">
-                    <ArrowRight className="w-4 h-4 text-white" />
+                  <button className="bg-brand-primary hover:bg-brand-cyan absolute top-1/2 right-2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-md transition-colors">
+                    <ArrowRight className="h-4 w-4 text-white" />
                   </button>
                 </div>
               </div>
             </div>
 
-            <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 pointer-events-auto">
+            <div className="pointer-events-auto flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 md:flex-row">
               <p className="text-xs text-gray-500">
                 © {new Date().getFullYear()} B2B Sales Arrow. All rights reserved.
               </p>

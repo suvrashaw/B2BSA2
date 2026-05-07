@@ -3,30 +3,30 @@ export const EVP_HERO = {
   eyebrow: "EVENT VIDEO PRODUCTION",
   title: (
     <>
-      Cinematic Event Coverage <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        That Multiplies Your ROI
+      Event Video Production That Turns <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Live Moments Into Lasting Assets
       </span>
     </>
   ),
   description:
-    "We capture, produce, and distribute high-fidelity event video content that extends your exhibition ROI far beyond the show floor — turning live moments into evergreen pipeline assets.",
+    "We capture your event — the energy, the product demos, the executive keynotes — and produce video assets that fuel 12 months of marketing content.",
   image: {
     src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000",
     alt: "Event video production",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Get a Quote",
-  secondaryCtaLabel: "View Showreel",
-  stat: { value: "250+", label: "Events Filmed Globally", icon: "Camera" },
+  primaryCtaLabel: "Get a Production Quote",
+  secondaryCtaLabel: "View Our Event Reel",
+  stat: { value: "500+", label: "Events Filmed Globally", icon: "Camera" },
 };
 
 export const EVP_WHY = {
-  eyebrow: "THE VIDEO DIFFERENCE",
+  eyebrow: "THE CONTENT ENGINE",
   heading: (
     <>
-      Why Event Video <br />
-      <span className="text-brand-cyan">Drives Pipeline</span>
+      Your Event Lasts 3 Days. <br />
+      <span className="text-brand-cyan">Your Video Lasts 3 Years.</span>
     </>
   ),
   reasons: [
@@ -66,12 +66,12 @@ export const EVP_WHY = {
 };
 
 export const EVP_DELIVERABLES = {
-  eyebrow: "WHAT'S INCLUDED",
+  eyebrow: "WHAT WE PRODUCE",
   heading: (
     <>
-      Full Event Video <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Production Package
+      Event Video Content <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        We Produce
       </span>
     </>
   ),
@@ -123,35 +123,35 @@ export const EVP_DELIVERABLES = {
 export const EVP_STATS = {
   heading: (
     <>
-      Event Video <br />
-      <span className="text-brand-blue">Performance Numbers</span>
+      Global Reach <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    '"Event video is the most trusted B2B content format. A professionally produced highlight reel keeps your brand alive in prospects\' minds for months after the show."',
+    '"We provide cinematic event video production for enterprise brands and trade shows, capturing high-fidelity content across 40+ markets that turns live moments into long-term marketing assets."',
   attribution: "— Video Production Team, B2B Sales Arrow",
   stats: [
     {
-      value: "250+",
+      value: "500+",
       label: "Events Filmed Globally",
-      icon: "Presentation",
+      icon: "Camera",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "8×",
-      label: "Avg Content Lifespan vs Live",
+      value: "10+",
+      label: "Years of Experience",
       icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "40+",
-      label: "Countries Covered",
+      label: "Countries Served",
       icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "98%",
-      label: "Same-Day Delivery Rate",
+      value: "100%",
+      label: "Production Accuracy",
       icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
@@ -248,7 +248,7 @@ export const EVP_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -294,7 +294,7 @@ export const EVP_CONTACT = {
   heading: (
     <>
       Book Event <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Video Production
       </span>
     </>

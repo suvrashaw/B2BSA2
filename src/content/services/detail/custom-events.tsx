@@ -3,30 +3,30 @@ export const CE_HERO = {
   eyebrow: "CUSTOM EVENTS",
   title: (
     <>
-      Your Brand. Your Stage. <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Your Pipeline.
+      Custom B2B Events That Position <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Your Brand as the Authority
       </span>
     </>
   ),
   description:
-    "We design and deliver bespoke B2B events — from intimate executive roundtables to flagship industry summits — that position your brand as a category authority and generate qualified pipeline.",
+    "Don't just attend events — own them. We design and produce proprietary experiences that build relationships, generate press, and accelerate enterprise pipeline.",
   image: {
     src: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=2000",
     alt: "Custom branded B2B event",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Get a Quote",
-  secondaryCtaLabel: "See Case Studies",
-  stat: { value: "120+", label: "Custom Events Delivered", icon: "Calendar" },
+  primaryCtaLabel: "Request a Custom Event Proposal",
+  secondaryCtaLabel: "See Our Event Success Stories",
+  stat: { value: "300+", label: "Global Events Handled", icon: "Calendar" },
 };
 
 export const CE_WHY = {
-  eyebrow: "THE CUSTOM EVENT ADVANTAGE",
+  eyebrow: "EVENT FORMATS",
   heading: (
     <>
-      Own the Stage, <br />
-      <span className="text-brand-cyan">Own the Narrative</span>
+      Custom B2B Event Formats <br />
+      <span className="text-brand-cyan">We Produce</span>
     </>
   ),
   reasons: [
@@ -66,12 +66,12 @@ export const CE_WHY = {
 };
 
 export const CE_DELIVERABLES = {
-  eyebrow: "WHAT'S INCLUDED",
+  eyebrow: "OUR CAPABILITIES",
   heading: (
     <>
-      Everything to Run <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Your Event
+      End-to-End Custom <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Event Production
       </span>
     </>
   ),
@@ -121,36 +121,36 @@ export const CE_DELIVERABLES = {
 export const CE_STATS = {
   heading: (
     <>
-      Custom Event Results <br />
-      <span className="text-brand-blue">by the Numbers</span>
+      Global Reach <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    '"The most powerful brand building tool available to a B2B company is an event with your name on it and your competitors not invited."',
+    '"We design and execute proprietary B2B events that position enterprise brands as market authorities, from executive roundtables to global product launches, delivered with flawless execution across 40+ markets."',
   attribution: "— Custom Events Team, B2B Sales Arrow",
   stats: [
     {
-      value: "120+",
-      label: "Custom Events Delivered",
+      value: "300+",
+      label: "Global Events Handled",
       icon: "Calendar",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "94%",
-      label: "Attendee Satisfaction Rate",
-      icon: "Users",
+      value: "10+",
+      label: "Years of Experience",
+      icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
-      value: "2.9x",
-      label: "Avg Pipeline from Hosted Events",
-      icon: "TrendingUp",
+      value: "40+",
+      label: "Countries Served",
+      icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "48 hrs",
-      label: "Avg Lead Follow-Up Time",
-      icon: "Zap",
+      value: "100%",
+      label: "Production Accuracy",
+      icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
   ],
@@ -247,7 +247,7 @@ export const CE_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -293,7 +293,7 @@ export const CE_CONTACT = {
   heading: (
     <>
       Design Your <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Flagship Event
       </span>
     </>

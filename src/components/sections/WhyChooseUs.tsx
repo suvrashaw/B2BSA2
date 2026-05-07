@@ -1,9 +1,12 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
+
 import Image from "next/image";
+
+import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
+
 import { HOME_WHY_CHOOSE_US_CONTENT, type WhyChooseUsContent } from "@/content/home";
 
 export interface WhyChooseUsProps {
@@ -42,36 +45,36 @@ export function WhyChooseUs({
   });
 
   return (
-    <section ref={containerRef} className="relative bg-brand-gray">
+    <section ref={containerRef} className="bg-brand-gray relative">
       {/* 
         The container needs to be tall enough to allow scrolling.
       */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="sticky top-0 w-full h-screen bg-brand-gray z-0" />
+      <div className="pointer-events-none absolute inset-0">
+        <div className="bg-brand-gray sticky top-0 z-0 h-screen w-full" />
       </div>
 
       <div
-        className={`container mx-auto px-8 flex flex-col ${showImagePanel ? "md:flex-row" : "items-center"} relative z-10`}
+        className={`container mx-auto flex flex-col px-8 ${showImagePanel ? "md:flex-row" : "items-center"} relative z-10`}
       >
         {/* Left Side: Sticky Content */}
         <div
-          className={`w-full ${showImagePanel ? "md:w-1/2 md:pr-20" : "md:w-3/4 max-w-4xl text-center items-center"} md:sticky md:top-0 h-auto md:h-screen flex flex-col justify-center items-start py-20 md:py-0`}
+          className={`w-full ${showImagePanel ? "md:w-1/2 md:pr-20" : "max-w-4xl items-center text-center md:w-3/4"} flex h-auto flex-col items-start justify-center py-20 md:sticky md:top-0 md:h-screen md:py-0`}
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-charcoal/5 border border-brand-charcoal/10  text-sm font-semibold tracking-wide"
+            className="bg-brand-charcoal/5 border-brand-charcoal/10 mb-6 inline-block rounded-full border px-4 py-1.5  text-sm font-semibold tracking-wide"
           >
             {eyebrow}
           </motion.div>
           <h2
-            className={`font-heading text-4xl lg:text-5xl font-bold  mb-8 leading-tight w-full ${showImagePanel ? "text-left" : "text-center"}`}
+            className={`font-heading mb-8 w-full text-4xl  leading-tight font-bold lg:text-5xl ${showImagePanel ? "text-left" : "text-center"}`}
           >
             {heading}
           </h2>
 
-          <div className="relative h-[150px] w-full flex justify-center">
+          <div className="relative flex h-[150px] w-full justify-center">
             {activeReason && (
               <AnimatePresence mode="wait">
                 <motion.div
@@ -82,13 +85,13 @@ export function WhyChooseUs({
                   transition={{ duration: 0.5, ease: "easeOut" }}
                   className="absolute inset-0 flex flex-col items-center justify-center text-center"
                 >
-                  <div className="flex items-center gap-3 mb-4">
-                    <CheckCircle2 className="w-6 h-6 text-brand-blue" />
+                  <div className="mb-4 flex items-center gap-3">
+                    <CheckCircle2 className="text-brand-blue h-6 w-6" />
                     <h3 className="font-heading text-3xl font-bold ">
                       {activeReason.title}
                     </h3>
                   </div>
-                  <p className="text-xl text-gray-600 leading-relaxed max-w-md">
+                  <p className="max-w-md text-xl leading-relaxed text-gray-600">
                     {activeReason.description}
                   </p>
                 </motion.div>
@@ -99,20 +102,20 @@ export function WhyChooseUs({
 
         {/* Right Side: Scrolling Images */}
         {showImagePanel && (
-          <div className="w-full md:w-1/2 flex flex-col pb-[20vh]">
+          <div className="flex w-full flex-col pb-[20vh] md:w-1/2">
             {reasons.map((reason) => (
               <div
                 key={reason.id}
-                className="h-[80vh] md:h-screen w-full flex items-center justify-center p-8"
+                className="flex h-[80vh] w-full items-center justify-center p-8 md:h-screen"
               >
-                <div className="relative w-full aspect-[4/5] md:aspect-square rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
+                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-gray-200 shadow-2xl md:aspect-square">
                   <Image src={reason.image} alt={reason.title} fill className="object-cover" />
-                  <div className="absolute inset-0 bg-brand-blue/20 mix-blend-overlay" />
+                  <div className="bg-brand-blue/20 absolute inset-0 mix-blend-overlay" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
 
                   {/* Mobile text fallback since sticky scroll might be weird on mobile */}
-                  <div className="absolute bottom-8 left-8 right-8 md:hidden">
-                    <h3 className="font-heading text-2xl font-bold text-white mb-2">
+                  <div className="absolute right-8 bottom-8 left-8 md:hidden">
+                    <h3 className="font-heading mb-2 text-2xl font-bold text-white">
                       {reason.title}
                     </h3>
                     <p className="text-sm text-gray-200">{reason.description}</p>

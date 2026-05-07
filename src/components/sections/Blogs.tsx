@@ -1,11 +1,15 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+
 import Image from "next/image";
+
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import type { MotionValue } from "framer-motion";
+
 import { HOME_BLOGS_CONTENT, type BlogItem, type BlogsContent } from "@/content/home";
+
+import type { MotionValue } from "framer-motion";
 
 export interface BlogsProps {
   content?: BlogsContent;
@@ -34,28 +38,28 @@ export function Blogs({
   const spread = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <section ref={containerRef} id="blogs" className="relative py-20 bg-white overflow-hidden">
+    <section ref={containerRef} id="blogs" className="relative overflow-hidden bg-white py-20">
       <div className="container mx-auto px-8">
-        <div className="flex flex-col items-start text-left mb-4 lg:mb-8">
+        <div className="mb-4 flex flex-col items-start text-left lg:mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-brand-primary text-sm font-semibold tracking-wide"
+            className="bg-brand-primary/10 border-brand-primary/20 text-brand-primary mb-6 inline-block rounded-full border px-4 py-1.5 text-sm font-semibold tracking-wide"
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading text-4xl lg:text-5xl font-bold  leading-tight">
+          <h2 className="font-heading text-4xl leading-tight font-bold  lg:text-5xl">
             {heading}
           </h2>
-          <button className="mt-8 flex items-center gap-2  font-semibold hover:text-brand-primary:text-brand-primary transition-all duration-300 group">
+          <button className="hover:text-brand-primary:text-brand-primary group mt-8 flex  items-center gap-2 font-semibold transition-all duration-300">
             {ctaLabel}{" "}
-            <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
           </button>
         </div>
 
         <div
-          className="relative h-[800px] lg:h-[450px] w-full max-w-3xl mx-auto flex items-center justify-center cursor-pointer perspective-1000"
+          className="perspective-1000 relative mx-auto flex h-[800px] w-full max-w-3xl cursor-pointer items-center justify-center lg:h-[450px]"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -123,7 +127,7 @@ function BlogCard({
         scale: isHovered ? 0.9 : 1, // Shrink slightly on hover to fit perfectly
       }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      className="absolute w-full max-w-md bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden transform-gpu"
+      className="absolute w-full max-w-md transform-gpu overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-2xl"
     >
       <div className="relative h-56 w-full">
         <Image
@@ -134,18 +138,18 @@ function BlogCard({
           className="object-cover"
         />
         <div className="absolute top-4 left-4">
-          <span className="px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold uppercase tracking-wider  shadow-sm">
+          <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-bold tracking-wider uppercase shadow-sm  backdrop-blur-md">
             {blog.category}
           </span>
         </div>
       </div>
       <div className="p-8">
-        <span className="text-sm text-gray-500 font-medium mb-3 block">{blog.date}</span>
-        <h3 className="font-heading text-2xl font-bold  mb-6 leading-tight">
+        <span className="mb-3 block text-sm font-medium text-gray-500">{blog.date}</span>
+        <h3 className="font-heading mb-6 text-2xl  leading-tight font-bold">
           {blog.title}
         </h3>
-        <div className="flex items-center text-brand-blue font-semibold text-sm uppercase tracking-widest gap-2">
-          Read Article <ArrowUpRight className="w-4 h-4" />
+        <div className="text-brand-blue flex items-center gap-2 text-sm font-semibold tracking-widest uppercase">
+          Read Article <ArrowUpRight className="h-4 w-4" />
         </div>
       </div>
     </motion.div>

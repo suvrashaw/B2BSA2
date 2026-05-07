@@ -1,14 +1,16 @@
 import type { ReactNode } from "react";
+
 import { cva, type VariantProps } from "class-variance-authority";
+
 import { cn } from "@/lib";
 
 const textVariants = cva("", {
   variants: {
     variant: {
-      hero: "text-xl leading-relaxed /70",
+      hero: "/70 text-xl leading-relaxed",
       section: "text-lg leading-relaxed text-gray-600",
-      card: "text-sm md:text-base leading-relaxed text-gray-600",
-      muted: "text-sm text-gray-500 leading-relaxed",
+      card: "text-sm leading-relaxed text-gray-600 md:text-base",
+      muted: "text-sm leading-relaxed text-gray-500",
     },
   },
 });

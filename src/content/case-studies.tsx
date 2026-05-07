@@ -1,16 +1,16 @@
 export const CASE_STUDIES_HERO = {
   showPreloader: false,
-  eyebrow: "PROVEN RESULTS",
+  eyebrow: "CASE STUDIES",
   title: (
     <>
-      Real Clients. <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Real Impact.
+      Enterprise Results That <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Speak for Themselves
       </span>
     </>
   ),
   description:
-    "Every number in our portfolio was earned on trade show floors, in digital campaigns, and through strategic market expansion. Here's the proof.",
+    "250+ projects. 40+ countries. $1.2B in pipeline generated. Explore the case studies behind the numbers.",
   image: {
     src: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=2000",
     alt: "Business results and growth",
@@ -28,25 +28,19 @@ export const CASE_STUDIES_HERO = {
 export const CASE_STUDIES_STATS = {
   heading: (
     <>
-      The Numbers <br />
-      <span className="text-brand-blue">Behind the Work</span>
+      The B2B Sales Arrow <br />
+      <span className="text-brand-blue">Track Record</span>
     </>
   ),
   quote:
-    '"Every engagement is measured by one metric: did it move the needle for our client\'s pipeline? The answer, consistently, is yes."',
+    '"Real results from real enterprise clients — trade show ROI, lead generation metrics, media production impact, and performance marketing outcomes."',
   attribution: "— Growth Strategy Team, B2B Sales Arrow",
   stats: [
     {
-      value: "4.2x",
-      label: "Average Client ROI",
+      value: "250+",
+      label: "Events Delivered",
       icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
-    },
-    {
-      value: "240+",
-      label: "Brands Helped",
-      icon: "Users",
-      bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "$1.2B",
@@ -55,8 +49,14 @@ export const CASE_STUDIES_STATS = {
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "+280%",
-      label: "Avg Lead Increase",
+      value: "15k+",
+      label: "Leads Generated",
+      icon: "Users",
+      bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
+    },
+    {
+      value: "98%",
+      label: "Client Retention",
       icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
@@ -172,12 +172,12 @@ export const CASE_STUDIES_TESTIMONIALS = {
 };
 
 export const CASE_STUDIES_CONTACT = {
-  eyebrow: "READY FOR RESULTS?",
+  eyebrow: "GET IN TOUCH",
   heading: (
     <>
-      Be Our Next <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Case Study
+      Could Your Next Campaign Be <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Our Next Case Study?
       </span>
     </>
   ),

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { ServiceHub } from "@/components/templates/ServiceHub";
 import { getPageMetadata } from "@/content/pages";
 import {
@@ -12,6 +11,8 @@ import {
   GES_FAQ,
   GES_CONTACT,
 } from "@/content/services/global-event-solutions";
+
+import type { Metadata } from "next";
 
 export const metadata: Metadata = getPageMetadata("/services/global-event-solutions");
 

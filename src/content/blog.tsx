@@ -1,16 +1,16 @@
 export const BLOG_HERO = {
   showPreloader: false,
-  eyebrow: "RESOURCES & INSIGHTS",
+  eyebrow: "B2B GROWTH INSIGHTS",
   title: (
     <>
-      B2B Marketing <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Intelligence
+      Thought Leadership for <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Enterprise Growth
       </span>
     </>
   ),
   description:
-    "Strategies, case breakdowns, and market intelligence for enterprise growth leaders navigating complex B2B landscapes.",
+    "Strategy, insights, and intelligence from the team behind $1.2B in pipeline generation.",
   image: {
     src: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=2000",
     alt: "Content and insights hub",
@@ -74,11 +74,11 @@ export const BLOG_LOGOS = [
 ];
 
 export const BLOG_POSTS = {
-  eyebrow: "INSIGHTS & INTELLIGENCE",
+  eyebrow: "LATEST ARTICLES",
   heading: (
     <>
-      Thought Leadership for <br />
-      <span className="text-brand-primary">Modern Growth</span>
+      B2B Marketing Insights <br />
+      <span className="text-brand-primary">& Strategy Blog</span>
     </>
   ),
   ctaLabel: "Browse All Articles",
@@ -115,7 +115,7 @@ export const BLOG_FAQ = {
   heading: (
     <>
       Common <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -161,7 +161,7 @@ export const BLOG_CONTACT = {
   heading: (
     <>
       Suggest a <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Topic
       </span>
     </>

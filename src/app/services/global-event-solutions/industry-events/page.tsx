@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
@@ -12,6 +11,8 @@ import {
   IE_FAQ,
   IE_CONTACT,
 } from "@/content/services/detail/industry-events";
+
+import type { Metadata } from "next";
 
 export const metadata: Metadata = getPageMetadata(
   "/services/global-event-solutions/industry-events"

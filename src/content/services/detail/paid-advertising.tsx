@@ -1,32 +1,32 @@
 export const PAID_HERO = {
   showPreloader: false,
-  eyebrow: "PAID ADVERTISING",
+  eyebrow: "B2B PAID ADVERTISING",
   title: (
     <>
-      Precision-Targeted Ads <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        That Reach B2B Decision-Makers
+      Paid Advertising That Generates <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Pipeline, Not Just Clicks
       </span>
     </>
   ),
   description:
-    "We design, run, and optimise paid media campaigns across Google, LinkedIn, and display networks — engineered to reach senior B2B buyers at the exact moment they're evaluating solutions.",
+    "We manage high-performance paid media programs for enterprise brands — every campaign built around pipeline metrics, not vanity numbers.",
   image: {
     src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2000",
     alt: "Paid advertising analytics dashboard",
     loaderAlt: "Loading",
   },
-  primaryCtaLabel: "Get a Free Audit",
-  secondaryCtaLabel: "View Paid Ad Results",
+  primaryCtaLabel: "Request a Paid Media Audit",
+  secondaryCtaLabel: "Start Your Paid Project",
   stat: { value: "4.2×", label: "Avg ROAS Achieved", icon: "TrendingUp" },
 };
 
 export const PAID_WHY = {
-  eyebrow: "THE PAID DIFFERENCE",
+  eyebrow: "CONVERSION STRATEGY",
   heading: (
     <>
-      Why B2B Paid Ads <br />
-      <span className="text-brand-cyan">Need a Specialist</span>
+      How We Build Paid Campaigns <br />
+      <span className="text-brand-cyan">That Actually Convert</span>
     </>
   ),
   reasons: [
@@ -66,12 +66,12 @@ export const PAID_WHY = {
 };
 
 export const PAID_DELIVERABLES = {
-  eyebrow: "WHAT'S INCLUDED",
+  eyebrow: "MANAGED CHANNELS",
   heading: (
     <>
-      Full Paid Media <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Management Package
+      Paid Channels <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        We Manage
       </span>
     </>
   ),
@@ -124,12 +124,12 @@ export const PAID_DELIVERABLES = {
 export const PAID_STATS = {
   heading: (
     <>
-      Paid Media <br />
-      <span className="text-brand-blue">Performance Numbers</span>
+      Global Reach <br />
+      <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
-    "\"B2B paid media done right doesn't burn budget — it multiplies it. Our campaigns are engineered to find the exact buyer at the exact moment they're ready to evaluate.\"",
+    '"We provide expert B2B paid advertising management, delivering high-performance campaigns across Google Ads, programmatic, and display optimized for enterprise pipeline across 40+ global markets."',
   attribution: "— Paid Media Team, B2B Sales Arrow",
   stats: [
     {
@@ -139,20 +139,20 @@ export const PAID_STATS = {
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
     },
     {
-      value: "−42%",
-      label: "Avg CPL Reduction vs Baseline",
-      icon: "Zap",
+      value: "10+",
+      label: "Years of Experience",
+      icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "40+",
-      label: "Countries, Ad Markets Run",
+      label: "Countries Served",
       icon: "Globe2",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "98%",
-      label: "Client Retention on Retainer",
+      value: "100%",
+      label: "Production Accuracy",
       icon: "Target",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
@@ -249,7 +249,7 @@ export const PAID_FAQ = {
   heading: (
     <>
       Frequently Asked <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -295,7 +295,7 @@ export const PAID_CONTACT = {
   heading: (
     <>
       Launch Ads That <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Find Decision-Makers
       </span>
     </>

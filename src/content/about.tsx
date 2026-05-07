@@ -1,16 +1,16 @@
 export const ABOUT_HERO = {
   showPreloader: false,
-  eyebrow: "WHO WE ARE",
+  eyebrow: "ABOUT B2B SALES ARROW",
   title: (
     <>
-      Built for <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
-        Enterprise Growth
+      We Are the Growth Partner <br />
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+        Your Enterprise Deserves
       </span>
     </>
   ),
   description:
-    "B2B Sales Arrow was founded with a single conviction: enterprise brands deserve a partner that treats pipeline as a science, not a guess.",
+    "Not an agency. Not a vendor. A strategic growth partner for ambitious B2B enterprises — embedded in your objectives, accountable for your results.",
   image: {
     src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000",
     alt: "B2B Sales Arrow team and office",
@@ -32,7 +32,7 @@ export const ABOUT_ORIGIN_TIMELINE = {
     {
       title: "Spotting the Gap",
       content: (
-        <div className="prose prose-sm md:prose-base /80 max-w-none">
+        <div className="prose prose-sm md:prose-base text-brand-charcoal/80 max-w-none">
           <p>
             Enterprise brands were investing heavily in events and campaigns, but the work was
             fragmented, hard to measure, and disconnected from sales outcomes.
@@ -43,7 +43,7 @@ export const ABOUT_ORIGIN_TIMELINE = {
     {
       title: "Building the Model",
       content: (
-        <div className="prose prose-sm md:prose-base /80 max-w-none">
+        <div className="prose prose-sm md:prose-base text-brand-charcoal/80 max-w-none">
           <p>
             We built a model where event solutions, corporate video production, performance
             marketing, and B2B market research capabilities work together seamlessly.
@@ -54,7 +54,7 @@ export const ABOUT_ORIGIN_TIMELINE = {
     {
       title: "Scaling Globally",
       content: (
-        <div className="prose prose-sm md:prose-base /80 max-w-none">
+        <div className="prose prose-sm md:prose-base text-brand-charcoal/80 max-w-none">
           <p>
             Today, we are a global enterprise growth agency delivering these solutions across 40+
             countries with accountability to results.
@@ -112,15 +112,15 @@ export const ABOUT_PRESENCE = {
     { name: "Dubai", lat: 25.2048, lng: 55.2708, size: 0.1, color: "cyan" },
     { name: "Singapore", lat: 1.3521, lng: 103.8198, size: 0.1, color: "cyan" },
     { name: "Sydney", lat: -33.8688, lng: 151.2093, size: 0.1, color: "cyan" },
-    { name: "Toronto", lat: 43.65107, lng: -79.347015, size: 0.1, color: "cyan" },
+    { name: "Toronto", lat: 43.651_07, lng: -79.347_015, size: 0.1, color: "cyan" },
   ],
 };
 
 export const ABOUT_STATS = {
   heading: (
     <>
-      Engineering Growth for <br />
-      <span className="text-brand-blue">Global Innovators</span>
+      The B2B Sales Arrow <br />
+      <span className="text-brand-blue">Track Record</span>
     </>
   ),
   quote:
@@ -128,16 +128,10 @@ export const ABOUT_STATS = {
   attribution: "— Leadership Team, B2B Sales Arrow",
   stats: [
     {
-      value: "8+",
-      label: "Years in Operation",
+      value: "250+",
+      label: "Global Events",
       icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
-    },
-    {
-      value: "240+",
-      label: "Brands Served",
-      icon: "Users",
-      bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "$1.2B",
@@ -147,9 +141,15 @@ export const ABOUT_STATS = {
     },
     {
       value: "40+",
-      label: "Countries Covered",
+      label: "Countries Served",
       icon: "Globe2",
       bg: "bg-linear-to-br from-[#1b5e82] to-[#164e6b]",
+    },
+    {
+      value: "15k+",
+      label: "Leads Generated",
+      icon: "Users",
+      bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "98%",
@@ -159,7 +159,7 @@ export const ABOUT_STATS = {
     },
     {
       value: "500+",
-      label: "Projects Delivered",
+      label: "Booth Designs",
       icon: "Globe2",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
@@ -307,7 +307,7 @@ export const ABOUT_CONTACT = {
   heading: (
     <>
       Let&apos;s Build <br />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-blue to-brand-cyan">
+      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Something Great
       </span>
     </>

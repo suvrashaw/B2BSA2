@@ -1,12 +1,14 @@
 "use client";
 
 import React, { useLayoutEffect, useRef } from "react";
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import { PointerHighlight } from "./PointerHighlight";
 
 // Make sure to register plugin client-side only
-if (typeof window !== "undefined") {
+if (globalThis.window !== undefined) {
   gsap.registerPlugin(ScrollTrigger);
 }
 
@@ -62,10 +64,10 @@ export const WhisperText: React.FC<WhisperTextProps> = ({
 
   const renderWords = () =>
     text.split(" ").map((word, i) => {
-      if (word === "\\n") {
-        return <div key={i} className="basis-full h-0" />;
+      if (word === String.raw`\n`) {
+        return <div key={i} className="h-0 basis-full" />;
       }
-      const cleanWord = word.replace(/[.,]/g, "");
+      const cleanWord = word.replaceAll(/[.,]/g, "");
       const isHighlighted = highlights?.includes(cleanWord);
 
       const content = isHighlighted ? (

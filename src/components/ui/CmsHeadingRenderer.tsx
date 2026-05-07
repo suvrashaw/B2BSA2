@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+
 import { GradientText } from "@/components/ui/GradientText";
 import { Heading } from "@/components/ui/Heading";
 

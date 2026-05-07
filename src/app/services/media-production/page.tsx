@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { ServiceHub } from "@/components/templates/ServiceHub";
 import { getPageMetadata } from "@/content/pages";
 import {
@@ -13,6 +12,8 @@ import {
   MEDIA_CONTACT,
 } from "@/content/services/media-production";
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = getPageMetadata("/services/media-production");
 
 export default function Page() {
@@ -25,6 +26,7 @@ export default function Page() {
       caseStudies={MEDIA_CASE_STUDIES}
       testimonials={MEDIA_TESTIMONIALS}
       blogs={MEDIA_BLOGS}
+      showMediaShowreel
       faq={MEDIA_FAQ}
       contact={MEDIA_CONTACT}
     />
