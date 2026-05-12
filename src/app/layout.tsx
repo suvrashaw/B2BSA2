@@ -1,7 +1,6 @@
 import { Montserrat, Playfair_Display } from "next/font/google";
 
 import { PartytownScripts } from "@/app/providers/PartytownScripts";
-import { ReactScan } from "@/app/providers/ReactScan";
 import { SmoothScrollProvider } from "@/app/providers/SmoothScrollProvider";
 import { SWRegistrar } from "@/app/providers/SWRegistrar";
 
@@ -63,7 +62,6 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <PartytownScripts />
-        <ReactScan />
         <SWRegistrar />
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
