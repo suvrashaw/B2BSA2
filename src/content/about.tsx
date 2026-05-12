@@ -1,16 +1,16 @@
 export const ABOUT_HERO = {
   showPreloader: false,
-  eyebrow: "ABOUT B2B SALES ARROW",
+  eyebrow: "WHO WE ARE",
   title: (
     <>
-      We Are the Growth Partner <br />
+      Built for <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Your Enterprise Deserves
+        Enterprise Growth
       </span>
     </>
   ),
   description:
-    "Not an agency. Not a vendor. A strategic growth partner for ambitious B2B enterprises — embedded in your objectives, accountable for your results.",
+    "B2B Sales Arrow was founded with a single conviction: enterprise brands deserve a partner that treats pipeline as a science, not a guess.",
   image: {
     src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000",
     alt: "B2B Sales Arrow team and office",
@@ -119,8 +119,8 @@ export const ABOUT_PRESENCE = {
 export const ABOUT_STATS = {
   heading: (
     <>
-      The B2B Sales Arrow <br />
-      <span className="text-brand-blue">Track Record</span>
+      Engineering Growth for <br />
+      <span className="text-brand-blue">Global Innovators</span>
     </>
   ),
   quote:
@@ -128,10 +128,16 @@ export const ABOUT_STATS = {
   attribution: "— Leadership Team, B2B Sales Arrow",
   stats: [
     {
-      value: "250+",
-      label: "Global Events",
+      value: "8+",
+      label: "Years in Operation",
       icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
+    },
+    {
+      value: "240+",
+      label: "Brands Served",
+      icon: "Users",
+      bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "$1.2B",
@@ -141,15 +147,9 @@ export const ABOUT_STATS = {
     },
     {
       value: "40+",
-      label: "Countries Served",
+      label: "Countries Covered",
       icon: "Globe2",
       bg: "bg-linear-to-br from-[#1b5e82] to-[#164e6b]",
-    },
-    {
-      value: "15k+",
-      label: "Leads Generated",
-      icon: "Users",
-      bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
     {
       value: "98%",
@@ -159,7 +159,7 @@ export const ABOUT_STATS = {
     },
     {
       value: "500+",
-      label: "Booth Designs",
+      label: "Projects Delivered",
       icon: "Globe2",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
