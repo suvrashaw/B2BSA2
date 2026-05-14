@@ -62,11 +62,12 @@ export function Footer() {
             className="from-brand-charcoal via-brand-charcoal/95 to-brand-charcoal/40 absolute inset-0 -z-10 bg-gradient-to-t backdrop-blur-sm"
           />
           <div className="relative container mx-auto px-8 pt-32 pb-8">
-            <div className="mb-16 grid gap-16 lg:grid-cols-12">
-              <div className="lg:col-span-5">
+            {/* Row 1: Brand + Navigation + Stay Ahead */}
+            <div className="mb-12 grid gap-12 lg:grid-cols-12">
+              <div className="lg:col-span-6">
                 <Link
                   href="/"
-                  className="relative mr-auto mb-8 block h-12 w-48 transition-opacity hover:opacity-90"
+                  className="relative mb-8 block h-12 w-48 transition-opacity hover:opacity-90"
                 >
                   <Image
                     src="/logo.png"
@@ -81,7 +82,6 @@ export function Footer() {
                   booths and execute data-driven event marketing strategies that deliver measurable
                   enterprise pipeline.
                 </p>
-
                 <div className="flex items-center gap-4">
                   <a
                     href="#"
@@ -122,37 +122,7 @@ export function Footer() {
                 </ul>
               </div>
 
-              <div className="lg:col-span-3">
-                <span className="font-heading mb-6 block text-lg font-bold text-white">
-                  Services
-                </span>
-                <div className="grid gap-5">
-                  {footerServiceGroups.map((group) => (
-                    <div key={group.name}>
-                      <Link
-                        href={group.href}
-                        className="hover:text-brand-blue text-sm font-semibold text-white transition-colors"
-                      >
-                        {group.name}
-                      </Link>
-                      <ul className="mt-2 space-y-1.5 border-l border-white/10 pl-3">
-                        {group.links.map((item) => (
-                          <li key={item.name}>
-                            <Link
-                              href={item.href}
-                              className="hover:text-brand-primary text-xs leading-5 text-gray-400 transition-colors"
-                            >
-                              {item.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="lg:col-span-2">
+              <div className="lg:col-span-4">
                 <span className="font-heading mb-6 block text-lg font-bold text-white">
                   Stay Ahead
                 </span>
@@ -174,6 +144,32 @@ export function Footer() {
                   </Button>
                 </div>
               </div>
+            </div>
+
+            {/* Row 2: Services — 4 equal columns */}
+            <div className="mb-12 grid gap-8 border-t border-white/10 pt-12 lg:grid-cols-4">
+              {footerServiceGroups.map((group) => (
+                <div key={group.name}>
+                  <Link
+                    href={group.href}
+                    className="hover:text-brand-blue mb-3 block text-sm font-semibold text-white transition-colors"
+                  >
+                    {group.name}
+                  </Link>
+                  <ul className="space-y-1.5 border-l border-white/10 pl-3">
+                    {group.links.map((item) => (
+                      <li key={item.name}>
+                        <Link
+                          href={item.href}
+                          className="hover:text-brand-primary text-xs leading-5 text-gray-400 transition-colors"
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
 
             <div className="pointer-events-auto flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 md:flex-row">
