@@ -42,7 +42,9 @@ export function GlobalPresence() {
                   ease: [0.16, 1, 0.3, 1], // premium smooth easing
                 }}
               >
-                <span className="font-heading text-2xl tracking-wide  md:text-3xl">{country}</span>
+                <span className="font-heading text-2xl tracking-wide text-white md:text-3xl">
+                  {country}
+                </span>
 
                 {isActive && (
                   <motion.div
