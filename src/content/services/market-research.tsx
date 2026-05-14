@@ -3,7 +3,7 @@ export const MR_HERO = {
   eyebrow: "B2B MARKET RESEARCH",
   title: (
     <>
-      Market Research That Gives You an <br />
+      Market Research That Gives You an{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Unfair Competitive Advantage
       </span>
@@ -29,7 +29,7 @@ export const MR_SERVICES = {
   eyebrow: "OUR RESEARCH SERVICES",
   heading: (
     <>
-      Enterprise Market <br />
+      Enterprise Market{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Research Solutions
       </span>
@@ -74,8 +74,7 @@ export const MR_SERVICES = {
 export const MR_STATS = {
   heading: (
     <>
-      Global Reach <br />
-      <span className="text-brand-blue">Local Execution</span>
+      Global Reach <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
@@ -113,8 +112,7 @@ export const MR_WHY = {
   eyebrow: "DATA QUALITY",
   heading: (
     <>
-      Why Data Quality <br />
-      <span className="text-brand-cyan">Matters</span>
+      Why Data Quality <span className="text-brand-cyan">Matters</span>
     </>
   ),
   reasons: [
@@ -157,8 +155,7 @@ export const MR_CASE_STUDIES = {
   eyebrow: "RESEARCH RESULTS",
   heading: (
     <>
-      Intelligence That <br />
-      <span className="text-brand-blue">Changed Outcomes</span>
+      Intelligence That <span className="text-brand-blue">Changed Outcomes</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -196,8 +193,7 @@ export const MR_TESTIMONIALS = {
   eyebrow: "CLIENT SUCCESS",
   heading: (
     <>
-      Decisions Backed by <br />
-      <span className="text-[#1E6091]">Better Data</span>
+      Decisions Backed by <span className="text-[#1E6091]">Better Data</span>
     </>
   ),
   autoplayInterval: 3500,
@@ -243,8 +239,7 @@ export const MR_BLOGS = {
   eyebrow: "RESEARCH INSIGHTS",
   heading: (
     <>
-      Market Intelligence <br />
-      <span className="text-brand-primary">Resources</span>
+      Market Intelligence <span className="text-brand-primary">Resources</span>
     </>
   ),
   ctaLabel: "View All Research Articles",
@@ -280,7 +275,7 @@ export const MR_FAQ = {
   eyebrow: "MARKET RESEARCH FAQ",
   heading: (
     <>
-      Frequently Asked <br />
+      Frequently Asked{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
@@ -326,7 +321,7 @@ export const MR_CONTACT = {
   eyebrow: "GET STARTED",
   heading: (
     <>
-      Let&apos;s Build Your <br />
+      Let&apos;s Build Your{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Intelligence Edge
       </span>

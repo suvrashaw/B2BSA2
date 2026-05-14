@@ -74,7 +74,7 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1, delay: 0.2 }}
-          className="relative flex h-[500px] w-full cursor-move items-center justify-center lg:h-[850px] lg:-translate-x-12"
+          className="relative flex h-[500px] w-full cursor-move items-center justify-center lg:h-[850px] lg:-translate-x-48"
         >
           <div className="absolute inset-0 h-full w-full">
             <Globe

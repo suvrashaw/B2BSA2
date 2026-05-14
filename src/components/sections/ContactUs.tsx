@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
+import { Button } from "@/components/ui/Button";
 import { HOME_CONTACT_CONTENT, type ContactContent } from "@/content/home";
 
 export interface ContactUsProps {
@@ -118,13 +119,14 @@ export function ContactUs({
                 ></textarea>
               </div>
 
-              <button
+              <Button
                 type="button"
-                className="bg-brand-blue hover:bg-brand-blue/90 group flex w-full items-center justify-center gap-2 rounded-xl py-4 text-lg font-bold text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(30,96,145,0.4)]"
+                variant="primary"
+                className="flex w-full items-center justify-center py-4 text-lg"
               >
                 {form.ctaLabel}
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </button>
+              </Button>
             </form>
           </div>
         </div>

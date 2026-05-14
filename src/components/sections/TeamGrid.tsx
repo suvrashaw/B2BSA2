@@ -22,13 +22,11 @@ export const TeamGrid = ({ data }: { data: TeamGridData }) => {
   return (
     <section className="bg-brand-white relative py-24 transition-colors duration-500">
       <div className="container mx-auto w-full max-w-7xl px-8">
-        <div className="mb-16 text-center">
+        <div className="mb-16 text-left">
           <div className="bg-brand-blue/10 border-brand-blue/20 text-brand-blue mb-6 inline-block rounded-full border px-4 py-1.5 text-sm font-semibold tracking-wide uppercase">
             Leadership
           </div>
-          <h2 className="font-heading text-3xl font-bold md:text-5xl ">
-            {data.heading}
-          </h2>
+          <h2 className="font-heading text-3xl font-bold md:text-5xl ">{data.heading}</h2>
         </div>
 
         {/* Team Grid */}

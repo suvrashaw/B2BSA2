@@ -1,10 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, Calendar, MapPin } from "lucide-react";
 
+import { Button } from "@/components/ui/Button";
 import { HOME_UPCOMING_EVENTS_CONTENT, type UpcomingEventsContent } from "@/content/home";
 
 export interface UpcomingEventsProps {
@@ -38,9 +40,7 @@ export function UpcomingEvents({
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading text-4xl leading-tight font-bold  lg:text-5xl">
-            {heading}
-          </h2>
+          <h2 className="font-heading text-4xl leading-tight font-bold  lg:text-5xl">{heading}</h2>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-2">
@@ -65,9 +65,12 @@ export function UpcomingEvents({
 
                 {/* Hover Reveal CTA */}
                 <div className="bg-brand-charcoal/20 absolute inset-0 z-20 flex items-center justify-center opacity-0 backdrop-blur-[2px] transition-opacity duration-500 group-hover:opacity-100">
-                  <button className="bg-brand-blue flex translate-y-4 transform items-center gap-2 rounded-full px-8 py-3 font-medium text-white shadow-lg transition-all duration-300 group-hover:translate-y-0">
+                  <Button
+                    variant="primary"
+                    className="translate-y-4 shadow-lg group-hover:translate-y-0"
+                  >
                     {ctaLabel} <ArrowUpRight className="h-4 w-4" />
-                  </button>
+                  </Button>
                 </div>
 
                 <div className="absolute right-6 bottom-6 left-6 z-10">
@@ -101,9 +104,7 @@ export function UpcomingEvents({
                       <h4 className="mb-1 text-xs font-bold tracking-wider text-gray-400 uppercase">
                         Location
                       </h4>
-                      <p className=" line-clamp-2 text-sm font-semibold">
-                        {event.location}
-                      </p>
+                      <p className=" line-clamp-2 text-sm font-semibold">{event.location}</p>
                     </div>
                   </div>
                 </div>
@@ -113,9 +114,11 @@ export function UpcomingEvents({
         </div>
 
         <div className="mt-12 text-center">
-          <button className="text-brand-blue hidden items-center gap-2 font-semibold transition-all duration-300 hover:gap-4 md:inline-flex">
-            {viewAllLabel} <ArrowUpRight className="h-5 w-5" />
-          </button>
+          <Link href="/events">
+            <Button variant="tertiary" className="hidden md:inline-flex">
+              {viewAllLabel} <ArrowUpRight className="h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,16 +1,16 @@
 export const SQL_HERO = {
   showPreloader: false,
-  eyebrow: "SALES QUALIFIED LEAD GENERATION",
+  eyebrow: "ACTIVE PROSPECTING & LEAD GEN",
   title: (
     <>
-      Sales Qualified Lead Generation — We Fill <br />
+      Active Prospecting & Lead Gen{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Your Pipeline With Decision-Makers
+        That Fills Your Sales Pipeline
       </span>
     </>
   ),
   description:
-    "Marketing Qualified Leads don't close deals. We deliver verified, sales-ready enterprise prospects — aligned to your ICP, scored, and routed directly to your sales team.",
+    "We deploy trained sales specialists directly onto the event floor to identify and engage senior decision-makers in real-time. No cold lists — just qualified enterprise SQLs delivered to your team daily.",
   image: {
     src: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2000",
     alt: "Sales pipeline and lead generation",
@@ -19,8 +19,8 @@ export const SQL_HERO = {
   primaryCtaLabel: "Request an SQL Proposal",
   secondaryCtaLabel: "Start Your Lead Gen Project",
   stat: {
-    value: "15k+",
-    label: "Enterprise Leads Delivered",
+    value: "2,500+",
+    label: "SQLs Delivered",
     icon: "Users",
   },
 };
@@ -29,9 +29,9 @@ export const SQL_SERVICES = {
   eyebrow: "OUR STRATEGY",
   heading: (
     <>
-      Our Multi-Channel <br />
+      Sales Qualified Lead{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        SQL Generation Approach
+        Generation Solutions
       </span>
     </>
   ),
@@ -104,8 +104,7 @@ export const SQL_SERVICES = {
 export const SQL_STATS = {
   heading: (
     <>
-      Global Reach <br />
-      <span className="text-brand-blue">Local Execution</span>
+      Global Reach <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
@@ -143,8 +142,7 @@ export const SQL_WHY = {
   eyebrow: "SALES ALIGNMENT",
   heading: (
     <>
-      Why Most Lead Generation Programs <br />
-      <span className="text-brand-cyan">Fail Sales Teams</span>
+      The $1.2B Reason B2B Enterprises <span className="text-brand-cyan">Prioritize Lead Gen</span>
     </>
   ),
   reasons: [
@@ -187,8 +185,7 @@ export const SQL_CASE_STUDIES = {
   eyebrow: "LEAD GEN RESULTS",
   heading: (
     <>
-      Pipeline We&apos;ve <br />
-      <span className="text-brand-blue">Built</span>
+      Prospecting That Built <span className="text-brand-blue">Enterprise Pipeline</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -227,8 +224,7 @@ export const SQL_TESTIMONIALS = {
   eyebrow: "CLIENT SUCCESS",
   heading: (
     <>
-      Sales Teams That <br />
-      <span className="text-[#1E6091]">Hit Quota</span>
+      Brands That Filled <span className="text-[#1E6091]">Their Pipeline</span>
     </>
   ),
   autoplayInterval: 3500,
@@ -274,8 +270,7 @@ export const SQL_BLOGS = {
   eyebrow: "LEAD GEN INSIGHTS",
   heading: (
     <>
-      B2B Lead Generation <br />
-      <span className="text-brand-primary">Intelligence</span>
+      Lead Generation <span className="text-brand-primary">Insights</span>
     </>
   ),
   ctaLabel: "View All Lead Gen Articles",
@@ -311,7 +306,7 @@ export const SQL_FAQ = {
   eyebrow: "LEAD GENERATION FAQ",
   heading: (
     <>
-      Frequently Asked <br />
+      Frequently Asked{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
@@ -357,9 +352,9 @@ export const SQL_CONTACT = {
   eyebrow: "START GENERATING PIPELINE",
   heading: (
     <>
-      Let&apos;s Fill Your <br />
+      Plan Your Next{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Sales Pipeline
+        Lead Gen Program
       </span>
     </>
   ),

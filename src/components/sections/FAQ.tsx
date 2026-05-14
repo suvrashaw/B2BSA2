@@ -52,9 +52,7 @@ export function FAQ({
             >
               {eyebrow}
             </motion.div>
-            <h2 className="font-heading mb-4 text-3xl font-bold  lg:text-5xl">
-              {heading}
-            </h2>
+            <h2 className="font-heading mb-4 text-3xl font-bold  lg:text-5xl">{heading}</h2>
             <p className="max-w-xl text-lg text-gray-600">{description}</p>
           </div>
         </div>
@@ -77,18 +75,18 @@ export function FAQ({
               >
                 <div className="relative h-full w-full rounded-2xl shadow-md transition-transform duration-500 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] hover:shadow-xl">
                   {/* Front Side: Question */}
-                  <div className="absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-2xl border border-gray-100 bg-[#F8F9FA] p-6 text-center [backface-visibility:hidden]">
-                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#1E6091]/10 transition-transform group-hover:scale-110">
+                  <div className="absolute inset-0 flex h-full w-full flex-col items-start justify-center rounded-2xl border border-gray-100 bg-[#F8F9FA] p-8 text-left [backface-visibility:hidden]">
+                    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#1E6091]/10 transition-transform group-hover:scale-110">
                       <HelpCircle className="h-6 w-6 text-[#1E6091]" />
                     </div>
-                    <h3 className="font-heading text-lg leading-tight font-bold text-[#212529]">
+                    <h3 className="font-heading text-xl leading-tight font-bold text-[#212529]">
                       {faq.question}
                     </h3>
                   </div>
 
                   {/* Back Side: Answer */}
-                  <div className="border-brand-cyan/20 absolute inset-0 flex h-full w-full [transform:rotateY(180deg)] flex-col justify-center rounded-2xl border bg-white p-6 text-center shadow-inner [backface-visibility:hidden]">
-                    <div className="mx-auto mb-4 flex h-8 w-8 items-center justify-center rounded-full bg-[#4BC0D9]/10">
+                  <div className="border-brand-cyan/20 absolute inset-0 flex h-full w-full [transform:rotateY(180deg)] flex-col items-start justify-center rounded-2xl border bg-white p-8 text-left shadow-inner [backface-visibility:hidden]">
+                    <div className="mb-6 flex h-8 w-8 items-center justify-center rounded-full bg-[#4BC0D9]/10">
                       <div className="h-1.5 w-1.5 rounded-full bg-[#4BC0D9]" />
                     </div>
                     <p className="text-sm leading-relaxed text-[#212529]">{faq.answer}</p>
@@ -100,7 +98,7 @@ export function FAQ({
         </div>
 
         {/* Navigation Arrows Below Carousel */}
-        <div className="mt-8 flex items-center justify-center gap-4">
+        <div className="mt-12 flex items-center justify-center gap-8">
           <button
             onClick={() => scroll("left")}
             className="hover:bg-brand-blue hover:text-white:bg-brand-cyan flex h-12 w-12 items-center  justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent"

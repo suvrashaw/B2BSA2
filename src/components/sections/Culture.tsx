@@ -50,7 +50,7 @@ export const Culture = ({ data }: { data: CultureData }) => {
 
   return (
     <section className="bg-brand-gray relative w-full py-12 transition-colors duration-500">
-      <div className="relative mb-12 flex min-h-[50vh] flex-col items-center justify-center px-8 text-center">
+      <div className="relative mb-12 flex min-h-[50vh] flex-col items-start justify-center px-8 text-left">
         {/* Radial spotlight */}
         <div
           aria-hidden="true"

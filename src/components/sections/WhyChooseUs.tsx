@@ -68,9 +68,7 @@ export function WhyChooseUs({
           >
             {eyebrow}
           </motion.div>
-          <h2
-            className={`font-heading mb-8 w-full text-4xl  leading-tight font-bold lg:text-5xl ${showImagePanel ? "text-left" : "text-center"}`}
-          >
+          <h2 className="font-heading mb-8 w-full text-left text-4xl leading-tight font-bold lg:text-5xl">
             {heading}
           </h2>
 
@@ -83,13 +81,11 @@ export function WhyChooseUs({
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="absolute inset-0 flex flex-col items-center justify-center text-center"
+                  className="absolute inset-0 flex flex-col items-start justify-center text-left"
                 >
-                  <div className="mb-4 flex items-center gap-3">
-                    <CheckCircle2 className="text-brand-blue h-6 w-6" />
-                    <h3 className="font-heading text-3xl font-bold ">
-                      {activeReason.title}
-                    </h3>
+                  <div className="mb-4 flex items-center gap-3 text-left">
+                    <CheckCircle2 className="text-brand-blue h-6 w-6 shrink-0" />
+                    <h3 className="font-heading text-3xl font-bold">{activeReason.title}</h3>
                   </div>
                   <p className="max-w-md text-xl leading-relaxed text-gray-600">
                     {activeReason.description}

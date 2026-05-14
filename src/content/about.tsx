@@ -1,14 +1,7 @@
 export const ABOUT_HERO = {
   showPreloader: false,
   eyebrow: "WHO WE ARE",
-  title: (
-    <>
-      Built for <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Enterprise Growth
-      </span>
-    </>
-  ),
+  title: <>Built for Enterprise Growth</>,
   description:
     "B2B Sales Arrow was founded with a single conviction: enterprise brands deserve a partner that treats pipeline as a science, not a guess.",
   image: {
@@ -117,12 +110,7 @@ export const ABOUT_PRESENCE = {
 };
 
 export const ABOUT_STATS = {
-  heading: (
-    <>
-      Engineering Growth for <br />
-      <span className="text-brand-blue">Global Innovators</span>
-    </>
-  ),
+  heading: <>Engineering Growth for Global Innovators</>,
   quote:
     '"Our mission is to transform how B2B brands connect with their audiences through innovative, immersive experiences that drive measurable business results."',
   attribution: "— Leadership Team, B2B Sales Arrow",
@@ -208,12 +196,7 @@ export const ABOUT_VALUES = {
 
 export const ABOUT_CASE_STUDIES = {
   eyebrow: "FLAGSHIP WORK",
-  heading: (
-    <>
-      The Results That Define <br />
-      <span className="text-brand-blue">Our Reputation</span>
-    </>
-  ),
+  heading: <>The Results That Define Our Reputation</>,
   ctaLabel: "Full Study",
   viewAllLabel: "View All Case Studies",
   items: [
@@ -246,12 +229,7 @@ export const ABOUT_CASE_STUDIES = {
 
 export const ABOUT_TESTIMONIALS = {
   eyebrow: "CLIENT SUCCESS",
-  heading: (
-    <>
-      Trusted by Industry <br />
-      <span className="text-[#1E6091]">Visionaries</span>
-    </>
-  ),
+  heading: <>Trusted by Industry Visionaries</>,
   autoplayInterval: 3000,
   initialIndex: 2,
   testimonials: [
@@ -304,14 +282,7 @@ export const ABOUT_TESTIMONIALS = {
 
 export const ABOUT_CONTACT = {
   eyebrow: "WORK WITH US",
-  heading: (
-    <>
-      Let&apos;s Build <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Something Great
-      </span>
-    </>
-  ),
+  heading: <>Let&apos;s Build Something Great</>,
   description:
     "We partner with ambitious brands who are serious about enterprise growth. If that's you, let's talk.",
   illustration: null,

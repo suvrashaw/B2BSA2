@@ -3,10 +3,12 @@
 import { useState } from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
+import { Button } from "@/components/ui/Button";
 import Icon from "@/components/ui/Icon";
 import {
   HOME_CASE_STUDIES_CONTENT,
@@ -48,9 +50,7 @@ export function CaseStudies({
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading text-4xl leading-tight font-bold  lg:text-5xl">
-            {heading}
-          </h2>
+          <h2 className="font-heading text-4xl leading-tight font-bold  lg:text-5xl">{heading}</h2>
         </div>
 
         <div className="flex h-[600px] w-full flex-col gap-4 lg:flex-row">
@@ -98,10 +98,7 @@ export function CaseStudies({
                         isActive ? "bg-brand-blue/90" : "group-hover:bg-brand-cyan/80 bg-white/10"
                       }`}
                     >
-                      <Icon
-                        name={study.icon}
-                        className={`h-5 w-5 ${isActive ? "text-white" : "text-white"}`}
-                      />
+                      <Icon name={study.icon} className="h-5 w-5 text-white" />
                     </div>
 
                     <AnimatePresence mode="popLayout">
@@ -119,17 +116,17 @@ export function CaseStudies({
                           <h3 className="font-heading mb-4 line-clamp-2 text-2xl font-bold text-white">
                             {study.title}
                           </h3>
-                          <div className="grid grid-cols-2 gap-4">
-                            <div>
-                              <h4 className="mb-1 text-[10px] font-bold tracking-wider text-gray-400 uppercase">
+                          <div className="flex gap-12">
+                            <div className="max-w-[180px]">
+                              <h4 className="mb-1 text-[10px] font-bold tracking-wider text-white uppercase opacity-70">
                                 Challenge
                               </h4>
                               <p className="line-clamp-2 text-xs text-gray-200">
                                 {study.challenge}
                               </p>
                             </div>
-                            <div>
-                              <h4 className="text-brand-cyan mb-1 text-[10px] font-bold tracking-wider uppercase">
+                            <div className="max-w-[240px]">
+                              <h4 className="mb-1 text-[10px] font-bold tracking-wider text-white uppercase opacity-70">
                                 Solution
                               </h4>
                               <p className="line-clamp-2 text-xs text-gray-200">{study.solution}</p>
@@ -159,15 +156,19 @@ export function CaseStudies({
                   {/* CTA Button */}
                   <AnimatePresence>
                     {isActive && (
-                      <motion.button
+                      <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 20 }}
                         transition={{ delay: 0.2, duration: 0.3 }}
-                        className="bg-brand-blue hover:bg-brand-cyan hover: absolute right-8 bottom-8 flex items-center gap-2 rounded-full px-6 py-3 font-medium text-white shadow-lg transition-all duration-300"
+                        className="absolute right-8 bottom-8"
                       >
-                        {ctaLabel} <ArrowUpRight className="h-4 w-4" />
-                      </motion.button>
+                        <Link href={`/case-studies/${study.id}`}>
+                          <Button variant="primary" className="shadow-lg">
+                            {ctaLabel} <ArrowUpRight className="h-4 w-4" />
+                          </Button>
+                        </Link>
+                      </motion.div>
                     )}
                   </AnimatePresence>
 
@@ -197,9 +198,11 @@ export function CaseStudies({
         </div>
 
         <div className="mt-12 text-center">
-          <button className="text-brand-blue hidden items-center gap-2 font-semibold transition-all duration-300 hover:gap-4 md:inline-flex">
-            {viewAllLabel} <ArrowUpRight className="h-5 w-5" />
-          </button>
+          <Link href="/case-studies">
+            <Button variant="tertiary" className="hidden md:inline-flex">
+              {viewAllLabel} <ArrowUpRight className="h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

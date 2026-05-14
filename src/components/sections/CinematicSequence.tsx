@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import Link from "next/link";
+
 import {
   motion,
   useScroll,
@@ -10,6 +12,7 @@ import {
   type MotionValue,
 } from "framer-motion";
 
+import { Button } from "@/components/ui/Button";
 import {
   HOME_CINEMATIC_SEQUENCE_CONTENT,
   type CinematicSequenceContent,
@@ -53,7 +56,7 @@ function useCinematicFrameImages(
     for (let i = 1; i <= frameCount; i++) {
       const img = new globalThis.Image();
       img.src = getFrameUrl(i);
-      img.addEventListener('load', () => {
+      img.addEventListener("load", () => {
         if (cancelled) return;
 
         loadedCount++;
@@ -91,7 +94,13 @@ function CinematicBeatOverlay({
       {beat.eyebrow && <span className={beat.eyebrow.className}>{beat.eyebrow.text}</span>}
       <h2 className={beat.titleClassName}>{beat.title}</h2>
       {beat.description && <p className={beat.description.className}>{beat.description.text}</p>}
-      {beat.cta && <button className={beat.cta.className}>{beat.cta.label}</button>}
+      {beat.cta && (
+        <Link href="/contact-us">
+          <Button variant="primary" size="lg">
+            {beat.cta.label}
+          </Button>
+        </Link>
+      )}
     </motion.div>
   );
 }

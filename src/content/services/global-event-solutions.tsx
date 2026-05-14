@@ -3,7 +3,7 @@ export const GES_HERO = {
   eyebrow: "GLOBAL EVENT SOLUTIONS",
   title: (
     <>
-      Global Event Solutions That <br />
+      Global Event Solutions That{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Command Every Floor
       </span>
@@ -36,7 +36,7 @@ export const GES_SERVICES = {
   eyebrow: "END-TO-END SOLUTIONS",
   heading: (
     <>
-      Global Event Solutions <br />
+      Global Event Solutions{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Under One Roof
       </span>
@@ -111,8 +111,7 @@ export const GES_SERVICES = {
 export const GES_STATS = {
   heading: (
     <>
-      Global Reach <br />
-      <span className="text-brand-blue">Local Execution</span>
+      Global Reach <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
@@ -127,7 +126,7 @@ export const GES_STATS = {
     },
     {
       value: "$1.2B",
-      label: "Pipeline Influenced",
+      label: "Pipeline Generated",
       icon: "BarChart3",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
     },
@@ -138,8 +137,8 @@ export const GES_STATS = {
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
     },
     {
-      value: "15,000+",
-      label: "Enterprise Leads",
+      value: "98%",
+      label: "Retention",
       icon: "Users",
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
     },
@@ -150,7 +149,7 @@ export const GES_WHY = {
   eyebrow: "THE ROI OF LIVE EVENTS",
   heading: (
     <>
-      The $1.2B Reason B2B Enterprises <br />
+      The $1.2B Reason B2B Enterprises{" "}
       <span className="text-brand-cyan">Prioritize Live Events</span>
     </>
   ),
@@ -194,8 +193,7 @@ export const GES_CASE_STUDIES = {
   eyebrow: "EVENT RESULTS",
   heading: (
     <>
-      Floors We&apos;ve <br />
-      <span className="text-brand-blue">Dominated</span>
+      Floors We&apos;ve <span className="text-brand-blue">Dominated</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -232,8 +230,7 @@ export const GES_TESTIMONIALS = {
   eyebrow: "EXHIBITOR SUCCESS",
   heading: (
     <>
-      Brands That Showed Up <br />
-      <span className="text-[#1E6091]">and Won</span>
+      Brands That Showed Up <span className="text-[#1E6091]">and Won</span>
     </>
   ),
   autoplayInterval: 3500,
@@ -279,8 +276,7 @@ export const GES_EVENTS = {
   eyebrow: "UPCOMING EVENTS",
   heading: (
     <>
-      Events We&apos;re <br />
-      <span className="text-brand-blue">Attending in 2026</span>
+      Events We&apos;re <span className="text-brand-blue">Attending in 2026</span>
     </>
   ),
   badgeLabel: "Upcoming",
@@ -318,7 +314,7 @@ export const GES_FAQ = {
   eyebrow: "EVENT SOLUTIONS FAQ",
   heading: (
     <>
-      Frequently Asked <br />
+      Frequently Asked{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
@@ -364,7 +360,7 @@ export const GES_CONTACT = {
   eyebrow: "GET STARTED",
   heading: (
     <>
-      Plan Your Next <br />
+      Plan Your Next{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Event Presence
       </span>

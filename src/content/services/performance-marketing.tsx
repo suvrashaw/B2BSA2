@@ -3,7 +3,7 @@ export const PERF_HERO = {
   eyebrow: "B2B PERFORMANCE MARKETING",
   title: (
     <>
-      Performance Marketing Built to <br />
+      Performance Marketing Built to{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Fill Enterprise Pipeline
       </span>
@@ -29,7 +29,7 @@ export const PERF_SERVICES = {
   eyebrow: "OUR MARKETING SERVICES",
   heading: (
     <>
-      Enterprise Performance <br />
+      Enterprise Performance{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Marketing Solutions
       </span>
@@ -74,8 +74,7 @@ export const PERF_SERVICES = {
 export const PERF_STATS = {
   heading: (
     <>
-      Global Reach <br />
-      <span className="text-brand-blue">Local Execution</span>
+      Global Reach <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   quote:
@@ -113,8 +112,7 @@ export const PERF_WHY = {
   eyebrow: "DATA-DRIVEN ROI",
   heading: (
     <>
-      Performance Marketing Means <br />
-      <span className="text-brand-cyan">Every Action Has a Number</span>
+      Performance Marketing Means <span className="text-brand-cyan">Every Action Has a Number</span>
     </>
   ),
   reasons: [
@@ -157,8 +155,7 @@ export const PERF_CASE_STUDIES = {
   eyebrow: "MARKETING RESULTS",
   heading: (
     <>
-      Campaigns That Built <br />
-      <span className="text-brand-blue">Enterprise Pipeline</span>
+      Campaigns That Built <span className="text-brand-blue">Enterprise Pipeline</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -195,8 +192,7 @@ export const PERF_TESTIMONIALS = {
   eyebrow: "CLIENT SUCCESS",
   heading: (
     <>
-      Brands That Grew <br />
-      <span className="text-[#1E6091]">With Our Campaigns</span>
+      Brands That Grew <span className="text-[#1E6091]">With Our Campaigns</span>
     </>
   ),
   autoplayInterval: 3500,
@@ -242,8 +238,7 @@ export const PERF_BLOGS = {
   eyebrow: "MARKETING INTELLIGENCE",
   heading: (
     <>
-      B2B Marketing <br />
-      <span className="text-brand-primary">Insights</span>
+      B2B Marketing <span className="text-brand-primary">Insights</span>
     </>
   ),
   ctaLabel: "View All Marketing Articles",
@@ -279,7 +274,7 @@ export const PERF_FAQ = {
   eyebrow: "PERFORMANCE MARKETING FAQ",
   heading: (
     <>
-      Frequently Asked <br />
+      Frequently Asked{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>
@@ -325,7 +320,7 @@ export const PERF_CONTACT = {
   eyebrow: "GET STARTED",
   heading: (
     <>
-      Let&apos;s Scale Your <br />
+      Let&apos;s Scale Your{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Marketing Pipeline
       </span>

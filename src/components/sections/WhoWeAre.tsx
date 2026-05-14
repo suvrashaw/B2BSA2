@@ -1,52 +1,18 @@
 "use client";
 
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-
 import Icon from "@/components/ui/Icon";
 import { HOME_WHO_WE_ARE_CONTENT, type WhoWeAreContent, type WhoWeAreStat } from "@/content/home";
 
-function HoverCard({ stat }: { stat: WhoWeAreStat }) {
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  function handleMouseMove({ currentTarget, clientX, clientY }: React.MouseEvent) {
-    const { left, top } = currentTarget.getBoundingClientRect();
-    mouseX.set(clientX - left);
-    mouseY.set(clientY - top);
-  }
-
+function StatCard({ stat }: { stat: WhoWeAreStat }) {
   return (
     <div
-      onMouseMove={handleMouseMove}
-      className={`group/card relative cursor-pointer overflow-hidden rounded-[4px] p-8 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${stat.bg} border border-transparent text-white hover:border-red-500 hover:bg-white`}
+      className={`relative overflow-hidden rounded-[4px] p-8 shadow-lg ${stat.bg} border border-transparent text-white`}
     >
-      {/* Dynamic Red Radial Gradient */}
-      <motion.div
-        className="pointer-events-none absolute -inset-px z-0 opacity-0 transition duration-300 group-hover/card:opacity-100"
-        style={{
-          background: useMotionTemplate`
-            radial-gradient(
-              300px circle at ${mouseX}px ${mouseY}px,
-              rgba(239, 68, 68, 0.25),
-              transparent 80%
-            )
-          `,
-        }}
-      />
-
-      {/* Content */}
       <div className="relative z-10">
-        <div className="mb-4 text-sm font-bold opacity-90 transition-colors group-hover/card:text-red-600">
-          {stat.label}
-        </div>
+        <div className="mb-4 text-sm font-bold opacity-90">{stat.label}</div>
         <div className="flex items-center justify-between">
-          <div className="font-heading text-4xl font-bold transition-colors group-hover/card:text-red-600">
-            {stat.value}
-          </div>
-          <Icon
-            name={stat.icon}
-            className="h-6 w-6 opacity-50 transition-colors group-hover/card:text-red-600 group-hover/card:opacity-100"
-          />
+          <div className="font-heading text-4xl font-bold">{stat.value}</div>
+          <Icon name={stat.icon} className="h-6 w-6 opacity-50" />
         </div>
       </div>
     </div>
@@ -78,9 +44,7 @@ export function WhoWeAre({
         {/* Left Side: Content */}
         <div className="flex flex-col items-start space-y-12 text-left">
           <div className="w-full text-left">
-            <h2 className="font-heading mb-6 text-4xl font-bold  lg:text-5xl">
-              {heading}
-            </h2>
+            <h2 className="font-heading mb-6 text-4xl font-bold  lg:text-5xl">{heading}</h2>
           </div>
 
           <div className="w-full">
@@ -107,14 +71,14 @@ export function WhoWeAre({
             {/* Column 1 - Scroll Up */}
             <div className="animate-scroll-up flex flex-col gap-6 pb-6 group-hover/scroller:[animation-play-state:paused]">
               {col1Stats.map((stat, i) => (
-                <HoverCard key={i} stat={stat} />
+                <StatCard key={i} stat={stat} />
               ))}
             </div>
 
             {/* Column 2 - Scroll Down */}
             <div className="animate-scroll-down flex flex-col gap-6 pb-6 group-hover/scroller:[animation-play-state:paused]">
               {col2Stats.map((stat, i) => (
-                <HoverCard key={i} stat={stat} />
+                <StatCard key={i} stat={stat} />
               ))}
             </div>
           </div>

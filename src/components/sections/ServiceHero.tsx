@@ -8,12 +8,9 @@ import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-import { useTypewriterText, type TypewriterPhrase } from "@/hooks/useTypewriterText";
-
 export interface ServiceHeroProps {
   title: string | ReactNode;
   description: string;
-  badge?: string;
   videoUrl?: string;
   primaryCta?: {
     label: string;
@@ -23,38 +20,18 @@ export interface ServiceHeroProps {
     label: string;
     href: string;
   };
-  motionPhrases?: TypewriterPhrase[];
 }
-
-const DEFAULT_PHRASES: TypewriterPhrase[] = [
-  { id: "connections", text: "Connections", color: "#f4fbff" },
-  { id: "insights", text: "Insights", color: "#a8e7f8" },
-  { id: "outreach", text: "Outreach", color: "#d2f5ff" },
-  { id: "pipeline", text: "Pipeline", color: "#7fd8f2" },
-  { id: "revenue", text: "Revenue", color: "#dff8ff" },
-];
 
 export function ServiceHero({
   title,
   description,
-  badge = "GLOBAL CAPABILITY. STRATEGIC GROWTH.",
   videoUrl = "/videos/hero-gtc-2026.mp4",
   primaryCta,
   secondaryCta,
-  motionPhrases = DEFAULT_PHRASES,
 }: ServiceHeroProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 100]);
-
-  const { activePhrase, displayedText, prefersReducedMotion } = useTypewriterText(motionPhrases, {
-    typeSpeedMs: 52,
-    deleteSpeedMs: 26,
-    wordHoldMs: 1320,
-    nextWordDelayMs: 220,
-  });
-
-  const animatedWord = prefersReducedMotion ? (motionPhrases[0]?.text ?? "") : displayedText;
 
   // Split title into lines if it's a string for the staggered reveal
   const titleLines = typeof title === "string" ? title.split("\n") : [title];
@@ -62,7 +39,7 @@ export function ServiceHero({
   return (
     <section
       ref={containerRef}
-      className="bg-brand-charcoal relative flex min-h-[100svh] items-end overflow-hidden pt-32 pb-20"
+      className="bg-brand-charcoal relative flex min-h-svh items-end overflow-hidden pt-32 pb-20"
     >
       {/* 1. Background Visuals (OG Blue Style) */}
       <div className="absolute inset-0 z-0">
@@ -89,34 +66,6 @@ export function ServiceHero({
       {/* 2. Content Area */}
       <div className="relative z-20 container mx-auto px-8">
         <motion.div style={{ y }} className="max-w-4xl">
-          {/* Typewriter Section (V2 Kicker) */}
-          <div className="mb-6 flex flex-col gap-2">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}
-              className="text-xs font-semibold tracking-[0.42em] text-white/70 uppercase lg:text-sm"
-            >
-              Turn Events Into
-            </motion.p>
-
-            <div className="flex min-h-[clamp(60px,10vw,140px)] items-end gap-3" aria-live="polite">
-              <span
-                className="font-heading text-[clamp(48px,10vw,140px)] leading-[0.88] font-black tracking-tighter text-white italic"
-                style={{
-                  color: activePhrase?.color ?? "#ffffff",
-                  textShadow: "0 20px 50px rgba(4, 9, 15, 0.24)",
-                }}
-              >
-                {animatedWord}
-              </span>
-              <span
-                className="mb-2 h-[clamp(30px,6vw,80px)] w-1 animate-pulse rounded-full bg-current"
-                style={{ color: activePhrase?.color ?? "#ffffff" }}
-              />
-            </div>
-          </div>
-
           {/* Staggered Title Reveal */}
           <h1
             className="font-heading mb-8 text-4xl leading-[1.02] font-black lg:text-7xl xl:text-8xl"

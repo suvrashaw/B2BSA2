@@ -3,10 +3,12 @@
 import { useRef, useState, useEffect } from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
+import { Button } from "@/components/ui/Button";
 import { HOME_BLOGS_CONTENT, type BlogItem, type BlogsContent } from "@/content/home";
 
 import type { MotionValue } from "framer-motion";
@@ -49,13 +51,13 @@ export function Blogs({
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading text-4xl leading-tight font-bold  lg:text-5xl">
-            {heading}
-          </h2>
-          <button className="hover:text-brand-primary:text-brand-primary group mt-8 flex  items-center gap-2 font-semibold transition-all duration-300">
-            {ctaLabel}{" "}
-            <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-          </button>
+          <h2 className="font-heading text-4xl leading-tight font-bold  lg:text-5xl">{heading}</h2>
+          <Link href="/insights">
+            <Button variant="tertiary" className="mt-8">
+              {ctaLabel}{" "}
+              <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </Button>
+          </Link>
         </div>
 
         <div
@@ -64,14 +66,15 @@ export function Blogs({
           onMouseLeave={() => setIsHovered(false)}
         >
           {blogs.map((blog, index) => (
-            <BlogCard
-              key={blog.id}
-              blog={blog}
-              index={index}
-              total={blogs.length}
-              isHovered={isHovered}
-              spread={spread}
-            />
+            <Link key={blog.id} href={`/insights/${blog.id}`} className="contents">
+              <BlogCard
+                blog={blog}
+                index={index}
+                total={blogs.length}
+                isHovered={isHovered}
+                spread={spread}
+              />
+            </Link>
           ))}
         </div>
       </div>
@@ -115,12 +118,15 @@ function BlogCard({
   // Vertical spread distance for mobile
   const hoverY = relativeIndex * 300;
 
+  const activeX = isMobile ? 0 : hoverX;
+  const activeY = isMobile ? hoverY : 0;
+
   return (
     <motion.div
       style={{
         rotate: isHovered ? 0 : rotate,
-        x: isHovered ? (isMobile ? 0 : hoverX) : x,
-        y: isHovered ? (isMobile ? hoverY : 0) : y,
+        x: isHovered ? activeX : x,
+        y: isHovered ? activeY : y,
         zIndex: index,
       }}
       animate={{
@@ -145,9 +151,7 @@ function BlogCard({
       </div>
       <div className="p-8">
         <span className="mb-3 block text-sm font-medium text-gray-500">{blog.date}</span>
-        <h3 className="font-heading mb-6 text-2xl  leading-tight font-bold">
-          {blog.title}
-        </h3>
+        <h3 className="font-heading mb-6 text-2xl  leading-tight font-bold">{blog.title}</h3>
         <div className="text-brand-blue flex items-center gap-2 text-sm font-semibold tracking-widest uppercase">
           Read Article <ArrowUpRight className="h-4 w-4" />
         </div>

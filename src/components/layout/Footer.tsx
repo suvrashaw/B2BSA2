@@ -9,6 +9,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
 
+import { Button } from "@/components/ui/Button";
 import { Globe } from "@/components/ui/Globe";
 import { GlobalPresence } from "@/components/ui/GlobeVisualization";
 import { footerNavigation, serviceNavigationGroups } from "@/content/navigation";
@@ -75,9 +76,10 @@ export function Footer() {
                     className="rounded-md bg-transparent object-contain px-2 py-1 brightness-0 invert"
                   />
                 </Link>
-                <p className="mb-8 max-w-sm leading-relaxed text-gray-600">
-                  The premier growth partner for ambitious B2B enterprises. We design, execute, and
-                  scale high-conversion physical and digital experiences globally.
+                <p className="mb-8 max-w-sm leading-relaxed text-gray-400">
+                  Turn your next trade show into a revenue engine. We design immersive exhibition
+                  booths and execute data-driven event marketing strategies that deliver measurable
+                  enterprise pipeline.
                 </p>
 
                 <div className="flex items-center gap-4">
@@ -165,9 +167,13 @@ export function Footer() {
                     placeholder="Work Email"
                     className="focus:border-brand-primary w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white transition-colors placeholder:text-gray-500 focus:outline-none"
                   />
-                  <button className="bg-brand-primary hover:bg-brand-cyan absolute top-1/2 right-2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-md transition-colors">
+                  <Button
+                    variant="primary"
+                    size="icon"
+                    className="absolute top-1/2 right-2 h-8 w-8 -translate-y-1/2"
+                  >
                     <ArrowRight className="h-4 w-4 text-white" />
-                  </button>
+                  </Button>
                 </div>
               </div>
             </div>

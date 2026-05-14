@@ -81,7 +81,7 @@ export function Testimonials({
       <div className="pointer-events-none absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#1E6091]/5 blur-[100px]" />
 
       <div className="relative z-10 container mx-auto px-8">
-        <div className="mb-24 flex flex-col items-start text-left">
+        <div className="mb-12 flex flex-col items-start text-left">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -90,7 +90,7 @@ export function Testimonials({
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading mb-6 text-4xl font-bold text-gray-900 lg:text-5xl">
+          <h2 className="font-heading mb-6 text-left text-4xl font-bold text-gray-900 lg:text-5xl">
             {heading}
           </h2>
         </div>
@@ -107,8 +107,10 @@ export function Testimonials({
             const isVisible = absPos <= 2;
 
             // Apple Coverflow Animation Variables
-            const rotateY = isCenter ? 0 : (pos > 0 ? -25 : 25);
-            const x = isCenter ? 0 : (pos > 0 ? `${65 * absPos}%` : `-${65 * absPos}%`);
+            const sideRotateY = pos > 0 ? -25 : 25;
+            const rotateY = isCenter ? 0 : sideRotateY;
+            const sideX = pos > 0 ? `${65 * absPos}%` : `-${65 * absPos}%`;
+            const x = isCenter ? 0 : sideX;
             const z = isCenter ? 100 : -100 * absPos;
             const scale = isCenter ? 1 : 1 - 0.1 * absPos;
             const opacity = isCenter ? 1 : Math.max(0, 0.5 - 0.3 * (absPos - 1));
@@ -157,7 +159,7 @@ export function Testimonials({
                         {testimonial.name}
                       </p>
                       <div className="mt-1 flex gap-1">
-                        {[...new Array(testimonial.rating)].map((_, i) => (
+                        {Array.from({ length: testimonial.rating }).map((_, i) => (
                           <Star key={i} className="h-3.5 w-3.5 fill-[#1E6091] text-[#1E6091]" />
                         ))}
                       </div>
@@ -186,7 +188,7 @@ export function Testimonials({
         </div>
 
         {/* Custom Pagination & Navigation */}
-        <div className="relative z-50 mt-16 flex items-center justify-center gap-6">
+        <div className="relative z-50 mt-16 flex items-center justify-center gap-12">
           <button
             onClick={handlePrev}
             className="hover:border-[#1E6091]:bg-[#4BC0D9]:text-[#1a1c1e] flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 text-gray-600 shadow-sm transition-all duration-300 hover:bg-[#1E6091] hover:text-white"
@@ -195,13 +197,13 @@ export function Testimonials({
             <ChevronLeft className="h-5 w-5" />
           </button>
 
-          <div className="flex gap-2">
+          <div className="flex gap-3">
             {testimonials.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setActiveIndex(idx)}
                 className={`h-2 rounded-full transition-all duration-500 ease-out ${
-                  activeIndex === idx ? "w-8 bg-[#1E6091]" : "w-2 bg-gray-300"
+                  activeIndex === idx ? "w-10 bg-[#1E6091]" : "w-2 bg-gray-300"
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />

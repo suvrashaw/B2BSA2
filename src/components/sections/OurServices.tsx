@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
+import { Button } from "@/components/ui/Button";
 import Icon from "@/components/ui/Icon";
 import {
   HOME_SERVICES_CONTENT,
@@ -41,9 +42,7 @@ export function OurServices({
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading text-4xl leading-tight font-bold  lg:text-5xl">
-            {heading}
-          </h2>
+          <h2 className="font-heading text-4xl leading-tight font-bold  lg:text-5xl">{heading}</h2>
         </div>
 
         <div className="relative flex flex-col gap-12">
@@ -56,7 +55,7 @@ export function OurServices({
                 zIndex: index,
               }}
             >
-              <div className="bg-white group/card relative flex h-auto flex-col overflow-hidden rounded-3xl border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.06)] md:h-[400px] md:flex-row">
+              <div className="group/card relative flex h-auto flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.06)] md:h-[400px] md:flex-row">
                 {/* Content Area */}
                 <div className="pointer-events-none relative z-10 flex w-full flex-col justify-between p-8 transition-all duration-700 md:w-2/5 lg:p-12">
                   <div className="pointer-events-auto">
@@ -78,10 +77,13 @@ export function OurServices({
                     </p>
                   </div>
 
-                  <button className="bg-brand-charcoal hover:bg-brand-blue group md:group-has-[.image-pane:hover]/card:bg-brand-blue pointer-events-auto mt-10 flex w-max items-center justify-between rounded-lg px-6 py-3 text-white shadow-md transition-all duration-700 md:mt-0 md:group-has-[.image-pane:hover]/card:shadow-xl">
+                  <Button
+                    variant="secondary"
+                    className="md:group-has-[.image-pane:hover]/card:bg-brand-blue md:group-has-[.image-pane:hover]/card:border-brand-blue pointer-events-auto mt-10 w-max transition-all duration-700 md:mt-0 md:group-has-[.image-pane:hover]/card:text-white"
+                  >
                     <span className="mr-4">{ctaLabel}</span>
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </button>
+                  </Button>
                 </div>
 
                 {/* Image Area */}

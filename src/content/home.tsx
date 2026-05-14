@@ -217,23 +217,16 @@ export interface ContactContent {
 
 export const HOME_HERO_CONTENT: HomeHeroContent = {
   eyebrow: "GLOBAL CAPABILITY. STRATEGIC GROWTH.",
-  title: (
-    <>
-      The Strategic Growth Partner for <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Global B2B Enterprises
-      </span>
-    </>
-  ),
+  title: <>B2B Global Event Solutions & Trade Show Booth Design</>,
   description:
-    "We architect immersive event experiences, high-fidelity media production, and precision performance marketing that drives $1.2B+ in measurable pipeline for the world's leading tech brands.",
+    "Trusted across 30+ countries, we deliver custom trade show booth design, active on-ground prospecting, and end-to-end event execution that turns exhibitions into a qualified B2B sales pipeline.",
   image: {
     src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000",
     alt: "Global B2B enterprise growth strategy",
     loaderAlt: "Loader",
   },
-  primaryCtaLabel: "Request a Consultation",
-  secondaryCtaLabel: "Explore Our Work",
+  primaryCtaLabel: "Get a Custom Proposal",
+  secondaryCtaLabel: "See Our Work",
   stat: {
     value: "30+",
     label: "Countries Served",
@@ -258,11 +251,7 @@ export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = {
       opacityOutput: [0, 1, 1],
       yInput: [0, 0.15],
       yOutput: [30, 0],
-      title: (
-        <>
-          Immersive <br /> Experience.
-        </>
-      ),
+      title: <>Immersive Experience.</>,
       titleClassName:
         "font-heading text-5xl md:text-7xl font-bold text-white leading-tight drop-shadow-lg",
     },
@@ -279,11 +268,7 @@ export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = {
         className:
           "text-brand-cyan uppercase tracking-[0.3em] text-sm font-bold block mb-4 drop-shadow-md",
       },
-      title: (
-        <>
-          A strategic approach to <br /> spatial storytelling.
-        </>
-      ),
+      title: <>A strategic approach to spatial storytelling.</>,
       titleClassName:
         "font-heading text-4xl md:text-6xl font-bold text-white leading-tight drop-shadow-lg",
       description: {
@@ -304,11 +289,7 @@ export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = {
         className:
           "text-brand-blue uppercase tracking-[0.3em] text-sm font-bold block mb-4 drop-shadow-md",
       },
-      title: (
-        <>
-          From Blueprint <br /> to Reality.
-        </>
-      ),
+      title: <>From Blueprint to Reality.</>,
       titleClassName:
         "font-heading text-4xl md:text-6xl font-bold text-white leading-tight drop-shadow-lg",
     },
@@ -320,11 +301,7 @@ export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = {
       opacityOutput: [0, 1, 1],
       yInput: [0.75, 0.85],
       yOutput: [30, 0],
-      title: (
-        <>
-          Command The <br /> Floor.
-        </>
-      ),
+      title: <>Command The Floor.</>,
       titleClassName:
         "font-heading text-5xl md:text-7xl font-bold text-white leading-tight mb-8 drop-shadow-lg",
       cta: {
@@ -346,14 +323,9 @@ export const HOME_CLIENT_LOGOS: ClientLogoItem[] = [
 ];
 
 export const HOME_WHO_WE_ARE_CONTENT: WhoWeAreContent = {
-  heading: (
-    <>
-      Proven Results. <br />
-      <span className="text-brand-blue">Global Scale.</span>
-    </>
-  ),
+  heading: <>Your Trusted Global B2B Event Partner</>,
   quote:
-    '"Our mission is to transform your global event presence into measurable, high-impact commercial outcomes."',
+    "We don't just design exhibition booths — we build sales pipelines. B2B Sales Arrow combines custom trade show booth design, on-ground lead generation, and performance-driven event marketing to turn floor traffic into qualified enterprise opportunities. One partner. One end-to-end B2B event solution built to drive measurable results.",
   attribution: "\u2014 Leadership Team, B2B Sales Arrow",
   stats: [
     {
@@ -385,14 +357,7 @@ export const HOME_WHO_WE_ARE_CONTENT: WhoWeAreContent = {
 
 export const HOME_SERVICES_CONTENT: HomeServicesContent = {
   eyebrow: "OUR CORE PILLARS",
-  heading: (
-    <>
-      Our Core Pillars of <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Enterprise Growth
-      </span>
-    </>
-  ),
+  heading: <>Our B2B Event Services & Trade Show Solutions</>,
   serviceLabel: "Service",
   ctaLabel: "Learn More",
   services: [
@@ -491,12 +456,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
 
 export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
   eyebrow: "PROVEN EXECUTION",
-  heading: (
-    <>
-      Proven Global Event Solutions: <br />
-      <span className="text-brand-blue">Enterprise Success Stories</span>
-    </>
-  ),
+  heading: <>Proven Global Event Solutions: Enterprise Success Stories</>,
   ctaLabel: "Full Study",
   viewAllLabel: "View All Work",
   items: [
@@ -520,8 +480,8 @@ export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
       challenge: "High-speed outreach for executive meetings.",
       solution:
         "Through rapid pre-event outreach and on-ground prospecting, we secured 60 executive meetings—doubling the initial target within a high-speed, 10-day campaign.",
-      metric: "2x",
-      metricLabel: "Pipeline Target",
+      metric: "60",
+      metricLabel: "Meetings Secured",
       icon: "Plane",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
@@ -544,59 +504,129 @@ export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
 
 export const HOME_UPCOMING_EVENTS_CONTENT: UpcomingEventsContent = {
   eyebrow: "GLOBAL PRESENCE",
-  heading: (
-    <>
-      Upcoming Trade Shows & <br />
-      <span className="text-brand-blue">Global Industry Events</span>
-    </>
-  ),
+  heading: <>Upcoming Trade Shows & Global Industry Events</>,
   badgeLabel: "Upcoming",
   ctaLabel: "Meet Us There!",
   viewAllLabel: "View All Events",
   events: [
     {
-      id: "adobe-summit",
+      id: "adobe",
       title: "Adobe Summit",
       date: "2026",
       location: "Global",
       image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
     },
     {
-      id: "nvidia-gtc",
-      title: "NVIDIA GTC 2026",
+      id: "autotech",
+      title: "Autotech",
       date: "2026",
-      location: "USA",
+      location: "Global",
       image:
-        "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=800",
     },
     {
-      id: "sap-sapphire",
-      title: "SAP Sapphire 2026",
+      id: "cba",
+      title: "CBA Live",
       date: "2026",
-      location: "Madrid & Orlando",
+      location: "Global",
       image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800",
     },
     {
-      id: "hannover-messe",
+      id: "databricks",
+      title: "Databricks Summit",
+      date: "2026",
+      location: "Global",
+      image:
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
+    },
+    {
+      id: "hannover",
       title: "Hannover Messe",
       date: "2026",
       location: "Germany",
       image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
+    },
+    {
+      id: "hp",
+      title: "HP Discovery",
+      date: "2026",
+      location: "Global",
+      image:
+        "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=800",
+    },
+    {
+      id: "iucx",
+      title: "IUCX",
+      date: "2026",
+      location: "Global",
+      image:
+        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800",
+    },
+    {
+      id: "itw",
+      title: "ITW (International Telecoms Week)",
+      date: "2026",
+      location: "Global",
+      image:
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
+    },
+    {
+      id: "nvidia",
+      title: "NVIDIA GTC 2026",
+      date: "2026",
+      location: "USA",
+      image:
+        "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=800",
+    },
+    {
+      id: "sap-madrid",
+      title: "SAP Sapphire 2026 Madrid",
+      date: "2026",
+      location: "Spain",
+      image:
+        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800",
+    },
+    {
+      id: "sap-orlando",
+      title: "SAP Sapphire 2026 Orlando",
+      date: "2026",
+      location: "USA",
+      image:
+        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800",
+    },
+    {
+      id: "servicenow",
+      title: "ServiceNow Knowledge 2026",
+      date: "2026",
+      location: "Global",
+      image:
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
+    },
+    {
+      id: "snowflake",
+      title: "Snowflake Summit",
+      date: "2026",
+      location: "Global",
+      image:
+        "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=800",
+    },
+    {
+      id: "zenith",
+      title: "Zenith Live",
+      date: "2026",
+      location: "Global",
+      image:
+        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800",
     },
   ],
 };
 
 export const HOME_WHY_CHOOSE_US_CONTENT: WhyChooseUsContent = {
   eyebrow: "THE B2BSA ADVANTAGE",
-  heading: (
-    <>
-      Why the World&apos;s Leading Brands <br />
-      <span className="text-brand-cyan">Choose B2B Sales Arrow</span>
-    </>
-  ),
+  heading: <>Why the World&apos;s Leading Brands Choose B2B Sales Arrow</>,
   reasons: [
     {
       id: "revenue-driven",
@@ -643,12 +673,7 @@ export const HOME_WHY_CHOOSE_US_CONTENT: WhyChooseUsContent = {
 
 export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
   eyebrow: "CLIENT SUCCESS",
-  heading: (
-    <>
-      What Our <br />
-      <span className="text-[#1E6091]">Clients Say?</span>
-    </>
-  ),
+  heading: <>What Our Clients Say?</>,
   autoplayInterval: 3000,
   initialIndex: 2,
   testimonials: [
@@ -690,12 +715,7 @@ export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
 
 export const HOME_BLOGS_CONTENT: BlogsContent = {
   eyebrow: "INSIGHTS & INTELLIGENCE",
-  heading: (
-    <>
-      Expert Strategies to Maximize Your <br />
-      <span className="text-brand-primary">Global Event Solutions</span>
-    </>
-  ),
+  heading: <>Expert Strategies to Maximize Your Global Event Solutions</>,
   ctaLabel: "Explore Intelligence",
   blogs: [
     {
@@ -727,14 +747,7 @@ export const HOME_BLOGS_CONTENT: BlogsContent = {
 
 export const HOME_FAQ_CONTENT: FAQContent = {
   eyebrow: "INTELLIGENCE & CLARITY",
-  heading: (
-    <>
-      Frequently Asked <br />
-      <span className="from-brand-blue to-brand-cyan bg-gradient-to-r bg-clip-text text-transparent">
-        Questions
-      </span>
-    </>
-  ),
+  heading: <>Frequently Asked Questions</>,
   description:
     "Everything you need to know about our global event solutions and how we drive pipeline for enterprise brands.",
   scrollAmount: 340,
@@ -792,16 +805,9 @@ export const HOME_FAQ_CONTENT: FAQContent = {
 
 export const HOME_CONTACT_CONTENT: ContactContent = {
   eyebrow: "START THE CONVERSATION",
-  heading: (
-    <>
-      Ready to Build Your <br />
-      <span className="from-brand-blue to-brand-cyan bg-gradient-to-r bg-clip-text text-transparent">
-        Global Event Strategy?
-      </span>
-    </>
-  ),
+  heading: <>Ready to Build Your Global Event Strategy?</>,
   description:
-    "Partner with B2B Sales Arrow to design high-impact trade show booths and execute data-driven event marketing strategies that generate qualified leads and pipeline.",
+    "Partner with B2B Sales Arrow to design high-impact trade show booths and execute data-driven event marketing strategies that generate qualified leads and pipeline. Share your requirements, and our team will create a tailored plan for your next exhibition.",
   illustration: {
     src: "/undraw_contact-us_s4jn.svg",
     alt: "Contact Us",
@@ -816,13 +822,15 @@ export const HOME_CONTACT_CONTENT: ContactContent = {
     serviceLabel: "Service of Interest",
     servicePlaceholder: "Select a service...",
     serviceOptions: [
-      { value: "booth", label: "Event Booth Design" },
-      { value: "media", label: "Media Production" },
-      { value: "digital", label: "Digital Marketing" },
-      { value: "lead", label: "Lead Generation" },
+      { value: "end-to-end", label: "End-to-End Global Event Solutions" },
+      { value: "booth-design", label: "Trade Show Booth Design & Production" },
+      { value: "on-ground", label: "On-Ground Active Prospecting" },
+      { value: "media", label: "Corporate Media Production" },
+      { value: "research", label: "Database & Market Research" },
+      { value: "marketing", label: "Performance Marketing" },
     ],
-    messageLabel: "Message",
-    messagePlaceholder: "How can we help you grow?",
-    ctaLabel: "Send Inquiry",
+    messageLabel: "Tell us about your event goals and requirements",
+    messagePlaceholder: "Enter your requirements here...",
+    ctaLabel: "Get Your Custom Proposal",
   },
 };

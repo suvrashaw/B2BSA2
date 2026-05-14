@@ -3,14 +3,14 @@ export const MEDIA_HERO = {
   eyebrow: "B2B MEDIA PRODUCTION",
   title: (
     <>
-      B2B Media Production That <br />
+      Corporate Media Production{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Builds Enterprise Authority
+        That Builds Market Authority
       </span>
     </>
   ),
   description:
-    "We produce cinematic content that makes your brand impossible to ignore — from live event coverage to corporate video series and everything in between.",
+    "We produce high-fidelity corporate video, event coverage, and executive interviews that turn brand visibility into commercial authority. Cinematic execution meets strategic B2B messaging.",
   image: {
     src: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=2000",
     alt: "Professional video production studio",
@@ -29,9 +29,9 @@ export const MEDIA_SERVICES = {
   eyebrow: "OUR CAPABILITIES",
   heading: (
     <>
-      B2B Media Production <br />
+      High-Impact Outreach &{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Solutions
+        Interactive Exhibits
       </span>
     </>
   ),
@@ -187,8 +187,7 @@ export const MEDIA_CASE_STUDIES = {
   eyebrow: "MEDIA RESULTS",
   heading: (
     <>
-      Content That Built <br />
-      <span className="text-brand-blue">Market Authority</span>
+      Global Reach <span className="text-brand-blue">Local Execution</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -226,8 +225,7 @@ export const MEDIA_TESTIMONIALS = {
   eyebrow: "CLIENT SUCCESS",
   heading: (
     <>
-      Brands Whose Stories <br />
-      <span className="text-[#1E6091]">We Told</span>
+      Brands That Shared <span className="text-[#1E6091]">Their Stories</span>
     </>
   ),
   autoplayInterval: 3500,
@@ -273,8 +271,7 @@ export const MEDIA_BLOGS = {
   eyebrow: "MEDIA INSIGHTS",
   heading: (
     <>
-      Video Strategy for <br />
-      <span className="text-brand-primary">B2B Growth</span>
+      Corporate Media <span className="text-brand-primary">Insights</span>
     </>
   ),
   ctaLabel: "View All Media Articles",
@@ -310,7 +307,7 @@ export const MEDIA_FAQ = {
   eyebrow: "MEDIA PRODUCTION FAQ",
   heading: (
     <>
-      Frequently Asked <br />
+      Frequently Asked{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Questions
       </span>

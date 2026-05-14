@@ -8,7 +8,8 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Globe, Menu, X } from "lucide-react";
 
-import { serviceNavigationGroups, topNavigation } from "@/content/navigation";
+import { Button } from "@/components/ui/Button";
+import { serviceNavigationGroups, topNavigation, tradeShowLinks } from "@/content/navigation";
 import { cn } from "@/lib";
 
 // Remove ThemeToggle import
@@ -17,6 +18,7 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const solidHeader = forceLightMode || scrolled;
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,7 +70,7 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
               )}
             >
               {link.name}
-              {link.name === "Services" && (
+              {(link.name === "Services" || link.name === "Trade Shows") && (
                 <ChevronDown className="h-3.5 w-3.5 opacity-70 transition-transform duration-300 group-hover/nav-item:rotate-180" />
               )}
               <span className="bg-brand-blue absolute -bottom-1 left-0 h-[2px] w-0 transition-all duration-300 group-hover/nav-item:w-full" />
@@ -106,6 +108,24 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
                 </div>
               </div>
             )}
+
+            {link.name === "Trade Shows" && (
+              <div className="pointer-events-none absolute top-[80%] left-1/2 z-[100] -translate-x-1/2 translate-y-2 pt-4 opacity-0 transition-all duration-300 group-hover/nav-item:pointer-events-auto group-hover/nav-item:translate-y-0 group-hover/nav-item:opacity-100">
+                <div className="w-64 rounded-lg border border-gray-100 bg-white/95 p-4 shadow-[0_20px_50px_rgba(0,0,0,0.1)] backdrop-blur-md">
+                  <div className="flex flex-col gap-3">
+                    {tradeShowLinks.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="hover:text-brand-blue block text-sm font-semibold transition-colors"
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         ))}
       </nav>
@@ -127,10 +147,9 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
         </button>
 
         <Link href="/contact-us">
-          <button className="bg-brand-blue hover:bg-brand-blue/90 group relative overflow-hidden rounded px-6 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:shadow-[0_0_15px_rgba(75,192,217,0.4)]">
-            <span className="relative z-10">Let&apos;s Talk</span>
-            <div className="from-brand-blue to-brand-cyan absolute inset-0 bg-gradient-to-r opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-          </button>
+          <Button variant="primary" size="sm">
+            Let&apos;s Talk
+          </Button>
         </Link>
         <div className="lg:hidden">
           <button
@@ -154,7 +173,7 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
               <div key={link.name} className="space-y-4">
                 <Link
                   href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={closeMobileMenu}
                   className="font-heading hover:text-brand-blue block  text-2xl font-bold transition-colors"
                 >
                   {link.name}
@@ -165,7 +184,7 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
                       <div key={group.name} className="space-y-2">
                         <Link
                           href={group.href}
-                          onClick={() => setIsMobileMenuOpen(false)}
+                          onClick={closeMobileMenu}
                           className="hover:text-brand-blue block  text-lg font-bold transition-colors"
                         >
                           {group.name}
@@ -174,7 +193,7 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
                           <Link
                             key={sub.name}
                             href={sub.href}
-                            onClick={() => setIsMobileMenuOpen(false)}
+                            onClick={closeMobileMenu}
                             className="hover:text-brand-blue block pl-4 text-base font-medium text-gray-500 transition-colors"
                           >
                             {sub.name}
@@ -186,10 +205,10 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
                 )}
               </div>
             ))}
-            <Link href="/contact-us" onClick={() => setIsMobileMenuOpen(false)}>
-              <button className="bg-brand-blue mt-4 w-full rounded-xl py-4 font-bold text-white">
+            <Link href="/contact-us" onClick={closeMobileMenu}>
+              <Button variant="primary" className="mt-4 w-full">
                 Let&apos;s Talk
-              </button>
+              </Button>
             </Link>
           </motion.div>
         )}
