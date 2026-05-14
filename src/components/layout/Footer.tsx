@@ -74,10 +74,10 @@ export function Footer() {
                     alt="B2B Sales Arrow"
                     fill
                     sizes="192px"
-                    className="rounded-md bg-transparent object-contain px-2 py-1 brightness-0 invert"
+                    className="rounded-md bg-transparent object-contain object-left brightness-0 invert"
                   />
                 </Link>
-                <p className="mb-8 max-w-sm leading-relaxed text-gray-400">
+                <p className="mb-8 max-w-sm text-sm leading-relaxed text-gray-400">
                   Turn your next trade show into a revenue engine. We design immersive exhibition
                   booths and execute data-driven event marketing strategies that deliver measurable
                   enterprise pipeline.
@@ -105,15 +105,15 @@ export function Footer() {
               </div>
 
               <div className="lg:col-span-2">
-                <span className="font-heading mb-6 block text-lg font-bold text-white">
+                <span className="mb-4 block text-xs font-semibold tracking-widest text-gray-500 uppercase">
                   Navigation
                 </span>
-                <ul className="space-y-4">
+                <ul className="space-y-3">
                   {footerNavigation.map((item) => (
                     <li key={item.name}>
                       <Link
                         href={item.href}
-                        className="hover:text-brand-primary text-sm font-medium text-gray-400 transition-colors"
+                        className="text-sm font-medium text-gray-300 transition-colors hover:text-white"
                       >
                         {item.name}
                       </Link>
@@ -123,7 +123,7 @@ export function Footer() {
               </div>
 
               <div className="lg:col-span-4">
-                <span className="font-heading mb-6 block text-lg font-bold text-white">
+                <span className="mb-4 block text-xs font-semibold tracking-widest text-gray-500 uppercase">
                   Stay Ahead
                 </span>
                 <p className="mb-4 text-sm text-gray-500">
