@@ -50,7 +50,7 @@ export function Header({
       <div className="flex items-center gap-2">
         <Link
           href="/"
-          className="relative block h-10 w-40 transition-all duration-300 hover:opacity-80"
+          className="relative block h-14 w-52 transition-all duration-300 hover:opacity-80"
         >
           <Image
             src="/logo.png"
