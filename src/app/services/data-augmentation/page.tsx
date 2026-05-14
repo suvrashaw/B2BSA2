@@ -13,12 +13,12 @@ import {
 
 import type { Metadata } from "next";
 
-export const metadata: Metadata = getPageMetadata("/services/market-research/data-augmentation");
+export const metadata: Metadata = getPageMetadata("/services/data-augmentation");
 
 export default function Page() {
   return (
     <ServiceDetail
-      canonicalPath="/services/market-research/data-augmentation"
+      canonicalPath="/services/data-augmentation"
       hero={DA_HERO}
       why={DA_WHY}
       deliverables={DA_DELIVERABLES}

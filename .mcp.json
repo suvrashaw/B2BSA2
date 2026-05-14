@@ -11,6 +11,26 @@
     "framelink": {
       "command": "/Users/suvra/Documents/B2BSA2/scripts/mcp-framelink.sh",
       "args": []
+    },
+    "21st-dev": {
+      "command": "/Users/suvra/Documents/B2BSA2/scripts/mcp-21st-dev.sh",
+      "args": []
+    },
+    "shadcn": {
+      "command": "/Users/suvra/Documents/B2BSA2/scripts/mcp-shadcn.sh",
+      "args": []
+    },
+    "magicui": {
+      "command": "/Users/suvra/Documents/B2BSA2/scripts/mcp-magic-ui.sh",
+      "args": []
+    },
+    "vercel-v0": {
+      "command": "/Users/suvra/Documents/B2BSA2/scripts/mcp-v0.sh",
+      "args": []
+    },
+    "tailwindcss": {
+      "command": "/Users/suvra/Documents/B2BSA2/scripts/mcp-tailwindcss.sh",
+      "args": []
     }
   }
 }

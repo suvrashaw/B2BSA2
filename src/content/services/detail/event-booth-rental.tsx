@@ -3,9 +3,9 @@ export const EBR_HERO = {
   eyebrow: "EVENT BOOTH RENTAL",
   title: (
     <>
-      Premium Trade Show Booth Rental — <br />
+      Trade Show Booth Rental — <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Deploy Globally in Weeks
+        Enterprise Presence Without the Build Timeline
       </span>
     </>
   ),
@@ -25,8 +25,8 @@ export const EBR_WHY = {
   eyebrow: "RENTAL VS BUILD",
   heading: (
     <>
-      When Booth Rental Makes More <br />
-      <span className="text-brand-cyan">Sense Than Custom Builds</span>
+      When Rental Is <br />
+      <span className="text-brand-cyan">the Smarter Decision</span>
     </>
   ),
   reasons: [
@@ -69,9 +69,9 @@ export const EBR_DELIVERABLES = {
   eyebrow: "INCLUSIONS",
   heading: (
     <>
-      What Every Rental <br />
+      Our Rental <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Package Includes
+        Booth Range
       </span>
     </>
   ),
@@ -163,8 +163,8 @@ export const EBR_CASE_STUDIES = {
   eyebrow: "BOOTH RENTAL RESULTS",
   heading: (
     <>
-      First-Time Exhibitors <br />
-      <span className="text-brand-blue">Who Stood Out</span>
+      Real Events. <br />
+      <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -201,8 +201,8 @@ export const EBR_TESTIMONIALS = {
   eyebrow: "CLIENT RESULTS",
   heading: (
     <>
-      Exhibitors Who <br />
-      <span className="text-[#1E6091]">Chose Smart</span>
+      Real Events. <br />
+      <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,

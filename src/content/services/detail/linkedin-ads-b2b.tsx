@@ -3,9 +3,9 @@ export const LIADS_HERO = {
   eyebrow: "LINKEDIN ADS FOR B2B",
   title: (
     <>
-      LinkedIn Ads for B2B — The <br />
+      LinkedIn Ads for B2B — The Highest-Intent <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Highest-Intent Pipeline Channel
+        Enterprise Pipeline Channel
       </span>
     </>
   ),
@@ -25,8 +25,8 @@ export const LIADS_WHY = {
   eyebrow: "ENTERPRISE TARGETING",
   heading: (
     <>
-      Why LinkedIn Is the #1 Paid <br />
-      <span className="text-brand-cyan">Channel for Enterprise B2B</span>
+      The Most Precise <br />
+      <span className="text-brand-cyan">B2B Targeting Channel</span>
     </>
   ),
   reasons: [
@@ -71,7 +71,7 @@ export const LIADS_DELIVERABLES = {
     <>
       LinkedIn Ad Formats <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        We Specialize In
+        We Specialise In
       </span>
     </>
   ),
@@ -163,8 +163,8 @@ export const LIADS_CASE_STUDIES = {
   eyebrow: "LINKEDIN ADS RESULTS",
   heading: (
     <>
-      Campaigns That Reached <br />
-      <span className="text-brand-blue">the Right Desks</span>
+      Real Events. <br />
+      <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -202,8 +202,8 @@ export const LIADS_TESTIMONIALS = {
   eyebrow: "CLIENT RESULTS",
   heading: (
     <>
-      Brands That Reached <br />
-      <span className="text-[#1E6091]">the C-Suite on LinkedIn</span>
+      Real Events. <br />
+      <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,

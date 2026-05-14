@@ -70,7 +70,7 @@ export function ServiceHub({
         title={hero.title || ""}
         description={hero.description || ""}
         primaryCta={
-          hero.primaryCtaLabel ? { label: hero.primaryCtaLabel, href: "/contact-us" } : undefined
+          hero.primaryCtaLabel ? { label: hero.primaryCtaLabel, href: "/contact" } : undefined
         }
         secondaryCta={
           hero.secondaryCtaLabel

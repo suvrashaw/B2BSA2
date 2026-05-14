@@ -22,8 +22,8 @@ export function Footer() {
   });
 
   // Globe Animation: Start large in the center, shrink down and move up slightly
-  const globeScale = useTransform(scrollYProgress, [0, 1], [1.3, 0.7]);
-  const globeY = useTransform(scrollYProgress, [0, 1], ["5%", "-15%"]);
+  const globeScale = useTransform(scrollYProgress, [0, 1], [1, 0.7]);
+  const globeY = useTransform(scrollYProgress, [0, 1], ["18%", "-10%"]);
 
   // Footer Content Animation: Slide up from the bottom as you scroll
   const contentY = useTransform(scrollYProgress, [0, 1], ["100%", "0%"]);
@@ -47,7 +47,7 @@ export function Footer() {
           className="absolute inset-0 z-0 flex origin-center items-center justify-center"
         >
           {/* We ensure it's fully interactive when dragged */}
-          <div className="flex h-[800px] w-[800px] items-center justify-center">
+          <div className="flex h-[min(62vh,800px)] w-[min(92vw,800px)] items-center justify-center">
             <Globe />
           </div>
         </motion.div>
@@ -77,10 +77,12 @@ export function Footer() {
                     className="rounded-md bg-transparent object-contain object-left brightness-0 invert"
                   />
                 </Link>
+                <h2 className="mb-3 text-lg font-bold text-white">
+                  Turn Your Next Trade Show into a Revenue Engine
+                </h2>
                 <p className="mb-8 max-w-sm text-sm leading-relaxed text-gray-400">
-                  Turn your next trade show into a revenue engine. We design immersive exhibition
-                  booths and execute data-driven event marketing strategies that deliver measurable
-                  enterprise pipeline.
+                  We deliver premier global event solutions that turn your corporate presence into a
+                  measurable revenue engine. Let&apos;s build your pipeline together.
                 </p>
                 <div className="flex items-center gap-4">
                   <a

@@ -3,9 +3,9 @@ export const HPMI_HERO = {
   eyebrow: "B2B MARKET INTELLIGENCE",
   title: (
     <>
-      Human-Powered Market Intelligence — The <br />
+      Human-Powered Market Intelligence — The Insight <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Insight Automated Tools Can&apos;t Deliver
+        Automated Tools Cannot Deliver
       </span>
     </>
   ),
@@ -25,8 +25,8 @@ export const HPMI_WHY = {
   eyebrow: "STRATEGIC INSIGHT",
   heading: (
     <>
-      Why Human Intelligence Delivers <br />
-      <span className="text-brand-cyan">What Automated Tools Cannot</span>
+      What Automated Research <br />
+      <span className="text-brand-cyan">Tools Cannot Do</span>
     </>
   ),
   reasons: [
@@ -69,9 +69,9 @@ export const HPMI_DELIVERABLES = {
   eyebrow: "OUR RESEARCH SERVICES",
   heading: (
     <>
-      Our Market Intelligence <br />
+      What We Research <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Research Services
+        and Deliver
       </span>
     </>
   ),
@@ -163,8 +163,8 @@ export const HPMI_CASE_STUDIES = {
   eyebrow: "INTELLIGENCE RESULTS",
   heading: (
     <>
-      Markets We&apos;ve Helped <br />
-      <span className="text-brand-blue">Our Clients Enter</span>
+      Real Events. <br />
+      <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -203,8 +203,8 @@ export const HPMI_TESTIMONIALS = {
   eyebrow: "CLIENT RESULTS",
   heading: (
     <>
-      Leaders Who Made <br />
-      <span className="text-[#1E6091]">Better Decisions Faster</span>
+      Real Events. <br />
+      <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,

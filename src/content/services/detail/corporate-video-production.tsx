@@ -3,9 +3,9 @@ export const CVP_HERO = {
   eyebrow: "CORPORATE VIDEO PRODUCTION",
   title: (
     <>
-      Corporate Video Production That <br />
+      Corporate Video Production Solutions That <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Commands Enterprise Attention
+        Command Enterprise Attention
       </span>
     </>
   ),
@@ -69,7 +69,7 @@ export const CVP_DELIVERABLES = {
   eyebrow: "WHAT WE PRODUCE",
   heading: (
     <>
-      Corporate Video Content <br />
+      What <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         We Produce
       </span>
@@ -162,8 +162,8 @@ export const CVP_CASE_STUDIES = {
   eyebrow: "CORPORATE VIDEO RESULTS",
   heading: (
     <>
-      Brands We&apos;ve Made <br />
-      <span className="text-brand-blue">Look World-Class</span>
+      Real Events. <br />
+      <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -200,8 +200,8 @@ export const CVP_TESTIMONIALS = {
   eyebrow: "CLIENT RESULTS",
   heading: (
     <>
-      Executives Who Found <br />
-      <span className="text-[#1E6091]">Their Voice on Video</span>
+      Real Events. <br />
+      <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,

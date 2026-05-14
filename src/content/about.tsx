@@ -1,7 +1,7 @@
 export const ABOUT_HERO = {
   showPreloader: false,
   eyebrow: "WHO WE ARE",
-  title: <>Built for Enterprise Growth</>,
+  title: <>We Are the Growth Partner Your Enterprise Deserves</>,
   description:
     "B2B Sales Arrow was founded with a single conviction: enterprise brands deserve a partner that treats pipeline as a science, not a guess.",
   image: {

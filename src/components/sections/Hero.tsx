@@ -76,7 +76,7 @@ export function Hero({
 
           <div className="flex flex-wrap items-center gap-4">
             {primaryCtaLabel ? (
-              <Link href="/contact-us">
+              <Link href="/contact">
                 <Button variant="primary">
                   {primaryCtaLabel}
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

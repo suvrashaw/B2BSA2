@@ -13,14 +13,12 @@ import {
 
 import type { Metadata } from "next";
 
-export const metadata: Metadata = getPageMetadata(
-  "/services/performance-marketing/paid-advertising"
-);
+export const metadata: Metadata = getPageMetadata("/services/paid-advertising");
 
 export default function Page() {
   return (
     <ServiceDetail
-      canonicalPath="/services/performance-marketing/paid-advertising"
+      canonicalPath="/services/paid-advertising"
       hero={PAID_HERO}
       why={PAID_WHY}
       deliverables={PAID_DELIVERABLES}

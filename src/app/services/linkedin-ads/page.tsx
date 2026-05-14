@@ -13,14 +13,12 @@ import {
 
 import type { Metadata } from "next";
 
-export const metadata: Metadata = getPageMetadata(
-  "/services/performance-marketing/linkedin-ads-b2b"
-);
+export const metadata: Metadata = getPageMetadata("/services/linkedin-ads");
 
 export default function Page() {
   return (
     <ServiceDetail
-      canonicalPath="/services/performance-marketing/linkedin-ads-b2b"
+      canonicalPath="/services/linkedin-ads"
       hero={LIADS_HERO}
       why={LIADS_WHY}
       deliverables={LIADS_DELIVERABLES}

@@ -3,7 +3,7 @@ export const ELG_HERO = {
   eyebrow: "EVENT LEAD GENERATION",
   title: (
     <>
-      Event Lead Generation Systems That <br />
+      Trade Show Lead Generation Systems That <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Fill Your Enterprise Pipeline
       </span>
@@ -69,9 +69,9 @@ export const ELG_DELIVERABLES = {
   eyebrow: "OUR SYSTEM",
   heading: (
     <>
-      Our Event Lead <br />
+      What Our Trade Show Lead <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Generation System
+        Generation Service Covers
       </span>
     </>
   ),
@@ -161,8 +161,8 @@ export const ELG_CASE_STUDIES = {
   eyebrow: "LEAD GENERATION RESULTS",
   heading: (
     <>
-      Pipeline Built <br />
-      <span className="text-brand-blue">On the Floor</span>
+      Real Events. <br />
+      <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -199,8 +199,8 @@ export const ELG_TESTIMONIALS = {
   eyebrow: "CLIENT RESULTS",
   heading: (
     <>
-      Exhibitors Who <br />
-      <span className="text-[#1E6091]">Maximised ROI</span>
+      Real Events. <br />
+      <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,

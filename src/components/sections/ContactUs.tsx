@@ -89,6 +89,31 @@ export function ContactUs({
                 </div>
               </div>
 
+              {(form.companyLabel || form.phoneLabel) && (
+                <div className="grid grid-cols-2 gap-6">
+                  {form.companyLabel && (
+                    <div className="space-y-2">
+                      <label className="text-sm font-bold text-gray-600">{form.companyLabel}</label>
+                      <input
+                        type="text"
+                        className="focus:border-brand-blue w-full rounded-xl border border-gray-200 bg-white px-4 py-3 transition-colors focus:outline-none"
+                        placeholder={form.companyPlaceholder}
+                      />
+                    </div>
+                  )}
+                  {form.phoneLabel && (
+                    <div className="space-y-2">
+                      <label className="text-sm font-bold text-gray-600">{form.phoneLabel}</label>
+                      <input
+                        type="tel"
+                        className="focus:border-brand-blue w-full rounded-xl border border-gray-200 bg-white px-4 py-3 transition-colors focus:outline-none"
+                        placeholder={form.phonePlaceholder}
+                      />
+                    </div>
+                  )}
+                </div>
+              )}
+
               <div className="space-y-2">
                 <label className="text-sm font-bold text-gray-600">{form.emailLabel}</label>
                 <input
@@ -110,6 +135,17 @@ export function ContactUs({
                 </select>
               </div>
 
+              {form.eventLabel && (
+                <div className="space-y-2">
+                  <label className="text-sm font-bold text-gray-600">{form.eventLabel}</label>
+                  <input
+                    type="text"
+                    className="focus:border-brand-blue w-full rounded-xl border border-gray-200 bg-white px-4 py-3 transition-colors focus:outline-none"
+                    placeholder={form.eventPlaceholder}
+                  />
+                </div>
+              )}
+
               <div className="space-y-2">
                 <label className="text-sm font-bold text-gray-600">{form.messageLabel}</label>
                 <textarea
@@ -118,6 +154,19 @@ export function ContactUs({
                   placeholder={form.messagePlaceholder}
                 ></textarea>
               </div>
+
+              {form.consentLabel && (
+                <div className="flex items-start gap-3">
+                  <input
+                    type="checkbox"
+                    id="contact-consent"
+                    className="border-brand-blue mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded"
+                  />
+                  <label htmlFor="contact-consent" className="text-sm leading-snug text-gray-500">
+                    {form.consentLabel}
+                  </label>
+                </div>
+              )}
 
               <Button
                 type="button"

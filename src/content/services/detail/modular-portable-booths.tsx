@@ -3,7 +3,7 @@ export const MPB_HERO = {
   eyebrow: "MODULAR & PORTABLE BOOTHS",
   title: (
     <>
-      Modular & Portable Booths — <br />
+      Modular and Portable Trade Show Booths — <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Engineered for Enterprise Efficiency
       </span>
@@ -25,8 +25,8 @@ export const MPB_WHY = {
   eyebrow: "THE MODULAR SHIFT",
   heading: (
     <>
-      Why Enterprise Brands Are Moving <br />
-      <span className="text-brand-cyan">to Modular Systems</span>
+      The Commercial Case <br />
+      <span className="text-brand-cyan">for Modular Systems</span>
     </>
   ),
   reasons: [
@@ -69,9 +69,9 @@ export const MPB_DELIVERABLES = {
   eyebrow: "OUR SYSTEM",
   heading: (
     <>
-      Your Complete <br />
+      Our Modular <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Modular System
+        Booth Range
       </span>
     </>
   ),
@@ -163,8 +163,8 @@ export const MPB_CASE_STUDIES = {
   eyebrow: "MODULAR BOOTH RESULTS",
   heading: (
     <>
-      Systems Used <br />
-      <span className="text-brand-blue">at Hundreds of Shows</span>
+      Real Events. <br />
+      <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -202,8 +202,8 @@ export const MPB_TESTIMONIALS = {
   eyebrow: "CLIENT RESULTS",
   heading: (
     <>
-      Exhibitors Who <br />
-      <span className="text-[#1E6091]">Travel Light & Win</span>
+      Real Events. <br />
+      <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,

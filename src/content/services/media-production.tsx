@@ -3,9 +3,9 @@ export const MEDIA_HERO = {
   eyebrow: "B2B MEDIA PRODUCTION",
   title: (
     <>
-      Corporate Media Production{" "}
+      B2B Media Production That Builds{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        That Builds Market Authority
+        Enterprise Authority Before the First Sales Call
       </span>
     </>
   ),
@@ -29,9 +29,9 @@ export const MEDIA_SERVICES = {
   eyebrow: "OUR CAPABILITIES",
   heading: (
     <>
-      High-Impact Outreach &{" "}
+      What{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Interactive Exhibits
+        We Produce
       </span>
     </>
   ),
@@ -78,34 +78,14 @@ export const MEDIA_SERVICES = {
         "https://images.unsplash.com/photo-1598743400863-0201c7e1445b?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-blue",
     },
-    {
-      id: "testimonials",
-      title: "Video Testimonials",
-      description:
-        "Professionally filmed client success stories that convert prospects more effectively than any written review.",
-      icon: "Users",
-      image:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-cyan",
-    },
-    {
-      id: "youtube-ads",
-      title: "YouTube Ads for B2B",
-      description:
-        "Pre-roll, in-stream, and bumper ad campaigns on YouTube engineered specifically for enterprise B2B audiences.",
-      icon: "Video",
-      image:
-        "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-primary",
-    },
   ],
 };
 
 export const MEDIA_STATS = {
   heading: (
     <>
-      Cinematic Storytelling <br />
-      <span className="text-brand-blue">Engineered for B2B Conversion</span>
+      We Don&apos;t Just Film — <br />
+      <span className="text-brand-blue">We Tell Stories That Sell</span>
     </>
   ),
   quote:
@@ -225,7 +205,7 @@ export const MEDIA_TESTIMONIALS = {
   eyebrow: "CLIENT SUCCESS",
   heading: (
     <>
-      Brands That Shared <span className="text-[#1E6091]">Their Stories</span>
+      Real Events. <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,
@@ -379,8 +359,6 @@ export const MEDIA_CONTACT = {
       { value: "corporate-video", label: "Corporate Video" },
       { value: "video-editing", label: "Video Editing" },
       { value: "live-streaming", label: "Live Streaming" },
-      { value: "testimonials", label: "Video Testimonials" },
-      { value: "youtube-ads", label: "YouTube Ads" },
     ],
     messageLabel: "Tell Us About Your Project",
     messagePlaceholder: "What video content do you need and what outcome are you targeting?",

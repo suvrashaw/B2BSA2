@@ -18,6 +18,11 @@ Use only the project-local MCP servers configured in this repository:
 - figma
 - figma-console
 - framelink
+- 21st-dev
+- shadcn
+- magicui
+- vercel-v0
+- tailwindcss
 
 These MCP servers must load credentials from this project’s `.env.mcp`.
 

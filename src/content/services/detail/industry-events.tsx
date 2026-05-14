@@ -69,9 +69,9 @@ export const IE_DELIVERABLES = {
   eyebrow: "FULL-SERVICE MANAGEMENT",
   heading: (
     <>
-      Full-Service Industry <br />
+      Key Events <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Event Management
+        Where We Execute
       </span>
     </>
   ),
@@ -163,8 +163,8 @@ export const IE_CASE_STUDIES = {
   eyebrow: "INDUSTRY EVENT RESULTS",
   heading: (
     <>
-      Events That <br />
-      <span className="text-brand-blue">Moved the Needle</span>
+      Real Events. <br />
+      <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -201,8 +201,8 @@ export const IE_TESTIMONIALS = {
   eyebrow: "CLIENT RESULTS",
   heading: (
     <>
-      Brands That <br />
-      <span className="text-[#1E6091]">Owned the Room</span>
+      Real Events. <br />
+      <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,

@@ -52,7 +52,7 @@ export function Blogs({
             {eyebrow}
           </motion.div>
           <h2 className="font-heading text-4xl leading-tight font-bold  lg:text-5xl">{heading}</h2>
-          <Link href="/insights">
+          <Link href="/blog">
             <Button variant="tertiary" className="mt-8">
               {ctaLabel}{" "}
               <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -66,7 +66,7 @@ export function Blogs({
           onMouseLeave={() => setIsHovered(false)}
         >
           {blogs.map((blog, index) => (
-            <Link key={blog.id} href={`/insights/${blog.id}`} className="contents">
+            <Link key={blog.id} href={`/blog/${blog.id}`} className="contents">
               <BlogCard
                 blog={blog}
                 index={index}

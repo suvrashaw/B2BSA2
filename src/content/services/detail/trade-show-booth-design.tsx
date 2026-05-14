@@ -3,9 +3,9 @@ export const TSBD_HERO = {
   eyebrow: "TRADE SHOW BOOTH DESIGN",
   title: (
     <>
-      Trade Show Booth Design That <br />
+      Trade Show Booth Design That Converts <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Converts Traffic Into Pipeline
+        Foot Traffic Into Pipeline
       </span>
     </>
   ),
@@ -25,8 +25,8 @@ export const TSBD_WHY = {
   eyebrow: "THE DESIGN DIFFERENCE",
   heading: (
     <>
-      Why Standard Booth Builders Are <br />
-      <span className="text-brand-cyan">Costing You Leads</span>
+      Why Generic Exhibition Booth Design <br />
+      <span className="text-brand-cyan">Costs You Qualified Leads</span>
     </>
   ),
   reasons: [
@@ -162,8 +162,8 @@ export const TSBD_CASE_STUDIES = {
   eyebrow: "BOOTH DESIGN RESULTS",
   heading: (
     <>
-      Floors We&apos;ve <br />
-      <span className="text-brand-blue">Dominated</span>
+      Real Events. <br />
+      <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -200,8 +200,8 @@ export const TSBD_TESTIMONIALS = {
   eyebrow: "CLIENT RESULTS",
   heading: (
     <>
-      Exhibitors Who <br />
-      <span className="text-[#1E6091]">Stood Out</span>
+      Real Events. <br />
+      <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,

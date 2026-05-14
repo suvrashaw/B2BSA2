@@ -3,7 +3,7 @@ export const PAID_HERO = {
   eyebrow: "B2B PAID ADVERTISING",
   title: (
     <>
-      Paid Advertising That Generates <br />
+      B2B Paid Advertising That Generates <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Pipeline, Not Just Clicks
       </span>
@@ -26,7 +26,7 @@ export const PAID_WHY = {
   heading: (
     <>
       How We Build Paid Campaigns <br />
-      <span className="text-brand-cyan">That Actually Convert</span>
+      <span className="text-brand-cyan">That Convert</span>
     </>
   ),
   reasons: [
@@ -69,7 +69,7 @@ export const PAID_DELIVERABLES = {
   eyebrow: "MANAGED CHANNELS",
   heading: (
     <>
-      Paid Channels <br />
+      Channels <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         We Manage
       </span>
@@ -163,8 +163,8 @@ export const PAID_CASE_STUDIES = {
   eyebrow: "PAID MEDIA RESULTS",
   heading: (
     <>
-      Campaigns That <br />
-      <span className="text-brand-blue">Moved the Needle</span>
+      Real Events. <br />
+      <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -201,8 +201,8 @@ export const PAID_TESTIMONIALS = {
   eyebrow: "CLIENT RESULTS",
   heading: (
     <>
-      Brands That Turned <br />
-      <span className="text-[#1E6091]">Ad Spend into Pipeline</span>
+      Real Events. <br />
+      <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,

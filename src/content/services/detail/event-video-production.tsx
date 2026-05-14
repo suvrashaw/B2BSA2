@@ -5,7 +5,7 @@ export const EVP_HERO = {
     <>
       Event Video Production That Turns <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Live Moments Into Lasting Assets
+        Live Moments Into Lasting Revenue Assets
       </span>
     </>
   ),
@@ -69,9 +69,9 @@ export const EVP_DELIVERABLES = {
   eyebrow: "WHAT WE PRODUCE",
   heading: (
     <>
-      Event Video Content <br />
+      Event Video and <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        We Produce
+        Media Services
       </span>
     </>
   ),
@@ -162,8 +162,8 @@ export const EVP_CASE_STUDIES = {
   eyebrow: "EVENT VIDEO RESULTS",
   heading: (
     <>
-      Events That Lived <br />
-      <span className="text-brand-blue">Beyond the Floor</span>
+      Real Events. <br />
+      <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -200,8 +200,8 @@ export const EVP_TESTIMONIALS = {
   eyebrow: "CLIENT RESULTS",
   heading: (
     <>
-      Brands That Extended <br />
-      <span className="text-[#1E6091]">Their Event ROI</span>
+      Real Events. <br />
+      <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,

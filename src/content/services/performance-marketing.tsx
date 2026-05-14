@@ -3,7 +3,7 @@ export const PERF_HERO = {
   eyebrow: "B2B PERFORMANCE MARKETING",
   title: (
     <>
-      Performance Marketing Built to{" "}
+      B2B Performance Marketing Built to{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Fill Enterprise Pipeline
       </span>
@@ -29,9 +29,9 @@ export const PERF_SERVICES = {
   eyebrow: "OUR MARKETING SERVICES",
   heading: (
     <>
-      Enterprise Performance{" "}
+      Our Performance{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Marketing Solutions
+        Marketing Services
       </span>
     </>
   ),
@@ -112,7 +112,7 @@ export const PERF_WHY = {
   eyebrow: "DATA-DRIVEN ROI",
   heading: (
     <>
-      Performance Marketing Means <span className="text-brand-cyan">Every Action Has a Number</span>
+      Every Action <span className="text-brand-cyan">Has a Number</span>
     </>
   ),
   reasons: [
@@ -155,7 +155,7 @@ export const PERF_CASE_STUDIES = {
   eyebrow: "MARKETING RESULTS",
   heading: (
     <>
-      Campaigns That Built <span className="text-brand-blue">Enterprise Pipeline</span>
+      Real Events. <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -192,7 +192,7 @@ export const PERF_TESTIMONIALS = {
   eyebrow: "CLIENT SUCCESS",
   heading: (
     <>
-      Brands That Grew <span className="text-[#1E6091]">With Our Campaigns</span>
+      Real Events. <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,

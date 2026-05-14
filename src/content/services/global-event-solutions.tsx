@@ -3,9 +3,9 @@ export const GES_HERO = {
   eyebrow: "GLOBAL EVENT SOLUTIONS",
   title: (
     <>
-      Global Event Solutions That{" "}
+      Global Event Solutions That Turn{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Command Every Floor
+        Trade Show Floors Into Revenue Pipelines
       </span>
     </>
   ),
@@ -36,9 +36,9 @@ export const GES_SERVICES = {
   eyebrow: "END-TO-END SOLUTIONS",
   heading: (
     <>
-      Global Event Solutions{" "}
+      End-to-End Corporate Event{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Under One Roof
+        Solutions Under One Roof
       </span>
     </>
   ),
@@ -111,7 +111,7 @@ export const GES_SERVICES = {
 export const GES_STATS = {
   heading: (
     <>
-      Global Reach <span className="text-brand-blue">Local Execution</span>
+      Where We <span className="text-brand-blue">Execute</span>
     </>
   ),
   quote:
@@ -149,8 +149,7 @@ export const GES_WHY = {
   eyebrow: "THE ROI OF LIVE EVENTS",
   heading: (
     <>
-      The $1.2B Reason B2B Enterprises{" "}
-      <span className="text-brand-cyan">Prioritize Live Events</span>
+      The Business Case for Live Events <span className="text-brand-cyan">in Enterprise B2B</span>
     </>
   ),
   reasons: [
@@ -193,7 +192,7 @@ export const GES_CASE_STUDIES = {
   eyebrow: "EVENT RESULTS",
   heading: (
     <>
-      Floors We&apos;ve <span className="text-brand-blue">Dominated</span>
+      Real Events. <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -230,7 +229,7 @@ export const GES_TESTIMONIALS = {
   eyebrow: "EXHIBITOR SUCCESS",
   heading: (
     <>
-      Brands That Showed Up <span className="text-[#1E6091]">and Won</span>
+      Real Events. <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,

@@ -95,7 +95,7 @@ function CinematicBeatOverlay({
       <h2 className={beat.titleClassName}>{beat.title}</h2>
       {beat.description && <p className={beat.description.className}>{beat.description.text}</p>}
       {beat.cta && (
-        <Link href="/contact-us">
+        <Link href="/contact">
           <Button variant="primary" size="lg">
             {beat.cta.label}
           </Button>

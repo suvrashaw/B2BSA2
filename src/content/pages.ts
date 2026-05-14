@@ -97,9 +97,9 @@ export const pages: PageContent[] = [
       "FAQ",
       "CTA Banner",
     ],
-    metaTitle: "Global Event Solutions for Enterprise Brands | B2B Sales Arrow",
+    metaTitle: "Global Event Solutions for Enterprise B2B Brands | B2B Sales Arrow",
     metaDescription:
-      "B2B Sales Arrow delivers end-to-end global event solutions — from trade show booth design to enterprise lead generation — across 40+ countries. Request a consultation.",
+      "End-to-end global event solutions — strategy, booth design, lead capture and on-ground execution across 40+ countries. 250+ enterprise events. $1.2B+ pipeline influenced.",
     focusKeyphrase: "global event solutions",
     secondaryKeywords: [
       "B2B event solutions",
@@ -151,7 +151,7 @@ export const pages: PageContent[] = [
         },
       ],
       rawMarkdown:
-        "## **PAGE 1**\n\n### **/services/global-event-solutions/**\n\n**Page Type:** Service Hub / Pillar Page\n\n **Search Intent:** Navigational \\+ Informational \\+ Commercial\n\n### **Target Keywords**\n\n| Keyword | Monthly Search Volume (Est.) | Usage Target |\n| ----- | ----- | ----- |\n| **Primary:** global event solutions | 1,200–2,400 | 6–8x across page |\n| **Primary:** B2B event solutions | 900–1,800 | 5–6x |\n| **Secondary:** international trade show services | 600–1,200 | 3–4x |\n| **Secondary:** enterprise event management | 800–1,500 | 3–4x |\n| **Secondary:** global exhibition services | 500–900 | 2–3x |\n| **LSI:** trade show booth design, event lead generation, custom event experiences, booth rental, industry events | — | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** Global Event Solutions for Enterprise Brands | B2B Sales Arrow *(60 chars)*\n\n **Meta Description:** B2B Sales Arrow delivers end-to-end global event solutions — from trade show booth design to enterprise lead generation — across 40+ countries. Request a consultation. *(158 chars)*\n\n### **Page Structure**\n\n**\\[HERO SECTION\\]**\n\n**H1:** Global Event Solutions That Command Every Floor You Enter\n\n**Subheading (H2-style intro):**\n\n From GITEX Dubai to CES Las Vegas — we design, build, and execute immersive event experiences that generate enterprise pipeline across every major market.\n\n**Hero Stats Bar (social proof):**\n\n 250+ Events Executed | $1.2B Pipeline Generated | 40+ Countries | 98% Client Retention\n\n**CTA \\#1 (Primary):** → Request a Strategy Session\n\n **CTA \\#2 (Secondary):** → View Our Event Portfolio\n\n**\\[SECTION 2 — What We Do\\]**\n\n**H2:** End-to-End Global Event Solutions Under One Roof\n\n*Intro paragraph (80 words):* Position as a single-vendor solution — strategy, design, fabrication, logistics, lead capture, follow-up. Emphasize \"no hand-offs, no dropped balls.\"\n\n**Service Cards Grid (link to child pages):**\n\n**H3:** Trade Show Booth Design\n\n Short: Architectural exhibition environments engineered to convert.\n\n → Link: /services/global-event-solutions/trade-show-booth-design\n\n**H3:** Event Lead Generation\n\n Short: Precision systems to capture, qualify, and route enterprise leads in real time.\n\n → Link: /services/global-event-solutions/event-lead-generation\n\n**H3:** Industry Events\n\n Short: Strategic presence at the world's highest-ROI B2B events.\n\n → Link: /services/global-event-solutions/industry-events\n\n**H3:** Custom Events\n\n Short: Proprietary event experiences built entirely around your brand's objectives.\n\n → Link: /services/global-event-solutions/custom-events\n\n**H3:** Event Booth Rental\n\n Short: Premium booth inventory available globally — deploy in weeks, not months.\n\n → Link: /services/global-event-solutions/event-booth-rental\n\n**H3:** Trade Show Booth Builder\n\n Short: Full fabrication and production services for custom exhibition structures.\n\n → Link: /services/global-event-solutions/trade-show-booth-builder\n\n**\\[SECTION 3 — Why Global Events Matter\\]**\n\n**H2:** The $1.2B Reason B2B Enterprises Prioritize Live Events\n\n*Content (120 words):* Data-led argument for live events — pipeline value, face-to-face conversion rates, relationship-building at scale. Cite industry stats (use your own data: 15k+ enterprise leads, 250+ events).\n\n**\\[SECTION 4 — Our Process\\]**\n\n**H2:** Our 5-Phase Global Event Execution Framework\n\n**H3:** Phase 1 — Strategic Planning & Market Intelligence\n\n **H3:** Phase 2 — Concept Design & Spatial Architecture\n\n **H3:** Phase 3 — Fabrication & Pre-Show Logistics\n\n **H3:** Phase 4 — On-Ground Execution & Lead Capture\n\n **H3:** Phase 5 — Post-Event Analytics & Pipeline Handoff\n\n*Each phase: 30–50 words explaining what happens and why it matters.*\n\n**\\[SECTION 5 — Social Proof\\]**\n\n**H2:** Trusted by Enterprise Leaders Across 40+ Markets\n\n* 2–3 featured case study snippets (with metrics: lead volume, pipeline generated, conversion rate)  \n* Logo wall: Infosys, Airtel, SingleStore, Temenos, Worldpay, Syngene\n\n**CTA \\#3 (Mid-page):** → View All Case Studies\n\n**\\[SECTION 6 — Geography / Global Reach\\]**\n\n**H2:** We Execute Where Enterprise Business Happens\n\n*Regions: North America | EMEA | APAC | Middle East | Latin America*\n\n *Key events: GITEX, CES, MWC, AWS re:Invent, Dreamforce, Web Summit, ADIPEC*\n\n**\\[SECTION 7 — FAQ\\]**\n\n**H2:** Frequently Asked Questions About Our Global Event Solutions\n\n**H3:** What types of events do you manage globally?\n\n **H3:** How far in advance should I engage you for an event?\n\n **H3:** Do you handle both booth design and lead generation together?\n\n **H3:** What is your coverage in the Middle East and APAC?\n\n **H3:** How do you measure ROI for live events?\n\n*Schema: FAQ Page schema markup recommended*\n\n**\\[SECTION 8 — CTA Banner\\]**\n\n**H2:** Ready to Own the Floor at Your Next Global Event?\n\n*Sub-copy:* Our growth architects are ready to build your event strategy.\n\n **CTA \\#4 (Final):** → Book a Free Consultation",
+        "## **PAGE 1**\n\n### **/services/global-event-solutions/**\n\n**Page Type:** Service Hub / Pillar Page\n\n **Search Intent:** Navigational \\+ Informational \\+ Commercial\n\n### **Target Keywords**\n\n| Keyword | Monthly Search Volume (Est.) | Usage Target |\n| ----- | ----- | ----- |\n| **Primary:** global event solutions | 1,200–2,400 | 6–8x across page |\n| **Primary:** B2B event solutions | 900–1,800 | 5–6x |\n| **Secondary:** international trade show services | 600–1,200 | 3–4x |\n| **Secondary:** enterprise event management | 800–1,500 | 3–4x |\n| **Secondary:** global exhibition services | 500–900 | 2–3x |\n| **LSI:** trade show booth design, event lead generation, custom event experiences, booth rental, industry events | — | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** Global Event Solutions for Enterprise B2B Brands | B2B Sales Arrow *(60 chars)*\n\n **Meta Description:** End-to-end global event solutions — strategy, booth design, lead capture and on-ground execution across 40+ countries. 250+ enterprise events. $1.2B+ pipeline influenced. *(158 chars)*\n\n### **Page Structure**\n\n**\\[HERO SECTION\\]**\n\n**H1:** Global Event Solutions That Command Every Floor You Enter\n\n**Subheading (H2-style intro):**\n\n From GITEX Dubai to CES Las Vegas — we design, build, and execute immersive event experiences that generate enterprise pipeline across every major market.\n\n**Hero Stats Bar (social proof):**\n\n 250+ Events Executed | $1.2B Pipeline Generated | 40+ Countries | 98% Client Retention\n\n**CTA \\#1 (Primary):** → Request a Strategy Session\n\n **CTA \\#2 (Secondary):** → View Our Event Portfolio\n\n**\\[SECTION 2 — What We Do\\]**\n\n**H2:** End-to-End Global Event Solutions Under One Roof\n\n*Intro paragraph (80 words):* Position as a single-vendor solution — strategy, design, fabrication, logistics, lead capture, follow-up. Emphasize \"no hand-offs, no dropped balls.\"\n\n**Service Cards Grid (link to child pages):**\n\n**H3:** Trade Show Booth Design\n\n Short: Architectural exhibition environments engineered to convert.\n\n → Link: /services/global-event-solutions/trade-show-booth-design\n\n**H3:** Event Lead Generation\n\n Short: Precision systems to capture, qualify, and route enterprise leads in real time.\n\n → Link: /services/global-event-solutions/event-lead-generation\n\n**H3:** Industry Events\n\n Short: Strategic presence at the world's highest-ROI B2B events.\n\n → Link: /services/global-event-solutions/industry-events\n\n**H3:** Custom Events\n\n Short: Proprietary event experiences built entirely around your brand's objectives.\n\n → Link: /services/global-event-solutions/custom-events\n\n**H3:** Event Booth Rental\n\n Short: Premium booth inventory available globally — deploy in weeks, not months.\n\n → Link: /services/global-event-solutions/event-booth-rental\n\n**H3:** Trade Show Booth Builder\n\n Short: Full fabrication and production services for custom exhibition structures.\n\n → Link: /services/global-event-solutions/trade-show-booth-builder\n\n**\\[SECTION 3 — Why Global Events Matter\\]**\n\n**H2:** The $1.2B Reason B2B Enterprises Prioritize Live Events\n\n*Content (120 words):* Data-led argument for live events — pipeline value, face-to-face conversion rates, relationship-building at scale. Cite industry stats (use your own data: 15k+ enterprise leads, 250+ events).\n\n**\\[SECTION 4 — Our Process\\]**\n\n**H2:** Our 5-Phase Global Event Execution Framework\n\n**H3:** Phase 1 — Strategic Planning & Market Intelligence\n\n **H3:** Phase 2 — Concept Design & Spatial Architecture\n\n **H3:** Phase 3 — Fabrication & Pre-Show Logistics\n\n **H3:** Phase 4 — On-Ground Execution & Lead Capture\n\n **H3:** Phase 5 — Post-Event Analytics & Pipeline Handoff\n\n*Each phase: 30–50 words explaining what happens and why it matters.*\n\n**\\[SECTION 5 — Social Proof\\]**\n\n**H2:** Trusted by Enterprise Leaders Across 40+ Markets\n\n* 2–3 featured case study snippets (with metrics: lead volume, pipeline generated, conversion rate)  \n* Logo wall: Infosys, Airtel, SingleStore, Temenos, Worldpay, Syngene\n\n**CTA \\#3 (Mid-page):** → View All Case Studies\n\n**\\[SECTION 6 — Geography / Global Reach\\]**\n\n**H2:** We Execute Where Enterprise Business Happens\n\n*Regions: North America | EMEA | APAC | Middle East | Latin America*\n\n *Key events: GITEX, CES, MWC, AWS re:Invent, Dreamforce, Web Summit, ADIPEC*\n\n**\\[SECTION 7 — FAQ\\]**\n\n**H2:** Frequently Asked Questions About Our Global Event Solutions\n\n**H3:** What types of events do you manage globally?\n\n **H3:** How far in advance should I engage you for an event?\n\n **H3:** Do you handle both booth design and lead generation together?\n\n **H3:** What is your coverage in the Middle East and APAC?\n\n **H3:** How do you measure ROI for live events?\n\n*Schema: FAQ Page schema markup recommended*\n\n**\\[SECTION 8 — CTA Banner\\]**\n\n**H2:** Ready to Own the Floor at Your Next Global Event?\n\n*Sub-copy:* Our growth architects are ready to build your event strategy.\n\n **CTA \\#4 (Final):** → Book a Free Consultation",
     },
     hero: {
       title: "Global Event Solutions That Command Every Floor You Enter",
@@ -397,22 +397,22 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Request a Strategy Session",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "View Our Event Portfolio",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "View All Case Studies",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Social Proof",
       },
       {
         label: "Book a Free Consultation",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],
@@ -435,9 +435,9 @@ export const pages: PageContent[] = [
       "FAQ",
       "CTA",
     ],
-    metaTitle: "Custom Trade Show Booth Design | B2B Sales Arrow",
+    metaTitle: "Custom Trade Show Booth Design for Enterprise Brands | B2B Sales Arrow",
     metaDescription:
-      "Award-winning trade show booth design for enterprise brands. Immersive, conversion-engineered spaces that dominate any trade show floor. Get a free design consult.",
+      "500+ custom trade show booth designs delivered globally. We design 10x10 to double-deck exhibition environments that stop foot traffic and convert floor visits into pipeline.",
     focusKeyphrase: "trade show booth design",
     secondaryKeywords: [
       "custom trade show booth",
@@ -490,7 +490,7 @@ export const pages: PageContent[] = [
         },
       ],
       rawMarkdown:
-        "## **PAGE 2**\n\n### **/services/global-event-solutions/trade-show-booth-design**\n\n**Page Type:** Service Detail\n\n **Search Intent:** Commercial Investigation\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** trade show booth design | 7–9x |\n| **Primary:** custom trade show booth | 5–6x |\n| **Secondary:** exhibition booth design | 4–5x |\n| **Secondary:** trade show display design | 3–4x |\n| **Secondary:** B2B booth design company | 2–3x |\n| **LSI:** booth architecture, exhibition stand design, trade show display, booth fabrication, trade show presence | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** Custom Trade Show Booth Design | B2B Sales Arrow *(50 chars)*\n\n **Meta Description:** Award-winning trade show booth design for enterprise brands. Immersive, conversion-engineered spaces that dominate any trade show floor. Get a free design consult. *(163 chars)*\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** Trade Show Booth Design That Converts Foot Traffic Into Pipeline\n\n**Subheading:** We don't build booths. We architect immersive conversion environments — designed to stop attendees, start conversations, and capture qualified enterprise leads.\n\n**Hero Visual:** Full-width booth design showcase / before-after slider\n\n **CTA \\#1:** → Request a Custom Design Quote\n\n **CTA \\#2:** → View Booth Portfolio\n\n**\\[SECTION 2 — Differentiator\\]**\n\n**H2:** Why Standard Booth Builders Are Costing You Leads\n\n*Content (100 words):* Frame the problem — generic booths get walked past. Position B2B Sales Arrow's architectural approach as the solution. Reference the homepage stat (340% lead capture rate increase).\n\n**\\[SECTION 3 — Services Breakdown\\]**\n\n**H2:** Our Trade Show Booth Design Services\n\n**H3:** Spatial Architecture & Traffic Flow Design\n\n **H3:** Graphic Design & Brand Identity Integration\n\n **H3:** Interactive & Digital Display Integration\n\n **H3:** AR/VR Experience Design\n\n **H3:** Meeting Room & Demo Zone Planning\n\n **H3:** Lighting Design & Atmosphere Engineering\n\n*Each: 40–60 words. Focus on the \"so what\" — what business outcome this drives.*\n\n**\\[SECTION 4 — Design Process\\]**\n\n**H2:** From Brief to Build: Our 6-Step Design Process\n\nH3: Discovery & Brand Alignment → H3: Spatial Concept → H3: 3D Rendering → H3: Client Approval → H3: Fabrication Handoff → H3: On-Site Setup\n\n**\\[SECTION 5 — Portfolio/Case Study\\]**\n\n**H2:** Booth Designs That Dominated the Floor\n\n*Feature 2–3 case studies with:*\n\n* Event name, location, booth size  \n* Challenge → Design Solution → Result (metrics)  \n* Image of the actual booth\n\n**CTA \\#3:** → View Full Portfolio\n\n**\\[SECTION 6 — Specs / What You Get\\]**\n\n**H2:** What's Included in Every Booth Design Project\n\nChecklist-style section:\n\n* ✓ Brand discovery session  \n* ✓ 3D concept renders (2 directions)  \n* ✓ Full material and finish specification  \n* ✓ Fabrication-ready design files  \n* ✓ On-site setup supervision  \n* ✓ Post-event storage options\n\n**\\[SECTION 7 — Trust Signals\\]**\n\n**H2:** 500+ Booth Designs Delivered Across 40 Countries\n\nLogo wall \\+ 1–2 testimonials specific to design quality.\n\n**\\[SECTION 8 — FAQ\\]**\n\n**H2:** Booth Design FAQs\n\nH3: How early should I commission a booth design?\n\n H3: Do you handle both design and fabrication?\n\n H3: What booth sizes do you design for?\n\n H3: Can you replicate our existing brand identity?\n\n**\\[SECTION 9 — CTA\\]**\n\n**H2:** Let's Design Your Next Booth\n\n**CTA \\#4:** → Start Your Design Project | → Download Our Design Capabilities Deck",
+        "## **PAGE 2**\n\n### **/services/global-event-solutions/trade-show-booth-design**\n\n**Page Type:** Service Detail\n\n **Search Intent:** Commercial Investigation\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** trade show booth design | 7–9x |\n| **Primary:** custom trade show booth | 5–6x |\n| **Secondary:** exhibition booth design | 4–5x |\n| **Secondary:** trade show display design | 3–4x |\n| **Secondary:** B2B booth design company | 2–3x |\n| **LSI:** booth architecture, exhibition stand design, trade show display, booth fabrication, trade show presence | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** Custom Trade Show Booth Design for Enterprise Brands | B2B Sales Arrow *(50 chars)*\n\n **Meta Description:** 500+ custom trade show booth designs delivered globally. We design 10x10 to double-deck exhibition environments that stop foot traffic and convert floor visits into pipeline. *(163 chars)*\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** Trade Show Booth Design That Converts Foot Traffic Into Pipeline\n\n**Subheading:** We don't build booths. We architect immersive conversion environments — designed to stop attendees, start conversations, and capture qualified enterprise leads.\n\n**Hero Visual:** Full-width booth design showcase / before-after slider\n\n **CTA \\#1:** → Request a Custom Design Quote\n\n **CTA \\#2:** → View Booth Portfolio\n\n**\\[SECTION 2 — Differentiator\\]**\n\n**H2:** Why Standard Booth Builders Are Costing You Leads\n\n*Content (100 words):* Frame the problem — generic booths get walked past. Position B2B Sales Arrow's architectural approach as the solution. Reference the homepage stat (340% lead capture rate increase).\n\n**\\[SECTION 3 — Services Breakdown\\]**\n\n**H2:** Our Trade Show Booth Design Services\n\n**H3:** Spatial Architecture & Traffic Flow Design\n\n **H3:** Graphic Design & Brand Identity Integration\n\n **H3:** Interactive & Digital Display Integration\n\n **H3:** AR/VR Experience Design\n\n **H3:** Meeting Room & Demo Zone Planning\n\n **H3:** Lighting Design & Atmosphere Engineering\n\n*Each: 40–60 words. Focus on the \"so what\" — what business outcome this drives.*\n\n**\\[SECTION 4 — Design Process\\]**\n\n**H2:** From Brief to Build: Our 6-Step Design Process\n\nH3: Discovery & Brand Alignment → H3: Spatial Concept → H3: 3D Rendering → H3: Client Approval → H3: Fabrication Handoff → H3: On-Site Setup\n\n**\\[SECTION 5 — Portfolio/Case Study\\]**\n\n**H2:** Booth Designs That Dominated the Floor\n\n*Feature 2–3 case studies with:*\n\n* Event name, location, booth size  \n* Challenge → Design Solution → Result (metrics)  \n* Image of the actual booth\n\n**CTA \\#3:** → View Full Portfolio\n\n**\\[SECTION 6 — Specs / What You Get\\]**\n\n**H2:** What's Included in Every Booth Design Project\n\nChecklist-style section:\n\n* ✓ Brand discovery session  \n* ✓ 3D concept renders (2 directions)  \n* ✓ Full material and finish specification  \n* ✓ Fabrication-ready design files  \n* ✓ On-site setup supervision  \n* ✓ Post-event storage options\n\n**\\[SECTION 7 — Trust Signals\\]**\n\n**H2:** 500+ Booth Designs Delivered Across 40 Countries\n\nLogo wall \\+ 1–2 testimonials specific to design quality.\n\n**\\[SECTION 8 — FAQ\\]**\n\n**H2:** Booth Design FAQs\n\nH3: How early should I commission a booth design?\n\n H3: Do you handle both design and fabrication?\n\n H3: What booth sizes do you design for?\n\n H3: Can you replicate our existing brand identity?\n\n**\\[SECTION 9 — CTA\\]**\n\n**H2:** Let's Design Your Next Booth\n\n**CTA \\#4:** → Start Your Design Project | → Download Our Design Capabilities Deck",
     },
     hero: {
       title: "Trade Show Booth Design That Converts Foot Traffic Into Pipeline",
@@ -868,22 +868,22 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Request a Custom Design Quote",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "View Booth Portfolio",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Start Your Design Project",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA",
       },
       {
         label: "Download Our Design Capabilities Deck",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA",
       },
     ],
@@ -907,9 +907,9 @@ export const pages: PageContent[] = [
       "FAQ",
       "CTA Banner",
     ],
-    metaTitle: "B2B Event Lead Generation Services | B2B Sales Arrow",
+    metaTitle: "Trade Show Lead Generation and Event Lead Capture | B2B Sales Arrow",
     metaDescription:
-      "Turn event foot traffic into a qualified pipeline. B2B Sales Arrow's precision lead generation systems capture, score, and route enterprise leads in real time. Talk to us.",
+      "Stop losing leads after the show. Our trade show lead generation system covers ICP targeting, real-time lead scoring, CRM sync and post-event nurture.",
     focusKeyphrase: "trade show lead generation",
     secondaryKeywords: [
       "trade show lead capture",
@@ -961,7 +961,7 @@ export const pages: PageContent[] = [
         },
       ],
       rawMarkdown:
-        "## **PAGE 3**\n\n### **/services/global-event-solutions/event-lead-generation**\n\n**Search Intent:** Commercial / Transactional\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** event lead generation | 7–9x |\n| **Primary:** B2B lead generation at events | 5–6x |\n| **Secondary:** trade show lead capture | 4–5x |\n| **Secondary:** event marketing lead generation | 3–4x |\n| **Secondary:** exhibition lead generation strategy | 2–3x |\n| **LSI:** qualified leads, lead capture technology, NFC lead capture, CRM integration, pipeline from events | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** B2B Event Lead Generation Services | B2B Sales Arrow\n\n **Meta Description:** Turn event foot traffic into a qualified pipeline. B2B Sales Arrow's precision lead generation systems capture, score, and route enterprise leads in real time. Talk to us.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** Event Lead Generation Systems That Fill Your Enterprise Pipeline\n\n**Subheading:** Most companies attend events. We engineer them — with precision lead capture systems, real-time qualification, and CRM-ready handoffs that your sales team will love.\n\n**CTA \\#1:** → Get a Lead Generation Strategy Call\n\n **Proof bar:** 15,000+ Enterprise Leads Generated | 98% Client Retention\n\n**\\[SECTION 2\\]**\n\n**H2:** The Problem With Most Event Lead Strategies\n\n*Content:* Business cards are not a strategy. Badge scans with no follow-up system lose 80% of leads. Position B2B Sales Arrow's systematic approach as the solution.\n\n**\\[SECTION 3\\]**\n\n**H2:** Our Event Lead Generation System\n\n**H3:** Pre-Event ICP Mapping & Targeting\n\n **H3:** On-Site Lead Capture Technology (NFC, QR, Badge Scan \\+ CRM sync)\n\n **H3:** Real-Time Lead Scoring & Qualification\n\n **H3:** Instant CRM / Sales Team Routing\n\n **H3:** Post-Event Nurture Sequence Design\n\n **H3:** Pipeline Attribution & ROI Reporting\n\n**\\[SECTION 4 — Results\\]**\n\n**H2:** By the Numbers: What Our Lead Generation Delivers\n\n*Stats block:* 15k+ leads generated | Avg. 340% lift in qualified lead volume | $1.2B total pipeline contributed\n\nFeature 1–2 case studies with before/after pipeline metrics.\n\n**CTA \\#2:** → See Case Studies\n\n**\\[SECTION 5 — Technology Stack\\]**\n\n**H2:** The Technology Behind Our Lead Capture Systems\n\n*Content:* NFC-enabled badge scanning, custom lead qualification apps, CRM integrations (Salesforce, HubSpot, Marketo), real-time dashboard. Keep it B2B credible, not gimmicky.\n\n**\\[SECTION 6 — FAQ\\]**\n\n**H2:** Event Lead Generation FAQs\n\nH3: How do you integrate with our existing CRM?\n\n H3: What is a \"qualified\" lead in your system?\n\n H3: Do you handle follow-up sequences too?\n\n H3: What events do you support?\n\n**\\[CTA BANNER\\]**\n\n**H2:** Stop Leaving Leads on the Show Floor\n\n**CTA \\#3:** → Build Your Event Lead Generation System",
+        '## **PAGE 3**\n\n### **/services/global-event-solutions/event-lead-generation**\n\n**Search Intent:** Commercial / Transactional\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** event lead generation | 7–9x |\n| **Primary:** B2B lead generation at events | 5–6x |\n| **Secondary:** trade show lead capture | 4–5x |\n| **Secondary:** event marketing lead generation | 3–4x |\n| **Secondary:** exhibition lead generation strategy | 2–3x |\n| **LSI:** qualified leads, lead capture technology, NFC lead capture, CRM integration, pipeline from events | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** Trade Show Lead Generation and Event Lead Capture | B2B Sales Arrow\n\n **Meta Description:** Stop losing leads after the show. Our trade show lead generation system covers ICP targeting, real-time lead scoring, CRM sync and post-event nurture.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** Event Lead Generation Systems That Fill Your Enterprise Pipeline\n\n**Subheading:** Most companies attend events. We engineer them — with precision lead capture systems, real-time qualification, and CRM-ready handoffs that your sales team will love.\n\n**CTA \\#1:** → Get a Lead Generation Strategy Call\n\n **Proof bar:** 15,000+ Enterprise Leads Generated | 98% Client Retention\n\n**\\[SECTION 2\\]**\n\n**H2:** The Problem With Most Event Lead Strategies\n\n*Content:* Business cards are not a strategy. Badge scans with no follow-up system lose 80% of leads. Position B2B Sales Arrow\'s systematic approach as the solution.\n\n**\\[SECTION 3\\]**\n\n**H2:** Our Event Lead Generation System\n\n**H3:** Pre-Event ICP Mapping & Targeting\n\n **H3:** On-Site Lead Capture Technology (NFC, QR, Badge Scan \\+ CRM sync)\n\n **H3:** Real-Time Lead Scoring & Qualification\n\n **H3:** Instant CRM / Sales Team Routing\n\n **H3:** Post-Event Nurture Sequence Design\n\n **H3:** Pipeline Attribution & ROI Reporting\n\n**\\[SECTION 4 — Results\\]**\n\n**H2:** By the Numbers: What Our Lead Generation Delivers\n\n*Stats block:* 15k+ leads generated | Avg. 340% lift in qualified lead volume | $1.2B total pipeline contributed\n\nFeature 1–2 case studies with before/after pipeline metrics.\n\n**CTA \\#2:** → See Case Studies\n\n**\\[SECTION 5 — Technology Stack\\]**\n\n**H2:** The Technology Behind Our Lead Capture Systems\n\n*Content:* NFC-enabled badge scanning, custom lead qualification apps, CRM integrations (Salesforce, HubSpot, Marketo), real-time dashboard. Keep it B2B credible, not gimmicky.\n\n**\\[SECTION 6 — FAQ\\]**\n\n**H2:** Event Lead Generation FAQs\n\nH3: How do you integrate with our existing CRM?\n\n H3: What is a "qualified" lead in your system?\n\n H3: Do you handle follow-up sequences too?\n\n H3: What events do you support?\n\n**\\[CTA BANNER\\]**\n\n**H2:** Stop Leaving Leads on the Show Floor\n\n**CTA \\#3:** → Build Your Event Lead Generation System',
     },
     hero: {
       title: "Trade Show Lead Generation Systems That Fill Your Enterprise Pipeline",
@@ -1226,7 +1226,7 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Build Your Event Lead Generation System",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],
@@ -1246,9 +1246,9 @@ export const pages: PageContent[] = [
       "Social Proof + Upcoming Events",
       "CTA Banner",
     ],
-    metaTitle: "Industry Events Strategy & Execution | B2B Sales Arrow",
+    metaTitle: "Industry Events Strategy and Execution | B2B Sales Arrow",
     metaDescription:
-      "Maximize ROI at the world's biggest B2B industry events. B2B Sales Arrow handles booth design, lead generation, and full on-site execution at 40+ global events.",
+      "Full-service corporate event management for enterprise brands — event selection, ROI forecasting, booth design, pre-show targeting and on-ground execution across 40+ countries.",
     focusKeyphrase: "corporate event management",
     secondaryKeywords: [
       "corporate event solutions",
@@ -1300,7 +1300,7 @@ export const pages: PageContent[] = [
         },
       ],
       rawMarkdown:
-        "## **PAGE 4**\n\n### **/services/global-event-solutions/industry-events**\n\n**Search Intent:** Informational \\+ Commercial\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** industry events for B2B | 6–8x |\n| **Primary:** B2B industry conferences | 4–5x |\n| **Secondary:** enterprise event marketing | 3–4x |\n| **Secondary:** B2B trade shows | 3–4x |\n| **Secondary:** industry event participation strategy | 2–3x |\n| **LSI:** GITEX, MWC, AWS re:Invent, Salesforce Dreamforce, Web Summit, tech industry events | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** Industry Events Strategy & Execution | B2B Sales Arrow\n\n **Meta Description:** Maximize ROI at the world's biggest B2B industry events. B2B Sales Arrow handles booth design, lead generation, and full on-site execution at 40+ global events.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** Dominate the Industry Events That Drive Your Market\n\n**Subheading:** From GITEX to Web Summit — we identify the right events for your brand, build your on-site presence, and ensure every interaction converts to pipeline.\n\n**CTA \\#1:** → Build Your Industry Event Strategy\n\n**\\[SECTION 2 — Events We Cover\\]**\n\n**H2:** Key Industry Events Where We Execute\n\n*Card-based layout with event logos/imagery:*\n\n**H3:** Technology & SaaS Events\n\n GITEX, CES, Web Summit, AWS re:Invent, Salesforce Dreamforce\n\n**H3:** Financial Services Events\n\n Sibos, Money20/20, Finovate\n\n**H3:** Healthcare & Life Sciences\n\n BIO International, Arab Health, HIMSS\n\n**H3:** Energy & Infrastructure\n\n ADIPEC, CERAWeek, Hannover Messe\n\n**H3:** Telecom & Connectivity\n\n Mobile World Congress (MWC), GSMA\n\n*\"Don't see your event? We operate in 40+ countries — let's talk.\"*\n\n**\\[SECTION 3 — Why Industry Events\\]**\n\n**H2:** Why the Right Industry Events Are Your Best Sales Channel\n\n*Content:* ROI data for live events vs digital-only. Relationship building, in-person demo conversions, pipeline velocity. Use their own stat: 250+ events executed.\n\n**\\[SECTION 4 — How We Help\\]**\n\n**H2:** Full-Service Industry Event Management\n\nH3: Event Selection & ROI Forecasting\n\n H3: Booth Design & Fabrication\n\n H3: Pre-Show Lead Targeting\n\n H3: On-Site Execution & Staff Support\n\n H3: Post-Show Analytics & Pipeline Report\n\n**\\[SECTION 5 — Social Proof \\+ Upcoming Events\\]**\n\n**H2:** Events We're At — Join Us\n\n*Pull in upcoming events: GITEX 2026, MWC, AWS re:Invent*\n\n **CTA \\#2:** → Register Interest\n\n**\\[CTA BANNER\\]**\n\n**H2:** Which Industry Events Should You Prioritize in 2026?\n\n**CTA \\#3:** → Get a Free Event ROI Assessment",
+        "## **PAGE 4**\n\n### **/services/global-event-solutions/industry-events**\n\n**Search Intent:** Informational \\+ Commercial\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** industry events for B2B | 6–8x |\n| **Primary:** B2B industry conferences | 4–5x |\n| **Secondary:** enterprise event marketing | 3–4x |\n| **Secondary:** B2B trade shows | 3–4x |\n| **Secondary:** industry event participation strategy | 2–3x |\n| **LSI:** GITEX, MWC, AWS re:Invent, Salesforce Dreamforce, Web Summit, tech industry events | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** Industry Events Strategy and Execution | B2B Sales Arrow\n\n **Meta Description:** Full-service corporate event management for enterprise brands — event selection, ROI forecasting, booth design, pre-show targeting and on-ground execution across 40+ countries.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** Dominate the Industry Events That Drive Your Market\n\n**Subheading:** From GITEX to Web Summit — we identify the right events for your brand, build your on-site presence, and ensure every interaction converts to pipeline.\n\n**CTA \\#1:** → Build Your Industry Event Strategy\n\n**\\[SECTION 2 — Events We Cover\\]**\n\n**H2:** Key Industry Events Where We Execute\n\n*Card-based layout with event logos/imagery:*\n\n**H3:** Technology & SaaS Events\n\n GITEX, CES, Web Summit, AWS re:Invent, Salesforce Dreamforce\n\n**H3:** Financial Services Events\n\n Sibos, Money20/20, Finovate\n\n**H3:** Healthcare & Life Sciences\n\n BIO International, Arab Health, HIMSS\n\n**H3:** Energy & Infrastructure\n\n ADIPEC, CERAWeek, Hannover Messe\n\n**H3:** Telecom & Connectivity\n\n Mobile World Congress (MWC), GSMA\n\n*\"Don't see your event? We operate in 40+ countries — let's talk.\"*\n\n**\\[SECTION 3 — Why Industry Events\\]**\n\n**H2:** Why the Right Industry Events Are Your Best Sales Channel\n\n*Content:* ROI data for live events vs digital-only. Relationship building, in-person demo conversions, pipeline velocity. Use their own stat: 250+ events executed.\n\n**\\[SECTION 4 — How We Help\\]**\n\n**H2:** Full-Service Industry Event Management\n\nH3: Event Selection & ROI Forecasting\n\n H3: Booth Design & Fabrication\n\n H3: Pre-Show Lead Targeting\n\n H3: On-Site Execution & Staff Support\n\n H3: Post-Show Analytics & Pipeline Report\n\n**\\[SECTION 5 — Social Proof \\+ Upcoming Events\\]**\n\n**H2:** Events We're At — Join Us\n\n*Pull in upcoming events: GITEX 2026, MWC, AWS re:Invent*\n\n **CTA \\#2:** → Register Interest\n\n**\\[CTA BANNER\\]**\n\n**H2:** Which Industry Events Should You Prioritize in 2026?\n\n**CTA \\#3:** → Get a Free Event ROI Assessment",
     },
     hero: {
       title: "Dominate the Industry Events That Drive Your Market",
@@ -1575,17 +1575,17 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Discuss My Industry Event Strategy",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Events We Cover",
       },
       {
         label: "Register Interest",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Social Proof + Upcoming Events",
       },
       {
         label: "Get a Free Event ROI Assessment",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],
@@ -1604,9 +1604,9 @@ export const pages: PageContent[] = [
       "Case Study",
       "CTA Banner",
     ],
-    metaTitle: "Custom B2B Event Experiences | B2B Sales Arrow",
+    metaTitle: "Custom B2B Event Production and Strategy | B2B Sales Arrow",
     metaDescription:
-      "Beyond the trade show floor. We architect proprietary custom events — from executive roundtables to flagship conferences — that position your brand as a market leader.",
+      "Custom event solutions for B2B brands — executive roundtables, gala cruise dinners, hosted buyer programs, roadshows, client summits, and premium brand experiences from brief to follow-up.",
     focusKeyphrase: "custom event solutions",
     secondaryKeywords: [
       "corporate event solutions company",
@@ -1918,22 +1918,22 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Design Your Custom Event",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "View Our Production Portfolio",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Plan Your Custom Event",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
       {
         label: "View Our Production Portfolio",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],
@@ -1946,9 +1946,9 @@ export const pages: PageContent[] = [
     url: "/services/global-event-solutions/event-booth-rental",
     navigationGroup: "Global Event Solutions",
     requiredSections: ["Hero", "Why Rent", "Rental Inventory", "What’s Included", "Process", "CTA"],
-    metaTitle: "Premium Trade Show Booth Rental | B2B Sales Arrow",
+    metaTitle: "Trade Show Booth Rental for Enterprise Exhibitors | B2B Sales Arrow",
     metaDescription:
-      "Deploy high-fidelity trade show presence without the long-term capital expense. Our premium booth rental inventory is available globally with full on-site support.",
+      "Enterprise trade show booth rental — modular, fully branded, globally deployable. From 10x10 to double-deck. Professional presence without the custom build timeline.",
     focusKeyphrase: "trade show booth rental",
     secondaryKeywords: [
       "trade show booth rentals",
@@ -2310,37 +2310,37 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Check Rental Availability",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Request a Rental Quote",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Enquire About 10x10 Booths",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Inventory",
       },
       {
         label: "Enquire About 20x20 Booths",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Inventory",
       },
       {
         label: "Enquire About Double-Deck Booths",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Inventory",
       },
       {
         label: "Enquire About Pavilion Formats",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Inventory",
       },
       {
         label: "Enquire About Custom-Branded Rentals",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Inventory",
       },
     ],
@@ -2361,9 +2361,9 @@ export const pages: PageContent[] = [
       "FAQ",
       "CTA Banner",
     ],
-    metaTitle: "Enterprise Trade Show Booth Builder | B2B Sales Arrow",
+    metaTitle: "Trade Show Booth Builder and Exhibition Stand Design and Build | B2B Sales Arrow",
     metaDescription:
-      "Global fabrication and production for custom exhibition stands. We are the trade show booth builder trusted by enterprise teams for GITEX, CES, and major global shows.",
+      "Enterprise trade show booth builder delivering concept-to-installation fabrication across 40+ countries. Custom builds, modular systems, double-deck structures, and turnkey solutions.",
     focusKeyphrase: "trade show booth builder",
     secondaryKeywords: [
       "exhibition stand builder",
@@ -2764,17 +2764,17 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Get a Build Quote",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Download Our Build Capabilities PDF",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Request a Build Quote",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],
@@ -2784,7 +2784,7 @@ export const pages: PageContent[] = [
   {
     pageNumber: 8,
     pageName: "Modular & Portable Booths",
-    url: "/services/booth-design-production/modular-portable-booths",
+    url: "/services/global-event-solutions/modular-portable-booths",
     navigationGroup: "Booth Design & Production",
     requiredSections: [
       "Hero",
@@ -2794,9 +2794,9 @@ export const pages: PageContent[] = [
       "Applications",
       "CTA Banner",
     ],
-    metaTitle: "Modular & Portable Trade Show Booths | B2B Sales Arrow",
+    metaTitle: "Modular and Portable Trade Show Booth Systems | B2B Sales Arrow",
     metaDescription:
-      "Scalable, high-impact modular booths designed for easy global deployment. Premium aesthetics with the flexibility of a portable exhibition system. Request a quote.",
+      "Reusable modular booth systems and portable trade show displays — consistent brand presence across multiple markets. 30–50% lower cost per event than custom rebuilds.",
     focusKeyphrase: "modular booth",
     secondaryKeywords: [
       "portable trade show booth displays",
@@ -2807,7 +2807,7 @@ export const pages: PageContent[] = [
     seoInternal: {
       pageType: "",
       searchIntent: "Commercial Investigation + Transactional",
-      url: "/services/booth-design-production/modular-portable-booths",
+      url: "/services/global-event-solutions/modular-portable-booths",
       targetKeywords: [
         {
           category: "Primary",
@@ -2848,7 +2848,7 @@ export const pages: PageContent[] = [
         },
       ],
       rawMarkdown:
-        "## **PAGE 8**\n\n### **/services/booth-design-production/modular-portable-booths**\n\n**Search Intent:** Commercial Investigation \\+ Transactional\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** modular trade show booths | 7–9x |\n| **Primary:** portable trade show displays | 5–6x |\n| **Secondary:** modular exhibition stands | 4–5x |\n| **Secondary:** portable booth systems | 3–4x |\n| **Secondary:** lightweight trade show displays | 2–3x |\n| **LSI:** modular display systems, reconfigurable booths, pop-up displays, tensile booths, modular booth design | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** Modular & Portable Trade Show Booths | B2B Sales Arrow\n\n **Meta Description:** Premium modular and portable trade show booths for enterprise brands. Lightweight, reconfigurable, and brand-consistent across every event. Request a quote.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** Modular & Portable Trade Show Booths — Engineered for Enterprise Efficiency\n\n**Subheading:** Deploy a premium, branded presence at any event — in any country — with our modular booth systems. Reconfigurable. Lightweight. Built to perform at scale.\n\n**CTA \\#1:** → Request a Modular Booth Quote\n\n**\\[SECTION 2 — Why Modular\\]**\n\n**H2:** Why Enterprise Brands Are Moving to Modular Booth Systems\n\n*Comparison:* Custom timber builds vs. modular — cost per use, speed of deployment, adaptability to different booth sizes, sustainability.\n\n**\\[SECTION 3 — Product Range\\]**\n\n**H2:** Our Modular Booth Range\n\nH3: 10x10 Modular Kits — Starter & satellite booths\n\n H3: 10x20 & 20x20 Inline Configurations\n\n H3: Island Modular Systems\n\n H3: Hybrid Modular \\+ Custom Accent Builds\n\n H3: Branded Tensile Fabric Displays\n\n H3: Portable Pop-Up & Tabletop Displays\n\n**\\[SECTION 4 — Features\\]**\n\n**H2:** What Makes Our Modular Systems Different\n\n✓ Tool-free assembly in under 4 hours\n\n ✓ Custom graphic panels for every event\n\n ✓ Integrated LED and screen options\n\n ✓ Hard-case shipping — airline-checkable\n\n ✓ Reconfigurations for different booth sizes\n\n ✓ Sustainable materials available\n\n**\\[SECTION 5 — Applications\\]**\n\n**H2:** Ideal for These Scenarios\n\nH3: Multi-City Event Tours\n\n H3: Emerging Market Activations\n\n H3: Sales Enablement & Demo Environments\n\n H3: Internal Events & Roadshows\n\n**\\[CTA BANNER\\]**\n\n**H2:** One Booth System. Every Event. Any Country.\n\n**CTA \\#2:** → Get a Modular Booth Quote | → Request a Demo\n\n# **SECTION 3: MEDIA PRODUCTION**",
+        "## **PAGE 8**\n\n### **/services/global-event-solutions/modular-portable-booths**\n\n**Search Intent:** Commercial Investigation \\+ Transactional\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** modular trade show booths | 7–9x |\n| **Primary:** portable trade show displays | 5–6x |\n| **Secondary:** modular exhibition stands | 4–5x |\n| **Secondary:** portable booth systems | 3–4x |\n| **Secondary:** lightweight trade show displays | 2–3x |\n| **LSI:** modular display systems, reconfigurable booths, pop-up displays, tensile booths, modular booth design | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** Modular and Portable Trade Show Booth Systems | B2B Sales Arrow\n\n **Meta Description:** Reusable modular booth systems and portable trade show displays — consistent brand presence across multiple markets. 30–50% lower cost per event than custom rebuilds.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** Modular & Portable Trade Show Booths — Engineered for Enterprise Efficiency\n\n**Subheading:** Deploy a premium, branded presence at any event — in any country — with our modular booth systems. Reconfigurable. Lightweight. Built to perform at scale.\n\n**CTA \\#1:** → Request a Modular Booth Quote\n\n**\\[SECTION 2 — Why Modular\\]**\n\n**H2:** Why Enterprise Brands Are Moving to Modular Booth Systems\n\n*Comparison:* Custom timber builds vs. modular — cost per use, speed of deployment, adaptability to different booth sizes, sustainability.\n\n**\\[SECTION 3 — Product Range\\]**\n\n**H2:** Our Modular Booth Range\n\nH3: 10x10 Modular Kits — Starter & satellite booths\n\n H3: 10x20 & 20x20 Inline Configurations\n\n H3: Island Modular Systems\n\n H3: Hybrid Modular \\+ Custom Accent Builds\n\n H3: Branded Tensile Fabric Displays\n\n H3: Portable Pop-Up & Tabletop Displays\n\n**\\[SECTION 4 — Features\\]**\n\n**H2:** What Makes Our Modular Systems Different\n\n✓ Tool-free assembly in under 4 hours\n\n ✓ Custom graphic panels for every event\n\n ✓ Integrated LED and screen options\n\n ✓ Hard-case shipping — airline-checkable\n\n ✓ Reconfigurations for different booth sizes\n\n ✓ Sustainable materials available\n\n**\\[SECTION 5 — Applications\\]**\n\n**H2:** Ideal for These Scenarios\n\nH3: Multi-City Event Tours\n\n H3: Emerging Market Activations\n\n H3: Sales Enablement & Demo Environments\n\n H3: Internal Events & Roadshows\n\n**\\[CTA BANNER\\]**\n\n**H2:** One Booth System. Every Event. Any Country.\n\n**CTA \\#2:** → Get a Modular Booth Quote | → Request a Demo\n\n# **SECTION 3: MEDIA PRODUCTION**",
     },
     hero: {
       title: "Modular & Portable Trade Show Booths - Engineered for Enterprise Efficiency",
@@ -3106,22 +3106,22 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Request a Modular Booth Quote",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Request a Demo",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Get a Modular Booth Quote",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
       {
         label: "Request a Demo",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],
@@ -3142,9 +3142,9 @@ export const pages: PageContent[] = [
       "Tech & Production Specs",
       "CTA Banner",
     ],
-    metaTitle: "B2B Media Production Services | B2B Sales Arrow",
+    metaTitle: "B2B Media Production and Video Production Company | B2B Sales Arrow",
     metaDescription:
-      "Cinematic B2B media production for enterprise brands — event video, corporate content, video editing, and live streaming. Build authority with high-fidelity content. Talk to us.",
+      "Enterprise B2B media production — event video, corporate films, product demos, live streaming and video editing. Content your sales and marketing teams keep using.",
     focusKeyphrase: "video production company",
     secondaryKeywords: [
       "video production services",
@@ -3196,7 +3196,7 @@ export const pages: PageContent[] = [
         },
       ],
       rawMarkdown:
-        "## **PAGE 9**\n\n### **/services/media-production/**\n\n**Page Type:** Service Hub / Pillar Page\n\n **Search Intent:** Informational \\+ Commercial\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** B2B media production | 6–7x |\n| **Primary:** corporate media production | 5–6x |\n| **Secondary:** B2B video production company | 4–5x |\n| **Secondary:** enterprise content production | 3–4x |\n| **Secondary:** corporate video and media services | 2–3x |\n| **LSI:** event video, corporate video, video editing, live streaming, brand content, media strategy | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** B2B Media Production Services | B2B Sales Arrow\n\n **Meta Description:** Cinematic B2B media production for enterprise brands — event video, corporate content, video editing, and live streaming. Build authority with high-fidelity content. Talk to us.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** B2B Media Production That Builds Enterprise Authority\n\n**Subheading:** We produce cinematic content that makes your brand impossible to ignore — from live event coverage to corporate video series and everything in between.\n\n**CTA \\#1:** → Request a Media Production Consultation\n\n**\\[SECTION 2 — Services Grid\\]**\n\n**H2:** Our Media Production Capabilities\n\nH3: Event Video Production → /services/media-production/event-video-production\n\n H3: Corporate Video Production → /services/media-production/corporate-video-production\n\n H3: Video Editing Services → /services/media-production/video-editing-services\n\n H3: Live Streaming Services → /services/media-production/live-streaming-services\n\n*Each: 50-word description \\+ internal link*\n\n**\\[SECTION 3 — Why Premium Production Matters\\]**\n\n**H2:** Why Enterprise Brands Can't Afford Low-Quality Content\n\n*Content (100 words):* Brand perception is set in seconds. Poor production quality signals poor brand quality. High-fidelity media drives trust, engagement, and conversion — especially in B2B where every touchpoint is scrutinized.\n\n**\\[SECTION 4 — Our Production Philosophy\\]**\n\n**H2:** Cinematic Storytelling Engineered for B2B Conversion\n\nH3: We Don't Just Film — We Tell Stories That Sell\n\n H3: Every Frame Is a Brand Decision\n\n H3: From Script to Screen — All Under One Roof\n\n**\\[SECTION 5 — Portfolio Highlight\\]**\n\n**H2:** Recent Production Work\n\n*2–3 video thumbnails / stills with: client, project type, result*\n\n**CTA \\#2:** → View Full Media Portfolio\n\n**\\[SECTION 6 — Tech & Production Specs\\]**\n\n**H2:** Our Production Capabilities\n\n*Content:* 4K cinema cameras, drone footage, multi-cam live production, studio and on-location, global crew network.\n\n**\\[CTA BANNER\\]**\n\n**H2:** Produce Content Your Audience Actually Remembers\n\n**CTA \\#3:** → Start Your Media Project",
+        "## **PAGE 9**\n\n### **/services/media-production/**\n\n**Page Type:** Service Hub / Pillar Page\n\n **Search Intent:** Informational \\+ Commercial\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** B2B media production | 6–7x |\n| **Primary:** corporate media production | 5–6x |\n| **Secondary:** B2B video production company | 4–5x |\n| **Secondary:** enterprise content production | 3–4x |\n| **Secondary:** corporate video and media services | 2–3x |\n| **LSI:** event video, corporate video, video editing, live streaming, brand content, media strategy | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** B2B Media Production and Video Production Company | B2B Sales Arrow\n\n **Meta Description:** Enterprise B2B media production — event video, corporate films, product demos, live streaming and video editing. Content your sales and marketing teams keep using.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** B2B Media Production That Builds Enterprise Authority\n\n**Subheading:** We produce cinematic content that makes your brand impossible to ignore — from live event coverage to corporate video series and everything in between.\n\n**CTA \\#1:** → Request a Media Production Consultation\n\n**\\[SECTION 2 — Services Grid\\]**\n\n**H2:** Our Media Production Capabilities\n\nH3: Event Video Production → /services/media-production/event-video-production\n\n H3: Corporate Video Production → /services/media-production/corporate-video-production\n\n H3: Video Editing Services → /services/media-production/video-editing-services\n\n H3: Live Streaming Services → /services/media-production/live-streaming-services\n\n*Each: 50-word description \\+ internal link*\n\n**\\[SECTION 3 — Why Premium Production Matters\\]**\n\n**H2:** Why Enterprise Brands Can't Afford Low-Quality Content\n\n*Content (100 words):* Brand perception is set in seconds. Poor production quality signals poor brand quality. High-fidelity media drives trust, engagement, and conversion — especially in B2B where every touchpoint is scrutinized.\n\n**\\[SECTION 4 — Our Production Philosophy\\]**\n\n**H2:** Cinematic Storytelling Engineered for B2B Conversion\n\nH3: We Don't Just Film — We Tell Stories That Sell\n\n H3: Every Frame Is a Brand Decision\n\n H3: From Script to Screen — All Under One Roof\n\n**\\[SECTION 5 — Portfolio Highlight\\]**\n\n**H2:** Recent Production Work\n\n*2–3 video thumbnails / stills with: client, project type, result*\n\n**CTA \\#2:** → View Full Media Portfolio\n\n**\\[SECTION 6 — Tech & Production Specs\\]**\n\n**H2:** Our Production Capabilities\n\n*Content:* 4K cinema cameras, drone footage, multi-cam live production, studio and on-location, global crew network.\n\n**\\[CTA BANNER\\]**\n\n**H2:** Produce Content Your Audience Actually Remembers\n\n**CTA \\#3:** → Start Your Media Project",
     },
     hero: {
       title: "B2B Media Production That Builds Enterprise Authority",
@@ -3473,17 +3473,17 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Request a Media Production Consultation",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Start Your Media Project",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Start Your Media Project",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],
@@ -3513,9 +3513,9 @@ export const pages: PageContent[] = [
     url: "/services/media-production/event-video-production",
     navigationGroup: "Media Production",
     requiredSections: ["Hero", "What We Produce", "Why It Matters", "Process", "CTA Banner"],
-    metaTitle: "B2B Event Video Production Services | B2B Sales Arrow",
+    metaTitle: "Event Video Production Company for Trade Shows and Conferences | B2B Sales Arrow",
     metaDescription:
-      "Transform your live events into high-fidelity brand assets. We provide turnkey event video production, highlight reels, and executive interviews at 40+ global locations.",
+      "Specialist event video production — highlight reels, booth walkthroughs, speaker coverage, on-site testimonials, and social cut-downs that work for months after the show.",
     focusKeyphrase: "event video production company",
     secondaryKeywords: [
       "trade show video production",
@@ -3800,12 +3800,12 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Book Event Video Production",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
       {
         label: "View Our Event Reel",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],
@@ -3818,9 +3818,9 @@ export const pages: PageContent[] = [
     url: "/services/media-production/corporate-video-production",
     navigationGroup: "Media Production",
     requiredSections: ["Hero", "Video Types", "Production Quality", "ROI Section", "CTA Banner"],
-    metaTitle: "Cinematic Corporate Video Production | B2B Sales Arrow",
+    metaTitle: "Corporate Video Production Solutions for Enterprise B2B Brands | B2B Sales Arrow",
     metaDescription:
-      "Enterprise-grade corporate video production that builds trust and drives conversion. From brand films to product explainers, we tell stories that command executive attention.",
+      "Enterprise corporate video production — brand films, product explainers, executive interviews, investor content and sales enablement videos that build authority and shorten sales cycles.",
     focusKeyphrase: "corporate video production solutions",
     secondaryKeywords: [
       "video production company",
@@ -4050,17 +4050,17 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Request a Corporate Video Quote",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Start Your Corporate Video Project",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Start Your Corporate Video Project",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],
@@ -4073,9 +4073,9 @@ export const pages: PageContent[] = [
     url: "/services/media-production/video-editing-services",
     navigationGroup: "Media Production",
     requiredSections: ["Hero", "Services", "Turnaround & Scale", "Use Cases", "CTA Banner"],
-    metaTitle: "Premium B2B Video Editing Services | B2B Sales Arrow",
+    metaTitle: "Professional Video Editing Services for B2B Brands | B2B Sales Arrow",
     metaDescription:
-      "Turn raw footage into polished growth assets. Our premium video editing services include color grading, sound design, and multi-platform optimization for B2B enterprise brands.",
+      "B2B professional video editing — colour grading, motion graphics, social cut-downs, subtitles, and post-production. Fast turnaround. Enterprise-scale volume.",
     focusKeyphrase: "video editing services",
     secondaryKeywords: [
       "professional video editing",
@@ -4349,22 +4349,22 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Send Us Your Footage",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "See Editing Samples",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Upload Your Project Brief",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
       {
         label: "See Editing Samples",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],
@@ -4377,9 +4377,9 @@ export const pages: PageContent[] = [
     url: "/services/media-production/live-streaming-services",
     navigationGroup: "Media Production",
     requiredSections: ["Hero", "Capabilities", "Use Cases", "Hybrid Events", "CTA Banner"],
-    metaTitle: "B2B Live Streaming Services for Events & Conferences | B2B Sales Arrow",
+    metaTitle: "Corporate Live Streaming and Hybrid Event Solutions | B2B Sales Arrow",
     metaDescription:
-      "Broadcast-quality live streaming for corporate events, trade shows, and hybrid conferences. Multi-platform, multi-camera, global. Enquire about your next event.",
+      "Professional corporate live streaming and hybrid event production — multi-camera broadcasts for conferences, launches, town halls, and investor events. Global reach. Broadcast quality.",
     focusKeyphrase: "hybrid event solutions company",
     secondaryKeywords: [
       "virtual event solutions company",
@@ -4430,7 +4430,7 @@ export const pages: PageContent[] = [
         },
       ],
       rawMarkdown:
-        "## **PAGE 13**\n\n### **/services/media-production/live-streaming-services**\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** live streaming services B2B | 7–9x |\n| **Primary:** corporate live streaming | 5–6x |\n| **Secondary:** event live streaming company | 4–5x |\n| **Secondary:** hybrid event streaming | 3–4x |\n| **Secondary:** professional live stream production | 2–3x |\n| **LSI:** webinar production, virtual event, multi-platform streaming, livestream studio, broadcast quality | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** B2B Live Streaming Services for Events & Conferences | B2B Sales Arrow\n\n **Meta Description:** Broadcast-quality live streaming for corporate events, trade shows, and hybrid conferences. Multi-platform, multi-camera, global. Enquire about your next event.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** Live Streaming Services That Extend Your Event Reach Globally\n\n**Subheading:** Not everyone can be in the room. We bring your event to audiences worldwide with broadcast-quality live streaming — multi-camera, multi-platform, zero latency.\n\n**CTA \\#1:** → Get a Live Stream Quote\n\n**\\[SECTION 2 — Capabilities\\]**\n\n**H2:** Our Live Streaming Capabilities\n\nH3: Multi-Camera Live Production\n\n H3: Platform Management (YouTube, LinkedIn Live, Vimeo, Custom RTMP)\n\n H3: Real-Time Graphics & Lower Thirds\n\n H3: Live Audience Engagement (polls, Q\\&A, chat moderation)\n\n H3: Simultaneous Recording & Archive Delivery\n\n H3: Global Technical Support\n\n**\\[SECTION 3 — Use Cases\\]**\n\n**H2:** Events We Live Stream\n\nH3: Trade Shows & Exhibition Presentations\n\n H3: Corporate Town Halls & All-Hands\n\n H3: Product Launches & Announcements\n\n H3: Conferences & Panel Discussions\n\n H3: Investor Relations Events\n\n H3: Hybrid Internal Events\n\n**\\[SECTION 4 — Hybrid Events\\]**\n\n**H2:** The New Standard: Hybrid Events with Live Streaming\n\n*Content: Hybrid \\= in-person \\+ virtual. Best of both. Reach more stakeholders without increasing venue cost.*\n\n**\\[CTA BANNER\\]**\n\n**H2:** Your Event. Every Screen. Everywhere.\n\n**CTA \\#2:** → Plan Your Live Stream | → Request a Technical Spec Sheet\n\n# **SECTION 4: PERFORMANCE MARKETING**",
+        "## **PAGE 13**\n\n### **/services/media-production/live-streaming-services**\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** live streaming services B2B | 7–9x |\n| **Primary:** corporate live streaming | 5–6x |\n| **Secondary:** event live streaming company | 4–5x |\n| **Secondary:** hybrid event streaming | 3–4x |\n| **Secondary:** professional live stream production | 2–3x |\n| **LSI:** webinar production, virtual event, multi-platform streaming, livestream studio, broadcast quality | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** Corporate Live Streaming and Hybrid Event Solutions | B2B Sales Arrow\n\n **Meta Description:** Professional corporate live streaming and hybrid event production — multi-camera broadcasts for conferences, launches, town halls, and investor events. Global reach. Broadcast quality.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** Live Streaming Services That Extend Your Event Reach Globally\n\n**Subheading:** Not everyone can be in the room. We bring your event to audiences worldwide with broadcast-quality live streaming — multi-camera, multi-platform, zero latency.\n\n**CTA \\#1:** → Get a Live Stream Quote\n\n**\\[SECTION 2 — Capabilities\\]**\n\n**H2:** Our Live Streaming Capabilities\n\nH3: Multi-Camera Live Production\n\n H3: Platform Management (YouTube, LinkedIn Live, Vimeo, Custom RTMP)\n\n H3: Real-Time Graphics & Lower Thirds\n\n H3: Live Audience Engagement (polls, Q\\&A, chat moderation)\n\n H3: Simultaneous Recording & Archive Delivery\n\n H3: Global Technical Support\n\n**\\[SECTION 3 — Use Cases\\]**\n\n**H2:** Events We Live Stream\n\nH3: Trade Shows & Exhibition Presentations\n\n H3: Corporate Town Halls & All-Hands\n\n H3: Product Launches & Announcements\n\n H3: Conferences & Panel Discussions\n\n H3: Investor Relations Events\n\n H3: Hybrid Internal Events\n\n**\\[SECTION 4 — Hybrid Events\\]**\n\n**H2:** The New Standard: Hybrid Events with Live Streaming\n\n*Content: Hybrid \\= in-person \\+ virtual. Best of both. Reach more stakeholders without increasing venue cost.*\n\n**\\[CTA BANNER\\]**\n\n**H2:** Your Event. Every Screen. Everywhere.\n\n**CTA \\#2:** → Plan Your Live Stream | → Request a Technical Spec Sheet\n\n# **SECTION 4: PERFORMANCE MARKETING**",
     },
     hero: {
       title: "Live Streaming and Hybrid Event Solutions That Extend Your Event Reach Globally",
@@ -4661,17 +4661,17 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Get a Live Stream Quote",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Request a Technical Spec Sheet",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Plan Your Live Stream",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],
@@ -4691,9 +4691,9 @@ export const pages: PageContent[] = [
       "Results",
       "CTA Banner",
     ],
-    metaTitle: "B2B Performance Marketing Services | B2B Sales Arrow",
+    metaTitle: "B2B Performance Marketing Built to Fill Enterprise Pipeline | B2B Sales Arrow",
     metaDescription:
-      "Scale your enterprise pipeline with high-fidelity B2B performance marketing. We combine search intent, paid media, and attribution to drive measurable growth.",
+      "Specialist B2B digital marketing agency — SEO, paid advertising, and LinkedIn Ads managed around qualified pipeline and revenue attribution. Every campaign decision tracked to commercial outcomes.",
     focusKeyphrase: "B2B digital marketing agency",
     secondaryKeywords: [
       "digital marketing agency",
@@ -4745,7 +4745,7 @@ export const pages: PageContent[] = [
         },
       ],
       rawMarkdown:
-        "## **PAGE 14**\n\n### **/services/performance-marketing/**\n\n**Page Type:** Service Hub / Pillar Page\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** B2B performance marketing | 6–7x |\n| **Primary:** performance marketing for enterprise | 5–6x |\n| **Secondary:** B2B digital marketing agency | 4–5x |\n| **Secondary:** enterprise performance marketing services | 3–4x |\n| **Secondary:** data-driven B2B marketing | 2–3x |\n| **LSI:** SEO, paid advertising, LinkedIn ads, lead generation, marketing ROI, pipeline marketing | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** B2B Performance Marketing Agency | B2B Sales Arrow\n\n **Meta Description:** Data-driven B2B performance marketing — SEO, paid advertising, and LinkedIn Ads for enterprise brands. Every dollar tracked, every campaign optimized for pipeline. Talk to us.\n\n###  **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** B2B Performance Marketing Built to Fill Enterprise Pipeline\n\n**Subheading:** We don't run campaigns. We engineer revenue-generating marketing systems — every channel tracked, every dollar accountable, every lead qualified.\n\n**CTA \\#1:** → Get a Performance Marketing Audit\n\n **Proof Bar:** $1.2B Pipeline Generated | 40+ Countries | 98% Client Retention\n\n**\\[SECTION 2 — Services Grid\\]**\n\n**H2:** Our Performance Marketing Services\n\nH3: SEO Services → /services/performance-marketing/seo-services\n\n H3: Paid Advertising → /services/performance-marketing/paid-advertising\n\n H3: LinkedIn Ads for B2B → /services/performance-marketing/linkedin-ads-b2b\n\n**\\[SECTION 3 — Philosophy\\]**\n\n**H2:** Performance Marketing Means Every Action Has a Number\n\n*Content: Vanity metrics vs. pipeline metrics. We track MQL to SQL to revenue, not just impressions and clicks.*\n\n**\\[SECTION 4 — Channel Strategy\\]**\n\n**H2:** How We Build Your B2B Marketing Engine\n\nH3: Audience Intelligence & ICP Definition\n\n H3: Channel Selection & Budget Allocation\n\n H3: Campaign Architecture & Messaging\n\n H3: Conversion Rate Optimization\n\n H3: Attribution & Revenue Reporting\n\n**\\[SECTION 5 — Results\\]**\n\n**H2:** Marketing That Moves the Revenue Needle\n\n*2 case studies with channel breakdown, spend, pipeline generated, ROI.*\n\n**CTA \\#2:** → View Marketing Case Studies\n\n**\\[CTA BANNER\\]**\n\n**H2:** Stop Guessing. Start Knowing.\n\n**CTA \\#3:** → Request a Free Performance Marketing Audit",
+        "## **PAGE 14**\n\n### **/services/performance-marketing/**\n\n**Page Type:** Service Hub / Pillar Page\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** B2B performance marketing | 6–7x |\n| **Primary:** performance marketing for enterprise | 5–6x |\n| **Secondary:** B2B digital marketing agency | 4–5x |\n| **Secondary:** enterprise performance marketing services | 3–4x |\n| **Secondary:** data-driven B2B marketing | 2–3x |\n| **LSI:** SEO, paid advertising, LinkedIn ads, lead generation, marketing ROI, pipeline marketing | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** B2B Performance Marketing Agency | B2B Sales Arrow\n\n **Meta Description:** Data-driven B2B performance marketing — SEO, paid advertising, and LinkedIn Ads for enterprise brands. Every dollar tracked, every campaign optimized for pipeline. Talk to us.\n\n###  **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** B2B Performance Marketing Built to Fill Enterprise Pipeline\n\n**Subheading:** We don't run campaigns. We engineer revenue-generating marketing systems — every channel tracked, every dollar accountable, every lead qualified.\n\n**CTA \\#1:** → Get a Performance Marketing Audit\n\n **Proof Bar:** $1.2B Pipeline Generated | 40+ Countries | 98% Client Retention\n\n**\\[SECTION 2 — Services Grid\\]**\n\n**H2:** Our Performance Marketing Services\n\nH3: SEO Services → /services/seo-services\n\n H3: Paid Advertising → /services/paid-advertising\n\n H3: LinkedIn Ads for B2B → /services/linkedin-ads\n\n**\\[SECTION 3 — Philosophy\\]**\n\n**H2:** Performance Marketing Means Every Action Has a Number\n\n*Content: Vanity metrics vs. pipeline metrics. We track MQL to SQL to revenue, not just impressions and clicks.*\n\n**\\[SECTION 4 — Channel Strategy\\]**\n\n**H2:** How We Build Your B2B Marketing Engine\n\nH3: Audience Intelligence & ICP Definition\n\n H3: Channel Selection & Budget Allocation\n\n H3: Campaign Architecture & Messaging\n\n H3: Conversion Rate Optimization\n\n H3: Attribution & Revenue Reporting\n\n**\\[SECTION 5 — Results\\]**\n\n**H2:** Marketing That Moves the Revenue Needle\n\n*2 case studies with channel breakdown, spend, pipeline generated, ROI.*\n\n**CTA \\#2:** → View Marketing Case Studies\n\n**\\[CTA BANNER\\]**\n\n**H2:** Stop Guessing. Start Knowing.\n\n**CTA \\#3:** → Request a Free Performance Marketing Audit",
     },
     hero: {
       title: "B2B Performance Marketing Built to Fill Enterprise Pipeline",
@@ -4795,7 +4795,7 @@ export const pages: PageContent[] = [
         title: "Services",
         heading: "Our Performance Marketing Services",
         rawMarkdown:
-          "### **Our Performance Marketing Services**\n\nWe support B2B SEO services, paid advertising, LinkedIn Ads for B2B, landing page optimization, campaign architecture, content strategy, and revenue reporting. Our digital marketing services are built for enterprise B2B buying cycles, not quick-win consumer tactics. \n\n### **SEO Services**\n\nWe build organic visibility for enterprise B2B brands through technical SEO, keyword strategy, content architecture, on-page optimization, and authority building. The goal is not just traffic — it is search visibility that attracts qualified buyers and supports long-term pipeline growth.  \n**Internal Link:** /services/performance-marketing/seo-services\n\n### **Paid Advertising**\n\nWe manage paid media campaigns across Google Search, Display, YouTube, programmatic, retargeting, and Microsoft Ads. Every campaign is structured around audience quality, conversion paths, landing page performance, and measurable pipeline — not just clicks or impressions.  \n**Internal Link:** /services/performance-marketing/paid-advertising\n\n### **LinkedIn Ads for B2B**\n\nWe create LinkedIn advertising programs for enterprise B2B audiences using Sponsored Content, Lead Gen Forms, Document Ads, Message Ads, Event Ads, and ABM targeting. Campaigns are built to reach decision-makers by role, company, industry, seniority, and account fit.  \n**Internal Link:** /services/performance-marketing/linkedin-ads-b2b",
+          "### **Our Performance Marketing Services**\n\nWe support B2B SEO services, paid advertising, LinkedIn Ads for B2B, landing page optimization, campaign architecture, content strategy, and revenue reporting. Our digital marketing services are built for enterprise B2B buying cycles, not quick-win consumer tactics. \n\n### **SEO Services**\n\nWe build organic visibility for enterprise B2B brands through technical SEO, keyword strategy, content architecture, on-page optimization, and authority building. The goal is not just traffic — it is search visibility that attracts qualified buyers and supports long-term pipeline growth.  \n**Internal Link:** /services/seo-services\n\n### **Paid Advertising**\n\nWe manage paid media campaigns across Google Search, Display, YouTube, programmatic, retargeting, and Microsoft Ads. Every campaign is structured around audience quality, conversion paths, landing page performance, and measurable pipeline — not just clicks or impressions.  \n**Internal Link:** /services/paid-advertising\n\n### **LinkedIn Ads for B2B**\n\nWe create LinkedIn advertising programs for enterprise B2B audiences using Sponsored Content, Lead Gen Forms, Document Ads, Message Ads, Event Ads, and ABM targeting. Campaigns are built to reach decision-makers by role, company, industry, seniority, and account fit.  \n**Internal Link:** /services/linkedin-ads",
         editorialNotes: [],
         blocks: [
           {
@@ -4818,7 +4818,7 @@ export const pages: PageContent[] = [
           },
           {
             type: "paragraph",
-            text: "Internal Link: /services/performance-marketing/seo-services",
+            text: "Internal Link: /services/seo-services",
           },
           {
             type: "heading",
@@ -4831,7 +4831,7 @@ export const pages: PageContent[] = [
           },
           {
             type: "paragraph",
-            text: "Internal Link: /services/performance-marketing/paid-advertising",
+            text: "Internal Link: /services/paid-advertising",
           },
           {
             type: "heading",
@@ -4844,7 +4844,7 @@ export const pages: PageContent[] = [
           },
           {
             type: "paragraph",
-            text: "Internal Link: /services/performance-marketing/linkedin-ads-b2b",
+            text: "Internal Link: /services/linkedin-ads",
           },
         ],
       },
@@ -4981,36 +4981,36 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Get a Performance Marketing Audit",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Request a Free Performance Marketing Audit",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "View Marketing Case Studies",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Proof",
       },
       {
         label: "Request a Free Performance Marketing Audit",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],
     internalLinks: [
       {
-        href: "/services/performance-marketing/seo-services",
+        href: "/services/seo-services",
         sourceSection: "Services",
       },
       {
-        href: "/services/performance-marketing/paid-advertising",
+        href: "/services/paid-advertising",
         sourceSection: "Services",
       },
       {
-        href: "/services/performance-marketing/linkedin-ads-b2b",
+        href: "/services/linkedin-ads",
         sourceSection: "Services",
       },
     ],
@@ -5019,7 +5019,7 @@ export const pages: PageContent[] = [
   {
     pageNumber: 15,
     pageName: "SEO Services",
-    url: "/services/performance-marketing/seo-services",
+    url: "/services/seo-services",
     navigationGroup: "Performance Marketing",
     requiredSections: [
       "Hero",
@@ -5030,9 +5030,9 @@ export const pages: PageContent[] = [
       "FAQ",
       "CTA Banner",
     ],
-    metaTitle: "Enterprise B2B SEO Services | B2B Sales Arrow",
+    metaTitle: "B2B SEO Services and Enterprise SEO Agency | B2B Sales Arrow",
     metaDescription:
-      "Command the search results that matter. Our B2B SEO services focus on high-intent enterprise keywords, technical excellence, and strategic authority building.",
+      "Enterprise B2B SEO services — technical SEO audits, keyword strategy, content architecture, and authority building. Organic pipeline for enterprise buyers at every stage of a complex sales cycle.",
     focusKeyphrase: "B2B SEO services",
     secondaryKeywords: [
       "SEO agency",
@@ -5043,7 +5043,7 @@ export const pages: PageContent[] = [
     seoInternal: {
       pageType: "",
       searchIntent: "",
-      url: "/services/performance-marketing/seo-services",
+      url: "/services/seo-services",
       targetKeywords: [
         {
           category: "Primary",
@@ -5084,7 +5084,7 @@ export const pages: PageContent[] = [
         },
       ],
       rawMarkdown:
-        "## **PAGE 15**\n\n### **/services/performance-marketing/seo-services**\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** B2B SEO services | 7–9x |\n| **Primary:** enterprise SEO agency | 5–6x |\n| **Secondary:** B2B SEO strategy | 4–5x |\n| **Secondary:** technical SEO for enterprise | 3–4x |\n| **Secondary:** B2B organic search marketing | 2–3x |\n| **LSI:** keyword research, content strategy, link building, technical SEO audit, on-page optimization, search rankings | 1–2x each |\n\n###  **Meta Tags**\n\n**Meta Title:** B2B SEO Services for Enterprise Growth | B2B Sales Arrow\n\n **Meta Description:** Enterprise B2B SEO services — technical audits, keyword strategy, content SEO, and link acquisition that builds long-term organic pipeline. Get a free SEO audit today.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** B2B SEO Services That Build Organic Pipeline — Not Just Traffic\n\n**Subheading:** We engineer search visibility for complex B2B sales cycles — from technical foundation to content authority — so your ideal enterprise buyers find you before they find your competitors.\n\n**CTA \\#1:** → Request a Free SEO Audit\n\n**\\[SECTION 2 — Why B2B SEO Is Different\\]**\n\n**H2:** B2B SEO Is Not the Same as B2C SEO\n\n*Content: Longer buying cycles, committee decisions, lower search volume but higher purchase value, content depth requirements. We specialize in this.*\n\n**\\[SECTION 3 — Services Breakdown\\]**\n\n**H2:** Our B2B SEO Services\n\nH3: Technical SEO Audit & Remediation\n\n H3: Keyword Research & Search Intent Mapping\n\n H3: On-Page SEO Optimization\n\n H3: Content Strategy & SEO Copywriting\n\n H3: Authority Link Building\n\n H3: Local & International SEO\n\n H3: SEO Reporting & KPI Dashboards\n\n**\\[SECTION 4 — Methodology\\]**\n\n**H2:** Our SEO Methodology: From Crawl to Conversion\n\nH3: Phase 1 — Technical Foundation (Core Web Vitals, schema, site architecture)\n\n H3: Phase 2 — Content Architecture (pillar \\+ cluster model)\n\n H3: Phase 3 — Authority Building (links, PR, digital PR)\n\n H3: Phase 4 — Measurement & Iteration\n\n**\\[SECTION 5 — Results\\]**\n\n**H2:** SEO Results That Drive Revenue\n\n*Case study with: starting position, keywords targeted, traffic growth, lead volume increase, timeline.*\n\n**\\[SECTION 6 — FAQ\\]**\n\nH3: How long does B2B SEO take to show results?\n\n H3: Do you handle content writing too?\n\n H3: What industries do you specialize in?\n\n H3: How do you measure SEO ROI?\n\n**\\[CTA BANNER\\]**\n\n**H2:** Your Buyers Are Searching. Will They Find You?\n\n**CTA \\#2:** → Get a Free SEO Audit | → Download Our B2B SEO Playbook",
+        "## **PAGE 15**\n\n### **/services/seo-services**\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** B2B SEO services | 7–9x |\n| **Primary:** enterprise SEO agency | 5–6x |\n| **Secondary:** B2B SEO strategy | 4–5x |\n| **Secondary:** technical SEO for enterprise | 3–4x |\n| **Secondary:** B2B organic search marketing | 2–3x |\n| **LSI:** keyword research, content strategy, link building, technical SEO audit, on-page optimization, search rankings | 1–2x each |\n\n###  **Meta Tags**\n\n**Meta Title:** B2B SEO Services for Enterprise Growth | B2B Sales Arrow\n\n **Meta Description:** Enterprise B2B SEO services — technical audits, keyword strategy, content SEO, and link acquisition that builds long-term organic pipeline. Get a free SEO audit today.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** B2B SEO Services That Build Organic Pipeline — Not Just Traffic\n\n**Subheading:** We engineer search visibility for complex B2B sales cycles — from technical foundation to content authority — so your ideal enterprise buyers find you before they find your competitors.\n\n**CTA \\#1:** → Request a Free SEO Audit\n\n**\\[SECTION 2 — Why B2B SEO Is Different\\]**\n\n**H2:** B2B SEO Is Not the Same as B2C SEO\n\n*Content: Longer buying cycles, committee decisions, lower search volume but higher purchase value, content depth requirements. We specialize in this.*\n\n**\\[SECTION 3 — Services Breakdown\\]**\n\n**H2:** Our B2B SEO Services\n\nH3: Technical SEO Audit & Remediation\n\n H3: Keyword Research & Search Intent Mapping\n\n H3: On-Page SEO Optimization\n\n H3: Content Strategy & SEO Copywriting\n\n H3: Authority Link Building\n\n H3: Local & International SEO\n\n H3: SEO Reporting & KPI Dashboards\n\n**\\[SECTION 4 — Methodology\\]**\n\n**H2:** Our SEO Methodology: From Crawl to Conversion\n\nH3: Phase 1 — Technical Foundation (Core Web Vitals, schema, site architecture)\n\n H3: Phase 2 — Content Architecture (pillar \\+ cluster model)\n\n H3: Phase 3 — Authority Building (links, PR, digital PR)\n\n H3: Phase 4 — Measurement & Iteration\n\n**\\[SECTION 5 — Results\\]**\n\n**H2:** SEO Results That Drive Revenue\n\n*Case study with: starting position, keywords targeted, traffic growth, lead volume increase, timeline.*\n\n**\\[SECTION 6 — FAQ\\]**\n\nH3: How long does B2B SEO take to show results?\n\n H3: Do you handle content writing too?\n\n H3: What industries do you specialize in?\n\n H3: How do you measure SEO ROI?\n\n**\\[CTA BANNER\\]**\n\n**H2:** Your Buyers Are Searching. Will They Find You?\n\n**CTA \\#2:** → Get a Free SEO Audit | → Download Our B2B SEO Playbook",
     },
     hero: {
       title: "B2B SEO Services That Build Organic Pipeline - Not Just Traffic",
@@ -5371,22 +5371,22 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Request a Free SEO Audit",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Download Our B2B SEO Playbook",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Get a Free SEO Audit",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
       {
         label: "Download Our B2B SEO Playbook",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],
@@ -5396,18 +5396,18 @@ export const pages: PageContent[] = [
   {
     pageNumber: 16,
     pageName: "Paid Advertising",
-    url: "/services/performance-marketing/paid-advertising",
+    url: "/services/paid-advertising",
     navigationGroup: "Performance Marketing",
     requiredSections: ["Hero", "Channels", "Our Approach", "Results", "CTA Banner"],
-    metaTitle: "B2B Google Ads Management | B2B Sales Arrow",
+    metaTitle: "B2B Paid Advertising and PPC Agency for Enterprise | B2B Sales Arrow",
     metaDescription:
-      "Precision-targeted Google Ads for enterprise B2B brands. We optimize for pipeline value, not just clicks, ensuring your budget reaches the right executive decision-makers.",
+      "Specialist B2B PPC agency — Google Search, Display, YouTube, programmatic, and LinkedIn Ads managed around qualified pipeline and cost per qualified opportunity. Not just clicks.",
     focusKeyphrase: "B2B paid advertising",
     secondaryKeywords: ["PPC agency", "PPC", "paid search for B2B", "digital marketing agency"],
     seoInternal: {
       pageType: "",
       searchIntent: "",
-      url: "/services/performance-marketing/paid-advertising",
+      url: "/services/paid-advertising",
       targetKeywords: [
         {
           category: "Primary",
@@ -5448,7 +5448,7 @@ export const pages: PageContent[] = [
         },
       ],
       rawMarkdown:
-        "## **PAGE 16**\n\n### **/services/performance-marketing/paid-advertising**\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** B2B paid advertising | 7–9x |\n| **Primary:** enterprise PPC management | 5–6x |\n| **Secondary:** B2B Google Ads management | 4–5x |\n| **Secondary:** paid search for B2B | 3–4x |\n| **Secondary:** B2B paid media agency | 2–3x |\n| **LSI:** Google Ads, PPC, programmatic advertising, display advertising, retargeting, demand generation | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** B2B Paid Advertising & PPC Management | B2B Sales Arrow\n\n **Meta Description:** Expert B2B paid advertising management — Google Ads, programmatic, display, and retargeting for enterprise pipeline generation. Every campaign optimized for ROI. Get started.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** B2B Paid Advertising That Generates Pipeline, Not Just Clicks\n\n**Subheading:** We manage high-performance paid media programs for enterprise brands — every campaign built around pipeline metrics, not vanity numbers.\n\n**CTA \\#1:** → Request a Paid Media Audit\n\n**\\[SECTION 2 — Channels\\]**\n\n**H2:** Paid Channels We Manage\n\nH3: Google Search Ads (PPC)\n\n H3: Google Display & Programmatic\n\n H3: YouTube Advertising\n\n H3: Retargeting & Account-Based Advertising\n\n H3: Bing/Microsoft Ads\n\n**\\[SECTION 3 — Our Approach\\]**\n\n**H2:** How We Build Paid Campaigns That Actually Convert\n\nH3: Audience & ICP Targeting Strategy\n\n H3: Ad Copy & Creative Development\n\n H3: Landing Page Conversion Optimization\n\n H3: Bid Strategy & Budget Management\n\n H3: A/B Testing Framework\n\n H3: Full-Funnel Attribution Reporting\n\n**\\[SECTION 4 — Results\\]**\n\n**H2:** Paid Advertising Results We've Delivered\n\n*Metrics: CPL reduction, pipeline generated, ROAS achieved.*\n\n**\\[CTA BANNER\\]**\n\n**H2:** Make Every Ad Dollar Work Harder\n\n**CTA \\#2:** → Get a Paid Media Audit | → Request a Campaign Proposal",
+        "## **PAGE 16**\n\n### **/services/paid-advertising**\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** B2B paid advertising | 7–9x |\n| **Primary:** enterprise PPC management | 5–6x |\n| **Secondary:** B2B Google Ads management | 4–5x |\n| **Secondary:** paid search for B2B | 3–4x |\n| **Secondary:** B2B paid media agency | 2–3x |\n| **LSI:** Google Ads, PPC, programmatic advertising, display advertising, retargeting, demand generation | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** B2B Paid Advertising & PPC Management | B2B Sales Arrow\n\n **Meta Description:** Expert B2B paid advertising management — Google Ads, programmatic, display, and retargeting for enterprise pipeline generation. Every campaign optimized for ROI. Get started.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** B2B Paid Advertising That Generates Pipeline, Not Just Clicks\n\n**Subheading:** We manage high-performance paid media programs for enterprise brands — every campaign built around pipeline metrics, not vanity numbers.\n\n**CTA \\#1:** → Request a Paid Media Audit\n\n**\\[SECTION 2 — Channels\\]**\n\n**H2:** Paid Channels We Manage\n\nH3: Google Search Ads (PPC)\n\n H3: Google Display & Programmatic\n\n H3: YouTube Advertising\n\n H3: Retargeting & Account-Based Advertising\n\n H3: Bing/Microsoft Ads\n\n**\\[SECTION 3 — Our Approach\\]**\n\n**H2:** How We Build Paid Campaigns That Actually Convert\n\nH3: Audience & ICP Targeting Strategy\n\n H3: Ad Copy & Creative Development\n\n H3: Landing Page Conversion Optimization\n\n H3: Bid Strategy & Budget Management\n\n H3: A/B Testing Framework\n\n H3: Full-Funnel Attribution Reporting\n\n**\\[SECTION 4 — Results\\]**\n\n**H2:** Paid Advertising Results We've Delivered\n\n*Metrics: CPL reduction, pipeline generated, ROAS achieved.*\n\n**\\[CTA BANNER\\]**\n\n**H2:** Make Every Ad Dollar Work Harder\n\n**CTA \\#2:** → Get a Paid Media Audit | → Request a Campaign Proposal",
     },
     hero: {
       title: "B2B Paid Advertising That Generates Pipeline, Not Just Clicks",
@@ -5671,12 +5671,12 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Get a Paid Media Audit",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
       {
         label: "Request a Campaign Proposal",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],
@@ -5686,7 +5686,7 @@ export const pages: PageContent[] = [
   {
     pageNumber: 17,
     pageName: "LinkedIn Ads for B2B",
-    url: "/services/performance-marketing/linkedin-ads-b2b",
+    url: "/services/linkedin-ads",
     navigationGroup: "Performance Marketing",
     requiredSections: [
       "Hero",
@@ -5697,9 +5697,9 @@ export const pages: PageContent[] = [
       "Results",
       "CTA Banner",
     ],
-    metaTitle: "LinkedIn Ads for B2B Lead Generation | B2B Sales Arrow",
+    metaTitle: "LinkedIn Ads for B2B Lead Generation and ABM | B2B Sales Arrow",
     metaDescription:
-      "Expert LinkedIn Ads management for enterprise B2B brands. Sponsored content, Lead Gen Forms, InMail, and ABM campaigns that generate qualified pipeline. Get started today.",
+      "Enterprise LinkedIn Ads for B2B — Sponsored Content, Lead Gen Forms, ABM targeting, and pipeline attribution. Reach decision-makers by title, company, and intent.",
     focusKeyphrase: "LinkedIn Ads for B2B",
     secondaryKeywords: [
       "B2B LinkedIn advertising",
@@ -5710,7 +5710,7 @@ export const pages: PageContent[] = [
     seoInternal: {
       pageType: "",
       searchIntent: "",
-      url: "/services/performance-marketing/linkedin-ads-b2b",
+      url: "/services/linkedin-ads",
       targetKeywords: [
         {
           category: "Primary",
@@ -5751,7 +5751,7 @@ export const pages: PageContent[] = [
         },
       ],
       rawMarkdown:
-        "## **PAGE 17**\n\n### **/services/performance-marketing/linkedin-ads-b2b**\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** LinkedIn ads for B2B | 8–10x |\n| **Primary:** B2B LinkedIn advertising | 6–7x |\n| **Secondary:** LinkedIn lead generation ads | 4–5x |\n| **Secondary:** LinkedIn sponsored content | 3–4x |\n| **Secondary:** LinkedIn ads management agency | 2–3x |\n| **LSI:** LinkedIn InMail, Sponsored Content, Lead Gen Forms, LinkedIn ABM, B2B social advertising | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** LinkedIn Ads for B2B Lead Generation | B2B Sales Arrow\n\n **Meta Description:** Expert LinkedIn Ads management for enterprise B2B brands. Sponsored content, Lead Gen Forms, InMail, and ABM campaigns that generate qualified pipeline. Get started today.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** LinkedIn Ads for B2B — The Highest-Intent Enterprise Pipeline Channel\n\n**Subheading:** LinkedIn is where enterprise buyers make decisions. We engineer LinkedIn ad campaigns that target your exact ICP — by title, company, industry, and seniority — and convert them into qualified pipeline.\n\n**CTA \\#1:** → Request a LinkedIn Ads Audit\n\n**\\[SECTION 2 — Why LinkedIn for B2B\\]**\n\n**H2:** Why LinkedIn Is the \\#1 Paid Channel for Enterprise B2B\n\n*Content: 4 out of 5 LinkedIn members drive business decisions. Higher CPL, but higher quality — especially for enterprise deals. ABM-perfect targeting.*\n\n**\\[SECTION 3 — Ad Formats We Run\\]**\n\n**H2:** LinkedIn Ad Formats We Specialize In\n\nH3: Sponsored Content (Single Image, Carousel, Video Ads)\n\n H3: LinkedIn Lead Gen Forms\n\n H3: Sponsored InMail / Message Ads\n\n H3: Dynamic Ads\n\n H3: Document Ads (Thought Leadership)\n\n H3: Event Ads (for webinars, events)\n\n**\\[SECTION 4 — ABM Integration\\]**\n\n**H2:** LinkedIn Ads \\+ Account-Based Marketing (ABM)\n\n*Content: Target specific named accounts, upload account lists, tailor messaging to each account tier.*\n\n**\\[SECTION 5 — Process\\]**\n\n**H2:** Our LinkedIn Ads Management Process\n\nH3: ICP Definition & Audience Build\n\n H3: Ad Creative Development\n\n H3: Campaign Launch & Monitoring\n\n H3: Optimization & Scaling\n\n H3: Pipeline Attribution Reporting\n\n**\\[SECTION 6 — Results\\]**\n\n**H2:** LinkedIn Ad Results We've Delivered\n\n*Case study: industry, target audience, spend, leads generated, pipeline value, CPL.*\n\n**\\[CTA BANNER\\]**\n\n**H2:** Your Next Enterprise Customer Is on LinkedIn Right Now\n\n**CTA \\#2:** → Request a LinkedIn Campaign Strategy | → Get a Free LinkedIn Ads Audit\n\n# **SECTION 5: SALES QUALIFIED LEAD GENERATION**",
+        "## **PAGE 17**\n\n### **/services/linkedin-ads**\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** LinkedIn ads for B2B | 8–10x |\n| **Primary:** B2B LinkedIn advertising | 6–7x |\n| **Secondary:** LinkedIn lead generation ads | 4–5x |\n| **Secondary:** LinkedIn sponsored content | 3–4x |\n| **Secondary:** LinkedIn ads management agency | 2–3x |\n| **LSI:** LinkedIn InMail, Sponsored Content, Lead Gen Forms, LinkedIn ABM, B2B social advertising | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** LinkedIn Ads for B2B Lead Generation | B2B Sales Arrow\n\n **Meta Description:** Expert LinkedIn Ads management for enterprise B2B brands. Sponsored content, Lead Gen Forms, InMail, and ABM campaigns that generate qualified pipeline. Get started today.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** LinkedIn Ads for B2B — The Highest-Intent Enterprise Pipeline Channel\n\n**Subheading:** LinkedIn is where enterprise buyers make decisions. We engineer LinkedIn ad campaigns that target your exact ICP — by title, company, industry, and seniority — and convert them into qualified pipeline.\n\n**CTA \\#1:** → Request a LinkedIn Ads Audit\n\n**\\[SECTION 2 — Why LinkedIn for B2B\\]**\n\n**H2:** Why LinkedIn Is the \\#1 Paid Channel for Enterprise B2B\n\n*Content: 4 out of 5 LinkedIn members drive business decisions. Higher CPL, but higher quality — especially for enterprise deals. ABM-perfect targeting.*\n\n**\\[SECTION 3 — Ad Formats We Run\\]**\n\n**H2:** LinkedIn Ad Formats We Specialize In\n\nH3: Sponsored Content (Single Image, Carousel, Video Ads)\n\n H3: LinkedIn Lead Gen Forms\n\n H3: Sponsored InMail / Message Ads\n\n H3: Dynamic Ads\n\n H3: Document Ads (Thought Leadership)\n\n H3: Event Ads (for webinars, events)\n\n**\\[SECTION 4 — ABM Integration\\]**\n\n**H2:** LinkedIn Ads \\+ Account-Based Marketing (ABM)\n\n*Content: Target specific named accounts, upload account lists, tailor messaging to each account tier.*\n\n**\\[SECTION 5 — Process\\]**\n\n**H2:** Our LinkedIn Ads Management Process\n\nH3: ICP Definition & Audience Build\n\n H3: Ad Creative Development\n\n H3: Campaign Launch & Monitoring\n\n H3: Optimization & Scaling\n\n H3: Pipeline Attribution Reporting\n\n**\\[SECTION 6 — Results\\]**\n\n**H2:** LinkedIn Ad Results We've Delivered\n\n*Case study: industry, target audience, spend, leads generated, pipeline value, CPL.*\n\n**\\[CTA BANNER\\]**\n\n**H2:** Your Next Enterprise Customer Is on LinkedIn Right Now\n\n**CTA \\#2:** → Request a LinkedIn Campaign Strategy | → Get a Free LinkedIn Ads Audit\n\n# **SECTION 5: SALES QUALIFIED LEAD GENERATION**",
     },
     hero: {
       title: "LinkedIn Ads for B2B - The Highest-Intent Enterprise Pipeline Channel",
@@ -6008,22 +6008,22 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Request a LinkedIn Ads Audit",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Request a LinkedIn Campaign Strategy",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Get a Free LinkedIn Ads Audit",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
       {
         label: "Request a LinkedIn Campaign Strategy",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],
@@ -6044,9 +6044,9 @@ export const pages: PageContent[] = [
       "Results",
       "CTA Banner",
     ],
-    metaTitle: "B2B Lead Generation & Sales Qualified Leads | B2B Sales Arrow",
+    metaTitle: "Sales Qualified Lead Generation for Enterprise B2B | B2B Sales Arrow",
     metaDescription:
-      "Scale your sales pipeline with high-fidelity B2B lead generation. We provide turnkey SQL programs, appointment setting, and account-based sales development.",
+      "Enterprise sales qualified lead generation — verified decision-makers, BANT/CHAMP qualification, intent signals, and CRM-ready prospect profiles. Leads your sales team can act on immediately.",
     focusKeyphrase: "sales qualified lead generation",
     secondaryKeywords: [
       "B2B SQL generation",
@@ -6355,17 +6355,17 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Request a SQL Strategy Session",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Build Your SQL Generation Program",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Build Your SQL Generation Program",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],
@@ -6385,9 +6385,9 @@ export const pages: PageContent[] = [
       "Use Cases",
       "CTA Banner",
     ],
-    metaTitle: "B2B Market Research & Intelligence | B2B Sales Arrow",
+    metaTitle: "B2B Market Research Agency and Intelligence Services | B2B Sales Arrow",
     metaDescription:
-      "Human-powered B2B market research — data augmentation, data validation, and market intelligence for enterprise growth decisions. Request a research consultation today.",
+      "Enterprise B2B market research agency — data augmentation, data validation, and human market intelligence for competitive decisions. Better data. Sharper strategy. Faster market moves.",
     focusKeyphrase: "B2B market research agency",
     secondaryKeywords: [
       "market research",
@@ -6439,7 +6439,7 @@ export const pages: PageContent[] = [
         },
       ],
       rawMarkdown:
-        "## **PAGE 19**\n\n### **/services/market-research/**\n\n**Page Type:** Service Hub / Pillar Page\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** B2B market research services | 6–7x |\n| **Primary:** enterprise market research | 5–6x |\n| **Secondary:** B2B market intelligence | 4–5x |\n| **Secondary:** business market research company | 3–4x |\n| **Secondary:** market research for enterprise growth | 2–3x |\n| **LSI:** data augmentation, data validation, human-powered research, market intelligence, competitive analysis | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** B2B Market Research & Intelligence Services | B2B Sales Arrow\n\n **Meta Description:** Human-powered B2B market research — data augmentation, data validation, and market intelligence for enterprise growth decisions. Request a research consultation today.\n\n### **️ Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** B2B Market Research That Gives You an Unfair Competitive Advantage\n\n**Subheading:** Data-driven growth starts with knowing your market better than anyone else. We deliver human-powered market intelligence, validated data, and strategic insights that accelerate enterprise decisions.\n\n**CTA \\#1:** → Request a Market Research Consultation\n\n**\\[SECTION 2 — Services Grid\\]**\n\n**H2:** Our Market Research Services\n\nH3: Data Augmentation → /services/market-research/data-augmentation\n\n H3: Data Validation → /services/market-research/data-validation\n\n H3: Human-Powered Market Intelligence → /services/market-research/human-powered-market-intelligence\n\n**\\[SECTION 3 — Why Data Quality Matters\\]**\n\n**H2:** Bad Data Costs Enterprise Brands Millions\n\n*Content: CRM data decays at 22.5% per year. Wrong contact data wastes sales time. Market assumptions without research lead to poor strategic bets.*\n\n**\\[SECTION 4 — Our Research Approach\\]**\n\n**H2:** Human Intelligence \\+ Technology: Our Research Framework\n\nH3: Primary Research (interviews, surveys, expert panels)\n\n H3: Secondary Research (industry reports, competitor analysis)\n\n H3: Data Enrichment & Augmentation\n\n H3: Validation & Quality Assurance\n\n H3: Insight Delivery (reports, dashboards, briefings)\n\n**\\[SECTION 5 — Use Cases\\]**\n\n**H2:** When Enterprises Use Our Market Research\n\nH3: New Market Entry Planning\n\n H3: Competitor Intelligence Programs\n\n H3: CRM Data Enrichment & Hygiene\n\n H3: Target Account List Building\n\n H3: Product-Market Fit Validation\n\n H3: Sales Territory Mapping\n\n**\\[CTA BANNER\\]**\n\n**H2:** Intelligence Is a Competitive Advantage — Own It\n\n**CTA \\#2:** → Start a Research Project | → Download a Sample Report",
+        "## **PAGE 19**\n\n### **/services/market-research/**\n\n**Page Type:** Service Hub / Pillar Page\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** B2B market research services | 6–7x |\n| **Primary:** enterprise market research | 5–6x |\n| **Secondary:** B2B market intelligence | 4–5x |\n| **Secondary:** business market research company | 3–4x |\n| **Secondary:** market research for enterprise growth | 2–3x |\n| **LSI:** data augmentation, data validation, human-powered research, market intelligence, competitive analysis | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** B2B Market Research & Intelligence Services | B2B Sales Arrow\n\n **Meta Description:** Enterprise B2B market research agency — data augmentation, data validation, and human market intelligence for competitive decisions. Better data. Sharper strategy. Faster market moves.\n\n### **️ Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** B2B Market Research That Gives You an Unfair Competitive Advantage\n\n**Subheading:** Data-driven growth starts with knowing your market better than anyone else. We deliver human-powered market intelligence, validated data, and strategic insights that accelerate enterprise decisions.\n\n**CTA \\#1:** → Request a Market Research Consultation\n\n**\\[SECTION 2 — Services Grid\\]**\n\n**H2:** Our Market Research Services\n\nH3: Data Augmentation → /services/data-augmentation\n\n H3: Data Validation → /services/data-validation\n\n H3: Human-Powered Market Intelligence → /services/market-intelligence\n\n**\\[SECTION 3 — Why Data Quality Matters\\]**\n\n**H2:** Bad Data Costs Enterprise Brands Millions\n\n*Content: CRM data decays at 22.5% per year. Wrong contact data wastes sales time. Market assumptions without research lead to poor strategic bets.*\n\n**\\[SECTION 4 — Our Research Approach\\]**\n\n**H2:** Human Intelligence \\+ Technology: Our Research Framework\n\nH3: Primary Research (interviews, surveys, expert panels)\n\n H3: Secondary Research (industry reports, competitor analysis)\n\n H3: Data Enrichment & Augmentation\n\n H3: Validation & Quality Assurance\n\n H3: Insight Delivery (reports, dashboards, briefings)\n\n**\\[SECTION 5 — Use Cases\\]**\n\n**H2:** When Enterprises Use Our Market Research\n\nH3: New Market Entry Planning\n\n H3: Competitor Intelligence Programs\n\n H3: CRM Data Enrichment & Hygiene\n\n H3: Target Account List Building\n\n H3: Product-Market Fit Validation\n\n H3: Sales Territory Mapping\n\n**\\[CTA BANNER\\]**\n\n**H2:** Intelligence Is a Competitive Advantage — Own It\n\n**CTA \\#2:** → Start a Research Project | → Download a Sample Report",
     },
     hero: {
       title: "B2B Market Research That Gives You an Unfair Competitive Advantage",
@@ -6483,7 +6483,7 @@ export const pages: PageContent[] = [
         title: "Services Grid",
         heading: "Our Market Research Services",
         rawMarkdown:
-          "### **Our Market Research Services**\n\nWe provide data augmentation services, data validation services, human-powered market intelligence, competitor research, brand research, account research, buyer insights, and custom research reports for enterprise growth teams. \n\n### **Data Augmentation**\n\nWe enrich incomplete contact and account records with verified firmographic, technographic, role-based, and intent data. This helps sales and marketing teams improve segmentation, personalization, lead scoring, and CRM usefulness.  \n**Internal Link:** /services/market-research/data-augmentation\n\n### **Data Validation**\n\nWe clean, verify, and improve the quality of your B2B data by checking emails, phone numbers, job titles, company details, duplicate records, and outdated contacts. This helps improve deliverability, sales efficiency, and confidence in your CRM.  \n**Internal Link:** /services/market-research/data-validation\n\n### **Human-Powered Market Intelligence**\n\nWe combine research technology with human analyst review to deliver competitor insights, buyer behavior research, market entry intelligence, TAM analysis, brand research, and strategic reports that automated tools alone cannot provide.  \n**Internal Link:** /services/market-research/human-powered-market-intelligence",
+          "### **Our Market Research Services**\n\nWe provide data augmentation services, data validation services, human-powered market intelligence, competitor research, brand research, account research, buyer insights, and custom research reports for enterprise growth teams. \n\n### **Data Augmentation**\n\nWe enrich incomplete contact and account records with verified firmographic, technographic, role-based, and intent data. This helps sales and marketing teams improve segmentation, personalization, lead scoring, and CRM usefulness.  \n**Internal Link:** /services/data-augmentation\n\n### **Data Validation**\n\nWe clean, verify, and improve the quality of your B2B data by checking emails, phone numbers, job titles, company details, duplicate records, and outdated contacts. This helps improve deliverability, sales efficiency, and confidence in your CRM.  \n**Internal Link:** /services/data-validation\n\n### **Human-Powered Market Intelligence**\n\nWe combine research technology with human analyst review to deliver competitor insights, buyer behavior research, market entry intelligence, TAM analysis, brand research, and strategic reports that automated tools alone cannot provide.  \n**Internal Link:** /services/market-intelligence",
         editorialNotes: [],
         blocks: [
           {
@@ -6506,7 +6506,7 @@ export const pages: PageContent[] = [
           },
           {
             type: "paragraph",
-            text: "Internal Link: /services/market-research/data-augmentation",
+            text: "Internal Link: /services/data-augmentation",
           },
           {
             type: "heading",
@@ -6519,7 +6519,7 @@ export const pages: PageContent[] = [
           },
           {
             type: "paragraph",
-            text: "Internal Link: /services/market-research/data-validation",
+            text: "Internal Link: /services/data-validation",
           },
           {
             type: "heading",
@@ -6532,7 +6532,7 @@ export const pages: PageContent[] = [
           },
           {
             type: "paragraph",
-            text: "Internal Link: /services/market-research/human-powered-market-intelligence",
+            text: "Internal Link: /services/market-intelligence",
           },
         ],
       },
@@ -6720,36 +6720,36 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Request a Market Research Consultation",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Download a Sample Report",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Start a Research Project",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
       {
         label: "Download a Sample Report",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],
     internalLinks: [
       {
-        href: "/services/market-research/data-augmentation",
+        href: "/services/data-augmentation",
         sourceSection: "Services Grid",
       },
       {
-        href: "/services/market-research/data-validation",
+        href: "/services/data-validation",
         sourceSection: "Services Grid",
       },
       {
-        href: "/services/market-research/human-powered-market-intelligence",
+        href: "/services/market-intelligence",
         sourceSection: "Services Grid",
       },
     ],
@@ -6758,7 +6758,7 @@ export const pages: PageContent[] = [
   {
     pageNumber: 20,
     pageName: "Data Augmentation",
-    url: "/services/market-research/data-augmentation",
+    url: "/services/data-augmentation",
     navigationGroup: "Market Research",
     requiredSections: [
       "Hero",
@@ -6767,9 +6767,9 @@ export const pages: PageContent[] = [
       "Why Human-Verified",
       "CTA Banner",
     ],
-    metaTitle: "B2B Data Augmentation Services | B2B Sales Arrow",
+    metaTitle: "B2B Data Augmentation Services and CRM Enrichment | B2B Sales Arrow",
     metaDescription:
-      "Enrich your CRM with high-fidelity B2B data. We provide verified firmographic, technographic, and intent data to improve your sales targeting and personalization.",
+      "B2B data augmentation services — verified firmographic, technographic, contact, and intent data enrichment. Transform your CRM from an incomplete database into a precision sales intelligence asset.",
     focusKeyphrase: "data augmentation services",
     secondaryKeywords: [
       "CRM data enrichment",
@@ -6780,7 +6780,7 @@ export const pages: PageContent[] = [
     seoInternal: {
       pageType: "",
       searchIntent: "",
-      url: "/services/market-research/data-augmentation",
+      url: "/services/data-augmentation",
       targetKeywords: [
         {
           category: "Primary",
@@ -6821,7 +6821,7 @@ export const pages: PageContent[] = [
         },
       ],
       rawMarkdown:
-        "## **PAGE 20**\n\n### **/services/market-research/data-augmentation**\n\n### **🎯 Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** B2B data augmentation | 7–9x |\n| **Primary:** CRM data enrichment | 5–6x |\n| **Secondary:** contact data enrichment | 4–5x |\n| **Secondary:** B2B data enhancement | 3–4x |\n| **Secondary:** firmographic data enrichment | 2–3x |\n| **LSI:** data append, intent data, technographic data, account enrichment, data completeness | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** B2B Data Augmentation & CRM Enrichment | B2B Sales Arrow\n\n **Meta Description:** Enrich and augment your B2B contact and account data. Firmographic, technographic, and intent data — verified by humans. Transform incomplete records into sales-ready profiles.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** B2B Data Augmentation — Transform Incomplete Data Into Sales Intelligence\n\n**Subheading:** Your CRM is only as powerful as the data inside it. We enrich, append, and augment your contact and account records with verified firmographic, technographic, and intent data.\n\n**CTA \\#1:** → Request a Data Augmentation Demo\n\n**\\[SECTION 2 — What We Augment\\]**\n\n**H2:** Data Fields We Enrich & Augment\n\nH3: Contact-Level: Job title, direct email, LinkedIn URL, phone, department, seniority\n\n H3: Account-Level: Revenue, employee count, industry, tech stack, growth signals\n\n H3: Intent Data: Buying intent signals, content consumption, technology research\n\n H3: Custom Fields: Whatever your sales motion requires\n\n**\\[SECTION 3 — How It Works\\]**\n\n**H2:** How Our Data Augmentation Process Works\n\nH3: Data Upload (your existing CRM or target list)\n\n H3: Gap Analysis & Enrichment Mapping\n\n H3: Human-Verified Data Research\n\n H3: Quality Assurance & Deduplication\n\n H3: Clean Data Delivery (CRM-ready format)\n\n**\\[SECTION 4 — Why Human-Verified\\]**\n\n**H2:** Why Human Verification Outperforms Automated Data Tools\n\n*Content: Automated tools miss nuance, get job titles wrong, and recycle stale records. Our human researchers verify each critical field before delivery.*\n\n**\\[CTA BANNER\\]**\n\n**H2:** Your CRM Is Leaking Revenue. Let's Fix That.\n\n**CTA \\#2:** → Request a Data Audit | → Upload a Sample List",
+        "## **PAGE 20**\n\n### **/services/data-augmentation**\n\n### **🎯 Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** B2B data augmentation | 7–9x |\n| **Primary:** CRM data enrichment | 5–6x |\n| **Secondary:** contact data enrichment | 4–5x |\n| **Secondary:** B2B data enhancement | 3–4x |\n| **Secondary:** firmographic data enrichment | 2–3x |\n| **LSI:** data append, intent data, technographic data, account enrichment, data completeness | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** B2B Data Augmentation & CRM Enrichment | B2B Sales Arrow\n\n **Meta Description:** Enrich and augment your B2B contact and account data. Firmographic, technographic, and intent data — verified by humans. Transform incomplete records into sales-ready profiles.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** B2B Data Augmentation — Transform Incomplete Data Into Sales Intelligence\n\n**Subheading:** Your CRM is only as powerful as the data inside it. We enrich, append, and augment your contact and account records with verified firmographic, technographic, and intent data.\n\n**CTA \\#1:** → Request a Data Augmentation Demo\n\n**\\[SECTION 2 — What We Augment\\]**\n\n**H2:** Data Fields We Enrich & Augment\n\nH3: Contact-Level: Job title, direct email, LinkedIn URL, phone, department, seniority\n\n H3: Account-Level: Revenue, employee count, industry, tech stack, growth signals\n\n H3: Intent Data: Buying intent signals, content consumption, technology research\n\n H3: Custom Fields: Whatever your sales motion requires\n\n**\\[SECTION 3 — How It Works\\]**\n\n**H2:** How Our Data Augmentation Process Works\n\nH3: Data Upload (your existing CRM or target list)\n\n H3: Gap Analysis & Enrichment Mapping\n\n H3: Human-Verified Data Research\n\n H3: Quality Assurance & Deduplication\n\n H3: Clean Data Delivery (CRM-ready format)\n\n**\\[SECTION 4 — Why Human-Verified\\]**\n\n**H2:** Why Human Verification Outperforms Automated Data Tools\n\n*Content: Automated tools miss nuance, get job titles wrong, and recycle stale records. Our human researchers verify each critical field before delivery.*\n\n**\\[CTA BANNER\\]**\n\n**H2:** Your CRM Is Leaking Revenue. Let's Fix That.\n\n**CTA \\#2:** → Request a Data Audit | → Upload a Sample List",
     },
     hero: {
       title: "B2B Data Augmentation Services - Transform Incomplete Data Into Sales Intelligence",
@@ -7023,7 +7023,7 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Request a Data Augmentation Demo",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
     ],
@@ -7033,12 +7033,12 @@ export const pages: PageContent[] = [
   {
     pageNumber: 21,
     pageName: "Data Validation",
-    url: "/services/market-research/data-validation",
+    url: "/services/data-validation",
     navigationGroup: "Market Research",
     requiredSections: ["Hero", "What We Validate", "Why It Matters", "Process", "CTA Banner"],
-    metaTitle: "B2B Data Validation & Verification Services | B2B Sales Arrow",
+    metaTitle: "B2B Data Validation and CRM Data Cleansing Services | B2B Sales Arrow",
     metaDescription:
-      "Clean, verified B2B contact and account data — email validation, deduplication, and CRM hygiene that improves deliverability and sales efficiency.",
+      "B2B data validation services — email verification, phone validation, job title confirmation, duplicate detection, and CRM data cleansing. Clean data your sales team can trust.",
     focusKeyphrase: "data validation services",
     secondaryKeywords: [
       "contact data verification",
@@ -7049,7 +7049,7 @@ export const pages: PageContent[] = [
     seoInternal: {
       pageType: "",
       searchIntent: "",
-      url: "/services/market-research/data-validation",
+      url: "/services/data-validation",
       targetKeywords: [
         {
           category: "Primary",
@@ -7090,7 +7090,7 @@ export const pages: PageContent[] = [
         },
       ],
       rawMarkdown:
-        "## **PAGE 21**\n\n### **/services/market-research/data-validation**\n\n### **🎯 Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** B2B data validation | 7–9x |\n| **Primary:** contact data verification | 5–6x |\n| **Secondary:** email list validation | 4–5x |\n| **Secondary:** CRM data cleaning | 3–4x |\n| **Secondary:** B2B database verification | 2–3x |\n| **LSI:** data hygiene, email verification, data quality, duplicate removal, data cleansing, bounce reduction | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** B2B Data Validation & Verification Services | B2B Sales Arrow\n\n **Meta Description:** Clean, verified B2B contact and account data — email validation, deduplication, and CRM hygiene that improves deliverability and sales efficiency. Request a data sample check.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** B2B Data Validation — Clean Data That Your Sales Team Can Actually Trust\n\n**Subheading:** Invalid emails, duplicate records, and stale contacts cost enterprise sales teams thousands of hours. We validate, clean, and certify your data so every outreach lands with precision.\n\n**CTA \\#1:** → Start a Data Validation Project\n\n**\\[SECTION 2 — What We Validate\\]**\n\n**H2:** What Our Data Validation Covers\n\nH3: Email Address Verification (syntax, MX, deliverability)\n\n H3: Phone Number Validation (carrier lookup, active line check)\n\n H3: Company & Domain Verification\n\n H3: Job Title & Role Confirmation\n\n H3: Duplicate Detection & Merge\n\n H3: Deceased / Departed Contact Removal\n\n**\\[SECTION 3 — Why It Matters\\]**\n\n**H2:** The Hidden Cost of Bad Data in B2B Sales\n\n*Content: Average CRM data degrades 22.5% per year. Poor data \\= low deliverability, wasted SDR time, bad attribution. Quantify the cost.*\n\n**\\[SECTION 4 — Process\\]**\n\n**H2:** Our Data Validation Process\n\nH3: Data Intake → H3: Automated Layer (format, syntax) → H3: Human Verification Layer → H3: Validation Report → H3: Clean Data Delivery\n\n**\\[CTA BANNER\\]**\n\n**H2:** Don't Prospect With Broken Data\n\n**CTA \\#2:** → Validate My List | → Get a Free Data Quality Audit",
+        "## **PAGE 21**\n\n### **/services/data-validation**\n\n### **🎯 Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** B2B data validation | 7–9x |\n| **Primary:** contact data verification | 5–6x |\n| **Secondary:** email list validation | 4–5x |\n| **Secondary:** CRM data cleaning | 3–4x |\n| **Secondary:** B2B database verification | 2–3x |\n| **LSI:** data hygiene, email verification, data quality, duplicate removal, data cleansing, bounce reduction | 1–2x each |\n\n### **Meta Tags**\n\n**Meta Title:** B2B Data Validation & Verification Services | B2B Sales Arrow\n\n **Meta Description:** Clean, verified B2B contact and account data — email validation, deduplication, and CRM hygiene that improves deliverability and sales efficiency. Request a data sample check.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** B2B Data Validation — Clean Data That Your Sales Team Can Actually Trust\n\n**Subheading:** Invalid emails, duplicate records, and stale contacts cost enterprise sales teams thousands of hours. We validate, clean, and certify your data so every outreach lands with precision.\n\n**CTA \\#1:** → Start a Data Validation Project\n\n**\\[SECTION 2 — What We Validate\\]**\n\n**H2:** What Our Data Validation Covers\n\nH3: Email Address Verification (syntax, MX, deliverability)\n\n H3: Phone Number Validation (carrier lookup, active line check)\n\n H3: Company & Domain Verification\n\n H3: Job Title & Role Confirmation\n\n H3: Duplicate Detection & Merge\n\n H3: Deceased / Departed Contact Removal\n\n**\\[SECTION 3 — Why It Matters\\]**\n\n**H2:** The Hidden Cost of Bad Data in B2B Sales\n\n*Content: Average CRM data degrades 22.5% per year. Poor data \\= low deliverability, wasted SDR time, bad attribution. Quantify the cost.*\n\n**\\[SECTION 4 — Process\\]**\n\n**H2:** Our Data Validation Process\n\nH3: Data Intake → H3: Automated Layer (format, syntax) → H3: Human Verification Layer → H3: Validation Report → H3: Clean Data Delivery\n\n**\\[CTA BANNER\\]**\n\n**H2:** Don't Prospect With Broken Data\n\n**CTA \\#2:** → Validate My List | → Get a Free Data Quality Audit",
     },
     hero: {
       title: "B2B Data Validation Services - Clean Data Your Sales Team Can Actually Trust",
@@ -7313,22 +7313,22 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Start a Data Validation Project",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Get a Free Data Quality Audit",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Validate My List",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
       {
         label: "Get a Free Data Quality Audit",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],
@@ -7338,7 +7338,7 @@ export const pages: PageContent[] = [
   {
     pageNumber: 22,
     pageName: "Human-Powered Market Intelligence",
-    url: "/services/market-research/human-powered-market-intelligence",
+    url: "/services/market-intelligence",
     navigationGroup: "Market Research",
     requiredSections: [
       "Hero",
@@ -7347,9 +7347,9 @@ export const pages: PageContent[] = [
       "Deliverable Formats",
       "CTA Banner",
     ],
-    metaTitle: "Human-Powered B2B Market Intelligence | B2B Sales Arrow",
+    metaTitle: "Human-Powered B2B Market Intelligence Services | B2B Sales Arrow",
     metaDescription:
-      "Go beyond data scraping. Our human-powered market intelligence delivers nuanced competitor insights, buyer behavior, and market opportunity analysis.",
+      "Human-powered market intelligence for B2B — competitor analysis, buyer behaviour research, TAM analysis, win/loss interviews, expert panels, and strategic reports. The insight automated tools cannot deliver.",
     focusKeyphrase: "human-powered market intelligence",
     secondaryKeywords: [
       "B2B market intelligence services",
@@ -7360,7 +7360,7 @@ export const pages: PageContent[] = [
     seoInternal: {
       pageType: "",
       searchIntent: "",
-      url: "/services/market-research/human-powered-market-intelligence",
+      url: "/services/market-intelligence",
       targetKeywords: [
         {
           category: "Primary",
@@ -7401,7 +7401,7 @@ export const pages: PageContent[] = [
         },
       ],
       rawMarkdown:
-        "## **PAGE 22**\n\n### **/services/market-research/human-powered-market-intelligence**\n\n### **🎯 Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** human-powered market intelligence | 6–8x |\n| **Primary:** B2B market intelligence services | 5–6x |\n| **Secondary:** competitive intelligence B2B | 4–5x |\n| **Secondary:** custom market research services | 3–4x |\n| **Secondary:** enterprise market insights | 2–3x |\n| **LSI:** primary research, expert interviews, competitive landscape, market entry research, TAM analysis, buyer persona research | 1–2x each |\n\n### **📌 Meta Tags**\n\n**Meta Title:** Human-Powered B2B Market Intelligence | B2B Sales Arrow\n\n **Meta Description:** Go beyond data scraping. Our human-powered market intelligence delivers nuanced competitor insights, buyer behavior, and market opportunity analysis for enterprise strategy teams.\n\n### **🏗️ Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** Human-Powered Market Intelligence — The Insight Automated Tools Can't Deliver\n\n**Subheading:** AI scrapes. Humans understand. We combine proprietary research methods, expert interviews, and analyst-grade synthesis to deliver market intelligence that drives confident enterprise decisions.\n\n**CTA \\#1:** → Commission a Market Intelligence Report\n\n**\\[SECTION 2 — What Makes It Human-Powered\\]**\n\n**H2:** Why Human Intelligence Delivers What Automated Tools Cannot\n\n*Content: Nuance, context, qualitative insight from interviews, reading between the lines, understanding motivations vs. just behavior data.*\n\n**\\[SECTION 3 — Research Services\\]**\n\n**H2:** Our Market Intelligence Research Services\n\nH3: Competitor Analysis & Landscape Mapping\n\n H3: Buyer Behavior & Purchase Journey Research\n\n H3: Total Addressable Market (TAM) Analysis\n\n H3: Market Entry Feasibility Studies\n\n H3: Win/Loss Interview Programs\n\n H3: Expert Panel Research\n\n H3: Customer Satisfaction & NPS Deep Dives\n\n**\\[SECTION 4 — Deliverable Formats\\]**\n\n**H2:** How We Deliver Market Intelligence\n\nH3: Executive Strategy Briefing Decks\n\n H3: Detailed Research Reports\n\n H3: Live Analyst Briefings\n\n H3: Ongoing Intelligence Subscription Programs\n\n H3: Custom Dashboard & Data Visualization\n\n**\\[CTA BANNER\\]**\n\n**H2:** The Most Valuable Strategic Meetings Start With the Right Intelligence\n\n**CTA \\#2:** → Commission a Custom Research Report | → Schedule an Intelligence Briefing\n\n# **SECTION 7: CONTENT & INFORMATION PAGES**",
+        "## **PAGE 22**\n\n### **/services/market-intelligence**\n\n### **🎯 Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** human-powered market intelligence | 6–8x |\n| **Primary:** B2B market intelligence services | 5–6x |\n| **Secondary:** competitive intelligence B2B | 4–5x |\n| **Secondary:** custom market research services | 3–4x |\n| **Secondary:** enterprise market insights | 2–3x |\n| **LSI:** primary research, expert interviews, competitive landscape, market entry research, TAM analysis, buyer persona research | 1–2x each |\n\n### **📌 Meta Tags**\n\n**Meta Title:** Human-Powered B2B Market Intelligence | B2B Sales Arrow\n\n **Meta Description:** Go beyond data scraping. Our human-powered market intelligence delivers nuanced competitor insights, buyer behavior, and market opportunity analysis for enterprise strategy teams.\n\n### **🏗️ Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** Human-Powered Market Intelligence — The Insight Automated Tools Can't Deliver\n\n**Subheading:** AI scrapes. Humans understand. We combine proprietary research methods, expert interviews, and analyst-grade synthesis to deliver market intelligence that drives confident enterprise decisions.\n\n**CTA \\#1:** → Commission a Market Intelligence Report\n\n**\\[SECTION 2 — What Makes It Human-Powered\\]**\n\n**H2:** Why Human Intelligence Delivers What Automated Tools Cannot\n\n*Content: Nuance, context, qualitative insight from interviews, reading between the lines, understanding motivations vs. just behavior data.*\n\n**\\[SECTION 3 — Research Services\\]**\n\n**H2:** Our Market Intelligence Research Services\n\nH3: Competitor Analysis & Landscape Mapping\n\n H3: Buyer Behavior & Purchase Journey Research\n\n H3: Total Addressable Market (TAM) Analysis\n\n H3: Market Entry Feasibility Studies\n\n H3: Win/Loss Interview Programs\n\n H3: Expert Panel Research\n\n H3: Customer Satisfaction & NPS Deep Dives\n\n**\\[SECTION 4 — Deliverable Formats\\]**\n\n**H2:** How We Deliver Market Intelligence\n\nH3: Executive Strategy Briefing Decks\n\n H3: Detailed Research Reports\n\n H3: Live Analyst Briefings\n\n H3: Ongoing Intelligence Subscription Programs\n\n H3: Custom Dashboard & Data Visualization\n\n**\\[CTA BANNER\\]**\n\n**H2:** The Most Valuable Strategic Meetings Start With the Right Intelligence\n\n**CTA \\#2:** → Commission a Custom Research Report | → Schedule an Intelligence Briefing\n\n# **SECTION 7: CONTENT & INFORMATION PAGES**",
     },
     hero: {
       title: "Human-Powered Market Intelligence - The Insight Automated Tools Cannot Deliver",
@@ -7636,22 +7636,22 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Commission a Market Intelligence Report",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Schedule an Intelligence Briefing",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Commission a Custom Research Report",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
       {
         label: "Schedule an Intelligence Briefing",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],
@@ -7670,9 +7670,9 @@ export const pages: PageContent[] = [
       "Article Grid",
       "Newsletter CTA",
     ],
-    metaTitle: "B2B Growth Insights & Strategy Blog | B2B Sales Arrow",
+    metaTitle: "B2B Growth Insights and Strategy Blog | B2B Sales Arrow",
     metaDescription:
-      "Expert insights on B2B event marketing, performance marketing, media production, and enterprise growth strategy from the team at B2B Sales Arrow.",
+      "Practical B2B growth insights on trade show strategy, performance marketing, video production, lead generation, and market research — written for enterprise marketers and sales leaders.",
     focusKeyphrase: "B2B marketing blog",
     secondaryKeywords: [
       "enterprise marketing insights",
@@ -7839,22 +7839,22 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Read the Latest Insights",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Subscribe for Growth Intelligence",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Read Article",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Featured Article",
       },
       {
         label: "Subscribe",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Newsletter",
       },
     ],
@@ -7867,9 +7867,9 @@ export const pages: PageContent[] = [
     url: "/case-studies",
     navigationGroup: "Resources",
     requiredSections: ["Hero", "Filter Section", "Case Study Grid", "CTA Section"],
-    metaTitle: "B2B Marketing Case Studies & Results | B2B Sales Arrow",
+    metaTitle: "B2B Marketing Case Studies and Event Results | B2B Sales Arrow",
     metaDescription:
-      "Real results from real enterprise clients — trade show ROI, lead generation metrics, media production impact, and performance marketing outcomes. See the evidence.",
+      "Enterprise B2B marketing case studies — documented results across trade show lead generation, booth design, video production, performance marketing, and market research. Real programs. Verified results.",
     focusKeyphrase: "B2B marketing case studies",
     secondaryKeywords: [
       "event marketing results",
@@ -7901,7 +7901,7 @@ export const pages: PageContent[] = [
         },
       ],
       rawMarkdown:
-        '## **PAGE 24**\n\n### **/case-studies/**\n\n**Page Type:** Case Study Index\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** B2B marketing case studies | 4–5x |\n| **Secondary:** event marketing results | 2–3x |\n| **Secondary:** enterprise marketing success stories | 2–3x |\n\n### **Meta Tags**\n\n**Meta Title:** B2B Marketing Case Studies & Results | B2B Sales Arrow\n\n **Meta Description:** Real results from real enterprise clients — trade show ROI, lead generation metrics, media production impact, and performance marketing outcomes. See the evidence.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** Enterprise Results That Speak for Themselves\n\n**Subheading:** 250+ projects. 40+ countries. $1.2B in pipeline generated. Explore the case studies behind the numbers.\n\n**Stats Bar:** 250+ Events | $1.2B Pipeline | 15k+ Leads | 98% Retention\n\n**\\[SECTION 2 — Filter\\]**\n\n*Filter by: Service | Industry | Geography | Company Size*\n\n**\\[SECTION 3 — Case Study Grid\\]**\n\n*Card format per case study:*\n\n* Client logo  \n* Challenge headline (1 line)  \n* Result metric (big bold number)  \n* Service type badge  \n* → Read Full Study\n\n*Recommended case study titles:*\n\n* "How Nexus Technologies Increased Event Lead Capture by 340% at GITEX"  \n* "How Aura Systems Penetrated the European Market 6 Months Ahead of Schedule"  \n* "How a FinServe SaaS Brand Scaled Pipeline Through Precision Media Production"\n\n**\\[SECTION 4 — CTA\\]**\n\n**H2:** Could Your Next Campaign Be Our Next Case Study?\n\n**CTA:** → Request a Strategy Consultation',
+        '## **PAGE 24**\n\n### **/case-studies/**\n\n**Page Type:** Case Study Index\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** B2B marketing case studies | 4–5x |\n| **Secondary:** event marketing results | 2–3x |\n| **Secondary:** enterprise marketing success stories | 2–3x |\n\n### **Meta Tags**\n\n**Meta Title:** B2B Marketing Case Studies and Event Results | B2B Sales Arrow\n\n **Meta Description:** Enterprise B2B marketing case studies — documented results across trade show lead generation, booth design, video production, performance marketing, and market research. Real programs. Verified results.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** Enterprise Results That Speak for Themselves\n\n**Subheading:** 250+ projects. 40+ countries. $1.2B in pipeline generated. Explore the case studies behind the numbers.\n\n**Stats Bar:** 250+ Events | $1.2B Pipeline | 15k+ Leads | 98% Retention\n\n**\\[SECTION 2 — Filter\\]**\n\n*Filter by: Service | Industry | Geography | Company Size*\n\n**\\[SECTION 3 — Case Study Grid\\]**\n\n*Card format per case study:*\n\n* Client logo  \n* Challenge headline (1 line)  \n* Result metric (big bold number)  \n* Service type badge  \n* → Read Full Study\n\n*Recommended case study titles:*\n\n* "How Nexus Technologies Increased Event Lead Capture by 340% at GITEX"  \n* "How Aura Systems Penetrated the European Market 6 Months Ahead of Schedule"  \n* "How a FinServe SaaS Brand Scaled Pipeline Through Precision Media Production"\n\n**\\[SECTION 4 — CTA\\]**\n\n**H2:** Could Your Next Campaign Be Our Next Case Study?\n\n**CTA:** → Request a Strategy Consultation',
     },
     hero: {
       title: "Enterprise Results That Speak for Themselves",
@@ -8009,17 +8009,17 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Request a Strategy Consultation",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Read Full Study",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Request a Strategy Consultation",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA",
       },
     ],
@@ -8029,7 +8029,7 @@ export const pages: PageContent[] = [
   {
     pageNumber: 25,
     pageName: "About Us",
-    url: "/about-us",
+    url: "/about",
     navigationGroup: "Company",
     requiredSections: [
       "Hero",
@@ -8042,9 +8042,9 @@ export const pages: PageContent[] = [
       "Partners & Clients",
       "CTA Banner",
     ],
-    metaTitle: "About B2B Sales Arrow | Enterprise Growth Partners | B2B Sales Arrow",
+    metaTitle: "About B2B Sales Arrow | Enterprise Growth Partners",
     metaDescription:
-      "B2B Sales Arrow is a global enterprise growth partner — delivering event solutions, media production, performance marketing, and market research for ambitious B2B brands.",
+      "B2B Sales Arrow is a global enterprise growth agency delivering event solutions, video production, performance marketing, and market research across 40+ countries. Built to connect strategy to measurable commercial outcomes.",
     focusKeyphrase: "B2B growth agency",
     secondaryKeywords: [
       "enterprise marketing company",
@@ -8055,7 +8055,7 @@ export const pages: PageContent[] = [
     seoInternal: {
       pageType: "",
       searchIntent: "Navigational + Trust-building",
-      url: "/about-us",
+      url: "/about",
       targetKeywords: [
         {
           category: "Primary",
@@ -8083,7 +8083,7 @@ export const pages: PageContent[] = [
         },
       ],
       rawMarkdown:
-        '## **PAGE 25**\n\n### **/about-us/**\n\n**Search Intent:** Navigational \\+ Trust-building\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** B2B growth agency | 4–5x |\n| **Primary:** about B2B Sales Arrow | 3–4x |\n| **Secondary:** enterprise marketing company | 3–4x |\n| **Secondary:** global B2B agency | 2–3x |\n\n### **Meta Tags**\n\n**Meta Title:** About B2B Sales Arrow | Enterprise Growth Partners\n\n **Meta Description:** B2B Sales Arrow is a global enterprise growth partner — delivering event solutions, media production, performance marketing, and market research for ambitious B2B brands. Learn our story.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** We Are the Growth Partner Your Enterprise Deserves\n\n**Subheading:** Not an agency. Not a vendor. A strategic growth partner for ambitious B2B enterprises — embedded in your objectives, accountable for your results.\n\n**\\[SECTION 2 — Mission\\]**\n\n**H2:** Our Mission\n\n*Pull the quote from the homepage: "Our mission is to transform how B2B brands connect with their audiences through innovative, immersive experiences that drive measurable business results."*\n\n**\\[SECTION 3 — Origin Story / Founding\\]**\n\n**H2:** How B2B Sales Arrow Was Built\n\n*Content: Founding story, the gap in the market we spotted, why we started, what makes us fundamentally different. 150–200 words. No fluff — enterprise buyers read this critically.*\n\n**\\[SECTION 4 — By The Numbers\\]**\n\n**H2:** The B2B Sales Arrow Track Record\n\n*250+ Events | $1.2B Pipeline | 40+ Countries | 15k+ Leads | 98% Retention | 500+ Booth Designs*\n\n**\\[SECTION 5 — Leadership Team\\]**\n\n**H2:** The Leadership Behind the Results\n\n*Team cards: photo, name, title, 2-line bio, LinkedIn*\n\n**\\[SECTION 6 — Values\\]**\n\n**H2:** What We Believe In\n\nH3: Accountability Over Activity\n\n H3: Precision Over Volume\n\n H3: Partnership Over Vendor Relationships\n\n H3: Global Thinking, Local Execution\n\n**\\[SECTION 7 — Global Presence\\]**\n\n**H2:** Where We Operate\n\n*Offices/presence in:* New York | London | Dubai | Singapore | Sydney | Toronto\n\n *\\+ Map visual*\n\n**\\[SECTION 8 — Partners & Clients\\]**\n\n**H2:** Trusted by Industry Leaders\n\n*Logo wall: Infosys, Airtel, SingleStore, Temenos, Worldpay, Syngene \\+ testimonials*\n\n**\\[CTA BANNER\\]**\n\n**H2:** Ready to Make B2B Sales Arrow Your Growth Partner?\n\n**CTA:** → Request a Strategy Consultation',
+        '## **PAGE 25**\n\n### **/about/**\n\n**Search Intent:** Navigational \\+ Trust-building\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** B2B growth agency | 4–5x |\n| **Primary:** about B2B Sales Arrow | 3–4x |\n| **Secondary:** enterprise marketing company | 3–4x |\n| **Secondary:** global B2B agency | 2–3x |\n\n### **Meta Tags**\n\n**Meta Title:** About B2B Sales Arrow | Enterprise Growth Partners\n\n **Meta Description:** B2B Sales Arrow is a global enterprise growth partner — delivering event solutions, media production, performance marketing, and market research for ambitious B2B brands. Learn our story.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** We Are the Growth Partner Your Enterprise Deserves\n\n**Subheading:** Not an agency. Not a vendor. A strategic growth partner for ambitious B2B enterprises — embedded in your objectives, accountable for your results.\n\n**\\[SECTION 2 — Mission\\]**\n\n**H2:** Our Mission\n\n*Pull the quote from the homepage: "Our mission is to transform how B2B brands connect with their audiences through innovative, immersive experiences that drive measurable business results."*\n\n**\\[SECTION 3 — Origin Story / Founding\\]**\n\n**H2:** How B2B Sales Arrow Was Built\n\n*Content: Founding story, the gap in the market we spotted, why we started, what makes us fundamentally different. 150–200 words. No fluff — enterprise buyers read this critically.*\n\n**\\[SECTION 4 — By The Numbers\\]**\n\n**H2:** The B2B Sales Arrow Track Record\n\n*250+ Events | $1.2B Pipeline | 40+ Countries | 15k+ Leads | 98% Retention | 500+ Booth Designs*\n\n**\\[SECTION 5 — Leadership Team\\]**\n\n**H2:** The Leadership Behind the Results\n\n*Team cards: photo, name, title, 2-line bio, LinkedIn*\n\n**\\[SECTION 6 — Values\\]**\n\n**H2:** What We Believe In\n\nH3: Accountability Over Activity\n\n H3: Precision Over Volume\n\n H3: Partnership Over Vendor Relationships\n\n H3: Global Thinking, Local Execution\n\n**\\[SECTION 7 — Global Presence\\]**\n\n**H2:** Where We Operate\n\n*Offices/presence in:* New York | London | Dubai | Singapore | Sydney | Toronto\n\n *\\+ Map visual*\n\n**\\[SECTION 8 — Partners & Clients\\]**\n\n**H2:** Trusted by Industry Leaders\n\n*Logo wall: Infosys, Airtel, SingleStore, Temenos, Worldpay, Syngene \\+ testimonials*\n\n**\\[CTA BANNER\\]**\n\n**H2:** Ready to Make B2B Sales Arrow Your Growth Partner?\n\n**CTA:** → Request a Strategy Consultation',
     },
     hero: {
       title: "We Are the Growth Partner Your Enterprise Deserves",
@@ -8309,17 +8309,17 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Request a Strategy Consultation",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Meet the Team",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Request a Strategy Consultation",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],
@@ -8329,7 +8329,7 @@ export const pages: PageContent[] = [
   {
     pageNumber: 26,
     pageName: "Contact Us",
-    url: "/contact-us",
+    url: "/contact",
     navigationGroup: "Company",
     requiredSections: [
       "Hero",
@@ -8338,9 +8338,9 @@ export const pages: PageContent[] = [
       "Global Offices",
       "Reassurance / Next Steps",
     ],
-    metaTitle: "Contact B2B Sales Arrow | Book a Strategy Consultation | B2B Sales Arrow",
+    metaTitle: "Contact B2B Sales Arrow | Book a Strategy Consultation",
     metaDescription:
-      "Ready to scale your enterprise? Contact B2B Sales Arrow to book a strategy consultation. Event solutions, media production, performance marketing — we're ready to talk.",
+      "Contact B2B Sales Arrow to book a strategy consultation for event solutions, video production, performance marketing, market research, or sales qualified lead generation. We respond within one business day.",
     focusKeyphrase: "contact B2B Sales Arrow",
     secondaryKeywords: [
       "B2B growth agency consultation",
@@ -8350,7 +8350,7 @@ export const pages: PageContent[] = [
     seoInternal: {
       pageType: "",
       searchIntent: "Transactional (direct conversion page)",
-      url: "/contact-us",
+      url: "/contact",
       targetKeywords: [
         {
           category: "Primary",
@@ -8372,7 +8372,7 @@ export const pages: PageContent[] = [
         },
       ],
       rawMarkdown:
-        "## **PAGE 26**\n\n### **/contact-us/**\n\n**Search Intent:** Transactional (direct conversion page)\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** contact B2B Sales Arrow | 3–4x |\n| **Secondary:** B2B growth agency consultation | 2–3x |\n| **Secondary:** enterprise marketing inquiry | 2–3x |\n\n### **Meta Tags**\n\n**Meta Title:** Contact B2B Sales Arrow | Book a Strategy Consultation\n\n **Meta Description:** Ready to scale your enterprise? Contact B2B Sales Arrow to book a strategy consultation. Event solutions, media production, performance marketing — we're ready to talk.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** Let's Build Your Enterprise Growth Strategy\n\n**Subheading:** Whether you need a booth for next month or a full-year growth program — start with one conversation. Our growth architects are ready.\n\n**\\[SECTION 2 — Contact Form\\]**\n\n**H2:** Start the Conversation\n\n*Form fields:*\n\n* First Name, Last Name  \n* Company Name, Job Title  \n* Work Email, Phone  \n* Country / Region  \n* Service of Interest (dropdown — all services)  \n* Estimated Project Timeline  \n* Message / Project Brief  \n* → Submit Inquiry\n\n*Trust note below form:* \"We respond within 24 business hours. Your information is never shared.\"\n\n**\\[SECTION 3 — Alternative Contact\\]**\n\n**H2:** Prefer a Direct Line?\n\n*3 cards:*\n\n H3: Email — [hello@b2bsalesarrow.com](mailto:hello@b2bsalesarrow.com)\n\n H3: Phone — \\[number\\]\n\n H3: Book a Meeting — Calendly link or calendar embed\n\n**\\[SECTION 4 — Global Offices\\]**\n\n**H2:** Our Global Offices\n\n*Cards with: City, Address (if applicable), Region served*\n\n New York | London | Dubai | Singapore | Sydney | Toronto\n\n**\\[SECTION 5 — Reassurance\\]**\n\n**H2:** What Happens After You Reach Out\n\nH3: Step 1 — We review your inquiry within 24 hours\n\n H3: Step 2 — A growth architect schedules a discovery call\n\n H3: Step 3 — We present a customized strategy proposal\n\n H3: Step 4 — Project kickoff",
+        "## **PAGE 26**\n\n### **/contact/**\n\n**Search Intent:** Transactional (direct conversion page)\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** contact B2B Sales Arrow | 3–4x |\n| **Secondary:** B2B growth agency consultation | 2–3x |\n| **Secondary:** enterprise marketing inquiry | 2–3x |\n\n### **Meta Tags**\n\n**Meta Title:** Contact B2B Sales Arrow | Book a Strategy Consultation\n\n **Meta Description:** Ready to scale your enterprise? Contact B2B Sales Arrow to book a strategy consultation. Event solutions, media production, performance marketing — we're ready to talk.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** Let's Build Your Enterprise Growth Strategy\n\n**Subheading:** Whether you need a booth for next month or a full-year growth program — start with one conversation. Our growth architects are ready.\n\n**\\[SECTION 2 — Contact Form\\]**\n\n**H2:** Start the Conversation\n\n*Form fields:*\n\n* First Name, Last Name  \n* Company Name, Job Title  \n* Work Email, Phone  \n* Country / Region  \n* Service of Interest (dropdown — all services)  \n* Estimated Project Timeline  \n* Message / Project Brief  \n* → Submit Inquiry\n\n*Trust note below form:* \"We respond within 24 business hours. Your information is never shared.\"\n\n**\\[SECTION 3 — Alternative Contact\\]**\n\n**H2:** Prefer a Direct Line?\n\n*3 cards:*\n\n H3: Email — [hello@b2bsalesarrow.com](mailto:hello@b2bsalesarrow.com)\n\n H3: Phone — \\[number\\]\n\n H3: Book a Meeting — Calendly link or calendar embed\n\n**\\[SECTION 4 — Global Offices\\]**\n\n**H2:** Our Global Offices\n\n*Cards with: City, Address (if applicable), Region served*\n\n New York | London | Dubai | Singapore | Sydney | Toronto\n\n**\\[SECTION 5 — Reassurance\\]**\n\n**H2:** What Happens After You Reach Out\n\nH3: Step 1 — We review your inquiry within 24 hours\n\n H3: Step 2 — A growth architect schedules a discovery call\n\n H3: Step 3 — We present a customized strategy proposal\n\n H3: Step 4 — Project kickoff",
     },
     hero: {
       title: "Let’s Build Your Enterprise Growth Strategy",
@@ -8568,17 +8568,17 @@ export const pages: PageContent[] = [
     ctas: [
       {
         label: "Submit Inquiry",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Book a Meeting",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "Hero Section",
       },
       {
         label: "Book a Strategy Consultation",
-        href: "/contact-us",
+        href: "/contact",
         sourceSection: "CTA Banner",
       },
     ],

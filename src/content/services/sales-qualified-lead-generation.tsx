@@ -3,9 +3,9 @@ export const SQL_HERO = {
   eyebrow: "ACTIVE PROSPECTING & LEAD GEN",
   title: (
     <>
-      Active Prospecting & Lead Gen{" "}
+      Sales Qualified Lead Generation —{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        That Fills Your Sales Pipeline
+        Decision-Makers, Not Data
       </span>
     </>
   ),
@@ -185,7 +185,7 @@ export const SQL_CASE_STUDIES = {
   eyebrow: "LEAD GEN RESULTS",
   heading: (
     <>
-      Prospecting That Built <span className="text-brand-blue">Enterprise Pipeline</span>
+      Real Events. <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -224,7 +224,7 @@ export const SQL_TESTIMONIALS = {
   eyebrow: "CLIENT SUCCESS",
   heading: (
     <>
-      Brands That Filled <span className="text-[#1E6091]">Their Pipeline</span>
+      Real Events. <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,

@@ -166,6 +166,9 @@ export function ClientLogos({
 
   return (
     <div className="pointer-events-none relative z-30 container mx-auto -mt-16 max-w-6xl px-4 md:px-8">
+      <h2 className="mb-4 pt-2 text-center text-sm font-semibold tracking-widest text-gray-400 uppercase">
+        Trusted by Leading Brands for Trade Show &amp; Exhibition Solutions
+      </h2>
       <div
         className="shadow-[0_8px_30px_rgb(0,0,0,0.08)](0,0,0,0.5)] pointer-events-auto relative overflow-hidden rounded-xl border border-gray-100 bg-white py-6"
         onMouseEnter={() => setIsHovered(true)}

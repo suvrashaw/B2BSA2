@@ -3,9 +3,9 @@ export const DV_HERO = {
   eyebrow: "B2B DATA VALIDATION",
   title: (
     <>
-      Data Validation — Clean Data That Your <br />
+      B2B Data Validation Services — Clean Data <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Sales Team Can Actually Trust
+        Your Sales Team Can Actually Trust
       </span>
     </>
   ),
@@ -25,8 +25,8 @@ export const DV_WHY = {
   eyebrow: "REVENUE PROTECTION",
   heading: (
     <>
-      The Hidden Cost of <br />
-      <span className="text-brand-cyan">Bad Data in B2B Sales</span>
+      Why Data Validation Cannot <br />
+      <span className="text-brand-cyan">Be an Afterthought</span>
     </>
   ),
   reasons: [
@@ -69,9 +69,9 @@ export const DV_DELIVERABLES = {
   eyebrow: "OUR CAPABILITIES",
   heading: (
     <>
-      What Our Data <br />
+      Our Data Validation <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Validation Covers
+        Services Cover
       </span>
     </>
   ),
@@ -163,8 +163,8 @@ export const DV_CASE_STUDIES = {
   eyebrow: "DATA VALIDATION RESULTS",
   heading: (
     <>
-      Databases We&apos;ve Made <br />
-      <span className="text-brand-blue">Campaign-Ready</span>
+      Real Events. <br />
+      <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -202,8 +202,8 @@ export const DV_TESTIMONIALS = {
   eyebrow: "CLIENT RESULTS",
   heading: (
     <>
-      Teams That Rebuilt <br />
-      <span className="text-[#1E6091]">Trust in Their Data</span>
+      Real Events. <br />
+      <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,

@@ -143,13 +143,13 @@ export function Globe() {
   // Handle resizing so the globe fits nicely on mobile vs desktop
   useEffect(() => {
     const handleResize = () => {
-      const width = Math.min(window.innerWidth - 40, 800); // Max width 800
-      setDimensions({ width, height: width });
+      const size = Math.min(globalThis.innerWidth - 40, globalThis.innerHeight * 0.62, 800);
+      setDimensions({ width: size, height: size });
     };
 
-    window.addEventListener("resize", handleResize);
+    globalThis.addEventListener("resize", handleResize);
     handleResize();
-    return () => window.removeEventListener("resize", handleResize);
+    return () => globalThis.removeEventListener("resize", handleResize);
   }, []);
 
   return (

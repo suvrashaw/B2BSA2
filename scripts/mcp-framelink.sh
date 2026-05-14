@@ -7,9 +7,7 @@ if [ ! -f ".env.mcp" ]; then
   exit 1
 fi
 
-set -a
-source .env.mcp
-set +a
+source scripts/load-env-mcp.sh
 
 if [ -z "${FIGMA_ACCESS_TOKEN:-}" ]; then
   echo "FIGMA_ACCESS_TOKEN is missing in .env.mcp" >&2

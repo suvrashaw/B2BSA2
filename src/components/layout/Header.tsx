@@ -150,7 +150,7 @@ export function Header({
           </span>
         </button>
 
-        <Link href="/contact-us">
+        <Link href="/contact">
           <Button variant="primary" size="sm">
             Let&apos;s Talk
           </Button>
@@ -212,7 +212,7 @@ export function Header({
                 )}
               </div>
             ))}
-            <Link href="/contact-us" onClick={closeMobileMenu}>
+            <Link href="/contact" onClick={closeMobileMenu}>
               <Button variant="primary" className="mt-4 w-full">
                 Let&apos;s Talk
               </Button>

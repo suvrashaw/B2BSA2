@@ -23,7 +23,7 @@ import { getPageMetadata } from "@/content/pages";
 
 import type { Metadata } from "next";
 
-export const metadata: Metadata = getPageMetadata("/about-us");
+export const metadata: Metadata = getPageMetadata("/about");
 
 export default function Page() {
   return (

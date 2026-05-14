@@ -53,7 +53,13 @@ next-env.d.ts
 .claude/
 .gemini/
 .antigravity/
-scripts/
+scripts/*
+!scripts/mcp-21st-dev.sh
+!scripts/mcp-shadcn.sh
+!scripts/mcp-magic-ui.sh
+!scripts/mcp-v0.sh
+!scripts/mcp-tailwindcss.sh
+!scripts/load-env-mcp.sh
 
 
 # next-video

@@ -3,7 +3,7 @@ export const MR_HERO = {
   eyebrow: "B2B MARKET RESEARCH",
   title: (
     <>
-      Market Research That Gives You an{" "}
+      B2B Market Research That Gives Your Enterprise an{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
         Unfair Competitive Advantage
       </span>
@@ -29,9 +29,9 @@ export const MR_SERVICES = {
   eyebrow: "OUR RESEARCH SERVICES",
   heading: (
     <>
-      Enterprise Market{" "}
+      Our B2B Market{" "}
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Research Solutions
+        Research Services
       </span>
     </>
   ),
@@ -112,7 +112,7 @@ export const MR_WHY = {
   eyebrow: "DATA QUALITY",
   heading: (
     <>
-      Why Data Quality <span className="text-brand-cyan">Matters</span>
+      Bad Data Costs Enterprise <span className="text-brand-cyan">Sales Teams Millions</span>
     </>
   ),
   reasons: [
@@ -155,7 +155,7 @@ export const MR_CASE_STUDIES = {
   eyebrow: "RESEARCH RESULTS",
   heading: (
     <>
-      Intelligence That <span className="text-brand-blue">Changed Outcomes</span>
+      Real Events. <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -193,7 +193,7 @@ export const MR_TESTIMONIALS = {
   eyebrow: "CLIENT SUCCESS",
   heading: (
     <>
-      Decisions Backed by <span className="text-[#1E6091]">Better Data</span>
+      Real Events. <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,

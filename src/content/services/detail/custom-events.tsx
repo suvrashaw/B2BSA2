@@ -3,9 +3,9 @@ export const CE_HERO = {
   eyebrow: "CUSTOM EVENTS",
   title: (
     <>
-      Custom B2B Events That Position <br />
+      Custom Event Solutions That Position <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Your Brand as the Authority
+        Your Brand as the Market Authority
       </span>
     </>
   ),
@@ -69,9 +69,9 @@ export const CE_DELIVERABLES = {
   eyebrow: "OUR CAPABILITIES",
   heading: (
     <>
-      End-to-End Custom <br />
+      What <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Event Production
+        We Manage
       </span>
     </>
   ),
@@ -160,8 +160,8 @@ export const CE_CASE_STUDIES = {
   eyebrow: "CUSTOM EVENT RESULTS",
   heading: (
     <>
-      Events We&apos;ve <br />
-      <span className="text-brand-blue">Designed & Delivered</span>
+      Real Events. <br />
+      <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -199,8 +199,8 @@ export const CE_TESTIMONIALS = {
   eyebrow: "CLIENT RESULTS",
   heading: (
     <>
-      Brands That <br />
-      <span className="text-[#1E6091]">Hosted with Impact</span>
+      Real Events. <br />
+      <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,

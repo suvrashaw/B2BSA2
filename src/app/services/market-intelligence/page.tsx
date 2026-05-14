@@ -13,14 +13,12 @@ import {
 
 import type { Metadata } from "next";
 
-export const metadata: Metadata = getPageMetadata(
-  "/services/market-research/human-powered-market-intelligence"
-);
+export const metadata: Metadata = getPageMetadata("/services/market-intelligence");
 
 export default function Page() {
   return (
     <ServiceDetail
-      canonicalPath="/services/market-research/human-powered-market-intelligence"
+      canonicalPath="/services/market-intelligence"
       hero={HPMI_HERO}
       why={HPMI_WHY}
       deliverables={HPMI_DELIVERABLES}

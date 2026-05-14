@@ -77,7 +77,7 @@ export function UpcomingEvents({
                   <span className="bg-brand-blue mb-3 inline-block rounded-full px-3 py-1 text-xs font-bold tracking-wider text-white uppercase">
                     {badgeLabel}
                   </span>
-                  <h3 className="font-heading line-clamp-2 text-2xl leading-tight font-bold text-white md:text-3xl">
+                  <h3 className="font-heading line-clamp-2 text-2xl leading-tight font-bold !text-white md:text-3xl">
                     {event.title}
                   </h3>
                 </div>

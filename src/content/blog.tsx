@@ -5,7 +5,7 @@ export const BLOG_HERO = {
     <>
       Thought Leadership for <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Enterprise Growth
+        Enterprise Growth Teams
       </span>
     </>
   ),

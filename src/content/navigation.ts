@@ -11,12 +11,12 @@ export interface ServiceNavGroup {
 
 export const topNavigation: NavLink[] = [
   { name: "Home", href: "/" },
-  { name: "About Us", href: "/about-us" },
+  { name: "About Us", href: "/about" },
   { name: "Services", href: "/services/global-event-solutions" },
   { name: "Trade Shows", href: "#" },
-  { name: "Insights", href: "/insights" },
+  { name: "Blog", href: "/blog" },
   { name: "Case Studies", href: "/case-studies" },
-  { name: "Contact", href: "/contact-us" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export const tradeShowLinks: NavLink[] = [
@@ -80,28 +80,37 @@ export const footerServiceGroups: ServiceNavGroup[] = [
     name: "Global Event Solutions",
     href: "/services/global-event-solutions",
     links: [
-      { name: "Trade Show Booth Design", href: "#" },
-      { name: "Industry Events", href: "#" },
-      { name: "Custom Events", href: "#" },
-      { name: "Event Booth Rental", href: "#" },
+      {
+        name: "Trade Show Booth Design",
+        href: "/services/global-event-solutions/trade-show-booth-design",
+      },
+      { name: "Industry Events", href: "/services/global-event-solutions/industry-events" },
+      { name: "Custom Events", href: "/services/global-event-solutions/custom-events" },
+      { name: "Event Booth Rental", href: "/services/global-event-solutions/event-booth-rental" },
     ],
   },
   {
     name: "Media Production",
     href: "/services/media-production",
     links: [
-      { name: "Event Video Production", href: "#" },
-      { name: "Corporate Video Production", href: "#" },
-      { name: "Live Streaming Services", href: "#" },
+      { name: "Event Video Production", href: "/services/media-production/event-video-production" },
+      {
+        name: "Corporate Video Production",
+        href: "/services/media-production/corporate-video-production",
+      },
+      {
+        name: "Live Streaming Services",
+        href: "/services/media-production/live-streaming-services",
+      },
     ],
   },
   {
     name: "Performance Marketing",
     href: "/services/performance-marketing",
     links: [
-      { name: "SEO Services", href: "#" },
-      { name: "Paid Advertising", href: "#" },
-      { name: "LinkedIn Ads for B2B", href: "#" },
+      { name: "SEO Services", href: "/services/seo-services" },
+      { name: "Paid Advertising", href: "/services/paid-advertising" },
+      { name: "LinkedIn Ads for B2B", href: "/services/linkedin-ads" },
     ],
   },
   {
@@ -110,14 +119,16 @@ export const footerServiceGroups: ServiceNavGroup[] = [
     links: [
       { name: "Active Prospecting", href: "/services/sales-qualified-lead-generation" },
       { name: "Market Research", href: "/services/market-research" },
-      { name: "Data Augmentation", href: "#" },
+      { name: "Data Augmentation", href: "/services/data-augmentation" },
+      { name: "Data Validation", href: "/services/data-validation" },
+      { name: "Market Intelligence", href: "/services/market-intelligence" },
     ],
   },
 ];
 
 export const footerNavigation: NavLink[] = [
-  { name: "Insights", href: "/insights" },
+  { name: "Blog", href: "/blog" },
   { name: "Case Studies", href: "/case-studies" },
-  { name: "About Us", href: "/about-us" },
-  { name: "Contact Us", href: "/contact-us" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ];

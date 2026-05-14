@@ -204,20 +204,27 @@ export interface ContactContent {
     firstNamePlaceholder: string;
     lastNameLabel: string;
     lastNamePlaceholder: string;
+    companyLabel?: string;
+    companyPlaceholder?: string;
+    phoneLabel?: string;
+    phonePlaceholder?: string;
     emailLabel: string;
     emailPlaceholder: string;
     serviceLabel: string;
     servicePlaceholder: string;
     serviceOptions: ContactServiceOption[];
+    eventLabel?: string;
+    eventPlaceholder?: string;
     messageLabel: string;
     messagePlaceholder: string;
+    consentLabel?: string;
     ctaLabel: string;
   };
 }
 
 export const HOME_HERO_CONTENT: HomeHeroContent = {
   eyebrow: "GLOBAL CAPABILITY. STRATEGIC GROWTH.",
-  title: <>B2B Global Event Solutions & Trade Show Booth Design</>,
+  title: <>B2B Global Event Solutions & Trade Show Booth Designs</>,
   description:
     "Trusted across 30+ countries, we deliver custom trade show booth design, active on-ground prospecting, and end-to-end event execution that turns exhibitions into a qualified B2B sales pipeline.",
   image: {
@@ -253,7 +260,7 @@ export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = {
       yOutput: [30, 0],
       title: <>Immersive Experience.</>,
       titleClassName:
-        "font-heading text-5xl md:text-7xl font-bold text-white leading-tight drop-shadow-lg",
+        "font-heading text-5xl md:text-7xl font-bold !text-white leading-tight drop-shadow-lg",
     },
     {
       id: "approach",
@@ -626,7 +633,7 @@ export const HOME_UPCOMING_EVENTS_CONTENT: UpcomingEventsContent = {
 
 export const HOME_WHY_CHOOSE_US_CONTENT: WhyChooseUsContent = {
   eyebrow: "THE B2BSA ADVANTAGE",
-  heading: <>Why the World&apos;s Leading Brands Choose B2B Sales Arrow</>,
+  heading: <>Why Enterprise Brands Trust Our Global Event Solutions?</>,
   reasons: [
     {
       id: "revenue-driven",
@@ -817,9 +824,13 @@ export const HOME_CONTACT_CONTENT: ContactContent = {
     firstNamePlaceholder: "John",
     lastNameLabel: "Last Name",
     lastNamePlaceholder: "Doe",
+    companyLabel: "Company Name",
+    companyPlaceholder: "Your Company",
+    phoneLabel: "Phone Number",
+    phonePlaceholder: "+1 (000) 000-0000",
     emailLabel: "Work Email",
     emailPlaceholder: "john@company.com",
-    serviceLabel: "Service of Interest",
+    serviceLabel: "Select the services you need",
     servicePlaceholder: "Select a service...",
     serviceOptions: [
       { value: "end-to-end", label: "End-to-End Global Event Solutions" },
@@ -829,8 +840,12 @@ export const HOME_CONTACT_CONTENT: ContactContent = {
       { value: "research", label: "Database & Market Research" },
       { value: "marketing", label: "Performance Marketing" },
     ],
+    eventLabel: "Upcoming Event Name & Date (Optional)",
+    eventPlaceholder: "e.g. GITEX 2026, October 2026",
     messageLabel: "Tell us about your event goals and requirements",
     messagePlaceholder: "Enter your requirements here...",
+    consentLabel:
+      "I agree to receive communications from B2B Sales Arrow regarding their services.",
     ctaLabel: "Get Your Custom Proposal",
   },
 };

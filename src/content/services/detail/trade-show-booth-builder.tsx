@@ -3,9 +3,9 @@ export const TSBB_HERO = {
   eyebrow: "TRADE SHOW BOOTH BUILDER",
   title: (
     <>
-      Trade Show Booth Builders Who <br />
+      Trade Show Booth Builders Who Engineer for <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Engineer for Conversion
+        Conversion, Not Just Aesthetics
       </span>
     </>
   ),
@@ -25,8 +25,8 @@ export const TSBB_WHY = {
   eyebrow: "BEYOND THE BUILD",
   heading: (
     <>
-      Not Just a Booth Builder — <br />
-      <span className="text-brand-cyan">An Enterprise Exhibition Partner</span>
+      Exhibition Stand Design, Build, <br />
+      <span className="text-brand-cyan">and Turnkey Solutions</span>
     </>
   ),
   reasons: [
@@ -69,9 +69,9 @@ export const TSBB_DELIVERABLES = {
   eyebrow: "OUR CAPABILITIES",
   heading: (
     <>
-      Our Booth Building <br />
+      What <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Capabilities
+        We Build
       </span>
     </>
   ),
@@ -163,8 +163,8 @@ export const TSBB_CASE_STUDIES = {
   eyebrow: "BUILD PORTFOLIO HIGHLIGHTS",
   heading: (
     <>
-      Structures We&apos;ve <br />
-      <span className="text-brand-blue">Built & Installed</span>
+      Real Events. <br />
+      <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -201,8 +201,8 @@ export const TSBB_TESTIMONIALS = {
   eyebrow: "CLIENT RESULTS",
   heading: (
     <>
-      Brands Who <br />
-      <span className="text-[#1E6091]">Trusted Our Build</span>
+      Real Events. <br />
+      <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,

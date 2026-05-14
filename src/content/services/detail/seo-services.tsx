@@ -3,9 +3,9 @@ export const SEO_HERO = {
   eyebrow: "B2B SEO SERVICES",
   title: (
     <>
-      SEO Services That Build <br />
+      B2B SEO Services That Build <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Organic Pipeline
+        Organic Pipeline — Not Just Traffic
       </span>
     </>
   ),
@@ -25,8 +25,8 @@ export const SEO_WHY = {
   eyebrow: "STRATEGIC SEARCH",
   heading: (
     <>
-      B2B SEO Is Not <br />
-      <span className="text-brand-cyan">the Same as B2C SEO</span>
+      B2B SEO Is Fundamentally Different <br />
+      <span className="text-brand-cyan">From B2C</span>
     </>
   ),
   reasons: [
@@ -69,9 +69,9 @@ export const SEO_DELIVERABLES = {
   eyebrow: "OUR SEO SERVICES",
   heading: (
     <>
-      Enterprise B2B <br />
+      Our B2B <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        SEO Solutions
+        SEO Services
       </span>
     </>
   ),
@@ -163,8 +163,8 @@ export const SEO_CASE_STUDIES = {
   eyebrow: "SEO RESULTS",
   heading: (
     <>
-      Brands We&apos;ve Taken <br />
-      <span className="text-brand-blue">to Page One</span>
+      Real Events. <br />
+      <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",

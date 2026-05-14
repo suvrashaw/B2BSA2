@@ -3,9 +3,9 @@ export const LSS_HERO = {
   eyebrow: "LIVE STREAMING SERVICES",
   title: (
     <>
-      Live Streaming Services That Extend <br />
+      Live Streaming and Hybrid Event Solutions That Extend <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Your Event Reach Globally
+        Your Event to Every Screen
       </span>
     </>
   ),
@@ -69,9 +69,9 @@ export const LSS_DELIVERABLES = {
   eyebrow: "OUR CAPABILITIES",
   heading: (
     <>
-      Our Live Streaming <br />
+      Live Streaming <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Capabilities
+        Services
       </span>
     </>
   ),
@@ -163,8 +163,8 @@ export const LSS_CASE_STUDIES = {
   eyebrow: "LIVE STREAMING RESULTS",
   heading: (
     <>
-      Events We Took <br />
-      <span className="text-brand-blue">Global in Real Time</span>
+      Real Events. <br />
+      <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -201,8 +201,8 @@ export const LSS_TESTIMONIALS = {
   eyebrow: "CLIENT RESULTS",
   heading: (
     <>
-      Events That Went <br />
-      <span className="text-[#1E6091]">Beyond the Room</span>
+      Real Events. <br />
+      <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,

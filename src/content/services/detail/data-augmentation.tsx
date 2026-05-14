@@ -3,9 +3,9 @@ export const DA_HERO = {
   eyebrow: "B2B DATA AUGMENTATION",
   title: (
     <>
-      Data Augmentation — Transform Incomplete <br />
+      B2B Data Augmentation Services — Transform Incomplete <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Data Into Sales Intelligence
+        CRM Data Into Sales Intelligence
       </span>
     </>
   ),
@@ -69,9 +69,9 @@ export const DA_DELIVERABLES = {
   eyebrow: "OUR CAPABILITIES",
   heading: (
     <>
-      Data Fields We <br />
+      Data Fields <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Enrich & Augment
+        We Enrich
       </span>
     </>
   ),
@@ -163,8 +163,8 @@ export const DA_CASE_STUDIES = {
   eyebrow: "DATA ENRICHMENT RESULTS",
   heading: (
     <>
-      Datasets We&apos;ve Made <br />
-      <span className="text-brand-blue">Revenue-Ready</span>
+      Real Events. <br />
+      <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -202,8 +202,8 @@ export const DA_TESTIMONIALS = {
   eyebrow: "CLIENT RESULTS",
   heading: (
     <>
-      Teams That Found <br />
-      <span className="text-[#1E6091]">Gold in Their Data</span>
+      Real Events. <br />
+      <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,

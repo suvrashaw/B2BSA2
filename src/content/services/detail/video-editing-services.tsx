@@ -3,9 +3,9 @@ export const VES_HERO = {
   eyebrow: "VIDEO EDITING SERVICES",
   title: (
     <>
-      Professional Video Editing That <br />
+      Professional Video Editing Services That Transform <br />
       <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Elevate Your Brand Content
+        Raw Footage Into Revenue Assets
       </span>
     </>
   ),
@@ -25,8 +25,8 @@ export const VES_WHY = {
   eyebrow: "SPEED & SCALE",
   heading: (
     <>
-      Fast Turnaround. <br />
-      <span className="text-brand-cyan">Enterprise-Scale Volume.</span>
+      Our Post-Production <br />
+      <span className="text-brand-cyan">Services</span>
     </>
   ),
   reasons: [
@@ -163,8 +163,8 @@ export const VES_CASE_STUDIES = {
   eyebrow: "EDITING RESULTS",
   heading: (
     <>
-      Content We&apos;ve Made <br />
-      <span className="text-brand-blue">Performance-Ready</span>
+      Real Events. <br />
+      <span className="text-brand-blue">Real Results.</span>
     </>
   ),
   ctaLabel: "Full Study",
@@ -201,8 +201,8 @@ export const VES_TESTIMONIALS = {
   eyebrow: "CLIENT RESULTS",
   heading: (
     <>
-      Teams That Scaled <br />
-      <span className="text-[#1E6091]">Their Video Output</span>
+      Real Events. <br />
+      <span className="text-[#1E6091]">Real Results.</span>
     </>
   ),
   autoplayInterval: 3500,
