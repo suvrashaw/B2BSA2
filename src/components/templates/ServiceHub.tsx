@@ -65,7 +65,7 @@ export function ServiceHub({
   return (
     <main className="bg-brand-gray min-h-screen">
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
-      <Header forceLightMode />
+      <Header darkBackground />
       <ServiceHero
         title={hero.title || ""}
         description={hero.description || ""}

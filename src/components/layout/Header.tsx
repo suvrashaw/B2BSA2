@@ -14,10 +14,14 @@ import { cn } from "@/lib";
 
 // Remove ThemeToggle import
 
-export function Header({ forceLightMode = false }: { forceLightMode?: boolean } = {}) {
+export function Header({
+  forceLightMode = false,
+  darkBackground = false,
+}: { forceLightMode?: boolean; darkBackground?: boolean } = {}) {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const solidHeader = forceLightMode || scrolled;
+  const lightText = darkBackground && !solidHeader;
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   useEffect(() => {
@@ -66,7 +70,7 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
               href={link.href}
               className={cn(
                 "group relative text-sm font-medium transition-colors flex items-center gap-1.5",
-                " hover:text-brand-blue"
+                lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue"
               )}
             >
               {link.name}
@@ -134,7 +138,7 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
         <button
           className={cn(
             "flex items-center gap-2 text-sm font-medium transition-colors",
-            "/70 hover:text-brand-blue"
+            lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue"
           )}
         >
           <span suppressHydrationWarning className="flex items-center">
@@ -154,7 +158,10 @@ export function Header({ forceLightMode = false }: { forceLightMode?: boolean } 
         <div className="lg:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="hover:bg-brand-gray/5  rounded-full p-2 transition-colors"
+            className={cn(
+              "rounded-full p-2 transition-colors hover:bg-brand-gray/5",
+              lightText ? "text-white" : ""
+            )}
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
