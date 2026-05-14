@@ -31,10 +31,10 @@ export function Footer() {
   const contentBgOpacity = useTransform(scrollYProgress, [0.5, 1], [0.8, 1]);
 
   return (
-    <footer ref={containerRef} className="bg-brand-charcoal relative z-0 h-[200vh]">
+    <footer ref={containerRef} className="bg-brand-blue relative z-0 h-[200vh]">
       <div className="sticky top-0 flex h-screen w-full flex-col justify-between overflow-hidden">
         {/* 1. Global Presence Slider Section (Fixed at top) */}
-        <div className="from-brand-charcoal via-brand-charcoal/80 pointer-events-none absolute top-0 right-0 left-0 z-20 bg-gradient-to-b to-transparent pt-12 pb-24">
+        <div className="from-brand-blue via-brand-blue/80 pointer-events-none absolute top-0 right-0 left-0 z-20 bg-linear-to-b to-transparent pt-12 pb-24">
           {/* We wrap it in a pointer-events-auto div to ensure it's still clickable/selectable if needed */}
           <div className="pointer-events-auto">
             <GlobalPresence />
@@ -59,7 +59,7 @@ export function Footer() {
         >
           <motion.div
             style={{ opacity: contentBgOpacity }}
-            className="from-brand-charcoal via-brand-charcoal/95 to-brand-charcoal/40 absolute inset-0 -z-10 bg-gradient-to-t backdrop-blur-sm"
+            className="from-brand-blue via-brand-blue/95 to-brand-blue/40 absolute inset-0 -z-10 bg-linear-to-t backdrop-blur-sm"
           />
           <div className="relative container mx-auto px-8 pt-32 pb-8">
             {/* Row 1: Brand + Navigation + Stay Ahead */}

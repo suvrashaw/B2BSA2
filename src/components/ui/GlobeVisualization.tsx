@@ -20,7 +20,7 @@ export function GlobalPresence() {
   return (
     <div className="bg-brand-blue relative z-10 w-full overflow-hidden py-12">
       <div className="container mx-auto px-8">
-        <h3 className="text-brand-cyan mb-8 text-center text-xs font-bold tracking-[0.3em] uppercase">
+        <h3 className="mb-8 text-center text-xs font-bold tracking-[0.3em] text-white uppercase">
           Global Enterprise Reach
         </h3>
 
