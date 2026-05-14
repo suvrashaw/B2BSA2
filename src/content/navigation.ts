@@ -75,6 +75,46 @@ export const serviceNavigationGroups: ServiceNavGroup[] = [
   },
 ];
 
+export const footerServiceGroups: ServiceNavGroup[] = [
+  {
+    name: "Global Event Solutions",
+    href: "/services/global-event-solutions",
+    links: [
+      { name: "Trade Show Booth Design", href: "#" },
+      { name: "Industry Events", href: "#" },
+      { name: "Custom Events", href: "#" },
+      { name: "Event Booth Rental", href: "#" },
+    ],
+  },
+  {
+    name: "Media Production",
+    href: "/services/media-production",
+    links: [
+      { name: "Event Video Production", href: "#" },
+      { name: "Corporate Video Production", href: "#" },
+      { name: "Live Streaming Services", href: "#" },
+    ],
+  },
+  {
+    name: "Performance Marketing",
+    href: "/services/performance-marketing",
+    links: [
+      { name: "SEO Services", href: "#" },
+      { name: "Paid Advertising", href: "#" },
+      { name: "LinkedIn Ads for B2B", href: "#" },
+    ],
+  },
+  {
+    name: "Sales & Market Intelligence",
+    href: "/services/sales-qualified-lead-generation",
+    links: [
+      { name: "Active Prospecting", href: "/services/sales-qualified-lead-generation" },
+      { name: "Market Research", href: "/services/market-research" },
+      { name: "Data Augmentation", href: "#" },
+    ],
+  },
+];
+
 export const footerNavigation: NavLink[] = [
   { name: "Insights", href: "/insights" },
   { name: "Case Studies", href: "/case-studies" },

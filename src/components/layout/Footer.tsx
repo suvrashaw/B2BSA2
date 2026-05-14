@@ -12,7 +12,7 @@ import { FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
 import { Button } from "@/components/ui/Button";
 import { Globe } from "@/components/ui/Globe";
 import { GlobalPresence } from "@/components/ui/GlobeVisualization";
-import { footerNavigation, serviceNavigationGroups } from "@/content/navigation";
+import { footerNavigation, footerServiceGroups } from "@/content/navigation";
 
 export function Footer() {
   const containerRef = useRef<HTMLElement>(null);
@@ -66,7 +66,7 @@ export function Footer() {
               <div className="lg:col-span-5">
                 <Link
                   href="/"
-                  className="relative mb-8 block h-12 w-48 transition-opacity hover:opacity-90"
+                  className="relative mr-auto mb-8 block h-12 w-48 transition-opacity hover:opacity-90"
                 >
                   <Image
                     src="/logo.png"
@@ -126,29 +126,27 @@ export function Footer() {
                 <span className="font-heading mb-6 block text-lg font-bold text-white">
                   Services
                 </span>
-                <div className="grid gap-4">
-                  {serviceNavigationGroups.map((group) => (
+                <div className="grid gap-5">
+                  {footerServiceGroups.map((group) => (
                     <div key={group.name}>
                       <Link
                         href={group.href}
-                        className="hover:text-brand-primary text-sm font-bold text-gray-300 transition-colors"
+                        className="hover:text-brand-blue text-sm font-semibold text-white transition-colors"
                       >
                         {group.name}
                       </Link>
-                      {group.links.length > 0 && (
-                        <ul className="mt-2 space-y-2 border-l border-gray-200 pl-3">
-                          {group.links.map((item) => (
-                            <li key={item.name}>
-                              <Link
-                                href={item.href}
-                                className="hover:text-brand-primary text-xs leading-5 text-gray-500 transition-colors"
-                              >
-                                {item.name}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
+                      <ul className="mt-2 space-y-1.5 border-l border-white/10 pl-3">
+                        {group.links.map((item) => (
+                          <li key={item.name}>
+                            <Link
+                              href={item.href}
+                              className="hover:text-brand-primary text-xs leading-5 text-gray-400 transition-colors"
+                            >
+                              {item.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   ))}
                 </div>
