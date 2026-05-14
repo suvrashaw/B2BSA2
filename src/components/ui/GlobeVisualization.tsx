@@ -20,7 +20,7 @@ export function GlobalPresence() {
   return (
     <div className="relative z-10 w-full overflow-hidden border-t border-gray-200 py-12">
       <div className="container mx-auto px-8">
-        <h3 className="text-brand-blue/60 mb-8 text-center text-xs font-bold tracking-[0.3em] uppercase">
+        <h3 className="text-brand-cyan mb-8 text-center text-xs font-bold tracking-[0.3em] uppercase">
           Global Enterprise Reach
         </h3>
 
@@ -42,9 +42,7 @@ export function GlobalPresence() {
                   ease: [0.16, 1, 0.3, 1], // premium smooth easing
                 }}
               >
-                <span className="font-heading text-2xl tracking-wide  md:text-3xl">
-                  {country}
-                </span>
+                <span className="font-heading text-2xl tracking-wide  md:text-3xl">{country}</span>
 
                 {isActive && (
                   <motion.div
