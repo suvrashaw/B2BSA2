@@ -69,18 +69,14 @@ export function ServiceHub({
       <ServiceHero
         title={hero.title || ""}
         description={hero.description || ""}
-        badge={hero.badge || hero.eyebrow}
         primaryCta={
-          hero.primaryCtaLabel
-            ? { label: hero.primaryCtaLabel, href: "/contact-us" }
-            : undefined
+          hero.primaryCtaLabel ? { label: hero.primaryCtaLabel, href: "/contact-us" } : undefined
         }
         secondaryCta={
           hero.secondaryCtaLabel
             ? { label: hero.secondaryCtaLabel, href: "/services/global-event-solutions" }
             : undefined
         }
-        motionPhrases={hero.motionPhrases}
       />
       {showMediaShowreel ? <MediaShowreel /> : null}
       <OurServices {...services} />

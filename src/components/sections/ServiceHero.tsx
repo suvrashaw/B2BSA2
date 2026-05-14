@@ -11,8 +11,6 @@ import { ArrowRight } from "lucide-react";
 export interface ServiceHeroProps {
   title: string | ReactNode;
   description: string;
-  badge?: string;
-  eyebrow?: string;
   videoUrl?: string;
   primaryCta?: {
     label: string;
