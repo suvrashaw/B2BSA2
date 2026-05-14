@@ -29,49 +29,64 @@ export const tradeShowLinks: NavLink[] = [
 
 export const serviceNavigationGroups: ServiceNavGroup[] = [
   {
-    name: "Booth Design & Production",
-    href: "/services/booth-design-production",
-    links: [],
+    name: "Global Event Solutions",
+    href: "/services/global-event-solutions",
+    links: [
+      {
+        name: "Trade Show Booth Design",
+        href: "/services/global-event-solutions/trade-show-booth-design",
+      },
+      {
+        name: "Event Lead Generation",
+        href: "/services/global-event-solutions/event-lead-generation",
+      },
+      { name: "Industry Events", href: "/services/global-event-solutions/industry-events" },
+      { name: "Custom Events", href: "/services/global-event-solutions/custom-events" },
+      { name: "Event Booth Rental", href: "/services/global-event-solutions/event-booth-rental" },
+      {
+        name: "Trade Show Booth Builder",
+        href: "/services/global-event-solutions/trade-show-booth-builder",
+      },
+    ],
   },
   {
-    name: "Active Prospecting",
-    href: "/services/sales-qualified-lead-generation",
-    links: [],
-  },
-  {
-    name: "Corporate Media Production",
+    name: "Media Production",
     href: "/services/media-production",
-    links: [],
-  },
-  {
-    name: "Giveaways",
-    href: "#",
-    links: [],
-  },
-  {
-    name: "Networking",
-    href: "#",
-    links: [],
-  },
-  {
-    name: "Branding",
-    href: "#",
-    links: [],
-  },
-  {
-    name: "Experience Creation",
-    href: "#",
-    links: [],
-  },
-  {
-    name: "Database & Market Research",
-    href: "/services/market-research",
-    links: [],
+    links: [
+      { name: "Event Video Production", href: "/services/media-production/event-video-production" },
+      {
+        name: "Corporate Video Production",
+        href: "/services/media-production/corporate-video-production",
+      },
+      {
+        name: "Live Streaming Services",
+        href: "/services/media-production/live-streaming-services",
+      },
+      {
+        name: "Video Editing Services",
+        href: "/services/media-production/video-editing-services",
+      },
+    ],
   },
   {
     name: "Performance Marketing",
     href: "/services/performance-marketing",
-    links: [],
+    links: [
+      { name: "SEO Services", href: "/services/seo-services" },
+      { name: "Paid Advertising", href: "/services/paid-advertising" },
+      { name: "LinkedIn Ads for B2B", href: "/services/linkedin-ads" },
+    ],
+  },
+  {
+    name: "Sales & Market Intelligence",
+    href: "/services/sales-qualified-lead-generation",
+    links: [
+      { name: "Active Prospecting", href: "/services/sales-qualified-lead-generation" },
+      { name: "Market Research", href: "/services/market-research" },
+      { name: "Data Augmentation", href: "/services/data-augmentation" },
+      { name: "Data Validation", href: "/services/data-validation" },
+      { name: "Market Intelligence", href: "/services/market-intelligence" },
+    ],
   },
 ];
 
