@@ -3,13 +3,11 @@ import { getPageMetadata } from "@/content/pages";
 import {
   PERF_HERO,
   PERF_SERVICES,
-  PERF_STATS,
   PERF_WHY,
+  PERF_PROCESS,
+  PERF_PROOF_BAR,
   PERF_CASE_STUDIES,
-  PERF_TESTIMONIALS,
-  PERF_BLOGS,
   PERF_FAQ,
-  PERF_CONTACT,
 } from "@/content/services/performance-marketing";
 
 import type { Metadata } from "next";
@@ -20,14 +18,12 @@ export default function Page() {
   return (
     <ServiceHub
       hero={PERF_HERO}
+      proofBar={PERF_PROOF_BAR}
       services={PERF_SERVICES}
-      stats={PERF_STATS}
       why={PERF_WHY}
+      process={PERF_PROCESS}
       caseStudies={PERF_CASE_STUDIES}
-      testimonials={PERF_TESTIMONIALS}
-      blogs={PERF_BLOGS}
       faq={PERF_FAQ}
-      contact={PERF_CONTACT}
     />
   );
 }

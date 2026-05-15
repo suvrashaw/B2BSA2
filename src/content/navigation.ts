@@ -47,6 +47,10 @@ export const serviceNavigationGroups: ServiceNavGroup[] = [
         name: "Trade Show Booth Builder",
         href: "/services/global-event-solutions/trade-show-booth-builder",
       },
+      {
+        name: "Modular & Portable Booths",
+        href: "/services/global-event-solutions/modular-portable-booths",
+      },
     ],
   },
   {
@@ -62,84 +66,38 @@ export const serviceNavigationGroups: ServiceNavGroup[] = [
         name: "Live Streaming Services",
         href: "/services/media-production/live-streaming-services",
       },
-      {
-        name: "Video Editing Services",
-        href: "/services/media-production/video-editing-services",
-      },
+      { name: "Video Editing Services", href: "/services/media-production/video-editing-services" },
     ],
   },
   {
     name: "Performance Marketing",
     href: "/services/performance-marketing",
     links: [
-      { name: "SEO Services", href: "/services/seo-services" },
-      { name: "Paid Advertising", href: "/services/paid-advertising" },
-      { name: "LinkedIn Ads for B2B", href: "/services/linkedin-ads" },
+      { name: "SEO Services", href: "/services/performance-marketing/seo-services" },
+      { name: "Paid Advertising", href: "/services/performance-marketing/paid-advertising" },
+      { name: "LinkedIn Ads for B2B", href: "/services/performance-marketing/linkedin-ads" },
     ],
   },
   {
-    name: "Sales & Market Intelligence",
+    name: "Sales Qualified Lead Gen",
     href: "/services/sales-qualified-lead-generation",
+    links: [],
+  },
+  {
+    name: "Market Research",
+    href: "/services/market-research",
     links: [
-      { name: "Active Prospecting", href: "/services/sales-qualified-lead-generation" },
-      { name: "Market Research", href: "/services/market-research" },
-      { name: "Data Augmentation", href: "/services/data-augmentation" },
-      { name: "Data Validation", href: "/services/data-validation" },
-      { name: "Market Intelligence", href: "/services/market-intelligence" },
+      {
+        name: "Human-Powered Intelligence",
+        href: "/services/market-research/human-powered-market-intelligence",
+      },
+      { name: "Data Validation", href: "/services/market-research/data-validation" },
+      { name: "Data Augmentation", href: "/services/market-research/data-augmentation" },
     ],
   },
 ];
 
-export const footerServiceGroups: ServiceNavGroup[] = [
-  {
-    name: "Global Event Solutions",
-    href: "/services/global-event-solutions",
-    links: [
-      {
-        name: "Trade Show Booth Design",
-        href: "/services/global-event-solutions/trade-show-booth-design",
-      },
-      { name: "Industry Events", href: "/services/global-event-solutions/industry-events" },
-      { name: "Custom Events", href: "/services/global-event-solutions/custom-events" },
-      { name: "Event Booth Rental", href: "/services/global-event-solutions/event-booth-rental" },
-    ],
-  },
-  {
-    name: "Media Production",
-    href: "/services/media-production",
-    links: [
-      { name: "Event Video Production", href: "/services/media-production/event-video-production" },
-      {
-        name: "Corporate Video Production",
-        href: "/services/media-production/corporate-video-production",
-      },
-      {
-        name: "Live Streaming Services",
-        href: "/services/media-production/live-streaming-services",
-      },
-    ],
-  },
-  {
-    name: "Performance Marketing",
-    href: "/services/performance-marketing",
-    links: [
-      { name: "SEO Services", href: "/services/seo-services" },
-      { name: "Paid Advertising", href: "/services/paid-advertising" },
-      { name: "LinkedIn Ads for B2B", href: "/services/linkedin-ads" },
-    ],
-  },
-  {
-    name: "Sales & Market Intelligence",
-    href: "/services/sales-qualified-lead-generation",
-    links: [
-      { name: "Active Prospecting", href: "/services/sales-qualified-lead-generation" },
-      { name: "Market Research", href: "/services/market-research" },
-      { name: "Data Augmentation", href: "/services/data-augmentation" },
-      { name: "Data Validation", href: "/services/data-validation" },
-      { name: "Market Intelligence", href: "/services/market-intelligence" },
-    ],
-  },
-];
+export const footerServiceGroups: ServiceNavGroup[] = serviceNavigationGroups;
 
 export const footerNavigation: NavLink[] = [
   { name: "Blog", href: "/blog" },

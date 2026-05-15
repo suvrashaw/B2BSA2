@@ -2,46 +2,66 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
-import { ClientLogos } from "@/components/sections/ClientLogos";
-import { ContactUs } from "@/components/sections/ContactUs";
-import type { ContactUsProps } from "@/components/sections/ContactUs";
+import { CTABanner } from "@/components/sections/CTABanner";
+import { DataTable } from "@/components/sections/DataTable";
 import { FAQ } from "@/components/sections/FAQ";
 import type { FAQProps } from "@/components/sections/FAQ";
-import { Hero } from "@/components/sections/Hero";
 import { OurServices } from "@/components/sections/OurServices";
+import type { OurServicesProps } from "@/components/sections/OurServices";
+import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
+import { ProofBar } from "@/components/sections/ProofBar";
+import { RelatedServices } from "@/components/sections/RelatedServices";
+import { ServiceHero } from "@/components/sections/ServiceHero";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
-import { Testimonials } from "@/components/sections/Testimonials";
+import type { WhyChooseUsProps } from "@/components/sections/WhyChooseUs";
+import { getPageByUrl } from "@/content/pages";
+import { buildBreadcrumbJsonLd, buildFaqJsonLd } from "@/lib";
+
 // SEO Utility Component
 export function JsonLd({ data }: { data: object }) {
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(data).replaceAll('<', String.raw`\u003c`),
+        __html: JSON.stringify(data).replaceAll("<", String.raw`\u003c`),
       }}
     />
   );
 }
 
-import type { WhyChooseUsProps } from "@/components/sections/WhyChooseUs";
-import { getPageByUrl } from "@/content/pages";
-import { buildBreadcrumbJsonLd, buildFaqJsonLd } from "@/lib";
-import type { HeroProps } from "@/components/sections/Hero";
-import type { OurServicesProps } from "@/components/sections/OurServices";
-import type { WhoWeAreProps } from "@/components/sections/WhoWeAre";
-import type { TestimonialsProps } from "@/components/sections/Testimonials";
-
 export interface ServiceDetailProps {
   canonicalPath?: string;
-  hero: HeroProps;
-  why: WhyChooseUsProps;
+  hero: {
+    title: string;
+    description: string;
+  };
+  proofBar?: string[];
   deliverables: OurServicesProps;
-  stats: WhoWeAreProps;
-  caseStudies: CaseStudiesProps;
-  testimonials: TestimonialsProps;
+  why: WhyChooseUsProps;
+  process?: {
+    title: string;
+    phases: { title: string; description: string }[];
+  };
+  pricing?: {
+    title: string;
+    headers: string[];
+    rows: { [key: string]: string }[];
+  };
+  pricingGuidance?: {
+    title: string;
+    description: string;
+    headers: string[];
+    rows: { [key: string]: string }[];
+    footer?: string;
+  };
+  caseStudies?: CaseStudiesProps;
+  stats?: {
+    title: string;
+    items: { label: string; value: string }[];
+  };
   faq: FAQProps;
-  contact: ContactUsProps;
+  relatedServices?: { title: string; href: string }[];
 }
 
 const siteUrl = "https://b2bsalesarrow.com";
@@ -81,13 +101,16 @@ function getBreadcrumbs(canonicalPath: string) {
 export function ServiceDetail({
   canonicalPath,
   hero,
-  why,
+  proofBar,
   deliverables,
-  stats,
+  why,
+  process,
+  pricing,
+  pricingGuidance,
   caseStudies,
-  testimonials,
+  stats,
   faq,
-  contact,
+  relatedServices,
 }: ServiceDetailProps) {
   const faqJsonLd = faq.faqs?.length ? buildFaqJsonLd(faq.faqs) : null;
   const breadcrumbJsonLd = canonicalPath
@@ -98,16 +121,50 @@ export function ServiceDetail({
     <main className="bg-brand-gray min-h-screen">
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       {breadcrumbJsonLd ? <JsonLd data={breadcrumbJsonLd} /> : null}
-      <Header />
-      <Hero {...hero} />
-      <WhyChooseUs {...why} />
+      <Header darkBackground />
+
+      <ServiceHero
+        title={hero.title}
+        description={hero.description}
+        primaryCta={{ label: "Book a Strategy Session", href: "/contact" }}
+        secondaryCta={{ label: "View Event Portfolio", href: "/case-studies" }}
+      />
+
+      {proofBar && <ProofBar stats={proofBar} />}
+
       <OurServices {...deliverables} />
-      <WhoWeAre {...stats} />
-      <CaseStudies {...caseStudies} />
-      <ClientLogos />
-      <Testimonials {...testimonials} />
+
+      <WhyChooseUs {...why} />
+
+      {process && <ProcessTimeline title={process.title} phases={process.phases} />}
+
+      {pricing && <DataTable title={pricing.title} headers={pricing.headers} rows={pricing.rows} />}
+
+      {pricingGuidance && (
+        <DataTable
+          title={pricingGuidance.title}
+          description={pricingGuidance.description}
+          headers={pricingGuidance.headers}
+          rows={pricingGuidance.rows}
+          className="bg-brand-gray/50"
+        />
+      )}
+
+      {caseStudies && <CaseStudies {...caseStudies} />}
+
+      {stats && <WhoWeAre title={stats.title} items={stats.items} />}
+
       <FAQ {...faq} />
-      <ContactUs {...contact} />
+
+      {relatedServices && <RelatedServices services={relatedServices} />}
+
+      <CTABanner
+        title="Ready to Build Your Enterprise Growth Engine?"
+        description="250+ events. $1.2B+ influenced. One conversation to start."
+        ctaLabel="Book a Strategy Session"
+        ctaHref="/contact"
+      />
+
       <Footer />
     </main>
   );

@@ -1,325 +1,129 @@
-export const PAID_HERO = {
-  showPreloader: false,
-  eyebrow: "B2B PAID ADVERTISING",
-  title: (
-    <>
-      B2B Paid Advertising That Generates <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Pipeline, Not Just Clicks
-      </span>
-    </>
-  ),
+import { GLOBAL_CASE_STUDIES } from "../../shared";
+
+export const PAID_ADS_HERO = {
+  title: "B2B Paid Advertising — Captured Demand, Accelerated Pipeline",
   description:
-    "We manage high-performance paid media programs for enterprise brands — every campaign built around pipeline metrics, not vanity numbers.",
-  image: {
-    src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2000",
-    alt: "Paid advertising analytics dashboard",
-    loaderAlt: "Loading",
-  },
-  primaryCtaLabel: "Request a Paid Media Audit",
-  secondaryCtaLabel: "Start Your Paid Project",
-  stat: { value: "4.2×", label: "Avg ROAS Achieved", icon: "TrendingUp" },
+    "Stop paying for traffic that doesn't convert. We provide the precision-targeted paid media across Google, Programmatic, and Retargeting that captures high-intent buyers at the exact moment they are looking for a solution.",
 };
 
-export const PAID_WHY = {
-  eyebrow: "CONVERSION STRATEGY",
-  heading: (
-    <>
-      How We Build Paid Campaigns <br />
-      <span className="text-brand-cyan">That Convert</span>
-    </>
-  ),
+export { GLOBAL_PROOF_STATS as PAID_ADS_PROOF_BAR } from "../../shared";
+
+export const PAID_ADS_WHY = {
+  heading: "The Speed of Paid Acquisition",
+  description:
+    "In the enterprise space, waiting for organic growth isn't always an option. Paid advertising allows you to 'jump the queue' and put your brand directly in front of active buyers today. However, without proper targeting and tracking, paid media is a fast way to burn budget. We specialize in high-precision B2B campaigns that focus on intent and firmographic fit, ensuring your ad spend is always working to fill your pipeline, not just inflate your traffic stats.",
   reasons: [
     {
-      id: "targeting",
-      title: "Decision-Maker Targeting",
-      description:
-        "We use job title, seniority, company size, and intent signals to reach CFOs and VPs — not interns.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      id: "creative",
-      title: "B2B-Native Creative",
-      description:
-        "Enterprise buyers respond to different creative than B2C. Our copy and visuals are built for long-cycle decision-making.",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      id: "attribution",
-      title: "Full Funnel Attribution",
-      description:
-        "We track every ad impression to closed revenue — giving you exact ROAS figures, not just click metrics.",
+      id: "speed",
+      title: "Immediate Impact",
+      description: "Launch a campaign today and see qualified traffic and leads this week.",
       image:
         "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
     },
     {
-      id: "optimisation",
-      title: "Continuous Optimisation",
+      id: "control",
+      title: "Granular Control",
       description:
-        "Weekly bid management, A/B testing, and audience refinement to improve performance every single week.",
-      image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
-    },
-  ],
-};
-
-export const PAID_DELIVERABLES = {
-  eyebrow: "MANAGED CHANNELS",
-  heading: (
-    <>
-      Channels <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        We Manage
-      </span>
-    </>
-  ),
-  serviceLabel: "Deliverable",
-  ctaLabel: "Learn More",
-  services: [
-    {
-      id: "google",
-      title: "Google Ads Management",
-      description:
-        "Search, Display, and YouTube campaigns targeting high-intent B2B keywords and in-market audiences.",
-      icon: "MousePointerClick",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-blue",
-    },
-    {
-      id: "linkedin",
-      title: "LinkedIn Paid Campaigns",
-      description:
-        "Sponsored content, InMail, and dynamic ads targeted by job title, company, and industry.",
-      icon: "Users",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-cyan",
-    },
-    {
-      id: "retargeting",
-      title: "Retargeting Campaigns",
-      description:
-        "Pixel-based retargeting to re-engage website visitors, content downloaders, and video viewers.",
-      icon: "Target",
-      image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-primary",
-    },
-    {
-      id: "reporting",
-      title: "Weekly Performance Reporting",
-      description:
-        "Full transparency on spend, impressions, clicks, leads, and pipeline generated from every campaign.",
-      icon: "BarChart3",
-      image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-blue",
-    },
-  ],
-};
-
-export const PAID_STATS = {
-  heading: (
-    <>
-      Global Reach <br />
-      <span className="text-brand-blue">Local Execution</span>
-    </>
-  ),
-  quote:
-    '"We provide expert B2B paid advertising management, delivering high-performance campaigns across Google Ads, programmatic, and display optimized for enterprise pipeline across 40+ global markets."',
-  attribution: "— Paid Media Team, B2B Sales Arrow",
-  stats: [
-    {
-      value: "4.2×",
-      label: "Avg ROAS Achieved",
-      icon: "TrendingUp",
-      bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
-    },
-    {
-      value: "10+",
-      label: "Years of Experience",
-      icon: "TrendingUp",
-      bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
-    },
-    {
-      value: "40+",
-      label: "Countries Served",
-      icon: "Globe2",
-      bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
-    },
-    {
-      value: "100%",
-      label: "Production Accuracy",
-      icon: "Target",
-      bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
-    },
-  ],
-};
-
-export const PAID_CASE_STUDIES = {
-  eyebrow: "PAID MEDIA RESULTS",
-  heading: (
-    <>
-      Real Events. <br />
-      <span className="text-brand-blue">Real Results.</span>
-    </>
-  ),
-  ctaLabel: "Full Study",
-  viewAllLabel: "View All Work",
-  caseStudies: [
-    {
-      id: "finserve-paid",
-      client: "FinServe SaaS",
-      title: "Google Ads Campaign Generates 4.2× ROAS",
-      challenge: "High CPL from generic broad-match keyword strategy.",
-      solution: "Restructured account with intent-based keywords and decision-maker retargeting.",
-      metric: "4.2×",
-      metricLabel: "Return on Ad Spend",
-      icon: "BarChart3",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      id: "nexus-paid",
-      client: "Nexus Technologies",
-      title: "LinkedIn Ads Cut CPL by 42% in 60 Days",
-      challenge: "LinkedIn CPL was 3× the target — campaigns not profitable.",
-      solution: "Audience restructure, creative refresh, and bid strategy overhaul.",
-      metric: "−42%",
-      metricLabel: "Cost Per Lead Reduction",
-      icon: "Users",
+        "Scale your spend up or down based on your sales team's capacity and your revenue targets.",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };
 
-export const PAID_TESTIMONIALS = {
-  eyebrow: "CLIENT RESULTS",
-  heading: (
-    <>
-      Real Events. <br />
-      <span className="text-[#1E6091]">Real Results.</span>
-    </>
-  ),
-  autoplayInterval: 3500,
-  initialIndex: 1,
-  testimonials: [
+export const PAID_ADS_DELIVERABLES = {
+  heading: "Our Paid Media Services",
+  services: [
     {
-      id: 1,
-      name: "Sophia Martinez",
-      designation: "VP Marketing",
-      company: "Elevate Logistics",
-      rating: 5,
-      quote:
-        "Our previous paid media agency was burning budget on vanity clicks. B2B Sales Arrow restructured everything and hit 4.2× ROAS within the first quarter.",
+      id: "google",
+      title: "Google Search Ads (PPC)",
+      description:
+        "We dominate the search results for your most valuable enterprise keywords, capturing demand at the moment of highest intent.",
+      icon: "Search",
       image:
-        "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=400",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-blue",
     },
     {
-      id: 2,
-      name: "Sarah Jenkins",
-      designation: "Chief Marketing Officer",
-      company: "Nexus Technologies",
-      rating: 5,
-      quote:
-        "LinkedIn CPL dropped 42% in 60 days. The targeting expertise they bring to B2B paid media is genuinely in a different league from general digital agencies.",
+      id: "display",
+      title: "Programmatic and Display Advertising",
+      description:
+        "We use account-based marketing (ABM) data to show your ads only to decision-makers within your specific target account list.",
+      icon: "Cpu",
       image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-cyan",
     },
     {
-      id: 3,
-      name: "David Alaba",
-      designation: "Head of Growth",
-      company: "Synapse Networks",
-      rating: 5,
-      quote:
-        "The weekly reporting cadence keeps us completely aligned. We always know where our money is going and what results it's driving. Completely transparent operation.",
+      id: "retargeting",
+      title: "High-Conversion Retargeting",
+      description:
+        "Stay top-of-mind throughout the long B2B buying cycle with coordinated retargeting across the web and social platforms.",
+      icon: "RefreshCw",
       image:
-        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400",
+        "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-primary",
+    },
+    {
+      id: "tracking",
+      title: "Conversion and Attribution Management",
+      description:
+        "We implement deep server-side tracking to ensure every lead and deal can be traced back to the specific ad that generated it.",
+      icon: "BarChart",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-blue",
     },
   ],
 };
 
-export const PAID_FAQ = {
-  eyebrow: "PAID ADVERTISING FAQ",
-  heading: (
-    <>
-      Frequently Asked <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Questions
-      </span>
-    </>
-  ),
-  description: "Everything you need to know about our paid advertising management service.",
-  scrollAmount: 340,
+export const PAID_ADS_STRATEGIES = {
+  title: "Ad Strategy Comparison",
+  headers: ["Channel", "Best For"],
+  rows: [
+    {
+      channel: "Google Search",
+      "best for": "High-intent, bottom-of-funnel demand capture",
+    },
+    {
+      channel: "Programmatic Display",
+      "best for": "Brand awareness and retargeting within target accounts",
+    },
+    {
+      channel: "YouTube for B2B",
+      "best for": "Educational content and complex product storytelling",
+    },
+    {
+      channel: "Cross-Channel Retargeting",
+      "best for": "Shortening long enterprise sales cycles",
+    },
+  ],
+};
+
+export const PAID_ADS_CASE_STUDIES = {
+  items: GLOBAL_CASE_STUDIES,
+};
+
+export const PAID_ADS_FAQ = {
+  heading: "Paid Advertising FAQs",
   faqs: [
     {
-      id: "budget",
-      question: "What's the minimum ad budget you recommend?",
+      id: "spend",
+      question: "How much should we spend initially?",
       answer:
-        "For B2B Google Ads: £3,000/month minimum ad spend. For LinkedIn: £5,000/month minimum. Below these thresholds, the data volume is insufficient to optimise effectively.",
+        "We recommend a minimum pilot budget of $3,000–$5,000 per month to generate enough data for our optimization models to work effectively.",
     },
     {
-      id: "management-fee",
-      question: "What is your management fee?",
+      id: "timeline",
+      question: "How soon will we see leads?",
       answer:
-        "Our management fee is 15% of monthly ad spend (minimum £1,500/month). This covers strategy, campaign management, creative production, and weekly reporting.",
+        "Unlike SEO, paid ads can generate leads within the first week of launch. However, full funnel optimization typically takes 2–3 months.",
     },
     {
-      id: "results-timeline",
-      question: "How quickly can we expect results?",
+      id: "tracking",
+      question: "Can you track offline sales?",
       answer:
-        "With an existing account, optimisations show measurable improvement within 4 weeks. New accounts take 6–8 weeks for the learning phase to stabilise before we scale.",
-    },
-    {
-      id: "creative",
-      question: "Do you produce the ad creatives?",
-      answer:
-        "Yes. Our package includes creative production — copy, design, and video ad edits. We run systematic A/B tests to identify the highest-performing creative variants.",
-    },
-    {
-      id: "access",
-      question: "Do we retain access to our ad accounts?",
-      answer:
-        "Always. We work inside your ad accounts — we never hold your data hostage. You have full admin access and full ownership of all campaigns and data at all times.",
+        "Yes. By syncing your ad platforms with your CRM, we can track exactly which ads resulted in a signed contract, not just a lead form submission.",
     },
   ],
-};
-
-export const PAID_CONTACT = {
-  eyebrow: "START YOUR PAID CAMPAIGN",
-  heading: (
-    <>
-      Launch Ads That <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Find Decision-Makers
-      </span>
-    </>
-  ),
-  description:
-    "Get a free paid media audit and competitive analysis for your industry — no obligation.",
-  illustration: { src: "/undraw_contact-us_s4jn.svg", alt: "Contact Us" },
-  form: {
-    firstNameLabel: "First Name",
-    firstNamePlaceholder: "John",
-    lastNameLabel: "Last Name",
-    lastNamePlaceholder: "Doe",
-    emailLabel: "Work Email",
-    emailPlaceholder: "john@company.com",
-    serviceLabel: "Monthly Ad Budget",
-    servicePlaceholder: "Select budget range...",
-    serviceOptions: [
-      { value: "starter", label: "£3,000–£7,500 / month" },
-      { value: "growth", label: "£7,500–£20,000 / month" },
-      { value: "enterprise", label: "£20,000+ / month" },
-      { value: "unsure", label: "Not sure yet" },
-    ],
-    messageLabel: "Tell Us About Your Campaign Goals",
-    messagePlaceholder: "Target audience, current channels, key objectives, and timeline...",
-    ctaLabel: "Get Free Paid Media Audit",
-  },
 };

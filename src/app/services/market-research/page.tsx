@@ -1,15 +1,13 @@
 import { ServiceHub } from "@/components/templates/ServiceHub";
 import { getPageMetadata } from "@/content/pages";
 import {
-  MR_HERO,
-  MR_SERVICES,
-  MR_STATS,
-  MR_WHY,
-  MR_CASE_STUDIES,
-  MR_TESTIMONIALS,
-  MR_BLOGS,
-  MR_FAQ,
-  MR_CONTACT,
+  RESEARCH_HERO,
+  RESEARCH_PROOF_BAR,
+  RESEARCH_SERVICES,
+  RESEARCH_WHY,
+  RESEARCH_PROCESS,
+  RESEARCH_CASE_STUDIES,
+  RESEARCH_FAQ,
 } from "@/content/services/market-research";
 
 import type { Metadata } from "next";
@@ -19,15 +17,13 @@ export const metadata: Metadata = getPageMetadata("/services/market-research");
 export default function Page() {
   return (
     <ServiceHub
-      hero={MR_HERO}
-      services={MR_SERVICES}
-      stats={MR_STATS}
-      why={MR_WHY}
-      caseStudies={MR_CASE_STUDIES}
-      testimonials={MR_TESTIMONIALS}
-      blogs={MR_BLOGS}
-      faq={MR_FAQ}
-      contact={MR_CONTACT}
+      hero={RESEARCH_HERO}
+      proofBar={RESEARCH_PROOF_BAR}
+      services={RESEARCH_SERVICES}
+      why={RESEARCH_WHY}
+      process={RESEARCH_PROCESS}
+      caseStudies={RESEARCH_CASE_STUDIES}
+      faq={RESEARCH_FAQ}
     />
   );
 }

@@ -2,6 +2,8 @@
 
 import { useRef } from "react";
 
+import Image from "next/image";
+
 import { useScroll, useTransform, motion } from "framer-motion";
 
 interface Image {
@@ -64,10 +66,12 @@ export function ZoomParallax({ images }: ZoomParallaxProps) {
               } `}
             >
               <div className="relative h-[25vh] w-[25vw]">
-                <img
+                <Image
                   src={src || "/placeholder.svg"}
                   alt={alt || `Parallax image ${index + 1}`}
-                  className="h-full w-full object-cover"
+                  fill
+                  sizes="25vw"
+                  className="object-cover"
                 />
               </div>
             </motion.div>

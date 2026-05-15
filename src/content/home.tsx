@@ -202,21 +202,21 @@ export interface ContactContent {
   form: {
     firstNameLabel: string;
     firstNamePlaceholder: string;
-    lastNameLabel: string;
-    lastNamePlaceholder: string;
+    lastNameLabel?: string;
+    lastNamePlaceholder?: string;
     companyLabel?: string;
     companyPlaceholder?: string;
     phoneLabel?: string;
     phonePlaceholder?: string;
     emailLabel: string;
     emailPlaceholder: string;
-    serviceLabel: string;
-    servicePlaceholder: string;
-    serviceOptions: ContactServiceOption[];
+    serviceLabel?: string;
+    servicePlaceholder?: string;
+    serviceOptions?: ContactServiceOption[];
     eventLabel?: string;
     eventPlaceholder?: string;
-    messageLabel: string;
-    messagePlaceholder: string;
+    messageLabel?: string;
+    messagePlaceholder?: string;
     consentLabel?: string;
     ctaLabel: string;
   };

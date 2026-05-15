@@ -3,13 +3,11 @@ import { getPageMetadata } from "@/content/pages";
 import {
   SQL_HERO,
   SQL_SERVICES,
-  SQL_STATS,
   SQL_WHY,
+  SQL_PROCESS,
+  SQL_PROOF_BAR,
   SQL_CASE_STUDIES,
-  SQL_TESTIMONIALS,
-  SQL_BLOGS,
   SQL_FAQ,
-  SQL_CONTACT,
 } from "@/content/services/sales-qualified-lead-generation";
 
 import type { Metadata } from "next";
@@ -20,14 +18,12 @@ export default function Page() {
   return (
     <ServiceHub
       hero={SQL_HERO}
+      proofBar={SQL_PROOF_BAR}
       services={SQL_SERVICES}
-      stats={SQL_STATS}
       why={SQL_WHY}
+      process={SQL_PROCESS}
       caseStudies={SQL_CASE_STUDIES}
-      testimonials={SQL_TESTIMONIALS}
-      blogs={SQL_BLOGS}
       faq={SQL_FAQ}
-      contact={SQL_CONTACT}
     />
   );
 }

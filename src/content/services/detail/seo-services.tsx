@@ -1,325 +1,130 @@
+import { GLOBAL_CASE_STUDIES } from "../../shared";
+
 export const SEO_HERO = {
-  showPreloader: false,
-  eyebrow: "B2B SEO SERVICES",
-  title: (
-    <>
-      B2B SEO Services That Build <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Organic Pipeline — Not Just Traffic
-      </span>
-    </>
-  ),
+  title: "B2B SEO Services — Organic Pipeline at Scale",
   description:
-    "We engineer search visibility for complex B2B sales cycles — from technical foundation to content authority — so your ideal enterprise buyers find you before they find your competitors.",
-  image: {
-    src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2000",
-    alt: "SEO analytics dashboard",
-    loaderAlt: "Loading",
-  },
-  primaryCtaLabel: "Request an SEO Audit",
-  secondaryCtaLabel: "Start Your SEO Project",
-  stat: { value: "3.2×", label: "Avg Organic Traffic Growth", icon: "TrendingUp" },
+    "Stop chasing keywords; start chasing customers. We provide the full-stack B2B SEO that combines technical excellence with authority-building content to put your brand at the top of the search results for the terms that drive revenue.",
 };
 
+export { GLOBAL_PROOF_STATS as SEO_PROOF_BAR } from "../../shared";
+
 export const SEO_WHY = {
-  eyebrow: "STRATEGIC SEARCH",
-  heading: (
-    <>
-      B2B SEO Is Fundamentally Different <br />
-      <span className="text-brand-cyan">From B2C</span>
-    </>
-  ),
+  heading: "The Power of Organic Intent",
+  description:
+    "In the B2B world, search is the starting point for almost every major purchase decision. If your brand isn't visible when your prospects are researching solutions to their complex challenges, you are handing leads to your competitors. SEO is not just about 'ranking'; it's about building an organic moat around your brand, driving consistent, high-quality traffic that compounds in value over time without increasing your ad spend.",
   reasons: [
     {
-      id: "intent",
-      title: "High-Intent Keyword Capture",
+      id: "authority",
+      title: "Market Authority",
       description:
-        "We target decision-maker search queries — not vanity traffic. Every keyword is mapped to a buying stage.",
+        "Ranking for difficult industry terms signals leadership and builds trust with decision-makers.",
+      image:
+        "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=1200",
+    },
+    {
+      id: "compounding",
+      title: "Compounding ROI",
+      description:
+        "Organic traffic grows in value over time, lowering your overall customer acquisition cost.",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      id: "authority",
-      title: "Domain Authority Building",
-      description:
-        "Technical SEO, content strategy, and authoritative backlinks that compound your search equity month on month.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      id: "compound",
-      title: "Compounding Returns",
-      description:
-        "Unlike paid ads, SEO compounds over time. A page ranking #1 today drives pipeline for years without incremental spend.",
-      image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      id: "b2b",
-      title: "Built for Long B2B Cycles",
-      description:
-        "B2B buyers research for months. Our SEO ensures you're present at every stage of that research journey.",
-      image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };
 
 export const SEO_DELIVERABLES = {
-  eyebrow: "OUR SEO SERVICES",
-  heading: (
-    <>
-      Our B2B <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        SEO Services
-      </span>
-    </>
-  ),
-  serviceLabel: "Deliverable",
-  ctaLabel: "Learn More",
+  heading: "Our SEO Services",
   services: [
     {
-      id: "audit",
-      title: "Technical SEO Audit",
+      id: "technical",
+      title: "Technical SEO and Site Architecture",
       description:
-        "Full crawl of your site identifying every technical issue suppressing your rankings.",
-      icon: "Search",
+        "We optimize your site for speed, mobile performance, and crawlability — ensuring search engines can easily find and index your most valuable content.",
+      icon: "Settings",
       image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-blue",
     },
     {
-      id: "strategy",
-      title: "Keyword & Content Strategy",
+      id: "content",
+      title: "Authority Content Clusters",
       description:
-        "Comprehensive keyword map tied to buyer personas and funnel stages — with monthly content production.",
-      icon: "BarChart3",
+        "We move beyond single-keyword targeting to build deep 'topic clusters' that establish your brand as the definitive source of truth in your industry.",
+      icon: "FileText",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600",
+        "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-cyan",
     },
     {
-      id: "links",
-      title: "Authority Link Building",
+      id: "backlink",
+      title: "Strategic Link Building",
       description:
-        "High-DA B2B publication placements and digital PR to build domain authority systematically.",
-      icon: "Globe2",
+        "We secure high-authority backlinks from reputable B2B publications and industry sites to boost your domain authority and search rankings.",
+      icon: "Link",
       image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600",
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-primary",
     },
     {
       id: "reporting",
-      title: "Monthly Ranking Reports",
+      title: "Pipeline-First Reporting",
       description:
-        "Full transparency on ranking movements, organic traffic, and pipeline attribution from organic search.",
-      icon: "TrendingUp",
+        "We don't just report on rankings. We track organic conversions and attribute them to your bottom-line revenue goals.",
+      icon: "BarChart",
       image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600",
+        "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-blue",
     },
   ],
 };
 
-export const SEO_STATS = {
-  heading: (
-    <>
-      Global Reach <br />
-      <span className="text-brand-blue">Local Execution</span>
-    </>
-  ),
-  quote:
-    '"We provide enterprise B2B SEO services, delivering technical audits, keyword strategy, and authority link building optimized for pipeline across 40+ global markets."',
-  attribution: "— SEO Strategy Team, B2B Sales Arrow",
-  stats: [
+export const SEO_ROADMAP = {
+  title: "SEO Milestone Roadmap",
+  headers: ["Month", "Focus"],
+  rows: [
     {
-      value: "3.2×",
-      label: "Avg Organic Traffic Growth",
-      icon: "TrendingUp",
-      bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
+      month: "Month 1",
+      focus: "Technical Audit and Baseline Performance Mapping",
     },
     {
-      value: "10+",
-      label: "Years of Experience",
-      icon: "TrendingUp",
-      bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
+      month: "Month 2",
+      focus: "Keyword Gap Analysis and Content Strategy Design",
     },
     {
-      value: "40+",
-      label: "Countries Served",
-      icon: "Globe2",
-      bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
+      month: "Month 3",
+      focus: "Launch of Initial Authority Content Clusters",
     },
     {
-      value: "100%",
-      label: "Production Accuracy",
-      icon: "Target",
-      bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
+      month: "Month 4+",
+      focus: "Continuous Optimization, Link Building, and Pipeline Scaling",
     },
   ],
 };
 
 export const SEO_CASE_STUDIES = {
-  eyebrow: "SEO RESULTS",
-  heading: (
-    <>
-      Real Events. <br />
-      <span className="text-brand-blue">Real Results.</span>
-    </>
-  ),
-  ctaLabel: "Full Study",
-  viewAllLabel: "View All Work",
-  caseStudies: [
-    {
-      id: "finserve-seo",
-      client: "FinServe SaaS",
-      title: "320% Organic Traffic Growth in 8 Months",
-      challenge: "Zero first-page rankings for any buyer-intent keywords.",
-      solution: "Technical SEO overhaul + monthly content programme targeting 40 priority terms.",
-      metric: "+320%",
-      metricLabel: "Organic Traffic Growth",
-      icon: "BarChart3",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      id: "synapse-seo",
-      client: "Synapse Networks",
-      title: "#1 Rankings for 12 High-Intent B2B Keywords",
-      challenge: "Competitor dominated search results for all core service terms.",
-      solution: "Authority link building + semantic content clusters over 9 months.",
-      metric: "12",
-      metricLabel: "Page 1 Rankings Achieved",
-      icon: "Users",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-    },
-  ],
-};
-
-export const SEO_TESTIMONIALS = {
-  eyebrow: "CLIENT RESULTS",
-  heading: (
-    <>
-      Brands That Now <br />
-      <span className="text-[#1E6091]">Dominate Search</span>
-    </>
-  ),
-  autoplayInterval: 3500,
-  initialIndex: 1,
-  testimonials: [
-    {
-      id: 1,
-      name: "David Alaba",
-      designation: "Head of Growth",
-      company: "Synapse Networks",
-      rating: 5,
-      quote:
-        "12 page-one rankings in 9 months. Our organic pipeline has tripled. B2B Sales Arrow's SEO team genuinely understands how enterprise buyers search.",
-      image:
-        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400",
-    },
-    {
-      id: 2,
-      name: "Sophia Martinez",
-      designation: "VP Marketing",
-      company: "Elevate Logistics",
-      rating: 5,
-      quote:
-        "We were invisible in search before B2B Sales Arrow. 8 months in, organic is our #1 lead source. The content strategy is exceptional.",
-      image:
-        "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=400",
-    },
-    {
-      id: 3,
-      name: "Michael Chen",
-      designation: "VP of Global Sales",
-      company: "Aura Systems",
-      rating: 5,
-      quote:
-        "The monthly reporting gives us complete visibility on every ranking movement. We always know exactly where we stand and what's coming next.",
-      image:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400",
-    },
-  ],
+  items: GLOBAL_CASE_STUDIES,
 };
 
 export const SEO_FAQ = {
-  eyebrow: "SEO FAQ",
-  heading: (
-    <>
-      Frequently Asked <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Questions
-      </span>
-    </>
-  ),
-  description: "Everything you need to know about our B2B SEO service.",
-  scrollAmount: 340,
+  heading: "B2B SEO FAQs",
   faqs: [
     {
       id: "timeline",
-      question: "How long does SEO take to show results?",
+      question: "How long until we see organic growth?",
       answer:
-        "For competitive B2B keywords, expect meaningful ranking improvements in 3–4 months and significant traffic growth in 6–9 months. Technical fixes and quick-win content can show results faster.",
+        "SEO is a medium-term strategy. While technical fixes can show results in weeks, meaningful growth in organic pipeline typically takes 3–6 months.",
+    },
+    {
+      id: "ppc-vs-seo",
+      question: "Should we do SEO or PPC?",
+      answer:
+        "The most successful enterprise brands do both. PPC captures immediate demand, while SEO builds long-term authority and drives lower-cost leads over time.",
     },
     {
       id: "guarantee",
-      question: "Can you guarantee page 1 rankings?",
+      question: "Do you guarantee #1 rankings?",
       answer:
-        "No ethical SEO agency guarantees specific rankings — Google's algorithms are proprietary. We do guarantee a rigorous, proven methodology and full transparency on every action taken.",
-    },
-    {
-      id: "content",
-      question: "Is content production included?",
-      answer:
-        "Yes. Our monthly retainer includes a defined number of SEO-optimised content pieces published to your site each month, plus technical optimisation and link building.",
-    },
-    {
-      id: "reporting",
-      question: "How do you report on SEO performance?",
-      answer:
-        "Monthly reports covering keyword rankings, organic traffic, click-through rates, and pipeline attribution. We also provide a live dashboard with real-time ranking data.",
-    },
-    {
-      id: "existing",
-      question: "Can you work with our existing website?",
-      answer:
-        "Yes. We work with any CMS — WordPress, Webflow, HubSpot, custom builds. We'll work within your existing infrastructure or recommend migrations if your platform is limiting performance.",
+        "No reputable agency can guarantee specific rankings due to algorithm volatility, but we do guarantee a significant increase in your organic pipeline value.",
     },
   ],
-};
-
-export const SEO_CONTACT = {
-  eyebrow: "START YOUR SEO PROGRAMME",
-  heading: (
-    <>
-      Start Ranking for <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        What Matters
-      </span>
-    </>
-  ),
-  description:
-    "Get a free SEO audit and keyword opportunity report for your domain — no obligation.",
-  illustration: { src: "/undraw_contact-us_s4jn.svg", alt: "Contact Us" },
-  form: {
-    firstNameLabel: "First Name",
-    firstNamePlaceholder: "John",
-    lastNameLabel: "Last Name",
-    lastNamePlaceholder: "Doe",
-    emailLabel: "Work Email",
-    emailPlaceholder: "john@company.com",
-    serviceLabel: "Monthly Budget",
-    servicePlaceholder: "Select budget range...",
-    serviceOptions: [
-      { value: "starter", label: "£2,000–£4,000 / month" },
-      { value: "growth", label: "£4,000–£8,000 / month" },
-      { value: "enterprise", label: "£8,000+ / month" },
-      { value: "unsure", label: "Not sure yet" },
-    ],
-    messageLabel: "Tell Us About Your SEO Goals",
-    messagePlaceholder: "Your domain, target keywords, current rankings, and key objectives...",
-    ctaLabel: "Get Free SEO Audit",
-  },
 };

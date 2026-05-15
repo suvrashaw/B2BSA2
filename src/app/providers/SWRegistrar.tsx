@@ -7,7 +7,7 @@ export function SWRegistrar() {
       navigator.serviceWorker
         .register("/sw.js")
         .then((reg) => console.log("SW registered", reg))
-        .catch((err) => console.log("SW failed", err));
+        .catch((error) => console.log("SW failed", error));
     }
   }, []);
 

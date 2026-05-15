@@ -35,14 +35,16 @@ export function ContactUs({
         <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
           {/* Left Side: Contact Info & Image */}
           <div className="flex flex-col items-start text-left">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="bg-brand-blue/10 border-brand-blue/20 text-brand-blue mb-6 inline-block rounded-full border px-4 py-1.5 text-sm font-semibold tracking-wide"
-            >
-              {eyebrow}
-            </motion.div>
+            {eyebrow && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-brand-blue/10 border-brand-blue/20 text-brand-blue mb-6 inline-block rounded-full border px-4 py-1.5 text-sm font-semibold tracking-wide"
+              >
+                {eyebrow}
+              </motion.div>
+            )}
             <div className="w-full text-left">
               <h2 className="font-heading mb-8 text-4xl leading-tight  font-bold lg:text-6xl">
                 {heading}
@@ -70,7 +72,7 @@ export function ContactUs({
           {/* Right Side: Contact Form */}
           <div className="bg-brand-gray/50 relative z-10 rounded-[2.5rem] border border-gray-200 p-8 shadow-2xl backdrop-blur-xl lg:p-12">
             <form className="space-y-6">
-              <div className="grid grid-cols-2 gap-6">
+              <div className={`grid gap-6 ${form.lastNameLabel ? "grid-cols-2" : "grid-cols-1"}`}>
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-gray-600">{form.firstNameLabel}</label>
                   <input
@@ -79,14 +81,16 @@ export function ContactUs({
                     placeholder={form.firstNamePlaceholder}
                   />
                 </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-gray-600">{form.lastNameLabel}</label>
-                  <input
-                    type="text"
-                    className="focus:border-brand-blue w-full rounded-xl border border-gray-200 bg-white px-4 py-3 transition-colors focus:outline-none"
-                    placeholder={form.lastNamePlaceholder}
-                  />
-                </div>
+                {form.lastNameLabel && (
+                  <div className="space-y-2">
+                    <label className="text-sm font-bold text-gray-600">{form.lastNameLabel}</label>
+                    <input
+                      type="text"
+                      className="focus:border-brand-blue w-full rounded-xl border border-gray-200 bg-white px-4 py-3 transition-colors focus:outline-none"
+                      placeholder={form.lastNamePlaceholder}
+                    />
+                  </div>
+                )}
               </div>
 
               {(form.companyLabel || form.phoneLabel) && (
@@ -123,17 +127,19 @@ export function ContactUs({
                 />
               </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-bold text-gray-600">{form.serviceLabel}</label>
-                <select className="focus:border-brand-blue w-full appearance-none rounded-xl border border-gray-200 bg-white px-4 py-3 text-gray-600 transition-colors focus:outline-none">
-                  <option value="">{form.servicePlaceholder}</option>
-                  {form.serviceOptions.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
+              {form.serviceLabel && (
+                <div className="space-y-2">
+                  <label className="text-sm font-bold text-gray-600">{form.serviceLabel}</label>
+                  <select className="focus:border-brand-blue w-full appearance-none rounded-xl border border-gray-200 bg-white px-4 py-3 text-gray-600 transition-colors focus:outline-none">
+                    <option value="">{form.servicePlaceholder}</option>
+                    {form.serviceOptions?.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              )}
 
               {form.eventLabel && (
                 <div className="space-y-2">
@@ -146,14 +152,16 @@ export function ContactUs({
                 </div>
               )}
 
-              <div className="space-y-2">
-                <label className="text-sm font-bold text-gray-600">{form.messageLabel}</label>
-                <textarea
-                  rows={4}
-                  className="focus:border-brand-blue w-full resize-none rounded-xl border border-gray-200 bg-white px-4 py-3 transition-colors focus:outline-none"
-                  placeholder={form.messagePlaceholder}
-                ></textarea>
-              </div>
+              {form.messageLabel && (
+                <div className="space-y-2">
+                  <label className="text-sm font-bold text-gray-600">{form.messageLabel}</label>
+                  <textarea
+                    rows={4}
+                    className="focus:border-brand-blue w-full resize-none rounded-xl border border-gray-200 bg-white px-4 py-3 transition-colors focus:outline-none"
+                    placeholder={form.messagePlaceholder}
+                  ></textarea>
+                </div>
+              )}
 
               {form.consentLabel && (
                 <div className="flex items-start gap-3">

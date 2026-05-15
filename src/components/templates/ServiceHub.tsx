@@ -1,93 +1,91 @@
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { Blogs } from "@/components/sections/Blogs";
-import type { BlogsProps } from "@/components/sections/Blogs";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
-import { ClientLogos } from "@/components/sections/ClientLogos";
-import { ContactUs } from "@/components/sections/ContactUs";
-import type { ContactUsProps } from "@/components/sections/ContactUs";
+import { CTABanner } from "@/components/sections/CTABanner";
 import { FAQ } from "@/components/sections/FAQ";
 import type { FAQProps } from "@/components/sections/FAQ";
-import type { HeroProps } from "@/components/sections/Hero";
-import { MediaShowreel } from "@/components/sections/MediaShowreel";
 import { OurServices } from "@/components/sections/OurServices";
 import type { OurServicesProps } from "@/components/sections/OurServices";
+import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
+import { ProofBar } from "@/components/sections/ProofBar";
+import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceHero } from "@/components/sections/ServiceHero";
-import { Testimonials } from "@/components/sections/Testimonials";
-import type { TestimonialsProps } from "@/components/sections/Testimonials";
-import { UpcomingEvents } from "@/components/sections/UpcomingEvents";
-import type { UpcomingEventsProps } from "@/components/sections/UpcomingEvents";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
-import type { WhoWeAreProps } from "@/components/sections/WhoWeAre";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import type { WhyChooseUsProps } from "@/components/sections/WhyChooseUs";
 import { JsonLd } from "@/components/templates/ServiceDetail";
 import { buildFaqJsonLd } from "@/lib";
 
 export interface ServiceHubProps {
-  hero: HeroProps;
+  hero: {
+    title: string;
+    description: string;
+  };
+  proofBar?: string[];
   services: OurServicesProps;
-  stats: WhoWeAreProps;
   why: WhyChooseUsProps;
-  caseStudies: CaseStudiesProps;
-  testimonials: TestimonialsProps;
-  /** Pass blogs OR events — not both. Events hubs use UpcomingEvents; others use Blogs. */
-  blogs?: BlogsProps;
-  events?: UpcomingEventsProps;
-  showMediaShowreel?: boolean;
+  process?: {
+    title: string;
+    phases: { title: string; description: string }[];
+  };
+  caseStudies?: CaseStudiesProps;
+  stats?: {
+    title: string;
+    items: { label: string; value: string }[];
+  };
   faq: FAQProps;
-  contact: ContactUsProps;
+  relatedServices?: { title: string; href: string }[];
 }
 
 export function ServiceHub({
   hero,
+  proofBar,
   services,
-  stats,
   why,
+  process,
   caseStudies,
-  testimonials,
-  blogs,
-  events,
-  showMediaShowreel = false,
+  stats,
   faq,
-  contact,
+  relatedServices,
 }: ServiceHubProps) {
   const faqJsonLd = faq.faqs?.length ? buildFaqJsonLd(faq.faqs) : null;
-  let feedSection = null;
-
-  if (events) {
-    feedSection = <UpcomingEvents {...events} />;
-  } else if (blogs) {
-    feedSection = <Blogs {...blogs} />;
-  }
 
   return (
     <main className="bg-brand-gray min-h-screen">
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <Header darkBackground />
+
       <ServiceHero
-        title={hero.title || ""}
-        description={hero.description || ""}
-        primaryCta={
-          hero.primaryCtaLabel ? { label: hero.primaryCtaLabel, href: "/contact" } : undefined
-        }
-        secondaryCta={
-          hero.secondaryCtaLabel
-            ? { label: hero.secondaryCtaLabel, href: "/services/global-event-solutions" }
-            : undefined
-        }
+        title={hero.title}
+        description={hero.description}
+        primaryCta={{ label: "Book a Strategy Session", href: "/contact" }}
+        secondaryCta={{ label: "View Event Portfolio", href: "/case-studies" }}
       />
-      {showMediaShowreel ? <MediaShowreel /> : null}
+
+      {proofBar && <ProofBar stats={proofBar} />}
+
       <OurServices {...services} />
-      <WhoWeAre {...stats} />
+
       <WhyChooseUs {...why} />
-      <CaseStudies {...caseStudies} />
-      <ClientLogos />
-      <Testimonials {...testimonials} />
-      {feedSection}
+
+      {process && <ProcessTimeline title={process.title} phases={process.phases} />}
+
+      {caseStudies && <CaseStudies {...caseStudies} />}
+
+      {stats && <WhoWeAre title={stats.title} items={stats.items} />}
+
       <FAQ {...faq} />
-      <ContactUs {...contact} />
+
+      {relatedServices && <RelatedServices services={relatedServices} />}
+
+      <CTABanner
+        title="Ready to Build Your Enterprise Growth Engine?"
+        description="250+ events. $1.2B+ influenced. One conversation to start."
+        ctaLabel="Book a Strategy Session"
+        ctaHref="/contact"
+      />
+
       <Footer />
     </main>
   );

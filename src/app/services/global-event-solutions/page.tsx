@@ -3,13 +3,11 @@ import { getPageMetadata } from "@/content/pages";
 import {
   GES_HERO,
   GES_SERVICES,
-  GES_STATS,
   GES_WHY,
+  GES_PROCESS,
+  GES_PROOF_BAR,
   GES_CASE_STUDIES,
-  GES_TESTIMONIALS,
-  GES_EVENTS,
   GES_FAQ,
-  GES_CONTACT,
 } from "@/content/services/global-event-solutions";
 
 import type { Metadata } from "next";
@@ -20,14 +18,12 @@ export default function Page() {
   return (
     <ServiceHub
       hero={GES_HERO}
+      proofBar={GES_PROOF_BAR}
       services={GES_SERVICES}
-      stats={GES_STATS}
       why={GES_WHY}
+      process={GES_PROCESS}
       caseStudies={GES_CASE_STUDIES}
-      testimonials={GES_TESTIMONIALS}
-      events={GES_EVENTS}
       faq={GES_FAQ}
-      contact={GES_CONTACT}
     />
   );
 }

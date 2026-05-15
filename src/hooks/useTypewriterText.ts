@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 import { usePrefersReducedMotion } from "./usePrefersReducedMotion";
 
 export type TypewriterPhrase = {
@@ -25,41 +26,36 @@ export function useTypewriterText(
   phrases: TypewriterPhrase[],
   options: UseTypewriterTextOptions = {}
 ) {
-  const {
-    typeSpeedMs,
-    deleteSpeedMs,
-    wordHoldMs,
-    nextWordDelayMs,
-  } = { ...defaultOptions, ...options };
+  const { typeSpeedMs, deleteSpeedMs, wordHoldMs, nextWordDelayMs } = {
+    ...defaultOptions,
+    ...options,
+  };
   const prefersReducedMotion = usePrefersReducedMotion();
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    if (phrases.length === 0) {
-      return;
-    }
-
-    if (prefersReducedMotion) {
-      setDisplayedText(phrases[0].text);
-      setPhraseIndex(0);
-      setIsDeleting(false);
+    if (phrases.length === 0 || prefersReducedMotion) {
       return;
     }
 
     const activePhrase = phrases[phraseIndex];
     const isWordComplete = displayedText === activePhrase.text;
     const isWordCleared = displayedText.length === 0;
-    const delay = isWordComplete
-      ? wordHoldMs
-      : isWordCleared && isDeleting
-        ? nextWordDelayMs
-        : isDeleting
-          ? deleteSpeedMs
-          : typeSpeedMs;
 
-    const timeoutId = window.setTimeout(() => {
+    let delay: number;
+    if (isWordComplete) {
+      delay = wordHoldMs;
+    } else if (isWordCleared && isDeleting) {
+      delay = nextWordDelayMs;
+    } else if (isDeleting) {
+      delay = deleteSpeedMs;
+    } else {
+      delay = typeSpeedMs;
+    }
+
+    const timeoutId = globalThis.setTimeout(() => {
       if (!isDeleting && isWordComplete) {
         setIsDeleting(true);
         return;
@@ -75,7 +71,7 @@ export function useTypewriterText(
       setDisplayedText(activePhrase.text.slice(0, nextLength));
     }, delay);
 
-    return () => window.clearTimeout(timeoutId);
+    return () => globalThis.clearTimeout(timeoutId);
   }, [
     deleteSpeedMs,
     displayedText,
@@ -90,7 +86,7 @@ export function useTypewriterText(
 
   return {
     activePhrase: phrases[phraseIndex] ?? null,
-    displayedText,
+    displayedText: prefersReducedMotion ? (phrases[0]?.text ?? "") : displayedText,
     prefersReducedMotion,
   };
 }

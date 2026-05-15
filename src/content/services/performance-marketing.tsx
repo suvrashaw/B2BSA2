@@ -1,354 +1,126 @@
+import { GLOBAL_CASE_STUDIES } from "../shared";
+
 export const PERF_HERO = {
-  showPreloader: false,
-  eyebrow: "B2B PERFORMANCE MARKETING",
-  title: (
-    <>
-      B2B Performance Marketing Built to{" "}
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Fill Enterprise Pipeline
-      </span>
-    </>
-  ),
+  title: "B2B Performance Marketing — ROI-First Growth",
   description:
-    "We don't run campaigns. We engineer revenue-generating marketing systems — every channel tracked, every dollar accountable, every lead qualified.",
-  image: {
-    src: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2000",
-    alt: "Performance marketing and data analytics",
-    loaderAlt: "Loading",
-  },
-  primaryCtaLabel: "Request a Marketing Strategy",
-  secondaryCtaLabel: "Start Your Campaign",
-  stat: {
-    value: "3.8x",
-    label: "Average ROAS",
-    icon: "TrendingUp",
-  },
+    "Stop 'spraying and praying' with your ad spend. We provide the full-funnel performance marketing that combines data-driven targeting with high-conversion creative to deliver a measurable return on every dollar.",
 };
 
+export { GLOBAL_PROOF_STATS as PERF_PROOF_BAR } from "../shared";
+
 export const PERF_SERVICES = {
-  eyebrow: "OUR MARKETING SERVICES",
-  heading: (
-    <>
-      Our Performance{" "}
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Marketing Services
-      </span>
-    </>
-  ),
-  serviceLabel: "Service",
-  ctaLabel: "Learn More",
+  heading: "Our Performance Marketing Capabilities",
+  description:
+    "Performance marketing in the B2B enterprise space is about quality, not just clicks. We focus on reaching the right stakeholders within your target accounts, using multi-channel strategies to build trust and drive high-intent actions. From demand generation to bottom-of-funnel conversion, we ensure your marketing engine is always optimized for revenue.",
   services: [
     {
       id: "seo",
-      title: "SEO Services",
+      title: "B2B SEO Services",
       description:
-        "Technical SEO, content strategy, and link building to rank for the enterprise keywords your buyers search.",
+        "We don't just chase traffic; we chase pipeline. Our SEO strategies target high-intent enterprise keywords and build authority through expert-led content clusters.",
       icon: "Search",
       image:
         "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-blue",
+      href: "/services/performance-marketing/seo-services",
     },
     {
-      id: "paid-ads",
-      title: "Paid Advertising",
+      id: "paid",
+      title: "B2B Paid Advertising",
       description:
-        "Google Ads, programmatic display, and retargeting campaigns with enterprise-grade conversion tracking.",
+        "Precision-targeted campaigns across Google Ads, Programmatic Display, and Retargeting, built to capture demand exactly when your prospects are searching for solutions.",
       icon: "Zap",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-cyan",
+      href: "/services/performance-marketing/paid-advertising",
     },
     {
       id: "linkedin",
       title: "LinkedIn Ads for B2B",
       description:
-        "Sponsored content, InMail, and Lead Gen Forms targeting C-suite and VP-level decision makers.",
+        "The gold standard for B2B targeting. We use account-based marketing (ABM) and lead generation forms to put your message directly in front of C-suite decision-makers.",
       icon: "ExternalLink",
       image:
         "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-primary",
-    },
-  ],
-};
-
-export const PERF_STATS = {
-  heading: (
-    <>
-      Global Reach <span className="text-brand-blue">Local Execution</span>
-    </>
-  ),
-  quote:
-    '"We provide data-driven B2B performance marketing for enterprise brands, delivering SEO, paid advertising, and LinkedIn Ads optimized for pipeline across 40+ markets."',
-  attribution: "— Performance Marketing Team, B2B Sales Arrow",
-  stats: [
-    {
-      value: "3.8x",
-      label: "Average ROAS",
-      icon: "TrendingUp",
-      bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
-    },
-    {
-      value: "10+",
-      label: "Years of Experience",
-      icon: "TrendingUp",
-      bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
-    },
-    {
-      value: "40+",
-      label: "Countries Served",
-      icon: "Globe2",
-      bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
-    },
-    {
-      value: "100%",
-      label: "Campaign Accuracy",
-      icon: "Target",
-      bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
+      href: "/services/performance-marketing/linkedin-ads",
     },
   ],
 };
 
 export const PERF_WHY = {
-  eyebrow: "DATA-DRIVEN ROI",
-  heading: (
-    <>
-      Every Action <span className="text-brand-cyan">Has a Number</span>
-    </>
-  ),
+  heading: "The Performance Marketing ROI Engine",
+  description:
+    "Most agencies focus on vanity metrics like impressions and clicks. We focus on pipeline value and customer acquisition cost (CAC). By aligning your marketing spend with your sales goals, we create a transparent growth engine where every dollar spent is an investment in future revenue. We treat your budget as if it were our own, constanty testing and optimizing for the highest possible return.",
   reasons: [
     {
-      id: "b2b-specific",
-      title: "Built for B2B Sales Cycles",
-      description:
-        "We understand 6–18 month deal cycles, multi-stakeholder buying committees, and the metrics that actually predict pipeline — not just traffic.",
+      id: "full-funnel",
+      title: "Full-Funnel Alignment",
+      description: "We bridge the gap between marketing interest and sales closing.",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
     },
     {
-      id: "data-driven",
-      title: "Rigorously Data-Driven",
-      description:
-        "Every campaign decision is driven by data. We track from first impression to closed deal and optimise the entire funnel, not just the top.",
+      id: "mastery",
+      title: "Multi-Channel Mastery",
+      description: "Coordinated campaigns that work together to lower your overall CAC.",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     },
+  ],
+};
+
+export const PERF_PROCESS = {
+  heading: "Our Performance Marketing Process",
+  phases: [
     {
-      id: "linkedin-mastery",
-      title: "LinkedIn Mastery",
-      description:
-        "LinkedIn is the most powerful channel for B2B enterprise pipeline. We are among the top 1% of LinkedIn Marketing Partners globally by spend managed.",
-      image:
-        "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1200",
+      title: "Funnel Audit and Strategy",
+      description: "Analyzing your current metrics and defining the optimal growth path.",
     },
     {
-      id: "integration",
-      title: "Fully Integrated Strategy",
-      description:
-        "SEO, paid, and organic working together — not in silos. Our campaigns compound each other, driving down cost per acquisition over time.",
-      image:
-        "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=1200",
+      title: "Targeting and Segmenting",
+      description: "Defining the account-based targets and decision-maker personas.",
+    },
+    {
+      title: "Creative and Messaging",
+      description: "Building high-conversion ad copy and landing page environments.",
+    },
+    {
+      title: "Launch and Continuous Optimization",
+      description: "Real-time monitoring and A/B testing to drive down cost per lead.",
+    },
+    {
+      title: "Attribution and Reporting",
+      description: "Clear, transparent reporting on pipeline value and ROI.",
     },
   ],
 };
 
 export const PERF_CASE_STUDIES = {
-  eyebrow: "MARKETING RESULTS",
-  heading: (
-    <>
-      Real Events. <span className="text-brand-blue">Real Results.</span>
-    </>
-  ),
-  ctaLabel: "Full Study",
-  viewAllLabel: "View All Marketing Work",
-  items: [
-    {
-      id: "finserve",
-      client: "FinServe SaaS",
-      title: "Scaling Pipeline Through Precision Digital Marketing",
-      challenge: "High CAC with generic paid campaigns targeting too-broad audiences.",
-      solution: "LinkedIn ABM targeting + SEO content cluster + retargeting sequence.",
-      metric: "4.2x",
-      metricLabel: "ROI in 6 Months",
-      icon: "Target",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      id: "synapse",
-      client: "Synapse Networks",
-      title: "LinkedIn Campaign Drives 180 Enterprise Demo Requests",
-      challenge: "Needed to fill enterprise sales pipeline in a new geographic market.",
-      solution: "ICP-targeted Sponsored Content + InMail sequence + Lead Gen Forms.",
-      metric: "180",
-      metricLabel: "Enterprise Demos",
-      icon: "ExternalLink",
-      image:
-        "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1200",
-    },
-  ],
-};
-
-export const PERF_TESTIMONIALS = {
-  eyebrow: "CLIENT SUCCESS",
-  heading: (
-    <>
-      Real Events. <span className="text-[#1E6091]">Real Results.</span>
-    </>
-  ),
-  autoplayInterval: 3500,
-  initialIndex: 1,
-  testimonials: [
-    {
-      id: 1,
-      name: "David Alaba",
-      designation: "Head of Growth",
-      company: "Synapse Networks",
-      rating: 5,
-      quote:
-        "Their data-driven insights and innovative web designs created an entirely new paradigm for how we engage our enterprise prospects. A flawless execution.",
-      image:
-        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400",
-    },
-    {
-      id: 2,
-      name: "Sophia Martinez",
-      designation: "VP Marketing",
-      company: "Elevate Logistics",
-      rating: 5,
-      quote:
-        "A flawless execution from strategy to deployment. The ROI on the campaigns they structured for us broke all our previous quarter records.",
-      image:
-        "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=400",
-    },
-    {
-      id: 3,
-      name: "Michael Chen",
-      designation: "VP of Global Sales",
-      company: "Aura Systems",
-      rating: 5,
-      quote:
-        "Their LinkedIn campaigns penetrated the European enterprise market in a way our internal team had been trying — and failing — to do for two years.",
-      image:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400",
-    },
-  ],
-};
-
-export const PERF_BLOGS = {
-  eyebrow: "MARKETING INTELLIGENCE",
-  heading: (
-    <>
-      B2B Marketing <span className="text-brand-primary">Insights</span>
-    </>
-  ),
-  ctaLabel: "View All Marketing Articles",
-  blogs: [
-    {
-      id: 1,
-      title: "Why LinkedIn Is the Highest-ROI Channel for B2B Enterprise",
-      category: "LinkedIn",
-      date: "Oct 5, 2025",
-      image:
-        "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=800",
-    },
-    {
-      id: 2,
-      title: "The B2B SEO Strategy That Dominates 'Enterprise' Keywords",
-      category: "SEO",
-      date: "Sep 18, 2025",
-      image:
-        "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=800",
-    },
-    {
-      id: 3,
-      title: "How to Build a Full-Funnel B2B Paid Media Strategy",
-      category: "Paid Ads",
-      date: "Sep 2, 2025",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-    },
-  ],
+  items: GLOBAL_CASE_STUDIES,
 };
 
 export const PERF_FAQ = {
-  eyebrow: "PERFORMANCE MARKETING FAQ",
-  heading: (
-    <>
-      Frequently Asked{" "}
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Questions
-      </span>
-    </>
-  ),
-  description: "Everything you need to know about our performance marketing services.",
-  scrollAmount: 340,
+  heading: "Performance Marketing FAQs",
   faqs: [
     {
       id: "budget",
-      question: "What is the minimum ad spend you work with?",
+      question: "What is the recommended starting budget?",
       answer:
-        "We typically work with clients spending a minimum of $5,000/month on paid media. Below this threshold, our management fees don't represent good value. We recommend starting with LinkedIn at $3,000 minimum.",
+        "We typically recommend a minimum ad spend of $5,000 per month to ensure enough data for meaningful optimization, though this varies by market and channel.",
     },
     {
-      id: "timeline",
-      question: "How long before I see results?",
+      id: "tracking",
+      question: "How do you track sales from ads?",
       answer:
-        "SEO: 3–6 months for significant organic growth. Paid: first results within 2–4 weeks, meaningful ROI by month 2–3. LinkedIn: qualified pipeline typically appears in weeks 4–8.",
+        "We use advanced multi-touch attribution and CRM integration to track leads from their very first click all the way to a closed-won deal.",
     },
     {
-      id: "reporting",
-      question: "What reporting do you provide?",
+      id: "seo-timeline",
+      question: "How long does SEO take to work?",
       answer:
-        "Weekly performance snapshots and monthly strategic reviews. All campaigns include a live dashboard with real-time metrics including pipeline attribution from first click to closed deal.",
-    },
-    {
-      id: "industries",
-      question: "Which industries do you specialise in?",
-      answer:
-        "We specialise in enterprise B2B across SaaS, FinTech, Healthcare IT, Logistics, Manufacturing, and Professional Services. We have specific playbooks for each vertical.",
-    },
-    {
-      id: "contract",
-      question: "What are your contract terms?",
-      answer:
-        "We work on 3-month minimum engagements for marketing retainers to allow proper optimisation cycles. After 3 months, contracts roll monthly with 30-day notice.",
+        "SEO is a long-term investment. While you may see technical improvements in weeks, significant organic growth typically takes 4–6 months of consistent effort.",
     },
   ],
-};
-
-export const PERF_CONTACT = {
-  eyebrow: "GET STARTED",
-  heading: (
-    <>
-      Let&apos;s Scale Your{" "}
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Marketing Pipeline
-      </span>
-    </>
-  ),
-  description:
-    "Tell us your growth targets and we'll design a performance marketing strategy engineered to hit them.",
-  illustration: {
-    src: "/undraw_contact-us_s4jn.svg",
-    alt: "Contact Us",
-  },
-  form: {
-    firstNameLabel: "First Name",
-    firstNamePlaceholder: "John",
-    lastNameLabel: "Last Name",
-    lastNamePlaceholder: "Doe",
-    emailLabel: "Work Email",
-    emailPlaceholder: "john@company.com",
-    serviceLabel: "Marketing Channel",
-    servicePlaceholder: "Select a channel...",
-    serviceOptions: [
-      { value: "seo", label: "SEO Services" },
-      { value: "paid", label: "Paid Advertising" },
-      { value: "linkedin", label: "LinkedIn Ads for B2B" },
-      { value: "full-funnel", label: "Full Funnel Strategy" },
-    ],
-    messageLabel: "Tell Us Your Growth Goals",
-    messagePlaceholder: "What pipeline targets are you trying to hit?",
-    ctaLabel: "Get Marketing Strategy",
-  },
 };

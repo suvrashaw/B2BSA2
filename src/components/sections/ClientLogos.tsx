@@ -10,6 +10,8 @@ export interface ClientLogosProps {
   logos?: ClientLogoItem[];
   speed?: number;
   wheelSpeed?: number;
+  heading?: string;
+  overlap?: boolean;
 }
 
 function useLogoMarquee(speed: number, wheelSpeed: number) {
@@ -128,6 +130,48 @@ const DataLabel = () => (
   </span>
 );
 
+const EventStrategyLabel = () => (
+  <span className="cursor-pointer font-sans text-[18px] font-bold tracking-wide text-[#1E6091] uppercase transition-all duration-300 hover:scale-125">
+    Event Strategy
+  </span>
+);
+
+const BoothDesignLabel = () => (
+  <span className="cursor-pointer font-sans text-[18px] font-bold tracking-wide text-[#E63946] uppercase transition-all duration-300 hover:scale-125">
+    Booth Design
+  </span>
+);
+
+const PerformanceMarketingLabel = () => (
+  <span className="cursor-pointer font-sans text-[18px] font-bold tracking-wide text-[#023E8A] uppercase transition-all duration-300 hover:scale-125">
+    Performance Marketing
+  </span>
+);
+
+const VideoProductionLabel = () => (
+  <span className="cursor-pointer font-sans text-[18px] font-bold tracking-wide text-[#E76F51] uppercase transition-all duration-300 hover:scale-125">
+    Video Production
+  </span>
+);
+
+const MarketResearchLabel = () => (
+  <span className="cursor-pointer font-sans text-[18px] font-bold tracking-wide text-[#457B9D] uppercase transition-all duration-300 hover:scale-125">
+    Market Research
+  </span>
+);
+
+const LeadGenerationLabel = () => (
+  <span className="cursor-pointer font-sans text-[18px] font-bold tracking-wide text-[#2A9D8F] uppercase transition-all duration-300 hover:scale-125">
+    Lead Generation
+  </span>
+);
+
+const CaseStudiesLabel = () => (
+  <span className="cursor-pointer font-sans text-[18px] font-bold tracking-wide text-[#264653] uppercase transition-all duration-300 hover:scale-125">
+    Case Studies
+  </span>
+);
+
 const LOGO_COMPONENTS: Record<string, React.FC> = {
   singlestore: SingleStoreLogo,
   temenos: TemenosLogo,
@@ -142,6 +186,13 @@ const LOGO_COMPONENTS: Record<string, React.FC> = {
   seo: SEOLabel,
   research: ResearchLabel,
   data: DataLabel,
+  "event-strategy": EventStrategyLabel,
+  "booth-design": BoothDesignLabel,
+  "performance-marketing": PerformanceMarketingLabel,
+  "video-production": VideoProductionLabel,
+  "market-research": MarketResearchLabel,
+  "lead-generation": LeadGenerationLabel,
+  "case-studies": CaseStudiesLabel,
 };
 
 const LogosRow = ({ logos }: { logos: ClientLogoItem[] }) => (
@@ -161,14 +212,20 @@ export function ClientLogos({
   logos = HOME_CLIENT_LOGOS,
   speed = 4,
   wheelSpeed = 0.05,
+  heading = "Trusted by Leading Brands for Trade Show & Exhibition Solutions",
+  overlap = true,
 }: ClientLogosProps = {}) {
   const { handleWheel, setIsHovered, x } = useLogoMarquee(speed, wheelSpeed);
 
   return (
-    <div className="pointer-events-none relative z-30 container mx-auto -mt-16 max-w-6xl px-4 md:px-8">
-      <h2 className="mb-4 pt-2 text-center text-sm font-semibold tracking-widest text-gray-400 uppercase">
-        Trusted by Leading Brands for Trade Show &amp; Exhibition Solutions
-      </h2>
+    <div
+      className={`pointer-events-none relative z-30 container mx-auto max-w-6xl px-4 md:px-8 ${overlap ? "-mt-16" : "py-12"}`}
+    >
+      {heading && (
+        <h2 className="mb-4 pt-2 text-center text-sm font-semibold tracking-widest text-gray-400 uppercase">
+          {heading}
+        </h2>
+      )}
       <div
         className="shadow-[0_8px_30px_rgb(0,0,0,0.08)](0,0,0,0.5)] pointer-events-auto relative overflow-hidden rounded-xl border border-gray-100 bg-white py-6"
         onMouseEnter={() => setIsHovered(true)}

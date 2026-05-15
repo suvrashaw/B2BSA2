@@ -1,14 +1,13 @@
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getPageMetadata } from "@/content/pages";
 import {
-  VES_HERO,
-  VES_WHY,
-  VES_DELIVERABLES,
-  VES_STATS,
-  VES_CASE_STUDIES,
-  VES_TESTIMONIALS,
-  VES_FAQ,
-  VES_CONTACT,
+  VIDEO_EDITING_HERO,
+  VIDEO_EDITING_WHY,
+  VIDEO_EDITING_DELIVERABLES,
+  VIDEO_EDITING_PROOF_BAR,
+  VIDEO_EDITING_TIMELINE,
+  VIDEO_EDITING_CASE_STUDIES,
+  VIDEO_EDITING_FAQ,
 } from "@/content/services/detail/video-editing-services";
 
 import type { Metadata } from "next";
@@ -21,14 +20,27 @@ export default function Page() {
   return (
     <ServiceDetail
       canonicalPath="/services/media-production/video-editing-services"
-      hero={VES_HERO}
-      why={VES_WHY}
-      deliverables={VES_DELIVERABLES}
-      stats={VES_STATS}
-      caseStudies={VES_CASE_STUDIES}
-      testimonials={VES_TESTIMONIALS}
-      faq={VES_FAQ}
-      contact={VES_CONTACT}
+      hero={VIDEO_EDITING_HERO}
+      proofBar={VIDEO_EDITING_PROOF_BAR}
+      why={VIDEO_EDITING_WHY}
+      deliverables={VIDEO_EDITING_DELIVERABLES}
+      pricing={VIDEO_EDITING_TIMELINE}
+      caseStudies={VIDEO_EDITING_CASE_STUDIES}
+      faq={VIDEO_EDITING_FAQ}
+      relatedServices={[
+        {
+          title: "Event Video Production",
+          href: "/services/media-production/event-video-production",
+        },
+        {
+          title: "Corporate Video Production",
+          href: "/services/media-production/corporate-video-production",
+        },
+        {
+          title: "Live Streaming Services",
+          href: "/services/media-production/live-streaming-services",
+        },
+      ]}
     />
   );
 }

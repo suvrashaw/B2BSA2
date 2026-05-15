@@ -1,324 +1,130 @@
-export const CE_HERO = {
-  showPreloader: false,
-  eyebrow: "CUSTOM EVENTS",
-  title: (
-    <>
-      Custom Event Solutions That Position <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Your Brand as the Market Authority
-      </span>
-    </>
-  ),
+import { GLOBAL_CASE_STUDIES } from "../../shared";
+
+export const CUSTOM_EVENTS_HERO = {
+  title: "Custom B2B Brand Experiences — Your Brief, Our Architecture",
   description:
-    "Don't just attend events — own them. We design and produce proprietary experiences that build relationships, generate press, and accelerate enterprise pipeline.",
-  image: {
-    src: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=2000",
-    alt: "Custom branded B2B event",
-    loaderAlt: "Loading",
-  },
-  primaryCtaLabel: "Request a Custom Event Proposal",
-  secondaryCtaLabel: "See Our Event Success Stories",
-  stat: { value: "300+", label: "Global Events Handled", icon: "Calendar" },
+    "From gala cruises on the Amstel to cricket-themed networking in Dubai, we design and execute proprietary brand experiences that build deep executive relationships and drive commercial outcomes.",
 };
 
-export const CE_WHY = {
-  eyebrow: "EVENT FORMATS",
-  heading: (
-    <>
-      Custom B2B Event Formats <br />
-      <span className="text-brand-cyan">We Produce</span>
-    </>
-  ),
+export { GLOBAL_PROOF_STATS as CUSTOM_EVENTS_PROOF_BAR } from "../../shared";
+
+export const CUSTOM_EVENTS_WHY = {
+  heading: "Why Proprietary Events Outperform Generic Sponsorships",
+  description:
+    "In a crowded industry calendar, shared space has limitations. When you own the event, you own the environment, the audience, and the narrative. Custom events allow for deep relationship building with C-suite decision-makers that is rarely possible on a trade show floor. Whether it's a private executive dinner or a large-scale user conference, we ensure every detail — from the venue to the menu to the messaging — is engineered to advance your commercial objectives.",
   reasons: [
     {
-      id: "control",
-      title: "Complete Brand Control",
+      id: "ownership",
+      title: "Full Narrative Ownership",
       description:
-        "Your event. Your agenda. Your story. No competitor booths, no divided attention.",
-      image:
-        "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      id: "audience",
-      title: "Curated Buyer Audiences",
-      description:
-        "We invite and qualify your exact ICP — no generic delegates, only decision-makers worth your time.",
-      image:
-        "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      id: "thought",
-      title: "Thought Leadership at Scale",
-      description:
-        "Panel discussions, keynotes, and workshops that position your executives as industry authorities.",
+        "You control the environment, the audience, and the commercial journey from start to finish.",
       image:
         "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
     },
     {
-      id: "pipeline",
-      title: "Direct Pipeline Opportunities",
+      id: "relationships",
+      title: "Deep Executive Access",
       description:
-        "Private meeting rooms, product demos, and structured networking baked into the event design.",
+        "Proprietary environments facilitate the high-trust conversations required for enterprise deals.",
       image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };
 
-export const CE_DELIVERABLES = {
-  eyebrow: "OUR CAPABILITIES",
-  heading: (
-    <>
-      What <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        We Manage
-      </span>
-    </>
-  ),
-  serviceLabel: "Deliverable",
-  ctaLabel: "Learn More",
+export const CUSTOM_EVENTS_DELIVERABLES = {
+  heading: "Our Custom Event Services",
   services: [
     {
-      id: "concept",
-      title: "Concept & Programme Design",
-      description: "Full event concept, agenda architecture, speaker curation, and format design.",
-      icon: "Layers",
+      id: "ideation",
+      title: "Creative Concept and Narrative Design",
+      description:
+        "We don't just find a venue; we build a story. From unique themes to experiential 'wow' moments that make your event the highlight of the executive calendar.",
+      icon: "Lightbulb",
       image:
-        "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1600",
+        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-blue",
     },
     {
-      id: "venue",
-      title: "Venue & Logistics Management",
-      description: "Venue sourcing, AV setup, catering, transport, and on-site coordination.",
-      icon: "Globe2",
+      id: "production",
+      title: "End-to-End Production and AV",
+      description:
+        "Full-scale event production including staging, lighting, cinematic video integration, and technical management for zero-error live execution.",
+      icon: "Clapperboard",
       image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600",
+        "https://images.unsplash.com/photo-1475721027187-40247339488a?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-cyan",
     },
     {
-      id: "speakers",
-      title: "Speaker & Moderator Sourcing",
-      description: "Access to our network of 500+ industry speakers and moderators globally.",
-      icon: "Mic2",
+      id: "hospitality",
+      title: "Premium Hospitality and Venue Management",
+      description:
+        "Sourcing and managing unique locations globally — from private members' clubs to luxury yachts — and managing all catering, decor, and guest services.",
+      icon: "GlassWater",
       image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1600",
+        "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-primary",
     },
     {
-      id: "lead",
-      title: "Attendee Acquisition & Lead Capture",
+      id: "acquisition",
+      title: "Audience Acquisition and RSVP Management",
       description:
-        "Targeted outreach to your ICP, registration management, and post-event follow-up.",
-      icon: "Target",
+        "We leverage our prospecting capability to ensure your target accounts are in the room, managing the full invitation and attendance process.",
+      icon: "Users",
       image:
-        "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1600",
+        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-blue",
     },
   ],
 };
 
-export const CE_STATS = {
-  heading: (
-    <>
-      Global Reach <br />
-      <span className="text-brand-blue">Local Execution</span>
-    </>
-  ),
-  quote:
-    '"We design and execute proprietary B2B events that position enterprise brands as market authorities, from executive roundtables to global product launches, delivered with flawless execution across 40+ markets."',
-  attribution: "— Custom Events Team, B2B Sales Arrow",
-  stats: [
+export const CUSTOM_EVENTS_FORMATS = {
+  title: "Custom Event Formats We Deliver",
+  headers: ["Event Type", "Focus"],
+  rows: [
     {
-      value: "300+",
-      label: "Global Events Handled",
-      icon: "Calendar",
-      bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
+      "event type": "Executive Roundtable Dinners",
+      focus: "Intimate, high-trust networking for C-suite decision-makers",
     },
     {
-      value: "10+",
-      label: "Years of Experience",
-      icon: "TrendingUp",
-      bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
+      "event type": "Proprietary User Conferences",
+      focus: "Full-day brand immersion, product launches, and ecosystem building",
     },
     {
-      value: "40+",
-      label: "Countries Served",
-      icon: "Globe2",
-      bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
+      "event type": "Experiential Networking (Gala/Yacht/Cricket)",
+      focus: "High-impact relationship building in unique social environments",
     },
     {
-      value: "100%",
-      label: "Production Accuracy",
-      icon: "Target",
-      bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
+      "event type": "Regional Roadshows",
+      focus: "Consistent brand messaging delivered across multiple global cities",
     },
   ],
 };
 
-export const CE_CASE_STUDIES = {
-  eyebrow: "CUSTOM EVENT RESULTS",
-  heading: (
-    <>
-      Real Events. <br />
-      <span className="text-brand-blue">Real Results.</span>
-    </>
-  ),
-  ctaLabel: "Full Study",
-  viewAllLabel: "View All Event Work",
-  caseStudies: [
-    {
-      id: "summit",
-      client: "Enterprise Cloud Platform",
-      title: "400-Person CXO Summit, Dubai 2024",
-      challenge: "Needed to establish enterprise credibility in MENA market.",
-      solution: "Full-service CXO summit with 3 keynotes, 8 panels, and 1:1 meeting program.",
-      metric: "$8.4M",
-      metricLabel: "Pipeline Attributed",
-      icon: "BarChart3",
-      image:
-        "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      id: "roundtable",
-      client: "B2B Payments Company",
-      title: "12-City CFO Roundtable Series",
-      challenge: "Unable to reach finance decision-makers through digital channels.",
-      solution:
-        "Intimate 20-person CFO roundtables in 12 cities — fully managed logistics and content.",
-      metric: "144",
-      metricLabel: "CFOs Engaged",
-      icon: "Users",
-      image:
-        "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1200",
-    },
-  ],
+export const CUSTOM_EVENTS_CASE_STUDIES = {
+  items: GLOBAL_CASE_STUDIES,
 };
 
-export const CE_TESTIMONIALS = {
-  eyebrow: "CLIENT RESULTS",
-  heading: (
-    <>
-      Real Events. <br />
-      <span className="text-[#1E6091]">Real Results.</span>
-    </>
-  ),
-  autoplayInterval: 3500,
-  initialIndex: 1,
-  testimonials: [
-    {
-      id: 1,
-      name: "Elena Vasquez",
-      designation: "CMO",
-      company: "Nexora Enterprise",
-      rating: 5,
-      quote:
-        "B2BSA produced our flagship summit from concept to execution. 400 attendees, zero issues, and $8M in pipeline within 60 days. We've made it an annual event.",
-      image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
-    },
-    {
-      id: 2,
-      name: "Thomas Brandt",
-      designation: "VP Revenue",
-      company: "PlatformOne",
-      rating: 5,
-      quote:
-        "The roundtable series they ran for us was flawless. Intimate, well-curated, and every attendee was exactly who we needed in the room.",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400",
-    },
-    {
-      id: 3,
-      name: "Nia Osei",
-      designation: "Director of Marketing",
-      company: "Axiom Technologies",
-      rating: 5,
-      quote:
-        "From speaker sourcing to post-event reporting, they handled everything. We focused on the conversations; they handled the complexity.",
-      image:
-        "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=400",
-    },
-  ],
-};
-
-export const CE_FAQ = {
-  eyebrow: "CUSTOM EVENTS FAQ",
-  heading: (
-    <>
-      Frequently Asked <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Questions
-      </span>
-    </>
-  ),
-  description: "Everything you need to know about our custom B2B event service.",
-  scrollAmount: 340,
+export const CUSTOM_EVENTS_FAQ = {
+  heading: "Custom Event FAQs",
   faqs: [
     {
-      id: "formats",
-      question: "What event formats do you produce?",
+      id: "scope",
+      question: "What is the typical lead time for a custom event?",
       answer:
-        "We produce executive roundtables (10–30 pax), industry summits (100–1,000+ pax), product launch events, roadshows, awards ceremonies, and custom hybrid formats.",
+        "For intimate dinners, 6–8 weeks. For large-scale conferences or complex experiential events, 16–24 weeks is recommended for optimal venue and audience results.",
     },
     {
-      id: "lead-time",
-      question: "How long does it take to plan a custom event?",
+      id: "acquisition",
+      question: "Do you help with inviting the guests?",
       answer:
-        "8–12 weeks for smaller formats (roundtables, roadshows). 16–24 weeks for large summits. We can compress timelines for urgent requirements with an express production fee.",
+        "Yes — audience acquisition is one of our core strengths. we can actively prospect your target account list to secure RSVPs from the right decision-makers.",
     },
     {
-      id: "attendees",
-      question: "How do you recruit attendees?",
+      id: "global",
+      question: "Can you manage events in any city?",
       answer:
-        "We use a combination of direct outreach to your ICP list, our proprietary executive network, event partnerships, and digital promotion. Attendee quality is guaranteed — we qualify every registrant.",
-    },
-    {
-      id: "virtual",
-      question: "Can events be virtual or hybrid?",
-      answer:
-        "Yes. We run fully virtual events on our preferred platform stack, and hybrid formats with physical and digital attendee experiences running simultaneously.",
-    },
-    {
-      id: "ip",
-      question: "Do you help with event content and IP?",
-      answer:
-        "Yes. We have an in-house content team that produces keynote decks, research reports, panel guides, and post-event content assets (video highlights, whitepapers, blog series).",
+        "Yes. We have a global venue-sourcing network and managed logistics in 40+ countries across North America, EMEA, APAC, and the Middle East.",
     },
   ],
-};
-
-export const CE_CONTACT = {
-  eyebrow: "START YOUR CUSTOM EVENT",
-  heading: (
-    <>
-      Design Your <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Flagship Event
-      </span>
-    </>
-  ),
-  description:
-    "Tell us about your audience and goals — we'll design an event format that builds authority and fills your pipeline.",
-  illustration: { src: "/undraw_contact-us_s4jn.svg", alt: "Contact Us" },
-  form: {
-    firstNameLabel: "First Name",
-    firstNamePlaceholder: "John",
-    lastNameLabel: "Last Name",
-    lastNamePlaceholder: "Doe",
-    emailLabel: "Work Email",
-    emailPlaceholder: "john@company.com",
-    serviceLabel: "Event Format",
-    servicePlaceholder: "Select format...",
-    serviceOptions: [
-      { value: "roundtable", label: "Executive Roundtable (10–30)" },
-      { value: "summit", label: "Industry Summit (100–500)" },
-      { value: "launch", label: "Product Launch Event" },
-      { value: "roadshow", label: "Multi-City Roadshow" },
-      { value: "virtual", label: "Virtual / Hybrid" },
-    ],
-    messageLabel: "Tell Us About Your Event Vision",
-    messagePlaceholder: "Audience profile, geography, goals, approximate budget...",
-    ctaLabel: "Start Planning My Event",
-  },
 };

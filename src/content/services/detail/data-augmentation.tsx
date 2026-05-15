@@ -1,326 +1,129 @@
-export const DA_HERO = {
-  showPreloader: false,
-  eyebrow: "B2B DATA AUGMENTATION",
-  title: (
-    <>
-      B2B Data Augmentation Services — Transform Incomplete <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        CRM Data Into Sales Intelligence
-      </span>
-    </>
-  ),
+import { GLOBAL_CASE_STUDIES } from "../../shared";
+
+export const DATA_AUGMENTATION_HERO = {
+  title: "B2B Data Augmentation — Deep Intent, Not Just Contact Info",
   description:
-    "Your CRM is only as powerful as the data inside it. We enrich, append, and augment your contact and account records with verified firmographic, technographic, and intent data.",
-  image: {
-    src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2000",
-    alt: "Data augmentation and enrichment",
-    loaderAlt: "Loading",
-  },
-  primaryCtaLabel: "Request a Data Audit",
-  secondaryCtaLabel: "Start Your Data Project",
-  stat: { value: "98%", label: "Data Accuracy Rate", icon: "Database" },
+    "Stop selling to companies that aren't buying. We provide the technographic and intent-based enrichment that tells you exactly which companies in your ICP are currently in-market for your solution.",
 };
 
-export const DA_WHY = {
-  eyebrow: "VERIFIED INTELLIGENCE",
-  heading: (
-    <>
-      Why Human Verification Outperforms <br />
-      <span className="text-brand-cyan">Automated Data Tools</span>
-    </>
-  ),
+export { GLOBAL_PROOF_STATS as DATA_AUGMENTATION_PROOF_BAR } from "../../shared";
+
+export const DATA_AUGMENTATION_WHY = {
+  heading: "Why Enrichment is the Catalyst for Sales Success",
+  description:
+    "A name and an email address are the bare minimum. To win in a competitive enterprise environment, your sales team needs to know what software their prospect is currently using, what their department's budget looks like, and what public signals they've given that indicate a need for your solution. Our augmentation service turns 'thin' leads into 'thick' dossiers, providing the context that allows your reps to lead with value rather than questions.",
   reasons: [
     {
-      id: "accuracy",
-      title: "Eliminate Wasted Outreach",
-      description:
-        "Dirty data means your sales team calls dead numbers and emails bounced addresses. Enrichment fixes that at the source.",
+      id: "context",
+      title: "Immediate Context",
+      description: "Know your prospect's tech stack and pain points before the first call.",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     },
     {
-      id: "targeting",
-      title: "Precision ICP Matching",
+      id: "priority",
+      title: "Strategic Prioritization",
       description:
-        "Enriched firmographic and technographic data lets you filter, score, and prioritise your best-fit accounts instantly.",
+        "Focus your highest-value reps on the accounts with the strongest intent signals.",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      id: "personalisation",
-      title: "Hyper-Personalised Outreach",
-      description:
-        "Know your prospect's tech stack, headcount, recent funding, and buying signals before your first touchpoint.",
-      image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      id: "crm",
-      title: "CRM Health at Scale",
-      description:
-        "Systematic enrichment keeps your CRM accurate as your database grows — no more manual research for each new record.",
-      image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };
 
-export const DA_DELIVERABLES = {
-  eyebrow: "OUR CAPABILITIES",
-  heading: (
-    <>
-      Data Fields <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        We Enrich
-      </span>
-    </>
-  ),
-  serviceLabel: "Deliverable",
-  ctaLabel: "Learn More",
+export const DATA_AUGMENTATION_DELIVERABLES = {
+  heading: "Our Augmentation Services",
   services: [
     {
       id: "firmographic",
       title: "Firmographic Enrichment",
       description:
-        "Company name, size, revenue, industry, HQ location, and subsidiary mapping for every account.",
-      icon: "Database",
+        "We add deep organizational data including exact headcount, revenue brackets, funding history, and organizational hierarchy to help you map the buying committee.",
+      icon: "Building",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600",
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-blue",
-    },
-    {
-      id: "contact",
-      title: "Contact Intelligence",
-      description:
-        "Verified direct dial, professional email, LinkedIn profile, and job title for every decision-maker record.",
-      icon: "Users",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-cyan",
     },
     {
       id: "technographic",
-      title: "Technographic Data",
+      title: "Technographic Profiling",
       description:
-        "Identify the exact technology stack your prospects use — enabling product-fit targeting and competitive displacement messaging.",
-      icon: "BarChart3",
+        "Identify the 'digital footprint' of your target accounts — knowing exactly which CRM, cloud provider, or marketing stack they are currently running.",
+      icon: "Cpu",
       image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-primary",
+        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-cyan",
     },
     {
       id: "intent",
-      title: "Buyer Intent Signals",
+      title: "Intent and Trigger Monitoring",
       description:
-        "Layer intent data on top of your records to identify which accounts are actively researching solutions like yours right now.",
-      icon: "TrendingUp",
+        "We track public signals — job postings, news, funding rounds, and social activity — to identify the 'moments that matter' for your sales team.",
+      icon: "Activity",
       image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-primary",
+    },
+    {
+      id: "contact",
+      title: "Social and Contact Appending",
+      description:
+        "We bridge the gap between accounts and people, adding verified LinkedIn profiles and direct-dial phone numbers for every key stakeholder.",
+      icon: "UserPlus",
+      image:
+        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-blue",
     },
   ],
 };
 
-export const DA_STATS = {
-  heading: (
-    <>
-      Global Reach <br />
-      <span className="text-brand-blue">Local Execution</span>
-    </>
-  ),
-  quote:
-    '"We provide expert B2B data augmentation, delivering human-verified firmographic, technographic, and intent data to transform incomplete records into sales-ready profiles across 40+ global markets."',
-  attribution: "— Data Intelligence Team, B2B Sales Arrow",
-  stats: [
+export const DATA_AUGMENTATION_LAYERS = {
+  title: "Enrichment Layers",
+  headers: ["Layer", "Insights Provided"],
+  rows: [
     {
-      value: "98%",
-      label: "Data Accuracy Rate",
-      icon: "Database",
-      bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
+      layer: "Firmographic",
+      "insights provided": "Revenue, headcount, funding history, and expansion signals",
     },
     {
-      value: "10+",
-      label: "Years of Experience",
-      icon: "TrendingUp",
-      bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
+      layer: "Technographic",
+      "insights provided": "Current software stack, hardware infrastructure, and IT spend",
     },
     {
-      value: "40+",
-      label: "Countries Served",
-      icon: "Globe2",
-      bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
+      layer: "Intent",
+      "insights provided": "Live hiring trends, public press releases, and budget triggers",
     },
     {
-      value: "100%",
-      label: "Research Accuracy",
-      icon: "Target",
-      bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
+      layer: "Psychographic",
+      "insights provided": "Decision-maker personality insights and preferred communication styles",
     },
   ],
 };
 
-export const DA_CASE_STUDIES = {
-  eyebrow: "DATA ENRICHMENT RESULTS",
-  heading: (
-    <>
-      Real Events. <br />
-      <span className="text-brand-blue">Real Results.</span>
-    </>
-  ),
-  ctaLabel: "Full Study",
-  viewAllLabel: "View All Work",
-  caseStudies: [
-    {
-      id: "synapse-data",
-      client: "Synapse Networks",
-      title: "CRM Enrichment Triples Outbound Reply Rate",
-      challenge: "CRM had 18,000 records with 42% missing contact data.",
-      solution: "Full firmographic and contact enrichment on entire CRM database.",
-      metric: "3×",
-      metricLabel: "Outbound Reply Rate",
-      icon: "BarChart3",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      id: "elevate-data",
-      client: "Elevate Logistics",
-      title: "Technographic Data Enables Product-Fit Targeting",
-      challenge: "Sales team had no visibility into prospect tech stacks.",
-      solution:
-        "Technographic enrichment of 5,000 target accounts with competitive displacement sequencing.",
-      metric: "+67%",
-      metricLabel: "Meeting Conversion Rate",
-      icon: "Users",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-    },
-  ],
+export const DATA_AUGMENTATION_CASE_STUDIES = {
+  items: GLOBAL_CASE_STUDIES,
 };
 
-export const DA_TESTIMONIALS = {
-  eyebrow: "CLIENT RESULTS",
-  heading: (
-    <>
-      Real Events. <br />
-      <span className="text-[#1E6091]">Real Results.</span>
-    </>
-  ),
-  autoplayInterval: 3500,
-  initialIndex: 1,
-  testimonials: [
-    {
-      id: 1,
-      name: "David Alaba",
-      designation: "Head of Growth",
-      company: "Synapse Networks",
-      rating: 5,
-      quote:
-        "We had 18,000 CRM records we could barely use. After enrichment, we had a precision-targeted outbound machine. Reply rates tripled within the first campaign.",
-      image:
-        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400",
-    },
-    {
-      id: 2,
-      name: "Sophia Martinez",
-      designation: "VP Marketing",
-      company: "Elevate Logistics",
-      rating: 5,
-      quote:
-        "The technographic data changed our entire outbound strategy. Knowing our prospects' tech stacks allowed us to personalise at a level we'd never achieved before.",
-      image:
-        "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=400",
-    },
-    {
-      id: 3,
-      name: "Michael Chen",
-      designation: "VP of Global Sales",
-      company: "Aura Systems",
-      rating: 5,
-      quote:
-        "94% accuracy across 25,000 records delivered in 72 hours. The data quality is exceptional and the turnaround speed enabled us to launch our campaign on schedule.",
-      image:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400",
-    },
-  ],
-};
-
-export const DA_FAQ = {
-  eyebrow: "DATA AUGMENTATION FAQ",
-  heading: (
-    <>
-      Frequently Asked <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Questions
-      </span>
-    </>
-  ),
-  description: "Everything you need to know about our data augmentation service.",
-  scrollAmount: 340,
+export const DATA_AUGMENTATION_FAQ = {
+  heading: "Data Augmentation FAQs",
   faqs: [
     {
       id: "sources",
-      question: "Where does your enrichment data come from?",
+      question: "Where do you get your intent data?",
       answer:
-        "We use a proprietary blend of 40+ commercial and human-verified data sources including LinkedIn, company websites, business registries, and our own research network.",
+        "We use a combination of primary research, public record monitoring, and premium B2B intent feeds to provide a 360-degree view of your target accounts.",
     },
     {
-      id: "accuracy",
-      question: "What accuracy rate can we expect?",
+      id: "integration",
+      question: "Can you push enriched data directly to our CRM?",
       answer:
-        "We guarantee a minimum 90% accuracy rate on email addresses and 85% on direct dials. Our standard delivery achieves 94% overall accuracy across all data fields.",
+        "Yes. We can map our augmented fields directly into your HubSpot, Salesforce, or Microsoft Dynamics fields for immediate sales action.",
     },
     {
-      id: "format",
-      question: "What file formats do you accept?",
+      id: "match-rate",
+      question: "What is your typical match rate?",
       answer:
-        "CSV, Excel, or direct CRM integration (Salesforce, HubSpot, Pipedrive, and others). We return the enriched data in the same format you provide, ready to import.",
-    },
-    {
-      id: "gdpr",
-      question: "Is your data GDPR compliant?",
-      answer:
-        "Yes. All enrichment data is sourced from legitimate, publicly available business intelligence. We provide a data processing agreement and comply with GDPR and CCPA requirements.",
-    },
-    {
-      id: "turnaround",
-      question: "How quickly can you enrich our data?",
-      answer:
-        "Standard enrichment: 72 hours per 10,000 records. Urgent projects can be expedited. We'll provide an exact timeline based on your dataset size and requirements during onboarding.",
+        "For enterprise-level organizations in the US, Europe, and UAE, we typically achieve a 90%+ match rate for firmographic and technographic data.",
     },
   ],
-};
-
-export const DA_CONTACT = {
-  eyebrow: "ENRICH YOUR DATA",
-  heading: (
-    <>
-      Transform Your CRM into a <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Revenue Engine
-      </span>
-    </>
-  ),
-  description:
-    "Send us a sample of your data for a free accuracy audit and enrichment recommendation.",
-  illustration: { src: "/undraw_contact-us_s4jn.svg", alt: "Contact Us" },
-  form: {
-    firstNameLabel: "First Name",
-    firstNamePlaceholder: "John",
-    lastNameLabel: "Last Name",
-    lastNamePlaceholder: "Doe",
-    emailLabel: "Work Email",
-    emailPlaceholder: "john@company.com",
-    serviceLabel: "Dataset Size",
-    servicePlaceholder: "Select record volume...",
-    serviceOptions: [
-      { value: "small", label: "Under 5,000 records" },
-      { value: "medium", label: "5,000–25,000 records" },
-      { value: "large", label: "25,000–100,000 records" },
-      { value: "enterprise", label: "100,000+ records" },
-    ],
-    messageLabel: "Tell Us About Your Data Needs",
-    messagePlaceholder: "Current CRM, data gaps, target ICP, and enrichment goals...",
-    ctaLabel: "Get Free Data Audit",
-  },
 };

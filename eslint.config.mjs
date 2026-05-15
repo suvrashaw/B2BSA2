@@ -4,7 +4,6 @@ import nextTs from "eslint-config-next/typescript";
 import checkFile from "eslint-plugin-check-file";
 import importX from "eslint-plugin-import-x";
 import noSecrets from "eslint-plugin-no-secrets";
-import perfectionist from "eslint-plugin-perfectionist";
 import sonarjs from "eslint-plugin-sonarjs";
 import tailwind from "eslint-plugin-tailwindcss";
 import unicorn from "eslint-plugin-unicorn";

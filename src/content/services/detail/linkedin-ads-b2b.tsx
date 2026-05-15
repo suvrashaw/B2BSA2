@@ -1,325 +1,129 @@
-export const LIADS_HERO = {
-  showPreloader: false,
-  eyebrow: "LINKEDIN ADS FOR B2B",
-  title: (
-    <>
-      LinkedIn Ads for B2B — The Highest-Intent <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Enterprise Pipeline Channel
-      </span>
-    </>
-  ),
+import { GLOBAL_CASE_STUDIES } from "../../shared";
+
+export const LINKEDIN_ADS_HERO = {
+  title: "LinkedIn Ads for B2B — Precision ABM at Scale",
   description:
-    "LinkedIn is where enterprise buyers make decisions. We engineer LinkedIn ad campaigns that target your exact ICP — by title, company, industry, and seniority — and convert them into qualified pipeline.",
-  image: {
-    src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000",
-    alt: "LinkedIn B2B advertising strategy",
-    loaderAlt: "Loading",
-  },
-  primaryCtaLabel: "Request a LinkedIn Audit",
-  secondaryCtaLabel: "Start Your LinkedIn Project",
-  stat: { value: "5×", label: "Avg Lead Quality vs Other Channels", icon: "ExternalLink" },
+    "Stop wasting budget on 'lookalike' audiences. We provide the strategic LinkedIn Advertising that reaches the specific people at the specific companies you need to win, using account-based targeting to build authority and drive leads.",
 };
 
-export const LIADS_WHY = {
-  eyebrow: "ENTERPRISE TARGETING",
-  heading: (
-    <>
-      The Most Precise <br />
-      <span className="text-brand-cyan">B2B Targeting Channel</span>
-    </>
-  ),
+export { GLOBAL_PROOF_STATS as LINKEDIN_ADS_PROOF_BAR } from "../../shared";
+
+export const LINKEDIN_ADS_WHY = {
+  heading: "The Power of the Professional Context",
+  description:
+    "LinkedIn is not just another social network; it's the world's most comprehensive database of professional intent. When you advertise on LinkedIn, your message appears in a context of professional growth and decision-making. We leverage LinkedIn's unparalleled first-party data to build account-based marketing (ABM) campaigns that don't just 'get impressions,' but reach the specific C-suite executives and procurement leads who hold the keys to your enterprise deals.",
   reasons: [
     {
-      id: "targeting",
-      title: "Unmatched B2B Targeting",
-      description:
-        "Target by job title, seniority, company size, industry, and skills — no other platform matches LinkedIn's B2B precision.",
+      id: "precision",
+      title: "Unerring Precision",
+      description: "Target by exact company, seniority, and skill set with 100% accuracy.",
       image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1200",
     },
     {
-      id: "mindset",
-      title: "Professional Buying Mindset",
+      id: "trust",
+      title: "Inherited Trust",
       description:
-        "Users on LinkedIn are in a professional context — far more receptive to B2B offers than on social or display networks.",
+        "Benefit from the high-trust environment of LinkedIn to build your brand authority.",
       image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      id: "formats",
-      title: "Multiple High-Impact Ad Formats",
-      description:
-        "Sponsored content, message ads, conversation ads, and dynamic ads each serve a different stage of the B2B funnel.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      id: "abm",
-      title: "Account-Based Marketing at Scale",
-      description:
-        "Target specific company lists — your top 200 named accounts — with personalised messaging at decision-maker level.",
-      image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };
 
-export const LIADS_DELIVERABLES = {
-  eyebrow: "MANAGED FORMATS",
-  heading: (
-    <>
-      LinkedIn Ad Formats <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        We Specialise In
-      </span>
-    </>
-  ),
-  serviceLabel: "Deliverable",
-  ctaLabel: "Learn More",
+export const LINKEDIN_ADS_DELIVERABLES = {
+  heading: "Our LinkedIn Ads Services",
   services: [
     {
-      id: "strategy",
-      title: "LinkedIn Ad Strategy",
+      id: "targeting",
+      title: "Advanced ABM Targeting",
       description:
-        "Audience architecture, funnel mapping, format selection, and budget allocation across campaign objectives.",
+        "We upload your specific target account list and use LinkedIn's Matched Audiences to ensure your ads are only seen by the companies you want to win.",
       icon: "Target",
       image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600",
+        "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-blue",
     },
     {
-      id: "creative",
-      title: "B2B Ad Creative Production",
+      id: "leadgen",
+      title: "Lead Gen Form Optimization",
       description:
-        "Sponsored content copy, static graphics, video ads, and message ad copy — all tested systematically.",
-      icon: "ExternalLink",
+        "We use LinkedIn's native lead gen forms to capture high-quality prospect data with one click, drastically increasing your conversion rate compared to external landing pages.",
+      icon: "Scan",
       image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-cyan",
     },
     {
-      id: "lead-gen",
-      title: "Lead Gen Form Campaigns",
+      id: "content",
+      title: "Thought Leadership Content Ads",
       description:
-        "Native LinkedIn Lead Gen Forms with CRM integration to capture decision-maker contact details without friction.",
-      icon: "Users",
+        "We use Sponsored Content to promote your most valuable industry insights, positioning your executives as market leaders before the sales call ever happens.",
+      icon: "Palette",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600",
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-primary",
     },
     {
-      id: "reporting",
-      title: "Weekly Campaign Reporting",
+      id: "integration",
+      title: "Full CRM Lead Synchronization",
       description:
-        "CPL, ROAS, engagement rates, and pipeline attribution — full visibility on every penny of LinkedIn spend.",
-      icon: "BarChart3",
+        "We ensure every lead captured on LinkedIn is instantly pushed into your CRM with all firmographic data intact for immediate follow-up.",
+      icon: "RefreshCw",
       image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600",
+        "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-blue",
     },
   ],
 };
 
-export const LIADS_STATS = {
-  heading: (
-    <>
-      Global Reach <br />
-      <span className="text-brand-blue">Local Execution</span>
-    </>
-  ),
-  quote:
-    '"We provide expert LinkedIn Ads management for enterprise B2B brands, delivering sponsored content, Lead Gen Forms, and ABM campaigns that generate qualified pipeline across 40+ global markets."',
-  attribution: "— LinkedIn Ads Team, B2B Sales Arrow",
-  stats: [
+export const LINKEDIN_ADS_FORMATS = {
+  title: "Ad Format Efficiency",
+  headers: ["Format", "Best For"],
+  rows: [
     {
-      value: "5×",
-      label: "Lead Quality vs Other Channels",
-      icon: "TrendingUp",
-      bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
+      format: "Sponsored Content",
+      "best for": "High-level thought leadership and brand building",
     },
     {
-      value: "10+",
-      label: "Years of Experience",
-      icon: "TrendingUp",
-      bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
+      format: "Lead Gen Forms",
+      "best for": "Capturing high-intent data without leaving LinkedIn",
     },
     {
-      value: "40+",
-      label: "Countries Served",
-      icon: "Globe2",
-      bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
+      format: "Document Ads",
+      "best for": "Gated content downloads (Whitepapers, E-books)",
     },
     {
-      value: "100%",
-      label: "Production Accuracy",
-      icon: "Target",
-      bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
+      format: "Video Ads",
+      "best for": "Product demos and complex service storytelling",
     },
   ],
 };
 
-export const LIADS_CASE_STUDIES = {
-  eyebrow: "LINKEDIN ADS RESULTS",
-  heading: (
-    <>
-      Real Events. <br />
-      <span className="text-brand-blue">Real Results.</span>
-    </>
-  ),
-  ctaLabel: "Full Study",
-  viewAllLabel: "View All Work",
-  caseStudies: [
-    {
-      id: "aura-linkedin",
-      client: "Aura Systems",
-      title: "LinkedIn ABM Drives 6 Months Ahead of Schedule",
-      challenge: "New European market entry — no brand recognition among target accounts.",
-      solution:
-        "Named account targeting across 200 enterprise accounts with executive-level messaging.",
-      metric: "6mo",
-      metricLabel: "Ahead of Market Entry Target",
-      icon: "BarChart3",
-      image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      id: "nexus-linkedin",
-      client: "Nexus Technologies",
-      title: "Lead Gen Form Campaign at £28 CPL",
-      challenge: "Previous agency achieving £95 CPL on LinkedIn.",
-      solution: "Audience rebuild, creative refresh, and Lead Gen Form optimisation.",
-      metric: "£28",
-      metricLabel: "Cost Per Lead (from £95)",
-      icon: "Users",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-    },
-  ],
+export const LINKEDIN_ADS_CASE_STUDIES = {
+  items: GLOBAL_CASE_STUDIES,
 };
 
-export const LIADS_TESTIMONIALS = {
-  eyebrow: "CLIENT RESULTS",
-  heading: (
-    <>
-      Real Events. <br />
-      <span className="text-[#1E6091]">Real Results.</span>
-    </>
-  ),
-  autoplayInterval: 3500,
-  initialIndex: 1,
-  testimonials: [
-    {
-      id: 1,
-      name: "Michael Chen",
-      designation: "VP of Global Sales",
-      company: "Aura Systems",
-      rating: 5,
-      quote:
-        "The LinkedIn ABM campaign put us in front of our top 200 target accounts within weeks. We're now 6 months ahead of our European market entry plan.",
-      image:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400",
-    },
-    {
-      id: 2,
-      name: "Sarah Jenkins",
-      designation: "Chief Marketing Officer",
-      company: "Nexus Technologies",
-      rating: 5,
-      quote:
-        "We went from £95 CPL to £28 CPL in one quarter. The targeting expertise and creative quality are genuinely best-in-class for B2B LinkedIn advertising.",
-      image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
-    },
-    {
-      id: 3,
-      name: "Elena Rodriguez",
-      designation: "Director of Brand Activation",
-      company: "Vortex Labs",
-      rating: 5,
-      quote:
-        "LinkedIn is now our highest-ROI channel by a significant margin. B2B Sales Arrow's understanding of the B2B buying journey on LinkedIn is exceptional.",
-      image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400",
-    },
-  ],
-};
-
-export const LIADS_FAQ = {
-  eyebrow: "LINKEDIN ADS FAQ",
-  heading: (
-    <>
-      Frequently Asked <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Questions
-      </span>
-    </>
-  ),
-  description: "Everything you need to know about our LinkedIn Ads management service.",
-  scrollAmount: 340,
+export const LINKEDIN_ADS_FAQ = {
+  heading: "LinkedIn Advertising FAQs",
   faqs: [
     {
-      id: "budget",
-      question: "What's the minimum LinkedIn ad budget you recommend?",
+      id: "cpc",
+      question: "Isn't LinkedIn too expensive?",
       answer:
-        "LinkedIn CPCs are higher than other platforms. We recommend a minimum of £5,000/month in ad spend to generate enough data to optimise. Below this, learning phases take too long.",
+        "While the cost-per-click is higher than other platforms, the quality of leads and the ability to target only high-value accounts typically leads to a much lower cost-per-deal.",
     },
     {
-      id: "formats",
-      question: "Which LinkedIn ad formats do you recommend for B2B?",
+      id: "targeting-scale",
+      question: "How small can we go with targeting?",
       answer:
-        "For awareness: sponsored single image or video. For lead generation: Lead Gen Forms. For ABM: message ads and conversation ads. We'll recommend the right mix for your objectives.",
+        "LinkedIn requires a minimum audience size of 300 people. We specialize in building 'micro-ABM' campaigns that stay just above this limit for maximum precision.",
     },
     {
-      id: "abm",
-      question: "Can you run campaigns targeting specific companies?",
+      id: "sales-alignment",
+      question: "Can we target our sales team's leads?",
       answer:
-        "Yes. LinkedIn's company targeting allows us to upload a list of up to 300,000 company names and target only employees at those specific organisations.",
-    },
-    {
-      id: "lead-quality",
-      question: "How do you ensure lead quality from LinkedIn?",
-      answer:
-        "We use progressive profiling in Lead Gen Forms, qualifying questions, and post-click landing pages with clear ICP qualification criteria to filter out non-ICP leads before they reach your CRM.",
-    },
-    {
-      id: "crm",
-      question: "Do you integrate LinkedIn leads with our CRM?",
-      answer:
-        "Yes. We connect LinkedIn Lead Gen Forms directly to Salesforce, HubSpot, or any CRM with an API. Leads flow in real-time with full campaign attribution data.",
+        "Yes. We can upload specific lead lists or target visitors of specific high-value pages on your website to ensure sales and marketing are in total alignment.",
     },
   ],
-};
-
-export const LIADS_CONTACT = {
-  eyebrow: "START YOUR LINKEDIN CAMPAIGN",
-  heading: (
-    <>
-      Put Your Brand in Front of <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
-        Decision-Makers
-      </span>
-    </>
-  ),
-  description: "Get a free LinkedIn Ads audit and audience strategy recommendation for your ICP.",
-  illustration: { src: "/undraw_contact-us_s4jn.svg", alt: "Contact Us" },
-  form: {
-    firstNameLabel: "First Name",
-    firstNamePlaceholder: "John",
-    lastNameLabel: "Last Name",
-    lastNamePlaceholder: "Doe",
-    emailLabel: "Work Email",
-    emailPlaceholder: "john@company.com",
-    serviceLabel: "Monthly LinkedIn Budget",
-    servicePlaceholder: "Select budget range...",
-    serviceOptions: [
-      { value: "starter", label: "£5,000–£10,000 / month" },
-      { value: "growth", label: "£10,000–£25,000 / month" },
-      { value: "enterprise", label: "£25,000+ / month" },
-      { value: "unsure", label: "Not sure yet" },
-    ],
-    messageLabel: "Describe Your Target Audience",
-    messagePlaceholder: "Job titles, company sizes, industries, and key objectives...",
-    ctaLabel: "Get Free LinkedIn Audit",
-  },
 };

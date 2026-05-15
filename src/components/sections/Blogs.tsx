@@ -1,17 +1,15 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 
-import Image from "next/image";
 import Link from "next/link";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
+import { BlogCard, BlogCardGrid } from "@/components/ui/BlogCard";
 import { Button } from "@/components/ui/Button";
-import { HOME_BLOGS_CONTENT, type BlogItem, type BlogsContent } from "@/content/home";
-
-import type { MotionValue } from "framer-motion";
+import { HOME_BLOGS_CONTENT, type BlogsContent } from "@/content/home";
 
 export interface BlogsProps {
   content?: BlogsContent;
@@ -19,6 +17,7 @@ export interface BlogsProps {
   heading?: BlogsContent["heading"];
   ctaLabel?: BlogsContent["ctaLabel"];
   blogs?: BlogsContent["blogs"];
+  layout?: "deck" | "grid";
 }
 
 export function Blogs({
@@ -27,6 +26,7 @@ export function Blogs({
   heading = content.heading,
   ctaLabel = content.ctaLabel,
   blogs = content.blogs,
+  layout = "deck",
 }: BlogsProps = {}) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -36,7 +36,6 @@ export function Blogs({
     offset: ["start end", "center center"],
   });
 
-  // Calculate fan out based on scroll when NOT hovered
   const spread = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
@@ -60,102 +59,34 @@ export function Blogs({
           </Link>
         </div>
 
-        <div
-          className="perspective-1000 relative mx-auto flex h-[800px] w-full max-w-3xl cursor-pointer items-center justify-center lg:h-[450px]"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          {blogs.map((blog, index) => (
-            <Link key={blog.id} href={`/blog/${blog.id}`} className="contents">
-              <BlogCard
-                blog={blog}
-                index={index}
-                total={blogs.length}
-                isHovered={isHovered}
-                spread={spread}
-              />
-            </Link>
-          ))}
-        </div>
+        {layout === "grid" ? (
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {blogs.map((blog) => (
+              <Link key={blog.id} href={`/blog/${blog.id}`}>
+                <BlogCardGrid blog={blog} />
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div
+            className="perspective-1000 relative mx-auto flex h-[800px] w-full max-w-3xl cursor-pointer items-center justify-center lg:h-[450px]"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            {blogs.map((blog, index) => (
+              <Link key={blog.id} href={`/blog/${blog.id}`} className="contents">
+                <BlogCard
+                  blog={blog}
+                  index={index}
+                  total={blogs.length}
+                  isHovered={isHovered}
+                  spread={spread}
+                />
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
     </section>
-  );
-}
-
-function BlogCard({
-  blog,
-  index,
-  total,
-  isHovered,
-  spread,
-}: {
-  blog: BlogItem;
-  index: number;
-  total: number;
-  isHovered: boolean;
-  spread: MotionValue<number>;
-}) {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  const relativeIndex = index - (total - 1) / 2;
-  const rotationOffset = relativeIndex * 8; // -8, 0, 8
-  const xOffset = relativeIndex * 40; // -40, 0, 40
-  const yOffset = relativeIndex * -20; // 20, 0, -20
-
-  const rotate = useTransform(spread, (s) => s * rotationOffset);
-  const x = useTransform(spread, (s) => s * xOffset);
-  const y = useTransform(spread, (s) => s * yOffset);
-
-  // Side-by-side spread distance when hovered
-  const hoverX = relativeIndex * 410;
-  // Vertical spread distance for mobile
-  const hoverY = relativeIndex * 300;
-
-  const activeX = isMobile ? 0 : hoverX;
-  const activeY = isMobile ? hoverY : 0;
-
-  return (
-    <motion.div
-      style={{
-        rotate: isHovered ? 0 : rotate,
-        x: isHovered ? activeX : x,
-        y: isHovered ? activeY : y,
-        zIndex: index,
-      }}
-      animate={{
-        scale: isHovered ? 0.9 : 1, // Shrink slightly on hover to fit perfectly
-      }}
-      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      className="absolute w-full max-w-md transform-gpu overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-2xl"
-    >
-      <div className="relative h-56 w-full">
-        <Image
-          src={blog.image}
-          alt={blog.title}
-          fill
-          sizes="(max-width: 768px) 100vw, 400px"
-          className="object-cover"
-        />
-        <div className="absolute top-4 left-4">
-          <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-bold tracking-wider uppercase shadow-sm  backdrop-blur-md">
-            {blog.category}
-          </span>
-        </div>
-      </div>
-      <div className="p-8">
-        <span className="mb-3 block text-sm font-medium text-gray-500">{blog.date}</span>
-        <h3 className="font-heading mb-6 text-2xl  leading-tight font-bold">{blog.title}</h3>
-        <div className="text-brand-blue flex items-center gap-2 text-sm font-semibold tracking-widest uppercase">
-          Read Article <ArrowUpRight className="h-4 w-4" />
-        </div>
-      </div>
-    </motion.div>
   );
 }
