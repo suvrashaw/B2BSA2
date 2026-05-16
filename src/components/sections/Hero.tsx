@@ -9,10 +9,13 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Globe } from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
+import { Heading } from "@/components/ui/Heading";
 
 export interface HeroProps {
   showPreloader?: boolean;
   title?: string | ReactNode;
+  highlight?: string;
+  highlightVariant?: "blue" | "cyan";
   subtitle?: string;
   description?: string;
   badge?: string;
@@ -36,6 +39,8 @@ export interface HeroProps {
 
 export function Hero({
   title = "Global B2B Event, Booth & Lead Generation Experts",
+  highlight,
+  highlightVariant = "blue",
   subtitle = "End-to-End Solutions That Drive Pipeline and Revenue",
   description,
   image = "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000",
@@ -68,9 +73,14 @@ export function Hero({
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-2xl"
         >
-          <h1 className="mb-6 font-heading text-5xl leading-[1.1] font-bold  lg:text-7xl">
+          <Heading
+            as="h1"
+            className="mb-6"
+            highlight={highlight}
+            highlightVariant={highlightVariant}
+          >
             {title}
-          </h1>
+          </Heading>
 
           <p className="/70 mb-10 max-w-lg text-xl leading-relaxed">{resolvedSubtitle}</p>
 

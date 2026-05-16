@@ -1,3 +1,5 @@
+import { getCmsPage } from "@/cms/mock/registry";
+import { getCmsPageMetadata } from "@/cms/mock/seo";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Blogs } from "@/components/sections/Blogs";
@@ -18,23 +20,9 @@ import { buildFaqJsonLd } from "@/lib";
 
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "B2B Sales Arrow | Premium Growth Partner",
-  },
-  description:
-    "Global capability. Strategic growth. Enterprise event and digital solutions for modern businesses.",
-  alternates: {
-    canonical: "https://b2bsalesarrow.com/",
-  },
-  openGraph: {
-    title: "B2B Sales Arrow | Premium Growth Partner",
-    description:
-      "Global capability. Strategic growth. Enterprise event and digital solutions for modern businesses.",
-    url: "https://b2bsalesarrow.com/",
-    type: "website",
-  },
-};
+export const metadata: Metadata = getCmsPageMetadata("home");
+
+const homePage = getCmsPage("home")!;
 
 export default function Home() {
   return (
@@ -42,7 +30,13 @@ export default function Home() {
       <JsonLd data={buildFaqJsonLd(HOME_FAQ_CONTENT.faqs)} />
       <Header />
       <div id="home">
-        <Hero />
+        <Hero
+          title={homePage.title.text}
+          highlight={homePage.title.highlight}
+          highlightVariant={homePage.title.highlightVariant}
+          image={homePage.heroImage}
+          stat={homePage.heroBadge}
+        />
       </div>
 
       <CinematicSequence />

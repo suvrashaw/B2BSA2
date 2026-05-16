@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Calendar, MapPin } from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
+import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Heading } from "@/components/ui/Heading";
 import { HOME_UPCOMING_EVENTS_CONTENT, type UpcomingEventsContent } from "@/content/home";
 
 export interface UpcomingEventsProps {
@@ -34,15 +36,8 @@ export function UpcomingEvents({
     <section id="events" className="relative bg-brand-gray py-20">
       <div className="container mx-auto px-8">
         <div className="mb-16 flex flex-col items-start text-left">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-6 inline-block rounded-full border border-brand-cyan/20 bg-brand-cyan/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-brand-blue"
-          >
-            {eyebrow}
-          </motion.div>
-          <h2 className="font-heading text-4xl leading-tight font-bold  lg:text-5xl">{heading}</h2>
+          <Eyebrow variant="cyan">{eyebrow}</Eyebrow>
+          <Heading as="h2">{heading}</Heading>
           {description && <p className="mt-4 max-w-2xl text-base text-gray-600">{description}</p>}
         </div>
 

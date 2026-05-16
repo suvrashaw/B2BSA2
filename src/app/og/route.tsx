@@ -1,12 +1,31 @@
 import { ImageResponse } from "@vercel/og";
 
+import { getCmsPage } from "@/cms/mock/registry";
 import { getPageByUrl } from "@/content/pages";
 
 export const runtime = "edge";
 
 const siteUrl = "https://b2bsalesarrow.com";
 
-function getOgContent(path: string | null) {
+function getOgContent(searchParams: URLSearchParams) {
+  const pageId = searchParams.get("pageId");
+  const title = searchParams.get("title");
+  const path = searchParams.get("path");
+
+  if (pageId) {
+    const page = getCmsPage(pageId);
+
+    if (page) {
+      const resolvedTitle = title ?? page.seo.title;
+
+      return {
+        title: resolvedTitle.replace(" | B2B Sales Arrow", ""),
+        description: page.seo.description,
+        group: page.pageType === "serviceDetail" ? "Service" : "B2B Growth",
+      };
+    }
+  }
+
   if (!path) {
     return {
       title: "B2B Sales Arrow",
@@ -34,7 +53,7 @@ function getOgContent(path: string | null) {
 
 export function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const content = getOgContent(searchParams.get("path"));
+  const content = getOgContent(searchParams);
 
   return new ImageResponse(
     <div

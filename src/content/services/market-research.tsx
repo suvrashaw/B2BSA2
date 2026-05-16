@@ -22,7 +22,7 @@ export const RESEARCH_SERVICES = {
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-blue",
-      href: "/services/market-research/human-powered-market-intelligence",
+      href: "/services/market-intelligence",
     },
     {
       id: "validation",
@@ -33,7 +33,7 @@ export const RESEARCH_SERVICES = {
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-cyan",
-      href: "/services/market-research/data-validation",
+      href: "/services/data-validation",
     },
     {
       id: "augmentation",
@@ -44,7 +44,7 @@ export const RESEARCH_SERVICES = {
       image:
         "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-primary",
-      href: "/services/market-research/data-augmentation",
+      href: "/services/data-augmentation",
     },
   ],
 };

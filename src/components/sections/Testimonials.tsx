@@ -7,6 +7,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 
+import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Heading } from "@/components/ui/Heading";
 import { HOME_TESTIMONIALS_CONTENT, type TestimonialsContent } from "@/content/home";
 
 export interface TestimonialsProps {
@@ -82,17 +84,10 @@ export function Testimonials({
 
       <div className="relative z-10 container mx-auto px-8">
         <div className="mb-12 flex flex-col items-start text-left">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-6 inline-block rounded-full border border-[#1E6091]/20 bg-[#1E6091]/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-[#1E6091]"
-          >
-            {eyebrow}
-          </motion.div>
-          <h2 className="mb-6 text-left font-heading text-4xl font-bold text-gray-900 lg:text-5xl">
+          <Eyebrow variant="blue">{eyebrow}</Eyebrow>
+          <Heading as="h2" className="mb-6 text-left">
             {heading}
-          </h2>
+          </Heading>
         </div>
 
         {/* 3D Coverflow Container */}

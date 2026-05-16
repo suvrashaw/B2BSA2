@@ -17,6 +17,7 @@ export const metadata: Metadata = getPageMetadata("/services/sales-qualified-lea
 export default function Page() {
   return (
     <ServiceHub
+      canonicalPath="/services/sales-qualified-lead-generation"
       hero={SQL_HERO}
       proofBar={SQL_PROOF_BAR}
       services={SQL_SERVICES}

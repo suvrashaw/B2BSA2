@@ -3,9 +3,9 @@ import { Montserrat, Playfair_Display } from "next/font/google";
 import { PartytownScripts } from "@/app/providers/PartytownScripts";
 import { SmoothScrollProvider } from "@/app/providers/SmoothScrollProvider";
 import { SWRegistrar } from "@/app/providers/SWRegistrar";
+import { buildOrganizationJsonLd } from "@/lib/structured-data";
 
 import type { Metadata } from "next";
-import type { Organization, WithContext } from "schema-dts";
 
 import "./globals.css";
 
@@ -31,19 +31,7 @@ export const metadata: Metadata = {
     "Global capability. Strategic growth. Enterprise event and digital solutions for modern businesses.",
 };
 
-const jsonLd: WithContext<Organization> = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "B2B Sales Arrow",
-  url: "https://b2bsalesarrow.com",
-  logo: "https://b2bsalesarrow.com/logo.png",
-  sameAs: [
-    "https://www.linkedin.com/company/b2b-sales-arrow/",
-    // Add other social links here
-  ],
-  description:
-    "Global capability. Strategic growth partner for B2B enterprises specializing in event solutions and digital marketing.",
-};
+const jsonLd = buildOrganizationJsonLd();
 
 export default function RootLayout({
   children,

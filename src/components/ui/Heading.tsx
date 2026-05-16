@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 
 import { cva, type VariantProps } from "class-variance-authority";
 
+import { PointerHighlight } from "@/components/ui/PointerHighlight";
 import { cn } from "@/lib";
 
 const headingVariants = cva("", {
@@ -19,14 +20,51 @@ interface HeadingProps extends VariantProps<typeof headingVariants> {
   as: "h1" | "h2" | "h3" | "h4";
   children: ReactNode;
   className?: string;
+  highlight?: string;
+  highlightVariant?: "blue" | "cyan";
   preserveClassName?: boolean;
 }
 
-export function Heading({ as: Tag, children, className, preserveClassName, level }: HeadingProps) {
+function renderHighlightedText(
+  children: ReactNode,
+  highlight?: string,
+  highlightVariant: "blue" | "cyan" = "blue"
+) {
+  if (typeof children !== "string" || !highlight?.trim()) return children;
+
+  const target = highlight.trim();
+  const startIndex = children.toLowerCase().indexOf(target.toLowerCase());
+
+  if (startIndex === -1) return children;
+
+  const endIndex = startIndex + target.length;
+
+  return (
+    <>
+      {children.slice(0, startIndex)}
+      <PointerHighlight color={highlightVariant}>
+        {children.slice(startIndex, endIndex)}
+      </PointerHighlight>
+      {children.slice(endIndex)}
+    </>
+  );
+}
+
+export function Heading({
+  as: Tag,
+  children,
+  className,
+  highlight,
+  highlightVariant = "blue",
+  preserveClassName,
+  level,
+}: HeadingProps) {
   const resolvedLevel = level ?? Tag;
   const classes = preserveClassName
     ? className
     : cn(headingVariants({ level: resolvedLevel }), className);
 
-  return <Tag className={classes}>{children}</Tag>;
+  return (
+    <Tag className={classes}>{renderHighlightedText(children, highlight, highlightVariant)}</Tag>
+  );
 }

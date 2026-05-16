@@ -1,3 +1,4 @@
+import { getCmsPageMetadata } from "@/cms/mock/seo";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Blogs } from "@/components/sections/Blogs";
@@ -7,15 +8,7 @@ import { THANK_YOU_HERO, THANK_YOU_SERVICES, THANK_YOU_BLOGS } from "@/content/t
 
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Thank You",
-  description:
-    "Thank you for contacting B2B Sales Arrow. Our team will review your message and get back to you shortly.",
-  robots: {
-    index: false,
-    follow: false,
-  },
-};
+export const metadata: Metadata = getCmsPageMetadata("thank-you");
 
 export default function Page() {
   return (

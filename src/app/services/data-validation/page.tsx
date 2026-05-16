@@ -12,12 +12,12 @@ import {
 
 import type { Metadata } from "next";
 
-export const metadata: Metadata = getPageMetadata("/services/market-research/data-validation");
+export const metadata: Metadata = getPageMetadata("/services/data-validation");
 
 export default function Page() {
   return (
     <ServiceDetail
-      canonicalPath="/services/market-research/data-validation"
+      canonicalPath="/services/data-validation"
       hero={DATA_VALIDATION_HERO}
       proofBar={DATA_VALIDATION_PROOF_BAR}
       why={DATA_VALIDATION_WHY}
@@ -28,9 +28,9 @@ export default function Page() {
       relatedServices={[
         {
           title: "Human-Powered Market Intelligence",
-          href: "/services/market-research/human-powered-market-intelligence",
+          href: "/services/market-intelligence",
         },
-        { title: "Data Augmentation", href: "/services/market-research/data-augmentation" },
+        { title: "Data Augmentation", href: "/services/data-augmentation" },
         { title: "Market Research", href: "/services/market-research" },
       ]}
     />

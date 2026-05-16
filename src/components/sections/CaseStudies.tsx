@@ -5,11 +5,12 @@ import type { ReactNode } from "react";
 
 import Link from "next/link";
 
-import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
 import { CaseStudyShowcaseCard } from "@/components/ui/CaseStudyShowcaseCard";
+import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Heading } from "@/components/ui/Heading";
 import {
   HOME_CASE_STUDIES_CONTENT,
   type CaseStudiesContent,
@@ -89,15 +90,8 @@ export function CaseStudies({
     <section id="work" className="relative bg-brand-gray py-20">
       <div className="container mx-auto px-8">
         <div className="mb-16 flex flex-col items-start text-left">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-6 inline-block rounded-full border border-brand-blue/20 bg-brand-blue/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-brand-blue"
-          >
-            {eyebrow}
-          </motion.div>
-          <h2 className="font-heading text-4xl leading-tight font-bold  lg:text-5xl">{heading}</h2>
+          <Eyebrow variant="blue">{eyebrow}</Eyebrow>
+          <Heading as="h2">{heading}</Heading>
         </div>
 
         <div className="flex h-[600px] w-full flex-col gap-4 lg:flex-row">

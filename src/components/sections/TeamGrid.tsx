@@ -5,6 +5,8 @@ import Link from "next/link";
 
 import { motion } from "framer-motion";
 
+import { Heading } from "@/components/ui/Heading";
+
 export interface TeamMember {
   name: string;
   role: string;
@@ -26,7 +28,13 @@ export const TeamGrid = ({ data }: { data: TeamGridData }) => {
           <div className="mb-6 inline-block rounded-full border border-brand-blue/20 bg-brand-blue/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-brand-blue uppercase">
             Leadership
           </div>
-          <h2 className="font-heading text-3xl font-bold md:text-5xl ">{data.heading}</h2>
+          <Heading
+            as="h2"
+            preserveClassName
+            className="font-heading text-3xl font-bold md:text-5xl"
+          >
+            {data.heading}
+          </Heading>
         </div>
 
         {/* Team Grid */}
@@ -59,7 +67,9 @@ export const TeamGrid = ({ data }: { data: TeamGridData }) => {
                   )}
                 </div>
               </div>
-              <h3 className="font-heading text-xl  font-bold">{member.name}</h3>
+              <Heading as="h3" preserveClassName className="font-heading text-xl font-bold">
+                {member.name}
+              </Heading>
               <p className="mt-1 text-sm font-semibold tracking-wider text-gray-500 uppercase">
                 {member.role}
               </p>

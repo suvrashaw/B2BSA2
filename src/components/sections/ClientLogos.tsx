@@ -4,6 +4,7 @@ import { Fragment, useState } from "react";
 
 import { motion, useAnimationFrame, useMotionValue, useTransform, wrap } from "framer-motion";
 
+import { Heading } from "@/components/ui/Heading";
 import { HOME_CLIENT_LOGOS, type ClientLogoItem } from "@/content/home";
 
 export interface ClientLogosProps {
@@ -222,9 +223,13 @@ export function ClientLogos({
       className={`pointer-events-none relative z-30 container mx-auto max-w-6xl px-4 md:px-8 ${overlap ? "-mt-16" : "py-12"}`}
     >
       {heading && (
-        <h2 className="mb-4 pt-2 text-center text-sm font-semibold tracking-widest text-gray-400 uppercase">
+        <Heading
+          as="h4"
+          preserveClassName
+          className="mb-4 pt-2 text-center text-sm font-semibold tracking-widest text-gray-400 uppercase"
+        >
           {heading}
-        </h2>
+        </Heading>
       )}
       <div
         className="shadow-[0_8px_30px_rgb(0,0,0,0.08)](0,0,0,0.5)] pointer-events-auto relative overflow-hidden rounded-xl border border-gray-100 bg-white py-6"

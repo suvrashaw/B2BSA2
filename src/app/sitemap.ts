@@ -1,22 +1,9 @@
-import { finalPageUrls } from "@/content/pages";
+import { pageRoutes } from "@/cms/mock/routes";
+import { pageSeo } from "@/cms/mock/seo";
 
 import type { MetadataRoute } from "next";
 
 const siteUrl = "https://b2bsalesarrow.com";
-
-function normalizePath(path: string) {
-  if (path === "/") return "/";
-  return path.replace(/\/$/, "");
-}
-
-const canonicalUrls = [
-  ...new Set([
-    "/",
-    ...finalPageUrls.map((p) => normalizePath(p)),
-    "/privacy-policy",
-    "/terms-and-conditions",
-  ]),
-];
 
 function getPriority(url: string): number {
   if (url === "/") return 1;
@@ -24,10 +11,12 @@ function getPriority(url: string): number {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return canonicalUrls.map((url) => ({
-    url: `${siteUrl}${url}`,
-    lastModified: new Date(),
-    changeFrequency: url === "/" ? "weekly" : "monthly",
-    priority: getPriority(url),
-  }));
+  return Object.entries(pageRoutes)
+    .filter(([id]) => !pageSeo[id]?.noIndex)
+    .map(([, path]) => ({
+      url: `${siteUrl}${path}`,
+      lastModified: new Date(),
+      changeFrequency: path === "/" ? "weekly" : "monthly",
+      priority: getPriority(path),
+    }));
 }

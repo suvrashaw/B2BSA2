@@ -3,8 +3,11 @@
 import { useRef } from "react";
 
 import { motion } from "framer-motion";
-import { HelpCircle, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import { FAQCard } from "@/components/cards/FAQCard";
+import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Heading } from "@/components/ui/Heading";
 import { HOME_FAQ_CONTENT, type FAQContent } from "@/content/home";
 
 export interface FAQProps {
@@ -44,15 +47,10 @@ export function FAQ({
       <div className="relative z-10 container mx-auto px-8">
         <div className="mb-12 flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div className="text-left">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-6 inline-block rounded-full border border-brand-charcoal/10 bg-brand-charcoal/5 px-4 py-1.5  text-sm font-semibold tracking-wide"
-            >
-              {eyebrow}
-            </motion.div>
-            <h2 className="mb-4 font-heading text-3xl font-bold  lg:text-5xl">{heading}</h2>
+            <Eyebrow variant="neutral">{eyebrow}</Eyebrow>
+            <Heading as="h2" className="mb-4">
+              {heading}
+            </Heading>
             <p className="max-w-xl text-lg text-gray-600">{description}</p>
           </div>
         </div>
@@ -63,38 +61,17 @@ export function FAQ({
           className="scrollbar-hide flex snap-x snap-mandatory gap-6 overflow-x-auto pb-8"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          {faqs.map((faq, index) => {
-            return (
-              <motion.div
-                key={faq.id}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="group h-[280px] w-[300px] flex-shrink-0 cursor-pointer snap-center [perspective:1000px] md:w-[320px]"
-              >
-                <div className="relative h-full w-full rounded-2xl shadow-md transition-transform duration-500 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] hover:shadow-xl">
-                  {/* Front Side: Question */}
-                  <div className="absolute inset-0 flex h-full w-full flex-col items-start justify-center rounded-2xl border border-gray-100 bg-[#F8F9FA] p-8 text-left [backface-visibility:hidden]">
-                    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#1E6091]/10 transition-transform group-hover:scale-110">
-                      <HelpCircle className="h-6 w-6 text-[#1E6091]" />
-                    </div>
-                    <h3 className="font-heading text-xl leading-tight font-bold text-[#212529]">
-                      {faq.question}
-                    </h3>
-                  </div>
-
-                  {/* Back Side: Answer */}
-                  <div className="absolute inset-0 flex h-full w-full [transform:rotateY(180deg)] flex-col items-start justify-center rounded-2xl border border-brand-cyan/20 bg-white p-8 text-left shadow-inner [backface-visibility:hidden]">
-                    <div className="mb-6 flex h-8 w-8 items-center justify-center rounded-full bg-[#4BC0D9]/10">
-                      <div className="h-1.5 w-1.5 rounded-full bg-[#4BC0D9]" />
-                    </div>
-                    <p className="text-sm leading-relaxed text-[#212529]">{faq.answer}</p>
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
+          {faqs.map((faq, index) => (
+            <motion.div
+              key={faq.id}
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <FAQCard question={faq.question} answer={faq.answer} />
+            </motion.div>
+          ))}
         </div>
 
         {/* Navigation Arrows Below Carousel */}

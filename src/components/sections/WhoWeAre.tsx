@@ -2,6 +2,7 @@
 
 import type { ReactNode } from "react";
 
+import { Heading } from "@/components/ui/Heading";
 import Icon from "@/components/ui/Icon";
 import { HOME_WHO_WE_ARE_CONTENT, type WhoWeAreContent, type WhoWeAreStat } from "@/content/home";
 
@@ -69,7 +70,9 @@ export function WhoWeAre({
         {/* Left Side: Content */}
         <div className="flex flex-col items-start space-y-12 text-left">
           <div className="w-full text-left">
-            <h2 className="mb-6 font-heading text-4xl font-bold  lg:text-5xl">{resolvedHeading}</h2>
+            <Heading as="h2" className="mb-6">
+              {resolvedHeading}
+            </Heading>
           </div>
 
           <div className="w-full">

@@ -17,6 +17,7 @@ export const metadata: Metadata = getPageMetadata("/services/market-research");
 export default function Page() {
   return (
     <ServiceHub
+      canonicalPath="/services/market-research"
       hero={RESEARCH_HERO}
       proofBar={RESEARCH_PROOF_BAR}
       services={RESEARCH_SERVICES}

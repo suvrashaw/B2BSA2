@@ -22,7 +22,7 @@ export const PERF_SERVICES = {
       image:
         "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-blue",
-      href: "/services/performance-marketing/seo-services",
+      href: "/services/seo-services",
     },
     {
       id: "paid",
@@ -33,7 +33,7 @@ export const PERF_SERVICES = {
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-cyan",
-      href: "/services/performance-marketing/paid-advertising",
+      href: "/services/paid-advertising",
     },
     {
       id: "linkedin",
@@ -44,7 +44,7 @@ export const PERF_SERVICES = {
       image:
         "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1600",
       color: "bg-brand-primary",
-      href: "/services/performance-marketing/linkedin-ads",
+      href: "/services/linkedin-ads",
     },
   ],
 };

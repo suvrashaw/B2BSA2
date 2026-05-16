@@ -1,3 +1,4 @@
+import { getCmsPageMetadata } from "@/cms/mock/seo";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CaseStudies } from "@/components/sections/CaseStudies";
@@ -19,11 +20,7 @@ import {
 
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "B2B Industry Events | B2B Sales Arrow",
-  description:
-    "Upcoming B2B trade shows and industry events. Let B2B Sales Arrow design your booth presence and maximise your pipeline at every event.",
-};
+export const metadata: Metadata = getCmsPageMetadata("events");
 
 export default function Page() {
   return (

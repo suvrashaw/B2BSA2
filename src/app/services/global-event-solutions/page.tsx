@@ -17,6 +17,7 @@ export const metadata: Metadata = getPageMetadata("/services/global-event-soluti
 export default function Page() {
   return (
     <ServiceHub
+      canonicalPath="/services/global-event-solutions"
       hero={GES_HERO}
       proofBar={GES_PROOF_BAR}
       services={GES_SERVICES}

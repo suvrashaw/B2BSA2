@@ -15,9 +15,11 @@ import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import type { WhyChooseUsProps } from "@/components/sections/WhyChooseUs";
 import { JsonLd } from "@/components/templates/ServiceDetail";
-import { buildFaqJsonLd } from "@/lib";
+import { getPageByUrl } from "@/content/pages";
+import { buildFaqJsonLd, buildServiceJsonLd } from "@/lib";
 
 export interface ServiceHubProps {
+  canonicalPath?: string;
   hero: {
     title: string;
     description: string;
@@ -41,6 +43,7 @@ export interface ServiceHubProps {
 }
 
 export function ServiceHub({
+  canonicalPath,
   hero,
   proofBar,
   services,
@@ -52,9 +55,18 @@ export function ServiceHub({
   relatedServices,
 }: ServiceHubProps) {
   const faqJsonLd = faq.faqs?.length ? buildFaqJsonLd(faq.faqs) : null;
+  const page = canonicalPath ? getPageByUrl(canonicalPath) : null;
+  const serviceJsonLd = page
+    ? buildServiceJsonLd({
+        name: page.pageName,
+        description: page.metaDescription,
+        url: canonicalPath!,
+      })
+    : null;
 
   return (
     <main className="min-h-screen bg-brand-gray">
+      {serviceJsonLd ? <JsonLd data={serviceJsonLd} /> : null}
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <Header darkBackground />
 

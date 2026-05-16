@@ -10,7 +10,7 @@ export const PointerHighlight = ({
 }: {
   children: React.ReactNode;
   className?: string;
-  color?: "blue" | "red";
+  color?: "blue" | "cyan" | "red";
 }) => {
   const [hovered, setHovered] = useState(false);
 
@@ -19,6 +19,11 @@ export const PointerHighlight = ({
       bg: hovered ? "bg-brand-blue/30" : "bg-brand-blue/15",
       text: hovered ? "text-brand-cyan" : "text-brand-blue",
       border: "border-brand-blue/30",
+    },
+    cyan: {
+      bg: hovered ? "bg-brand-cyan/30" : "bg-brand-cyan/15",
+      text: hovered ? "text-brand-blue" : "text-brand-cyan",
+      border: "border-brand-cyan/30",
     },
     red: {
       bg: hovered ? "bg-brand-primary/30" : "bg-brand-primary/15",

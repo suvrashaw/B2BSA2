@@ -4,11 +4,13 @@ import { useRef, useState } from "react";
 
 import Link from "next/link";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
 import { BlogCard, BlogCardGrid } from "@/components/ui/BlogCard";
 import { Button } from "@/components/ui/Button";
+import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Heading } from "@/components/ui/Heading";
 import { HOME_BLOGS_CONTENT, type BlogsContent } from "@/content/home";
 
 export interface BlogsProps {
@@ -42,15 +44,8 @@ export function Blogs({
     <section ref={containerRef} id="blogs" className="relative overflow-hidden bg-white py-20">
       <div className="container mx-auto px-8">
         <div className="mb-4 flex flex-col items-start text-left lg:mb-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-6 inline-block rounded-full border border-brand-primary/20 bg-brand-primary/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-brand-primary"
-          >
-            {eyebrow}
-          </motion.div>
-          <h2 className="font-heading text-4xl leading-tight font-bold  lg:text-5xl">{heading}</h2>
+          <Eyebrow variant="primary">{eyebrow}</Eyebrow>
+          <Heading as="h2">{heading}</Heading>
           <Link href="/blog">
             <Button variant="tertiary" className="mt-8">
               {ctaLabel}{" "}

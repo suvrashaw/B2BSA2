@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
+import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
 
 interface CTABannerProps {
@@ -44,9 +45,13 @@ export function CTABanner({
           <div className="pointer-events-none absolute bottom-0 left-0 h-96 w-96 -translate-x-1/2 translate-y-1/2 rounded-full bg-brand-cyan/20 blur-3xl" />
 
           <div className="relative z-10 mx-auto max-w-4xl">
-            <h2 className="mb-8 font-heading text-3xl leading-tight font-bold text-white md:text-6xl">
+            <Heading
+              as="h2"
+              preserveClassName
+              className="mb-8 font-heading text-3xl leading-tight font-bold text-white md:text-6xl"
+            >
               {title}
-            </h2>
+            </Heading>
             {resolvedSubtitle && (
               <p className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-white/80 md:text-xl">
                 {resolvedSubtitle}

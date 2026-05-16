@@ -7,6 +7,8 @@ import Image from "next/image";
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 
+import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Heading } from "@/components/ui/Heading";
 import { HOME_WHY_CHOOSE_US_CONTENT, type WhyChooseUsContent } from "@/content/home";
 
 export interface WhyChooseUsProps {
@@ -60,17 +62,10 @@ export function WhyChooseUs({
         <div
           className={`w-full ${showImagePanel ? "md:w-1/2 md:pr-20" : "max-w-4xl items-center text-center md:w-3/4"} flex h-auto flex-col items-start justify-center py-20 md:sticky md:top-0 md:h-screen md:py-0`}
         >
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-6 inline-block rounded-full border border-brand-charcoal/10 bg-brand-charcoal/5 px-4 py-1.5  text-sm font-semibold tracking-wide"
-          >
-            {eyebrow}
-          </motion.div>
-          <h2 className="mb-8 w-full text-left font-heading text-4xl leading-tight font-bold lg:text-5xl">
+          <Eyebrow variant="neutral">{eyebrow}</Eyebrow>
+          <Heading as="h2" className="mb-8 w-full text-left">
             {heading}
-          </h2>
+          </Heading>
 
           <div className="relative flex h-[150px] w-full justify-center">
             {activeReason && (
@@ -85,7 +80,7 @@ export function WhyChooseUs({
                 >
                   <div className="mb-4 flex items-center gap-3 text-left">
                     <CheckCircle2 className="h-6 w-6 shrink-0 text-brand-blue" />
-                    <h3 className="font-heading text-3xl font-bold">{activeReason.title}</h3>
+                    <Heading as="h3">{activeReason.title}</Heading>
                   </div>
                   <p className="max-w-md text-xl leading-relaxed text-gray-600">
                     {activeReason.description}
@@ -111,9 +106,9 @@ export function WhyChooseUs({
 
                   {/* Mobile text fallback since sticky scroll might be weird on mobile */}
                   <div className="absolute right-8 bottom-8 left-8 md:hidden">
-                    <h3 className="mb-2 font-heading text-2xl font-bold text-white">
+                    <Heading as="h3" className="mb-2 text-white">
                       {reason.title}
-                    </h3>
+                    </Heading>
                     <p className="text-sm text-gray-200">{reason.description}</p>
                   </div>
                 </div>

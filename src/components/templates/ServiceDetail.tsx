@@ -16,7 +16,7 @@ import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import type { WhyChooseUsProps } from "@/components/sections/WhyChooseUs";
 import { getPageByUrl } from "@/content/pages";
-import { buildBreadcrumbJsonLd, buildFaqJsonLd } from "@/lib";
+import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildServiceJsonLd } from "@/lib";
 
 // SEO Utility Component
 export function JsonLd({ data }: { data: object }) {
@@ -123,9 +123,18 @@ export function ServiceDetail({
   const breadcrumbJsonLd = canonicalPath
     ? buildBreadcrumbJsonLd(getBreadcrumbs(canonicalPath))
     : null;
+  const page = canonicalPath ? getPageByUrl(canonicalPath) : null;
+  const serviceJsonLd = page
+    ? buildServiceJsonLd({
+        name: page.pageName,
+        description: page.metaDescription,
+        url: canonicalPath!,
+      })
+    : null;
 
   return (
     <main className="min-h-screen bg-brand-gray">
+      {serviceJsonLd ? <JsonLd data={serviceJsonLd} /> : null}
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       {breadcrumbJsonLd ? <JsonLd data={breadcrumbJsonLd} /> : null}
       <Header darkBackground />

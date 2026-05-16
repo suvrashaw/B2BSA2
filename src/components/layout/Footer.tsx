@@ -13,6 +13,23 @@ import { Button } from "@/components/ui/Button";
 import { Globe } from "@/components/ui/Globe";
 import { GlobalPresence } from "@/components/ui/GlobeVisualization";
 import { footerNavigation, footerServiceGroups } from "@/content/navigation";
+import { cn } from "@/lib";
+
+const socialLinks = [
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/company/b2b-sales-arrow/",
+    icon: FaLinkedinIn,
+  },
+  {
+    name: "Twitter",
+    icon: FaTwitter,
+  },
+  {
+    name: "Instagram",
+    icon: FaInstagram,
+  },
+];
 
 export function Footer() {
   const containerRef = useRef<HTMLElement>(null);
@@ -98,24 +115,40 @@ export function Footer() {
                   <p className="text-gray-500">Serving 30+ Countries</p>
                 </div>
                 <div className="flex items-center gap-4">
-                  <a
-                    href="#"
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-brand-gray text-brand-blue transition-all duration-300 hover:border-brand-blue hover:bg-brand-blue hover:text-white"
-                  >
-                    <FaLinkedinIn className="h-4 w-4" />
-                  </a>
-                  <a
-                    href="#"
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-brand-gray text-brand-blue transition-all duration-300 hover:border-brand-blue hover:bg-brand-blue hover:text-white"
-                  >
-                    <FaTwitter className="h-4 w-4" />
-                  </a>
-                  <a
-                    href="#"
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-brand-gray text-brand-blue transition-all duration-300 hover:border-brand-blue hover:bg-brand-blue hover:text-white"
-                  >
-                    <FaInstagram className="h-4 w-4" />
-                  </a>
+                  {socialLinks.map((item) => {
+                    const Icon = item.icon;
+                    const className =
+                      "flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-brand-gray text-brand-blue transition-all duration-300 hover:border-brand-blue hover:bg-brand-blue hover:text-white";
+
+                    if (item.href) {
+                      return (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          aria-label={`Visit B2B Sales Arrow on ${item.name}`}
+                          className={className}
+                        >
+                          <Icon className="h-4 w-4" />
+                        </a>
+                      );
+                    }
+
+                    return (
+                      <span
+                        key={item.name}
+                        aria-disabled="true"
+                        aria-label={`${item.name} profile coming soon`}
+                        className={cn(
+                          className,
+                          "cursor-not-allowed opacity-60 hover:bg-brand-gray hover:text-brand-blue"
+                        )}
+                      >
+                        <Icon className="h-4 w-4" />
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
 
@@ -196,7 +229,7 @@ export function Footer() {
                   Privacy Policy
                 </Link>
                 <Link
-                  href="/terms-of-service"
+                  href="/terms-and-conditions"
                   className="transition-colors hover:text-brand-primary"
                 >
                   Terms of Service

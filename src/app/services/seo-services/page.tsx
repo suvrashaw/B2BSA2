@@ -12,12 +12,12 @@ import {
 
 import type { Metadata } from "next";
 
-export const metadata: Metadata = getPageMetadata("/services/performance-marketing/seo-services");
+export const metadata: Metadata = getPageMetadata("/services/seo-services");
 
 export default function Page() {
   return (
     <ServiceDetail
-      canonicalPath="/services/performance-marketing/seo-services"
+      canonicalPath="/services/seo-services"
       hero={SEO_HERO}
       proofBar={SEO_PROOF_BAR}
       why={SEO_WHY}
@@ -32,8 +32,8 @@ export default function Page() {
         ctaHref: "/contact",
       }}
       relatedServices={[
-        { title: "Paid Advertising", href: "/services/performance-marketing/paid-advertising" },
-        { title: "LinkedIn Ads for B2B", href: "/services/performance-marketing/linkedin-ads" },
+        { title: "Paid Advertising", href: "/services/paid-advertising" },
+        { title: "LinkedIn Ads for B2B", href: "/services/linkedin-ads" },
         { title: "Performance Marketing", href: "/services/performance-marketing" },
       ]}
     />

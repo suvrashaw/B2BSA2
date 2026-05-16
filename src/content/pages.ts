@@ -1,3 +1,7 @@
+import { pageRoutes } from "@/cms/mock/routes";
+import { buildPageMetadata } from "@/lib/seo";
+import { buildServiceJsonLd } from "@/lib/structured-data";
+
 import type { Metadata } from "next";
 
 export type NavigationGroup =
@@ -8606,41 +8610,33 @@ export function getPageByUrl(url: string): PageContent {
   return page;
 }
 
-const siteUrl = "https://b2bsalesarrow.com";
+const pageIdsByUrl: Record<string, string> = Object.fromEntries(
+  Object.entries(pageRoutes).map(([id, path]) => [normalizeLookupUrl(path), id])
+);
 
 export function getPageMetadata(url: string): Metadata {
   const page = getPageByUrl(url);
   const canonicalPath = normalizeLookupUrl(page.url);
-  const canonicalUrl = `${siteUrl}${canonicalPath}`;
-  const ogImageUrl = `/og?path=${encodeURIComponent(canonicalPath)}`;
 
-  return {
-    title: page.metaTitle,
+  return buildPageMetadata(
+    {
+      title: page.metaTitle,
+      description: page.metaDescription,
+      canonicalPath,
+      focusKeyphrase: page.focusKeyphrase,
+      secondaryKeywords: page.secondaryKeywords,
+    },
+    pageIdsByUrl[canonicalPath]
+  );
+}
+
+export function getServiceJsonLd(url: string) {
+  const page = getPageByUrl(url);
+  return buildServiceJsonLd({
+    name: page.pageName,
     description: page.metaDescription,
-    alternates: {
-      canonical: canonicalUrl,
-    },
-    openGraph: {
-      title: page.metaTitle,
-      description: page.metaDescription,
-      url: canonicalUrl,
-      type: "website",
-      images: [
-        {
-          url: ogImageUrl,
-          width: 1200,
-          height: 630,
-          alt: `${page.pageName} | B2B Sales Arrow`,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: page.metaTitle,
-      description: page.metaDescription,
-      images: [ogImageUrl],
-    },
-  };
+    url: page.url,
+  });
 }
 
 export const finalPageUrls = pages.map((page) => page.url);
