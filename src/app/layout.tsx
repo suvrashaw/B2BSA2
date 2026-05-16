@@ -3,7 +3,7 @@ import { Montserrat, Playfair_Display } from "next/font/google";
 import { PartytownScripts } from "@/app/providers/PartytownScripts";
 import { SmoothScrollProvider } from "@/app/providers/SmoothScrollProvider";
 import { SWRegistrar } from "@/app/providers/SWRegistrar";
-import { buildOrganizationJsonLd } from "@/lib/structured-data";
+import { buildOrganizationJsonLd } from "@/lib";
 
 import type { Metadata } from "next";
 

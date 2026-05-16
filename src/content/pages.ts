@@ -1,6 +1,5 @@
 import { pageRoutes } from "@/cms/mock/routes";
 import { buildPageMetadata } from "@/lib/seo";
-import { buildServiceJsonLd } from "@/lib/structured-data";
 
 import type { Metadata } from "next";
 
@@ -8629,14 +8628,3 @@ export function getPageMetadata(url: string): Metadata {
     pageIdsByUrl[canonicalPath]
   );
 }
-
-export function getServiceJsonLd(url: string) {
-  const page = getPageByUrl(url);
-  return buildServiceJsonLd({
-    name: page.pageName,
-    description: page.metaDescription,
-    url: page.url,
-  });
-}
-
-export const finalPageUrls = pages.map((page) => page.url);

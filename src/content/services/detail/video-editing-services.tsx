@@ -96,7 +96,7 @@ export const VIDEO_EDITING_DELIVERABLES = {
   ],
 };
 
-export const VIDEO_EDITING_TURNAROUND = {
+export const VIDEO_EDITING_TIMELINE = {
   title: "Typical Turnaround Times",
   headers: ["Deliverable", "Typical Turnaround"],
   rows: [
@@ -118,8 +118,6 @@ export const VIDEO_EDITING_TURNAROUND = {
     },
   ],
 };
-
-export const VIDEO_EDITING_TIMELINE = VIDEO_EDITING_TURNAROUND;
 
 export const VIDEO_EDITING_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
