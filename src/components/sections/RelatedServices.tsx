@@ -1,27 +1,26 @@
 "use client";
 
-import Link from "next/link";
-
 import { motion } from "framer-motion";
 import { MoveRight } from "lucide-react";
+import Link from "next/link";
 
 import { cn } from "@/lib";
 
 interface RelatedService {
-  title: string;
   href: string;
+  title: string;
 }
 
 interface RelatedServicesProps {
-  title?: string;
-  services: RelatedService[];
   className?: string;
+  services: RelatedService[];
+  title?: string;
 }
 
 export function RelatedServices({
-  title = "Explore Related Solutions",
-  services,
   className,
+  services,
+  title = "Explore Related Solutions",
 }: RelatedServicesProps) {
   if (!services || services.length === 0) return null;
 
@@ -35,15 +34,15 @@ export function RelatedServices({
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <motion.div
-              key={index}
               initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              key={index}
+              transition={{ delay: index * 0.1, duration: 0.4 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
             >
               <Link
-                href={service.href}
                 className="group relative flex h-full flex-col justify-between overflow-hidden rounded-xl border border-gray-100 bg-white p-8 transition-all hover:border-brand-blue/30 hover:shadow-xl hover:shadow-brand-blue/5"
+                href={service.href}
               >
                 <div className="flex items-start justify-between">
                   <h3 className="font-heading text-xl font-bold text-brand-gray transition-colors group-hover:text-brand-blue">

@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib";
 
 interface ProofBarProps {
-  stats: string[];
   className?: string;
+  stats: string[];
 }
 
-export function ProofBar({ stats, className }: ProofBarProps) {
+export function ProofBar({ className, stats }: ProofBarProps) {
   if (!stats || stats.length === 0) return null;
 
   return (
@@ -22,8 +22,8 @@ export function ProofBar({ stats, className }: ProofBarProps) {
 
             return (
               <div
-                key={index}
                 className="flex flex-wrap items-center justify-center gap-x-12 gap-y-4"
+                key={index}
               >
                 {parts.map((part, pIndex) => {
                   const [value, ...labelParts] = part.split(" ");
@@ -31,12 +31,12 @@ export function ProofBar({ stats, className }: ProofBarProps) {
 
                   return (
                     <motion.div
-                      key={`${index}-${pIndex}`}
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: (index * parts.length + pIndex) * 0.1 }}
                       className="flex items-center gap-3"
+                      initial={{ opacity: 0, y: 10 }}
+                      key={`${index}-${pIndex}`}
+                      transition={{ delay: (index * parts.length + pIndex) * 0.1, duration: 0.5 }}
+                      viewport={{ once: true }}
+                      whileInView={{ opacity: 1, y: 0 }}
                     >
                       <span className="font-heading text-2xl font-bold text-brand-blue md:text-3xl">
                         {value}

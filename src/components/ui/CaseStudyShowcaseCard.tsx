@@ -1,59 +1,59 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import type { CaseStudyCardData } from "@/types/case-studies";
 
 import { cn } from "@/lib";
-import type { CaseStudyCardData } from "@/types/case-studies";
 
 import { Button } from "./Button";
 import Icon from "./Icon";
 
 interface CaseStudyShowcaseCardProps {
-  item: CaseStudyCardData;
   active: boolean;
-  ctaLabel: string;
-  onActivate?: () => void;
   className?: string;
+  ctaLabel: string;
+  item: CaseStudyCardData;
+  onActivate?: () => void;
 }
 
 export function CaseStudyShowcaseCard({
-  item,
   active,
-  ctaLabel,
-  onActivate,
   className,
+  ctaLabel,
+  item,
+  onActivate,
 }: CaseStudyShowcaseCardProps) {
   return (
     <motion.div
-      layout
-      transition={{ layout: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }}
-      onHoverStart={onActivate}
-      onFocusCapture={onActivate}
-      onClick={onActivate}
       className={cn(
         "group relative cursor-pointer overflow-hidden rounded-3xl",
         active ? "lg:max-w-none lg:flex-[3]" : "lg:max-w-[120px] lg:flex-[1]",
         className
       )}
+      layout
+      onClick={onActivate}
+      onFocusCapture={onActivate}
+      onHoverStart={onActivate}
       style={{
         height: active ? "100%" : "auto",
         minHeight: "100px",
       }}
+      transition={{ layout: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }}
     >
       <div className="absolute inset-0 h-full w-full">
         <Image
-          src={item.image}
           alt={item.title}
-          fill
-          sizes="(max-width: 1024px) 100vw, 40vw"
           className={cn(
             "object-cover transition-transform duration-1000",
             active ? "scale-105" : "scale-100 grayscale hover:grayscale-0"
           )}
+          fill
+          sizes="(max-width: 1024px) 100vw, 40vw"
+          src={item.image}
         />
         <div
           className={cn(
@@ -73,17 +73,17 @@ export function CaseStudyShowcaseCard({
               active ? "bg-brand-blue/90" : "group-hover:bg-brand-cyan/80 bg-white/10"
             )}
           >
-            <Icon name={item.icon} className="h-5 w-5 text-white" />
+            <Icon className="h-5 w-5 text-white" name={item.icon} />
           </div>
 
           <AnimatePresence mode="popLayout">
             {active ? (
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.3 }}
                 className="flex min-w-0 flex-1 flex-col"
+                exit={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.3 }}
               >
                 <div className="mb-3 flex flex-wrap gap-2">
                   <span className="w-max rounded-full bg-brand-blue px-3 py-1 text-xs font-bold tracking-wider text-white uppercase">
@@ -122,10 +122,10 @@ export function CaseStudyShowcaseCard({
         <AnimatePresence>
           {active ? null : (
             <motion.div
-              initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
               className="absolute bottom-8 left-0 hidden w-full justify-center lg:top-1/2 lg:bottom-auto lg:block lg:-translate-y-1/2 lg:-rotate-90"
+              exit={{ opacity: 0 }}
+              initial={{ opacity: 0 }}
             >
               <span className="font-heading font-semibold tracking-wider whitespace-nowrap text-white">
                 {item.inactiveLabel ?? item.client}
@@ -137,14 +137,14 @@ export function CaseStudyShowcaseCard({
         <AnimatePresence>
           {active && item.href ? (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              transition={{ delay: 0.2, duration: 0.3 }}
               className="absolute right-8 bottom-8"
+              exit={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }}
+              transition={{ delay: 0.2, duration: 0.3 }}
             >
               <Link href={item.href}>
-                <Button variant="primary" className="shadow-lg">
+                <Button className="shadow-lg" variant="primary">
                   {ctaLabel} <ArrowUpRight className="h-4 w-4" />
                 </Button>
               </Link>
@@ -155,11 +155,11 @@ export function CaseStudyShowcaseCard({
         <AnimatePresence>
           {active ? (
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              transition={{ delay: 0.3, duration: 0.4 }}
               className="absolute top-8 right-8 flex flex-col items-center rounded-2xl border border-white/20 bg-white/90 px-4 py-3 text-center shadow-lg backdrop-blur-md"
+              exit={{ opacity: 0, scale: 0.8 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              transition={{ delay: 0.3, duration: 0.4 }}
             >
               <span className="font-heading text-2xl font-bold text-brand-blue">{item.metric}</span>
               <span className="text-[10px] font-bold tracking-wider text-gray-500 uppercase">

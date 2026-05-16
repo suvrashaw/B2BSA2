@@ -1,23 +1,22 @@
 "use client";
 
+import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-import { useRouter } from "next/navigation";
-
-import { ArrowRight } from "lucide-react";
+import type { ContactContent } from "@/content/home";
 
 import { SelectInput } from "@/components/forms/SelectInput";
 import { TextareaInput } from "@/components/forms/TextareaInput";
 import { TextInput } from "@/components/forms/TextInput";
 import { Button } from "@/components/ui/Button";
-import type { ContactContent } from "@/content/home";
 
 export interface ContactFormProps {
-  form: ContactContent["form"];
   className?: string;
+  form: ContactContent["form"];
 }
 
-export function ContactForm({ form, className }: ContactFormProps) {
+export function ContactForm({ className, form }: ContactFormProps) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
@@ -37,8 +36,8 @@ export function ContactForm({ form, className }: ContactFormProps) {
             id="contact-first-name"
             label={form.firstNameLabel}
             placeholder={form.firstNamePlaceholder}
-            type="text"
             required
+            type="text"
           />
           {form.lastNameLabel && (
             <TextInput
@@ -75,16 +74,16 @@ export function ContactForm({ form, className }: ContactFormProps) {
           id="contact-email"
           label={form.emailLabel}
           placeholder={form.emailPlaceholder}
-          type="email"
           required
+          type="email"
         />
 
         {form.serviceLabel && form.serviceOptions && (
           <SelectInput
             id="contact-service"
             label={form.serviceLabel}
-            placeholder={form.servicePlaceholder}
             options={form.serviceOptions}
+            placeholder={form.servicePlaceholder}
           />
         )}
 
@@ -109,22 +108,22 @@ export function ContactForm({ form, className }: ContactFormProps) {
         {form.consentLabel && (
           <div className="flex items-start gap-3">
             <input
-              type="checkbox"
+              className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-brand-blue"
               id="contact-consent"
               required
-              className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-brand-blue"
+              type="checkbox"
             />
-            <label htmlFor="contact-consent" className="text-sm leading-snug text-gray-500">
+            <label className="text-sm leading-snug text-gray-500" htmlFor="contact-consent">
               {form.consentLabel}
             </label>
           </div>
         )}
 
         <Button
+          className="flex w-full items-center justify-center py-4 text-lg"
+          disabled={loading}
           type="submit"
           variant="primary"
-          disabled={loading}
-          className="flex w-full items-center justify-center py-4 text-lg"
         >
           {loading ? "Sending…" : form.ctaLabel}
           <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />

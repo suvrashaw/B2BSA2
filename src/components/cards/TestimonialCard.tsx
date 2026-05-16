@@ -1,27 +1,26 @@
-import Image from "next/image";
-
 import { Star } from "lucide-react";
+import Image from "next/image";
 
 import { cn } from "@/lib";
 
 export interface TestimonialCardProps {
-  name: string;
-  designation: string;
-  company: string;
-  rating: number;
-  quote: string;
-  image: string;
   className?: string;
+  company: string;
+  designation: string;
+  image: string;
+  name: string;
+  quote: string;
+  rating: number;
 }
 
 export function TestimonialCard({
-  name,
-  designation,
-  company,
-  rating,
-  quote,
-  image,
   className,
+  company,
+  designation,
+  image,
+  name,
+  quote,
+  rating,
 }: TestimonialCardProps) {
   return (
     <div
@@ -32,13 +31,13 @@ export function TestimonialCard({
     >
       <div className="flex items-center gap-4">
         <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-brand-blue">
-          <Image src={image} alt={name} fill sizes="56px" className="object-cover" />
+          <Image alt={name} className="object-cover" fill sizes="56px" src={image} />
         </div>
         <div>
           <p className="font-heading text-lg leading-tight font-bold text-gray-900">{name}</p>
           <div className="mt-1 flex gap-1">
             {Array.from({ length: rating }).map((_, i) => (
-              <Star key={i} className="h-3.5 w-3.5 fill-brand-blue text-brand-blue" />
+              <Star className="h-3.5 w-3.5 fill-brand-blue text-brand-blue" key={i} />
             ))}
           </div>
         </div>

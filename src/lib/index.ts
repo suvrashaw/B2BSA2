@@ -6,8 +6,8 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export {
+  buildBreadcrumbJsonLd,
+  buildFaqJsonLd,
   buildOrganizationJsonLd,
   buildServiceJsonLd,
-  buildFaqJsonLd,
-  buildBreadcrumbJsonLd,
 } from "@/lib/structured-data";

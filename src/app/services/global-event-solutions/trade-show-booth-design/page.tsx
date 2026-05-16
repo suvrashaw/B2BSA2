@@ -1,53 +1,56 @@
+import type { Metadata } from "next";
+
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
-import { getPageMetadata } from "@/content/pages";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
-  BOOTH_DESIGN_HERO,
-  BOOTH_DESIGN_WHY,
+  BOOTH_DESIGN_CASE_STUDIES,
   BOOTH_DESIGN_DELIVERABLES,
-  BOOTH_DESIGN_PROOF_BAR,
+  BOOTH_DESIGN_FAQ,
+  BOOTH_DESIGN_HERO,
+  BOOTH_DESIGN_PAGE,
   BOOTH_DESIGN_PRICING,
   BOOTH_DESIGN_PRICING_GUIDANCE,
   BOOTH_DESIGN_PROCESS,
-  BOOTH_DESIGN_CASE_STUDIES,
-  BOOTH_DESIGN_FAQ,
+  BOOTH_DESIGN_PROOF_BAR,
+  BOOTH_DESIGN_WHY,
 } from "@/content/services/detail/trade-show-booth-design";
+import { GES_PAGE } from "@/content/services/global-event-solutions";
 
-import type { Metadata } from "next";
+export const metadata: Metadata = getMarketingPageMetadata(BOOTH_DESIGN_PAGE);
 
-export const metadata: Metadata = getPageMetadata(
-  "/services/global-event-solutions/trade-show-booth-design"
-);
-
-export default function Page() {
+const Page = () => {
   return (
     <ServiceDetail
-      canonicalPath="/services/global-event-solutions/trade-show-booth-design"
-      hero={BOOTH_DESIGN_HERO}
-      proofBar={BOOTH_DESIGN_PROOF_BAR}
-      why={BOOTH_DESIGN_WHY}
+      caseStudies={BOOTH_DESIGN_CASE_STUDIES}
+      ctaBanner={{
+        ctaHref: "/contact",
+        ctaLabel: "Start Your Design Project",
+        description: "Build a custom trade show booth engineered for commercial momentum.",
+        title: "Every square foot of your booth should earn its place.",
+      }}
       deliverables={BOOTH_DESIGN_DELIVERABLES}
+      faq={BOOTH_DESIGN_FAQ}
+      hero={BOOTH_DESIGN_HERO}
+      page={BOOTH_DESIGN_PAGE}
+      parentPage={GES_PAGE}
       pricing={BOOTH_DESIGN_PRICING}
       pricingGuidance={BOOTH_DESIGN_PRICING_GUIDANCE}
       process={BOOTH_DESIGN_PROCESS}
-      caseStudies={BOOTH_DESIGN_CASE_STUDIES}
-      faq={BOOTH_DESIGN_FAQ}
-      ctaBanner={{
-        title: "Every square foot of your booth should earn its place.",
-        description: "Build a custom trade show booth engineered for commercial momentum.",
-        ctaLabel: "Start Your Design Project",
-        ctaHref: "/contact",
-      }}
+      proofBar={BOOTH_DESIGN_PROOF_BAR}
       relatedServices={[
         {
-          title: "Event Lead Generation",
           href: "/services/global-event-solutions/event-lead-generation",
+          title: "Event Lead Generation",
         },
-        { title: "Custom Events", href: "/services/global-event-solutions/custom-events" },
+        { href: "/services/global-event-solutions/custom-events", title: "Custom Events" },
         {
-          title: "Event Booth Rental",
           href: "/services/global-event-solutions/event-booth-rental",
+          title: "Event Booth Rental",
         },
       ]}
+      why={BOOTH_DESIGN_WHY}
     />
   );
 }
+
+export default Page;

@@ -6,26 +6,10 @@ import { Heading } from "@/components/ui/Heading";
 import Icon from "@/components/ui/Icon";
 import { HOME_WHO_WE_ARE_CONTENT, type WhoWeAreContent, type WhoWeAreStat } from "@/content/home";
 
-function StatCard({ stat }: { stat: WhoWeAreStat }) {
-  return (
-    <div
-      className={`relative overflow-hidden rounded-[4px] p-8 shadow-lg ${stat.bg} border border-transparent text-white`}
-    >
-      <div className="relative z-10">
-        <div className="mb-4 text-sm font-bold opacity-90">{stat.label}</div>
-        <div className="flex items-center justify-between">
-          <div className="font-heading text-4xl font-bold">{stat.value}</div>
-          <Icon name={stat.icon} className="h-6 w-6 opacity-50" />
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export interface WhoWeAreProps {
   attribution?: WhoWeAreContent["attribution"];
-  heading?: WhoWeAreContent["heading"];
   content?: WhoWeAreContent;
+  heading?: WhoWeAreContent["heading"];
   items?: Array<{
     bg?: string;
     icon?: string;
@@ -65,7 +49,7 @@ export function WhoWeAre({
   const col2Stats = [...offsetStats, ...offsetStats];
 
   return (
-    <section id="about" className="overflow-hidden bg-white py-20">
+    <section className="overflow-hidden bg-white py-20" id="about">
       <div className="container mx-auto grid items-center gap-16 px-8 lg:grid-cols-2">
         {/* Left Side: Content */}
         <div className="flex flex-col items-start space-y-12 text-left">
@@ -123,5 +107,21 @@ export function WhoWeAre({
         </div>
       </div>
     </section>
+  );
+}
+
+function StatCard({ stat }: { stat: WhoWeAreStat }) {
+  return (
+    <div
+      className={`relative overflow-hidden rounded-[4px] p-8 shadow-lg ${stat.bg} border border-transparent text-white`}
+    >
+      <div className="relative z-10">
+        <div className="mb-4 text-sm font-bold opacity-90">{stat.label}</div>
+        <div className="flex items-center justify-between">
+          <div className="font-heading text-4xl font-bold">{stat.value}</div>
+          <Icon className="h-6 w-6 opacity-50" name={stat.icon} />
+        </div>
+      </div>
+    </div>
   );
 }

@@ -1,25 +1,25 @@
-import { resolvePageHref } from "./resolve";
-
 import type { PageId } from "./types";
 
+import { resolvePageHref } from "./resolve";
+
 export interface NavLink {
-  name: string;
   href: string;
+  name: string;
   pageId?: PageId;
 }
 
 export interface ServiceNavGroup {
-  name: string;
   href: string;
-  pageId: PageId;
   links: NavLink[];
+  name: string;
+  pageId: PageId;
 }
 
 function navLink(name: string, pageId: PageId): NavLink {
   return {
+    href: resolvePageHref(pageId),
     name,
     pageId,
-    href: resolvePageHref(pageId),
   };
 }
 
@@ -43,10 +43,10 @@ export const tradeShowLinks: NavLink[] = [
 
 function serviceGroup(name: string, pageId: PageId, links: NavLink[]): ServiceNavGroup {
   return {
-    name,
-    pageId,
     href: resolvePageHref(pageId),
     links,
+    name,
+    pageId,
   };
 }
 

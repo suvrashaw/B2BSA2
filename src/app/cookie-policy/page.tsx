@@ -1,34 +1,34 @@
+import type { Metadata } from "next";
+
 import { getCmsPageMetadata } from "@/cms/mock/seo";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Heading } from "@/components/ui/Heading";
 
-import type { Metadata } from "next";
-
 export const metadata: Metadata = getCmsPageMetadata("cookie-policy");
 
 const cookieSections = [
   {
-    title: "Session Cookies",
     body: "Session cookies help the site load securely, remember temporary interactions, and keep forms and navigation working during a single browsing session.",
+    title: "Session Cookies",
   },
   {
-    title: "Analytics Cookies",
     body: "Analytics cookies help us understand aggregate website usage, including page performance, traffic patterns, and the content visitors find most useful. We use this information to improve the experience and measure marketing effectiveness.",
+    title: "Analytics Cookies",
   },
   {
-    title: "Functional Cookies",
     body: "Functional cookies support preferences and enhanced site behavior, such as smoother interactions, embedded media, and interface improvements that make the website easier to use.",
+    title: "Functional Cookies",
   },
 ];
 
-export default function Page() {
+const Page = () => {
   return (
     <main className="min-h-screen bg-white">
       <Header />
       <section className="pt-40 pb-24">
         <div className="container mx-auto max-w-4xl px-8">
-          <Heading as="h1" highlight="Cookie" className="mb-6">
+          <Heading as="h1" className="mb-6" highlight="Cookie">
             Cookie Policy
           </Heading>
           <p className="mb-12 max-w-3xl text-xl leading-relaxed text-gray-600">
@@ -39,14 +39,14 @@ export default function Page() {
           <div className="space-y-10">
             {cookieSections.map((section, index) => (
               <section
-                key={section.title}
                 className="rounded-2xl border border-gray-100 bg-brand-gray/40 p-8"
+                key={section.title}
               >
                 <Heading
                   as="h2"
+                  className="mb-4 text-2xl lg:text-3xl"
                   highlight={section.title.split(" ")[0]}
                   highlightVariant={index % 2 === 0 ? "blue" : "cyan"}
-                  className="mb-4 text-2xl lg:text-3xl"
                 >
                   {section.title}
                 </Heading>
@@ -58,8 +58,8 @@ export default function Page() {
           <section className="mt-12 rounded-2xl bg-brand-blue p-8 text-white">
             <Heading
               as="h2"
-              preserveClassName
               className="mb-4 font-heading text-2xl leading-tight font-bold text-white lg:text-3xl"
+              preserveClassName
             >
               Managing Your Cookie Preferences
             </Heading>
@@ -75,3 +75,5 @@ export default function Page() {
     </main>
   );
 }
+
+export default Page;

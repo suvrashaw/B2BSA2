@@ -1,11 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import Image from "next/image";
-
-import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
+import Image from "next/image";
+import { useRef, useState } from "react";
 
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
@@ -32,8 +30,8 @@ export function WhyChooseUs({
   const activeReason = reasons[resolvedActiveIndex];
 
   const { scrollYProgress } = useScroll({
-    target: containerRef,
     offset: ["start center", "end center"],
+    target: containerRef,
   });
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
@@ -47,7 +45,7 @@ export function WhyChooseUs({
   });
 
   return (
-    <section ref={containerRef} className="relative bg-brand-gray">
+    <section className="relative bg-brand-gray" ref={containerRef}>
       {/* 
         The container needs to be tall enough to allow scrolling.
       */}
@@ -71,12 +69,12 @@ export function WhyChooseUs({
             {activeReason && (
               <AnimatePresence mode="wait">
                 <motion.div
-                  key={resolvedActiveIndex}
-                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
                   className="absolute inset-0 flex flex-col items-start justify-center text-left"
+                  exit={{ opacity: 0, y: -20 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  key={resolvedActiveIndex}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
                 >
                   <div className="mb-4 flex items-center gap-3 text-left">
                     <CheckCircle2 className="h-6 w-6 shrink-0 text-brand-blue" />
@@ -96,11 +94,11 @@ export function WhyChooseUs({
           <div className="flex w-full flex-col pb-[20vh] md:w-1/2">
             {reasons.map((reason) => (
               <div
-                key={reason.id}
                 className="flex h-[80vh] w-full items-center justify-center p-8 md:h-screen"
+                key={reason.id}
               >
                 <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-gray-200 shadow-2xl md:aspect-square">
-                  <Image src={reason.image} alt={reason.title} fill className="object-cover" />
+                  <Image alt={reason.title} className="object-cover" fill src={reason.image} />
                   <div className="absolute inset-0 bg-brand-blue/20 mix-blend-overlay" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
 

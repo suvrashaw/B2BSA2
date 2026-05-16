@@ -2,55 +2,54 @@
 
 import type { ReactNode } from "react";
 
-import Image from "next/image";
-import Link from "next/link";
-
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Globe } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/Button";
 import { Heading } from "@/components/ui/Heading";
 
 export interface HeroProps {
-  showPreloader?: boolean;
-  title?: string | ReactNode;
+  badge?: string;
+  description?: string;
+  eyebrow?: string;
   highlight?: string;
   highlightVariant?: "blue" | "cyan";
-  subtitle?: string;
-  description?: string;
-  badge?: string;
-  eyebrow?: string;
   image?:
-    | string
     | {
-        src: string;
         alt?: string;
         loaderAlt?: string;
-      };
-  primaryCtaLabel?: string | null;
-  secondaryCtaLabel?: string | null;
+        src: string;
+      }
+    | string;
+  motionPhrases?: { color: string; id: string; text: string; }[];
+  primaryCtaLabel?: null | string;
+  secondaryCtaLabel?: null | string;
+  showPreloader?: boolean;
   stat?: {
-    value: string;
-    label: string;
     icon?: string;
+    label: string;
+    value: string;
   } | null;
-  motionPhrases?: { id: string; text: string; color: string }[];
+  subtitle?: string;
+  title?: ReactNode | string;
 }
 
 export function Hero({
-  title = "Global B2B Event, Booth & Lead Generation Experts",
+  description,
   highlight,
   highlightVariant = "blue",
-  subtitle = "End-to-End Solutions That Drive Pipeline and Revenue",
-  description,
   image = "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000",
   primaryCtaLabel = "Explore Our Work",
   secondaryCtaLabel = "Our Services",
   stat = {
-    value: "40+",
-    label: "Countries Served",
     icon: "Globe",
+    label: "Countries Served",
+    value: "40+",
   },
+  subtitle = "End-to-End Solutions That Drive Pipeline and Revenue",
+  title = "Global B2B Event, Booth & Lead Generation Experts",
 }: HeroProps) {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 150]);
@@ -68,10 +67,10 @@ export function Hero({
 
       <div className="relative z-10 container mx-auto grid items-center gap-12 px-8 lg:grid-cols-2">
         <motion.div
-          initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-2xl"
+          initial={{ opacity: 0, x: -30 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
           <Heading
             as="h1"
@@ -103,23 +102,23 @@ export function Hero({
 
         <div className="relative hidden h-[600px] w-full lg:block">
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="absolute inset-0 overflow-hidden rounded-2xl border-8 border-white shadow-2xl"
+            initial={{ opacity: 0, x: 30 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
-            <motion.div style={{ y: y1 }} className="absolute inset-y-[-150px] right-0 left-0">
-              <Image src={imageSrc} alt={imageAlt} fill className="object-cover" priority />
+            <motion.div className="absolute inset-y-[-150px] right-0 left-0" style={{ y: y1 }}>
+              <Image alt={imageAlt} className="object-cover" fill priority src={imageSrc} />
             </motion.div>
             <div className="pointer-events-none absolute inset-0 bg-brand-blue/5" />
 
             {/* Floating stat card */}
             {stat ? (
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
                 className="absolute bottom-12 left-[-40px] rounded-xl border border-gray-100 bg-white p-8 shadow-2xl backdrop-blur-md"
+                initial={{ opacity: 0, y: 20 }}
+                transition={{ delay: 0.6, duration: 0.6 }}
               >
                 <div className="flex items-center gap-6">
                   <div className="flex h-14 w-14 items-center justify-center rounded-full bg-brand-blue/10">

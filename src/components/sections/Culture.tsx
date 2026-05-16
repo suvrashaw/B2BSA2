@@ -6,45 +6,45 @@ import { cn } from "@/lib";
 
 const PARALLAX_IMAGES = [
   {
-    src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1280&h=720&fit=crop&q=80",
     alt: "Team collaboration",
+    src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1280&h=720&fit=crop&q=80",
   },
   {
-    src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1280&h=720&fit=crop&q=80",
     alt: "Office culture",
+    src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1280&h=720&fit=crop&q=80",
   },
   {
-    src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=800&fit=crop&q=80",
     alt: "Strategy meeting",
+    src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=800&fit=crop&q=80",
   },
   {
-    src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1280&h=720&fit=crop&q=80",
     alt: "Team discussion",
+    src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1280&h=720&fit=crop&q=80",
   },
   {
-    src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=800&fit=crop&q=80",
     alt: "Working together",
+    src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=800&fit=crop&q=80",
   },
   {
-    src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1280&h=720&fit=crop&q=80",
     alt: "Diverse team",
+    src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1280&h=720&fit=crop&q=80",
   },
   {
-    src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1280&h=720&fit=crop&q=80",
     alt: "Success celebration",
+    src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1280&h=720&fit=crop&q=80",
   },
 ];
 
 export interface CultureData {
-  eyebrow: string;
-  heading: string | React.ReactNode;
   description: string;
-  reasons: { id: string; title: string; description: string; image: string }[];
+  eyebrow: string;
+  heading: React.ReactNode | string;
+  reasons: { description: string; id: string; image: string; title: string; }[];
 }
 
 export const Culture = ({ data }: { data: CultureData }) => {
   const parallaxImages = [
-    ...data.reasons.map((r) => ({ src: r.image, alt: r.title })),
+    ...data.reasons.map((r) => ({ alt: r.title, src: r.image })),
     ...PARALLAX_IMAGES.slice(data.reasons.length),
   ].slice(0, 7);
 
@@ -64,10 +64,10 @@ export const Culture = ({ data }: { data: CultureData }) => {
           {data.eyebrow}
         </div>
         <WhisperText
-          text={typeof data.heading === "string" ? data.heading : "What We Believe In"}
-          highlights={["Believe"]}
-          highlightColor="blue"
           className="mb-6 font-heading text-4xl font-bold text-brand-charcoal transition-colors duration-500 md:text-5xl lg:text-6xl"
+          highlightColor="blue"
+          highlights={["Believe"]}
+          text={typeof data.heading === "string" ? data.heading : "What We Believe In"}
         />
         <p className="max-w-2xl text-lg leading-relaxed font-bold tracking-widest text-brand-charcoal/70 uppercase transition-colors duration-500">
           {data.description}

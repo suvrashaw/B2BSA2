@@ -6,31 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "lint:styles": "stylelint \"src/**/*.css\"",
+    "lint": "eslint --config configs/eslint.config.mjs",
+    "lint:styles": "stylelint --config configs/.stylelintrc.json \"src/**/*.css\"",
     "partytown:copy": "partytown copylib public/~partytown",
-    "format": "prettier --write \"src/**/*.{ts,tsx,css,json}\"",
-    "format:check": "prettier --check \"src/**/*.{ts,tsx,css,json}\"",
+    "format": "prettier --config configs/.prettierrc --write \"src/**/*.{ts,tsx,css,json}\"",
+    "format:check": "prettier --config configs/.prettierrc --check \"src/**/*.{ts,tsx,css,json}\"",
     "typecheck": "tsc --noEmit --incremental false",
     "validate-cms-links": "node --no-warnings scripts/validate-cms-links.ts",
     "check": "npm run format:check && npm run lint && npm run lint:styles && npm run typecheck && npm run build",
     "analyze": "ANALYZE=true npm run build",
-    "prepare": "husky",
-    "knip": "knip",
-    "depcheck": "depcheck"
-  },
-  "lint-staged": {
-    "src/**/*.{ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "src/**/*.css": [
-      "stylelint --fix",
-      "prettier --write"
-    ],
-    "*.json": [
-      "prettier --write"
-    ]
+    "knip": "knip --config configs/knip.json",
+    "depcheck": "depcheck --config configs/.depcheckrc",
+    "audit": "lighthouse http://localhost:3000 --output html --output-path ./reports/lighthouse-report.html --view",
+    "test": "playwright test --config configs/playwright.config.ts",
+    "test:ui": "playwright test --config configs/playwright.config.ts --ui"
   },
   "dependencies": {
     "@builder.io/partytown": "^0.10.3",
@@ -51,9 +40,8 @@
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.5.3",
-    "@commitlint/config-conventional": "^20.5.3",
     "@next/bundle-analyzer": "^16.2.5",
+    "@playwright/test": "^1.60.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -61,22 +49,47 @@
     "depcheck": "^1.4.7",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-check-file": "^3.3.1",
+    "eslint-plugin-compat": "^7.0.2",
+    "eslint-plugin-depend": "^1.5.0",
     "eslint-plugin-import-x": "^4.16.2",
+    "eslint-plugin-jsonc": "^3.1.2",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-n": "^18.0.1",
+    "eslint-plugin-no-constructor-bind": "^2.0.4",
+    "eslint-plugin-no-relative-import-paths": "^1.6.1",
     "eslint-plugin-no-secrets": "^2.3.3",
+    "eslint-plugin-no-use-extend-native": "^0.7.3",
+    "eslint-plugin-perfectionist": "^5.9.0",
+    "eslint-plugin-playwright": "^2.10.2",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-promise": "^7.3.0",
+    "eslint-plugin-react-perf": "^3.3.3",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "eslint-plugin-regexp": "^3.1.0",
     "eslint-plugin-sonarjs": "^4.0.3",
     "eslint-plugin-tailwindcss": "^3.18.3",
     "eslint-plugin-unicorn": "^64.0.0",
     "eslint-plugin-unused-imports": "^4.4.1",
-    "husky": "^9.1.7",
+    "eslint-plugin-validate-jsx-nesting": "^0.1.1",
     "knip": "^6.12.0",
-    "lint-staged": "^17.0.2",
+    "lighthouse": "^13.3.0",
     "prettier": "^3.8.3",
     "stylelint": "^17.11.0",
     "stylelint-config-clean-order": "^8.0.1",
     "stylelint-config-standard": "^40.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^3.0.0",
+    "stylelint-high-performance-animation": "^2.0.0",
+    "stylelint-no-unsupported-browser-features": "^8.1.1",
+    "stylelint-prettier": "^5.0.3",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "browserslist": [
+    ">0.3%",
+    "not dead",
+    "not op_mini all"
+  ]
 }

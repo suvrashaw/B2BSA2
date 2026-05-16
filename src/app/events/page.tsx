@@ -1,4 +1,5 @@
-import { getCmsPageMetadata } from "@/cms/mock/seo";
+import type { Metadata } from "next";
+
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CaseStudies } from "@/components/sections/CaseStudies";
@@ -9,20 +10,20 @@ import { UpcomingEvents } from "@/components/sections/UpcomingEvents";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import {
-  EVENTS_HERO,
-  EVENTS_UPCOMING,
-  EVENTS_STATS,
   EVENTS_CASE_STUDIES,
-  EVENTS_WHY,
-  EVENTS_TESTIMONIALS,
   EVENTS_CONTACT,
+  EVENTS_HERO,
+  EVENTS_PAGE,
+  EVENTS_STATS,
+  EVENTS_TESTIMONIALS,
+  EVENTS_UPCOMING,
+  EVENTS_WHY,
 } from "@/content/events";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
 
-import type { Metadata } from "next";
+export const metadata: Metadata = getMarketingPageMetadata(EVENTS_PAGE);
 
-export const metadata: Metadata = getCmsPageMetadata("events");
-
-export default function Page() {
+const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <Header />
@@ -37,3 +38,5 @@ export default function Page() {
     </main>
   );
 }
+
+export default Page;

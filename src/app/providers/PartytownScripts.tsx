@@ -10,11 +10,10 @@ export function PartytownScripts() {
       {gaId ? (
         <>
           <script
-            type="text/partytown"
             src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+            type="text/partytown"
           />
           <script
-            type="text/partytown"
             dangerouslySetInnerHTML={{
               __html: `
                 window.dataLayer = window.dataLayer || [];
@@ -23,6 +22,7 @@ export function PartytownScripts() {
                 window.gtag('config', '${gaId}', { send_page_view: true });
               `,
             }}
+            type="text/partytown"
           />
         </>
       ) : null}

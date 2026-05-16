@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { ClientLogos } from "@/components/sections/ClientLogos";
@@ -5,14 +7,18 @@ import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQ } from "@/components/sections/FAQ";
 import { Hero } from "@/components/sections/Hero";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
-import { CONTACT_HERO, CONTACT_WHO_WE_ARE, CONTACT_FAQ, CONTACT_FORM } from "@/content/contact";
-import { getPageMetadata } from "@/content/pages";
+import {
+  CONTACT_FAQ,
+  CONTACT_FORM,
+  CONTACT_HERO,
+  CONTACT_PAGE,
+  CONTACT_WHO_WE_ARE,
+} from "@/content/contact";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
 
-import type { Metadata } from "next";
+export const metadata: Metadata = getMarketingPageMetadata(CONTACT_PAGE);
 
-export const metadata: Metadata = getPageMetadata("/contact");
-
-export default function Page() {
+const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <Header />
@@ -25,3 +31,5 @@ export default function Page() {
     </main>
   );
 }
+
+export default Page;

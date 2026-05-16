@@ -1,18 +1,17 @@
 "use client";
 
+import { motion, useAnimationFrame, useMotionValue, useTransform, wrap } from "framer-motion";
 import { Fragment, useState } from "react";
 
-import { motion, useAnimationFrame, useMotionValue, useTransform, wrap } from "framer-motion";
-
 import { Heading } from "@/components/ui/Heading";
-import { HOME_CLIENT_LOGOS, type ClientLogoItem } from "@/content/home";
+import { type ClientLogoItem, HOME_CLIENT_LOGOS } from "@/content/home";
 
 export interface ClientLogosProps {
+  heading?: string;
   logos?: ClientLogoItem[];
+  overlap?: boolean;
   speed?: number;
   wheelSpeed?: number;
-  heading?: string;
-  overlap?: boolean;
 }
 
 function useLogoMarquee(speed: number, wheelSpeed: number) {
@@ -71,7 +70,7 @@ const SyngeneLogo = () => (
 
 const AirtelLogo = () => (
   <div className="flex cursor-pointer items-center gap-1.5 transition-all duration-300 hover:scale-125">
-    <svg viewBox="0 0 24 24" className="h-7 w-7 fill-[#ff0000]">
+    <svg className="h-7 w-7 fill-[#ff0000]" viewBox="0 0 24 24">
       <path
         d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
         opacity="0.8"
@@ -174,26 +173,26 @@ const CaseStudiesLabel = () => (
 );
 
 const LOGO_COMPONENTS: Record<string, React.FC> = {
-  singlestore: SingleStoreLogo,
-  temenos: TemenosLogo,
-  worldpay: WorldpayLogo,
-  syngene: SyngeneLogo,
   airtel: AirtelLogo,
-  infosys: InfosysLogo,
-  strategy: StrategyLabel,
-  events: EventsLabel,
-  media: MediaLabel,
-  "lead-gen": LeadGenLabel,
-  seo: SEOLabel,
-  research: ResearchLabel,
+  "booth-design": BoothDesignLabel,
+  "case-studies": CaseStudiesLabel,
   data: DataLabel,
   "event-strategy": EventStrategyLabel,
-  "booth-design": BoothDesignLabel,
-  "performance-marketing": PerformanceMarketingLabel,
-  "video-production": VideoProductionLabel,
-  "market-research": MarketResearchLabel,
+  events: EventsLabel,
+  infosys: InfosysLogo,
+  "lead-gen": LeadGenLabel,
   "lead-generation": LeadGenerationLabel,
-  "case-studies": CaseStudiesLabel,
+  "market-research": MarketResearchLabel,
+  media: MediaLabel,
+  "performance-marketing": PerformanceMarketingLabel,
+  research: ResearchLabel,
+  seo: SEOLabel,
+  singlestore: SingleStoreLogo,
+  strategy: StrategyLabel,
+  syngene: SyngeneLogo,
+  temenos: TemenosLogo,
+  "video-production": VideoProductionLabel,
+  worldpay: WorldpayLogo,
 };
 
 const LogosRow = ({ logos }: { logos: ClientLogoItem[] }) => (
@@ -210,11 +209,11 @@ const LogosRow = ({ logos }: { logos: ClientLogoItem[] }) => (
 );
 
 export function ClientLogos({
+  heading = "Trusted by Leading Brands for Trade Show & Exhibition Solutions",
   logos = HOME_CLIENT_LOGOS,
+  overlap = true,
   speed = 4,
   wheelSpeed = 0.05,
-  heading = "Trusted by Leading Brands for Trade Show & Exhibition Solutions",
-  overlap = true,
 }: ClientLogosProps = {}) {
   const { handleWheel, setIsHovered, x } = useLogoMarquee(speed, wheelSpeed);
 
@@ -225,8 +224,8 @@ export function ClientLogos({
       {heading && (
         <Heading
           as="h4"
-          preserveClassName
           className="mb-4 pt-2 text-center text-sm font-semibold tracking-widest text-gray-400 uppercase"
+          preserveClassName
         >
           {heading}
         </Heading>
@@ -241,7 +240,7 @@ export function ClientLogos({
         <div className="pointer-events-none absolute top-0 bottom-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent" />
         <div className="pointer-events-none absolute top-0 right-0 bottom-0 z-10 w-16 bg-gradient-to-l from-white to-transparent" />
 
-        <motion.div style={{ x }} className="flex w-max cursor-grab active:cursor-grabbing">
+        <motion.div className="flex w-max cursor-grab active:cursor-grabbing" style={{ x }}>
           {/* We render the row twice so it seamlessly loops when it translates -50% */}
           <div className="flex items-center gap-16 px-8 md:gap-24 md:px-12">
             <LogosRow logos={logos} />

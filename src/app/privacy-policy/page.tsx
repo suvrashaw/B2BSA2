@@ -1,13 +1,13 @@
+import type { Metadata } from "next";
+
 import { getCmsPageMetadata } from "@/cms/mock/seo";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Heading } from "@/components/ui/Heading";
 
-import type { Metadata } from "next";
-
 export const metadata: Metadata = getCmsPageMetadata("privacy-policy");
 
-export default function Page() {
+const Page = () => {
   return (
     <main className="min-h-screen bg-white ">
       <Header />
@@ -15,15 +15,15 @@ export default function Page() {
         <div className="container mx-auto max-w-4xl px-8">
           <Heading
             as="h1"
-            preserveClassName
             className="mb-12 font-heading text-4xl font-bold md:text-6xl"
+            preserveClassName
           >
             Privacy Policy
           </Heading>
           <div className="prose prose-lg prose-slate max-w-none">
             <p className="mb-12 text-xl text-gray-500">Last Updated: May 2024</p>
             <section className="mb-12">
-              <Heading as="h2" preserveClassName className="mb-6 text-2xl font-bold">
+              <Heading as="h2" className="mb-6 text-2xl font-bold" preserveClassName>
                 1. Information We Collect
               </Heading>
               <p className="mb-4 leading-relaxed text-gray-600">
@@ -33,7 +33,7 @@ export default function Page() {
               </p>
             </section>
             <section className="mb-12">
-              <Heading as="h2" preserveClassName className="mb-6 text-2xl font-bold">
+              <Heading as="h2" className="mb-6 text-2xl font-bold" preserveClassName>
                 2. How We Use Your Information
               </Heading>
               <p className="mb-4 leading-relaxed text-gray-600">
@@ -43,7 +43,7 @@ export default function Page() {
               </p>
             </section>
             <section className="mb-12">
-              <Heading as="h2" preserveClassName className="mb-6 text-2xl font-bold">
+              <Heading as="h2" className="mb-6 text-2xl font-bold" preserveClassName>
                 3. Data Security
               </Heading>
               <p className="mb-4 leading-relaxed text-gray-600">
@@ -53,7 +53,7 @@ export default function Page() {
               </p>
             </section>
             <section className="mb-12">
-              <Heading as="h2" preserveClassName className="mb-6 text-2xl font-bold">
+              <Heading as="h2" className="mb-6 text-2xl font-bold" preserveClassName>
                 4. Cookies
               </Heading>
               <p className="mb-4 leading-relaxed text-gray-600">
@@ -63,7 +63,7 @@ export default function Page() {
               </p>
             </section>
             <section className="mb-12">
-              <Heading as="h2" preserveClassName className="mb-6 text-2xl font-bold">
+              <Heading as="h2" className="mb-6 text-2xl font-bold" preserveClassName>
                 5. Contact Us
               </Heading>
               <p className="leading-relaxed text-gray-600">
@@ -78,3 +78,5 @@ export default function Page() {
     </main>
   );
 }
+
+export default Page;

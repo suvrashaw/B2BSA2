@@ -1,13 +1,11 @@
 "use client";
 
-import { useRef } from "react";
-
-import Image from "next/image";
-import Link from "next/link";
-
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
+import Image from "next/image";
+import Link from "next/link";
+import { useRef } from "react";
+import { FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 import { Button } from "@/components/ui/Button";
 import { Globe } from "@/components/ui/Globe";
@@ -17,25 +15,25 @@ import { cn } from "@/lib";
 
 const socialLinks = [
   {
-    name: "LinkedIn",
     href: "https://www.linkedin.com/company/b2b-sales-arrow/",
     icon: FaLinkedinIn,
+    name: "LinkedIn",
   },
   {
-    name: "Twitter",
     icon: FaTwitter,
+    name: "Twitter",
   },
   {
-    name: "Instagram",
     icon: FaInstagram,
+    name: "Instagram",
   },
 ];
 
 export function Footer() {
   const containerRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
-    target: containerRef,
     offset: ["start start", "end end"],
+    target: containerRef,
   });
 
   // Globe Animation: Start large in the center, shrink down and move up slightly
@@ -48,7 +46,7 @@ export function Footer() {
   const contentBgOpacity = useTransform(scrollYProgress, [0.5, 1], [0.8, 1]);
 
   return (
-    <footer ref={containerRef} className="relative z-0 h-[200vh] bg-brand-blue">
+    <footer className="relative z-0 h-[200vh] bg-brand-blue" ref={containerRef}>
       <div className="sticky top-0 flex h-screen w-full flex-col justify-between overflow-hidden">
         {/* 1. Global Presence Slider Section (Fixed at top) */}
         <div className="pointer-events-none absolute top-0 right-0 left-0 z-20 bg-linear-to-b from-brand-blue via-brand-blue/80 to-transparent pt-12 pb-24">
@@ -60,8 +58,8 @@ export function Footer() {
 
         {/* 2. Interactive 3D Globe Centerpiece (Background layer) */}
         <motion.div
-          style={{ scale: globeScale, y: globeY }}
           className="absolute inset-0 z-0 flex origin-center items-center justify-center"
+          style={{ scale: globeScale, y: globeY }}
         >
           {/* We ensure it's fully interactive when dragged */}
           <div className="flex h-[min(62vh,800px)] w-[min(92vw,800px)] items-center justify-center">
@@ -71,27 +69,27 @@ export function Footer() {
 
         {/* 3. Main Footer Links Area (Slides up from bottom) */}
         <motion.div
-          style={{ y: contentY }}
           className="absolute right-0 bottom-0 left-0 z-10 w-full"
+          style={{ y: contentY }}
         >
           <motion.div
-            style={{ opacity: contentBgOpacity }}
             className="absolute inset-0 -z-10 bg-linear-to-t from-brand-blue via-brand-blue/95 to-brand-blue/40 backdrop-blur-sm"
+            style={{ opacity: contentBgOpacity }}
           />
           <div className="relative container mx-auto px-8 pt-32 pb-8">
             {/* Row 1: Brand + Navigation + Stay Ahead */}
             <div className="mb-12 grid gap-12 lg:grid-cols-12">
               <div className="lg:col-span-6">
                 <Link
-                  href="/"
                   className="relative mb-8 block h-12 w-48 transition-opacity hover:opacity-90"
+                  href="/"
                 >
                   <Image
-                    src="/logo.png"
                     alt="B2B Sales Arrow"
+                    className="rounded-md bg-transparent object-contain object-left brightness-0 invert"
                     fill
                     sizes="192px"
-                    className="rounded-md bg-transparent object-contain object-left brightness-0 invert"
+                    src="/logo.png"
                   />
                 </Link>
                 <h2 className="mb-3 text-lg font-bold text-white!">
@@ -104,8 +102,8 @@ export function Footer() {
                 <div className="mb-6 space-y-1.5 text-sm text-gray-400">
                   <p>
                     <a
-                      href="mailto:info@b2bsalesarrow.com"
                       className="transition-colors hover:text-brand-primary"
+                      href="mailto:info@b2bsalesarrow.com"
                     >
                       info@b2bsalesarrow.com
                     </a>
@@ -123,12 +121,12 @@ export function Footer() {
                     if (item.href) {
                       return (
                         <a
-                          key={item.name}
-                          href={item.href}
-                          target="_blank"
-                          rel="noreferrer"
                           aria-label={`Visit B2B Sales Arrow on ${item.name}`}
                           className={className}
+                          href={item.href}
+                          key={item.name}
+                          rel="noreferrer"
+                          target="_blank"
                         >
                           <Icon className="h-4 w-4" />
                         </a>
@@ -137,13 +135,13 @@ export function Footer() {
 
                     return (
                       <span
-                        key={item.name}
                         aria-disabled="true"
                         aria-label={`${item.name} profile coming soon`}
                         className={cn(
                           className,
                           "cursor-not-allowed opacity-60 hover:bg-brand-gray hover:text-brand-blue"
                         )}
+                        key={item.name}
                       >
                         <Icon className="h-4 w-4" />
                       </span>
@@ -160,8 +158,8 @@ export function Footer() {
                   {footerNavigation.map((item) => (
                     <li key={item.name}>
                       <Link
-                        href={item.href}
                         className="text-sm font-medium text-gray-300 transition-colors hover:text-white"
+                        href={item.href}
                       >
                         {item.name}
                       </Link>
@@ -179,14 +177,14 @@ export function Footer() {
                 </p>
                 <div className="pointer-events-auto relative">
                   <input
-                    type="email"
-                    placeholder="Work Email"
                     className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white transition-colors placeholder:text-gray-500 focus:border-brand-primary focus:outline-none"
+                    placeholder="Work Email"
+                    type="email"
                   />
                   <Button
-                    variant="primary"
-                    size="icon"
                     className="absolute top-1/2 right-2 h-8 w-8 -translate-y-1/2"
+                    size="icon"
+                    variant="primary"
                   >
                     <ArrowRight className="h-4 w-4 text-white" />
                   </Button>
@@ -199,8 +197,8 @@ export function Footer() {
               {footerServiceGroups.map((group) => (
                 <div key={group.name}>
                   <Link
-                    href={group.href}
                     className="mb-3 block text-sm font-semibold text-white transition-colors hover:text-brand-blue"
+                    href={group.href}
                   >
                     {group.name}
                   </Link>
@@ -208,8 +206,8 @@ export function Footer() {
                     {group.links.map((item) => (
                       <li key={item.name}>
                         <Link
-                          href={item.href}
                           className="text-xs leading-5 text-gray-400 transition-colors hover:text-brand-primary"
+                          href={item.href}
                         >
                           {item.name}
                         </Link>
@@ -225,16 +223,16 @@ export function Footer() {
                 © {new Date().getFullYear()} B2B Sales Arrow. All Rights Reserved.
               </p>
               <div className="flex gap-6 text-xs text-gray-500">
-                <Link href="/privacy-policy" className="transition-colors hover:text-brand-primary">
+                <Link className="transition-colors hover:text-brand-primary" href="/privacy-policy">
                   Privacy Policy
                 </Link>
                 <Link
-                  href="/terms-and-conditions"
                   className="transition-colors hover:text-brand-primary"
+                  href="/terms-and-conditions"
                 >
                   Terms of Service
                 </Link>
-                <Link href="/cookie-policy" className="transition-colors hover:text-brand-primary">
+                <Link className="transition-colors hover:text-brand-primary" href="/cookie-policy">
                   Cookie Policy
                 </Link>
               </div>

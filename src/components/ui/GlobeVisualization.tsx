@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const COUNTRIES = ["New York", "London", "Dubai", "Singapore", "Sydney", "Toronto"];
 
@@ -30,13 +29,13 @@ export function GlobalPresence() {
 
             return (
               <motion.div
-                key={country}
-                className="relative cursor-default"
                 animate={{
                   opacity: isActive ? 1 : 0.3,
                   scale: isActive ? 1.05 : 1,
                   y: isActive ? -2 : 0,
                 }}
+                className="relative cursor-default"
+                key={country}
                 transition={{
                   duration: 0.8,
                   ease: [0.16, 1, 0.3, 1], // premium smooth easing
@@ -48,11 +47,11 @@ export function GlobalPresence() {
 
                 {isActive && (
                   <motion.div
-                    layoutId="activeCountryGlow"
-                    className="absolute -bottom-2 left-1/2 h-[2px] w-1/2 -translate-x-1/2 bg-brand-blue blur-[2px]"
-                    initial={{ opacity: 0 }}
                     animate={{ opacity: 0.8 }}
+                    className="absolute -bottom-2 left-1/2 h-[2px] w-1/2 -translate-x-1/2 bg-brand-blue blur-[2px]"
                     exit={{ opacity: 0 }}
+                    initial={{ opacity: 0 }}
+                    layoutId="activeCountryGlow"
                     transition={{ duration: 0.8, ease: "easeOut" }}
                   />
                 )}

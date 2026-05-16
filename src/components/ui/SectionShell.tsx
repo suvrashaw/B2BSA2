@@ -3,15 +3,15 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib";
 
 interface SectionShellProps {
-  id?: string;
+  children: ReactNode;
   className?: string;
   containerClassName?: string;
-  children: ReactNode;
+  id?: string;
 }
 
-export function SectionShell({ id, className, containerClassName, children }: SectionShellProps) {
+export function SectionShell({ children, className, containerClassName, id }: SectionShellProps) {
   return (
-    <section id={id} className={cn("py-20", className)}>
+    <section className={cn("py-20", className)} id={id}>
       <div className={cn("container mx-auto px-8", containerClassName)}>{children}</div>
     </section>
   );

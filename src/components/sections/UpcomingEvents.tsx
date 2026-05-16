@@ -1,10 +1,9 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-
 import { motion } from "framer-motion";
 import { ArrowUpRight, Calendar, MapPin } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -12,28 +11,28 @@ import { Heading } from "@/components/ui/Heading";
 import { HOME_UPCOMING_EVENTS_CONTENT, type UpcomingEventsContent } from "@/content/home";
 
 export interface UpcomingEventsProps {
+  badgeLabel?: UpcomingEventsContent["badgeLabel"];
   content?: UpcomingEventsContent;
+  ctaLabel?: UpcomingEventsContent["ctaLabel"];
+  description?: UpcomingEventsContent["description"];
+  events?: UpcomingEventsContent["events"];
   eyebrow?: UpcomingEventsContent["eyebrow"];
   heading?: UpcomingEventsContent["heading"];
-  description?: UpcomingEventsContent["description"];
-  badgeLabel?: UpcomingEventsContent["badgeLabel"];
-  ctaLabel?: UpcomingEventsContent["ctaLabel"];
   viewAllLabel?: UpcomingEventsContent["viewAllLabel"];
-  events?: UpcomingEventsContent["events"];
 }
 
 export function UpcomingEvents({
   content = HOME_UPCOMING_EVENTS_CONTENT,
-  eyebrow = content.eyebrow,
-  heading = content.heading,
-  description = content.description,
   badgeLabel = content.badgeLabel,
   ctaLabel = content.ctaLabel,
-  viewAllLabel = content.viewAllLabel,
+  description = content.description,
   events = content.events,
+  eyebrow = content.eyebrow,
+  heading = content.heading,
+  viewAllLabel = content.viewAllLabel,
 }: UpcomingEventsProps = {}) {
   return (
-    <section id="events" className="relative bg-brand-gray py-20">
+    <section className="relative bg-brand-gray py-20" id="events">
       <div className="container mx-auto px-8">
         <div className="mb-16 flex flex-col items-start text-left">
           <Eyebrow variant="cyan">{eyebrow}</Eyebrow>
@@ -44,28 +43,28 @@ export function UpcomingEvents({
         <div className="grid gap-8 lg:grid-cols-2">
           {events.map((event, index) => (
             <motion.div
-              key={event.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2, duration: 0.6 }}
               className="group relative flex flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-sm transition-shadow duration-500 hover:shadow-2xl"
+              initial={{ opacity: 0, y: 30 }}
+              key={event.id}
+              transition={{ delay: index * 0.2, duration: 0.6 }}
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1, y: 0 }}
             >
               <div className="relative h-[250px] w-full overflow-hidden md:h-[300px]">
                 <Image
-                  src={event.image}
                   alt={event.title}
+                  className="transform object-cover transition-transform duration-700 group-hover:scale-105"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="transform object-cover transition-transform duration-700 group-hover:scale-105"
+                  src={event.image}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
                 {/* Hover Reveal CTA */}
                 <div className="absolute inset-0 z-20 flex items-center justify-center bg-brand-charcoal/20 opacity-0 backdrop-blur-[2px] transition-opacity duration-500 group-hover:opacity-100">
                   <Button
-                    variant="primary"
                     className="translate-y-4 shadow-lg group-hover:translate-y-0"
+                    variant="primary"
                   >
                     {ctaLabel} <ArrowUpRight className="h-4 w-4" />
                   </Button>
@@ -113,7 +112,7 @@ export function UpcomingEvents({
 
         <div className="mt-12 text-center">
           <Link href="/events">
-            <Button variant="tertiary" className="hidden md:inline-flex">
+            <Button className="hidden md:inline-flex" variant="tertiary">
               {viewAllLabel} <ArrowUpRight className="h-5 w-5" />
             </Button>
           </Link>

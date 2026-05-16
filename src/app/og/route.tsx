@@ -1,55 +1,15 @@
 import { ImageResponse } from "@vercel/og";
 
 import { getCmsPage } from "@/cms/mock/registry";
-import { getPageByUrl } from "@/content/pages";
+import {
+  getMarketingPageById,
+  getMarketingPageByPath,
+  getMarketingPageGroup,
+} from "@/content/marketing-pages";
 
 export const runtime = "edge";
 
 const siteUrl = "https://b2bsalesarrow.com";
-
-function getOgContent(searchParams: URLSearchParams) {
-  const pageId = searchParams.get("pageId");
-  const title = searchParams.get("title");
-  const path = searchParams.get("path");
-
-  if (pageId) {
-    const page = getCmsPage(pageId);
-
-    if (page) {
-      const resolvedTitle = title ?? page.seo.title;
-
-      return {
-        title: resolvedTitle.replace(" | B2B Sales Arrow", ""),
-        description: page.seo.description,
-        group: page.pageType === "serviceDetail" ? "Service" : "B2B Growth",
-      };
-    }
-  }
-
-  if (!path) {
-    return {
-      title: "B2B Sales Arrow",
-      description: "Premium growth partner for enterprise event and digital solutions.",
-      group: "B2B Growth",
-    };
-  }
-
-  try {
-    const page = getPageByUrl(path);
-
-    return {
-      title: page.metaTitle.replace(" | B2B Sales Arrow", ""),
-      description: page.metaDescription,
-      group: page.navigationGroup,
-    };
-  } catch {
-    return {
-      title: "B2B Sales Arrow",
-      description: "Premium growth partner for enterprise event and digital solutions.",
-      group: "B2B Growth",
-    };
-  }
-}
 
 export function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -58,71 +18,71 @@ export function GET(request: Request) {
   return new ImageResponse(
     <div
       style={{
-        width: "100%",
-        height: "100%",
-        display: "flex",
         background: "#f7fbff",
         color: "#052238",
+        display: "flex",
         fontFamily: "Inter, Arial, sans-serif",
-        position: "relative",
+        height: "100%",
         overflow: "hidden",
+        position: "relative",
+        width: "100%",
       }}
     >
       <div
         style={{
-          position: "absolute",
-          inset: 0,
           background:
             "linear-gradient(135deg, rgba(2,62,138,0.96) 0%, rgba(30,96,145,0.9) 46%, rgba(42,157,143,0.88) 100%)",
+          inset: 0,
+          position: "absolute",
         }}
       />
       <div
         style={{
+          border: "2px solid rgba(255,255,255,0.2)",
+          borderRadius: 500,
+          height: 500,
           position: "absolute",
           right: -80,
           top: -120,
           width: 500,
-          height: 500,
-          borderRadius: 500,
-          border: "2px solid rgba(255,255,255,0.2)",
         }}
       />
       <div
         style={{
+          background: "rgba(255,255,255,0.12)",
+          borderRadius: 360,
+          bottom: -120,
+          height: 360,
           position: "absolute",
           right: 90,
-          bottom: -120,
           width: 360,
-          height: 360,
-          borderRadius: 360,
-          background: "rgba(255,255,255,0.12)",
         }}
       />
       <div
         style={{
-          position: "relative",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "space-between",
-          width: "100%",
           height: "100%",
+          justifyContent: "space-between",
           padding: "58px 68px",
+          position: "relative",
+          width: "100%",
         }}
       >
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
+        <div style={{ alignItems: "center", display: "flex", justifyContent: "space-between" }}>
+          <div style={{ alignItems: "center", display: "flex", gap: 18 }}>
             <div
               style={{
-                width: 54,
-                height: 54,
-                borderRadius: 14,
+                alignItems: "center",
                 background: "#ffffff",
+                borderRadius: 14,
                 color: "#023e8a",
                 display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
                 fontSize: 28,
                 fontWeight: 800,
+                height: 54,
+                justifyContent: "center",
+                width: 54,
               }}
             >
               B
@@ -141,9 +101,9 @@ export function GET(request: Request) {
               border: "1px solid rgba(255,255,255,0.42)",
               borderRadius: 999,
               color: "#ffffff",
-              padding: "12px 20px",
               fontSize: 18,
               fontWeight: 700,
+              padding: "12px 20px",
             }}
           >
             {content.group}
@@ -166,19 +126,19 @@ export function GET(request: Request) {
             style={{
               color: "#ffffff",
               fontSize: content.title.length > 58 ? 58 : 66,
-              lineHeight: 1.04,
               fontWeight: 900,
               letterSpacing: 0,
+              lineHeight: 1.04,
             }}
           >
             {content.title}
           </div>
           <div
             style={{
-              marginTop: 28,
               color: "rgba(255,255,255,0.86)",
               fontSize: 27,
               lineHeight: 1.35,
+              marginTop: 28,
               maxWidth: 980,
             }}
           >
@@ -186,7 +146,7 @@ export function GET(request: Request) {
           </div>
         </div>
 
-        <div style={{ display: "flex", gap: 18, color: "#ffffff", fontSize: 22, fontWeight: 700 }}>
+        <div style={{ color: "#ffffff", display: "flex", fontSize: 22, fontWeight: 700, gap: 18 }}>
           <span>Strategy</span>
           <span style={{ color: "rgba(255,255,255,0.5)" }}>•</span>
           <span>Execution</span>
@@ -196,11 +156,75 @@ export function GET(request: Request) {
       </div>
     </div>,
     {
-      width: 1200,
-      height: 630,
       headers: {
         "Cache-Control": "public, max-age=31536000, immutable",
       },
+      height: 630,
+      width: 1200,
     }
   );
+}
+
+function getOgContent(searchParams: URLSearchParams) {
+  const pageId = searchParams.get("pageId");
+  const title = searchParams.get("title");
+  const path = searchParams.get("path");
+
+  if (pageId) {
+    const marketingPage = getMarketingPageById(pageId);
+
+    if (marketingPage) {
+      const resolvedTitle = title ?? marketingPage.seo.title;
+
+      return {
+        description: marketingPage.seo.description,
+        group: getMarketingPageGroup(marketingPage),
+        title: resolvedTitle.replace(" | B2B Sales Arrow", ""),
+      };
+    }
+
+    const page = getCmsPage(pageId);
+
+    if (page) {
+      const resolvedTitle = title ?? page.seo.title;
+
+      return {
+        description: page.seo.description,
+        group: page.pageType === "serviceDetail" ? "Service" : "B2B Growth",
+        title: resolvedTitle.replace(" | B2B Sales Arrow", ""),
+      };
+    }
+  }
+
+  if (!path) {
+    return {
+      description: "Premium growth partner for enterprise event and digital solutions.",
+      group: "B2B Growth",
+      title: "B2B Sales Arrow",
+    };
+  }
+
+  try {
+    const marketingPage = getMarketingPageByPath(path);
+
+    if (marketingPage) {
+      return {
+        description: marketingPage.seo.description,
+        group: getMarketingPageGroup(marketingPage),
+        title: marketingPage.seo.title.replace(" | B2B Sales Arrow", ""),
+      };
+    }
+
+    return {
+      description: "Premium growth partner for enterprise event and digital solutions.",
+      group: "B2B Growth",
+      title: "B2B Sales Arrow",
+    };
+  } catch {
+    return {
+      description: "Premium growth partner for enterprise event and digital solutions.",
+      group: "B2B Growth",
+      title: "B2B Sales Arrow",
+    };
+  }
 }

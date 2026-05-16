@@ -17,18 +17,18 @@ export const PointerHighlight = ({
   const colors = {
     blue: {
       bg: hovered ? "bg-brand-blue/30" : "bg-brand-blue/15",
-      text: hovered ? "text-brand-cyan" : "text-brand-blue",
       border: "border-brand-blue/30",
+      text: hovered ? "text-brand-cyan" : "text-brand-blue",
     },
     cyan: {
       bg: hovered ? "bg-brand-cyan/30" : "bg-brand-cyan/15",
-      text: hovered ? "text-brand-blue" : "text-brand-cyan",
       border: "border-brand-cyan/30",
+      text: hovered ? "text-brand-blue" : "text-brand-cyan",
     },
     red: {
       bg: hovered ? "bg-brand-primary/30" : "bg-brand-primary/15",
-      text: hovered ? "text-brand-primary-dark" : "text-brand-primary",
       border: "border-brand-primary/30",
+      text: hovered ? "text-brand-primary-dark" : "text-brand-primary",
     },
   };
 
@@ -36,14 +36,14 @@ export const PointerHighlight = ({
 
   return (
     <span
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
       className={cn(
         "relative inline-block px-1.5 py-0.5 mx-[2px] rounded-md transition-all duration-300 border",
         active.bg,
         active.border,
         className
       )}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
       <span
         className={cn(

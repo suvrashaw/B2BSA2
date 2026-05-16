@@ -1,53 +1,56 @@
-import { ServiceDetail } from "@/components/templates/ServiceDetail";
-import { getPageMetadata } from "@/content/pages";
-import {
-  BOOTH_RENTAL_HERO,
-  BOOTH_RENTAL_WHY,
-  BOOTH_RENTAL_PROOF_BAR,
-  BOOTH_RENTAL_FORMATS,
-  BOOTH_RENTAL_PROCESS,
-  BOOTH_RENTAL_CASE_STUDIES,
-  BOOTH_RENTAL_FAQ,
-} from "@/content/services/detail/event-booth-rental";
-
 import type { Metadata } from "next";
 
-export const metadata: Metadata = getPageMetadata(
-  "/services/global-event-solutions/event-booth-rental"
-);
+import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import {
+  BOOTH_RENTAL_CASE_STUDIES,
+  BOOTH_RENTAL_FAQ,
+  BOOTH_RENTAL_FORMATS,
+  BOOTH_RENTAL_HERO,
+  BOOTH_RENTAL_PAGE,
+  BOOTH_RENTAL_PROCESS,
+  BOOTH_RENTAL_PROOF_BAR,
+  BOOTH_RENTAL_WHY,
+} from "@/content/services/detail/event-booth-rental";
+import { GES_PAGE } from "@/content/services/global-event-solutions";
 
-export default function Page() {
+export const metadata: Metadata = getMarketingPageMetadata(BOOTH_RENTAL_PAGE);
+
+const Page = () => {
   return (
     <ServiceDetail
-      canonicalPath="/services/global-event-solutions/event-booth-rental"
-      hero={BOOTH_RENTAL_HERO}
-      proofBar={BOOTH_RENTAL_PROOF_BAR}
-      why={BOOTH_RENTAL_WHY}
-      pricing={BOOTH_RENTAL_FORMATS}
-      process={BOOTH_RENTAL_PROCESS}
       caseStudies={BOOTH_RENTAL_CASE_STUDIES}
-      faq={BOOTH_RENTAL_FAQ}
       ctaBanner={{
-        title: "Fast does not have to feel temporary.",
+        ctaHref: "/contact",
+        ctaLabel: "Check Rental Availability",
         description:
           "A properly configured trade show rental booth represents your brand credibly — at a fraction of the custom build timeline.",
-        ctaLabel: "Check Rental Availability",
-        ctaHref: "/contact",
+        title: "Fast does not have to feel temporary.",
       }}
+      faq={BOOTH_RENTAL_FAQ}
+      hero={BOOTH_RENTAL_HERO}
+      page={BOOTH_RENTAL_PAGE}
+      parentPage={GES_PAGE}
+      pricing={BOOTH_RENTAL_FORMATS}
+      process={BOOTH_RENTAL_PROCESS}
+      proofBar={BOOTH_RENTAL_PROOF_BAR}
       relatedServices={[
         {
-          title: "Trade Show Booth Design",
           href: "/services/global-event-solutions/trade-show-booth-design",
+          title: "Trade Show Booth Design",
         },
         {
-          title: "Trade Show Booth Builder",
           href: "/services/global-event-solutions/trade-show-booth-builder",
+          title: "Trade Show Booth Builder",
         },
         {
-          title: "Modular and Portable Booths",
           href: "/services/global-event-solutions/modular-portable-booths",
+          title: "Modular and Portable Booths",
         },
       ]}
+      why={BOOTH_RENTAL_WHY}
     />
   );
 }
+
+export default Page;

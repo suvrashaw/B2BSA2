@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { ClientLogos } from "@/components/sections/ClientLogos";
@@ -10,30 +12,29 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { Timeline } from "@/components/ui/Timeline";
 import {
+  ABOUT_CONTACT,
   ABOUT_HERO,
   ABOUT_ORIGIN_TIMELINE,
+  ABOUT_PAGE,
+  ABOUT_PRESENCE,
   ABOUT_STATS,
   ABOUT_TEAM,
-  ABOUT_VALUES,
-  ABOUT_PRESENCE,
   ABOUT_TESTIMONIALS,
-  ABOUT_CONTACT,
+  ABOUT_VALUES,
 } from "@/content/about";
-import { getPageMetadata } from "@/content/pages";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
 
-import type { Metadata } from "next";
+export const metadata: Metadata = getMarketingPageMetadata(ABOUT_PAGE);
 
-export const metadata: Metadata = getPageMetadata("/about");
-
-export default function Page() {
+const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <Header />
       <Hero {...ABOUT_HERO} />
       <Timeline
         data={ABOUT_ORIGIN_TIMELINE.items}
-        heading={ABOUT_ORIGIN_TIMELINE.heading}
         description={ABOUT_ORIGIN_TIMELINE.description}
+        heading={ABOUT_ORIGIN_TIMELINE.heading}
       />
       <WhoWeAre {...ABOUT_STATS} />
       <TeamGrid data={ABOUT_TEAM} />
@@ -46,3 +47,5 @@ export default function Page() {
     </main>
   );
 }
+
+export default Page;

@@ -1,54 +1,23 @@
 "use client";
 
-import { useState, useEffect } from "react";
-
-import Image from "next/image";
+import type { MotionValue } from "framer-motion";
 
 import { motion, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 import type { BlogItem } from "@/content/home";
-
-import type { MotionValue } from "framer-motion";
-
-export function BlogCardGrid({ blog }: { blog: BlogItem }) {
-  return (
-    <div className="group overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-md transition-shadow duration-300 hover:shadow-xl">
-      <div className="relative h-52 w-full overflow-hidden">
-        <Image
-          src={blog.image}
-          alt={blog.title}
-          fill
-          sizes="(max-width: 768px) 100vw, 400px"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-        <div className="absolute top-4 left-4">
-          <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-bold tracking-wider uppercase shadow-sm backdrop-blur-md">
-            {blog.category}
-          </span>
-        </div>
-      </div>
-      <div className="p-6">
-        <span className="mb-2 block text-sm font-medium text-gray-500">{blog.date}</span>
-        <h3 className="mb-4 font-heading text-lg leading-snug font-bold">{blog.title}</h3>
-        <div className="flex items-center gap-2 text-sm font-semibold tracking-widest text-brand-blue uppercase">
-          Read Article{" "}
-          <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export interface BlogCardProps {
   blog: BlogItem;
   index: number;
-  total: number;
   isHovered: boolean;
   spread: MotionValue<number>;
+  total: number;
 }
 
-export function BlogCard({ blog, index, total, isHovered, spread }: BlogCardProps) {
+export function BlogCard({ blog, index, isHovered, spread, total }: BlogCardProps) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -75,25 +44,25 @@ export function BlogCard({ blog, index, total, isHovered, spread }: BlogCardProp
 
   return (
     <motion.div
+      animate={{
+        scale: isHovered ? 0.9 : 1,
+      }}
+      className="absolute w-full max-w-md transform-gpu overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-2xl"
       style={{
         rotate: isHovered ? 0 : rotate,
         x: isHovered ? activeX : x,
         y: isHovered ? activeY : y,
         zIndex: index,
       }}
-      animate={{
-        scale: isHovered ? 0.9 : 1,
-      }}
-      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      className="absolute w-full max-w-md transform-gpu overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-2xl"
+      transition={{ damping: 30, stiffness: 300, type: "spring" }}
     >
       <div className="relative h-56 w-full">
         <Image
-          src={blog.image}
           alt={blog.title}
+          className="object-cover"
           fill
           sizes="(max-width: 768px) 100vw, 400px"
-          className="object-cover"
+          src={blog.image}
         />
         <div className="absolute top-4 left-4">
           <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-bold tracking-wider uppercase shadow-sm backdrop-blur-md">
@@ -109,5 +78,34 @@ export function BlogCard({ blog, index, total, isHovered, spread }: BlogCardProp
         </div>
       </div>
     </motion.div>
+  );
+}
+
+export function BlogCardGrid({ blog }: { blog: BlogItem }) {
+  return (
+    <div className="group overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-md transition-shadow duration-300 hover:shadow-xl">
+      <div className="relative h-52 w-full overflow-hidden">
+        <Image
+          alt={blog.title}
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          fill
+          sizes="(max-width: 768px) 100vw, 400px"
+          src={blog.image}
+        />
+        <div className="absolute top-4 left-4">
+          <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-bold tracking-wider uppercase shadow-sm backdrop-blur-md">
+            {blog.category}
+          </span>
+        </div>
+      </div>
+      <div className="p-6">
+        <span className="mb-2 block text-sm font-medium text-gray-500">{blog.date}</span>
+        <h3 className="mb-4 font-heading text-lg leading-snug font-bold">{blog.title}</h3>
+        <div className="flex items-center gap-2 text-sm font-semibold tracking-widest text-brand-blue uppercase">
+          Read Article{" "}
+          <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        </div>
+      </div>
+    </div>
   );
 }

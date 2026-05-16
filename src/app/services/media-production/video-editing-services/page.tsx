@@ -1,50 +1,53 @@
-import { ServiceDetail } from "@/components/templates/ServiceDetail";
-import { getPageMetadata } from "@/content/pages";
-import {
-  VIDEO_EDITING_HERO,
-  VIDEO_EDITING_DELIVERABLES,
-  VIDEO_EDITING_PROOF_BAR,
-  VIDEO_EDITING_TIMELINE,
-  VIDEO_EDITING_CASE_STUDIES,
-  VIDEO_EDITING_FAQ,
-} from "@/content/services/detail/video-editing-services";
-
 import type { Metadata } from "next";
 
-export const metadata: Metadata = getPageMetadata(
-  "/services/media-production/video-editing-services"
-);
+import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import {
+  VIDEO_EDITING_CASE_STUDIES,
+  VIDEO_EDITING_DELIVERABLES,
+  VIDEO_EDITING_FAQ,
+  VIDEO_EDITING_HERO,
+  VIDEO_EDITING_PAGE,
+  VIDEO_EDITING_PROOF_BAR,
+  VIDEO_EDITING_TIMELINE,
+} from "@/content/services/detail/video-editing-services";
+import { MEDIA_PAGE } from "@/content/services/media-production";
 
-export default function Page() {
+export const metadata: Metadata = getMarketingPageMetadata(VIDEO_EDITING_PAGE);
+
+const Page = () => {
   return (
     <ServiceDetail
-      canonicalPath="/services/media-production/video-editing-services"
-      hero={VIDEO_EDITING_HERO}
-      proofBar={VIDEO_EDITING_PROOF_BAR}
-      deliverables={VIDEO_EDITING_DELIVERABLES}
-      pricing={VIDEO_EDITING_TIMELINE}
       caseStudies={VIDEO_EDITING_CASE_STUDIES}
-      faq={VIDEO_EDITING_FAQ}
       ctaBanner={{
-        title: "You already have the raw material.",
-        description: "We shape it into content people watch, understand, and act on.",
-        ctaLabel: "Upload Your Project Brief",
         ctaHref: "/contact",
+        ctaLabel: "Upload Your Project Brief",
+        description: "We shape it into content people watch, understand, and act on.",
+        title: "You already have the raw material.",
       }}
+      deliverables={VIDEO_EDITING_DELIVERABLES}
+      faq={VIDEO_EDITING_FAQ}
+      hero={VIDEO_EDITING_HERO}
+      page={VIDEO_EDITING_PAGE}
+      parentPage={MEDIA_PAGE}
+      pricing={VIDEO_EDITING_TIMELINE}
+      proofBar={VIDEO_EDITING_PROOF_BAR}
       relatedServices={[
         {
-          title: "Event Video Production",
           href: "/services/media-production/event-video-production",
+          title: "Event Video Production",
         },
         {
-          title: "Corporate Video Production",
           href: "/services/media-production/corporate-video-production",
+          title: "Corporate Video Production",
         },
         {
-          title: "Live Streaming Services",
           href: "/services/media-production/live-streaming-services",
+          title: "Live Streaming Services",
         },
       ]}
     />
   );
 }
+
+export default Page;

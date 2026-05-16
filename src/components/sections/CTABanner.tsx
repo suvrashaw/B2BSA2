@@ -1,9 +1,8 @@
 "use client";
 
-import Link from "next/link";
-
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
@@ -19,13 +18,13 @@ interface CTABannerProps {
 }
 
 export function CTABanner({
-  title,
-  subtitle,
-  description,
-  ctaText,
-  ctaLabel,
-  ctaHref,
   className,
+  ctaHref,
+  ctaLabel,
+  ctaText,
+  description,
+  subtitle,
+  title,
 }: CTABannerProps) {
   const resolvedSubtitle = subtitle ?? description;
   const resolvedCtaText = ctaText ?? ctaLabel ?? "Book a Strategy Session";
@@ -34,11 +33,11 @@ export function CTABanner({
     <section className={cn("py-24 px-8", className)}>
       <div className="container mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
           className="relative overflow-hidden rounded-[3rem] bg-brand-blue p-12 text-center shadow-2xl shadow-brand-blue/30 md:p-24"
+          initial={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          whileInView={{ opacity: 1, y: 0 }}
         >
           {/* Decorative Elements */}
           <div className="pointer-events-none absolute top-0 right-0 h-96 w-96 translate-x-1/2 -translate-y-1/2 rounded-full bg-white/10 blur-3xl" />
@@ -47,8 +46,8 @@ export function CTABanner({
           <div className="relative z-10 mx-auto max-w-4xl">
             <Heading
               as="h2"
-              preserveClassName
               className="mb-8 font-heading text-3xl leading-tight font-bold text-white md:text-6xl"
+              preserveClassName
             >
               {title}
             </Heading>
@@ -58,8 +57,8 @@ export function CTABanner({
               </p>
             )}
             <Link
-              href={ctaHref}
               className="hover: group inline-flex transform items-center gap-3 rounded-full bg-white px-12 py-5 font-bold text-brand-blue shadow-xl transition-all duration-300 hover:scale-105 hover:bg-brand-cyan"
+              href={ctaHref}
             >
               {resolvedCtaText}
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />

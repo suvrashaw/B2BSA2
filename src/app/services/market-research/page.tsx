@@ -1,30 +1,33 @@
+import type { Metadata } from "next";
+
 import { ServiceHub } from "@/components/templates/ServiceHub";
-import { getPageMetadata } from "@/content/pages";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
+  RESEARCH_CASE_STUDIES,
+  RESEARCH_FAQ,
   RESEARCH_HERO,
+  RESEARCH_PAGE,
+  RESEARCH_PROCESS,
   RESEARCH_PROOF_BAR,
   RESEARCH_SERVICES,
   RESEARCH_WHY,
-  RESEARCH_PROCESS,
-  RESEARCH_CASE_STUDIES,
-  RESEARCH_FAQ,
 } from "@/content/services/market-research";
 
-import type { Metadata } from "next";
+export const metadata: Metadata = getMarketingPageMetadata(RESEARCH_PAGE);
 
-export const metadata: Metadata = getPageMetadata("/services/market-research");
-
-export default function Page() {
+const Page = () => {
   return (
     <ServiceHub
-      canonicalPath="/services/market-research"
+      caseStudies={RESEARCH_CASE_STUDIES}
+      faq={RESEARCH_FAQ}
       hero={RESEARCH_HERO}
+      page={RESEARCH_PAGE}
+      process={RESEARCH_PROCESS}
       proofBar={RESEARCH_PROOF_BAR}
       services={RESEARCH_SERVICES}
       why={RESEARCH_WHY}
-      process={RESEARCH_PROCESS}
-      caseStudies={RESEARCH_CASE_STUDIES}
-      faq={RESEARCH_FAQ}
     />
   );
 }
+
+export default Page;

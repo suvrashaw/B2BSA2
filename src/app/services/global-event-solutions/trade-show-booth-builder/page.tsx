@@ -1,53 +1,56 @@
-import { ServiceDetail } from "@/components/templates/ServiceDetail";
-import { getPageMetadata } from "@/content/pages";
-import {
-  BOOTH_BUILDER_HERO,
-  BOOTH_BUILDER_WHY,
-  BOOTH_BUILDER_DELIVERABLES,
-  BOOTH_BUILDER_PROOF_BAR,
-  BOOTH_BUILDER_PROCESS,
-  BOOTH_BUILDER_CASE_STUDIES,
-  BOOTH_BUILDER_FAQ,
-} from "@/content/services/detail/trade-show-booth-builder";
-
 import type { Metadata } from "next";
 
-export const metadata: Metadata = getPageMetadata(
-  "/services/global-event-solutions/trade-show-booth-builder"
-);
+import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import {
+  BOOTH_BUILDER_CASE_STUDIES,
+  BOOTH_BUILDER_DELIVERABLES,
+  BOOTH_BUILDER_FAQ,
+  BOOTH_BUILDER_HERO,
+  BOOTH_BUILDER_PAGE,
+  BOOTH_BUILDER_PROCESS,
+  BOOTH_BUILDER_PROOF_BAR,
+  BOOTH_BUILDER_WHY,
+} from "@/content/services/detail/trade-show-booth-builder";
+import { GES_PAGE } from "@/content/services/global-event-solutions";
 
-export default function Page() {
+export const metadata: Metadata = getMarketingPageMetadata(BOOTH_BUILDER_PAGE);
+
+const Page = () => {
   return (
     <ServiceDetail
-      canonicalPath="/services/global-event-solutions/trade-show-booth-builder"
-      hero={BOOTH_BUILDER_HERO}
-      proofBar={BOOTH_BUILDER_PROOF_BAR}
-      why={BOOTH_BUILDER_WHY}
-      deliverables={BOOTH_BUILDER_DELIVERABLES}
-      process={BOOTH_BUILDER_PROCESS}
       caseStudies={BOOTH_BUILDER_CASE_STUDIES}
-      faq={BOOTH_BUILDER_FAQ}
       ctaBanner={{
+        ctaHref: "/contact",
+        ctaLabel: "Request a Build Quote",
+        description: "",
         title:
           "Build with an exhibition stand builder that understands the floor, the brand, and the pipeline it is designed to fill.",
-        description: "One brief. One team. One outcome.",
-        ctaLabel: "Request a Build Quote",
-        ctaHref: "/contact",
       }}
+      deliverables={BOOTH_BUILDER_DELIVERABLES}
+      faq={BOOTH_BUILDER_FAQ}
+      hero={BOOTH_BUILDER_HERO}
+      page={BOOTH_BUILDER_PAGE}
+      parentPage={GES_PAGE}
+      process={BOOTH_BUILDER_PROCESS}
+      proofBar={BOOTH_BUILDER_PROOF_BAR}
       relatedServices={[
         {
-          title: "Trade Show Booth Design",
           href: "/services/global-event-solutions/trade-show-booth-design",
+          title: "Trade Show Booth Design",
         },
         {
-          title: "Event Booth Rental",
           href: "/services/global-event-solutions/event-booth-rental",
+          title: "Event Booth Rental",
         },
         {
-          title: "Modular and Portable Booths",
           href: "/services/global-event-solutions/modular-portable-booths",
+          title: "Modular and Portable Booths",
         },
       ]}
+      why={BOOTH_BUILDER_WHY}
     />
   );
 }
+
+export default Page;

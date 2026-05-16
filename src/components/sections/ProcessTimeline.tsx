@@ -6,27 +6,27 @@ import { motion } from "framer-motion";
 
 import { cn } from "@/lib";
 
-interface Step {
-  title: string;
-  description: string;
-}
-
 interface ProcessTimelineProps {
+  className?: string;
   heading?: ReactNode;
   phases?: Step[];
-  className?: string;
   steps?: Step[];
   subtitle?: ReactNode;
   title?: ReactNode;
 }
 
+interface Step {
+  description: string;
+  title: string;
+}
+
 export function ProcessTimeline({
-  steps,
-  phases,
-  title,
-  heading,
-  subtitle,
   className,
+  heading,
+  phases,
+  steps,
+  subtitle,
+  title,
 }: ProcessTimelineProps) {
   const resolvedSteps = steps ?? phases ?? [];
   const resolvedTitle = title ?? heading;
@@ -56,12 +56,12 @@ export function ProcessTimeline({
           <div className="space-y-16">
             {resolvedSteps.map((step, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="relative flex flex-col items-start"
+                initial={{ opacity: 0, y: 30 }}
+                key={index}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, y: 0 }}
               >
                 {/* Dot */}
                 <div className="absolute top-1/2 left-0 z-10 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-cyan shadow-[0_0_15px_rgba(75,192,217,0.8)]" />

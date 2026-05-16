@@ -1,33 +1,32 @@
 "use client";
 
-import Image from "next/image";
-
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import { ContactForm } from "@/components/forms/ContactForm";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
-import { HOME_CONTACT_CONTENT, type ContactContent } from "@/content/home";
+import { type ContactContent, HOME_CONTACT_CONTENT } from "@/content/home";
 
 export interface ContactUsProps {
   content?: ContactContent;
-  eyebrow?: ContactContent["eyebrow"];
-  heading?: ContactContent["heading"];
   description?: ContactContent["description"];
-  illustration?: ContactContent["illustration"] | null;
+  eyebrow?: ContactContent["eyebrow"];
   form?: ContactContent["form"];
+  heading?: ContactContent["heading"];
+  illustration?: ContactContent["illustration"] | null;
 }
 
 export function ContactUs({
   content = HOME_CONTACT_CONTENT,
-  eyebrow = content.eyebrow,
-  heading = content.heading,
   description = content.description,
-  illustration = content.illustration,
+  eyebrow = content.eyebrow,
   form = content.form,
+  heading = content.heading,
+  illustration = content.illustration,
 }: ContactUsProps = {}) {
   return (
-    <section id="contact" className="relative overflow-hidden bg-white py-24">
+    <section className="relative overflow-hidden bg-white py-24" id="contact">
       {/* Decorative background flare */}
       <div className="pointer-events-none absolute top-0 right-0 h-[800px] w-[800px] rounded-full bg-brand-cyan/5 blur-[120px]" />
       <div className="pointer-events-none absolute bottom-0 left-0 h-[800px] w-[800px] rounded-full bg-brand-blue/5 blur-[120px]" />
@@ -47,15 +46,15 @@ export function ContactUs({
             {illustration && (
               <motion.div
                 animate={{ y: [0, -15, 0] }}
-                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
                 className="mt-4 w-full max-w-md"
+                transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
               >
                 <Image
-                  src={illustration.src}
                   alt={illustration.alt}
-                  width={480}
-                  height={360}
                   className="h-auto w-full drop-shadow-xl"
+                  height={360}
+                  src={illustration.src}
+                  width={480}
                 />
               </motion.div>
             )}

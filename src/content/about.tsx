@@ -1,29 +1,28 @@
 export const ABOUT_HERO = {
-  showPreloader: false,
-  eyebrow: "WHO WE ARE",
-  title: <>We Are the Growth Partner Your Enterprise Deserves</>,
   description:
     "B2B Sales Arrow was founded with a single conviction: enterprise brands deserve a partner that treats pipeline as a science, not a guess.",
+  eyebrow: "WHO WE ARE",
   image: {
-    src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000",
     alt: "B2B Sales Arrow team and office",
     loaderAlt: "Loading",
+    src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000",
   },
   primaryCtaLabel: "Our Services",
   secondaryCtaLabel: "Get In Touch",
+  showPreloader: false,
   stat: {
-    value: "40+",
-    label: "Countries Served",
     icon: "Globe2",
+    label: "Countries Served",
+    value: "40+",
   },
+  title: <>We Are the Growth Partner Your Enterprise Deserves</>,
 };
 
 export const ABOUT_ORIGIN_TIMELINE = {
-  heading: "How B2B Sales Arrow Was Built",
   description: "From a single booth to a global enterprise partner.",
+  heading: "How B2B Sales Arrow Was Built",
   items: [
     {
-      title: "Spotting the Gap",
       content: (
         <div className="prose prose-sm md:prose-base max-w-none text-brand-charcoal/80">
           <p>
@@ -32,9 +31,9 @@ export const ABOUT_ORIGIN_TIMELINE = {
           </p>
         </div>
       ),
+      title: "Spotting the Gap",
     },
     {
-      title: "Building the Model",
       content: (
         <div className="prose prose-sm md:prose-base max-w-none text-brand-charcoal/80">
           <p>
@@ -43,9 +42,9 @@ export const ABOUT_ORIGIN_TIMELINE = {
           </p>
         </div>
       ),
+      title: "Building the Model",
     },
     {
-      title: "Scaling Globally",
       content: (
         <div className="prose prose-sm md:prose-base max-w-none text-brand-charcoal/80">
           <p>
@@ -54,6 +53,7 @@ export const ABOUT_ORIGIN_TIMELINE = {
           </p>
         </div>
       ),
+      title: "Scaling Globally",
     },
   ],
 };
@@ -62,248 +62,267 @@ export const ABOUT_TEAM = {
   heading: "The Leadership Behind the Results",
   members: [
     {
-      name: "Suvra Shaw",
-      role: "Founder & CEO",
       bio: "The architect of B2B Sales Arrow's unified growth model, focusing on aligning event strategy with measurable sales outcomes.",
       image:
         "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop",
       linkedin: "#",
+      name: "Suvra Shaw",
+      role: "Founder & CEO",
     },
     {
-      name: "Sumant Shaw",
-      role: "Co-Founder & COO",
       bio: "Global operations lead ensuring seamless execution of high-fidelity media production and complex international exhibition builds.",
       image:
         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop",
       linkedin: "#",
+      name: "Sumant Shaw",
+      role: "Co-Founder & COO",
     },
     {
-      name: "Elena Rodriguez",
-      role: "VP of Digital Marketing",
       bio: "Performance marketing strategist focusing on MQL to SQL conversion and pipeline attribution for enterprise brands.",
       image:
         "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop",
       linkedin: "#",
+      name: "Elena Rodriguez",
+      role: "VP of Digital Marketing",
     },
     {
-      name: "David Chen",
-      role: "Director of Market Intelligence",
       bio: "Pioneer in human-powered research methodologies and high-precision contact discovery across 40+ countries.",
       image:
         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop",
       linkedin: "#",
+      name: "David Chen",
+      role: "Director of Market Intelligence",
     },
   ],
 };
 
 export const ABOUT_PRESENCE = {
-  title: "Where We Operate",
-  description: "New York | London | Dubai | Singapore | Sydney | Toronto",
   cities: [
-    { name: "New York", lat: 40.7128, lng: -74.006, size: 0.1, color: "cyan" },
-    { name: "London", lat: 51.5074, lng: -0.1278, size: 0.1, color: "cyan" },
-    { name: "Dubai", lat: 25.2048, lng: 55.2708, size: 0.1, color: "cyan" },
-    { name: "Singapore", lat: 1.3521, lng: 103.8198, size: 0.1, color: "cyan" },
-    { name: "Sydney", lat: -33.8688, lng: 151.2093, size: 0.1, color: "cyan" },
-    { name: "Toronto", lat: 43.651_07, lng: -79.347_015, size: 0.1, color: "cyan" },
+    { color: "cyan", lat: 40.7128, lng: -74.006, name: "New York", size: 0.1 },
+    { color: "cyan", lat: 51.5074, lng: -0.1278, name: "London", size: 0.1 },
+    { color: "cyan", lat: 25.2048, lng: 55.2708, name: "Dubai", size: 0.1 },
+    { color: "cyan", lat: 1.3521, lng: 103.8198, name: "Singapore", size: 0.1 },
+    { color: "cyan", lat: -33.8688, lng: 151.2093, name: "Sydney", size: 0.1 },
+    { color: "cyan", lat: 43.651_07, lng: -79.347_015, name: "Toronto", size: 0.1 },
   ],
+  description: "New York | London | Dubai | Singapore | Sydney | Toronto",
+  title: "Where We Operate",
 };
 
 export const ABOUT_STATS = {
+  attribution: "— Leadership Team, B2B Sales Arrow",
   heading: <>Engineering Growth for Global Innovators</>,
   quote:
     '"Our mission is to transform how B2B brands connect with their audiences through innovative, immersive experiences that drive measurable business results."',
-  attribution: "— Leadership Team, B2B Sales Arrow",
   stats: [
     {
-      value: "8+",
-      label: "Years in Operation",
-      icon: "TrendingUp",
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
+      icon: "TrendingUp",
+      label: "Years in Operation",
+      value: "8+",
     },
     {
-      value: "240+",
-      label: "Brands Served",
-      icon: "Users",
       bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
+      icon: "Users",
+      label: "Brands Served",
+      value: "240+",
     },
     {
-      value: "$1.2B",
-      label: "Pipeline Generated",
-      icon: "BarChart3",
       bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
+      icon: "BarChart3",
+      label: "Pipeline Generated",
+      value: "$1.2B",
     },
     {
-      value: "40+",
-      label: "Countries Covered",
-      icon: "Globe2",
       bg: "bg-linear-to-br from-[#1b5e82] to-[#164e6b]",
-    },
-    {
-      value: "98%",
-      label: "Client Retention",
-      icon: "Target",
-      bg: "bg-linear-to-br from-[#306f75] to-[#255c61]",
-    },
-    {
-      value: "500+",
-      label: "Projects Delivered",
       icon: "Globe2",
+      label: "Countries Covered",
+      value: "40+",
+    },
+    {
+      bg: "bg-linear-to-br from-[#306f75] to-[#255c61]",
+      icon: "Target",
+      label: "Client Retention",
+      value: "98%",
+    },
+    {
       bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
+      icon: "Globe2",
+      label: "Projects Delivered",
+      value: "500+",
     },
   ],
 };
 
 export const ABOUT_VALUES = {
-  eyebrow: "OUR PRINCIPLES",
-  heading: "What We Believe In",
   description:
     "Accountability Over Activity | Precision Over Volume | Partnership Over Vendor Relationships | Global Thinking, Local Execution",
+  eyebrow: "OUR PRINCIPLES",
+  heading: "What We Believe In",
   reasons: [
     {
-      id: "accountability",
-      title: "Accountability Over Activity",
       description: "We measure success by pipeline impact, not just activity metrics.",
+      id: "accountability",
       image:
         "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1200",
+      title: "Accountability Over Activity",
     },
     {
-      id: "precision",
-      title: "Precision Over Volume",
       description:
         "Targeted strategies focused on the accounts that matter most to your enterprise.",
+      id: "precision",
       image:
         "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
+      title: "Precision Over Volume",
     },
     {
-      id: "partnership",
-      title: "Partnership Over Vendor Relationships",
       description:
         "We operate as an extension of your team, aligned with your core business objectives.",
+      id: "partnership",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      title: "Partnership Over Vendor Relationships",
     },
     {
-      id: "global",
-      title: "Global Thinking, Local Execution",
       description:
         "With operations across 40+ countries, we bring a genuinely international lens to every local challenge.",
+      id: "global",
       image:
         "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
+      title: "Global Thinking, Local Execution",
     },
   ],
 };
 
 export const ABOUT_CASE_STUDIES = {
+  ctaLabel: "Full Study",
   eyebrow: "FLAGSHIP WORK",
   heading: <>The Results That Define Our Reputation</>,
-  ctaLabel: "Full Study",
-  viewAllLabel: "View All Case Studies",
   items: [
     {
-      id: "tech-summit",
-      client: "Global Tech Summit",
-      title: "Redefining the Enterprise Exhibition Experience",
       challenge: "Low attendee engagement in a 10,000 sq ft booth space.",
-      solution: "Interactive structural design with live AR product demos.",
-      metric: "+340%",
-      metricLabel: "Lead Capture Rate",
+      client: "Global Tech Summit",
       icon: "BarChart3",
+      id: "tech-summit",
       image:
         "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1200",
+      metric: "+340%",
+      metricLabel: "Lead Capture Rate",
+      solution: "Interactive structural design with live AR product demos.",
+      title: "Redefining the Enterprise Exhibition Experience",
     },
     {
-      id: "finserve",
-      client: "FinServe SaaS",
-      title: "Scaling Pipeline Through Precision Media",
       challenge: "High customer acquisition cost across generic channels.",
-      solution: "Targeted video thought-leadership campaign.",
-      metric: "4.2x",
-      metricLabel: "ROI in 6 Months",
+      client: "FinServe SaaS",
       icon: "Target",
+      id: "finserve",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      metric: "4.2x",
+      metricLabel: "ROI in 6 Months",
+      solution: "Targeted video thought-leadership campaign.",
+      title: "Scaling Pipeline Through Precision Media",
     },
   ],
+  viewAllLabel: "View All Case Studies",
 };
 
 export const ABOUT_TESTIMONIALS = {
+  autoplayInterval: 3000,
   eyebrow: "CLIENT SUCCESS",
   heading: <>Trusted by Industry Visionaries</>,
-  autoplayInterval: 3000,
   initialIndex: 2,
   testimonials: [
     {
-      id: 1,
-      name: "Sarah Jenkins",
-      designation: "Chief Marketing Officer",
       company: "Nexus Technologies",
-      rating: 5,
-      quote:
-        "B2B Sales Arrow transformed our exhibition presence. Their architectural approach to booth design and lead capture systems increased our qualified pipeline by 340% at GITEX.",
+      designation: "Chief Marketing Officer",
+      id: 1,
       image:
         "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
+      name: "Sarah Jenkins",
+      quote:
+        "B2B Sales Arrow transformed our exhibition presence. Their architectural approach to booth design and lead capture systems increased our qualified pipeline by 340% at GITEX.",
+      rating: 5,
     },
     {
-      id: 2,
-      name: "Michael Chen",
-      designation: "VP of Global Sales",
       company: "Aura Systems",
-      rating: 5,
-      quote:
-        "The strategic media production and targeted lead generation strategies deployed by the team were instrumental in helping us penetrate the European market 6 months ahead of schedule.",
+      designation: "VP of Global Sales",
+      id: 2,
       image:
         "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400",
+      name: "Michael Chen",
+      quote:
+        "The strategic media production and targeted lead generation strategies deployed by the team were instrumental in helping us penetrate the European market 6 months ahead of schedule.",
+      rating: 5,
     },
     {
-      id: 3,
-      name: "Elena Rodriguez",
-      designation: "Director of Brand Activation",
       company: "Vortex Labs",
-      rating: 5,
-      quote:
-        "Unlike typical agencies, they understand the deep nuances of enterprise B2B sales cycles. Every piece of collateral and physical asset they produced was highly conversion-focused.",
+      designation: "Director of Brand Activation",
+      id: 3,
       image:
         "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400",
+      name: "Elena Rodriguez",
+      quote:
+        "Unlike typical agencies, they understand the deep nuances of enterprise B2B sales cycles. Every piece of collateral and physical asset they produced was highly conversion-focused.",
+      rating: 5,
     },
     {
-      id: 4,
-      name: "David Alaba",
-      designation: "Head of Growth",
       company: "Synapse Networks",
-      rating: 5,
-      quote:
-        "Their data-driven insights and innovative campaigns created an entirely new paradigm for how we engage our enterprise prospects. A flawless execution.",
+      designation: "Head of Growth",
+      id: 4,
       image:
         "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400",
+      name: "David Alaba",
+      quote:
+        "Their data-driven insights and innovative campaigns created an entirely new paradigm for how we engage our enterprise prospects. A flawless execution.",
+      rating: 5,
     },
   ],
 };
 
 export const ABOUT_CONTACT = {
-  eyebrow: "WORK WITH US",
-  heading: <>Let&apos;s Build Something Great</>,
   description:
     "We partner with ambitious brands who are serious about enterprise growth. If that's you, let's talk.",
-  illustration: null,
+  eyebrow: "WORK WITH US",
   form: {
+    ctaLabel: "Start Partnership",
+    emailLabel: "Work Email",
+    emailPlaceholder: "john@company.com",
     firstNameLabel: "First Name",
     firstNamePlaceholder: "John",
     lastNameLabel: "Last Name",
     lastNamePlaceholder: "Doe",
-    emailLabel: "Work Email",
-    emailPlaceholder: "john@company.com",
-    serviceLabel: "How Can We Help?",
-    servicePlaceholder: "Select a service...",
-    serviceOptions: [
-      { value: "events", label: "Global Event Solutions" },
-      { value: "media", label: "Media Production" },
-      { value: "marketing", label: "Performance Marketing" },
-      { value: "lead-gen", label: "Lead Generation" },
-      { value: "research", label: "Market Research" },
-    ],
     messageLabel: "Tell Us About Your Business",
     messagePlaceholder: "What are your growth goals?",
-    ctaLabel: "Start Partnership",
+    serviceLabel: "How Can We Help?",
+    serviceOptions: [
+      { label: "Global Event Solutions", value: "events" },
+      { label: "Media Production", value: "media" },
+      { label: "Performance Marketing", value: "marketing" },
+      { label: "Lead Generation", value: "lead-gen" },
+      { label: "Market Research", value: "research" },
+    ],
+    servicePlaceholder: "Select a service...",
   },
+  heading: <>Let&apos;s Build Something Great</>,
+  illustration: null,
 };
+
+export const ABOUT_PAGE = {
+  pageId: "about",
+  pageName: "About Us",
+  pageType: "company",
+  seo: {
+    canonicalPath: "/about",
+    description:
+      "B2B Sales Arrow is a global enterprise growth agency delivering event solutions, video production, performance marketing, and market research across 40+ countries. Built to connect strategy to measurable commercial outcomes.",
+    focusKeyphrase: "B2B growth agency",
+    secondaryKeywords: [
+      "enterprise marketing company",
+      "global B2B agency",
+      "B2B Sales Arrow",
+      "event solutions company",
+    ],
+    title: "About B2B Sales Arrow | Enterprise Growth Partners",
+  },
+} as const;

@@ -1,41 +1,46 @@
-import { ServiceDetail } from "@/components/templates/ServiceDetail";
-import { getPageMetadata } from "@/content/pages";
-import {
-  SEO_HERO,
-  SEO_WHY,
-  SEO_DELIVERABLES,
-  SEO_PROOF_BAR,
-  SEO_PROCESS,
-  SEO_CASE_STUDIES,
-  SEO_FAQ,
-} from "@/content/services/detail/seo-services";
-
 import type { Metadata } from "next";
 
-export const metadata: Metadata = getPageMetadata("/services/seo-services");
+import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import {
+  SEO_CASE_STUDIES,
+  SEO_DELIVERABLES,
+  SEO_FAQ,
+  SEO_HERO,
+  SEO_PAGE,
+  SEO_PROCESS,
+  SEO_PROOF_BAR,
+  SEO_WHY,
+} from "@/content/services/detail/seo-services";
+import { PERF_PAGE } from "@/content/services/performance-marketing";
 
-export default function Page() {
+export const metadata: Metadata = getMarketingPageMetadata(SEO_PAGE);
+
+const Page = () => {
   return (
     <ServiceDetail
-      canonicalPath="/services/seo-services"
-      hero={SEO_HERO}
-      proofBar={SEO_PROOF_BAR}
-      why={SEO_WHY}
-      deliverables={SEO_DELIVERABLES}
-      process={SEO_PROCESS}
       caseStudies={SEO_CASE_STUDIES}
-      faq={SEO_FAQ}
       ctaBanner={{
-        title: "Your buyers are searching.",
-        description: "Will they find you — or your competitor?",
-        ctaLabel: "Get a Free SEO Audit",
         ctaHref: "/contact",
+        ctaLabel: "Get a Free SEO Audit",
+        description: "Will they find you — or your competitor?",
+        title: "Your buyers are searching.",
       }}
+      deliverables={SEO_DELIVERABLES}
+      faq={SEO_FAQ}
+      hero={SEO_HERO}
+      page={SEO_PAGE}
+      parentPage={PERF_PAGE}
+      process={SEO_PROCESS}
+      proofBar={SEO_PROOF_BAR}
       relatedServices={[
-        { title: "Paid Advertising", href: "/services/paid-advertising" },
-        { title: "LinkedIn Ads for B2B", href: "/services/linkedin-ads" },
-        { title: "Performance Marketing", href: "/services/performance-marketing" },
+        { href: "/services/paid-advertising", title: "Paid Advertising" },
+        { href: "/services/linkedin-ads", title: "LinkedIn Ads for B2B" },
+        { href: "/services/performance-marketing", title: "Performance Marketing" },
       ]}
+      why={SEO_WHY}
     />
   );
 }
+
+export default Page;

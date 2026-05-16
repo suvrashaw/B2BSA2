@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
-
 import Lenis from "@studio-freight/lenis";
+import { useEffect } from "react";
 
 export function SmoothScrollProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {

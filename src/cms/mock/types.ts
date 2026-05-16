@@ -1,67 +1,67 @@
-export type PageType =
-  | "home"
-  | "serviceHub"
-  | "serviceDetail"
-  | "resourceIndex"
-  | "company"
-  | "contact"
-  | "legal"
-  | "system";
-
-export interface CmsSeo {
-  title: string;
-  description: string;
-  canonicalPath: string;
-  focusKeyphrase?: string;
-  secondaryKeywords?: string[];
-  noIndex?: boolean;
-}
-
-export interface CmsHeading {
-  text: string;
-  highlight?: string;
-  highlightVariant?: "blue" | "cyan";
-}
-
-export interface CmsImage {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  priority?: boolean;
-  sizes?: string;
-}
-
-export interface CmsLink {
-  label: string;
-  pageId?: PageId;
-  href?: string;
-}
-
 export interface CmsCTA {
+  href?: string;
   label: string;
   pageId?: PageId;
-  href?: string;
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "ghost" | "primary" | "secondary";
 }
 
 export interface CmsFAQ {
-  question: string;
   answer: string;
+  question: string;
+}
+
+export interface CmsHeading {
+  highlight?: string;
+  highlightVariant?: "blue" | "cyan";
+  text: string;
+}
+
+export interface CmsImage {
+  alt: string;
+  height?: number;
+  priority?: boolean;
+  sizes?: string;
+  src: string;
+  width?: number;
+}
+
+export interface CmsLink {
+  href?: string;
+  label: string;
+  pageId?: PageId;
 }
 
 export interface CmsPage {
-  id: PageId;
-  pageType: PageType;
-  seo: CmsSeo;
-  title: CmsHeading;
-  heroImage?: CmsImage;
-  heroBadge?: { value: string; label: string; icon?: string };
-  sectionHeadings?: Record<string, CmsHeading>;
-  tags?: string[];
-  internalLinks?: CmsLink[];
-  faqs?: CmsFAQ[];
   ctas?: CmsCTA[];
+  faqs?: CmsFAQ[];
+  heroBadge?: { icon?: string; label: string; value: string; };
+  heroImage?: CmsImage;
+  id: PageId;
+  internalLinks?: CmsLink[];
+  pageType: PageType;
+  sectionHeadings?: Record<string, CmsHeading>;
+  seo: CmsSeo;
+  tags?: string[];
+  title: CmsHeading;
 }
 
-export type PageId = string & { readonly __pageIdBrand?: never };
+export interface CmsSeo {
+  canonicalPath: string;
+  description: string;
+  focusKeyphrase?: string;
+  noIndex?: boolean;
+  secondaryKeywords?: string[];
+  title: string;
+}
+
+export type PageId = { readonly __pageIdBrand?: never } & string;
+
+export type PageType =
+  | "company"
+  | "contact"
+  | "home"
+  | "legal"
+  | "resourceIndex"
+  | "serviceDetail"
+  | "serviceHub"
+  | "system";

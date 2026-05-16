@@ -1,34 +1,33 @@
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
-import { ArrowRight } from "lucide-react";
 
 import Icon from "@/components/ui/Icon";
 import { cn } from "@/lib";
 
 export interface ServiceCardProps {
-  id: string;
-  title: string;
-  description: string;
-  icon: string;
-  image: string;
-  color?: string;
-  href?: string;
-  ctaLabel?: string;
   badge?: string;
   className?: string;
+  color?: string;
+  ctaLabel?: string;
+  description: string;
+  href?: string;
+  icon: string;
+  id: string;
+  image: string;
+  title: string;
 }
 
 export function ServiceCard({
-  title,
-  description,
-  icon,
-  image,
-  color = "bg-brand-blue",
-  href,
-  ctaLabel = "Learn More",
   badge,
   className,
+  color = "bg-brand-blue",
+  ctaLabel = "Learn More",
+  description,
+  href,
+  icon,
+  image,
+  title,
 }: ServiceCardProps) {
   const inner = (
     <div
@@ -39,11 +38,11 @@ export function ServiceCard({
     >
       <div className="relative h-52 w-full overflow-hidden">
         <Image
-          src={image}
           alt={title}
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
           fill
           sizes="(max-width: 768px) 100vw, 400px"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          src={image}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         {badge && (
@@ -63,7 +62,7 @@ export function ServiceCard({
               color + "/10"
             )}
           >
-            <Icon name={icon} className={cn("h-5 w-5", color.replace("bg-", "text-"))} />
+            <Icon className={cn("h-5 w-5", color.replace("bg-", "text-"))} name={icon} />
           </div>
           <h3 className="mb-3 font-heading text-xl leading-tight font-bold">{title}</h3>
           <p className="text-sm leading-relaxed text-gray-600">{description}</p>

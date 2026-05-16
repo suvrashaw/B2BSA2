@@ -1,52 +1,51 @@
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
-import { ArrowUpRight } from "lucide-react";
 
 import Icon from "@/components/ui/Icon";
 import { cn } from "@/lib";
 
 export interface CaseStudyCardProps {
-  client: string;
-  title: string;
   challenge?: string;
-  solution?: string;
-  metric: string;
-  metricLabel: string;
+  className?: string;
+  client: string;
+  ctaLabel?: string;
+  href?: string;
   icon?: string;
   image: string;
-  href?: string;
-  ctaLabel?: string;
-  className?: string;
+  metric: string;
+  metricLabel: string;
+  solution?: string;
+  title: string;
 }
 
 export function CaseStudyCard({
-  client,
-  title,
   challenge,
-  metric,
-  metricLabel,
+  className,
+  client,
+  ctaLabel = "Read Full Study",
+  href = "/case-studies",
   icon = "Target",
   image,
-  href = "/case-studies",
-  ctaLabel = "Read Full Study",
-  className,
+  metric,
+  metricLabel,
+  title,
 }: CaseStudyCardProps) {
   return (
     <Link
-      href={href}
       className={cn(
         "group flex flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl",
         className
       )}
+      href={href}
     >
       <div className="relative h-52 w-full overflow-hidden">
         <Image
-          src={image}
           alt={title}
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
           fill
           sizes="(max-width: 768px) 100vw, 400px"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          src={image}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
 
@@ -60,7 +59,7 @@ export function CaseStudyCard({
         <div>
           <div className="mb-3 flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-blue/10">
-              <Icon name={icon} className="h-4 w-4 text-brand-blue" />
+              <Icon className="h-4 w-4 text-brand-blue" name={icon} />
             </div>
             <span className="text-xs font-bold tracking-wider text-gray-400 uppercase">
               {client}

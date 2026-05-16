@@ -1,30 +1,39 @@
-import { ServiceHub } from "@/components/templates/ServiceHub";
-import { getPageMetadata } from "@/content/pages";
-import {
-  GES_HERO,
-  GES_SERVICES,
-  GES_WHY,
-  GES_PROCESS,
-  GES_PROOF_BAR,
-  GES_CASE_STUDIES,
-  GES_FAQ,
-} from "@/content/services/global-event-solutions";
-
 import type { Metadata } from "next";
 
-export const metadata: Metadata = getPageMetadata("/services/global-event-solutions");
+import { ServiceHub } from "@/components/templates/ServiceHub";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import {
+  GES_CASE_STUDIES,
+  GES_FAQ,
+  GES_HERO,
+  GES_PAGE,
+  GES_PROCESS,
+  GES_PROOF_BAR,
+  GES_SERVICES,
+  GES_WHY,
+} from "@/content/services/global-event-solutions";
 
-export default function Page() {
+export const metadata: Metadata = getMarketingPageMetadata(GES_PAGE);
+
+const Page = () => {
   return (
     <ServiceHub
-      canonicalPath="/services/global-event-solutions"
+      caseStudies={GES_CASE_STUDIES}
+      ctaBanner={{
+        ctaHref: "/contact",
+        ctaLabel: "Book a Free Strategy Session",
+        description: "Let's build your event solutions strategy.",
+        title: "250+ events. $1.2B+ influenced. One team, one brief, one outcome.",
+      }}
+      faq={GES_FAQ}
       hero={GES_HERO}
+      page={GES_PAGE}
+      process={GES_PROCESS}
       proofBar={GES_PROOF_BAR}
       services={GES_SERVICES}
       why={GES_WHY}
-      process={GES_PROCESS}
-      caseStudies={GES_CASE_STUDIES}
-      faq={GES_FAQ}
     />
   );
 }
+
+export default Page;

@@ -1,18 +1,15 @@
 "use client";
 
-import { useState } from "react";
-
-import Image from "next/image";
-
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 
+import { Button } from "@/components/ui/Button";
+import { CaseStudyShowcaseCard } from "@/components/ui/CaseStudyShowcaseCard";
+import { SectionShell } from "@/components/ui/SectionShell";
 import { CASE_STUDIES_PAGE_CONTENT, CASE_STUDIES_PAGE_STUDIES } from "@/content/case-studies";
 import { cn } from "@/lib";
-
-import { Button } from "../ui/Button";
-import { CaseStudyShowcaseCard } from "../ui/CaseStudyShowcaseCard";
-import { SectionShell } from "../ui/SectionShell";
 
 import { CTABanner } from "./CTABanner";
 import { ProofBar } from "./ProofBar";
@@ -22,20 +19,20 @@ type FilterId = (typeof CASE_STUDIES_PAGE_CONTENT.filters)[number]["id"];
 const ALL_FILTER = "All";
 
 const filterOptions = {
+  companySize: [...new Set(CASE_STUDIES_PAGE_STUDIES.map((study) => study.companySize))],
+  geography: [...new Set(CASE_STUDIES_PAGE_STUDIES.map((study) => study.geography))],
+  industry: [...new Set(CASE_STUDIES_PAGE_STUDIES.map((study) => study.industry))],
   serviceCategory: [
     ...new Set(CASE_STUDIES_PAGE_STUDIES.flatMap((study) => study.serviceCategories)),
   ],
-  industry: [...new Set(CASE_STUDIES_PAGE_STUDIES.map((study) => study.industry))],
-  geography: [...new Set(CASE_STUDIES_PAGE_STUDIES.map((study) => study.geography))],
-  companySize: [...new Set(CASE_STUDIES_PAGE_STUDIES.map((study) => study.companySize))],
 } satisfies Record<FilterId, string[]>;
 
 export function CaseStudiesIndex() {
   const [filters, setFilters] = useState<Record<FilterId, string>>({
-    serviceCategory: ALL_FILTER,
-    industry: ALL_FILTER,
-    geography: ALL_FILTER,
     companySize: ALL_FILTER,
+    geography: ALL_FILTER,
+    industry: ALL_FILTER,
+    serviceCategory: ALL_FILTER,
   });
   const [activeId, setActiveId] = useState<string>(CASE_STUDIES_PAGE_STUDIES[0]?.id ?? "");
 
@@ -69,10 +66,10 @@ export function CaseStudiesIndex() {
         <div className="pointer-events-none absolute top-0 right-0 h-full w-1/2 bg-brand-gray/30" />
         <div className="relative z-10 container mx-auto grid items-center gap-12 px-8 pb-16 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)]">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-3xl"
+            initial={{ opacity: 0, x: -30 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             <h1 className="font-heading text-5xl leading-[1.05] font-bold lg:text-7xl">
               {CASE_STUDIES_PAGE_CONTENT.hero.title}
@@ -83,26 +80,26 @@ export function CaseStudiesIndex() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="relative hidden h-[520px] overflow-hidden rounded-[2rem] border-8 border-white shadow-2xl lg:block"
+            initial={{ opacity: 0, x: 30 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
             <Image
-              src={CASE_STUDIES_PAGE_CONTENT.hero.image.src}
               alt={CASE_STUDIES_PAGE_CONTENT.hero.image.alt}
+              className="object-cover"
               fill
               priority
               sizes="40vw"
-              className="object-cover"
+              src={CASE_STUDIES_PAGE_CONTENT.hero.image.src}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/50 via-transparent to-transparent" />
           </motion.div>
         </div>
 
         <ProofBar
-          stats={CASE_STUDIES_PAGE_CONTENT.hero.proofBarStats}
           className="border-t border-gray-100 bg-brand-gray/40"
+          stats={CASE_STUDIES_PAGE_CONTENT.hero.proofBarStats}
         />
       </section>
 
@@ -115,8 +112,8 @@ export function CaseStudiesIndex() {
           <div className="grid gap-8 lg:grid-cols-2">
             {CASE_STUDIES_PAGE_CONTENT.filters.map((filter) => (
               <div
-                key={filter.id}
                 className="rounded-3xl border border-white/60 bg-white/80 p-6 shadow-sm"
+                key={filter.id}
               >
                 <h3 className="text-sm font-bold tracking-[0.2em] text-brand-blue uppercase">
                   {filter.label}
@@ -127,15 +124,15 @@ export function CaseStudiesIndex() {
 
                     return (
                       <Button
-                        key={`${filter.id}-${option}`}
-                        type="button"
-                        variant={isActive ? "primary" : "secondary"}
-                        size="sm"
                         className={cn(
                           "rounded-full px-4 py-2 text-sm",
                           !isActive && "border-white bg-white text-gray-700"
                         )}
+                        key={`${filter.id}-${option}`}
                         onClick={() => updateFilter(filter.id, option)}
+                        size="sm"
+                        type="button"
+                        variant={isActive ? "primary" : "secondary"}
                       >
                         {option}
                       </Button>
@@ -160,10 +157,10 @@ export function CaseStudiesIndex() {
             <div className="flex h-[600px] w-full flex-col gap-4 lg:flex-row">
               {filteredStudies.map((study) => (
                 <CaseStudyShowcaseCard
-                  key={study.id}
-                  item={study.card}
                   active={activeStudyId === study.id}
                   ctaLabel={CASE_STUDIES_PAGE_CONTENT.cardCtaLabel}
+                  item={study.card}
+                  key={study.id}
                   onActivate={() => setActiveId(study.id)}
                 />
               ))}
@@ -173,9 +170,9 @@ export function CaseStudiesIndex() {
           <div className="mt-16 space-y-8">
             {filteredStudies.map((study) => (
               <article
+                className="scroll-mt-32 rounded-[2rem] border border-gray-100 bg-white p-8 shadow-sm transition-shadow duration-300 hover:shadow-xl lg:p-10"
                 id={study.anchorId}
                 key={study.id}
-                className="scroll-mt-32 rounded-[2rem] border border-gray-100 bg-white p-8 shadow-sm transition-shadow duration-300 hover:shadow-xl lg:p-10"
               >
                 <div className="grid gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(260px,0.95fr)]">
                   <div>
@@ -206,11 +203,11 @@ export function CaseStudiesIndex() {
 
                   <div className="relative min-h-[320px] overflow-hidden rounded-[2rem]">
                     <Image
-                      src={study.card.image}
                       alt={study.title}
+                      className="object-cover"
                       fill
                       sizes="(max-width: 1024px) 100vw, 32vw"
-                      className="object-cover"
+                      src={study.card.image}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-brand-charcoal/20 to-transparent" />
                     <div className="absolute top-6 right-6 rounded-2xl border border-white/20 bg-white/90 px-4 py-3 text-center shadow-lg backdrop-blur-md">
@@ -224,8 +221,8 @@ export function CaseStudiesIndex() {
                     <div className="absolute right-6 bottom-6 left-6 flex flex-wrap gap-2">
                       {study.serviceCategories.map((service) => (
                         <span
-                          key={`${study.id}-${service}`}
                           className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-semibold tracking-wide text-white backdrop-blur-md"
+                          key={`${study.id}-${service}`}
                         >
                           {service}
                         </span>
@@ -248,8 +245,8 @@ export function CaseStudiesIndex() {
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {CASE_STUDIES_PAGE_CONTENT.template.items.map((item) => (
               <div
-                key={item}
                 className="rounded-3xl border border-gray-100 bg-brand-gray/40 p-6 shadow-sm"
+                key={item}
               >
                 <CheckCircle2 className="h-6 w-6 text-brand-blue" />
                 <p className="mt-4 text-base leading-7 text-gray-700">{item}</p>
@@ -260,10 +257,10 @@ export function CaseStudiesIndex() {
       </SectionShell>
 
       <CTABanner
-        title={CASE_STUDIES_PAGE_CONTENT.cta.title}
-        ctaText={CASE_STUDIES_PAGE_CONTENT.cta.ctaLabel}
-        ctaHref={CASE_STUDIES_PAGE_CONTENT.cta.ctaHref}
         className="bg-white"
+        ctaHref={CASE_STUDIES_PAGE_CONTENT.cta.ctaHref}
+        ctaText={CASE_STUDIES_PAGE_CONTENT.cta.ctaLabel}
+        title={CASE_STUDIES_PAGE_CONTENT.cta.title}
       />
     </>
   );

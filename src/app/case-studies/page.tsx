@@ -1,13 +1,14 @@
+import type { Metadata } from "next";
+
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CaseStudiesIndex } from "@/components/sections/CaseStudiesIndex";
-import { getPageMetadata } from "@/content/pages";
+import { CASE_STUDIES_PAGE } from "@/content/case-studies";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
 
-import type { Metadata } from "next";
+export const metadata: Metadata = getMarketingPageMetadata(CASE_STUDIES_PAGE);
 
-export const metadata: Metadata = getPageMetadata("/case-studies");
-
-export default function Page() {
+const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <Header />
@@ -16,3 +17,5 @@ export default function Page() {
     </main>
   );
 }
+
+export default Page;

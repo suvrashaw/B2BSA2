@@ -1,131 +1,131 @@
-import { GLOBAL_CASE_STUDIES } from "../shared";
+import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const GES_HERO = {
-  title: "Global Event Solutions That Turn Trade Show Floors Into Revenue Pipelines",
   description:
     "From GITEX to CES to MWC, B2B Sales Arrow delivers B2B event solutions that create qualified pipeline, not just presence. Strategy, booth design, lead capture and post-event reporting — all under one team, one brief, one outcome.",
+  title: "Global Event Solutions That Turn Trade Show Floors Into Revenue Pipelines",
 };
 
 export { GLOBAL_PROOF_STATS as GES_PROOF_BAR } from "../shared";
 
 export const GES_SERVICES = {
-  heading: "End-to-End Corporate Event Solutions Under One Roof",
   description:
     "Running a major trade show program through five separate vendors creates fragmentation — no single partner owns the outcome. Our corporate event solutions consolidate the full journey: event strategy and planning, custom booth design, fabrication, freight, customs compliance, trade show lead generation, CRM integration, and pipeline attribution — all under one team. When the same team that designs your booth also designs your lead qualification workflow, there are no gaps between vendors for budget and buyers to fall through.",
+  heading: "End-to-End Corporate Event Solutions Under One Roof",
   services: [
     {
-      id: "booth-design",
-      title: "Trade Show Booth Design",
+      color: "bg-brand-blue",
       description: "exhibition environments engineered for visitor flow and lead conversion",
+      href: "/services/global-event-solutions/trade-show-booth-design",
       icon: "Presentation",
+      id: "booth-design",
       image:
         "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-blue",
-      href: "/services/global-event-solutions/trade-show-booth-design",
+      title: "Trade Show Booth Design",
     },
     {
-      id: "event-lead-gen",
-      title: "Event Lead Generation",
+      color: "bg-brand-cyan",
       description: "real-time capture, BANT scoring, and CRM handoff",
+      href: "/services/global-event-solutions/event-lead-generation",
       icon: "Target",
+      id: "event-lead-gen",
       image:
         "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-cyan",
-      href: "/services/global-event-solutions/event-lead-generation",
+      title: "Event Lead Generation",
     },
     {
-      id: "industry-events",
-      title: "Industry Events",
+      color: "bg-brand-primary",
       description: "strategic presence at GITEX, CES, MWC, Dreamforce and more",
+      href: "/services/global-event-solutions/industry-events",
       icon: "MapPin",
+      id: "industry-events",
       image:
         "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-primary",
-      href: "/services/global-event-solutions/industry-events",
+      title: "Industry Events",
     },
     {
-      id: "custom-events",
-      title: "Custom Events",
+      color: "bg-brand-blue",
       description: "proprietary brand experiences built around commercial objectives",
+      href: "/services/global-event-solutions/custom-events",
       icon: "Zap",
+      id: "custom-events",
       image:
         "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-blue",
-      href: "/services/global-event-solutions/custom-events",
+      title: "Custom Events",
     },
     {
-      id: "booth-rental",
-      title: "Event Booth Rental",
+      color: "bg-brand-cyan",
       description: "modular exhibition systems globally available",
+      href: "/services/global-event-solutions/event-booth-rental",
       icon: "Layers",
+      id: "booth-rental",
       image:
         "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-cyan",
-      href: "/services/global-event-solutions/event-booth-rental",
+      title: "Event Booth Rental",
     },
     {
-      id: "booth-builder",
-      title: "Trade Show Booth Builder",
+      color: "bg-brand-primary",
       description: "fabrication to on-site installation",
+      href: "/services/global-event-solutions/trade-show-booth-builder",
       icon: "Globe2",
+      id: "booth-builder",
       image:
         "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-primary",
-      href: "/services/global-event-solutions/trade-show-booth-builder",
+      title: "Trade Show Booth Builder",
     },
   ],
 };
 
 export const GES_WHY = {
-  heading: "The Business Case for Live Events in Enterprise B2B",
   description:
     "Enterprise buyers do not commit from a single email or ad. They need trust, context, and conversation. Live events compress months of relationship-building into focused, high-intent days — and brands that show up with a structured presence consistently outperform those treating events as awareness activities. CEIR research shows 81% of trade show attendees hold buying authority. The question is whether your B2B event solutions are built to capture that opportunity — or simply occupy floor space.",
+  heading: "The Business Case for Live Events in Enterprise B2B",
   reasons: [
     {
-      id: "authority",
-      title: "81% Buying Authority",
       description:
-        "Trade show attendees hold the power to commit. We ensure your presence is built to convert that authority into pipeline.",
+        "CEIR research shows 81% of trade show attendees hold buying authority. The question is whether your B2B event solutions are built to capture that opportunity — or simply occupy floor space.",
+      id: "authority",
       image:
         "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+      title: "81% Buying Authority",
     },
     {
-      id: "trust",
-      title: "Compressed Trust Cycles",
       description:
-        "Live events turn months of digital nurturing into focused, high-intent days of conversation and conversion.",
+        "Enterprise buyers do not commit from a single email or ad. They need trust, context, and conversation. Live events compress months of relationship-building into focused, high-intent days — and brands that show up with a structured presence consistently outperform those treating events as awareness activities.",
+      id: "trust",
       image:
         "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200",
+      title: "Compressed Trust Cycles",
     },
   ],
 };
 
 export const GES_PROCESS = {
-  title: "Our 5-Phase Global Event Execution Framework",
   phases: [
     {
-      title: "Strategic Planning",
       description: "ICP mapping, event selection, ROI forecasting, and commercial goal alignment.",
+      title: "Strategic Planning",
     },
     {
-      title: "Concept Design",
       description: "booth architecture, visitor journey, demo zones, and meeting area placement.",
+      title: "Concept Design",
     },
     {
-      title: "Fabrication and Logistics",
       description: "production, shipping, customs, and venue scheduling managed in advance.",
+      title: "Fabrication and Logistics",
     },
     {
-      title: "On-Ground Execution",
       description:
         "booth operations, staff briefing, real-time lead capture, and hot-lead routing.",
+      title: "On-Ground Execution",
     },
     {
-      title: "Post-Event Reporting",
       description:
         "CRM-ready lead file, pipeline attribution, and ROI review delivered within 48 hours of event close.",
+      title: "Post-Event Reporting",
     },
   ],
+  title: "Our 5-Phase Global Event Execution Framework",
 };
 
 export const GES_CASE_STUDIES = {
@@ -133,43 +133,62 @@ export const GES_CASE_STUDIES = {
 };
 
 export const GES_FAQ = {
-  heading: "Frequently Asked Questions",
   faqs: [
     {
-      id: "definition",
-      question: "What are global event solutions?",
       answer:
         "Global event solutions are end-to-end services covering strategy, booth design, lead capture, logistics, and post-event reporting across international markets under one accountable partner.",
+      id: "definition",
+      question: "What are global event solutions?",
     },
     {
-      id: "engagement",
-      question: "How early should we engage an event solutions partner?",
       answer:
         "For custom booths at major international shows, 12–20 weeks ahead is ideal. For modular or rental formats, 6–8 weeks is typically sufficient.",
+      id: "engagement",
+      question: "How early should we engage an event solutions partner?",
     },
     {
-      id: "roi",
-      question: "How do you measure event ROI?",
       answer:
         "Through qualified lead volume, meeting conversion rate, cost per qualified opportunity, and CRM pipeline movement within 90 days — benchmarked against pre-event commercial targets.",
+      id: "roi",
+      question: "How do you measure event ROI?",
     },
     {
-      id: "integration",
-      question: "Can you manage booth design and lead generation together?",
       answer:
         "Yes — and this integration is where the greatest commercial gains are made. The physical environment, lead capture workflow, and CRM routing are designed as one system from the first brief.",
+      id: "integration",
+      question: "Can you manage booth design and lead generation together?",
     },
     {
-      id: "industries",
-      question: "Which industries do you serve?",
       answer:
         "Technology, SaaS, financial services, fintech, healthcare, energy, telecom, and professional services — across events including GITEX, CES, MWC, ADIPEC, Arab Health, Money20/20, and Hannover Messe.",
+      id: "industries",
+      question: "Which industries do you serve?",
     },
     {
-      id: "markets",
-      question: "Do you support emerging markets?",
       answer:
         "Yes — Southeast Asia, Africa, Latin America, and Eastern Europe, with local logistics partners and compliance knowledge in each region.",
+      id: "markets",
+      question: "Do you support emerging markets?",
     },
   ],
+  heading: "Frequently Asked Questions",
 };
+
+export const GES_PAGE = {
+  pageId: "service.global-event-solutions",
+  pageName: "Global Event Solutions",
+  pageType: "serviceHub",
+  seo: {
+    canonicalPath: "/services/global-event-solutions",
+    description:
+      "End-to-end global event solutions — strategy, booth design, lead capture and on-ground execution across 40+ countries. 250+ enterprise events. $1.2B+ pipeline influenced.",
+    focusKeyphrase: "global event solutions",
+    secondaryKeywords: [
+      "B2B event solutions",
+      "corporate event solutions",
+      "B2B events agency",
+      "trade show lead generation",
+    ],
+    title: "Global Event Solutions for Enterprise B2B Brands | B2B Sales Arrow",
+  },
+} as const;

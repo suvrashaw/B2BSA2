@@ -1,33 +1,32 @@
 "use client";
 
-import { useRef } from "react";
 import type { ReactNode } from "react";
-
-import Link from "next/link";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { useRef } from "react";
 
 export interface ServiceHeroProps {
-  title: string | ReactNode;
   description: string;
-  videoUrl?: string;
   primaryCta?: {
-    label: string;
     href: string;
+    label: string;
   };
   secondaryCta?: {
-    label: string;
     href: string;
+    label: string;
   };
+  title: ReactNode | string;
+  videoUrl?: string;
 }
 
 export function ServiceHero({
-  title,
   description,
-  videoUrl = "/videos/hero-gtc-2026.mp4",
   primaryCta,
   secondaryCta,
+  title,
+  videoUrl = "/videos/hero-gtc-2026.mp4",
 }: ServiceHeroProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
@@ -38,17 +37,17 @@ export function ServiceHero({
 
   return (
     <section
-      ref={containerRef}
       className="relative flex min-h-svh items-end overflow-hidden bg-brand-charcoal pt-32 pb-20"
+      ref={containerRef}
     >
       {/* 1. Background Visuals (OG Blue Style) */}
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
+          className="hero-bg-video absolute inset-0 h-full w-full object-cover"
           loop
           muted
           playsInline
-          className="hero-bg-video absolute inset-0 h-full w-full object-cover"
         >
           <source src={videoUrl} type="video/mp4" />
         </video>
@@ -65,7 +64,7 @@ export function ServiceHero({
 
       {/* 2. Content Area */}
       <div className="relative z-20 container mx-auto px-8">
-        <motion.div style={{ y }} className="max-w-4xl">
+        <motion.div className="max-w-4xl" style={{ y }}>
           {/* Staggered Title Reveal */}
           <h1
             className="mb-8 font-heading text-4xl leading-[1.02] font-black lg:text-7xl xl:text-8xl"
@@ -75,16 +74,16 @@ export function ServiceHero({
             }}
           >
             {titleLines.map((line, index) => (
-              <span key={index} className="block overflow-hidden">
+              <span className="block overflow-hidden" key={index}>
                 <motion.span
-                  initial={{ opacity: 0, y: "110%" }}
                   animate={{ opacity: 1, y: 0 }}
+                  className="block"
+                  initial={{ opacity: 0, y: "110%" }}
                   transition={{
+                    delay: 0.4 + index * 0.15,
                     duration: 0.72,
                     ease: [0.22, 1, 0.36, 1],
-                    delay: 0.4 + index * 0.15,
                   }}
-                  className="block"
                 >
                   {line}
                 </motion.span>
@@ -94,26 +93,26 @@ export function ServiceHero({
 
           {/* Description */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
             className="mb-12 max-w-2xl text-lg leading-relaxed font-semibold lg:text-xl"
+            initial={{ opacity: 0, y: 20 }}
             style={{ color: "rgba(255, 255, 255, 0.86)" }}
+            transition={{ delay: 0.7, duration: 0.8 }}
           >
             {description}
           </motion.p>
 
           {/* Glossy CTAs */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9, duration: 0.6 }}
             className="flex flex-wrap items-center gap-6"
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ delay: 0.9, duration: 0.6 }}
           >
             {primaryCta && (
               <Link
-                href={primaryCta.href}
                 className="hero-primary-cta group relative flex min-h-[58px] items-center justify-center rounded-full px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105"
+                href={primaryCta.href}
                 style={{
                   background: `linear-gradient(135deg, rgba(116, 219, 243, 0.96) 0%, rgba(52, 144, 181, 0.98) 38%, rgba(30, 96, 145, 1) 100%)`,
                   border: "1px solid rgba(201, 244, 255, 0.68)",
@@ -128,14 +127,14 @@ export function ServiceHero({
 
             {secondaryCta && (
               <Link
-                href={secondaryCta.href}
                 className="hero-secondary-cta flex min-h-[58px] items-center justify-center rounded-full px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105"
+                href={secondaryCta.href}
                 style={{
+                  backdropFilter: "blur(18px) saturate(150%)",
                   background: `linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.1) 100%)`,
                   border: "1px solid rgba(255, 255, 255, 0.28)",
                   boxShadow:
                     "0 18px 38px rgba(8, 12, 18, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.28)",
-                  backdropFilter: "blur(18px) saturate(150%)",
                   WebkitBackdropFilter: "blur(18px) saturate(150%)",
                 }}
               >

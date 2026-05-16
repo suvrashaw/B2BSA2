@@ -1,35 +1,40 @@
-import { ServiceDetail } from "@/components/templates/ServiceDetail";
-import { getPageMetadata } from "@/content/pages";
-import {
-  MARKET_INTEL_HERO,
-  MARKET_INTEL_WHY,
-  MARKET_INTEL_DELIVERABLES,
-  MARKET_INTEL_PROOF_BAR,
-  MARKET_INTEL_TIERS,
-  MARKET_INTEL_CASE_STUDIES,
-  MARKET_INTEL_FAQ,
-} from "@/content/services/detail/human-powered-market-intelligence";
-
 import type { Metadata } from "next";
 
-export const metadata: Metadata = getPageMetadata("/services/market-intelligence");
+import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import {
+  MARKET_INTEL_CASE_STUDIES,
+  MARKET_INTEL_DELIVERABLES,
+  MARKET_INTEL_FAQ,
+  MARKET_INTEL_HERO,
+  MARKET_INTEL_PAGE,
+  MARKET_INTEL_PROOF_BAR,
+  MARKET_INTEL_TIERS,
+  MARKET_INTEL_WHY,
+} from "@/content/services/detail/human-powered-market-intelligence";
+import { RESEARCH_PAGE } from "@/content/services/market-research";
 
-export default function Page() {
+export const metadata: Metadata = getMarketingPageMetadata(MARKET_INTEL_PAGE);
+
+const Page = () => {
   return (
     <ServiceDetail
-      canonicalPath="/services/market-intelligence"
-      hero={MARKET_INTEL_HERO}
-      proofBar={MARKET_INTEL_PROOF_BAR}
-      why={MARKET_INTEL_WHY}
-      deliverables={MARKET_INTEL_DELIVERABLES}
-      pricing={MARKET_INTEL_TIERS}
       caseStudies={MARKET_INTEL_CASE_STUDIES}
+      deliverables={MARKET_INTEL_DELIVERABLES}
       faq={MARKET_INTEL_FAQ}
+      hero={MARKET_INTEL_HERO}
+      page={MARKET_INTEL_PAGE}
+      parentPage={RESEARCH_PAGE}
+      pricing={MARKET_INTEL_TIERS}
+      proofBar={MARKET_INTEL_PROOF_BAR}
       relatedServices={[
-        { title: "Data Validation", href: "/services/data-validation" },
-        { title: "Data Augmentation", href: "/services/data-augmentation" },
-        { title: "Market Research", href: "/services/market-research" },
+        { href: "/services/data-validation", title: "Data Validation" },
+        { href: "/services/data-augmentation", title: "Data Augmentation" },
+        { href: "/services/market-research", title: "Market Research" },
       ]}
+      why={MARKET_INTEL_WHY}
     />
   );
 }
+
+export default Page;

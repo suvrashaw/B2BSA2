@@ -1,12 +1,29 @@
+import type { CmsLink, PageId } from "./types";
+
 import { cmsPages } from "./registry";
 import { pageRoutes } from "./routes";
 
-import type { CmsLink, PageId } from "./types";
-
 export interface RelatedItem {
+  href: string;
   id: PageId;
   title: string;
-  href: string;
+}
+
+export function getRelatedContent(tags: string[], limit = 3, excludeId?: string): RelatedItem[] {
+  return cmsPages
+    .filter((page) => page.id !== excludeId && page.tags?.some((tag) => tags.includes(tag)))
+    .slice(0, limit)
+    .map((page) => ({
+      href: resolvePageHref(page.id),
+      id: page.id,
+      title: page.title.text,
+    }));
+}
+
+export function resolveLink(link: CmsLink): string {
+  if (link.pageId) return resolvePageHref(link.pageId);
+  if (link.href) return link.href;
+  return "#";
 }
 
 export function resolvePageHref(pageId: PageId): string {
@@ -17,21 +34,4 @@ export function resolvePageHref(pageId: PageId): string {
   }
 
   return path;
-}
-
-export function resolveLink(link: CmsLink): string {
-  if (link.pageId) return resolvePageHref(link.pageId);
-  if (link.href) return link.href;
-  return "#";
-}
-
-export function getRelatedContent(tags: string[], limit = 3, excludeId?: string): RelatedItem[] {
-  return cmsPages
-    .filter((page) => page.id !== excludeId && page.tags?.some((tag) => tags.includes(tag)))
-    .slice(0, limit)
-    .map((page) => ({
-      id: page.id,
-      title: page.title.text,
-      href: resolvePageHref(page.id),
-    }));
 }

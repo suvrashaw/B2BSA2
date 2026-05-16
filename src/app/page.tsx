@@ -1,5 +1,5 @@
-import { getCmsPage } from "@/cms/mock/registry";
-import { getCmsPageMetadata } from "@/cms/mock/seo";
+import type { Metadata } from "next";
+
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Blogs } from "@/components/sections/Blogs";
@@ -15,28 +15,19 @@ import { UpcomingEvents } from "@/components/sections/UpcomingEvents";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { JsonLd } from "@/components/templates/ServiceDetail";
-import { HOME_FAQ_CONTENT } from "@/content/home";
+import { HOME_FAQ_CONTENT, HOME_HERO_CONTENT, HOME_PAGE } from "@/content/home";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { buildFaqJsonLd } from "@/lib";
 
-import type { Metadata } from "next";
+export const metadata: Metadata = getMarketingPageMetadata(HOME_PAGE);
 
-export const metadata: Metadata = getCmsPageMetadata("home");
-
-const homePage = getCmsPage("home")!;
-
-export default function Home() {
+const Home = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <JsonLd data={buildFaqJsonLd(HOME_FAQ_CONTENT.faqs)} />
       <Header />
       <div id="home">
-        <Hero
-          title={homePage.title.text}
-          highlight={homePage.title.highlight}
-          highlightVariant={homePage.title.highlightVariant}
-          image={homePage.heroImage}
-          stat={homePage.heroBadge}
-        />
+        <Hero {...HOME_HERO_CONTENT} />
       </div>
 
       <CinematicSequence />
@@ -79,3 +70,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default Home;

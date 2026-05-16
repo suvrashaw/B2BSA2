@@ -1,49 +1,52 @@
-import { ServiceDetail } from "@/components/templates/ServiceDetail";
-import { getPageMetadata } from "@/content/pages";
-import {
-  INDUSTRY_EVENTS_HERO,
-  INDUSTRY_EVENTS_WHY,
-  INDUSTRY_EVENTS_DELIVERABLES,
-  INDUSTRY_EVENTS_PROOF_BAR,
-  INDUSTRY_EVENTS_PRIORITY,
-  INDUSTRY_EVENTS_CASE_STUDIES,
-  INDUSTRY_EVENTS_FAQ,
-} from "@/content/services/detail/industry-events";
-
 import type { Metadata } from "next";
 
-export const metadata: Metadata = getPageMetadata(
-  "/services/global-event-solutions/industry-events"
-);
+import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import {
+  INDUSTRY_EVENTS_CASE_STUDIES,
+  INDUSTRY_EVENTS_DELIVERABLES,
+  INDUSTRY_EVENTS_FAQ,
+  INDUSTRY_EVENTS_HERO,
+  INDUSTRY_EVENTS_PAGE,
+  INDUSTRY_EVENTS_PRIORITY,
+  INDUSTRY_EVENTS_PROOF_BAR,
+  INDUSTRY_EVENTS_WHY,
+} from "@/content/services/detail/industry-events";
+import { GES_PAGE } from "@/content/services/global-event-solutions";
 
-export default function Page() {
+export const metadata: Metadata = getMarketingPageMetadata(INDUSTRY_EVENTS_PAGE);
+
+const Page = () => {
   return (
     <ServiceDetail
-      canonicalPath="/services/global-event-solutions/industry-events"
-      hero={INDUSTRY_EVENTS_HERO}
-      proofBar={INDUSTRY_EVENTS_PROOF_BAR}
-      why={INDUSTRY_EVENTS_WHY}
-      deliverables={INDUSTRY_EVENTS_DELIVERABLES}
-      pricing={INDUSTRY_EVENTS_PRIORITY}
       caseStudies={INDUSTRY_EVENTS_CASE_STUDIES}
-      faq={INDUSTRY_EVENTS_FAQ}
       ctaBanner={{
-        title: "The strongest strategy is not about showing up everywhere.",
-        description: "It is about choosing the rooms where your buyers already gather.",
-        ctaLabel: "Get a Free Event ROI Assessment",
         ctaHref: "/contact",
+        ctaLabel: "Get a Free Event ROI Assessment",
+        description: "It is about choosing the rooms where your buyers already gather.",
+        title: "The strongest strategy is not about showing up everywhere.",
       }}
+      deliverables={INDUSTRY_EVENTS_DELIVERABLES}
+      faq={INDUSTRY_EVENTS_FAQ}
+      hero={INDUSTRY_EVENTS_HERO}
+      page={INDUSTRY_EVENTS_PAGE}
+      parentPage={GES_PAGE}
+      pricing={INDUSTRY_EVENTS_PRIORITY}
+      proofBar={INDUSTRY_EVENTS_PROOF_BAR}
       relatedServices={[
         {
-          title: "Trade Show Booth Design",
           href: "/services/global-event-solutions/trade-show-booth-design",
+          title: "Trade Show Booth Design",
         },
         {
-          title: "Event Lead Generation",
           href: "/services/global-event-solutions/event-lead-generation",
+          title: "Event Lead Generation",
         },
-        { title: "Custom Events", href: "/services/global-event-solutions/custom-events" },
+        { href: "/services/global-event-solutions/custom-events", title: "Custom Events" },
       ]}
+      why={INDUSTRY_EVENTS_WHY}
     />
   );
 }
+
+export default Page;

@@ -1,12 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
-
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronDown, Globe, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Globe, Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { serviceNavigationGroups, topNavigation, tradeShowLinks } from "@/content/navigation";
@@ -15,9 +13,9 @@ import { cn } from "@/lib";
 // Remove ThemeToggle import
 
 export function Header({
-  forceLightMode = false,
   darkBackground = false,
-}: { forceLightMode?: boolean; darkBackground?: boolean } = {}) {
+  forceLightMode = false,
+}: { darkBackground?: boolean; forceLightMode?: boolean; } = {}) {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const solidHeader = forceLightMode || scrolled;
@@ -37,41 +35,41 @@ export function Header({
 
   return (
     <motion.header
-      initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className={cn(
         "fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-4 transition-all duration-300",
         solidHeader
           ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
           : "bg-transparent"
       )}
+      initial={{ y: -100 }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
     >
       <div className="flex items-center gap-2">
         <Link
-          href="/"
           className="relative block h-14 w-52 transition-all duration-300 hover:opacity-80"
+          href="/"
         >
           <Image
-            src="/logo.png"
             alt="B2B Sales Arrow"
-            fill
-            sizes="160px"
-            priority
             className="object-contain"
+            fill
+            priority
+            sizes="160px"
+            src="/logo.png"
           />
         </Link>
       </div>
 
       <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 lg:flex">
         {topNavigation.map((link) => (
-          <div key={link.name} className="group/nav-item relative flex items-center py-4">
+          <div className="group/nav-item relative flex items-center py-4" key={link.name}>
             <Link
-              href={link.href}
               className={cn(
                 "group relative text-sm font-medium transition-colors flex items-center gap-1.5",
                 lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue"
               )}
+              href={link.href}
             >
               {link.name}
               {(link.name === "Services" || link.name === "Trade Shows") && (
@@ -86,21 +84,21 @@ export function Header({
                   <div className="grid grid-cols-5 gap-4">
                     {serviceNavigationGroups.map((group) => (
                       <div
-                        key={group.name}
                         className="rounded-lg border border-brand-charcoal/5 bg-brand-gray/5 p-4"
+                        key={group.name}
                       >
                         <Link
-                          href={group.href}
                           className="mb-3 block text-sm font-black  transition-colors hover:text-brand-blue"
+                          href={group.href}
                         >
                           {group.name}
                         </Link>
                         <div className="space-y-2">
                           {group.links.map((sub) => (
                             <Link
-                              key={sub.name}
-                              href={sub.href}
                               className="/60 block text-xs leading-5 font-semibold transition-colors hover:text-brand-blue"
+                              href={sub.href}
+                              key={sub.name}
                             >
                               {sub.name}
                             </Link>
@@ -119,9 +117,9 @@ export function Header({
                   <div className="flex flex-col gap-3">
                     {tradeShowLinks.map((item) => (
                       <Link
-                        key={item.name}
-                        href={item.href}
                         className="block text-sm font-semibold transition-colors hover:text-brand-blue"
+                        href={item.href}
+                        key={item.name}
                       >
                         {item.name}
                       </Link>
@@ -141,27 +139,27 @@ export function Header({
             lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue"
           )}
         >
-          <span suppressHydrationWarning className="flex items-center">
+          <span className="flex items-center" suppressHydrationWarning>
             <Globe className="h-4 w-4" />
           </span>
           <span>EN</span>
-          <span suppressHydrationWarning className="flex items-center">
+          <span className="flex items-center" suppressHydrationWarning>
             <ChevronDown className="h-3 w-3" />
           </span>
         </button>
 
         <Link href="/contact">
-          <Button variant="primary" size="sm">
+          <Button size="sm" variant="primary">
             Let&apos;s Talk
           </Button>
         </Link>
         <div className="lg:hidden">
           <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={cn(
               "rounded-full p-2 transition-colors hover:bg-brand-gray/5",
               lightText ? "text-white" : ""
             )}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -171,37 +169,37 @@ export function Header({
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
             className="absolute top-full right-0 left-0 flex flex-col gap-6 border-b border-gray-100 bg-white p-8 shadow-2xl lg:hidden"
+            exit={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -20 }}
           >
             {topNavigation.map((link) => (
-              <div key={link.name} className="space-y-4">
+              <div className="space-y-4" key={link.name}>
                 <Link
+                  className="block font-heading text-2xl  font-bold transition-colors hover:text-brand-blue"
                   href={link.href}
                   onClick={closeMobileMenu}
-                  className="block font-heading text-2xl  font-bold transition-colors hover:text-brand-blue"
                 >
                   {link.name}
                 </Link>
                 {link.name === "Services" && (
                   <div className="space-y-4 border-l-2 border-brand-blue/10 pl-4">
                     {serviceNavigationGroups.map((group) => (
-                      <div key={group.name} className="space-y-2">
+                      <div className="space-y-2" key={group.name}>
                         <Link
+                          className="block text-lg  font-bold transition-colors hover:text-brand-blue"
                           href={group.href}
                           onClick={closeMobileMenu}
-                          className="block text-lg  font-bold transition-colors hover:text-brand-blue"
                         >
                           {group.name}
                         </Link>
                         {group.links.map((sub) => (
                           <Link
-                            key={sub.name}
-                            href={sub.href}
-                            onClick={closeMobileMenu}
                             className="block pl-4 text-base font-medium text-gray-500 transition-colors hover:text-brand-blue"
+                            href={sub.href}
+                            key={sub.name}
+                            onClick={closeMobileMenu}
                           >
                             {sub.name}
                           </Link>
@@ -213,7 +211,7 @@ export function Header({
               </div>
             ))}
             <Link href="/contact" onClick={closeMobileMenu}>
-              <Button variant="primary" className="mt-4 w-full">
+              <Button className="mt-4 w-full" variant="primary">
                 Let&apos;s Talk
               </Button>
             </Link>

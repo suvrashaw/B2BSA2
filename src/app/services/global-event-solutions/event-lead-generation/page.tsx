@@ -1,50 +1,53 @@
-import { ServiceDetail } from "@/components/templates/ServiceDetail";
-import { getPageMetadata } from "@/content/pages";
-import {
-  ELG_HERO,
-  ELG_WHY,
-  ELG_DELIVERABLES,
-  ELG_PROOF_BAR,
-  ELG_PROCESS,
-  ELG_CASE_STUDIES,
-  ELG_FAQ,
-} from "@/content/services/detail/event-lead-generation";
-
 import type { Metadata } from "next";
 
-export const metadata: Metadata = getPageMetadata(
-  "/services/global-event-solutions/event-lead-generation"
-);
+import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import {
+  ELG_CASE_STUDIES,
+  ELG_DELIVERABLES,
+  ELG_FAQ,
+  ELG_HERO,
+  ELG_PAGE,
+  ELG_PROCESS,
+  ELG_PROOF_BAR,
+  ELG_WHY,
+} from "@/content/services/detail/event-lead-generation";
+import { GES_PAGE } from "@/content/services/global-event-solutions";
 
-export default function Page() {
+export const metadata: Metadata = getMarketingPageMetadata(ELG_PAGE);
+
+const Page = () => {
   return (
     <ServiceDetail
-      canonicalPath="/services/global-event-solutions/event-lead-generation"
-      hero={ELG_HERO}
-      proofBar={ELG_PROOF_BAR}
-      why={ELG_WHY}
-      deliverables={ELG_DELIVERABLES}
-      process={ELG_PROCESS}
       caseStudies={ELG_CASE_STUDIES}
-      faq={ELG_FAQ}
       ctaBanner={{
-        title: "Stop leaving trade show leads on the floor.",
+        ctaHref: "/contact",
+        ctaLabel: "Build Your Lead Generation System",
         description:
           "Build a system that captures, qualifies, and routes every qualified conversation.",
-        ctaLabel: "Build Your Lead Generation System",
-        ctaHref: "/contact",
+        title: "Stop leaving trade show leads on the floor.",
       }}
+      deliverables={ELG_DELIVERABLES}
+      faq={ELG_FAQ}
+      hero={ELG_HERO}
+      page={ELG_PAGE}
+      parentPage={GES_PAGE}
+      process={ELG_PROCESS}
+      proofBar={ELG_PROOF_BAR}
       relatedServices={[
         {
-          title: "Trade Show Booth Design",
           href: "/services/global-event-solutions/trade-show-booth-design",
+          title: "Trade Show Booth Design",
         },
-        { title: "Industry Events", href: "/services/global-event-solutions/industry-events" },
+        { href: "/services/global-event-solutions/industry-events", title: "Industry Events" },
         {
-          title: "Event Booth Rental",
           href: "/services/global-event-solutions/event-booth-rental",
+          title: "Event Booth Rental",
         },
       ]}
+      why={ELG_WHY}
     />
   );
 }
+
+export default Page;

@@ -1,98 +1,103 @@
-import { GLOBAL_CASE_STUDIES } from "../shared";
+import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const PERF_HERO = {
-  title: "B2B Performance Marketing — ROI-First Growth",
   description:
-    "Stop 'spraying and praying' with your ad spend. We provide the full-funnel performance marketing that combines data-driven targeting with high-conversion creative to deliver a measurable return on every dollar.",
+    "Clicks are not the goal. Pipeline is. As a specialist B2B digital marketing agency, we manage performance marketing programs where every campaign decision is evaluated against one standard: does it move a qualified buyer measurably closer to a sales conversation?",
+  title: "B2B Performance Marketing Built to Fill Enterprise Pipeline",
 };
 
 export { GLOBAL_PROOF_STATS as PERF_PROOF_BAR } from "../shared";
 
 export const PERF_SERVICES = {
-  heading: "Our Performance Marketing Capabilities",
-  description:
-    "Performance marketing in the B2B enterprise space is about quality, not just clicks. We focus on reaching the right stakeholders within your target accounts, using multi-channel strategies to build trust and drive high-intent actions. From demand generation to bottom-of-funnel conversion, we ensure your marketing engine is always optimized for revenue.",
+  heading: "Our Performance Marketing Services",
   services: [
     {
-      id: "seo",
-      title: "B2B SEO Services",
+      color: "bg-brand-blue",
       description:
-        "We don't just chase traffic; we chase pipeline. Our SEO strategies target high-intent enterprise keywords and build authority through expert-led content clusters.",
+        "Organic visibility built through technical SEO, content architecture, and authority building that compounds over time.",
+      href: "/services/seo-services",
       icon: "Search",
+      id: "seo",
       image:
         "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-blue",
-      href: "/services/seo-services",
+      title: "B2B SEO Services",
     },
     {
-      id: "paid",
-      title: "B2B Paid Advertising",
+      color: "bg-brand-cyan",
       description:
-        "Precision-targeted campaigns across Google Ads, Programmatic Display, and Retargeting, built to capture demand exactly when your prospects are searching for solutions.",
+        "Google Search, Display, YouTube, programmatic, retargeting, and Microsoft Ads managed around lead quality.",
+      href: "/services/paid-advertising",
       icon: "Zap",
+      id: "paid",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-cyan",
-      href: "/services/paid-advertising",
+      title: "Paid Advertising",
     },
     {
-      id: "linkedin",
-      title: "LinkedIn Ads for B2B",
+      color: "bg-brand-primary",
       description:
-        "The gold standard for B2B targeting. We use account-based marketing (ABM) and lead generation forms to put your message directly in front of C-suite decision-makers.",
+        "Sponsored Content, Lead Gen Forms, Document Ads, and ABM targeting reaching decision-makers by role, company, and intent.",
+      href: "/services/linkedin-ads",
       icon: "ExternalLink",
+      id: "linkedin",
       image:
         "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-primary",
-      href: "/services/linkedin-ads",
+      title: "LinkedIn Ads for B2B",
     },
   ],
 };
 
 export const PERF_WHY = {
-  heading: "The Performance Marketing ROI Engine",
   description:
-    "Most agencies focus on vanity metrics like impressions and clicks. We focus on pipeline value and customer acquisition cost (CAC). By aligning your marketing spend with your sales goals, we create a transparent growth engine where every dollar spent is an investment in future revenue. We treat your budget as if it were our own, constanty testing and optimizing for the highest possible return.",
+    "The right B2B digital marketing agency tracks what happens after the first interaction: conversion quality, lead source, SQL movement, pipeline influenced, cost per qualified opportunity, and revenue attribution. If your current marketing reports stop at click-through rate or cost per lead, you are measuring activity — not commercial performance.",
+  heading: "Every Action Has a Number",
   reasons: [
     {
-      id: "full-funnel",
-      title: "Full-Funnel Alignment",
-      description: "We bridge the gap between marketing interest and sales closing.",
+      description:
+        "We define who your campaigns should actually reach — by ideal customer profile, buying role, pain point, intent signal, and deal-stage context. Campaigns aimed at the wrong audience produce the wrong leads at any budget level.",
+      id: "icp",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      title: "Audience Intelligence and ICP Definition",
     },
     {
-      id: "mastery",
-      title: "Multi-Channel Mastery",
-      description: "Coordinated campaigns that work together to lower your overall CAC.",
+      description:
+        "Connecting campaign activity to qualified leads, SQL movement, pipeline influenced, and revenue outcomes — not platform dashboards.",
+      id: "attribution",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+      title: "Attribution and Revenue Reporting",
     },
   ],
 };
 
 export const PERF_PROCESS = {
-  heading: "Our Performance Marketing Process",
+  heading: "How We Build Your B2B Marketing Engine",
   phases: [
     {
-      title: "Funnel Audit and Strategy",
-      description: "Analyzing your current metrics and defining the optimal growth path.",
+      description:
+        "We define who your campaigns should actually reach — by ideal customer profile, buying role, pain point, intent signal, and deal-stage context. Campaigns aimed at the wrong audience produce the wrong leads at any budget level.",
+      title: "Audience Intelligence and ICP Definition",
     },
     {
-      title: "Targeting and Segmenting",
-      description: "Defining the account-based targets and decision-maker personas.",
+      description:
+        "Not every channel deserves equal budget. We evaluate search intent, audience behaviour, deal value, competition, and conversion potential before recommending where spend should go.",
+      title: "Channel Selection and Budget Allocation",
     },
     {
-      title: "Creative and Messaging",
-      description: "Building high-conversion ad copy and landing page environments.",
+      description:
+        "Campaigns structured around buyer intent, offer clarity, funnel stage, and commercial objectives — with testing frameworks built in from launch.",
+      title: "Campaign Architecture and Messaging",
     },
     {
-      title: "Launch and Continuous Optimization",
-      description: "Real-time monitoring and A/B testing to drive down cost per lead.",
+      description:
+        "Traffic only creates value when it converts. We improve landing pages, forms, CTAs, messaging, page speed, and trust signals so more qualified visitors become leads.",
+      title: "Conversion Rate Optimisation",
     },
     {
-      title: "Attribution and Reporting",
-      description: "Clear, transparent reporting on pipeline value and ROI.",
+      description:
+        "Connecting campaign activity to qualified leads, SQL movement, pipeline influenced, and revenue outcomes — not platform dashboards.",
+      title: "Attribution and Revenue Reporting",
     },
   ],
 };
@@ -102,25 +107,50 @@ export const PERF_CASE_STUDIES = {
 };
 
 export const PERF_FAQ = {
-  heading: "Performance Marketing FAQs",
   faqs: [
     {
-      id: "budget",
-      question: "What is the recommended starting budget?",
       answer:
-        "We typically recommend a minimum ad spend of $5,000 per month to ensure enough data for meaningful optimization, though this varies by market and channel.",
+        "B2B performance marketing optimises every campaign for measurable revenue outcomes — qualified leads, pipeline influence, and closed revenue — not vanity metrics like impressions or engagement.",
+      id: "what-is",
+      question: "What is B2B performance marketing?",
     },
     {
-      id: "tracking",
-      question: "How do you track sales from ads?",
       answer:
-        "We use advanced multi-touch attribution and CRM integration to track leads from their very first click all the way to a closed-won deal.",
+        "B2B deals with longer sales cycles (3–18 months), buying committees of 3–7 decision-makers, higher deal values, and complex qualification requirements. B2C tactics rarely translate effectively.",
+      id: "b2b-vs-b2c",
+      question: "How is B2B marketing different from B2C?",
     },
     {
-      id: "seo-timeline",
-      question: "How long does SEO take to work?",
       answer:
-        "SEO is a long-term investment. While you may see technical improvements in weeks, significant organic growth typically takes 4–6 months of consistent effort.",
+        "Paid channels: 4–8 weeks. SEO: 4–9 months for meaningful organic pipeline. A combined full-funnel program shows compounding returns after 6–12 months.",
+      id: "timeline",
+      question: "How long before we see results?",
+    },
+    {
+      answer:
+        "Technology, SaaS, financial services, healthcare, energy, telecom, and professional services — all with enterprise buyer focus.",
+      id: "industries",
+      question: "Do you work with specific industries?",
     },
   ],
+  heading: "Performance Marketing FAQs",
 };
+
+export const PERF_PAGE = {
+  pageId: "service.performance-marketing",
+  pageName: "Performance Marketing",
+  pageType: "serviceHub",
+  seo: {
+    canonicalPath: "/services/performance-marketing",
+    description:
+      "Specialist B2B digital marketing agency — SEO, paid advertising, and LinkedIn Ads managed around qualified pipeline and revenue attribution. Every campaign decision tracked to commercial outcomes.",
+    focusKeyphrase: "B2B digital marketing agency",
+    secondaryKeywords: [
+      "digital marketing agency",
+      "performance marketing company",
+      "digital marketing services",
+      "pipeline marketing",
+    ],
+    title: "B2B Performance Marketing Built to Fill Enterprise Pipeline | B2B Sales Arrow",
+  },
+} as const;

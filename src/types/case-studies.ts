@@ -1,35 +1,35 @@
+export interface CaseStudyCardData {
+  badge?: string;
+  client: string;
+  href?: string;
+  icon: string;
+  id: string;
+  image: string;
+  inactiveLabel?: string;
+  metric: string;
+  metricLabel: string;
+  primarySummary: CaseStudyCardSummary;
+  secondarySummary: CaseStudyCardSummary;
+  title: string;
+}
+
 export interface CaseStudyCardSummary {
   label: string;
   text: string;
 }
 
-export interface CaseStudyCardData {
-  id: string;
-  client: string;
-  title: string;
-  image: string;
-  icon: string;
-  metric: string;
-  metricLabel: string;
-  primarySummary: CaseStudyCardSummary;
-  secondarySummary: CaseStudyCardSummary;
-  href?: string;
-  badge?: string;
-  inactiveLabel?: string;
-}
-
 export interface CaseStudyIndexEntry {
-  id: string;
   anchorId: string;
-  title: string;
-  industry: string;
-  event: string;
-  servicesText: string;
-  serviceCategories: string[];
-  geography: string;
-  companySize: string;
-  challenge: string;
-  whatWeDid: string;
-  results: string;
   card: CaseStudyCardData;
+  challenge: string;
+  companySize: string;
+  event: string;
+  geography: string;
+  id: string;
+  industry: string;
+  results: string;
+  serviceCategories: string[];
+  servicesText: string;
+  title: string;
+  whatWeDid: string;
 }

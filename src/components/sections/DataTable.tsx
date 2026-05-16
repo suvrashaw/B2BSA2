@@ -4,19 +4,19 @@ import { motion } from "framer-motion";
 
 import { cn } from "@/lib";
 
+interface DataTableProps {
+  className?: string;
+  description?: string;
+  headers: string[];
+  rows: DataTableRow[];
+  title?: string;
+}
+
 interface DataTableRow {
   [key: string]: string;
 }
 
-interface DataTableProps {
-  title?: string;
-  description?: string;
-  headers: string[];
-  rows: DataTableRow[];
-  className?: string;
-}
-
-export function DataTable({ title, description, headers, rows, className }: DataTableProps) {
+export function DataTable({ className, description, headers, rows, title }: DataTableProps) {
   return (
     <section className={cn("py-20", className)}>
       <div className="container mx-auto px-8">
@@ -34,11 +34,11 @@ export function DataTable({ title, description, headers, rows, className }: Data
         )}
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
           className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-xl shadow-gray-100/50"
+          initial={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          whileInView={{ opacity: 1, y: 0 }}
         >
           <div className="overflow-x-auto">
             <table className="w-full text-left">
@@ -46,8 +46,8 @@ export function DataTable({ title, description, headers, rows, className }: Data
                 <tr className="border-b border-gray-100 bg-brand-gray/5">
                   {headers.map((header, index) => (
                     <th
-                      key={index}
                       className="px-8 py-6 text-xs font-bold tracking-widest text-gray-500 uppercase"
+                      key={index}
                     >
                       {header}
                     </th>
@@ -56,14 +56,14 @@ export function DataTable({ title, description, headers, rows, className }: Data
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {rows.map((row, rowIndex) => (
-                  <tr key={rowIndex} className="transition-colors hover:bg-brand-gray/2">
+                  <tr className="transition-colors hover:bg-brand-gray/2" key={rowIndex}>
                     {headers.map((header, colIndex) => (
                       <td
-                        key={colIndex}
                         className={cn(
                           "px-8 py-6 text-brand-gray text-base",
                           colIndex === 0 ? "font-bold" : "font-medium"
                         )}
+                        key={colIndex}
                       >
                         {row[header.toLowerCase()] || row[header] || ""}
                       </td>

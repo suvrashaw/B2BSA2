@@ -2,55 +2,18 @@ const BASE = "https://b2bsalesarrow.com";
 
 const ORGANIZATION = {
   "@type": "Organization" as const,
-  name: "B2B Sales Arrow",
-  url: BASE,
-  logo: `${BASE}/logo.png`,
-  sameAs: ["https://www.linkedin.com/company/b2b-sales-arrow/"],
   description:
     "Global capability. Strategic growth partner for B2B enterprises specializing in event solutions and digital marketing.",
+  logo: `${BASE}/logo.png`,
+  name: "B2B Sales Arrow",
+  sameAs: ["https://www.linkedin.com/company/b2b-sales-arrow/"],
+  url: BASE,
 };
 
-export function buildOrganizationJsonLd() {
-  return {
-    "@context": "https://schema.org",
-    ...ORGANIZATION,
-  };
-}
-
 export interface ServiceSchemaInput {
-  name: string;
   description: string;
+  name: string;
   url: string;
-}
-
-export function buildServiceJsonLd({ name, description, url }: ServiceSchemaInput) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name,
-    description,
-    url: `${BASE}${url}`,
-    provider: {
-      "@type": "Organization",
-      name: ORGANIZATION.name,
-      url: ORGANIZATION.url,
-    },
-  };
-}
-
-export function buildFaqJsonLd(faqs: Array<{ question: string; answer: string }>) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map(({ question, answer }) => ({
-      "@type": "Question",
-      name: question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: answer,
-      },
-    })),
-  };
 }
 
 export function buildBreadcrumbJsonLd(crumbs: Array<{ name: string; url: string }>) {
@@ -59,9 +22,46 @@ export function buildBreadcrumbJsonLd(crumbs: Array<{ name: string; url: string 
     "@type": "BreadcrumbList",
     itemListElement: crumbs.map(({ name, url }, index) => ({
       "@type": "ListItem",
-      position: index + 1,
-      name,
       item: url,
+      name,
+      position: index + 1,
     })),
+  };
+}
+
+export function buildFaqJsonLd(faqs: Array<{ answer: string; question: string; }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map(({ answer, question }) => ({
+      "@type": "Question",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: answer,
+      },
+      name: question,
+    })),
+  };
+}
+
+export function buildOrganizationJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    ...ORGANIZATION,
+  };
+}
+
+export function buildServiceJsonLd({ description, name, url }: ServiceSchemaInput) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    description,
+    name,
+    provider: {
+      "@type": "Organization",
+      name: ORGANIZATION.name,
+      url: ORGANIZATION.url,
+    },
+    url: `${BASE}${url}`,
   };
 }

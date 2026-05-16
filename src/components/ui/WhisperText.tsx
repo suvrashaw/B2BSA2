@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useLayoutEffect, useRef } from "react";
-
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useLayoutEffect, useRef } from "react";
 
 import { PointerHighlight } from "./PointerHighlight";
 
@@ -13,27 +12,27 @@ if (globalThis.window !== undefined) {
 }
 
 interface WhisperTextProps {
-  text: string;
   className?: string;
   delay?: number;
   duration?: number;
+  highlightColor?: "blue" | "red";
+  highlights?: string[];
+  text: string;
+  triggerStart?: string;
   x?: number;
   y?: number;
-  triggerStart?: string;
-  highlights?: string[];
-  highlightColor?: "blue" | "red";
 }
 
 export const WhisperText: React.FC<WhisperTextProps> = ({
-  text,
   className = "",
   delay = 50,
   duration = 0.8,
+  highlightColor = "blue",
+  highlights = [],
+  text,
+  triggerStart = "top 85%",
   x = 0,
   y = 40,
-  triggerStart = "top 85%",
-  highlights = [],
-  highlightColor = "blue",
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -41,21 +40,21 @@ export const WhisperText: React.FC<WhisperTextProps> = ({
     const ctx = gsap.context(() => {
       const targets = gsap.utils.toArray<HTMLElement>("[data-word]");
 
-      gsap.set(targets, { opacity: 0, y: y, rotateX: -45, transformOrigin: "0% 50% -50" });
+      gsap.set(targets, { opacity: 0, rotateX: -45, transformOrigin: "0% 50% -50", y: y });
 
       gsap.to(targets, {
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: triggerStart,
-          toggleActions: "play none none none",
-          once: true,
-        },
-        opacity: 1,
-        y: 0,
-        rotateX: 0,
         duration,
         ease: "power3.out",
+        opacity: 1,
+        rotateX: 0,
+        scrollTrigger: {
+          once: true,
+          start: triggerStart,
+          toggleActions: "play none none none",
+          trigger: containerRef.current,
+        },
         stagger: delay / 1000,
+        y: 0,
       });
     }, containerRef);
 
@@ -65,7 +64,7 @@ export const WhisperText: React.FC<WhisperTextProps> = ({
   const renderWords = () =>
     text.split(" ").map((word, i) => {
       if (word === String.raw`\n`) {
-        return <div key={i} className="h-0 basis-full" />;
+        return <div className="h-0 basis-full" key={i} />;
       }
       const cleanWord = word.replaceAll(/[.,]/g, "");
       const isHighlighted = highlights?.includes(cleanWord);
@@ -80,10 +79,10 @@ export const WhisperText: React.FC<WhisperTextProps> = ({
 
       return (
         <span
-          key={i}
-          data-word
           className="inline-block whitespace-nowrap"
-          style={{ position: "relative", perspective: "1000px" }}
+          data-word
+          key={i}
+          style={{ perspective: "1000px", position: "relative" }}
         >
           {content}
         </span>
@@ -92,8 +91,8 @@ export const WhisperText: React.FC<WhisperTextProps> = ({
 
   return (
     <div
-      ref={containerRef}
       className={`relative inline-flex flex-wrap gap-x-[0.3em] gap-y-[0.1em] ${className}`}
+      ref={containerRef}
       style={{ overflow: "visible" }}
     >
       {renderWords()}

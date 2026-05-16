@@ -1,6 +1,6 @@
-import type { CmsSeo } from "@/cms/mock/types";
-
 import type { Metadata } from "next";
+
+import type { CmsSeo } from "@/cms/mock/types";
 
 const BASE_URL = "https://b2bsalesarrow.com";
 
@@ -11,22 +11,22 @@ export function buildPageMetadata(seo: CmsSeo, pageId?: string): Metadata {
     : `${BASE_URL}/og-default.png`;
 
   return {
-    title: seo.title,
-    description: seo.description,
     alternates: { canonical: canonicalUrl },
+    description: seo.description,
     openGraph: {
-      title: seo.title,
       description: seo.description,
-      url: canonicalUrl,
+      images: [{ height: 630, url: ogImageUrl, width: 1200 }],
+      title: seo.title,
       type: "website",
-      images: [{ url: ogImageUrl, width: 1200, height: 630 }],
+      url: canonicalUrl,
     },
+    title: seo.title,
     twitter: {
       card: "summary_large_image",
-      title: seo.title,
       description: seo.description,
       images: [ogImageUrl],
+      title: seo.title,
     },
-    ...(seo.noIndex && { robots: { index: false, follow: false } }),
+    ...(seo.noIndex && { robots: { follow: false, index: false } }),
   };
 }

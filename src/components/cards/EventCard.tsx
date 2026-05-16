@@ -1,42 +1,41 @@
+import { ArrowUpRight, Calendar, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
-import { ArrowUpRight, Calendar, MapPin } from "lucide-react";
 
 import { Badge } from "@/components/ui/Badge";
 
 export interface EventCardProps {
-  id: string;
-  title: string;
-  date: string;
-  location: string;
-  image: string;
-  href?: string;
   badgeLabel?: string;
   ctaLabel?: string;
+  date: string;
+  href?: string;
+  id: string;
+  image: string;
+  location: string;
+  title: string;
 }
 
 export function EventCard({
-  title,
-  date,
-  location,
-  image,
-  href = "/events",
   badgeLabel = "UPCOMING",
   ctaLabel = "View Event",
+  date,
+  href = "/events",
+  image,
+  location,
+  title,
 }: EventCardProps) {
   return (
     <Link
-      href={href}
       className="group relative flex flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-sm transition-shadow duration-500 hover:shadow-2xl"
+      href={href}
     >
       <div className="relative h-[250px] w-full overflow-hidden">
         <Image
-          src={image}
           alt={title}
+          className="transform object-cover transition-transform duration-700 group-hover:scale-105"
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
-          className="transform object-cover transition-transform duration-700 group-hover:scale-105"
+          src={image}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
@@ -47,7 +46,7 @@ export function EventCard({
         </div>
 
         <div className="absolute right-6 bottom-6 left-6 z-10">
-          <Badge variant="solid" className="mb-3">
+          <Badge className="mb-3" variant="solid">
             {badgeLabel}
           </Badge>
           <h3 className="line-clamp-2 font-heading text-2xl leading-tight font-bold !text-white">

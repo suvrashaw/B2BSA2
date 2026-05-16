@@ -1,111 +1,109 @@
-import { GLOBAL_CASE_STUDIES } from "../shared";
+import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const MEDIA_HERO = {
-  title: "B2B Media Production — Enterprise Authority, Filmed",
   description:
-    "Before a buyer books a meeting, they judge your brand by what they see. Our video production company creates the high-fidelity content that earns trust and shortens your sales cycle.",
+    "Before a buyer books a meeting, they judge your brand by what they see. Our video production company creates content that earns trust — and keeps earning it long after the shoot.",
+  title: "B2B Media Production That Builds Enterprise Authority Before the First Sales Call",
 };
 
 export { GLOBAL_PROOF_STATS as MEDIA_PROOF_BAR } from "../shared";
 
 export const MEDIA_SERVICES = {
-  heading: "Our Media Production Services",
-  description:
-    "In the enterprise B2B space, video is the most powerful tool for building trust at scale. We produce everything from cinematic brand films to rapid-response event recaps, ensuring your brand story is told with the premium quality it deserves. Our production process is built for speed and reliability, delivering broadcast-grade assets that work across your entire sales and marketing funnel.",
+  heading: "What We Produce",
   services: [
     {
-      id: "event-video",
-      title: "Event Video Production",
+      color: "bg-brand-blue",
       description:
-        "Don't let your event ROI end when the booth is packed. We create cinematic event recaps, speaker highlights, and visitor testimonials that extend your brand's presence indefinitely.",
+        "Highlight reels, testimonial clips, speaker coverage, and post-event recap content — extending the ROI of your event investment beyond the show floor.",
+      href: "/services/media-production/event-video-production",
       icon: "Camera",
+      id: "event-video",
       image:
         "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-blue",
-      href: "/services/media-production/event-video-production",
+      title: "Event Video Production",
     },
     {
-      id: "corporate-video",
-      title: "Corporate Video Production",
+      color: "bg-brand-cyan",
       description:
-        "From brand anthems to product explainers, we produce high-fidelity corporate videos that humanize your brand and position your executives as industry leaders.",
+        "Brand films, product explainers, executive interviews, investor content, and sales enablement videos built for long B2B sales cycles.",
+      href: "/services/media-production/corporate-video-production",
       icon: "Clapperboard",
+      id: "corporate-video",
       image:
         "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-cyan",
-      href: "/services/media-production/corporate-video-production",
+      title: "Corporate Video Production",
     },
     {
-      id: "video-editing",
-      title: "Video Editing Services",
+      color: "bg-brand-primary",
       description:
-        "Turn your raw footage into polished, professional assets. Our editing team handles everything from color grading and motion graphics to multi-format exports for all platforms.",
+        "Raw footage transformed into polished assets with colour grading, captions, motion graphics, and multi-format delivery.",
+      href: "/services/media-production/video-editing-services",
       icon: "MonitorPlay",
+      id: "video-editing",
       image:
         "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-primary",
-      href: "/services/media-production/video-editing-services",
+      title: "Video Editing Services",
     },
     {
-      id: "live-streaming",
-      title: "Live Streaming Services",
+      color: "bg-brand-blue",
       description:
-        "Professional multi-camera live streaming for your corporate events and webinars, ensuring your global audience experiences your brand with zero latency and broadcast quality.",
+        "Multi-camera corporate live streaming for conferences, launches, and hybrid events.",
+      href: "/services/media-production/live-streaming-services",
       icon: "Radio",
+      id: "live-streaming",
       image:
         "https://images.unsplash.com/photo-1598743400863-0201c7e1445b?auto=format&fit=crop&q=80&w=1600",
-      color: "bg-brand-blue",
-      href: "/services/media-production/live-streaming-services",
+      title: "Live Streaming",
     },
   ],
 };
 
 export const MEDIA_WHY = {
-  heading: "Why Premium Production is a Sales Requirement",
   description:
-    "Low-quality video signals a low-quality brand. In a world of amateur content, broadcast-grade production is a powerful differentiator. We don't just provide 'video services'; we provide the visual authority that justifies your enterprise price point and makes your sales team's job easier. Every frame we shoot is designed to build trust and move your prospect one step closer to a 'yes.'",
+    "Strategy decides why footage matters. We shape every video around the buyer's pain point, the product's core value, and the action your audience should take after watching. Beautiful footage is a means — commercial impact is the objective.",
+  heading: "We Don't Just Film — We Tell Stories That Sell",
   reasons: [
     {
-      id: "authority",
-      title: "Visual Authority",
       description:
-        "Cinematic quality that reflects the premium nature of your enterprise solutions.",
+        "Strategy decides why footage matters. We shape every video around the buyer's pain point, the product's core value, and the action your audience should take after watching.",
+      id: "strategy",
       image:
         "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200",
+      title: "Strategy-Led Production",
     },
     {
-      id: "efficiency",
-      title: "Storytelling Efficiency",
-      description: "Explain complex value propositions in minutes, not pages of whitepapers.",
+      description:
+        "Beautiful footage is a means — commercial impact is the objective.",
+      id: "impact",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+      title: "Commercial Impact",
     },
   ],
 };
 
 export const MEDIA_PROCESS = {
-  heading: "Our Media Production Process",
+  heading: "Production Capabilities",
   phases: [
     {
-      title: "Creative Brief and Strategy",
-      description:
-        "Defining the core message, audience, and commercial objectives for the content.",
+      description: "Professional lighting and audio on every shoot.",
+      title: "4K Cinema Camera Capture",
     },
     {
-      title: "Pre-Production and Planning",
-      description: "Scripting, storyboarding, location scouting, and talent coordination.",
+      description: "Globally deployed multi-camera production for events of any scale.",
+      title: "Multi-Camera Event Production",
     },
     {
-      title: "Production (The Shoot)",
-      description: "Broadcast-grade filming using cinema-quality equipment and professional crews.",
+      description: "Across 40+ markets.",
+      title: "Studio and On-Location Crews",
     },
     {
-      title: "Post-Production and Editing",
-      description: "Polishing the footage with color grading, sound design, and motion graphics.",
+      description: "Full post-production suite for polished, broadcast-grade assets.",
+      title: "Motion Graphics, Colour Grading, and Sound Design",
     },
     {
-      title: "Delivery and Multi-Platform Export",
-      description: "Providing master files optimized for web, social, and broadcast environments.",
+      description: "For outdoor events and campus environments.",
+      title: "Drone Footage",
     },
   ],
 };
@@ -115,25 +113,43 @@ export const MEDIA_CASE_STUDIES = {
 };
 
 export const MEDIA_FAQ = {
-  heading: "Media Production FAQs",
   faqs: [
     {
-      id: "turnaround",
-      question: "What is your typical turnaround time?",
       answer:
-        "Standard corporate videos deliver in 4–6 weeks. Event recap videos can be delivered in as little as 48 hours for immediate social impact.",
+        "B2B media production covers all video and content production services created for business-to-business brands — corporate films, event video, demos, live streaming, and post-production designed for enterprise marketing and sales enablement.",
+      id: "what-is",
+      question: "What is B2B media production?",
     },
     {
-      id: "locations",
-      question: "Do you film in multiple locations?",
-      answer:
-        "Yes. Our production network is global. We can coordinate simultaneous shoots in multiple cities to ensure brand consistency for global organizations.",
+      answer: "Yes — combining shoots reduces cost and logistical complexity significantly.",
+      id: "combined",
+      question: "Can you handle event and corporate video in the same project?",
     },
     {
-      id: "ownership",
-      question: "Do we own the raw footage?",
       answer:
-        "Absolutely. Once the project is complete and paid, you own all the final assets and can request the raw files for future use.",
+        "Yes — 15-second, 30-second, and 60-second cuts for LinkedIn, YouTube, Instagram, and paid campaigns. Vertical and square formats on request.",
+      id: "social",
+      question: "Do you deliver social media formats?",
     },
   ],
+  heading: "Media Production FAQs",
 };
+
+export const MEDIA_PAGE = {
+  pageId: "service.media-production",
+  pageName: "Media Production",
+  pageType: "serviceHub",
+  seo: {
+    canonicalPath: "/services/media-production",
+    description:
+      "Enterprise B2B media production — event video, corporate films, product demos, live streaming and video editing. Content your sales and marketing teams keep using.",
+    focusKeyphrase: "video production company",
+    secondaryKeywords: [
+      "video production services",
+      "commercial video production company",
+      "media and production company",
+      "B2B media production",
+    ],
+    title: "B2B Media Production and Video Production Company | B2B Sales Arrow",
+  },
+} as const;

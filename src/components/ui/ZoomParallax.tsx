@@ -1,14 +1,12 @@
 "use client";
 
+import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 import { useRef } from "react";
 
-import Image from "next/image";
-
-import { useScroll, useTransform, motion } from "framer-motion";
-
 interface Image {
-  src: string;
   alt?: string;
+  src: string;
 }
 
 interface ZoomParallaxProps {
@@ -19,8 +17,8 @@ interface ZoomParallaxProps {
 export function ZoomParallax({ images }: ZoomParallaxProps) {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: container,
     offset: ["start start", "end end"],
+    target: container,
   });
 
   const scale5_center = useTransform(scrollYProgress, [0, 0.8, 1], [1, 5, 5]);
@@ -32,15 +30,13 @@ export function ZoomParallax({ images }: ZoomParallaxProps) {
   const scales = [scale5_center, scale5, scale6, scale5, scale6, scale8, scale9];
 
   return (
-    <div ref={container} className="relative h-[300vh]">
+    <div className="relative h-[300vh]" ref={container}>
       <div className="sticky top-0 h-screen overflow-hidden">
-        {images.map(({ src, alt }, index) => {
+        {images.map(({ alt, src }, index) => {
           const scale = scales[index % scales.length];
 
           return (
             <motion.div
-              key={index}
-              style={{ scale }}
               className={`absolute top-0 flex h-full w-full items-center justify-center ${
                 index === 1
                   ? "[&>div]:!-top-[30vh] [&>div]:!left-[5vw] [&>div]:!h-[30vh] [&>div]:!w-[35vw]"
@@ -64,14 +60,16 @@ export function ZoomParallax({ images }: ZoomParallaxProps) {
                   ? "[&>div]:!top-[22.5vh] [&>div]:!left-[25vw] [&>div]:!h-[15vh] [&>div]:!w-[15vw]"
                   : ""
               } `}
+              key={index}
+              style={{ scale }}
             >
               <div className="relative h-[25vh] w-[25vw]">
                 <Image
-                  src={src || "/placeholder.svg"}
                   alt={alt || `Parallax image ${index + 1}`}
+                  className="object-cover"
                   fill
                   sizes="25vw"
-                  className="object-cover"
+                  src={src || "/placeholder.svg"}
                 />
               </div>
             </motion.div>

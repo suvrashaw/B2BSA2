@@ -1,30 +1,40 @@
-import { ServiceHub } from "@/components/templates/ServiceHub";
-import { getPageMetadata } from "@/content/pages";
-import {
-  PERF_HERO,
-  PERF_SERVICES,
-  PERF_WHY,
-  PERF_PROCESS,
-  PERF_PROOF_BAR,
-  PERF_CASE_STUDIES,
-  PERF_FAQ,
-} from "@/content/services/performance-marketing";
-
 import type { Metadata } from "next";
 
-export const metadata: Metadata = getPageMetadata("/services/performance-marketing");
+import { ServiceHub } from "@/components/templates/ServiceHub";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import {
+  PERF_CASE_STUDIES,
+  PERF_FAQ,
+  PERF_HERO,
+  PERF_PAGE,
+  PERF_PROCESS,
+  PERF_PROOF_BAR,
+  PERF_SERVICES,
+  PERF_WHY,
+} from "@/content/services/performance-marketing";
 
-export default function Page() {
+export const metadata: Metadata = getMarketingPageMetadata(PERF_PAGE);
+
+const Page = () => {
   return (
     <ServiceHub
-      canonicalPath="/services/performance-marketing"
+      caseStudies={PERF_CASE_STUDIES}
+      ctaBanner={{
+        ctaHref: "/contact",
+        ctaLabel: "Request a Free Performance Marketing Audit",
+        description:
+          "A performance marketing audit reveals where spend is leaking and where pipeline can improve.",
+        title: "Stop guessing. Start knowing.",
+      }}
+      faq={PERF_FAQ}
       hero={PERF_HERO}
+      page={PERF_PAGE}
+      process={PERF_PROCESS}
       proofBar={PERF_PROOF_BAR}
       services={PERF_SERVICES}
       why={PERF_WHY}
-      process={PERF_PROCESS}
-      caseStudies={PERF_CASE_STUDIES}
-      faq={PERF_FAQ}
     />
   );
 }
+
+export default Page;

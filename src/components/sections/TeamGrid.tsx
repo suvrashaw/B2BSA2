@@ -1,23 +1,22 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-import { motion } from "framer-motion";
-
 import { Heading } from "@/components/ui/Heading";
-
-export interface TeamMember {
-  name: string;
-  role: string;
-  bio: string;
-  image: string;
-  linkedin: string;
-}
 
 export interface TeamGridData {
   heading: string;
   members: TeamMember[];
+}
+
+export interface TeamMember {
+  bio: string;
+  image: string;
+  linkedin: string;
+  name: string;
+  role: string;
 }
 
 export const TeamGrid = ({ data }: { data: TeamGridData }) => {
@@ -30,8 +29,8 @@ export const TeamGrid = ({ data }: { data: TeamGridData }) => {
           </div>
           <Heading
             as="h2"
-            preserveClassName
             className="font-heading text-3xl font-bold md:text-5xl"
+            preserveClassName
           >
             {data.heading}
           </Heading>
@@ -41,33 +40,33 @@ export const TeamGrid = ({ data }: { data: TeamGridData }) => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {data.members.map((member, index) => (
             <motion.div
-              key={member.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group"
+              initial={{ opacity: 0, y: 30 }}
+              key={member.name}
+              transition={{ delay: index * 0.1, duration: 0.6 }}
+              viewport={{ margin: "-50px", once: true }}
+              whileInView={{ opacity: 1, y: 0 }}
             >
               <div className="relative mb-6 aspect-[4/5] w-full overflow-hidden rounded-2xl bg-gray-100">
                 <Image
-                  src={member.image}
                   alt={member.name}
-                  fill
                   className="object-cover transition-all duration-700 group-hover:scale-105"
+                  fill
+                  src={member.image}
                 />
                 <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-brand-charcoal/80 to-transparent p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                   <p className="mb-4 text-sm leading-relaxed text-white">{member.bio}</p>
                   {member.linkedin && member.linkedin !== "" && (
                     <Link
-                      href={member.linkedin}
                       className="text-xs font-bold tracking-widest text-brand-cyan uppercase transition-colors hover:text-white"
+                      href={member.linkedin}
                     >
                       LinkedIn
                     </Link>
                   )}
                 </div>
               </div>
-              <Heading as="h3" preserveClassName className="font-heading text-xl font-bold">
+              <Heading as="h3" className="font-heading text-xl font-bold" preserveClassName>
                 {member.name}
               </Heading>
               <p className="mt-1 text-sm font-semibold tracking-wider text-gray-500 uppercase">

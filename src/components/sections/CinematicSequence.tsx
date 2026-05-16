@@ -1,129 +1,50 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-
-import Link from "next/link";
-
 import {
   motion,
+  type MotionValue,
+  useMotionValueEvent,
   useScroll,
   useTransform,
-  useMotionValueEvent,
-  type MotionValue,
 } from "framer-motion";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import {
-  HOME_CINEMATIC_SEQUENCE_CONTENT,
   type CinematicSequenceContent,
   type CinematicStoryBeat,
+  HOME_CINEMATIC_SEQUENCE_CONTENT,
 } from "@/content/home";
 
 export interface CinematicSequenceProps {
+  beats?: CinematicSequenceContent["beats"];
   content?: CinematicSequenceContent;
   frameCount?: CinematicSequenceContent["frameCount"];
-  frameUrlTemplate?: CinematicSequenceContent["frameUrlTemplate"];
   frameUrls?: CinematicSequenceContent["frameUrls"];
+  frameUrlTemplate?: CinematicSequenceContent["frameUrlTemplate"];
   loadingText?: CinematicSequenceContent["loadingText"];
-  beats?: CinematicSequenceContent["beats"];
-}
-
-function useCinematicFrameImages(
-  frameCount: number,
-  frameUrlTemplate?: string,
-  frameUrls?: string[]
-) {
-  const imagesRef = useRef<HTMLImageElement[]>([]);
-  const loadSignature = `${frameCount}:${frameUrlTemplate || ""}:${(frameUrls || []).join(",")}`;
-  const [loadedSignature, setLoadedSignature] = useState<string | null>(null);
-
-  useEffect(() => {
-    const getFrameUrl = (index: number) => {
-      if (frameUrls && frameUrls.length >= index) {
-        return frameUrls[index - 1];
-      }
-      if (frameUrlTemplate) {
-        // Handle %d with padding
-        return frameUrlTemplate.replace("%d", index.toString().padStart(3, "0"));
-      }
-      return "";
-    };
-
-    const loadedImages: HTMLImageElement[] = [];
-    let loadedCount = 0;
-    let cancelled = false;
-
-    for (let i = 1; i <= frameCount; i++) {
-      const img = new globalThis.Image();
-      img.src = getFrameUrl(i);
-      img.addEventListener("load", () => {
-        if (cancelled) return;
-
-        loadedCount++;
-        if (loadedCount === frameCount) {
-          setLoadedSignature(loadSignature);
-        }
-      });
-      // Important to push first to maintain exact order
-      loadedImages.push(img);
-    }
-
-    imagesRef.current = loadedImages;
-
-    return () => {
-      cancelled = true;
-    };
-  }, [frameCount, frameUrlTemplate, frameUrls, loadSignature]);
-
-  return { imagesRef, imagesLoaded: loadedSignature === loadSignature };
-}
-
-function CinematicBeatOverlay({
-  beat,
-  progress,
-}: {
-  beat: CinematicStoryBeat;
-  progress: MotionValue<number>;
-}) {
-  const opacity = useTransform(progress, beat.opacityInput, beat.opacityOutput);
-  const y = useTransform(progress, beat.yInput, beat.yOutput);
-  const pointerEvents = useTransform(opacity, (v) => (v > 0 ? "auto" : "none"));
-
-  return (
-    <motion.div style={{ opacity, y, pointerEvents }} className={beat.className}>
-      {beat.eyebrow && <span className={beat.eyebrow.className}>{beat.eyebrow.text}</span>}
-      <h2 className={beat.titleClassName}>{beat.title}</h2>
-      {beat.description && <p className={beat.description.className}>{beat.description.text}</p>}
-      {beat.cta && (
-        <Link href="/contact">
-          <Button variant="primary" size="lg">
-            {beat.cta.label}
-          </Button>
-        </Link>
-      )}
-    </motion.div>
-  );
 }
 
 export function CinematicSequence({
   content = HOME_CINEMATIC_SEQUENCE_CONTENT,
-  frameCount = content.frameCount,
-  frameUrlTemplate = content.frameUrlTemplate,
-  frameUrls = content.frameUrls,
-  loadingText = content.loadingText,
   beats = content.beats,
+  frameCount = content.frameCount,
+  frameUrls = content.frameUrls,
+  frameUrlTemplate = content.frameUrlTemplate,
+  loadingText = content.loadingText,
 }: CinematicSequenceProps = {}) {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const { imagesRef, imagesLoaded } = useCinematicFrameImages(
+  const { imagesLoaded, imagesRef } = useCinematicFrameImages(
     frameCount,
     frameUrlTemplate,
     frameUrls
   );
 
   const { scrollYProgress } = useScroll({
-    target: containerRef,
     offset: ["start start", "end end"],
+    target: containerRef,
   });
 
   // Track progress and draw the corresponding frame
@@ -165,10 +86,10 @@ export function CinematicSequence({
   }, [frameCount, imagesLoaded, imagesRef, scrollYProgress]);
 
   return (
-    <section ref={containerRef} className="relative h-[400vh] bg-black">
+    <section className="relative h-[400vh] bg-black" ref={containerRef}>
       <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden">
         {/* Frame canvas */}
-        <canvas ref={canvasRef} className="absolute inset-0" />
+        <canvas className="absolute inset-0" ref={canvasRef} />
 
         {/* Dark overlay for readability */}
         <div className="absolute inset-0 bg-black/40" />
@@ -181,17 +102,44 @@ export function CinematicSequence({
         )}
 
         {beats.map((beat) => (
-          <CinematicBeatOverlay key={beat.id} beat={beat} progress={scrollYProgress} />
+          <CinematicBeatOverlay beat={beat} key={beat.id} progress={scrollYProgress} />
         ))}
       </div>
     </section>
   );
 }
 
+function CinematicBeatOverlay({
+  beat,
+  progress,
+}: {
+  beat: CinematicStoryBeat;
+  progress: MotionValue<number>;
+}) {
+  const opacity = useTransform(progress, beat.opacityInput, beat.opacityOutput);
+  const y = useTransform(progress, beat.yInput, beat.yOutput);
+  const pointerEvents = useTransform(opacity, (v) => (v > 0 ? "auto" : "none"));
+
+  return (
+    <motion.div className={beat.className} style={{ opacity, pointerEvents, y }}>
+      {beat.eyebrow && <span className={beat.eyebrow.className}>{beat.eyebrow.text}</span>}
+      <h2 className={beat.titleClassName}>{beat.title}</h2>
+      {beat.description && <p className={beat.description.className}>{beat.description.text}</p>}
+      {beat.cta && (
+        <Link href="/contact">
+          <Button size="lg" variant="primary">
+            {beat.cta.label}
+          </Button>
+        </Link>
+      )}
+    </motion.div>
+  );
+}
+
 function drawCover(ctx: CanvasRenderingContext2D, img: HTMLImageElement, w: number, h: number) {
   const imgRatio = img.width / img.height;
   const canvasRatio = w / h;
-  let renderW, renderH, x, y;
+  let renderH, renderW, x, y;
 
   if (imgRatio > canvasRatio) {
     renderH = h;
@@ -207,4 +155,54 @@ function drawCover(ctx: CanvasRenderingContext2D, img: HTMLImageElement, w: numb
 
   ctx.clearRect(0, 0, w, h);
   ctx.drawImage(img, x, y, renderW, renderH);
+}
+
+function useCinematicFrameImages(
+  frameCount: number,
+  frameUrlTemplate?: string,
+  frameUrls?: string[]
+) {
+  const imagesRef = useRef<HTMLImageElement[]>([]);
+  const loadSignature = `${frameCount}:${frameUrlTemplate || ""}:${(frameUrls || []).join(",")}`;
+  const [loadedSignature, setLoadedSignature] = useState<null | string>(null);
+
+  useEffect(() => {
+    const getFrameUrl = (index: number) => {
+      if (frameUrls && frameUrls.length >= index) {
+        return frameUrls[index - 1];
+      }
+      if (frameUrlTemplate) {
+        // Handle %d with padding
+        return frameUrlTemplate.replace("%d", index.toString().padStart(3, "0"));
+      }
+      return "";
+    };
+
+    const loadedImages: HTMLImageElement[] = [];
+    let loadedCount = 0;
+    let cancelled = false;
+
+    for (let i = 1; i <= frameCount; i++) {
+      const img = new globalThis.Image();
+      img.src = getFrameUrl(i);
+      img.addEventListener("load", () => {
+        if (cancelled) return;
+
+        loadedCount++;
+        if (loadedCount === frameCount) {
+          setLoadedSignature(loadSignature);
+        }
+      });
+      // Important to push first to maintain exact order
+      loadedImages.push(img);
+    }
+
+    imagesRef.current = loadedImages;
+
+    return () => {
+      cancelled = true;
+    };
+  }, [frameCount, frameUrlTemplate, frameUrls, loadSignature]);
+
+  return { imagesLoaded: loadedSignature === loadSignature, imagesRef };
 }
