@@ -1,29 +1,31 @@
 import { GLOBAL_CASE_STUDIES } from "../../shared";
 
 export const MODULAR_BOOTHS_HERO = {
-  title: "Modular and Portable Booths — High-Impact Agility",
+  title: "Modular and Portable Trade Show Booths — Engineered for Enterprise Efficiency",
   description:
-    "You don't need a custom build to have a custom look. Our modular booth solutions combine the speed of portable displays with the premium aesthetic of a permanent structure — engineered for reuse, easy transport, and rapid assembly.",
+    "The same modular booth system — New York, Dubai, Singapore, London — one quarter. Our systems give enterprise teams consistent brand presence across every event without rebuilding from scratch each time.",
 };
 
 export { GLOBAL_PROOF_STATS as MODULAR_BOOTHS_PROOF_BAR } from "../../shared";
 
 export const MODULAR_BOOTHS_WHY = {
-  heading: "The Business Case for Modular Exhibition Systems",
+  heading: "The Commercial Case for Modular Systems",
   description:
-    "For brands with active event calendars, custom-fabricated booths are often an inefficient use of budget. Modular systems provide a 'Lego-like' flexibility, allowing you to reconfigure the same structural assets for different floor plan sizes — from a 10x10 inline to a 20x20 island. This drastically reduces the cost per event, eliminates waste, and ensures a consistent, high-quality brand presence across every show in your portfolio.",
+    "A reusable modular booth amortised across five or more events per year typically delivers 30–50% lower cost per deployment than commissioning a new custom build each time. Beyond cost: faster deployment timelines, simplified international logistics, and consistent brand presentation across markets.\n\nModular is especially valuable for multi-city event tours, emerging market activations, roadshow programs, and satellite presences alongside a flagship custom booth.",
   reasons: [
     {
       id: "scalability",
       title: "Infinite Scalability",
-      description: "One system that scales from regional tabletops to flagship island stands.",
+      description:
+        "One system that scales from regional tabletops to flagship island stands — the same structural components configured differently for each event.",
       image:
         "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1200",
     },
     {
       id: "efficiency",
       title: "Logistics Efficiency",
-      description: "Pack-flat design reduces shipping and storage costs by up to 60%.",
+      description:
+        "Pack-flat design reduces shipping and storage costs by up to 60% — hard-case shipping to airline check-in specs for international deployment.",
       image:
         "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200",
     },
@@ -37,7 +39,7 @@ export const MODULAR_BOOTHS_DELIVERABLES = {
       id: "design",
       title: "Modular System Design",
       description:
-        "We don't just sell hardware; we architect modular environments. We design a master 'kit of parts' that can be deployed in multiple configurations throughout your show cycle.",
+        "We architect modular environments — designing a master 'kit of parts' that can be deployed in multiple configurations throughout your show cycle.",
       icon: "Layers",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
@@ -47,7 +49,7 @@ export const MODULAR_BOOTHS_DELIVERABLES = {
       id: "hardware",
       title: "Premium Hardware Sourcing",
       description:
-        "Access to the world's most reliable modular systems (Aluvic, Matrix, Octanorm) known for their structural integrity and tool-free assembly.",
+        "Access to the world's most reliable modular systems known for structural integrity and tool-free assembly.",
       icon: "Wrench",
       image:
         "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1200",
@@ -77,27 +79,49 @@ export const MODULAR_BOOTHS_DELIVERABLES = {
 };
 
 export const MODULAR_BOOTHS_FORMATS = {
-  title: "Modular System Formats",
+  title: "Our Modular Booth Range",
   headers: ["System Type", "Best For"],
   rows: [
     {
-      "system type": "Tension Fabric Displays",
-      "best for": "Ultra-portable, lightweight, and fast-setup for small shows",
+      "system type": "10x10 Modular Kits",
+      "best for":
+        "Compact, tool-free assembly for regional shows and satellite presences — ready in under 4 hours.",
     },
     {
-      "system type": "Aluminum Frame Systems",
-      "best for": "Premium structural look for island and inline booths",
+      "system type": "10x20 and 20x20 Inline Configurations",
+      "best for":
+        "Mid-format portable displays with room for demos, meetings, and brand storytelling.",
     },
     {
-      "system type": "Light Box Modules",
-      "best for": "High-impact illuminated branding that stands out in dark halls",
+      "system type": "Island Modular Systems",
+      "best for":
+        "Multi-sided open systems for higher-traffic exhibition floors with stronger visibility and multiple engagement zones.",
     },
     {
-      "system type": "Hybrid Modular",
-      "best for": "Combining portable frames with custom-fabricated elements",
+      "system type": "Hybrid Modular + Custom Accent Builds",
+      "best for":
+        "Reusable modular structure with custom branded finishes, feature walls, and premium lighting — modular efficiency with custom booth premium.",
+    },
+    {
+      "system type": "Branded Tensile Fabric Displays",
+      "best for":
+        "Lightweight, high-impact backlit fabric displays — maximum visual impact, minimum shipping weight.",
+    },
+    {
+      "system type": "Portable Pop-Up and Tabletop",
+      "best for": "Fast-deploy for roadshows, sales activations, and internal events.",
     },
   ],
 };
+
+export const MODULAR_BOOTHS_FEATURES = [
+  "Tool-free assembly in under 4 hours",
+  "Custom graphic panels updated between events without structural changes",
+  "Integrated LED and screen options — digital engagement built in",
+  "Hard-case shipping to airline check-in specs for international deployment",
+  "Reconfigurable for different booth footprints",
+  "Sustainable materials available — eco-friendly booth options for environmental reporting",
+];
 
 export const MODULAR_BOOTHS_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
@@ -107,22 +131,27 @@ export const MODULAR_BOOTHS_FAQ = {
   heading: "Modular Booth FAQs",
   faqs: [
     {
-      id: "setup",
-      question: "Can we set these booths up ourselves?",
+      id: "what-is",
+      question: "What is a modular trade show booth?",
       answer:
-        "Yes. Our portable and small modular systems are designed for tool-free assembly. For larger island configurations, we recommend using our professional install teams.",
+        "A modular trade show booth is a reusable exhibition structure built from interchangeable components that reconfigure for different booth sizes, formats, and events. Graphics update between shows while the structure is reused — reducing cost and logistics complexity across multi-event programs.",
     },
     {
-      id: "durability",
-      question: "How long do modular systems last?",
+      id: "cost",
+      question: "How much cheaper is modular vs. custom?",
       answer:
-        "Our premium aluminum frames are built for 5–7 years of heavy event use. You simply update the fabric graphics as your branding evolves.",
+        "Over a multi-event program, modular systems typically deliver 30–50% lower cost per event vs. commissioning a new custom build each time.",
     },
     {
-      id: "reconfiguration",
-      question: "Can I use the same parts for different booth sizes?",
+      id: "international",
+      question: "Can modular booths ship internationally?",
       answer:
-        "Absolutely. That is the core benefit. We design your kit so it can work as a 10x10, a 10x20, or be integrated into a larger 20x20 presence.",
+        "Yes — engineered for international shipping in hard-shell cases. Deployed across 40+ countries.",
+    },
+    {
+      id: "assembly",
+      question: "How quickly can a modular booth be assembled on-site?",
+      answer: "Most standard formats: tool-free assembly in 2–4 hours by a small team.",
     },
   ],
 };

@@ -1,30 +1,31 @@
 import { GLOBAL_CASE_STUDIES } from "../../shared";
 
 export const PAID_ADS_HERO = {
-  title: "B2B Paid Advertising — Captured Demand, Accelerated Pipeline",
+  title: "B2B Paid Advertising That Generates Pipeline, Not Just Clicks",
   description:
-    "Stop paying for traffic that doesn't convert. We provide the precision-targeted paid media across Google, Programmatic, and Retargeting that captures high-intent buyers at the exact moment they are looking for a solution.",
+    "As a specialist B2B PPC agency, we manage paid programs where targeting precision, message relevance, and post-click experience are all structured around one outcome: qualified pipeline for your enterprise sales team.",
 };
 
 export { GLOBAL_PROOF_STATS as PAID_ADS_PROOF_BAR } from "../../shared";
 
 export const PAID_ADS_WHY = {
-  heading: "The Speed of Paid Acquisition",
+  heading: "Every Action Has a Number",
   description:
-    "In the enterprise space, waiting for organic growth isn't always an option. Paid advertising allows you to 'jump the queue' and put your brand directly in front of active buyers today. However, without proper targeting and tracking, paid media is a fast way to burn budget. We specialize in high-precision B2B campaigns that focus on intent and firmographic fit, ensuring your ad spend is always working to fill your pipeline, not just inflate your traffic stats.",
+    "The right B2B digital marketing agency tracks what happens after the first interaction: conversion quality, lead source, SQL movement, pipeline influenced, cost per qualified opportunity, and revenue attribution. If your current marketing reports stop at click-through rate or cost per lead, you are measuring activity — not commercial performance.",
   reasons: [
     {
-      id: "speed",
-      title: "Immediate Impact",
-      description: "Launch a campaign today and see qualified traffic and leads this week.",
+      id: "precision",
+      title: "ICP-Precise Targeting",
+      description:
+        "Campaigns aimed at the wrong audience produce the wrong leads at any budget level. We define who your campaigns should actually reach — by ideal customer profile, buying role, pain point, and intent signal.",
       image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     },
     {
-      id: "control",
-      title: "Granular Control",
+      id: "speed",
+      title: "Speed of Paid Acquisition",
       description:
-        "Scale your spend up or down based on your sales team's capacity and your revenue targets.",
+        "Qualified leads typically begin within 4–8 weeks with strong targeting, messaging, and conversion paths from day one — complementing your longer-term SEO investment.",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
     },
@@ -32,70 +33,93 @@ export const PAID_ADS_WHY = {
 };
 
 export const PAID_ADS_DELIVERABLES = {
-  heading: "Our Paid Media Services",
+  heading: "Channels We Manage",
   services: [
     {
-      id: "google",
-      title: "Google Search Ads (PPC)",
+      id: "google-search",
+      title: "Google Search — PPC",
       description:
-        "We dominate the search results for your most valuable enterprise keywords, capturing demand at the moment of highest intent.",
+        "High-intent campaigns around the terms enterprise buyers use when actively comparing vendors — structured for lead quality and cost per qualified opportunity.",
       icon: "Search",
       image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-blue",
     },
     {
       id: "display",
-      title: "Programmatic and Display Advertising",
+      title: "Google Display and Programmatic",
       description:
-        "We use account-based marketing (ABM) data to show your ads only to decision-makers within your specific target account list.",
-      icon: "Cpu",
+        "Awareness and retargeting campaigns keeping your brand visible across relevant digital environments.",
+      icon: "Monitor",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-cyan",
     },
     {
-      id: "retargeting",
-      title: "High-Conversion Retargeting",
+      id: "youtube",
+      title: "YouTube Advertising",
       description:
-        "Stay top-of-mind throughout the long B2B buying cycle with coordinated retargeting across the web and social platforms.",
-      icon: "RefreshCw",
+        "Video campaigns for awareness, education, product storytelling, and demand generation.",
+      icon: "Play",
       image:
-        "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-primary",
     },
     {
-      id: "tracking",
-      title: "Conversion and Attribution Management",
+      id: "retargeting",
+      title: "Retargeting and Account-Based Advertising",
       description:
-        "We implement deep server-side tracking to ensure every lead and deal can be traced back to the specific ad that generated it.",
-      icon: "BarChart",
+        "Keeping your brand in front of target accounts and decision-makers who have already shown interest — moving prospects from first touch to deeper consideration.",
+      icon: "Target",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-blue",
+    },
+    {
+      id: "microsoft",
+      title: "Microsoft Ads",
+      description:
+        "Supplementary paid search for desktop-heavy B2B buyer segments where Microsoft's search share is meaningful.",
+      icon: "Globe",
+      image:
+        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-cyan",
     },
   ],
 };
 
-export const PAID_ADS_STRATEGIES = {
-  title: "Ad Strategy Comparison",
-  headers: ["Channel", "Best For"],
-  rows: [
+export const PAID_ADS_PROCESS = {
+  heading: "How We Build Paid Campaigns That Convert",
+  phases: [
     {
-      channel: "Google Search",
-      "best for": "High-intent, bottom-of-funnel demand capture",
+      title: "ICP Targeting Strategy",
+      description:
+        "Defining the audience by role, company, industry, company size, and intent before a single pound or dollar is committed.",
     },
     {
-      channel: "Programmatic Display",
-      "best for": "Brand awareness and retargeting within target accounts",
+      title: "Ad Copy and Creative",
+      description:
+        "Built around buyer pain points, decision-making triggers, and commercial urgency — not generic brand messaging.",
     },
     {
-      channel: "YouTube for B2B",
-      "best for": "Educational content and complex product storytelling",
+      title: "Landing Page CRO",
+      description:
+        "Ensuring paid traffic has a high-quality conversion path: clear messaging, strong proof points, fast loading, and a compelling next step.",
     },
     {
-      channel: "Cross-Channel Retargeting",
-      "best for": "Shortening long enterprise sales cycles",
+      title: "Bid Strategy and Budget Management",
+      description:
+        "Continuous adjustment based on conversion data, pipeline value, and competitive signals.",
+    },
+    {
+      title: "A/B Testing",
+      description:
+        "Systematic testing of headlines, copy, creative, landing pages, CTAs, and audiences to reduce guesswork.",
+    },
+    {
+      title: "Full-Funnel Attribution Reporting",
+      description:
+        "Connecting paid media to form submissions, qualified leads, booked meetings, and pipeline influenced.",
     },
   ],
 };
@@ -108,22 +132,28 @@ export const PAID_ADS_FAQ = {
   heading: "Paid Advertising FAQs",
   faqs: [
     {
-      id: "spend",
-      question: "How much should we spend initially?",
+      id: "what-is",
+      question: "What is B2B paid advertising?",
       answer:
-        "We recommend a minimum pilot budget of $3,000–$5,000 per month to generate enough data for our optimization models to work effectively.",
+        "B2B paid advertising covers paid media — search, display, social, programmatic, retargeting — managed specifically for B2B buyers: longer conversion timelines, higher deal values, and buying committee targeting.",
+    },
+    {
+      id: "reporting",
+      question: "How do you report on performance?",
+      answer:
+        "Beyond impressions and clicks: qualified leads, booked meetings, SQL movement, pipeline influenced, cost per qualified opportunity, and estimated revenue attribution.",
     },
     {
       id: "timeline",
-      question: "How soon will we see leads?",
+      question: "How long before results?",
       answer:
-        "Unlike SEO, paid ads can generate leads within the first week of launch. However, full funnel optimization typically takes 2–3 months.",
+        "Qualified leads typically begin within 4–8 weeks with strong targeting, messaging, and conversion paths from day one.",
     },
     {
-      id: "tracking",
-      question: "Can you track offline sales?",
+      id: "budget",
+      question: "What budget is recommended to start?",
       answer:
-        "Yes. By syncing your ad platforms with your CRM, we can track exactly which ads resulted in a signed contract, not just a lead form submission.",
+        "For meaningful data and consistent lead generation, a minimum monthly spend of £2,000–5,000 on the ad platforms is recommended, plus management. We will advise based on your specific objectives.",
     },
   ],
 };

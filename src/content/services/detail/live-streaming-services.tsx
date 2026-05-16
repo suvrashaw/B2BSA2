@@ -1,101 +1,110 @@
 import { GLOBAL_CASE_STUDIES } from "../../shared";
 
 export const LIVE_STREAMING_HERO = {
-  title: "Live Streaming Services — Global Reach, Zero Latency",
+  title: "Live Streaming and Hybrid Event Solutions That Extend Your Event to Every Screen",
   description:
-    "The world is your venue. We provide the professional multi-camera live streaming that brings your global audience into the room, ensuring broadcast-quality delivery for your conferences, launches, and hybrid events.",
+    "Our corporate live streaming and hybrid event solutions bring your event to buyers, partners, and employees worldwide — with broadcast quality and technical reliability from setup to archive.",
 };
 
 export { GLOBAL_PROOF_STATS as LIVE_STREAMING_PROOF_BAR } from "../../shared";
 
 export const LIVE_STREAMING_WHY = {
-  heading: "The Power of Real-Time Connection",
+  heading: "Hybrid Event Solutions",
   description:
-    "In a global economy, your most important audience isn't always in the room. Live streaming bridges the gap between physical and digital, allowing you to reach thousands of prospects simultaneously. However, a technical failure during a live broadcast is a brand disaster. We specialize in zero-fail, multi-camera streaming that handles every technical variable — from bandwidth bonding to remote guest integration — so you can focus on your message while we handle the broadcast.",
+    "As a hybrid event solutions company, we combine the credibility of in-person presence with the reach of digital access — connecting in-room and remote audiences simultaneously. Your content reaches more stakeholders without increasing venue footprint, travel cost, or logistical complexity.",
   reasons: [
     {
       id: "reach",
-      title: "Global Scalability",
-      description: "Reach your entire global market without the cost of a multi-city tour.",
+      title: "Global Reach Without Travel",
+      description:
+        "Your event reaches buyers, partners, and employees worldwide — in-person impact extended to every screen with broadcast quality.",
       image:
         "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
     },
     {
-      id: "engagement",
-      title: "Active Engagement",
-      description: "Interactive tools that turn passive viewers into active, qualified leads.",
+      id: "reliability",
+      title: "Mission-Critical Reliability",
+      description:
+        "Redundancy at every level: backup internet, secondary encoding hardware, backup streaming pathways, and a live technical team monitoring throughout.",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };
 
 export const LIVE_STREAMING_DELIVERABLES = {
-  heading: "Our Live Streaming Services",
+  heading: "Live Streaming Services",
   services: [
     {
-      id: "production",
+      id: "multi-camera",
       title: "Multi-Camera Live Production",
       description:
-        "We provide cinema-grade cameras, professional lighting, and broadcast switching to ensure your live stream looks like a high-end television production.",
-      icon: "Camera",
+        "Dynamic live streams with multiple camera angles for keynotes, panels, and product launches.",
+      icon: "Video",
       image:
-        "https://images.unsplash.com/photo-1598743400863-0201c7e1445b?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-blue",
-    },
-    {
-      id: "hybrid",
-      title: "Hybrid Event Management",
-      description:
-        "We seamlessly integrate on-site speakers with remote presenters and global audiences, creating a unified experience regardless of location.",
-      icon: "Globe2",
-      image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
-      color: "bg-brand-cyan",
     },
     {
       id: "platform",
-      title: "Secure Branded Platforms",
+      title: "Platform Management",
       description:
-        "Stream to LinkedIn, YouTube, or your own secure, branded event portal with custom registration, analytics, and gated access for lead qualification.",
-      icon: "Radio",
+        "YouTube Live, LinkedIn Live, Vimeo, custom RTMP, private portals — multi-platform simultaneous streaming available.",
+      icon: "Globe",
       image:
-        "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-cyan",
+    },
+    {
+      id: "graphics",
+      title: "Real-Time Graphics and Lower Thirds",
+      description: "Speaker names, session titles, sponsor overlays, and live branded transitions.",
+      icon: "Layers",
+      image:
+        "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-primary",
     },
     {
-      id: "backup",
-      title: "Zero-Fail Technical Support",
+      id: "engagement",
+      title: "Live Audience Engagement",
+      description: "Q&A, polls, moderated chat, and interactive tools for remote audiences.",
+      icon: "MessageSquare",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-blue",
+    },
+    {
+      id: "archive",
+      title: "Recording and Archive Delivery",
       description:
-        "We use bonded cellular internet and redundant hardware encoders to ensure your broadcast never drops, even in challenging venue environments.",
+        "Sessions archived for post-event webinars, gated content, social clips, and internal use.",
+      icon: "Archive",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-cyan",
+    },
+    {
+      id: "support",
+      title: "Global Technical Support",
+      description:
+        "Planning, testing, live troubleshooting, backup workflows, and on-site technical coordination.",
       icon: "ShieldCheck",
       image:
-        "https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=80&w=1200",
-      color: "bg-brand-blue",
+        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-primary",
     },
   ],
 };
 
-export const LIVE_STREAMING_CAPABILITIES = {
-  title: "Streaming Capabilities",
-  headers: ["Feature", "Capability"],
-  rows: [
-    {
-      feature: "Resolution",
-      capability: "4K UHD Broadcast Quality",
-    },
-    {
-      feature: "Latency",
-      capability: "Under 3 Seconds (Global)",
-    },
-    {
-      feature: "Capacity",
-      capability: "Up to 50,000 Concurrent Viewers",
-    },
-    {
-      feature: "Security",
-      capability: "AES-128 Encryption & Gated Access",
-    },
+export const LIVE_STREAMING_EVENTS = {
+  title: "Events We Stream",
+  items: [
+    "Trade shows and exhibition presentations",
+    "Corporate town halls and all-hands",
+    "Product launches and announcements",
+    "Conferences and panel discussions",
+    "Investor relations events",
+    "Hybrid internal events — in-room and remote audiences combined",
   ],
 };
 
@@ -107,22 +116,22 @@ export const LIVE_STREAMING_FAQ = {
   heading: "Live Streaming FAQs",
   faqs: [
     {
-      id: "bandwidth",
-      question: "What if the venue internet is bad?",
+      id: "what-is",
+      question: "What is corporate live streaming?",
       answer:
-        "We provide our own 'bonded' internet systems that combine multiple cellular networks to create a high-speed, secure connection anywhere.",
+        "Corporate live streaming is the professional broadcast of business events to remote audiences via digital platforms — using professional cameras, lighting, audio, graphics, and platform management.",
     },
     {
-      id: "platforms-simulcast",
-      question: "Can we stream to multiple places at once?",
+      id: "reliability",
+      question: "How do you ensure reliability?",
       answer:
-        "Yes. We can simultaneously broadcast to LinkedIn, YouTube, and your internal company portal to maximize your reach.",
+        "Redundancy at every level: backup internet, secondary encoding hardware, backup streaming pathways, and a live technical team monitoring throughout. Mission-critical events get a full technical rehearsal 24–48 hours before broadcast.",
     },
     {
-      id: "interaction-qa",
-      question: "How do we handle audience questions?",
+      id: "hybrid-vs-stream",
+      question: "What is the difference between live stream and hybrid event?",
       answer:
-        "We provide moderated Q&A tools that allow your presenters to see and respond to the best audience questions in real-time.",
+        "A live stream broadcasts an in-person event to remote viewers. A hybrid event is designed for simultaneous in-person and virtual participation — with interactivity and programming planned for both groups equally.",
     },
   ],
 };

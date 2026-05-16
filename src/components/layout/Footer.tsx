@@ -77,13 +77,26 @@ export function Footer() {
                     className="rounded-md bg-transparent object-contain object-left brightness-0 invert"
                   />
                 </Link>
-                <h2 className="mb-3 text-lg font-bold text-white">
+                <h2 className="mb-3 text-lg font-bold text-white!">
                   Turn Your Next Trade Show into a Revenue Engine
                 </h2>
                 <p className="mb-8 max-w-sm text-sm leading-relaxed text-gray-400">
                   We deliver premier global event solutions that turn your corporate presence into a
                   measurable revenue engine. Let&apos;s build your pipeline together.
                 </p>
+                <div className="mb-6 space-y-1.5 text-sm text-gray-400">
+                  <p>
+                    <a
+                      href="mailto:info@b2bsalesarrow.com"
+                      className="hover:text-brand-primary transition-colors"
+                    >
+                      info@b2bsalesarrow.com
+                    </a>
+                  </p>
+                  <p>New York, USA</p>
+                  <p>Bengaluru, India</p>
+                  <p className="text-gray-500">Serving 30+ Countries</p>
+                </div>
                 <div className="flex items-center gap-4">
                   <a
                     href="#"
@@ -149,7 +162,7 @@ export function Footer() {
             </div>
 
             {/* Row 2: Services — 4 equal columns */}
-            <div className="mb-12 grid gap-8 border-t border-white/10 pt-12 lg:grid-cols-4">
+            <div className="mb-12 grid gap-8 border-t border-white/10 pt-12 lg:grid-cols-5">
               {footerServiceGroups.map((group) => (
                 <div key={group.name}>
                   <Link
@@ -183,13 +196,13 @@ export function Footer() {
                   Privacy Policy
                 </Link>
                 <Link
-                  href="/terms-and-conditions"
+                  href="/terms-of-service"
                   className="hover:text-brand-primary transition-colors"
                 >
-                  Terms &amp; Conditions
+                  Terms of Service
                 </Link>
-                <Link href="#" className="hover:text-brand-primary transition-colors">
-                  Cookie Settings
+                <Link href="/cookie-policy" className="hover:text-brand-primary transition-colors">
+                  Cookie Policy
                 </Link>
               </div>
             </div>

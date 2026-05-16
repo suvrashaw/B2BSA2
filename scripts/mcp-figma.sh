@@ -19,4 +19,10 @@ if [ -z "${FIGMA_FILE_KEY:-}" ]; then
   exit 1
 fi
 
-exec npx -y figma-developer-mcp --figma-api-key="$FIGMA_ACCESS_TOKEN"
+export DO_NOT_TRACK=1
+export FRAMELINK_TELEMETRY=off
+export npm_config_loglevel=silent
+
+echo "ANTIGRAVITY_DEBUG: Script mcp-figma.sh is running" >&2
+
+exec npx -y figma-developer-mcp --stdio --figma-api-key="$FIGMA_ACCESS_TOKEN"

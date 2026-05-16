@@ -1,33 +1,57 @@
 import { GLOBAL_CASE_STUDIES } from "../../shared";
 
 export const BOOTH_RENTAL_HERO = {
-  title: "Global Event Booth Rental — Premium Systems, Any Market",
+  title: "Trade Show Booth Rental — Enterprise Presence Without the Build Timeline",
   description:
-    "High-quality, modular exhibition systems available for rent across 40+ countries. Get the premium look of a custom build with the speed, cost-efficiency, and sustainability of a rental model.",
+    "When speed matters or you're testing a new market, trade show booth rental gives your brand a polished, fully branded exhibition presence — without the fabrication lead time or capital commitment.",
 };
 
 export { GLOBAL_PROOF_STATS as BOOTH_RENTAL_PROOF_BAR } from "../../shared";
 
 export const BOOTH_RENTAL_WHY = {
-  heading: "Why Choose Exhibition Booth Hire Over Ownership?",
+  heading: "When Rental Is the Smarter Decision",
   description:
-    "Owning a custom exhibition booth creates significant long-term costs: storage, insurance, refurbishment, and expensive international freight. For enterprise brands running global event programs, a premium rental model is often the more strategic choice. It allows you to scale your presence up or down based on the specific show, eliminates the 'asset decay' of old designs, and significantly reduces your carbon footprint by using locally-stored modular systems.",
+    "For enterprise brands running global event programs, a premium rental model is often the more strategic choice — eliminating the asset decay of old designs and significantly reducing your carbon footprint by using locally-stored modular systems.",
   reasons: [
     {
-      id: "cost",
-      title: "Cost Efficiency",
+      id: "timeline",
+      title: "Timeline Under 8 Weeks",
       description:
-        "Eliminate storage and maintenance costs while maintaining a premium brand presence.",
+        "Custom fabrication is not feasible — rental systems deploy fast without sacrificing brand quality.",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
     },
     {
-      id: "agility",
-      title: "Global Agility",
+      id: "new-market",
+      title: "Testing a New Market",
       description:
-        "Deploy consistent, high-quality booths in any market without international shipping delays.",
+        "Validate event ROI before committing to a full custom build in an unfamiliar geography.",
       image:
         "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
+    },
+    {
+      id: "budget",
+      title: "Budget Flexibility Required",
+      description:
+        "Spread cost across specific events without the capital commitment of a permanent build.",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+    },
+    {
+      id: "concurrent",
+      title: "Concurrent Deployment",
+      description:
+        "Secondary presence while your custom booth is at another show — no gaps in your event calendar.",
+      image:
+        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200",
+    },
+    {
+      id: "first-time",
+      title: "First Time at a Specific Event",
+      description:
+        "Learn the environment before investing in a major custom build — de-risk your event investment.",
+      image:
+        "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };
@@ -39,7 +63,7 @@ export const BOOTH_RENTAL_DELIVERABLES = {
       id: "modular",
       title: "Modular Exhibition System Rental",
       description:
-        "High-quality Aluvic or Octanorm-based modular systems that can be configured into any size or shape — providing a structural look identical to custom fabrication.",
+        "High-quality modular systems that can be configured into any size or shape — providing a structural look identical to custom fabrication at a fraction of the lead time.",
       icon: "Layers",
       image:
         "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1200",
@@ -49,7 +73,7 @@ export const BOOTH_RENTAL_DELIVERABLES = {
       id: "graphics",
       title: "Custom Branded Graphic Packages",
       description:
-        "Even though the structure is rented, the branding is entirely yours. We provide high-fidelity tension fabric graphics and surface treatments for every rental build.",
+        "Even though the structure is rented, the branding is entirely yours. High-fidelity tension fabric graphics and surface treatments for every rental build.",
       icon: "Palette",
       image:
         "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
@@ -79,24 +103,58 @@ export const BOOTH_RENTAL_DELIVERABLES = {
 };
 
 export const BOOTH_RENTAL_FORMATS = {
-  title: "Rental Format Guide",
+  title: "Our Rental Booth Range",
   headers: ["Format", "Best For"],
   rows: [
     {
-      format: "10x10 Standard Rental",
-      "best for": "Cost-effective satellite presence or regional trade shows",
+      format: "10x10 Standard — Focused Presence",
+      "best for":
+        "Branded back wall, counter, lighting, screen option, and lead capture setup. Fast to configure and deploy.",
     },
     {
-      format: "10x20 Modular Rental",
-      "best for": "Medium-sized demo environments with branding flexibility",
+      format: "10x20 Inline — Extended Format",
+      "best for": "Room for product-led demos, a defined visitor journey, and a meeting zone.",
     },
     {
-      format: "20x20 Island Rental",
-      "best for": "Major presence with 4-sided visibility and meeting zones",
+      format: "20x20 Island — High Visibility",
+      "best for":
+        "Four-sided exhibition visibility with demo areas, meeting space, and AV support.",
     },
     {
-      format: "Custom Rental Hybrid",
-      "best for": "Combining rental structure with custom-fabricated focal points",
+      format: "Double-Deck — Premium Floor Presence",
+      "best for":
+        "Upper-level executive meeting suite + lower-level engagement zone for major global events.",
+    },
+    {
+      format: "Custom-Branded Rentals",
+      "best for":
+        "Existing rental structures adapted with your full brand identity, messaging, and engagement zones.",
+    },
+  ],
+};
+
+export const BOOTH_RENTAL_PROCESS = {
+  heading: "How Rental Works",
+  phases: [
+    {
+      title: "Enquire",
+      description: "Share event, location, dates, booth size, and timeline.",
+    },
+    {
+      title: "Availability Check",
+      description: "Confirm inventory and venue compliance.",
+    },
+    {
+      title: "Branding Configuration",
+      description: "Graphics, furniture, AV, and meeting zones.",
+    },
+    {
+      title: "Delivery and Setup",
+      description: "Installed and quality-checked before the show opens.",
+    },
+    {
+      title: "Post-Event Collection",
+      description: "Breakdown and storage managed after close.",
     },
   ],
 };
@@ -109,22 +167,34 @@ export const BOOTH_RENTAL_FAQ = {
   heading: "Event Booth Rental FAQs",
   faqs: [
     {
-      id: "look",
-      question: "Does a rental booth look 'cheap'?",
+      id: "booking",
+      question: "How far ahead should I book?",
       answer:
-        "Not with our systems. We use premium modular frameworks combined with custom-printed tension fabric graphics that create a smooth, seamless finish identical to custom-built walls.",
+        "For major global events, rental booths book 6–10 weeks in advance. Enquire as soon as participation is confirmed.",
     },
     {
-      id: "sustainability",
-      question: "Is renting better for the environment?",
+      id: "branded",
+      question: "Can the rental be fully branded?",
       answer:
-        "Yes. By using locally-stored reusable assets, you significantly reduce the carbon footprint associated with manufacturing new materials and international shipping.",
+        "Yes — graphics, messaging, colour system, and engagement setup. A well-executed branded rental is indistinguishable from a custom build to visitors.",
     },
     {
-      id: "timeline",
-      question: "How quickly can you deploy a rental booth?",
+      id: "multiple-events",
+      question: "Can we use the same rental at multiple events?",
       answer:
-        "We can typically move from approved design to on-site installation in 4–6 weeks for rental systems — significantly faster than custom fabrication.",
+        "Yes — inter-event storage, graphic refresh between shows, and logistics coordination available.",
+    },
+    {
+      id: "vs-custom",
+      question: "What is the difference between rental and custom?",
+      answer:
+        "A rental booth uses a pre-existing structural system with custom branding. A custom booth is designed and built specifically for your brand. Rental suits speed and budget flexibility; custom delivers maximum creative and commercial impact for flagship events.",
+    },
+    {
+      id: "installation",
+      question: "Is installation included?",
+      answer:
+        "Yes — installation, quality review, and post-event breakdown included in all rental packages.",
     },
   ],
 };

@@ -18,4 +18,8 @@ fi
 
 export API_KEY="$MAGIC_KEY"
 
-exec npx -y @21st-dev/magic@latest "API_KEY=$MAGIC_KEY"
+export DO_NOT_TRACK=1
+export FRAMELINK_TELEMETRY=off
+export npm_config_loglevel=silent
+
+exec npx -y --quiet @21st-dev/magic@latest "API_KEY=$MAGIC_KEY"

@@ -1,22 +1,23 @@
 import { GLOBAL_CASE_STUDIES } from "../../shared";
 
 export const INDUSTRY_EVENTS_HERO = {
-  title: "Global Industry Events — Strategic Presence, Not Just Participation",
+  title: "Dominate the Industry Events That Drive Your Market",
   description:
-    "From GITEX Dubai to CES Las Vegas, we provide the global event solutions that ensure your brand doesn't just show up — it stands out. Enterprise-ready strategy and execution for the world's most competitive trade shows.",
+    "As a specialist B2B events agency and experiential marketing agency, we help enterprise brands choose the right events, build a presence strong enough to be remembered, and convert attention into qualified pipeline.",
 };
 
 export { GLOBAL_PROOF_STATS as INDUSTRY_EVENTS_PROOF_BAR } from "../../shared";
 
 export const INDUSTRY_EVENTS_WHY = {
-  heading: "Why Global Trade Shows Require a Strategic Partner",
+  heading: "B2B Sales Arrow as Your Experiential Marketing Agency",
   description:
-    "Major industry events are high-stakes commercial environments. When you invest in a flagship show like MWC or Dreamforce, the cost of a fragmented presence — poor booth location, disjointed messaging, or weak lead qualification — is measured in millions of dollars of lost opportunity. We solve this by bringing strategy, design, and execution under one accountable partner. We don't just manage your space; we manage your commercial success.",
+    "Beyond logistics, we are an experiential marketing agency — designing event presences that create a genuine brand experience buyers remember. Every touchpoint is intentional: the moment of arrival, the sensory environment, the conversation flow, the demo sequence, and the follow-up that lands when the impression is still fresh.\n\nExperiential B2B marketing works because enterprise buyers make complex purchasing decisions through trust and context — not just information. A well-designed event experience builds both simultaneously. That is what separates a brand that generates qualified meetings from one that generates badge scans.",
   reasons: [
     {
-      id: "dominance",
-      title: "Market Dominance",
-      description: "We ensure your presence reflects your market position, not just your budget.",
+      id: "event-selection",
+      title: "Why the Right Events Are Your Best Sales Channel",
+      description:
+        "Our event ROI forecasting framework evaluates five criteria before committing budget: audience quality and buyer intent density, ICP attendance patterns, competitive presence, sponsorship opportunity value, and historical pipeline impact for brands in your category. Events that pass get a full execution program. Those that don't get removed from the calendar — freeing budget for the ones that return.",
       image:
         "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
     },
@@ -24,7 +25,7 @@ export const INDUSTRY_EVENTS_WHY = {
       id: "execution",
       title: "Seamless Global Execution",
       description:
-        "Managing the complexity of international venues so your team can focus on the buyers.",
+        "Managing the complexity of international venues so your team can focus on the buyers. Our logistics and project management networks are designed for parallel deployment across multiple markets.",
       image:
         "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
     },
@@ -32,84 +33,85 @@ export const INDUSTRY_EVENTS_WHY = {
 };
 
 export const INDUSTRY_EVENTS_DELIVERABLES = {
-  heading: "Our Industry Event Management Services",
+  heading: "What We Manage",
   services: [
     {
-      id: "strategy",
-      title: "Event Selection and ROI Strategy",
+      id: "selection",
+      title: "Event Selection and ROI Forecasting",
       description:
-        "We help you audit the global event calendar to prioritize shows that match your ICP and commercial goals — including competitive analysis of where your rivals are exhibiting.",
+        "We evaluate audience quality, buyer intent density, ICP attendance patterns, competitive presence, sponsorship value, and historical pipeline impact — recommending only events where the return justifies the investment.",
       icon: "Map",
       image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2612&auto=format&fit=crop",
       color: "bg-brand-blue",
     },
     {
-      id: "logistics",
-      title: "End-to-End Logistics and Venue Management",
+      id: "booth-design",
+      title: "Booth Design, Fabrication, and Logistics",
       description:
-        "Handling all venue communications, floor plan approvals, health and safety compliance, and on-site utilities (power, internet, rigging) across international borders.",
-      icon: "Truck",
+        "End-to-end booth design, fabrication, freight, customs compliance, and venue scheduling — managed under one team with full accountability for on-site delivery.",
+      icon: "Layers",
       image:
-        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-cyan",
     },
     {
-      id: "positioning",
-      title: "Experiential Marketing and Positioning",
+      id: "lead-targeting",
+      title: "Pre-Show Lead Targeting and Meeting Generation",
       description:
-        "Designing the unique brand experience that differentiates you from 2,000+ other exhibitors — using storytelling, technology, and spatial design to capture attention.",
-      icon: "Zap",
+        "ICP mapping, target account list building from registered attendee data, LinkedIn outreach, and pre-event meeting booking to fill your calendar before the floor opens.",
+      icon: "Target",
       image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-primary",
     },
     {
-      id: "staffing",
-      title: "On-Floor Execution and Staffing Support",
+      id: "on-site",
+      title: "On-Site Execution, Staff Management, and Lead Capture",
       description:
-        "Dedicated project managers on-site to handle all variables — from booth setup to tech support to lead capture oversight — ensuring a zero-error event experience.",
+        "Dedicated project managers on-site, booth team briefing, BANT/CHAMP lead qualification, real-time CRM routing, and full visitor engagement management throughout the event.",
       icon: "Users",
       image:
-        "https://images.unsplash.com/photo-1540339832862-47452993c66b?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1540339832862-47452993c66b?q=80&w=2574&auto=format&fit=crop",
       color: "bg-brand-blue",
+    },
+    {
+      id: "post-show",
+      title: "Post-Show Analytics and Pipeline Report Within 72 Hours",
+      description:
+        "Qualified lead volume by tier, meeting conversion rate, cost per qualified opportunity, CRM pipeline movement, and event ROI vs. forecast — delivered within 72 hours of event close.",
+      icon: "BarChart3",
+      image:
+        "https://images.unsplash.com/photo-1460925833468-af0464ee2d58?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-cyan",
     },
   ],
 };
 
 export const INDUSTRY_EVENTS_PRIORITY = {
-  title: "Priority Global Events We Manage",
-  headers: ["Event Name", "Location", "Focus"],
+  title: "Key Events Where We Execute",
+  headers: ["Sector", "Events"],
   rows: [
     {
-      "event name": "GITEX Global",
-      location: "Dubai, UAE",
-      focus: "Tech, AI, Cloud",
+      sector: "Technology and SaaS",
+      events:
+        "GITEX (Dubai), CES (Las Vegas), Web Summit (Lisbon), AWS re:Invent, Salesforce Dreamforce",
     },
     {
-      "event name": "CES",
-      location: "Las Vegas, USA",
-      focus: "Consumer Tech, Innovation",
+      sector: "Financial Services and Fintech",
+      events: "Sibos, Money20/20 (Las Vegas and Amsterdam), Finovate",
     },
     {
-      "event name": "MWC",
-      location: "Barcelona, Spain",
-      focus: "Mobile, Telecom, Connectivity",
+      sector: "Healthcare and Life Sciences",
+      events: "BIO International Convention, Arab Health (Dubai), HIMSS",
     },
     {
-      "event name": "AWS re:Invent",
-      location: "Las Vegas, USA",
-      focus: "Cloud Computing, SaaS",
+      sector: "Energy and Infrastructure",
+      events: "ADIPEC (Abu Dhabi), CERAWeek (Houston), Hannover Messe",
     },
     {
-      "event name": "Dreamforce",
-      location: "San Francisco, USA",
-      focus: "CRM, Sales, Future of Work",
-    },
-    {
-      "event name": "Hannover Messe",
-      location: "Hannover, Germany",
-      focus: "Industry 4.0, Manufacturing",
+      sector: "Telecom and Connectivity",
+      events: "Mobile World Congress (Barcelona)",
     },
   ],
 };
@@ -122,22 +124,46 @@ export const INDUSTRY_EVENTS_FAQ = {
   heading: "Industry Event FAQs",
   faqs: [
     {
+      id: "experiential",
+      question: "What is an experiential marketing agency for B2B?",
+      answer:
+        "A B2B experiential marketing agency designs event presences that create memorable, trust-building experiences for enterprise buyers — going beyond booth logistics to engineer the full brand encounter from arrival to follow-up.",
+    },
+    {
       id: "selection",
-      question: "How do we choose which events to exhibit at?",
+      question: "How do you select the right industry events?",
       answer:
-        "We audit your ICP, geographic focus, and competitor presence to build an 'Event Scorecard' that ranks global shows by predicted ROI for your specific brand.",
+        "We evaluate audience quality, buyer intent density, ICP attendance patterns, competitive presence, sponsorship value, and historical pipeline impact — recommending only events where the return justifies the investment.",
     },
     {
-      id: "global",
-      question: "Can you manage events in multiple countries simultaneously?",
+      id: "roi-forecasting",
+      question: "What is event ROI forecasting?",
       answer:
-        "Yes. We frequently manage concurrent presences at different global shows for enterprise brands with multi-region marketing teams.",
+        "Before committing budget, we estimate the commercial return: expected meeting volume, qualified lead rate, cost per qualified opportunity, and pipeline influenced — benchmarked against your pre-event commercial targets.",
     },
     {
-      id: "venue",
-      question: "Do you handle venue paperwork and compliance?",
+      id: "concurrent",
+      question: "Can you support multiple events in the same quarter?",
       answer:
-        "Yes — full venue management including floor plan approvals, electrical orders, rigging permits, and health and safety documentation.",
+        "Yes — concurrent multi-event programs are a standard delivery mode for our enterprise clients. Our logistics and project management networks are designed for parallel deployment.",
+    },
+    {
+      id: "on-site-staff",
+      question: "Do you provide on-site staff?",
+      answer:
+        "Yes — briefed event staff for booth management, visitor engagement, lead capture, and meeting coordination.",
+    },
+    {
+      id: "post-event",
+      question: "How do you report post-event outcomes?",
+      answer:
+        "Qualified lead volume by tier, meeting conversion rate, cost per qualified opportunity, CRM pipeline movement, and event ROI vs. forecast — delivered within 72 hours of event close.",
+    },
+    {
+      id: "b2b-vs-event-mgmt",
+      question: "What makes a B2B events agency different from an event management company?",
+      answer:
+        "A B2B events agency measures success by pipeline and revenue. An event management company measures success by logistics execution. We do both — but commercial outcome is always the primary brief.",
     },
   ],
 };

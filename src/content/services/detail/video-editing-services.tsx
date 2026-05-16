@@ -1,9 +1,9 @@
 import { GLOBAL_CASE_STUDIES } from "../../shared";
 
 export const VIDEO_EDITING_HERO = {
-  title: "Video Editing Services — Polished, Professional, Pipelined",
+  title: "Professional Video Editing Services That Transform Raw Footage Into Revenue Assets",
   description:
-    "Raw footage is just the beginning. We provide the expert video editing services that transform your raw files into high-fidelity assets, using cinematic pacing, motion graphics, and sound design to build brand authority.",
+    "Raw footage has potential. Edited footage has a job. We turn your event recordings, demos, and brand content into polished video editing deliverables ready for every channel your team uses.",
 };
 
 export { GLOBAL_PROOF_STATS as VIDEO_EDITING_PROOF_BAR } from "../../shared";
@@ -11,90 +11,110 @@ export { GLOBAL_PROOF_STATS as VIDEO_EDITING_PROOF_BAR } from "../../shared";
 export const VIDEO_EDITING_WHY = {
   heading: "The Edit is Where the Story Happens",
   description:
-    "In the enterprise world, attention is the scarcest resource. A poorly edited video loses your prospect in the first ten seconds. Our editing team doesn't just 'cut clips'; we engineer attention. We understand the pacing required for B2B audiences, the importance of clear data visualization, and the specific sound design that signals professional quality. We transform your raw content into a high-fidelity sales tool that keeps viewers engaged until the final CTA.",
+    "Great footage without great editing is invisible. The edit is where pacing, emotion, and commercial intent are built into the final asset. Our post-production team works from a clear brief — what should the viewer feel, understand, and do after watching — and structures every cut around that outcome.",
   reasons: [
     {
-      id: "authority",
-      title: "Commercial Authority",
+      id: "story",
+      title: "Story-Led Editing",
       description:
-        "Professional color grading and sound design that separates you from the competition.",
+        "We select the strongest material, structure the narrative, and shape a complete video with clear intent and pacing.",
       image:
-        "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200",
     },
     {
-      id: "retention",
-      title: "Viewer Retention",
-      description: "Cinematic pacing that keeps busy executives engaged with your message.",
+      id: "quality",
+      title: "Enterprise Production Quality",
+      description:
+        "Professional colour grading, sound design, and motion graphics — production values that match your enterprise brand positioning.",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };
 
 export const VIDEO_EDITING_DELIVERABLES = {
-  heading: "Our Video Editing Services",
+  heading: "Our Post-Production Services",
   services: [
     {
-      id: "storytelling",
-      title: "Narrative and Cinematic Editing",
+      id: "edit",
+      title: "Full Edit and Assembly",
       description:
-        "We assemble your footage into a compelling brand story, focusing on narrative flow, rhythm, and emotional resonance to keep your audience hooked.",
+        "Selecting the strongest material, structuring the narrative, and shaping a complete video with clear intent and pacing.",
       icon: "Scissors",
-      image:
-        "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&q=80&w=1200",
-      color: "bg-brand-blue",
-    },
-    {
-      id: "motion",
-      title: "Motion Graphics and VFX",
-      description:
-        "We enhance your videos with custom typography, data visualization, and 2D/3D elements that make complex information easy to digest and visually stunning.",
-      icon: "Activity",
-      image:
-        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200",
-      color: "bg-brand-cyan",
-    },
-    {
-      id: "audio",
-      title: "Sound Design and Audio Mastering",
-      description:
-        "We provide professional audio cleaning, sound effects, and music mastering to ensure your video sounds as premium as it looks on every device.",
-      icon: "Volume2",
-      image:
-        "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=1200",
-      color: "bg-brand-primary",
-    },
-    {
-      id: "color",
-      title: "Professional Color Grading",
-      description:
-        "We give your footage a cinematic, high-fidelity look, ensuring color consistency and brand-aligned aesthetics across all your video assets.",
-      icon: "Palette",
       image:
         "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-blue",
     },
+    {
+      id: "colour",
+      title: "Colour Correction and Grading",
+      description:
+        "Technical consistency plus professional colour grading for a polished, premium visual look.",
+      icon: "Palette",
+      image:
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-cyan",
+    },
+    {
+      id: "motion",
+      title: "Motion Graphics and Title Design",
+      description: "Branded titles, lower thirds, animated text, and data callouts.",
+      icon: "Sparkles",
+      image:
+        "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-primary",
+    },
+    {
+      id: "subtitles",
+      title: "Subtitles and Captions",
+      description:
+        "Accurate subtitles improving accessibility, LinkedIn performance, and viewer retention.",
+      icon: "Type",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-blue",
+    },
+    {
+      id: "social",
+      title: "Social Cut-Downs and Format Adaptation",
+      description:
+        "15s, 30s, 60s, vertical, square, and widescreen versions for LinkedIn, YouTube, Instagram, paid campaigns, and sales outreach.",
+      icon: "Share2",
+      image:
+        "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-cyan",
+    },
+    {
+      id: "sound",
+      title: "Sound Design and Music",
+      description: "Audio clean-up, voice balancing, licensed music, and sound effects.",
+      icon: "Music",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-primary",
+    },
   ],
 };
 
-export const VIDEO_EDITING_TIMELINE = {
-  title: "Editing Project Timeline",
-  headers: ["Phase", "Duration", "Deliverable"],
+export const VIDEO_EDITING_TURNAROUND = {
+  title: "Typical Turnaround Times",
+  headers: ["Deliverable", "Typical Turnaround"],
   rows: [
     {
-      phase: "First Cut",
-      duration: "3 Business Days",
-      deliverable: "Narrative assembly and initial pacing",
+      deliverable: "Single video edit (under 5 min)",
+      "typical turnaround": "3–5 business days",
     },
     {
-      phase: "Polished Edit",
-      duration: "5 Business Days",
-      deliverable: "Sound design, color grading, and graphics",
+      deliverable: "Event highlight reel",
+      "typical turnaround": "5–8 business days",
     },
     {
-      phase: "Final Master",
-      duration: "7 Business Days",
-      deliverable: "Final files optimized for all platforms",
+      deliverable: "Multi-video package (5+ videos)",
+      "typical turnaround": "10–15 business days",
+    },
+    {
+      deliverable: "Ongoing high-volume program",
+      "typical turnaround": "Custom workflow + weekly delivery capacity agreed upfront",
     },
   ],
 };
@@ -107,22 +127,22 @@ export const VIDEO_EDITING_FAQ = {
   heading: "Video Editing FAQs",
   faqs: [
     {
-      id: "footage-source",
-      question: "Can you edit footage we shot ourselves?",
+      id: "external-footage",
+      question: "Can you edit footage shot by someone else?",
       answer:
-        "Yes. We work with raw footage from any source, including smartphone recordings, Zoom interviews, and internal event coverage.",
+        "Yes — we edit footage from any source. We advise honestly on what quality output is achievable from the material provided.",
     },
     {
-      id: "revisions",
-      question: "How many rounds of revisions are included?",
+      id: "formats",
+      question: "What file formats do you accept?",
       answer:
-        "Every project includes two full rounds of revisions to ensure the final product perfectly aligns with your brand vision.",
+        "MP4, MOV, MXF, ProRes, AVCHD, and most camera raw formats. Secure transfer links provided for large uploads.",
     },
     {
-      id: "turnaround-urgent",
-      question: "Do you offer 'next-day' editing?",
+      id: "feedback",
+      question: "How do we give feedback?",
       answer:
-        "Yes. For event recaps and urgent social clips, we have a dedicated rapid-response team that can deliver within 24 hours.",
+        "Frame-accurate review platform — you comment directly on the video at specific timecodes. Standard projects include two revision rounds.",
     },
   ],
 };

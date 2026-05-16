@@ -82,8 +82,8 @@ export function Header({
 
             {link.name === "Services" && (
               <div className="pointer-events-none absolute top-[80%] left-1/2 z-[100] -translate-x-1/2 translate-y-2 pt-4 opacity-0 transition-all duration-300 group-hover/nav-item:pointer-events-auto group-hover/nav-item:translate-y-0 group-hover/nav-item:opacity-100">
-                <div className="w-[1000px] max-w-[calc(100vw-4rem)] rounded-lg border border-gray-100 bg-white/95 p-5 shadow-[0_20px_50px_rgba(0,0,0,0.1)] backdrop-blur-md">
-                  <div className="grid grid-cols-4 gap-4">
+                <div className="w-[1200px] max-w-[calc(100vw-4rem)] rounded-lg border border-gray-100 bg-white/95 p-5 shadow-[0_20px_50px_rgba(0,0,0,0.1)] backdrop-blur-md">
+                  <div className="grid grid-cols-5 gap-4">
                     {serviceNavigationGroups.map((group) => (
                       <div
                         key={group.name}

@@ -19,4 +19,5 @@ if [ -z "${FIGMA_FILE_KEY:-}" ]; then
   exit 1
 fi
 
-exec npx -y figma-developer-mcp --figma-api-key="$FIGMA_ACCESS_TOKEN"
+exec npx -y figma-developer-mcp --stdio --figma-api-key="$FIGMA_ACCESS_TOKEN"
+

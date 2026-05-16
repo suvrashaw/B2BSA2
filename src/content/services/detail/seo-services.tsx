@@ -1,102 +1,138 @@
 import { GLOBAL_CASE_STUDIES } from "../../shared";
 
+export const SEO_DEFINITION =
+  "B2B SEO services: optimising a website to be found by enterprise buyers across a complex, multi-touch purchasing journey — from initial awareness through active vendor evaluation — generating organic pipeline that compounds over time.";
+
 export const SEO_HERO = {
-  title: "B2B SEO Services — Organic Pipeline at Scale",
+  title: "B2B SEO Services That Build Organic Pipeline — Not Just Traffic",
   description:
-    "Stop chasing keywords; start chasing customers. We provide the full-stack B2B SEO that combines technical excellence with authority-building content to put your brand at the top of the search results for the terms that drive revenue.",
+    "Enterprise buyers search before they buy — at every stage of their decision. Our B2B SEO services build the technical foundation, content depth, and topical authority required to be found and trusted throughout.",
 };
 
 export { GLOBAL_PROOF_STATS as SEO_PROOF_BAR } from "../../shared";
 
 export const SEO_WHY = {
-  heading: "The Power of Organic Intent",
+  heading: "B2B SEO Is Fundamentally Different From B2C",
   description:
-    "In the B2B world, search is the starting point for almost every major purchase decision. If your brand isn't visible when your prospects are researching solutions to their complex challenges, you are handing leads to your competitors. SEO is not just about 'ranking'; it's about building an organic moat around your brand, driving consistent, high-quality traffic that compounds in value over time without increasing your ad spend.",
+    "B2B buyers operate in buying committees of 3–7 decision-makers. They research for months using lower-volume but highly specific search terms. They need content at every stage of a long evaluation cycle. Ranking for high-volume consumer keywords is a poor strategic objective for an enterprise brand. The goal is to rank for terms your actual buyers use when they are actively evaluating — and to be credible and authoritative throughout the entire research process.",
   reasons: [
     {
-      id: "authority",
-      title: "Market Authority",
+      id: "compound",
+      title: "Compounding Returns",
       description:
-        "Ranking for difficult industry terms signals leadership and builds trust with decision-makers.",
-      image:
-        "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      id: "compounding",
-      title: "Compounding ROI",
-      description:
-        "Organic traffic grows in value over time, lowering your overall customer acquisition cost.",
+        "SEO is the most durable and cost-efficient long-term B2B channel — organic traffic and pipeline compound over time as domain authority grows.",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+    },
+    {
+      id: "intent",
+      title: "High-Intent Organic Traffic",
+      description:
+        "Enterprise buyers who find you through organic search are already in research mode — higher quality than paid traffic at every funnel stage.",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };
 
 export const SEO_DELIVERABLES = {
-  heading: "Our SEO Services",
+  heading: "Our B2B SEO Services",
   services: [
     {
       id: "technical",
-      title: "Technical SEO and Site Architecture",
+      title: "Technical SEO Audit and Remediation",
       description:
-        "We optimize your site for speed, mobile performance, and crawlability — ensuring search engines can easily find and index your most valuable content.",
+        "Crawlability, Core Web Vitals, broken links, redirects, schema markup, sitemaps, and page speed — identifying and fixing technical issues that prevent proper indexing.",
       icon: "Settings",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-blue",
     },
     {
-      id: "content",
-      title: "Authority Content Clusters",
+      id: "keyword",
+      title: "Keyword Research and Search Intent Mapping",
       description:
-        "We move beyond single-keyword targeting to build deep 'topic clusters' that establish your brand as the definitive source of truth in your industry.",
-      icon: "FileText",
+        "Identifying terms enterprise buyers use across awareness, consideration, comparison, and purchase stages — mapped to intent, page type, funnel stage, and commercial value.",
+      icon: "Search",
       image:
-        "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-cyan",
     },
     {
-      id: "backlink",
-      title: "Strategic Link Building",
+      id: "on-page",
+      title: "On-Page SEO Optimisation",
       description:
-        "We secure high-authority backlinks from reputable B2B publications and industry sites to boost your domain authority and search rankings.",
+        "Titles, meta descriptions, headings, URLs, internal linking, schema markup, and body copy — optimised for both search engines and buyers.",
+      icon: "FileText",
+      image:
+        "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-primary",
+    },
+    {
+      id: "content",
+      title: "Content Strategy and SEO Copywriting",
+      description:
+        "Pillar pages, service pages, cluster articles, FAQs, and conversion-focused copy — building topical authority and converting qualified visitors.",
+      icon: "PenLine",
+      image:
+        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-blue",
+    },
+    {
+      id: "links",
+      title: "Authority Link Building",
+      description:
+        "Ethical link acquisition through digital PR, content partnerships, and industry mentions — quality, relevance, and long-term domain credibility.",
       icon: "Link",
       image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-cyan",
+    },
+    {
+      id: "international",
+      title: "International and Local SEO",
+      description:
+        "Hreflang implementation, regional landing pages, and market-specific keyword strategy for brands operating across multiple geographies.",
+      icon: "Globe",
+      image:
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-primary",
     },
     {
       id: "reporting",
-      title: "Pipeline-First Reporting",
+      title: "SEO Reporting and KPI Dashboards",
       description:
-        "We don't just report on rankings. We track organic conversions and attribute them to your bottom-line revenue goals.",
-      icon: "BarChart",
+        "Rankings, organic traffic, conversions, qualified leads, and pipeline influence — reported with clear commercial context.",
+      icon: "BarChart3",
       image:
-        "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1460925833468-af0464ee2d58?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-blue",
     },
   ],
 };
 
-export const SEO_ROADMAP = {
-  title: "SEO Milestone Roadmap",
-  headers: ["Month", "Focus"],
-  rows: [
+export const SEO_PROCESS = {
+  heading: "Our SEO Methodology",
+  phases: [
     {
-      month: "Month 1",
-      focus: "Technical Audit and Baseline Performance Mapping",
+      title: "Technical Foundation",
+      description:
+        "Making the website crawlable, indexable, and fast before any content investment.",
     },
     {
-      month: "Month 2",
-      focus: "Keyword Gap Analysis and Content Strategy Design",
+      title: "Content Architecture",
+      description:
+        "Pillar-and-cluster content model built around buyer intent across the full purchase journey.",
     },
     {
-      month: "Month 3",
-      focus: "Launch of Initial Authority Content Clusters",
+      title: "Authority Building",
+      description:
+        "Quality backlinks, digital PR, and thought leadership content that builds domain credibility over time.",
     },
     {
-      month: "Month 4+",
-      focus: "Continuous Optimization, Link Building, and Pipeline Scaling",
+      title: "Measurement and Iteration",
+      description:
+        "Quarterly strategy refinement based on rankings, organic traffic, qualified leads, and pipeline data.",
     },
   ],
 };
@@ -110,21 +146,33 @@ export const SEO_FAQ = {
   faqs: [
     {
       id: "timeline",
-      question: "How long until we see organic growth?",
+      question: "How long does B2B SEO take to produce results?",
       answer:
-        "SEO is a medium-term strategy. While technical fixes can show results in weeks, meaningful growth in organic pipeline typically takes 3–6 months.",
+        "Technical improvements: 4–8 weeks. Organic traffic from content: 4–9 months. Consistent organic pipeline: 12–24 months in competitive markets. SEO is the most durable and cost-efficient long-term B2B channel — but it requires patience and consistency.",
     },
     {
-      id: "ppc-vs-seo",
-      question: "Should we do SEO or PPC?",
+      id: "content",
+      question: "Do you write the content as well?",
       answer:
-        "The most successful enterprise brands do both. PPC captures immediate demand, while SEO builds long-term authority and drives lower-cost leads over time.",
+        "Yes — SEO copywriting and content architecture are included in the full service. We write service pages, pillar articles, blog posts, FAQs, and conversion-focused copy.",
     },
     {
-      id: "guarantee",
-      question: "Do you guarantee #1 rankings?",
+      id: "technical-vs-onpage",
+      question: "What is the difference between technical and on-page SEO?",
       answer:
-        "No reputable agency can guarantee specific rankings due to algorithm volatility, but we do guarantee a significant increase in your organic pipeline value.",
+        "Technical SEO: infrastructure — crawlability, Core Web Vitals, site speed, schema. On-page SEO: visible content — titles, headings, body copy, internal links. Both are required.",
+    },
+    {
+      id: "audit",
+      question: "Do you provide a technical audit before starting?",
+      answer:
+        "Yes — every engagement begins with a comprehensive technical SEO audit identifying the highest-priority issues affecting crawlability, indexing, and organic visibility.",
+    },
+    {
+      id: "roi",
+      question: "How do you measure SEO ROI?",
+      answer:
+        "Ranking movement, organic traffic quality, conversion rate, qualified leads generated, and pipeline influenced — connected to actual commercial outcomes, not just search metrics.",
     },
   ],
 };

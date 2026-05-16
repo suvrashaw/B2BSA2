@@ -14,4 +14,8 @@ if [ -z "${V0_API_KEY:-}" ]; then
   exit 1
 fi
 
-exec npx -y mcp-remote https://mcp.v0.dev --header "Authorization: Bearer ${V0_API_KEY}"
+export DO_NOT_TRACK=1
+export FRAMELINK_TELEMETRY=off
+export npm_config_loglevel=silent
+
+exec npx -y --quiet mcp-remote https://mcp.v0.dev --header "Authorization: Bearer ${V0_API_KEY}"

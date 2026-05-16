@@ -1,29 +1,31 @@
 import { GLOBAL_CASE_STUDIES } from "../../shared";
 
 export const CORPORATE_VIDEO_HERO = {
-  title: "Corporate Video Production — High-Fidelity Brand Storytelling",
+  title: "Corporate Video Production Solutions That Command Enterprise Attention",
   description:
-    "Your brand is more than a logo. We provide the cinema-quality corporate video that humanizes your organization, explains your complex value proposition, and builds the trust required for enterprise sales.",
+    "Your corporate video should make your market believe you are the right partner — before a sales conversation begins.",
 };
 
 export { GLOBAL_PROOF_STATS as CORPORATE_VIDEO_PROOF_BAR } from "../../shared";
 
 export const CORPORATE_VIDEO_WHY = {
-  heading: "The Power of Visual Trust",
+  heading: "How Corporate Video Accelerates Your Sales Cycle",
   description:
-    "In the enterprise B2B space, your digital presence is often your only physical presence for a prospect. If your corporate video looks amateur, your brand looks amateur. We specialize in high-fidelity storytelling that aligns with your enterprise price point. Our films don't just 'explain'; they 'persuade' — using cinematic techniques and strategic messaging to ensure your brand is the one decision-makers remember when it's time to sign.",
+    "Research shows 87% of video marketers report video has directly increased sales. For enterprise B2B, corporate video shortens the time buyers need to understand your value, builds decision-maker confidence before the first meeting, and creates consistent messaging that scales across every channel.",
   reasons: [
     {
       id: "trust",
       title: "Humanizing the Brand",
-      description: "People buy from people. We help you put your experts front and center.",
+      description:
+        "People buy from people. We help you put your experts front and center — turning complex enterprise solutions into compelling, human stories.",
       image:
         "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200",
     },
     {
       id: "clarity",
       title: "Strategic Clarity",
-      description: "Simplify your most complex products into compelling visual narratives.",
+      description:
+        "Simplify your most complex products into compelling visual narratives — eliminating friction from every sales qualification call.",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     },
@@ -31,13 +33,13 @@ export const CORPORATE_VIDEO_WHY = {
 };
 
 export const CORPORATE_VIDEO_DELIVERABLES = {
-  heading: "Our Corporate Video Services",
+  heading: "What We Produce",
   services: [
     {
       id: "brand",
-      title: "Cinematic Brand Anthems",
+      title: "Brand and Culture Films",
       description:
-        "High-production value films that define your company's mission, scale, and global impact — designed to build long-term emotional trust with enterprise buyers.",
+        "Who you are, what you stand for, and why buyers should trust you — for websites, investor comms, and enterprise credibility.",
       icon: "Star",
       image:
         "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200",
@@ -45,9 +47,9 @@ export const CORPORATE_VIDEO_DELIVERABLES = {
     },
     {
       id: "product",
-      title: "Product and Solution Explainers",
+      title: "Product and Solution Explainer Videos",
       description:
-        "We translate complex technology and workflows into clear, engaging 4K videos that show exactly how your solution solves enterprise pain points.",
+        "Complex platforms and solutions simplified into clear video stories buyers understand in 2–3 minutes — eliminating friction from every sales qualification call.",
       icon: "Cpu",
       image:
         "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200",
@@ -55,23 +57,43 @@ export const CORPORATE_VIDEO_DELIVERABLES = {
     },
     {
       id: "thought",
-      title: "Executive and Expert Interviews",
+      title: "Executive Interview and Thought Leadership Series",
       description:
-        "We capture your C-suite and subject matter experts in high-fidelity interview environments, positioning them as the leading voices in your industry.",
+        "Leadership perspectives and industry commentary that build credibility and generate the most-shared B2B content format on LinkedIn.",
       icon: "Users",
       image:
         "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-primary",
     },
     {
-      id: "sales",
-      title: "Sales Enablement Video Assets",
+      id: "investor",
+      title: "Investor and Board Presentation Videos",
       description:
-        "Short, punchy video snippets and case studies designed for your sales team to use during the outreach and follow-up process.",
+        "Polished content for funding narratives, annual reviews, and stakeholder briefings.",
       icon: "TrendingUp",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-blue",
+    },
+    {
+      id: "sales",
+      title: "Sales Enablement Video Content",
+      description:
+        "Demo videos, product walkthroughs, and objection-handling clips that help sales teams explain value faster and more consistently.",
+      icon: "Zap",
+      image:
+        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-cyan",
+    },
+    {
+      id: "testimonial",
+      title: "Customer Testimonial and Case Study Films",
+      description:
+        "Real outcomes from real customers — the most trusted content format in B2B purchasing decisions.",
+      icon: "MessageSquare",
+      image:
+        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-primary",
     },
   ],
 };
@@ -107,22 +129,28 @@ export const CORPORATE_VIDEO_FAQ = {
   heading: "Corporate Video FAQs",
   faqs: [
     {
-      id: "scripting",
-      question: "Do you handle the scriptwriting?",
+      id: "timeline",
+      question: "How long does production take?",
       answer:
-        "Yes. Our team works with your subject matter experts to translate technical specs into a compelling script that resonates with your ICP.",
+        "Brief to delivery: 4–8 weeks for a standard project. Multi-video programs or executive series: 8–16 weeks.",
     },
     {
-      id: "multi-location",
-      question: "Can we shoot in multiple global offices?",
+      id: "script",
+      question: "Do you write the script?",
       answer:
-        "Yes. We coordinate global shoots to ensure your brand look and feel is consistent across every geographic region you operate in.",
+        "Yes — script development and messaging strategy are included in our full corporate video production service.",
     },
     {
-      id: "usage",
-      question: "Where can we use these videos?",
+      id: "formats",
+      question: "What formats are included in delivery?",
       answer:
-        "Every production includes unlimited usage rights for your website, social media, paid advertising, and internal sales presentations.",
+        "Master file, web-optimised version, social formats (16:9, 1:1, and 9:16 vertical). Subtitle files and thumbnails on request.",
+    },
+    {
+      id: "location",
+      question: "Can we film on location?",
+      answer:
+        "Yes — client offices, conference venues, studios, product facilities, and trade show events.",
     },
   ],
 };

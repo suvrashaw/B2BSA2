@@ -2,4 +2,8 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-exec npx -y @magicuidesign/mcp@latest
+export DO_NOT_TRACK=1
+export FRAMELINK_TELEMETRY=off
+export npm_config_loglevel=silent
+
+exec npx -y --quiet @magicuidesign/mcp@latest

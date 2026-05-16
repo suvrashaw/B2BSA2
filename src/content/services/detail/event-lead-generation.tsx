@@ -1,142 +1,133 @@
 import { GLOBAL_CASE_STUDIES } from "../../shared";
 
+export const ELG_DEFINITION =
+  "Trade show lead generation is the end-to-end process of identifying, engaging, qualifying, and routing potential buyers at B2B events into your sales pipeline — with enough context for your sales team to act on them immediately.";
+
 export const ELG_HERO = {
-  title: "Event Lead Generation — Qualified Pipeline From the Event Floor",
+  title: "Trade Show Lead Generation Systems That Fill Your Enterprise Pipeline",
   description:
-    "Stop settling for badge scans that go nowhere. Our event lead generation programs combine active prospecting with BANT qualification and real-time CRM handoff — so your sales team gets meetings, not just data.",
+    "We don't just capture leads — we engineer a complete trade show lead generation system: ICP targeting before the show, BANT-qualified capture during, and CRM-ready pipeline delivered within 48 hours of close.",
 };
 
 export { GLOBAL_PROOF_STATS as ELG_PROOF_BAR } from "../../shared";
 
 export const ELG_WHY = {
-  heading: "Why Badge Scans Are Not Leads",
+  heading: "How We Qualify Leads — BANT and CHAMP",
   description:
-    "A badge scan is a record of attendance, not an expression of intent. Most event data dies in a spreadsheet because it lacks the context a sales team needs to follow up effectively. We solve the 'lead decay' problem by qualifying every visitor against your Ideal Customer Profile (ICP) in real-time. By the time the show floor closes, your sales team isn't looking at a list of names — they are looking at a pipeline of qualified opportunities.",
+    "We use two structured qualification frameworks, agreed with your sales team before the event begins.\n\nBANT — Budget (is there budget available?), Authority (is this the decision-maker?), Need (is there a verified business problem?), Timeline (when are they solving it?). Ideal for enterprise sales with clear procurement cycles.\n\nCHAMP — Challenges (what is the core problem?), Authority (who owns the decision?), Money (is budget allocated?), Prioritisation (how urgent is this?). Ideal for consultative, complex sales where the challenge comes first.\n\nBoth frameworks ensure qualification happens during the live booth conversation — not retrospectively from a contact list.",
   reasons: [
     {
-      id: "intent",
-      title: "Real-Time Intent",
-      description: "We capture the context of the conversation, not just the contact details.",
+      id: "active-prospecting",
+      title: "Active Prospecting — Going Beyond Passive Booth Traffic",
+      description:
+        "Active prospecting at trade shows means your team does not wait for visitors to arrive at the booth. We train and support your staff to proactively identify and approach target attendees across the event floor — using pre-event target account lists, real-time event app intelligence, and structured outreach scripts. Combined with your booth as the destination, active prospecting typically increases qualified lead volume by 30–50% compared to passive booth-only strategies.",
       image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200",
     },
     {
-      id: "qualification",
-      title: "BANT Qualification",
-      description: "Budget, Authority, Need, and Timeline confirmed on the spot.",
+      id: "results",
+      title: "Proven Results",
+      description:
+        "B2B Sales Arrow programs have generated 15,000+ verified enterprise leads and contributed to $1.2B+ in influenced pipeline across technology, financial services, healthcare, and energy sectors. We measure trade show lead generation success through qualified lead volume, sales acceptance rate, meeting-to-pipeline conversion, and revenue attribution within 90 days of event close — not badge scan counts.",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1460925833468-af0464ee2d58?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };
 
 export const ELG_DELIVERABLES = {
-  heading: "Our Event Lead Generation Services",
+  heading: "What Our Trade Show Lead Generation Service Covers",
   services: [
     {
-      id: "prospecting",
-      title: "Active Prospecting and Traffic Driving",
+      id: "icp-mapping",
+      title: "Pre-Event ICP Mapping and Targeting",
       description:
-        "Our specialists don't wait for people to walk into your booth. We actively engage high-value prospects on the event floor and move them into your engagement zone.",
-      icon: "Users",
+        "Defining your ideal attendee by role, company, and intent before the show opens — including pre-event meeting generation with priority accounts.",
+      icon: "Target",
       image:
-        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-blue",
     },
     {
-      id: "qualification",
-      title: "Qualification Framework Design (BANT/CHAMP)",
+      id: "capture-tech",
+      title: "On-Site Lead Capture Technology",
       description:
-        "We work with your sales leadership to define exactly what a 'qualified lead' looks like, then build custom capture scripts to ensure every lead meets that standard.",
-      icon: "Filter",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-      color: "bg-brand-cyan",
-    },
-    {
-      id: "sync",
-      title: "Real-Time CRM Sync and Lead Routing",
-      description:
-        "Leads are pushed to Salesforce, HubSpot, or Dynamics within minutes of the conversation, assigned to the right territory owner with full qualification notes.",
-      icon: "Zap",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-      color: "bg-brand-primary",
-    },
-    {
-      id: "capture",
-      title: "Digital Lead Capture Technology",
-      description:
-        "High-speed NFC and QR-based capture hardware and software that eliminates manual data entry and reduces friction for the visitor.",
+        "NFC, QR, badge scan, custom intake, and CRM integration (Salesforce, HubSpot, Marketo) — eliminating manual data entry and reducing friction for the visitor.",
       icon: "Scan",
       image:
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200",
-      color: "bg-brand-blue",
-    },
-    {
-      id: "follow-up",
-      title: "Post-Event Follow-Up Automation",
-      description:
-        "Immediate personalized email sequences triggered the moment a lead is captured, keeping the conversation warm while your team is still on-site.",
-      icon: "Mail",
-      image:
-        "https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-cyan",
     },
     {
-      id: "reporting",
-      title: "Lead Intelligence and Attribution Reporting",
+      id: "lead-scoring",
+      title: "Real-Time Lead Scoring",
       description:
-        "Full audit of lead quality, cost per qualified lead, and predicted pipeline value delivered within 48 hours of event close.",
+        "BANT or CHAMP qualification during live conversations — so every lead that reaches your sales team has confirmed buying authority, verified business need, and an agreed next step.",
+      icon: "Filter",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-primary",
+    },
+    {
+      id: "active-prospecting",
+      title: "Active Prospecting",
+      description:
+        "Proactive floor outreach to target accounts beyond booth traffic — our specialists identify and approach senior decision-makers across the event floor using pre-event account lists and real-time event intelligence.",
+      icon: "Users",
+      image:
+        "https://images.unsplash.com/photo-1540339832862-47452993c66b?q=80&w=2574&auto=format&fit=crop",
+      color: "bg-brand-blue",
+    },
+    {
+      id: "crm-routing",
+      title: "Instant CRM Routing",
+      description:
+        "Hot leads flagged and delivered to the right sales owner same-day — pushed to Salesforce, HubSpot, or Dynamics within minutes of the conversation, with full qualification notes.",
+      icon: "Zap",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-cyan",
+    },
+    {
+      id: "nurture",
+      title: "Post-Event Nurture Sequences",
+      description:
+        "Personalised follow-up by lead quality tier and conversation context — immediate sequences triggered the moment a lead is captured, keeping the conversation warm while your team is still on-site.",
+      icon: "Mail",
+      image:
+        "https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-primary",
+    },
+    {
+      id: "attribution",
+      title: "Pipeline Attribution Reporting",
+      description:
+        "Lead volume, qualification rate, meeting conversion, and event ROI vs. pre-event forecast — clean CRM-ready lead file with quality scores and recommended next actions delivered within 48 hours of event close.",
       icon: "BarChart3",
       image:
         "https://images.unsplash.com/photo-1460925833468-af0464ee2d58?auto=format&fit=crop&q=80&w=1200",
-      color: "bg-brand-primary",
-    },
-  ],
-};
-
-export const ELG_PRICING = {
-  title: "Event Lead Generation Service Tiers",
-  headers: ["Service Tier", "Focus"],
-  rows: [
-    {
-      "service tier": "Core Lead Capture Program",
-      focus: "Hardware, app, and qualification workflow setup",
-    },
-    {
-      "service tier": "Active Prospecting Program",
-      focus: "On-floor specialists driving traffic and qualifying in real-time",
-    },
-    {
-      "service tier": "Full Pipeline Program",
-      focus: "Pre-event outreach + on-floor capture + post-event follow-up",
+      color: "bg-brand-blue",
     },
   ],
 };
 
 export const ELG_PROCESS = {
-  heading: "Our Event Lead Generation Process",
+  heading: "Before, During, and After",
   phases: [
     {
-      title: "Strategic Alignment",
-      description: "Defining ICP, qualification criteria, and CRM routing rules.",
+      title: "Before — Targeted Setup",
+      description:
+        "ICP mapping, qualification criteria definition, target account list building from registered attendee data, and pre-event meeting generation with priority accounts.",
     },
     {
-      title: "Workflow Design",
-      description: "Building the digital capture script and follow-up triggers.",
+      title: "During — Real-Time Capture",
+      description:
+        "Structured lead capture workflows, booth team briefing, BANT/CHAMP qualification in every conversation, and real-time hot-lead routing to the right sales owner before the day ends.",
     },
     {
-      title: "Specialist Briefing",
-      description: "Training the on-floor team on your product and buyer objections.",
-    },
-    {
-      title: "Live Execution",
-      description: "Active prospecting, qualification, and real-time CRM sync.",
-    },
-    {
-      title: "Intelligence Handoff",
-      description: "Final lead audit, reporting, and attribution review.",
+      title: "After — CRM-Ready Pipeline",
+      description:
+        "Within 48 hours: clean lead file with quality scores, conversation notes, qualification outcomes, and a recommended next action for every record.",
     },
   ],
 };
@@ -149,28 +140,34 @@ export const ELG_FAQ = {
   heading: "Event Lead Generation FAQs",
   faqs: [
     {
-      id: "sql",
-      question: "What is an SQL in an event context?",
+      id: "what-is",
+      question: "What is trade show lead generation?",
       answer:
-        "A Sales Qualified Lead (SQL) from an event is a prospect who has been verified by a lead specialist to meet your ICP criteria and has a confirmed business need and purchase timeline.",
+        "Trade show lead generation is the systematic process of identifying, engaging, qualifying, and routing potential buyers at B2B events — covering pre-event targeting, on-site capture, and post-event follow-up.",
     },
     {
-      id: "crm",
-      question: "How quickly do leads enter our CRM?",
+      id: "badge-vs-lead",
+      question: "What is the difference between a badge scan and a qualified lead?",
       answer:
-        "Typically within 5–10 minutes of the conversation on the event floor, including all qualification notes.",
+        "A badge scan captures contact details. A qualified lead captures commercial intent — confirmed buying authority, verified business need, and an agreed next step with your sales team.",
     },
     {
-      id: "staffing",
-      question: "Do you provide the people to capture the leads?",
+      id: "active-prospecting",
+      question: "What is active prospecting at a trade show?",
       answer:
-        "Yes. We provide trained B2B lead generation specialists who understand enterprise sales and can qualify senior decision-makers.",
+        "Active prospecting means your team proactively identifies and approaches target attendees across the event floor — not just waiting for booth visitors. It significantly increases qualified lead volume when combined with a strong booth presence.",
     },
     {
-      id: "framework",
-      question: "Which qualification framework do you use?",
+      id: "lead-data",
+      question: "How quickly do we receive the lead data?",
       answer:
-        "BANT (Budget, Authority, Need, Timeline) or CHAMP (Challenges, Authority, Money, Prioritization) — customized to your sales motion.",
+        "Clean CRM-ready lead file within 48 hours of event close. Hot leads routed in real time during the event itself.",
+    },
+    {
+      id: "pre-event-meetings",
+      question: "Can you generate pre-event meetings?",
+      answer:
+        "Yes — pre-event meeting generation is one of the highest-ROI components of any event program. We use attendee data, LinkedIn targeting, and direct outreach to book meetings before the floor opens.",
     },
   ],
 };

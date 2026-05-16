@@ -69,6 +69,7 @@ export interface WhoWeAreContent {
   heading: ReactNode;
   quote: string;
   attribution: string;
+  mission?: string;
   stats: WhoWeAreStat[];
 }
 
@@ -120,6 +121,7 @@ export interface UpcomingEventItem {
 export interface UpcomingEventsContent {
   eyebrow: string;
   heading: ReactNode;
+  description?: string;
   badgeLabel: string;
   ctaLabel: string;
   viewAllLabel: string;
@@ -334,6 +336,8 @@ export const HOME_WHO_WE_ARE_CONTENT: WhoWeAreContent = {
   quote:
     "We don't just design exhibition booths — we build sales pipelines. B2B Sales Arrow combines custom trade show booth design, on-ground lead generation, and performance-driven event marketing to turn floor traffic into qualified enterprise opportunities. One partner. One end-to-end B2B event solution built to drive measurable results.",
   attribution: "\u2014 Leadership Team, B2B Sales Arrow",
+  mission:
+    "To transform your global event presence into measurable, high-impact commercial outcomes.",
   stats: [
     {
       value: "30+",
@@ -355,7 +359,7 @@ export const HOME_WHO_WE_ARE_CONTENT: WhoWeAreContent = {
     },
     {
       value: "10+",
-      label: "Years of Experience",
+      label: "Years of B2B Experience",
       icon: "Users",
       bg: "bg-gradient-to-br from-[#1b5e82] to-[#164e6b]",
     },
@@ -512,6 +516,8 @@ export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
 export const HOME_UPCOMING_EVENTS_CONTENT: UpcomingEventsContent = {
   eyebrow: "GLOBAL PRESENCE",
   heading: <>Upcoming Trade Shows & Global Industry Events</>,
+  description:
+    "Meet our team on the ground. We are bringing our end-to-end event solution expertise to the most anticipated enterprise conferences of the year:",
   badgeLabel: "Upcoming",
   ctaLabel: "Meet Us There!",
   viewAllLabel: "View All Events",
@@ -721,9 +727,9 @@ export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
 };
 
 export const HOME_BLOGS_CONTENT: BlogsContent = {
-  eyebrow: "INSIGHTS & INTELLIGENCE",
+  eyebrow: "BLOGS",
   heading: <>Expert Strategies to Maximize Your Global Event Solutions</>,
-  ctaLabel: "Explore Intelligence",
+  ctaLabel: "Read the complete blog",
   blogs: [
     {
       id: 1,
@@ -800,12 +806,6 @@ export const HOME_FAQ_CONTENT: FAQContent = {
       question: "How do you drive traffic to our booth before events?",
       answer:
         "We execute targeted pre-event marketing using personalized email sequences and social media to fill your calendar with high-intent meetings before the show begins.",
-    },
-    {
-      id: 8,
-      question: "Can you help us repurpose the event for digital marketing?",
-      answer:
-        "Our media team captures broadcast-grade video and 3D animations on-site, transforming your event into a year’s worth of digital content to fuel your ongoing sales pipeline.",
     },
   ],
 };

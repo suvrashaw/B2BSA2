@@ -1,101 +1,89 @@
 import { GLOBAL_CASE_STUDIES } from "../../shared";
 
 export const LINKEDIN_ADS_HERO = {
-  title: "LinkedIn Ads for B2B — Precision ABM at Scale",
+  title: "LinkedIn Ads for B2B — The Highest-Intent Enterprise Pipeline Channel",
   description:
-    "Stop wasting budget on 'lookalike' audiences. We provide the strategic LinkedIn Advertising that reaches the specific people at the specific companies you need to win, using account-based targeting to build authority and drive leads.",
+    "LinkedIn is where enterprise buyers reveal their role, their company, and their commercial intent. Our LinkedIn Ads for B2B programs reach your exact ICP and convert professional attention into qualified meetings and pipeline.",
 };
 
 export { GLOBAL_PROOF_STATS as LINKEDIN_ADS_PROOF_BAR } from "../../shared";
 
 export const LINKEDIN_ADS_WHY = {
-  heading: "The Power of the Professional Context",
+  heading: "The Most Precise B2B Targeting Channel",
   description:
-    "LinkedIn is not just another social network; it's the world's most comprehensive database of professional intent. When you advertise on LinkedIn, your message appears in a context of professional growth and decision-making. We leverage LinkedIn's unparalleled first-party data to build account-based marketing (ABM) campaigns that don't just 'get impressions,' but reach the specific C-suite executives and procurement leads who hold the keys to your enterprise deals.",
+    "LinkedIn lets you target by job title, seniority, company size, industry, and specific named accounts — with precision that Google and Meta cannot match for enterprise B2B. The cost-per-lead is higher, but the lead quality is structurally different: you are reaching decision-makers in a professional context, not consumers in a social browsing state.\n\nFor ABM programs, LinkedIn allows you to build named account lists and target the full buying committee — not just the person who fills in the form, but the CFO, the IT Director, and the procurement lead simultaneously.",
   reasons: [
     {
       id: "precision",
-      title: "Unerring Precision",
-      description: "Target by exact company, seniority, and skill set with 100% accuracy.",
+      title: "Decision-Maker Precision",
+      description:
+        "Target by job title, company size, industry, seniority, and named account lists — reaching the full buying committee, not just one contact.",
       image:
-        "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
     },
     {
-      id: "trust",
-      title: "Inherited Trust",
+      id: "abm",
+      title: "LinkedIn Ads and Account-Based Marketing",
       description:
-        "Benefit from the high-trust environment of LinkedIn to build your brand authority.",
+        "Named account lists, buying committee segmentation, and retargeting across the full evaluation cycle — LinkedIn ABM reaches decision-makers with the right message at every stage.",
       image:
-        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     },
   ],
 };
 
 export const LINKEDIN_ADS_DELIVERABLES = {
-  heading: "Our LinkedIn Ads Services",
+  heading: "LinkedIn Ad Formats We Specialise In",
   services: [
     {
-      id: "targeting",
-      title: "Advanced ABM Targeting",
+      id: "sponsored",
+      title: "Sponsored Content",
       description:
-        "We upload your specific target account list and use LinkedIn's Matched Audiences to ensure your ads are only seen by the companies you want to win.",
-      icon: "Target",
+        "Native feed ads promoting thought leadership, case studies, and product content — the most versatile format for awareness and demand generation.",
+      icon: "FileText",
       image:
-        "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-blue",
     },
     {
-      id: "leadgen",
-      title: "Lead Gen Form Optimization",
+      id: "lead-gen",
+      title: "Lead Gen Forms",
       description:
-        "We use LinkedIn's native lead gen forms to capture high-quality prospect data with one click, drastically increasing your conversion rate compared to external landing pages.",
-      icon: "Scan",
+        "Pre-filled forms that capture qualified leads without sending buyers off LinkedIn — significantly higher conversion rates than landing page redirects.",
+      icon: "ClipboardList",
       image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-cyan",
     },
     {
-      id: "content",
-      title: "Thought Leadership Content Ads",
+      id: "document",
+      title: "Document Ads",
       description:
-        "We use Sponsored Content to promote your most valuable industry insights, positioning your executives as market leaders before the sales call ever happens.",
-      icon: "Palette",
+        "Promote whitepapers, reports, and playbooks natively in the feed — gate them for lead capture or ungated for awareness.",
+      icon: "File",
       image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-primary",
     },
     {
-      id: "integration",
-      title: "Full CRM Lead Synchronization",
+      id: "event",
+      title: "Event Ads",
       description:
-        "We ensure every lead captured on LinkedIn is instantly pushed into your CRM with all firmographic data intact for immediate follow-up.",
-      icon: "RefreshCw",
+        "Drive registrations for webinars, trade show appearances, and proprietary events — targeting the exact buyer profiles you want in the room.",
+      icon: "Calendar",
       image:
-        "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2612&auto=format&fit=crop",
       color: "bg-brand-blue",
     },
-  ],
-};
-
-export const LINKEDIN_ADS_FORMATS = {
-  title: "Ad Format Efficiency",
-  headers: ["Format", "Best For"],
-  rows: [
     {
-      format: "Sponsored Content",
-      "best for": "High-level thought leadership and brand building",
-    },
-    {
-      format: "Lead Gen Forms",
-      "best for": "Capturing high-intent data without leaving LinkedIn",
-    },
-    {
-      format: "Document Ads",
-      "best for": "Gated content downloads (Whitepapers, E-books)",
-    },
-    {
-      format: "Video Ads",
-      "best for": "Product demos and complex service storytelling",
+      id: "message",
+      title: "Message Ads and InMail",
+      description:
+        "Direct sponsored messages delivered to LinkedIn inboxes — high-visibility format for event invitations, personalised outreach, and time-sensitive campaigns.",
+      icon: "Mail",
+      image:
+        "https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-cyan",
     },
   ],
 };
@@ -105,25 +93,37 @@ export const LINKEDIN_ADS_CASE_STUDIES = {
 };
 
 export const LINKEDIN_ADS_FAQ = {
-  heading: "LinkedIn Advertising FAQs",
+  heading: "LinkedIn Ads FAQs",
   faqs: [
     {
-      id: "cpc",
-      question: "Isn't LinkedIn too expensive?",
+      id: "why-linkedin",
+      question: "Why should B2B companies advertise on LinkedIn?",
       answer:
-        "While the cost-per-click is higher than other platforms, the quality of leads and the ability to target only high-value accounts typically leads to a much lower cost-per-deal.",
+        "LinkedIn is the only channel where you can target enterprise buyers by job title, seniority, company, and intent in a professional context. For B2B companies selling to buying committees, it provides structurally higher lead quality than any other digital channel.",
     },
     {
-      id: "targeting-scale",
-      question: "How small can we go with targeting?",
+      id: "vs-google",
+      question: "Is LinkedIn Ads more expensive than Google Ads?",
       answer:
-        "LinkedIn requires a minimum audience size of 300 people. We specialize in building 'micro-ABM' campaigns that stay just above this limit for maximum precision.",
+        "Yes — cost per click is typically higher. But the comparison is misleading: LinkedIn targets decision-makers by professional role; Google targets by search query. For enterprise B2B with high deal values, the higher CPL is justified by significantly better lead quality and shorter qualification time.",
     },
     {
-      id: "sales-alignment",
-      question: "Can we target our sales team's leads?",
+      id: "budget",
+      question: "What budget is needed?",
       answer:
-        "Yes. We can upload specific lead lists or target visitors of specific high-value pages on your website to ensure sales and marketing are in total alignment.",
+        "£3,000–5,000/month minimum to generate meaningful data and consistent lead volume. Below this, optimisation cycles are too slow to draw reliable conclusions. We advise based on your specific ICP, deal size, and pipeline targets.",
+    },
+    {
+      id: "timeline",
+      question: "How long does it take to see results?",
+      answer:
+        "4–6 weeks for meaningful optimisation data. Full pipeline impact visible at 8–12 weeks once leads have moved through your sales qualification process.",
+    },
+    {
+      id: "performance",
+      question: "What makes a LinkedIn ad perform well for B2B?",
+      answer:
+        "Specific audience targeting (not broad), a clear and relevant offer matched to the buyer's stage, social proof in the creative, and a frictionless lead capture path. Generic brand awareness ads consistently underperform against intent-driven offers.",
     },
   ],
 };

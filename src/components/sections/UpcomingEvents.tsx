@@ -13,6 +13,7 @@ export interface UpcomingEventsProps {
   content?: UpcomingEventsContent;
   eyebrow?: UpcomingEventsContent["eyebrow"];
   heading?: UpcomingEventsContent["heading"];
+  description?: UpcomingEventsContent["description"];
   badgeLabel?: UpcomingEventsContent["badgeLabel"];
   ctaLabel?: UpcomingEventsContent["ctaLabel"];
   viewAllLabel?: UpcomingEventsContent["viewAllLabel"];
@@ -23,6 +24,7 @@ export function UpcomingEvents({
   content = HOME_UPCOMING_EVENTS_CONTENT,
   eyebrow = content.eyebrow,
   heading = content.heading,
+  description = content.description,
   badgeLabel = content.badgeLabel,
   ctaLabel = content.ctaLabel,
   viewAllLabel = content.viewAllLabel,
@@ -41,6 +43,7 @@ export function UpcomingEvents({
             {eyebrow}
           </motion.div>
           <h2 className="font-heading text-4xl leading-tight font-bold  lg:text-5xl">{heading}</h2>
+          {description && <p className="mt-4 max-w-2xl text-base text-gray-600">{description}</p>}
         </div>
 
         <div className="grid gap-8 lg:grid-cols-2">

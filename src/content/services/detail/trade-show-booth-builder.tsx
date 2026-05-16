@@ -1,29 +1,31 @@
 import { GLOBAL_CASE_STUDIES } from "../../shared";
 
 export const BOOTH_BUILDER_HERO = {
-  title: "Booth Production and Fabrication — From Render to Reality",
+  title: "Trade Show Booth Builders Who Engineer for Conversion, Not Just Aesthetics",
   description:
-    "We bridge the gap between design and delivery. Our global fabrication network ensures that what you approved in a 3D render is exactly what stands on the show floor — built to the highest engineering standards, on time, and on budget.",
+    "As your enterprise trade show booth builder and exhibition stand builder, we manage every dimension of the build — from fabrication brief to on-site installation — with full accountability for the outcome.",
 };
 
 export { GLOBAL_PROOF_STATS as BOOTH_BUILDER_PROOF_BAR } from "../../shared";
 
 export const BOOTH_BUILDER_WHY = {
-  heading: "Why Build Quality Determines Your Event ROI",
+  heading: "Exhibition Stand Design, Build, and Turnkey Solutions",
   description:
-    "A booth that looks good in a render but poor in reality damages your brand credibility. Poor finishes, visible seams, or technical failures at the moment of engagement are unacceptable at the enterprise level. We treat exhibition fabrication as high-performance temporary architecture. By using premium materials and expert builders who understand the stresses of a busy event floor, we ensure your presence feels as premium as your product.",
+    "We offer three engagement models for enterprise clients:\n\n• Full exhibition stand design and build — concept, 3D design, fabrication, logistics, and on-site installation under one team\n\n• Turnkey booth solutions — everything included: design, materials, production, shipping, installation, and post-event storage. One price, zero gaps\n\n• Design-only with production-ready files — for clients with a preferred fabrication partner\n\nOur turnkey exhibition booths are particularly valued by enterprise teams managing international events without the internal capacity to coordinate multiple vendor streams.",
   reasons: [
     {
       id: "precision",
       title: "Precision Engineering",
-      description: "Our builds match your 3D renders with millimetre accuracy.",
+      description:
+        "Our builds match your 3D renders with millimetre accuracy — premium finish and structural integrity across any booth size.",
       image:
         "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
     },
     {
       id: "reliability",
       title: "On-Time Reliability",
-      description: "Zero-error delivery. Your booth is show-ready 24 hours before the doors open.",
+      description:
+        "Zero-error delivery. Your booth is show-ready 24 hours before the doors open — managed end-to-end by our project team.",
       image:
         "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200",
     },
@@ -31,70 +33,100 @@ export const BOOTH_BUILDER_WHY = {
 };
 
 export const BOOTH_BUILDER_DELIVERABLES = {
-  heading: "Our Booth Production Services",
+  heading: "What We Build",
   services: [
     {
-      id: "fabrication",
-      title: "Custom Timber and Metal Fabrication",
+      id: "timber-steel",
+      title: "Custom Timber and Steel Structures",
       description:
-        "Master carpentry and metalwork for bespoke structures, custom furniture, and architectural focal points — built to last for multiple event cycles.",
+        "Fully bespoke builds for premium finish and structural integrity across any booth size — master carpentry and metalwork for custom furniture and architectural focal points built to last multiple event cycles.",
       icon: "Hammer",
       image:
         "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-blue",
     },
     {
-      id: "av",
-      title: "Technical and AV Integration",
+      id: "modular",
+      title: "Modular System Builds",
       description:
-        "Seamless integration of LED walls, interactive displays, and hidden cabling — managed by specialist technical teams to ensure 100% uptime.",
-      icon: "Zap",
+        "Flexible, reusable structures that adapt across different booth sizes and event formats without losing brand consistency — significantly reducing cost per event over multi-year programs.",
+      icon: "Layers",
       image:
-        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-cyan",
     },
     {
-      id: "finishing",
-      title: "Premium Surface Finishing",
+      id: "double-deck",
+      title: "Double-Deck and Multi-Level Booths",
       description:
-        "High-grade laminates, custom paint finishes, and tension-fabric graphics that provide a seamless, high-end look without visible seams or joints.",
-      icon: "Brush",
+        "Executive meeting suites above, public engagement zones below — maximising commercial use of allocated floor space at major global events.",
+      icon: "Building2",
       image:
-        "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-primary",
     },
     {
-      id: "installation",
-      title: "Supervised Installation and Dismantle (I&D)",
+      id: "digital-led",
+      title: "Digital and LED Integration",
       description:
-        "Full on-site management of the build-up and break-down phase, including all labor management and venue liaison.",
-      icon: "ShieldCheck",
+        "LED walls, digital displays, interactive screens, and product demo systems built into the booth architecture — seamless integration with hidden cabling and 100% uptime managed by specialist technical teams.",
+      icon: "Monitor",
       image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200",
       color: "bg-brand-blue",
+    },
+    {
+      id: "sustainable",
+      title: "Sustainable Builds",
+      description:
+        "Reusable components, lower-waste fabrication, and recyclable graphic options for brands with environmental commitments — priority use of recyclable and low-VOC materials.",
+      icon: "Leaf",
+      image:
+        "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=1200",
+      color: "bg-brand-cyan",
     },
   ],
 };
 
-export const BOOTH_BUILDER_STANDARDS = {
-  title: "Our Fabrication Standards",
-  headers: ["Standard", "Benefit"],
-  rows: [
+export const BOOTH_BUILDER_PROCESS = {
+  heading: "Our Booth Build Process",
+  phases: [
     {
-      standard: "Structural Safety",
-      benefit: "Certified engineering for all overhead and double-deck structures",
+      title: "Design Brief",
+      description: "Event goals, booth size, brand requirements, demo needs, and timeline.",
     },
     {
-      standard: "Material Sustainability",
-      benefit: "Priority use of recyclable and low-VOC materials",
+      title: "3D Render",
+      description: "Full visualisation reviewed with your team before production begins.",
     },
     {
-      standard: "Fire Compliance",
-      benefit: "All materials certified to local venue fire-safety regulations",
+      title: "Engineering Approval",
+      description: "Structural, safety, and venue compliance review.",
     },
     {
-      standard: "Pre-Build Validation",
-      benefit: "Major custom components pre-assembled in workshop to ensure zero site errors",
+      title: "Material Sourcing",
+      description: "Quality, durability, and logistics-appropriate selections.",
+    },
+    {
+      title: "Fabrication",
+      description: "Production with quality control checkpoints throughout.",
+    },
+    {
+      title: "QC and Pre-Build",
+      description:
+        "Quality and fit review before shipping — major components pre-assembled in workshop.",
+    },
+    {
+      title: "Event Delivery",
+      description: "Packaging, shipping, customs, and venue coordination.",
+    },
+    {
+      title: "Installation",
+      description: "On-site assembly and final quality check before the show opens.",
+    },
+    {
+      title: "Breakdown and Storage",
+      description: "Post-event dismantling, packing, and reuse planning.",
     },
   ],
 };
@@ -107,22 +139,40 @@ export const BOOTH_BUILDER_FAQ = {
   heading: "Booth Production FAQs",
   faqs: [
     {
-      id: "timeline",
-      question: "When should fabrication begin?",
+      id: "turnkey",
+      question: "What is a turnkey trade show booth?",
       answer:
-        "We recommend finalized designs move into fabrication 8–12 weeks before the event to ensure material availability and quality control.",
+        "A turnkey exhibition booth is an all-inclusive service — design, fabrication, logistics, installation, and breakdown — managed by one partner. Nothing is left for your team to coordinate. One brief, one invoice, one point of accountability.",
     },
     {
-      id: "storage",
-      question: "Do you store the booth after the show?",
+      id: "design-build",
+      question: "Do you also do exhibition stand design and building?",
       answer:
-        "Yes. We offer regional storage in Dubai, Las Vegas, and London, along with refurbishment services for multi-event use.",
+        "Yes — exhibition stand design and build is our full-service model. We design the structure, manage fabrication, handle international logistics, and install on-site.",
     },
     {
-      id: "global",
-      question: "Do you build everything in-house?",
+      id: "lead-time",
+      question: "What is the typical build lead time?",
       answer:
-        "We use a combination of our own workshop facilities and a vetted network of specialist fabrication partners globally to minimize shipping and ensure local compliance.",
+        "Standard custom builds: 12–16 weeks from design brief to installation. Double-deck or technology-heavy structures: 16–20 weeks. For tight timelines, modular or rental options may be more appropriate.",
+    },
+    {
+      id: "shipping",
+      question: "Do you handle international shipping and customs?",
+      answer:
+        "Yes — included in our turnkey booth service. We have managed deliveries across 40+ countries.",
+    },
+    {
+      id: "reuse",
+      question: "Can the booth be reused?",
+      answer:
+        "Yes — reuse planning is built into the structure from the start. Many enterprise clients run the same booth for 3–5 years with graphic updates, reducing cost per event by 30–50%.",
+    },
+    {
+      id: "installation",
+      question: "Do you manage on-site installation?",
+      answer:
+        "Yes — our team manages assembly, alignment, quality review, and on-site support throughout the event.",
     },
   ],
 };

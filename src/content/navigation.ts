@@ -48,7 +48,7 @@ export const serviceNavigationGroups: ServiceNavGroup[] = [
         href: "/services/global-event-solutions/trade-show-booth-builder",
       },
       {
-        name: "Modular & Portable Booths",
+        name: "Modular and Portable Booths",
         href: "/services/global-event-solutions/modular-portable-booths",
       },
     ],
@@ -79,7 +79,7 @@ export const serviceNavigationGroups: ServiceNavGroup[] = [
     ],
   },
   {
-    name: "Sales Qualified Lead Gen",
+    name: "Sales Qualified Lead Generation",
     href: "/services/sales-qualified-lead-generation",
     links: [],
   },
@@ -102,6 +102,6 @@ export const footerServiceGroups: ServiceNavGroup[] = serviceNavigationGroups;
 export const footerNavigation: NavLink[] = [
   { name: "Blog", href: "/blog" },
   { name: "Case Studies", href: "/case-studies" },
-  { name: "About", href: "/about" },
+  { name: "About Us", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];

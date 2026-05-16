@@ -24,6 +24,7 @@ export interface WhoWeAreProps {
   heading?: WhoWeAreContent["heading"];
   quote?: WhoWeAreContent["quote"];
   attribution?: WhoWeAreContent["attribution"];
+  mission?: WhoWeAreContent["mission"];
   stats?: WhoWeAreStat[];
 }
 
@@ -32,6 +33,7 @@ export function WhoWeAre({
   heading = content.heading,
   quote = content.quote,
   attribution = content.attribution,
+  mission = content.mission,
   stats = content.stats,
 }: WhoWeAreProps = {}) {
   const col1Stats = [...stats, ...stats];
@@ -58,6 +60,16 @@ export function WhoWeAre({
                 </div>
               </div>
             </div>
+            {mission && (
+              <div className="mt-6 flex items-start gap-3">
+                <span className="text-brand-blue mt-0.5 shrink-0 text-sm font-bold tracking-wider uppercase">
+                  Our Mission:
+                </span>
+                <p className="text-brand-charcoal/80 text-sm leading-relaxed italic">
+                  &ldquo;{mission}&rdquo;
+                </p>
+              </div>
+            )}
           </div>
         </div>
 

@@ -24,24 +24,24 @@ export const GLOBAL_CASE_STUDIES: CaseStudyItem[] = [
   },
   {
     title: "Adobe Summit 2025",
-    client: "Enterprise SaaS marketing automation provider",
-    challenge: "High-volume lead capture with real-time sales qualification",
-    solution: "Full-service lead generation program with on-site qualification and CRM sync",
+    client: "Enterprise digital experience and cloud transformation brand",
+    challenge: "Standing out in a competitive expo without attendee data",
+    solution: "Delivered booth engagement and prospecting support to generate 70+ qualified leads",
     metric: "70+ Leads",
-    metricLabel: "Daily qualified SQLs",
+    metricLabel: "Qualified leads generated",
     image:
-      "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2612&auto=format&fit=crop", // Tech Summit
+      "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2612&auto=format&fit=crop",
     href: "/case-studies",
   },
   {
     title: "SIBOS 2025",
-    client: "Tier-1 global financial infrastructure provider",
-    challenge: "Standing out in a highly competitive banking technology floor",
-    solution: "Turnkey exhibition presence with immersive media and executive networking lounge",
+    client: "Core banking and revenue management technology brands",
+    challenge: "Managing dual-client outreach under restricted event timelines",
+    solution: "Delivered active prospecting, meeting coordination, and booth engagement support",
     metric: "270+ Leads",
     metricLabel: "Verified enterprise leads",
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop", // Banking/Architecture
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop",
     href: "/case-studies",
   },
 ];
