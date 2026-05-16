@@ -26,8 +26,10 @@ export interface ServiceHubProps {
   services: OurServicesProps;
   why: WhyChooseUsProps;
   process?: {
-    title: string;
+    heading?: string;
     phases: { title: string; description: string }[];
+    steps?: { title: string; description: string }[];
+    title?: string;
   };
   caseStudies?: CaseStudiesProps;
   stats?: {
@@ -52,7 +54,7 @@ export function ServiceHub({
   const faqJsonLd = faq.faqs?.length ? buildFaqJsonLd(faq.faqs) : null;
 
   return (
-    <main className="bg-brand-gray min-h-screen">
+    <main className="min-h-screen bg-brand-gray">
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <Header darkBackground />
 
@@ -69,7 +71,12 @@ export function ServiceHub({
 
       <WhyChooseUs {...why} />
 
-      {process && <ProcessTimeline title={process.title} phases={process.phases} />}
+      {process && (
+        <ProcessTimeline
+          title={process.title ?? process.heading}
+          steps={process.steps ?? process.phases}
+        />
+      )}
 
       {caseStudies && <CaseStudies {...caseStudies} />}
 

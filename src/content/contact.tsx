@@ -4,7 +4,7 @@ export const CONTACT_HERO = {
   title: (
     <>
       Let&apos;s Build Your Enterprise <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+      <span className="bg-linear-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
         Growth Strategy
       </span>
     </>
@@ -68,7 +68,7 @@ export const CONTACT_FAQ = {
   heading: (
     <>
       Common <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+      <span className="bg-linear-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
         Questions
       </span>
     </>
@@ -114,7 +114,7 @@ export const CONTACT_FORM = {
   heading: (
     <>
       Start the <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+      <span className="bg-linear-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
         Conversation
       </span>
     </>

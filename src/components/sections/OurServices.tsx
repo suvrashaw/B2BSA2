@@ -38,7 +38,7 @@ export function OurServices({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-brand-cyan/10 border-brand-cyan/20 text-brand-blue mb-6 inline-block rounded-full border px-4 py-1.5 text-sm font-semibold tracking-wide"
+            className="mb-6 inline-block rounded-full border border-brand-cyan/20 bg-brand-cyan/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-brand-blue"
           >
             {eyebrow}
           </motion.div>
@@ -63,12 +63,12 @@ export function OurServices({
                       <span className="flex items-center gap-2 rounded-full border border-gray-100 bg-white px-3 py-1 text-xs font-bold text-gray-600 shadow-sm transition-colors duration-700 md:group-has-[.image-pane:hover]/card:border-transparent md:group-has-[.image-pane:hover]/card:bg-white/20 md:group-has-[.image-pane:hover]/card:text-white md:group-has-[.image-pane:hover]/card:backdrop-blur-md">
                         <Icon
                           name={service.icon}
-                          className="text-brand-blue h-3 w-3 transition-colors duration-700 md:group-has-[.image-pane:hover]/card:text-white"
+                          className="h-3 w-3 text-brand-blue transition-colors duration-700 md:group-has-[.image-pane:hover]/card:text-white"
                         />
                         {serviceLabel}
                       </span>
                     </div>
-                    <h3 className="font-heading mb-6 text-3xl  leading-tight font-bold transition-colors duration-700 md:group-has-[.image-pane:hover]/card:text-white">
+                    <h3 className="mb-6 font-heading text-3xl  leading-tight font-bold transition-colors duration-700 md:group-has-[.image-pane:hover]/card:text-white">
                       {service.title}
                     </h3>
 
@@ -79,7 +79,7 @@ export function OurServices({
 
                   <Button
                     variant="secondary"
-                    className="md:group-has-[.image-pane:hover]/card:bg-brand-blue md:group-has-[.image-pane:hover]/card:border-brand-blue pointer-events-auto mt-10 w-max transition-all duration-700 md:mt-0 md:group-has-[.image-pane:hover]/card:text-white"
+                    className="pointer-events-auto mt-10 w-max transition-all duration-700 md:mt-0 md:group-has-[.image-pane:hover]/card:border-brand-blue md:group-has-[.image-pane:hover]/card:bg-brand-blue md:group-has-[.image-pane:hover]/card:text-white"
                   >
                     <span className="mr-4">{ctaLabel}</span>
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

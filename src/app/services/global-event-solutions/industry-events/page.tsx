@@ -27,6 +27,12 @@ export default function Page() {
       pricing={INDUSTRY_EVENTS_PRIORITY}
       caseStudies={INDUSTRY_EVENTS_CASE_STUDIES}
       faq={INDUSTRY_EVENTS_FAQ}
+      ctaBanner={{
+        title: "The strongest strategy is not about showing up everywhere.",
+        description: "It is about choosing the rooms where your buyers already gather.",
+        ctaLabel: "Get a Free Event ROI Assessment",
+        ctaHref: "/contact",
+      }}
       relatedServices={[
         {
           title: "Trade Show Booth Design",

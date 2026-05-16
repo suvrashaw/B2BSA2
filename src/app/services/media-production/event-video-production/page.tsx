@@ -5,7 +5,7 @@ import {
   EVENT_VIDEO_WHY,
   EVENT_VIDEO_DELIVERABLES,
   EVENT_VIDEO_PROOF_BAR,
-  EVENT_VIDEO_TIERS,
+  EVENT_VIDEO_PRICING,
   EVENT_VIDEO_CASE_STUDIES,
   EVENT_VIDEO_FAQ,
 } from "@/content/services/detail/event-video-production";
@@ -24,9 +24,15 @@ export default function Page() {
       proofBar={EVENT_VIDEO_PROOF_BAR}
       why={EVENT_VIDEO_WHY}
       deliverables={EVENT_VIDEO_DELIVERABLES}
-      pricing={EVENT_VIDEO_TIERS}
+      pricingGuidance={EVENT_VIDEO_PRICING}
       caseStudies={EVENT_VIDEO_CASE_STUDIES}
       faq={EVENT_VIDEO_FAQ}
+      ctaBanner={{
+        title: "Capture it properly.",
+        description: "Make your event work for months after the show closes.",
+        ctaLabel: "Book Event Video Production",
+        ctaHref: "/contact",
+      }}
       relatedServices={[
         {
           title: "Corporate Video Production",

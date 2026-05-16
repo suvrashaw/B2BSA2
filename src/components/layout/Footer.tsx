@@ -31,10 +31,10 @@ export function Footer() {
   const contentBgOpacity = useTransform(scrollYProgress, [0.5, 1], [0.8, 1]);
 
   return (
-    <footer ref={containerRef} className="bg-brand-blue relative z-0 h-[200vh]">
+    <footer ref={containerRef} className="relative z-0 h-[200vh] bg-brand-blue">
       <div className="sticky top-0 flex h-screen w-full flex-col justify-between overflow-hidden">
         {/* 1. Global Presence Slider Section (Fixed at top) */}
-        <div className="from-brand-blue via-brand-blue/80 pointer-events-none absolute top-0 right-0 left-0 z-20 bg-linear-to-b to-transparent pt-12 pb-24">
+        <div className="pointer-events-none absolute top-0 right-0 left-0 z-20 bg-linear-to-b from-brand-blue via-brand-blue/80 to-transparent pt-12 pb-24">
           {/* We wrap it in a pointer-events-auto div to ensure it's still clickable/selectable if needed */}
           <div className="pointer-events-auto">
             <GlobalPresence />
@@ -59,7 +59,7 @@ export function Footer() {
         >
           <motion.div
             style={{ opacity: contentBgOpacity }}
-            className="from-brand-blue via-brand-blue/95 to-brand-blue/40 absolute inset-0 -z-10 bg-linear-to-t backdrop-blur-sm"
+            className="absolute inset-0 -z-10 bg-linear-to-t from-brand-blue via-brand-blue/95 to-brand-blue/40 backdrop-blur-sm"
           />
           <div className="relative container mx-auto px-8 pt-32 pb-8">
             {/* Row 1: Brand + Navigation + Stay Ahead */}
@@ -88,7 +88,7 @@ export function Footer() {
                   <p>
                     <a
                       href="mailto:info@b2bsalesarrow.com"
-                      className="hover:text-brand-primary transition-colors"
+                      className="transition-colors hover:text-brand-primary"
                     >
                       info@b2bsalesarrow.com
                     </a>
@@ -100,19 +100,19 @@ export function Footer() {
                 <div className="flex items-center gap-4">
                   <a
                     href="#"
-                    className="bg-brand-gray text-brand-blue hover:bg-brand-blue hover:border-brand-blue flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 transition-all duration-300 hover:text-white"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-brand-gray text-brand-blue transition-all duration-300 hover:border-brand-blue hover:bg-brand-blue hover:text-white"
                   >
                     <FaLinkedinIn className="h-4 w-4" />
                   </a>
                   <a
                     href="#"
-                    className="bg-brand-gray text-brand-blue hover:bg-brand-blue hover:border-brand-blue flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 transition-all duration-300 hover:text-white"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-brand-gray text-brand-blue transition-all duration-300 hover:border-brand-blue hover:bg-brand-blue hover:text-white"
                   >
                     <FaTwitter className="h-4 w-4" />
                   </a>
                   <a
                     href="#"
-                    className="bg-brand-gray text-brand-blue hover:bg-brand-blue hover:border-brand-blue flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 transition-all duration-300 hover:text-white"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-brand-gray text-brand-blue transition-all duration-300 hover:border-brand-blue hover:bg-brand-blue hover:text-white"
                   >
                     <FaInstagram className="h-4 w-4" />
                   </a>
@@ -148,7 +148,7 @@ export function Footer() {
                   <input
                     type="email"
                     placeholder="Work Email"
-                    className="focus:border-brand-primary w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white transition-colors placeholder:text-gray-500 focus:outline-none"
+                    className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white transition-colors placeholder:text-gray-500 focus:border-brand-primary focus:outline-none"
                   />
                   <Button
                     variant="primary"
@@ -167,7 +167,7 @@ export function Footer() {
                 <div key={group.name}>
                   <Link
                     href={group.href}
-                    className="hover:text-brand-blue mb-3 block text-sm font-semibold text-white transition-colors"
+                    className="mb-3 block text-sm font-semibold text-white transition-colors hover:text-brand-blue"
                   >
                     {group.name}
                   </Link>
@@ -176,7 +176,7 @@ export function Footer() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="hover:text-brand-primary text-xs leading-5 text-gray-400 transition-colors"
+                          className="text-xs leading-5 text-gray-400 transition-colors hover:text-brand-primary"
                         >
                           {item.name}
                         </Link>
@@ -189,19 +189,19 @@ export function Footer() {
 
             <div className="pointer-events-auto flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 md:flex-row">
               <p className="text-xs text-gray-500">
-                © {new Date().getFullYear()} B2B Sales Arrow. All rights reserved.
+                © {new Date().getFullYear()} B2B Sales Arrow. All Rights Reserved.
               </p>
               <div className="flex gap-6 text-xs text-gray-500">
-                <Link href="/privacy-policy" className="hover:text-brand-primary transition-colors">
+                <Link href="/privacy-policy" className="transition-colors hover:text-brand-primary">
                   Privacy Policy
                 </Link>
                 <Link
                   href="/terms-of-service"
-                  className="hover:text-brand-primary transition-colors"
+                  className="transition-colors hover:text-brand-primary"
                 >
                   Terms of Service
                 </Link>
-                <Link href="/cookie-policy" className="hover:text-brand-primary transition-colors">
+                <Link href="/cookie-policy" className="transition-colors hover:text-brand-primary">
                   Cookie Policy
                 </Link>
               </div>

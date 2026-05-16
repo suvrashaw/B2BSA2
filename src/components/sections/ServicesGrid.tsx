@@ -56,7 +56,7 @@ export function ServicesGrid({ title, subtitle, services, className }: ServicesG
       <div className="container mx-auto px-8">
         <div className="mb-16 max-w-4xl">
           {subtitle && (
-            <div className="text-brand-blue mb-4 text-sm font-bold tracking-widest uppercase">
+            <div className="mb-4 text-sm font-bold tracking-widest text-brand-blue uppercase">
               {subtitle}
             </div>
           )}
@@ -77,18 +77,18 @@ export function ServicesGrid({ title, subtitle, services, className }: ServicesG
               >
                 <Link
                   href={service.href}
-                  className="bg-brand-gray/5 border-brand-charcoal/5 hover:border-brand-blue/30 hover:shadow-brand-blue/10 block flex h-full flex-col justify-between rounded-3xl border p-8 transition-all duration-300 hover:shadow-2xl"
+                  className="block flex h-full flex-col justify-between rounded-3xl border border-brand-charcoal/5 bg-brand-gray/5 p-8 transition-all duration-300 hover:border-brand-blue/30 hover:shadow-2xl hover:shadow-brand-blue/10"
                 >
                   <div>
-                    <div className="bg-brand-blue/10 mb-6 flex h-12 w-12 items-center justify-center rounded-2xl transition-transform duration-500 group-hover:scale-110">
-                      <Icon className="text-brand-blue h-6 w-6" />
+                    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-blue/10 transition-transform duration-500 group-hover:scale-110">
+                      <Icon className="h-6 w-6 text-brand-blue" />
                     </div>
-                    <h3 className="font-heading group-hover:text-brand-blue mb-4 text-2xl font-bold transition-colors">
+                    <h3 className="mb-4 font-heading text-2xl font-bold transition-colors group-hover:text-brand-blue">
                       {service.title}
                     </h3>
                     <p className="mb-8 leading-relaxed opacity-70">{service.description}</p>
                   </div>
-                  <div className="text-brand-blue flex items-center gap-2 text-sm font-bold tracking-widest uppercase transition-all group-hover:gap-4">
+                  <div className="flex items-center gap-2 text-sm font-bold tracking-widest text-brand-blue uppercase transition-all group-hover:gap-4">
                     Explore Service <ArrowRight className="h-4 w-4" />
                   </div>
                 </Link>

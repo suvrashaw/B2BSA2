@@ -20,10 +20,10 @@ export interface TeamGridData {
 
 export const TeamGrid = ({ data }: { data: TeamGridData }) => {
   return (
-    <section className="bg-brand-white relative py-24 transition-colors duration-500">
+    <section className="relative bg-brand-white py-24 transition-colors duration-500">
       <div className="container mx-auto w-full max-w-7xl px-8">
         <div className="mb-16 text-left">
-          <div className="bg-brand-blue/10 border-brand-blue/20 text-brand-blue mb-6 inline-block rounded-full border px-4 py-1.5 text-sm font-semibold tracking-wide uppercase">
+          <div className="mb-6 inline-block rounded-full border border-brand-blue/20 bg-brand-blue/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-brand-blue uppercase">
             Leadership
           </div>
           <h2 className="font-heading text-3xl font-bold md:text-5xl ">{data.heading}</h2>
@@ -47,12 +47,12 @@ export const TeamGrid = ({ data }: { data: TeamGridData }) => {
                   fill
                   className="object-cover transition-all duration-700 group-hover:scale-105"
                 />
-                <div className="from-brand-charcoal/80 absolute inset-0 flex flex-col justify-end bg-gradient-to-t to-transparent p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-brand-charcoal/80 to-transparent p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                   <p className="mb-4 text-sm leading-relaxed text-white">{member.bio}</p>
                   {member.linkedin && member.linkedin !== "" && (
                     <Link
                       href={member.linkedin}
-                      className="text-brand-cyan text-xs font-bold tracking-widest uppercase transition-colors hover:text-white"
+                      className="text-xs font-bold tracking-widest text-brand-cyan uppercase transition-colors hover:text-white"
                     >
                       LinkedIn
                     </Link>

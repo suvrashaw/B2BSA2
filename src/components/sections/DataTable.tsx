@@ -23,12 +23,12 @@ export function DataTable({ title, description, headers, rows, className }: Data
         {(title || description) && (
           <div className="mb-12 max-w-3xl">
             {title && (
-              <h2 className="font-heading text-brand-gray mb-4 text-3xl font-bold md:text-4xl">
+              <h2 className="mb-4 font-heading text-3xl font-bold text-brand-gray md:text-4xl">
                 {title}
               </h2>
             )}
             {description && (
-              <p className="text-brand-gray/70 text-lg leading-relaxed">{description}</p>
+              <p className="text-lg leading-relaxed text-brand-gray/70">{description}</p>
             )}
           </div>
         )}
@@ -43,7 +43,7 @@ export function DataTable({ title, description, headers, rows, className }: Data
           <div className="overflow-x-auto">
             <table className="w-full text-left">
               <thead>
-                <tr className="bg-brand-gray/5 border-b border-gray-100">
+                <tr className="border-b border-gray-100 bg-brand-gray/5">
                   {headers.map((header, index) => (
                     <th
                       key={index}
@@ -56,7 +56,7 @@ export function DataTable({ title, description, headers, rows, className }: Data
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {rows.map((row, rowIndex) => (
-                  <tr key={rowIndex} className="hover:bg-brand-gray/2 transition-colors">
+                  <tr key={rowIndex} className="transition-colors hover:bg-brand-gray/2">
                     {headers.map((header, colIndex) => (
                       <td
                         key={colIndex}

@@ -66,7 +66,7 @@ export function CaseStudiesIndex() {
   return (
     <>
       <section className="relative overflow-hidden bg-white pt-28">
-        <div className="bg-brand-gray/30 pointer-events-none absolute top-0 right-0 h-full w-1/2" />
+        <div className="pointer-events-none absolute top-0 right-0 h-full w-1/2 bg-brand-gray/30" />
         <div className="relative z-10 container mx-auto grid items-center gap-12 px-8 pb-16 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)]">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -96,13 +96,13 @@ export function CaseStudiesIndex() {
               sizes="40vw"
               className="object-cover"
             />
-            <div className="from-brand-charcoal/50 absolute inset-0 bg-gradient-to-t via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/50 via-transparent to-transparent" />
           </motion.div>
         </div>
 
         <ProofBar
           stats={CASE_STUDIES_PAGE_CONTENT.hero.proofBarStats}
-          className="bg-brand-gray/40 border-t border-gray-100"
+          className="border-t border-gray-100 bg-brand-gray/40"
         />
       </section>
 
@@ -118,7 +118,7 @@ export function CaseStudiesIndex() {
                 key={filter.id}
                 className="rounded-3xl border border-white/60 bg-white/80 p-6 shadow-sm"
               >
-                <h3 className="text-brand-blue text-sm font-bold tracking-[0.2em] uppercase">
+                <h3 className="text-sm font-bold tracking-[0.2em] text-brand-blue uppercase">
                   {filter.label}
                 </h3>
                 <div className="mt-4 flex flex-wrap gap-3">
@@ -148,7 +148,7 @@ export function CaseStudiesIndex() {
         </div>
       </SectionShell>
 
-      <section className="bg-brand-gray relative py-20">
+      <section className="relative bg-brand-gray py-20">
         <div className="container mx-auto px-8">
           <div className="mb-16 flex flex-col items-start text-left">
             <h2 className="font-heading text-4xl leading-tight font-bold lg:text-5xl">
@@ -212,9 +212,9 @@ export function CaseStudiesIndex() {
                       sizes="(max-width: 1024px) 100vw, 32vw"
                       className="object-cover"
                     />
-                    <div className="from-brand-charcoal/80 via-brand-charcoal/20 absolute inset-0 bg-gradient-to-t to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-brand-charcoal/20 to-transparent" />
                     <div className="absolute top-6 right-6 rounded-2xl border border-white/20 bg-white/90 px-4 py-3 text-center shadow-lg backdrop-blur-md">
-                      <div className="font-heading text-brand-blue text-2xl font-bold">
+                      <div className="font-heading text-2xl font-bold text-brand-blue">
                         {study.card.metric}
                       </div>
                       <div className="text-[10px] font-bold tracking-wider text-gray-500 uppercase">
@@ -249,9 +249,9 @@ export function CaseStudiesIndex() {
             {CASE_STUDIES_PAGE_CONTENT.template.items.map((item) => (
               <div
                 key={item}
-                className="bg-brand-gray/40 rounded-3xl border border-gray-100 p-6 shadow-sm"
+                className="rounded-3xl border border-gray-100 bg-brand-gray/40 p-6 shadow-sm"
               >
-                <CheckCircle2 className="text-brand-blue h-6 w-6" />
+                <CheckCircle2 className="h-6 w-6 text-brand-blue" />
                 <p className="mt-4 text-base leading-7 text-gray-700">{item}</p>
               </div>
             ))}

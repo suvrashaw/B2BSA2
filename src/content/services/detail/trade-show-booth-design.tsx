@@ -157,7 +157,7 @@ export const BOOTH_DESIGN_PRICING_GUIDANCE = {
 };
 
 export const BOOTH_DESIGN_PROCESS = {
-  heading: "From Brief to Build — Our 8-Phase Booth Design Process",
+  title: "From Brief to Build — Our 8-Phase Booth Design Process",
   phases: [
     {
       title: "Phase 1: Deep-Dive Discovery",

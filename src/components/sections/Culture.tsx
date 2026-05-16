@@ -49,7 +49,7 @@ export const Culture = ({ data }: { data: CultureData }) => {
   ].slice(0, 7);
 
   return (
-    <section className="bg-brand-gray relative w-full py-12 transition-colors duration-500">
+    <section className="relative w-full bg-brand-gray py-12 transition-colors duration-500">
       <div className="relative mb-12 flex min-h-[50vh] flex-col items-start justify-center px-8 text-left">
         {/* Radial spotlight */}
         <div
@@ -60,16 +60,16 @@ export const Culture = ({ data }: { data: CultureData }) => {
             "blur-[30px]"
           )}
         />
-        <div className="bg-brand-charcoal/5 border-brand-charcoal/10 text-brand-charcoal mb-6 inline-block rounded-full border px-4 py-1.5 text-sm font-semibold tracking-wide uppercase transition-colors duration-500">
+        <div className="mb-6 inline-block rounded-full border border-brand-charcoal/10 bg-brand-charcoal/5 px-4 py-1.5 text-sm font-semibold tracking-wide text-brand-charcoal uppercase transition-colors duration-500">
           {data.eyebrow}
         </div>
         <WhisperText
           text={typeof data.heading === "string" ? data.heading : "What We Believe In"}
           highlights={["Believe"]}
           highlightColor="blue"
-          className="font-heading text-brand-charcoal mb-6 text-4xl font-bold transition-colors duration-500 md:text-5xl lg:text-6xl"
+          className="mb-6 font-heading text-4xl font-bold text-brand-charcoal transition-colors duration-500 md:text-5xl lg:text-6xl"
         />
-        <p className="text-brand-charcoal/70 max-w-2xl text-lg leading-relaxed font-bold tracking-widest uppercase transition-colors duration-500">
+        <p className="max-w-2xl text-lg leading-relaxed font-bold tracking-widest text-brand-charcoal/70 uppercase transition-colors duration-500">
           {data.description}
         </p>
       </div>

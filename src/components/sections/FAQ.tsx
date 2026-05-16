@@ -36,10 +36,10 @@ export function FAQ({
   };
 
   return (
-    <section id="faq" className="bg-brand-gray relative overflow-hidden py-24">
+    <section id="faq" className="relative overflow-hidden bg-brand-gray py-24">
       {/* Decorative Gradients */}
-      <div className="bg-brand-blue/5 pointer-events-none absolute top-0 left-0 h-[500px] w-[500px] rounded-full blur-[100px]" />
-      <div className="bg-brand-cyan/5 pointer-events-none absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full blur-[100px]" />
+      <div className="pointer-events-none absolute top-0 left-0 h-[500px] w-[500px] rounded-full bg-brand-blue/5 blur-[100px]" />
+      <div className="pointer-events-none absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-brand-cyan/5 blur-[100px]" />
 
       <div className="relative z-10 container mx-auto px-8">
         <div className="mb-12 flex flex-col justify-between gap-8 md:flex-row md:items-end">
@@ -48,11 +48,11 @@ export function FAQ({
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-brand-charcoal/5 border-brand-charcoal/10 mb-6 inline-block rounded-full border px-4 py-1.5  text-sm font-semibold tracking-wide"
+              className="mb-6 inline-block rounded-full border border-brand-charcoal/10 bg-brand-charcoal/5 px-4 py-1.5  text-sm font-semibold tracking-wide"
             >
               {eyebrow}
             </motion.div>
-            <h2 className="font-heading mb-4 text-3xl font-bold  lg:text-5xl">{heading}</h2>
+            <h2 className="mb-4 font-heading text-3xl font-bold  lg:text-5xl">{heading}</h2>
             <p className="max-w-xl text-lg text-gray-600">{description}</p>
           </div>
         </div>
@@ -85,7 +85,7 @@ export function FAQ({
                   </div>
 
                   {/* Back Side: Answer */}
-                  <div className="border-brand-cyan/20 absolute inset-0 flex h-full w-full [transform:rotateY(180deg)] flex-col items-start justify-center rounded-2xl border bg-white p-8 text-left shadow-inner [backface-visibility:hidden]">
+                  <div className="absolute inset-0 flex h-full w-full [transform:rotateY(180deg)] flex-col items-start justify-center rounded-2xl border border-brand-cyan/20 bg-white p-8 text-left shadow-inner [backface-visibility:hidden]">
                     <div className="mb-6 flex h-8 w-8 items-center justify-center rounded-full bg-[#4BC0D9]/10">
                       <div className="h-1.5 w-1.5 rounded-full bg-[#4BC0D9]" />
                     </div>
@@ -101,13 +101,13 @@ export function FAQ({
         <div className="mt-12 flex items-center justify-center gap-8">
           <button
             onClick={() => scroll("left")}
-            className="hover:bg-brand-blue hover:text-white:bg-brand-cyan flex h-12 w-12 items-center  justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent"
+            className="hover:text-white:bg-brand-cyan flex h-12 w-12 items-center justify-center  rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue"
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
           <button
             onClick={() => scroll("right")}
-            className="hover:bg-brand-blue hover:text-white:bg-brand-cyan flex h-12 w-12 items-center  justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent"
+            className="hover:text-white:bg-brand-cyan flex h-12 w-12 items-center justify-center  rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue"
           >
             <ChevronRight className="h-6 w-6" />
           </button>

@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/knip/schema.json",
+  "entry": ["src/app/**/*.{ts,tsx}"],
+  "project": ["src/**/*.{ts,tsx}", "next-sitemap.config.js"],
+  "ignoreFiles": ["next-sitemap.config.js", "src/types/partytown-react.ts"],
+  "ignoreExportsUsedInFile": {
+    "interface": true,
+    "type": true,
+    "variable": true
+  },
+  "ignoreIssues": {
+    "src/content/services/detail/video-editing-services.tsx": ["duplicates"]
+  }
+}

@@ -1,3 +1,5 @@
+import { fileURLToPath } from "node:url";
+
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
@@ -8,6 +10,8 @@ import sonarjs from "eslint-plugin-sonarjs";
 import tailwind from "eslint-plugin-tailwindcss";
 import unicorn from "eslint-plugin-unicorn";
 import unusedImports from "eslint-plugin-unused-imports";
+
+const tailwindConfigPath = fileURLToPath(new URL("src/app/globals.css", import.meta.url));
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -26,6 +30,9 @@ const eslintConfig = defineConfig([
       "import-x/resolver": {
         typescript: true,
         node: true,
+      },
+      tailwindcss: {
+        config: tailwindConfigPath,
       },
     },
     rules: {

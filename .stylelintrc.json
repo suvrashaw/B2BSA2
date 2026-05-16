@@ -7,6 +7,7 @@
         "ignoreAtRules": [
           "tailwind",
           "apply",
+          "variant",
           "variants",
           "responsive",
           "screen",
@@ -16,7 +17,19 @@
         ]
       }
     ],
+    "import-notation": "string",
     "no-descending-specificity": null,
-    "declaration-empty-line-before": null
+    "declaration-empty-line-before": null,
+    "property-no-vendor-prefix": [
+      true,
+      {
+        "ignoreProperties": [
+          "-webkit-mask-image",
+          "-webkit-backdrop-filter",
+          "-webkit-background-clip",
+          "-webkit-text-fill-color"
+        ]
+      }
+    ]
   }
 }

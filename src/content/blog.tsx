@@ -4,7 +4,7 @@ export const BLOG_HERO = {
   title: (
     <>
       Thought Leadership for <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+      <span className="bg-linear-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
         Enterprise Growth Teams
       </span>
     </>
@@ -93,7 +93,7 @@ export const BLOG_CONTACT = {
   heading: (
     <>
       Subscribe to <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+      <span className="bg-linear-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
         Growth Intelligence
       </span>
     </>

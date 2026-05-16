@@ -5,7 +5,7 @@ import {
   SEO_WHY,
   SEO_DELIVERABLES,
   SEO_PROOF_BAR,
-  SEO_ROADMAP,
+  SEO_PROCESS,
   SEO_CASE_STUDIES,
   SEO_FAQ,
 } from "@/content/services/detail/seo-services";
@@ -22,9 +22,15 @@ export default function Page() {
       proofBar={SEO_PROOF_BAR}
       why={SEO_WHY}
       deliverables={SEO_DELIVERABLES}
-      pricing={SEO_ROADMAP}
+      process={SEO_PROCESS}
       caseStudies={SEO_CASE_STUDIES}
       faq={SEO_FAQ}
+      ctaBanner={{
+        title: "Your buyers are searching.",
+        description: "Will they find you — or your competitor?",
+        ctaLabel: "Get a Free SEO Audit",
+        ctaHref: "/contact",
+      }}
       relatedServices={[
         { title: "Paid Advertising", href: "/services/performance-marketing/paid-advertising" },
         { title: "LinkedIn Ads for B2B", href: "/services/performance-marketing/linkedin-ads" },

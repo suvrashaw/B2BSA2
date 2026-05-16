@@ -14,7 +14,7 @@ export const metadata: Metadata = getPageMetadata("/contact");
 
 export default function Page() {
   return (
-    <main className="bg-brand-gray min-h-screen">
+    <main className="min-h-screen bg-brand-gray">
       <Header />
       <Hero {...CONTACT_HERO} />
       <WhoWeAre {...CONTACT_WHO_WE_ARE} />

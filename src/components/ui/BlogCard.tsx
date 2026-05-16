@@ -30,8 +30,8 @@ export function BlogCardGrid({ blog }: { blog: BlogItem }) {
       </div>
       <div className="p-6">
         <span className="mb-2 block text-sm font-medium text-gray-500">{blog.date}</span>
-        <h3 className="font-heading mb-4 text-lg leading-snug font-bold">{blog.title}</h3>
-        <div className="text-brand-blue flex items-center gap-2 text-sm font-semibold tracking-widest uppercase">
+        <h3 className="mb-4 font-heading text-lg leading-snug font-bold">{blog.title}</h3>
+        <div className="flex items-center gap-2 text-sm font-semibold tracking-widest text-brand-blue uppercase">
           Read Article{" "}
           <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </div>
@@ -103,8 +103,8 @@ export function BlogCard({ blog, index, total, isHovered, spread }: BlogCardProp
       </div>
       <div className="p-8">
         <span className="mb-3 block text-sm font-medium text-gray-500">{blog.date}</span>
-        <h3 className="font-heading mb-6 text-2xl leading-tight font-bold">{blog.title}</h3>
-        <div className="text-brand-blue flex items-center gap-2 text-sm font-semibold tracking-widest uppercase">
+        <h3 className="mb-6 font-heading text-2xl leading-tight font-bold">{blog.title}</h3>
+        <div className="flex items-center gap-2 text-sm font-semibold tracking-widest text-brand-blue uppercase">
           Read Article <ArrowUpRight className="h-4 w-4" />
         </div>
       </div>

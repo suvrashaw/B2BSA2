@@ -31,14 +31,14 @@ export function UpcomingEvents({
   events = content.events,
 }: UpcomingEventsProps = {}) {
   return (
-    <section id="events" className="bg-brand-gray relative py-20">
+    <section id="events" className="relative bg-brand-gray py-20">
       <div className="container mx-auto px-8">
         <div className="mb-16 flex flex-col items-start text-left">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-brand-cyan/10 border-brand-cyan/20 text-brand-blue mb-6 inline-block rounded-full border px-4 py-1.5 text-sm font-semibold tracking-wide"
+            className="mb-6 inline-block rounded-full border border-brand-cyan/20 bg-brand-cyan/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-brand-blue"
           >
             {eyebrow}
           </motion.div>
@@ -67,7 +67,7 @@ export function UpcomingEvents({
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
                 {/* Hover Reveal CTA */}
-                <div className="bg-brand-charcoal/20 absolute inset-0 z-20 flex items-center justify-center opacity-0 backdrop-blur-[2px] transition-opacity duration-500 group-hover:opacity-100">
+                <div className="absolute inset-0 z-20 flex items-center justify-center bg-brand-charcoal/20 opacity-0 backdrop-blur-[2px] transition-opacity duration-500 group-hover:opacity-100">
                   <Button
                     variant="primary"
                     className="translate-y-4 shadow-lg group-hover:translate-y-0"
@@ -77,10 +77,10 @@ export function UpcomingEvents({
                 </div>
 
                 <div className="absolute right-6 bottom-6 left-6 z-10">
-                  <span className="bg-brand-blue mb-3 inline-block rounded-full px-3 py-1 text-xs font-bold tracking-wider text-white uppercase">
+                  <span className="mb-3 inline-block rounded-full bg-brand-blue px-3 py-1 text-xs font-bold tracking-wider text-white uppercase">
                     {badgeLabel}
                   </span>
-                  <h3 className="font-heading line-clamp-2 text-2xl leading-tight font-bold !text-white md:text-3xl">
+                  <h3 className="line-clamp-2 font-heading text-2xl leading-tight font-bold !text-white md:text-3xl">
                     {event.title}
                   </h3>
                 </div>
@@ -89,8 +89,8 @@ export function UpcomingEvents({
               <div className="relative flex flex-1 flex-col justify-center p-8">
                 <div className="relative z-10 grid grid-cols-2 gap-4">
                   <div className="flex items-center gap-3">
-                    <div className="bg-brand-gray flex h-10 w-10 shrink-0 items-center justify-center rounded-full">
-                      <Calendar className="text-brand-blue h-4 w-4" />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-gray">
+                      <Calendar className="h-4 w-4 text-brand-blue" />
                     </div>
                     <div>
                       <h4 className="mb-1 text-xs font-bold tracking-wider text-gray-400 uppercase">
@@ -100,8 +100,8 @@ export function UpcomingEvents({
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="bg-brand-gray flex h-10 w-10 shrink-0 items-center justify-center rounded-full">
-                      <MapPin className="text-brand-cyan h-4 w-4" />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-gray">
+                      <MapPin className="h-4 w-4 text-brand-cyan" />
                     </div>
                     <div>
                       <h4 className="mb-1 text-xs font-bold tracking-wider text-gray-400 uppercase">

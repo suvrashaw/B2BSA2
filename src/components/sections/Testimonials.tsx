@@ -90,7 +90,7 @@ export function Testimonials({
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading mb-6 text-left text-4xl font-bold text-gray-900 lg:text-5xl">
+          <h2 className="mb-6 text-left font-heading text-4xl font-bold text-gray-900 lg:text-5xl">
             {heading}
           </h2>
         </div>

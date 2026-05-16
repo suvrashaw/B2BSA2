@@ -45,7 +45,7 @@ export const Timeline = ({
           text={heading}
           highlights={[heading.split(" ").pop() || ""]}
           highlightColor="blue"
-          className="font-heading mb-4 max-w-4xl text-4xl  font-bold transition-colors duration-500 md:text-5xl lg:text-6xl"
+          className="mb-4 max-w-4xl font-heading text-4xl  font-bold transition-colors duration-500 md:text-5xl lg:text-6xl"
         />
         <p className="/70 max-w-sm text-sm transition-colors duration-500 md:text-base">
           {description}
@@ -56,8 +56,8 @@ export const Timeline = ({
         {data.map((item, index) => (
           <div key={index} className="flex justify-start pt-10 md:gap-10 md:pt-20">
             <div className="sticky top-40 z-40 flex max-w-xs flex-col items-center self-start md:w-full md:flex-row lg:max-w-sm">
-              <div className="bg-brand-white border-brand-charcoal/10 absolute left-3 flex h-10 w-10 items-center justify-center rounded-full border shadow-sm transition-all duration-500 md:left-3">
-                <div className="bg-brand-cyan h-4 w-4 rounded-full border border-white/20 shadow-[0_0_10px_rgba(34,211,238,0.5)] transition-all duration-500" />
+              <div className="absolute left-3 flex h-10 w-10 items-center justify-center rounded-full border border-brand-charcoal/10 bg-brand-white shadow-sm transition-all duration-500 md:left-3">
+                <div className="h-4 w-4 rounded-full border border-white/20 bg-brand-cyan shadow-[0_0_10px_rgba(34,211,238,0.5)] transition-all duration-500" />
               </div>
               <h3 className="hidden text-2xl font-bold transition-colors duration-500 md:block  md:pl-20 md:text-3xl">
                 {item.title}
@@ -76,14 +76,14 @@ export const Timeline = ({
           style={{
             height: height + "px",
           }}
-          className="via-brand-charcoal/20 absolute top-0 left-8 w-[2px] overflow-hidden bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] md:left-8 "
+          className="absolute top-0 left-8 w-[2px] overflow-hidden bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-brand-charcoal/20 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] md:left-8 "
         >
           <motion.div
             style={{
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="from-brand-blue via-brand-cyan absolute inset-x-0 top-0 w-[2px] rounded-full bg-gradient-to-t from-[0%] via-[10%] to-transparent"
+            className="absolute inset-x-0 top-0 w-[2px] rounded-full bg-gradient-to-t from-brand-blue from-[0%] via-brand-cyan via-[10%] to-transparent"
           />
         </div>
       </div>

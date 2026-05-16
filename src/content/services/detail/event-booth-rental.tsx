@@ -10,8 +10,6 @@ export { GLOBAL_PROOF_STATS as BOOTH_RENTAL_PROOF_BAR } from "../../shared";
 
 export const BOOTH_RENTAL_WHY = {
   heading: "When Rental Is the Smarter Decision",
-  description:
-    "For enterprise brands running global event programs, a premium rental model is often the more strategic choice — eliminating the asset decay of old designs and significantly reducing your carbon footprint by using locally-stored modular systems.",
   reasons: [
     {
       id: "timeline",
@@ -134,26 +132,26 @@ export const BOOTH_RENTAL_FORMATS = {
 };
 
 export const BOOTH_RENTAL_PROCESS = {
-  heading: "How Rental Works",
+  title: "How Rental Works",
   phases: [
     {
       title: "Enquire",
       description: "Share event, location, dates, booth size, and timeline.",
     },
     {
-      title: "Availability Check",
+      title: "Availability check",
       description: "Confirm inventory and venue compliance.",
     },
     {
-      title: "Branding Configuration",
+      title: "Branding configuration",
       description: "Graphics, furniture, AV, and meeting zones.",
     },
     {
-      title: "Delivery and Setup",
+      title: "Delivery and setup",
       description: "Installed and quality-checked before the show opens.",
     },
     {
-      title: "Post-Event Collection",
+      title: "Post-event collection",
       description: "Breakdown and storage managed after close.",
     },
   ],

@@ -112,7 +112,7 @@ export const ELG_DELIVERABLES = {
 };
 
 export const ELG_PROCESS = {
-  heading: "Before, During, and After",
+  title: "Before, During, and After",
   phases: [
     {
       title: "Before — Targeted Setup",

@@ -5,7 +5,6 @@ import {
   LIVE_STREAMING_WHY,
   LIVE_STREAMING_DELIVERABLES,
   LIVE_STREAMING_PROOF_BAR,
-  LIVE_STREAMING_CAPABILITIES,
   LIVE_STREAMING_CASE_STUDIES,
   LIVE_STREAMING_FAQ,
 } from "@/content/services/detail/live-streaming-services";
@@ -24,9 +23,15 @@ export default function Page() {
       proofBar={LIVE_STREAMING_PROOF_BAR}
       why={LIVE_STREAMING_WHY}
       deliverables={LIVE_STREAMING_DELIVERABLES}
-      pricing={LIVE_STREAMING_CAPABILITIES}
       caseStudies={LIVE_STREAMING_CASE_STUDIES}
       faq={LIVE_STREAMING_FAQ}
+      ctaBanner={{
+        title: "Your event. Every screen. Everywhere.",
+        description:
+          "Broadcast-quality live streaming for trade shows, town halls, product launches, and conferences.",
+        ctaLabel: "Plan Your Live Stream",
+        ctaHref: "/contact",
+      }}
       relatedServices={[
         {
           title: "Event Video Production",

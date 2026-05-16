@@ -46,7 +46,7 @@ export function Blogs({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-brand-primary/10 border-brand-primary/20 text-brand-primary mb-6 inline-block rounded-full border px-4 py-1.5 text-sm font-semibold tracking-wide"
+            className="mb-6 inline-block rounded-full border border-brand-primary/20 bg-brand-primary/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-brand-primary"
           >
             {eyebrow}
           </motion.div>

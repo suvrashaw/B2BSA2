@@ -3,7 +3,6 @@ import { getPageMetadata } from "@/content/pages";
 import {
   MODULAR_BOOTHS_HERO,
   MODULAR_BOOTHS_WHY,
-  MODULAR_BOOTHS_DELIVERABLES,
   MODULAR_BOOTHS_PROOF_BAR,
   MODULAR_BOOTHS_FORMATS,
   MODULAR_BOOTHS_CASE_STUDIES,
@@ -23,10 +22,16 @@ export default function Page() {
       hero={MODULAR_BOOTHS_HERO}
       proofBar={MODULAR_BOOTHS_PROOF_BAR}
       why={MODULAR_BOOTHS_WHY}
-      deliverables={MODULAR_BOOTHS_DELIVERABLES}
       pricing={MODULAR_BOOTHS_FORMATS}
       caseStudies={MODULAR_BOOTHS_CASE_STUDIES}
       faq={MODULAR_BOOTHS_FAQ}
+      ctaBanner={{
+        title: "One booth system. Every event. Any market.",
+        description:
+          "Engineered for enterprise efficiency — deploy the same system from New York to Singapore.",
+        ctaLabel: "Get a Modular Booth Quote",
+        ctaHref: "/contact",
+      }}
       relatedServices={[
         {
           title: "Event Booth Rental",

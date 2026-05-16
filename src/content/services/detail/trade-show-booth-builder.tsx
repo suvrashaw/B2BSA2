@@ -89,7 +89,7 @@ export const BOOTH_BUILDER_DELIVERABLES = {
 };
 
 export const BOOTH_BUILDER_PROCESS = {
-  heading: "Our Booth Build Process",
+  title: "Our Booth Build Process",
   phases: [
     {
       title: "Design Brief",
@@ -113,8 +113,7 @@ export const BOOTH_BUILDER_PROCESS = {
     },
     {
       title: "QC and Pre-Build",
-      description:
-        "Quality and fit review before shipping — major components pre-assembled in workshop.",
+      description: "Quality and fit review before shipping.",
     },
     {
       title: "Event Delivery",

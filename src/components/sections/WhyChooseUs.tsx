@@ -45,12 +45,12 @@ export function WhyChooseUs({
   });
 
   return (
-    <section ref={containerRef} className="bg-brand-gray relative">
+    <section ref={containerRef} className="relative bg-brand-gray">
       {/* 
         The container needs to be tall enough to allow scrolling.
       */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="bg-brand-gray sticky top-0 z-0 h-screen w-full" />
+        <div className="sticky top-0 z-0 h-screen w-full bg-brand-gray" />
       </div>
 
       <div
@@ -64,11 +64,11 @@ export function WhyChooseUs({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-brand-charcoal/5 border-brand-charcoal/10 mb-6 inline-block rounded-full border px-4 py-1.5  text-sm font-semibold tracking-wide"
+            className="mb-6 inline-block rounded-full border border-brand-charcoal/10 bg-brand-charcoal/5 px-4 py-1.5  text-sm font-semibold tracking-wide"
           >
             {eyebrow}
           </motion.div>
-          <h2 className="font-heading mb-8 w-full text-left text-4xl leading-tight font-bold lg:text-5xl">
+          <h2 className="mb-8 w-full text-left font-heading text-4xl leading-tight font-bold lg:text-5xl">
             {heading}
           </h2>
 
@@ -84,7 +84,7 @@ export function WhyChooseUs({
                   className="absolute inset-0 flex flex-col items-start justify-center text-left"
                 >
                   <div className="mb-4 flex items-center gap-3 text-left">
-                    <CheckCircle2 className="text-brand-blue h-6 w-6 shrink-0" />
+                    <CheckCircle2 className="h-6 w-6 shrink-0 text-brand-blue" />
                     <h3 className="font-heading text-3xl font-bold">{activeReason.title}</h3>
                   </div>
                   <p className="max-w-md text-xl leading-relaxed text-gray-600">
@@ -106,12 +106,12 @@ export function WhyChooseUs({
               >
                 <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-gray-200 shadow-2xl md:aspect-square">
                   <Image src={reason.image} alt={reason.title} fill className="object-cover" />
-                  <div className="bg-brand-blue/20 absolute inset-0 mix-blend-overlay" />
+                  <div className="absolute inset-0 bg-brand-blue/20 mix-blend-overlay" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
 
                   {/* Mobile text fallback since sticky scroll might be weird on mobile */}
                   <div className="absolute right-8 bottom-8 left-8 md:hidden">
-                    <h3 className="font-heading mb-2 text-2xl font-bold text-white">
+                    <h3 className="mb-2 font-heading text-2xl font-bold text-white">
                       {reason.title}
                     </h3>
                     <p className="text-sm text-gray-200">{reason.description}</p>

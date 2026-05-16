@@ -4,7 +4,7 @@ export const TERMS_HERO = {
   title: (
     <>
       Terms &amp; <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+      <span className="bg-linear-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
         Conditions
       </span>
     </>
@@ -26,7 +26,7 @@ export const TERMS_FAQ = {
   heading: (
     <>
       Our Terms, <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+      <span className="bg-linear-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
         Clearly Stated
       </span>
     </>
@@ -96,7 +96,7 @@ export const TERMS_CONTACT = {
   heading: (
     <>
       Speak to Our <br />
-      <span className="from-brand-blue to-brand-cyan bg-linear-to-r bg-clip-text text-transparent">
+      <span className="bg-linear-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
         Legal Team
       </span>
     </>

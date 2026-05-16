@@ -807,6 +807,12 @@ export const HOME_FAQ_CONTENT: FAQContent = {
       answer:
         "We execute targeted pre-event marketing using personalized email sequences and social media to fill your calendar with high-intent meetings before the show begins.",
     },
+    {
+      id: 8,
+      question: "Can you help us repurpose the event for digital marketing?",
+      answer:
+        "Our media team captures broadcast-grade video and 3D animations on-site, transforming your event into a year's worth of digital content to fuel your ongoing sales pipeline.",
+    },
   ],
 };
 
@@ -842,7 +848,7 @@ export const HOME_CONTACT_CONTENT: ContactContent = {
     ],
     eventLabel: "Upcoming Event Name & Date (Optional)",
     eventPlaceholder: "e.g. GITEX 2026, October 2026",
-    messageLabel: "Tell us about your event goals and requirements",
+    messageLabel: "Tell us about your event goals and requirements:",
     messagePlaceholder: "Enter your requirements here...",
     consentLabel:
       "I agree to receive communications from B2B Sales Arrow regarding their services.",

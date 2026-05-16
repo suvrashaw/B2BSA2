@@ -5,7 +5,7 @@ import {
   PAID_ADS_WHY,
   PAID_ADS_DELIVERABLES,
   PAID_ADS_PROOF_BAR,
-  PAID_ADS_STRATEGIES,
+  PAID_ADS_PROCESS,
   PAID_ADS_CASE_STUDIES,
   PAID_ADS_FAQ,
 } from "@/content/services/detail/paid-advertising";
@@ -24,9 +24,16 @@ export default function Page() {
       proofBar={PAID_ADS_PROOF_BAR}
       why={PAID_ADS_WHY}
       deliverables={PAID_ADS_DELIVERABLES}
-      pricing={PAID_ADS_STRATEGIES}
+      process={PAID_ADS_PROCESS}
       caseStudies={PAID_ADS_CASE_STUDIES}
       faq={PAID_ADS_FAQ}
+      ctaBanner={{
+        title:
+          "A paid media audit reveals wasted spend, low-intent keywords, poor conversion paths, and attribution blind spots.",
+        description: "Fixing these is faster than increasing budget.",
+        ctaLabel: "Request a Paid Media Audit",
+        ctaHref: "/contact",
+      }}
       relatedServices={[
         { title: "SEO Services", href: "/services/performance-marketing/seo-services" },
         { title: "LinkedIn Ads for B2B", href: "/services/performance-marketing/linkedin-ads" },

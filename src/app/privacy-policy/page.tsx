@@ -25,7 +25,7 @@ export default function Page() {
       <Header />
       <div className="pt-40 pb-24">
         <div className="container mx-auto max-w-4xl px-8">
-          <h1 className="font-heading mb-12 text-4xl font-bold md:text-6xl">Privacy Policy</h1>
+          <h1 className="mb-12 font-heading text-4xl font-bold md:text-6xl">Privacy Policy</h1>
           <div className="prose prose-lg prose-slate max-w-none">
             <p className="mb-12 text-xl text-gray-500">Last Updated: May 2024</p>
             <section className="mb-12">

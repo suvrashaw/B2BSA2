@@ -276,6 +276,8 @@ export const EVENT_VIDEO_DELIVERABLES = {
 
 export const EVENT_VIDEO_PRICING = {
   title: "Event Video Production — Approximate Price Guide",
+  description:
+    "Investment varies by format, duration, crew size, and post-production scope. Use these as orientation ranges:",
   headers: ["Service", "Approximate Range"],
   rows: [
     {
@@ -315,6 +317,8 @@ export const EVENT_VIDEO_PRICING = {
       "approximate range": "$8,000 – $25,000+",
     },
   ],
+  footer:
+    "Contact us for a project-specific estimate. All packages include delivery in required formats for web, social, and sales use.",
 };
 
 export const EVENT_VIDEO_CASE_STUDIES = {

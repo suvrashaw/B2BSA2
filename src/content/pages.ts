@@ -81,7 +81,7 @@ export interface PageContent {
   editorialNotes: string[];
 }
 
-export const pages: PageContent[] = [
+const pages: PageContent[] = [
   {
     pageNumber: 1,
     pageName: "Global Event Solutions",
@@ -8592,7 +8592,7 @@ const normalizeLookupUrl = (url: string) => {
   return url.replace(/\/$/, "");
 };
 
-export const pagesByUrl: Record<string, PageContent> = Object.fromEntries(
+const pagesByUrl: Record<string, PageContent> = Object.fromEntries(
   pages.map((page) => [normalizeLookupUrl(page.url), page])
 );
 

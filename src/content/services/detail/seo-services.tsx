@@ -112,7 +112,7 @@ export const SEO_DELIVERABLES = {
 };
 
 export const SEO_PROCESS = {
-  heading: "Our SEO Methodology",
+  title: "Our SEO Methodology",
   phases: [
     {
       title: "Technical Foundation",

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="bg-brand-gray min-h-screen">
+    <main className="min-h-screen bg-brand-gray">
       <Header />
       <Hero {...EVENTS_HERO} />
       <UpcomingEvents {...EVENTS_UPCOMING} />

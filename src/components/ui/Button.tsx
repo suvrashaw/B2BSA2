@@ -6,22 +6,22 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib";
 
 const buttonVariants = cva(
-  "focus-visible:ring-brand-blue group inline-flex items-center justify-center rounded-[4px] font-medium transition-all duration-300 focus-visible:ring-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
+  "group inline-flex items-center justify-center rounded-[4px] font-medium transition-all duration-300 focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         primary:
-          "bg-brand-blue hover:bg-brand-blue/90 text-white hover:shadow-[0_0_20px_rgba(30,96,145,0.4)]",
+          "bg-brand-blue text-white hover:bg-brand-blue/90 hover:shadow-[0_0_20px_rgba(30,96,145,0.4)]",
         secondary:
-          "border-brand-blue/20 text-brand-blue hover:border-brand-blue hover:bg-brand-blue/5 border-2 bg-transparent",
+          "border-2 border-brand-blue/20 bg-transparent text-brand-blue hover:border-brand-blue hover:bg-brand-blue/5",
         tertiary:
-          "text-brand-blue hover:text-brand-blue/80 gap-2 bg-transparent font-semibold hover:gap-4",
+          "gap-2 bg-transparent font-semibold text-brand-blue hover:gap-4 hover:text-brand-blue/80",
         outline:
-          "hover:border-brand-blue hover:text-brand-blue border border-gray-200 bg-transparent",
+          "border border-gray-200 bg-transparent hover:border-brand-blue hover:text-brand-blue",
         ghost: "hover:bg-brand-blue/5 hover:text-brand-blue",
         link: "text-brand-blue underline-offset-4 hover:underline",
         default:
-          "bg-brand-blue hover:bg-brand-blue/90 text-white hover:shadow-[0_0_20px_rgba(30,96,145,0.4)]", // Fallback
+          "bg-brand-blue text-white hover:bg-brand-blue/90 hover:shadow-[0_0_20px_rgba(30,96,145,0.4)]", // Fallback
       },
       size: {
         default: "px-8 py-3.5 text-base",
@@ -52,4 +52,4 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 Button.displayName = "Button";
 
-export { Button, buttonVariants };
+export { Button };

@@ -77,7 +77,7 @@ export function Header({
               {(link.name === "Services" || link.name === "Trade Shows") && (
                 <ChevronDown className="h-3.5 w-3.5 opacity-70 transition-transform duration-300 group-hover/nav-item:rotate-180" />
               )}
-              <span className="bg-brand-blue absolute -bottom-1 left-0 h-[2px] w-0 transition-all duration-300 group-hover/nav-item:w-full" />
+              <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-brand-blue transition-all duration-300 group-hover/nav-item:w-full" />
             </Link>
 
             {link.name === "Services" && (
@@ -87,11 +87,11 @@ export function Header({
                     {serviceNavigationGroups.map((group) => (
                       <div
                         key={group.name}
-                        className="border-brand-charcoal/5 bg-brand-gray/5 rounded-lg border p-4"
+                        className="rounded-lg border border-brand-charcoal/5 bg-brand-gray/5 p-4"
                       >
                         <Link
                           href={group.href}
-                          className="hover:text-brand-blue mb-3 block text-sm  font-black transition-colors"
+                          className="mb-3 block text-sm font-black  transition-colors hover:text-brand-blue"
                         >
                           {group.name}
                         </Link>
@@ -100,7 +100,7 @@ export function Header({
                             <Link
                               key={sub.name}
                               href={sub.href}
-                              className="/60 hover:text-brand-blue block text-xs leading-5 font-semibold transition-colors"
+                              className="/60 block text-xs leading-5 font-semibold transition-colors hover:text-brand-blue"
                             >
                               {sub.name}
                             </Link>
@@ -121,7 +121,7 @@ export function Header({
                       <Link
                         key={item.name}
                         href={item.href}
-                        className="hover:text-brand-blue block text-sm font-semibold transition-colors"
+                        className="block text-sm font-semibold transition-colors hover:text-brand-blue"
                       >
                         {item.name}
                       </Link>
@@ -181,18 +181,18 @@ export function Header({
                 <Link
                   href={link.href}
                   onClick={closeMobileMenu}
-                  className="font-heading hover:text-brand-blue block  text-2xl font-bold transition-colors"
+                  className="block font-heading text-2xl  font-bold transition-colors hover:text-brand-blue"
                 >
                   {link.name}
                 </Link>
                 {link.name === "Services" && (
-                  <div className="border-brand-blue/10 space-y-4 border-l-2 pl-4">
+                  <div className="space-y-4 border-l-2 border-brand-blue/10 pl-4">
                     {serviceNavigationGroups.map((group) => (
                       <div key={group.name} className="space-y-2">
                         <Link
                           href={group.href}
                           onClick={closeMobileMenu}
-                          className="hover:text-brand-blue block  text-lg font-bold transition-colors"
+                          className="block text-lg  font-bold transition-colors hover:text-brand-blue"
                         >
                           {group.name}
                         </Link>
@@ -201,7 +201,7 @@ export function Header({
                             key={sub.name}
                             href={sub.href}
                             onClick={closeMobileMenu}
-                            className="hover:text-brand-blue block pl-4 text-base font-medium text-gray-500 transition-colors"
+                            className="block pl-4 text-base font-medium text-gray-500 transition-colors hover:text-brand-blue"
                           >
                             {sub.name}
                           </Link>

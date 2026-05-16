@@ -86,7 +86,7 @@ export function CaseStudyShowcaseCard({
                 className="flex min-w-0 flex-1 flex-col"
               >
                 <div className="mb-3 flex flex-wrap gap-2">
-                  <span className="bg-brand-blue w-max rounded-full px-3 py-1 text-xs font-bold tracking-wider text-white uppercase">
+                  <span className="w-max rounded-full bg-brand-blue px-3 py-1 text-xs font-bold tracking-wider text-white uppercase">
                     {item.client}
                   </span>
                   {item.badge ? (
@@ -95,7 +95,7 @@ export function CaseStudyShowcaseCard({
                     </span>
                   ) : null}
                 </div>
-                <h3 className="font-heading mb-4 line-clamp-2 text-2xl font-bold text-white">
+                <h3 className="mb-4 line-clamp-2 font-heading text-2xl font-bold text-white">
                   {item.title}
                 </h3>
                 <div className="flex flex-col gap-4 xl:flex-row xl:gap-10">
@@ -161,7 +161,7 @@ export function CaseStudyShowcaseCard({
               transition={{ delay: 0.3, duration: 0.4 }}
               className="absolute top-8 right-8 flex flex-col items-center rounded-2xl border border-white/20 bg-white/90 px-4 py-3 text-center shadow-lg backdrop-blur-md"
             >
-              <span className="font-heading text-brand-blue text-2xl font-bold">{item.metric}</span>
+              <span className="font-heading text-2xl font-bold text-brand-blue">{item.metric}</span>
               <span className="text-[10px] font-bold tracking-wider text-gray-500 uppercase">
                 {item.metricLabel}
               </span>

@@ -5,7 +5,6 @@ import {
   CORPORATE_VIDEO_WHY,
   CORPORATE_VIDEO_DELIVERABLES,
   CORPORATE_VIDEO_PROOF_BAR,
-  CORPORATE_VIDEO_STRATEGY,
   CORPORATE_VIDEO_CASE_STUDIES,
   CORPORATE_VIDEO_FAQ,
 } from "@/content/services/detail/corporate-video-production";
@@ -24,9 +23,14 @@ export default function Page() {
       proofBar={CORPORATE_VIDEO_PROOF_BAR}
       why={CORPORATE_VIDEO_WHY}
       deliverables={CORPORATE_VIDEO_DELIVERABLES}
-      pricing={CORPORATE_VIDEO_STRATEGY}
       caseStudies={CORPORATE_VIDEO_CASE_STUDIES}
       faq={CORPORATE_VIDEO_FAQ}
+      ctaBanner={{
+        title: "When your offering is complex, corporate video makes it clear.",
+        description: "With the production quality enterprise buyers expect.",
+        ctaLabel: "Start Your Corporate Video Project",
+        ctaHref: "/contact",
+      }}
       relatedServices={[
         {
           title: "Event Video Production",

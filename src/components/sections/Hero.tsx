@@ -59,7 +59,7 @@ export function Hero({
   return (
     <section className="relative flex min-h-[90vh] items-center overflow-hidden bg-white pt-24">
       {/* Background Gradients */}
-      <div className="bg-brand-gray/20 pointer-events-none absolute top-0 right-0 h-full w-1/2" />
+      <div className="pointer-events-none absolute top-0 right-0 h-full w-1/2 bg-brand-gray/20" />
 
       <div className="relative z-10 container mx-auto grid items-center gap-12 px-8 lg:grid-cols-2">
         <motion.div
@@ -68,7 +68,7 @@ export function Hero({
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-2xl"
         >
-          <h1 className="font-heading mb-6 text-5xl leading-[1.1] font-bold  lg:text-7xl">
+          <h1 className="mb-6 font-heading text-5xl leading-[1.1] font-bold  lg:text-7xl">
             {title}
           </h1>
 
@@ -101,7 +101,7 @@ export function Hero({
             <motion.div style={{ y: y1 }} className="absolute inset-y-[-150px] right-0 left-0">
               <Image src={imageSrc} alt={imageAlt} fill className="object-cover" priority />
             </motion.div>
-            <div className="bg-brand-blue/5 pointer-events-none absolute inset-0" />
+            <div className="pointer-events-none absolute inset-0 bg-brand-blue/5" />
 
             {/* Floating stat card */}
             {stat ? (
@@ -112,11 +112,11 @@ export function Hero({
                 className="absolute bottom-12 left-[-40px] rounded-xl border border-gray-100 bg-white p-8 shadow-2xl backdrop-blur-md"
               >
                 <div className="flex items-center gap-6">
-                  <div className="bg-brand-blue/10 flex h-14 w-14 items-center justify-center rounded-full">
-                    <Globe className="text-brand-blue h-8 w-8" />
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-brand-blue/10">
+                    <Globe className="h-8 w-8 text-brand-blue" />
                   </div>
                   <div>
-                    <div className="font-heading text-brand-blue text-3xl font-bold">
+                    <div className="font-heading text-3xl font-bold text-brand-blue">
                       {stat.value}
                     </div>
                     <div className="text-sm font-bold tracking-widest text-gray-400 uppercase">

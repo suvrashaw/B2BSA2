@@ -97,7 +97,10 @@ export const serviceNavigationGroups: ServiceNavGroup[] = [
   },
 ];
 
-export const footerServiceGroups: ServiceNavGroup[] = serviceNavigationGroups;
+export const footerServiceGroups: ServiceNavGroup[] = serviceNavigationGroups.map((group) => ({
+  ...group,
+  links: [...group.links],
+}));
 
 export const footerNavigation: NavLink[] = [
   { name: "Blog", href: "/blog" },

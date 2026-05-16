@@ -37,8 +37,8 @@ export interface ServiceDetailProps {
     description: string;
   };
   proofBar?: string[];
-  deliverables: OurServicesProps;
-  why: WhyChooseUsProps;
+  deliverables?: OurServicesProps;
+  why?: WhyChooseUsProps;
   process?: {
     title: string;
     phases: { title: string; description: string }[];
@@ -62,6 +62,12 @@ export interface ServiceDetailProps {
   };
   faq: FAQProps;
   relatedServices?: { title: string; href: string }[];
+  ctaBanner?: {
+    title: string;
+    description: string;
+    ctaLabel: string;
+    ctaHref?: string;
+  };
 }
 
 const siteUrl = "https://b2bsalesarrow.com";
@@ -111,6 +117,7 @@ export function ServiceDetail({
   stats,
   faq,
   relatedServices,
+  ctaBanner,
 }: ServiceDetailProps) {
   const faqJsonLd = faq.faqs?.length ? buildFaqJsonLd(faq.faqs) : null;
   const breadcrumbJsonLd = canonicalPath
@@ -118,7 +125,7 @@ export function ServiceDetail({
     : null;
 
   return (
-    <main className="bg-brand-gray min-h-screen">
+    <main className="min-h-screen bg-brand-gray">
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       {breadcrumbJsonLd ? <JsonLd data={breadcrumbJsonLd} /> : null}
       <Header darkBackground />
@@ -132,22 +139,29 @@ export function ServiceDetail({
 
       {proofBar && <ProofBar stats={proofBar} />}
 
-      <OurServices {...deliverables} />
+      {deliverables && <OurServices {...deliverables} />}
 
-      <WhyChooseUs {...why} />
+      {why && <WhyChooseUs {...why} />}
 
       {process && <ProcessTimeline title={process.title} phases={process.phases} />}
 
       {pricing && <DataTable title={pricing.title} headers={pricing.headers} rows={pricing.rows} />}
 
       {pricingGuidance && (
-        <DataTable
-          title={pricingGuidance.title}
-          description={pricingGuidance.description}
-          headers={pricingGuidance.headers}
-          rows={pricingGuidance.rows}
-          className="bg-brand-gray/50"
-        />
+        <>
+          <DataTable
+            title={pricingGuidance.title}
+            description={pricingGuidance.description}
+            headers={pricingGuidance.headers}
+            rows={pricingGuidance.rows}
+            className="bg-brand-gray/50"
+          />
+          {pricingGuidance.footer && (
+            <div className="container mx-auto -mt-12 px-8 pb-8">
+              <p className="text-sm text-brand-gray/60">{pricingGuidance.footer}</p>
+            </div>
+          )}
+        </>
       )}
 
       {caseStudies && <CaseStudies {...caseStudies} />}
@@ -159,10 +173,12 @@ export function ServiceDetail({
       {relatedServices && <RelatedServices services={relatedServices} />}
 
       <CTABanner
-        title="Ready to Build Your Enterprise Growth Engine?"
-        description="250+ events. $1.2B+ influenced. One conversation to start."
-        ctaLabel="Book a Strategy Session"
-        ctaHref="/contact"
+        title={ctaBanner?.title ?? "Ready to Build Your Enterprise Growth Engine?"}
+        description={
+          ctaBanner?.description ?? "250+ events. $1.2B+ influenced. One conversation to start."
+        }
+        ctaLabel={ctaBanner?.ctaLabel ?? "Book a Strategy Session"}
+        ctaHref={ctaBanner?.ctaHref ?? "/contact"}
       />
 
       <Footer />

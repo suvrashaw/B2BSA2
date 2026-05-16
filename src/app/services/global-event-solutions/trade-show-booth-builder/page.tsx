@@ -5,7 +5,7 @@ import {
   BOOTH_BUILDER_WHY,
   BOOTH_BUILDER_DELIVERABLES,
   BOOTH_BUILDER_PROOF_BAR,
-  BOOTH_BUILDER_STANDARDS,
+  BOOTH_BUILDER_PROCESS,
   BOOTH_BUILDER_CASE_STUDIES,
   BOOTH_BUILDER_FAQ,
 } from "@/content/services/detail/trade-show-booth-builder";
@@ -24,9 +24,16 @@ export default function Page() {
       proofBar={BOOTH_BUILDER_PROOF_BAR}
       why={BOOTH_BUILDER_WHY}
       deliverables={BOOTH_BUILDER_DELIVERABLES}
-      pricing={BOOTH_BUILDER_STANDARDS}
+      process={BOOTH_BUILDER_PROCESS}
       caseStudies={BOOTH_BUILDER_CASE_STUDIES}
       faq={BOOTH_BUILDER_FAQ}
+      ctaBanner={{
+        title:
+          "Build with an exhibition stand builder that understands the floor, the brand, and the pipeline it is designed to fill.",
+        description: "One brief. One team. One outcome.",
+        ctaLabel: "Request a Build Quote",
+        ctaHref: "/contact",
+      }}
       relatedServices={[
         {
           title: "Trade Show Booth Design",

@@ -37,23 +37,25 @@ export function InfiniteSlider({
     const from = reverse ? -contentSize / 2 : 0;
     const to = reverse ? 0 : -contentSize / 2;
 
-    const controls = isTransitioning ? animate(translation, [translation.get(), to], {
-        ease: "linear",
-        duration: currentDuration * Math.abs((translation.get() - to) / contentSize),
-        onComplete: () => {
-          setIsTransitioning(false);
-          setKey((prevKey) => prevKey + 1);
-        },
-      }) : animate(translation, [from, to], {
-        ease: "linear",
-        duration: currentDuration,
-        repeat: Infinity,
-        repeatType: "loop",
-        repeatDelay: 0,
-        onRepeat: () => {
-          translation.set(from);
-        },
-      });
+    const controls = isTransitioning
+      ? animate(translation, [translation.get(), to], {
+          ease: "linear",
+          duration: currentDuration * Math.abs((translation.get() - to) / contentSize),
+          onComplete: () => {
+            setIsTransitioning(false);
+            setKey((prevKey) => prevKey + 1);
+          },
+        })
+      : animate(translation, [from, to], {
+          ease: "linear",
+          duration: currentDuration,
+          repeat: Infinity,
+          repeatType: "loop",
+          repeatDelay: 0,
+          onRepeat: () => {
+            translation.set(from);
+          },
+        });
 
     return controls?.stop;
   }, [key, translation, currentDuration, width, height, gap, isTransitioning, direction, reverse]);

@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="bg-brand-gray min-h-screen">
+    <main className="min-h-screen bg-brand-gray">
       <JsonLd data={buildFaqJsonLd(HOME_FAQ_CONTENT.faqs)} />
       <Header />
       <div id="home">

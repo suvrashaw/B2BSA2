@@ -31,6 +31,12 @@ export default function Page() {
       process={BOOTH_DESIGN_PROCESS}
       caseStudies={BOOTH_DESIGN_CASE_STUDIES}
       faq={BOOTH_DESIGN_FAQ}
+      ctaBanner={{
+        title: "Every square foot of your booth should earn its place.",
+        description: "Build a custom trade show booth engineered for commercial momentum.",
+        ctaLabel: "Start Your Design Project",
+        ctaHref: "/contact",
+      }}
       relatedServices={[
         {
           title: "Event Lead Generation",

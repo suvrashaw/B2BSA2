@@ -43,7 +43,7 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
   return (
     <section
       ref={containerRef}
-      className="bg-brand-white relative  overflow-hidden py-12 transition-colors duration-500"
+      className="relative overflow-hidden  bg-brand-white py-12 transition-colors duration-500"
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(75,192,217,0.1)_0%,transparent_70%)]" />
 
@@ -54,7 +54,7 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex max-w-2xl flex-col items-start text-left"
         >
-          <div className="bg-brand-cyan/10 border-brand-cyan/20 text-brand-cyan mb-6 inline-block rounded-full border px-4 py-1.5 text-sm font-semibold tracking-wide uppercase">
+          <div className="mb-6 inline-block rounded-full border border-brand-cyan/20 bg-brand-cyan/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-brand-cyan uppercase">
             Global Presence
           </div>
 
@@ -62,7 +62,7 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
             text={data.title}
             highlights={[data.title.split(" ")[0] || ""]}
             highlightColor="blue"
-            className="font-heading mb-8 text-4xl leading-[1.1] font-bold transition-colors duration-500  md:text-5xl lg:text-7xl"
+            className="mb-8 font-heading text-4xl leading-[1.1] font-bold transition-colors duration-500  md:text-5xl lg:text-7xl"
           />
 
           <p className="/70 mb-10 text-lg leading-relaxed font-bold tracking-widest uppercase transition-colors duration-500 md:text-xl">

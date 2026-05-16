@@ -39,7 +39,7 @@ export function ServiceHero({
   return (
     <section
       ref={containerRef}
-      className="bg-brand-charcoal relative flex min-h-svh items-end overflow-hidden pt-32 pb-20"
+      className="relative flex min-h-svh items-end overflow-hidden bg-brand-charcoal pt-32 pb-20"
     >
       {/* 1. Background Visuals (OG Blue Style) */}
       <div className="absolute inset-0 z-0">
@@ -68,7 +68,7 @@ export function ServiceHero({
         <motion.div style={{ y }} className="max-w-4xl">
           {/* Staggered Title Reveal */}
           <h1
-            className="font-heading mb-8 text-4xl leading-[1.02] font-black lg:text-7xl xl:text-8xl"
+            className="mb-8 font-heading text-4xl leading-[1.02] font-black lg:text-7xl xl:text-8xl"
             style={{
               color: "rgba(255, 255, 255, 0.98)",
               textShadow: "0 20px 50px rgba(4, 9, 15, 0.24)",

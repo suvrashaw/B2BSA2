@@ -28,7 +28,7 @@ export function RelatedServices({
   return (
     <section className={cn("bg-brand-gray/5 py-24", className)}>
       <div className="container mx-auto px-8">
-        <h2 className="font-heading text-brand-gray mb-12 text-center text-3xl font-bold">
+        <h2 className="mb-12 text-center font-heading text-3xl font-bold text-brand-gray">
           {title}
         </h2>
 
@@ -43,17 +43,17 @@ export function RelatedServices({
             >
               <Link
                 href={service.href}
-                className="group hover:border-brand-blue/30 hover:shadow-brand-blue/5 relative flex h-full flex-col justify-between overflow-hidden rounded-xl border border-gray-100 bg-white p-8 transition-all hover:shadow-xl"
+                className="group relative flex h-full flex-col justify-between overflow-hidden rounded-xl border border-gray-100 bg-white p-8 transition-all hover:border-brand-blue/30 hover:shadow-xl hover:shadow-brand-blue/5"
               >
                 <div className="flex items-start justify-between">
-                  <h3 className="font-heading text-brand-gray group-hover:text-brand-blue text-xl font-bold transition-colors">
+                  <h3 className="font-heading text-xl font-bold text-brand-gray transition-colors group-hover:text-brand-blue">
                     {service.title}
                   </h3>
-                  <div className="text-brand-blue group-hover:bg-brand-blue flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 transition-all group-hover:text-white">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 text-brand-blue transition-all group-hover:bg-brand-blue group-hover:text-white">
                     <MoveRight className="h-5 w-5" />
                   </div>
                 </div>
-                <div className="bg-brand-blue mt-8 h-1 w-0 transition-all group-hover:w-full" />
+                <div className="mt-8 h-1 w-0 bg-brand-blue transition-all group-hover:w-full" />
               </Link>
             </motion.div>
           ))}

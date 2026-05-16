@@ -4,7 +4,7 @@ export const THANK_YOU_HERO = {
   title: (
     <>
       Thank You for <br />
-      <span className="from-brand-blue to-brand-cyan bg-gradient-to-r bg-clip-text text-transparent">
+      <span className="bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
         Reaching Out
       </span>
     </>
@@ -30,7 +30,7 @@ export const THANK_YOU_SERVICES = {
   heading: (
     <>
       Explore What We <br />
-      <span className="from-brand-blue to-brand-cyan bg-gradient-to-r bg-clip-text text-transparent">
+      <span className="bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
         Do Best
       </span>
     </>

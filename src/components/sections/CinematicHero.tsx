@@ -69,7 +69,7 @@ export function CinematicHero({
         <motion.div style={{ y }} className="max-w-4xl">
           {/* Staggered Title Reveal */}
           <h1
-            className="font-heading mb-8 text-[clamp(42px,8vw,92px)] leading-[1.02] font-black tracking-tight"
+            className="mb-8 font-heading text-[clamp(42px,8vw,92px)] leading-[1.02] font-black tracking-tight"
             style={{
               color: "rgba(255, 255, 255, 0.98)",
               textShadow: "0 20px 50px rgba(4, 9, 15, 0.24)",

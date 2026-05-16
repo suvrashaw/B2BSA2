@@ -89,7 +89,7 @@ export const PAID_ADS_DELIVERABLES = {
 };
 
 export const PAID_ADS_PROCESS = {
-  heading: "How We Build Paid Campaigns That Convert",
+  title: "How We Build Paid Campaigns That Convert",
   phases: [
     {
       title: "ICP Targeting Strategy",

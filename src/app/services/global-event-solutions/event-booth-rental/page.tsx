@@ -3,9 +3,9 @@ import { getPageMetadata } from "@/content/pages";
 import {
   BOOTH_RENTAL_HERO,
   BOOTH_RENTAL_WHY,
-  BOOTH_RENTAL_DELIVERABLES,
   BOOTH_RENTAL_PROOF_BAR,
   BOOTH_RENTAL_FORMATS,
+  BOOTH_RENTAL_PROCESS,
   BOOTH_RENTAL_CASE_STUDIES,
   BOOTH_RENTAL_FAQ,
 } from "@/content/services/detail/event-booth-rental";
@@ -23,10 +23,17 @@ export default function Page() {
       hero={BOOTH_RENTAL_HERO}
       proofBar={BOOTH_RENTAL_PROOF_BAR}
       why={BOOTH_RENTAL_WHY}
-      deliverables={BOOTH_RENTAL_DELIVERABLES}
       pricing={BOOTH_RENTAL_FORMATS}
+      process={BOOTH_RENTAL_PROCESS}
       caseStudies={BOOTH_RENTAL_CASE_STUDIES}
       faq={BOOTH_RENTAL_FAQ}
+      ctaBanner={{
+        title: "Fast does not have to feel temporary.",
+        description:
+          "A properly configured trade show rental booth represents your brand credibly — at a fraction of the custom build timeline.",
+        ctaLabel: "Check Rental Availability",
+        ctaHref: "/contact",
+      }}
       relatedServices={[
         {
           title: "Trade Show Booth Design",

@@ -18,7 +18,7 @@ export function GlobalPresence() {
   }, []);
 
   return (
-    <div className="bg-brand-blue relative z-10 w-full overflow-hidden py-12">
+    <div className="relative z-10 w-full overflow-hidden bg-brand-blue py-12">
       <div className="container mx-auto px-8">
         <h3 className="mb-8 text-center text-xs font-bold tracking-[0.3em] text-white uppercase">
           Global Enterprise Reach
@@ -49,7 +49,7 @@ export function GlobalPresence() {
                 {isActive && (
                   <motion.div
                     layoutId="activeCountryGlow"
-                    className="bg-brand-blue absolute -bottom-2 left-1/2 h-[2px] w-1/2 -translate-x-1/2 blur-[2px]"
+                    className="absolute -bottom-2 left-1/2 h-[2px] w-1/2 -translate-x-1/2 bg-brand-blue blur-[2px]"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 0.8 }}
                     exit={{ opacity: 0 }}

@@ -11,13 +11,13 @@ export { GLOBAL_PROOF_STATS as LINKEDIN_ADS_PROOF_BAR } from "../../shared";
 export const LINKEDIN_ADS_WHY = {
   heading: "The Most Precise B2B Targeting Channel",
   description:
-    "LinkedIn lets you target by job title, seniority, company size, industry, and specific named accounts — with precision that Google and Meta cannot match for enterprise B2B. The cost-per-lead is higher, but the lead quality is structurally different: you are reaching decision-makers in a professional context, not consumers in a social browsing state.\n\nFor ABM programs, LinkedIn allows you to build named account lists and target the full buying committee — not just the person who fills in the form, but the CFO, the IT Director, and the procurement lead simultaneously.",
+    "LinkedIn targeting gives enterprise marketers verified professional attributes — job title, company size, industry, seniority, department, geography, and named account lists — available for precise campaign targeting. CPL is typically 2–5x higher than Google Display, but lead quality — measured by ICP fit and conversion to sales opportunity — is frequently superior when targeting, creative, and post-click experience are built correctly for the B2B audience.",
   reasons: [
     {
       id: "precision",
       title: "Decision-Maker Precision",
       description:
-        "Target by job title, company size, industry, seniority, and named account lists — reaching the full buying committee, not just one contact.",
+        "Target by job title, company size, industry, seniority, department, geography, and named account lists — reaching the full buying committee, not just one contact.",
       image:
         "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
     },
@@ -25,7 +25,7 @@ export const LINKEDIN_ADS_WHY = {
       id: "abm",
       title: "LinkedIn Ads and Account-Based Marketing",
       description:
-        "Named account lists, buying committee segmentation, and retargeting across the full evaluation cycle — LinkedIn ABM reaches decision-makers with the right message at every stage.",
+        "LinkedIn's account targeting makes it the most powerful paid channel for ABM campaigns. We build programs targeting named account lists, segmenting messaging by buying committee role, tailoring creative by account tier, and connecting LinkedIn activity to broader sales outreach — creating digital surround-sound for target accounts before the first sales conversation begins.",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     },
@@ -39,7 +39,7 @@ export const LINKEDIN_ADS_DELIVERABLES = {
       id: "sponsored",
       title: "Sponsored Content",
       description:
-        "Native feed ads promoting thought leadership, case studies, and product content — the most versatile format for awareness and demand generation.",
+        "The highest-reach LinkedIn format for brand awareness, content promotion, and lead generation at scale in the LinkedIn feed.",
       icon: "FileText",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
@@ -49,7 +49,7 @@ export const LINKEDIN_ADS_DELIVERABLES = {
       id: "lead-gen",
       title: "Lead Gen Forms",
       description:
-        "Pre-filled forms that capture qualified leads without sending buyers off LinkedIn — significantly higher conversion rates than landing page redirects.",
+        "Capturing prospect details within LinkedIn without requiring a landing page click — effective for webinar registrations, content downloads, and B2B lead generation where reducing friction improves conversion.",
       icon: "ClipboardList",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
@@ -59,7 +59,7 @@ export const LINKEDIN_ADS_DELIVERABLES = {
       id: "document",
       title: "Document Ads",
       description:
-        "Promote whitepapers, reports, and playbooks natively in the feed — gate them for lead capture or ungated for awareness.",
+        "Promoting reports, playbooks, and thought leadership assets directly in the LinkedIn feed — ideal for enterprise buyers who need substance before engaging with sales.",
       icon: "File",
       image:
         "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=1200",
@@ -69,7 +69,7 @@ export const LINKEDIN_ADS_DELIVERABLES = {
       id: "event",
       title: "Event Ads",
       description:
-        "Drive registrations for webinars, trade show appearances, and proprietary events — targeting the exact buyer profiles you want in the room.",
+        "Webinars, roundtables, product launches promoted to precisely targeted professional audiences — connecting event marketing with qualified lead generation.",
       icon: "Calendar",
       image:
         "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2612&auto=format&fit=crop",
@@ -77,9 +77,9 @@ export const LINKEDIN_ADS_DELIVERABLES = {
     },
     {
       id: "message",
-      title: "Message Ads and InMail",
+      title: "Message Ads and Sponsored InMail",
       description:
-        "Direct sponsored messages delivered to LinkedIn inboxes — high-visibility format for event invitations, personalised outreach, and time-sensitive campaigns.",
+        "Direct-message campaigns for high-relevance personalised outreach tied to a specific action or offer.",
       icon: "Mail",
       image:
         "https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&q=80&w=1200",
@@ -99,31 +99,31 @@ export const LINKEDIN_ADS_FAQ = {
       id: "why-linkedin",
       question: "Why should B2B companies advertise on LinkedIn?",
       answer:
-        "LinkedIn is the only channel where you can target enterprise buyers by job title, seniority, company, and intent in a professional context. For B2B companies selling to buying committees, it provides structurally higher lead quality than any other digital channel.",
+        "LinkedIn is the only paid platform that allows targeting by verified professional attributes. For enterprise B2B brands, this precision makes LinkedIn Ads uniquely effective for reaching buying committees and decision-makers.",
     },
     {
       id: "vs-google",
       question: "Is LinkedIn Ads more expensive than Google Ads?",
       answer:
-        "Yes — cost per click is typically higher. But the comparison is misleading: LinkedIn targets decision-makers by professional role; Google targets by search query. For enterprise B2B with high deal values, the higher CPL is justified by significantly better lead quality and shorter qualification time.",
+        "LinkedIn CPL is typically 2–5x higher than Google Search CPL. However, lead quality — ICP fit and conversion to pipeline — is frequently higher, making cost per qualified opportunity competitive for enterprise B2B.",
     },
     {
       id: "budget",
       question: "What budget is needed?",
       answer:
-        "£3,000–5,000/month minimum to generate meaningful data and consistent lead volume. Below this, optimisation cycles are too slow to draw reliable conclusions. We advise based on your specific ICP, deal size, and pipeline targets.",
+        "Effective B2B programs typically require £3,000–5,000/month minimum to generate statistically meaningful data and consistent qualified leads. We recommend a starting budget based on your objectives during strategy planning.",
     },
     {
       id: "timeline",
       question: "How long does it take to see results?",
       answer:
-        "4–6 weeks for meaningful optimisation data. Full pipeline impact visible at 8–12 weeks once leads have moved through your sales qualification process.",
+        "LinkedIn campaigns need 4–6 weeks for meaningful optimisation. Qualified leads typically appear within 4–8 weeks. Full programme optimisation takes 2–3 months.",
     },
     {
       id: "performance",
       question: "What makes a LinkedIn ad perform well for B2B?",
       answer:
-        "Specific audience targeting (not broad), a clear and relevant offer matched to the buyer's stage, social proof in the creative, and a frictionless lead capture path. Generic brand awareness ads consistently underperform against intent-driven offers.",
+        "Precise audience, a specific and valuable offer, a clear value proposition in the first line, and a landing page designed for the LinkedIn audience's level of awareness.",
     },
   ],
 };

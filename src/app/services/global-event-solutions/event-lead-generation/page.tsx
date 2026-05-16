@@ -5,7 +5,6 @@ import {
   ELG_WHY,
   ELG_DELIVERABLES,
   ELG_PROOF_BAR,
-  ELG_PRICING,
   ELG_PROCESS,
   ELG_CASE_STUDIES,
   ELG_FAQ,
@@ -25,10 +24,16 @@ export default function Page() {
       proofBar={ELG_PROOF_BAR}
       why={ELG_WHY}
       deliverables={ELG_DELIVERABLES}
-      pricing={ELG_PRICING}
       process={ELG_PROCESS}
       caseStudies={ELG_CASE_STUDIES}
       faq={ELG_FAQ}
+      ctaBanner={{
+        title: "Stop leaving trade show leads on the floor.",
+        description:
+          "Build a system that captures, qualifies, and routes every qualified conversation.",
+        ctaLabel: "Build Your Lead Generation System",
+        ctaHref: "/contact",
+      }}
       relatedServices={[
         {
           title: "Trade Show Booth Design",
